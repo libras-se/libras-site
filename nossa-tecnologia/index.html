@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nossa Tecnologia | Libras.se — OBS Customizado, Dashboard e Plugin para Editores</title>
+<meta name="description" content="Conheça a infraestrutura tecnológica da Libras.se: OBS Studio customizado com upload automático via API, Dashboard de revisão e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve."/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Libras.se"/>
+<meta name="keywords" content="tecnologia Libras, OBS Studio Libras, plugin Adobe Premiere Libras, DaVinci Resolve Libras, API tradução Libras, dashboard intérprete, infraestrutura acessibilidade"/>
+<meta name="theme-color" content="#4fd1c5"/>
+<link rel="canonical" href="https://libras.se/tecnologia/"/>
+<link rel="icon" href="https://libras.se/wp-content/uploads/2026/03/favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="https://libras.se/wp-content/uploads/2026/03/favicon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://libras.se/tecnologia/"/>
+<meta property="og:title" content="Nossa Tecnologia | Libras.se — OBS Customizado, Dashboard e Plugin"/>
+<meta property="og:description" content="OBS Studio com upload automático via API, Dashboard de revisão interno e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve."/>
+<meta property="og:image" content="https://libras.se/wp-content/uploads/2026/03/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Libras.se — Tecnologia própria para tradução de Libras"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:site_name" content="Libras.se"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@librasse"/>
+<meta name="twitter:title" content="Nossa Tecnologia | Libras.se"/>
+<meta name="twitter:description" content="OBS customizado, upload automático, Dashboard e plugin para Adobe Premiere e DaVinci Resolve."/>
+<meta name="twitter:image" content="https://libras.se/wp-content/uploads/2026/03/og-image.png"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://libras.se/"},{"@type":"ListItem","position":2,"name":"Nossa Tecnologia","item":"https://libras.se/tecnologia/"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Nossa Tecnologia — Libras.se",
+  "url": "https://libras.se/tecnologia/",
+  "description": "Infraestrutura tecnológica da Libras.se: OBS Studio customizado, upload automático via API REST, Dashboard de revisão e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve.",
+  "isPartOf": {"@type": "WebSite", "name": "Libras.se", "url": "https://libras.se"},
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "OBS Libras.se",
+    "applicationCategory": "VideoApplication",
+    "description": "Fork do OBS Studio com JWT auth, upload automático ProRes 4444 e job binding para intérpretes de Libras."
+  }
+}
+</script>
+<link rel="dns-prefetch" href="//wa.me"/>
+<link rel="dns-prefetch" href="//huet.libras.se"/>
+<link rel="dns-prefetch" href="//n8n.libras.se"/>
+<link rel="preload" href="../assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="../assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="../assets/fonts/museo-sans-rounded-900.woff2" as="font" type="font/woff2" crossorigin/>
+<style>
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-100.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-1000.woff2') format('woff2');font-weight:1000;font-display:swap}
+:root{
+  --bg:#f0fafa;--bg2:#e8f6f5;
+  --p1:#0a2225;--p2:#0f3338;--p3:#2a6069;
+  --teal:#4fd1c5;--tl:#81e6d9;
+  --teal-d:#2eb8c0;--teal-dd:#1a9ca4;
+  --green:#22c55e;
+  --card:rgba(255,255,255,.72);
+  --border2:rgba(10,34,37,.07);
+  --txt:#0a2225;--txs:#3d6063;--txm:#7aacad;
+  --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
+  --gc:linear-gradient(135deg,#0a2225,#2a6069);
+  --gs:linear-gradient(180deg,#f0fafa 0%,#e8f6f5 100%);
+  --sh:0 2px 16px rgba(10,34,37,.06);
+  --shm:0 8px 40px rgba(10,34,37,.1);
+  --shl:0 20px 72px rgba(10,34,37,.14);
+  --blur:blur(22px);--blur-l:blur(40px);
+  --tr:.3s cubic-bezier(.4,0,.2,1);
+  --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'M',sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.skip-link{position:absolute;top:-100%;left:16px;background:var(--p1);color:#fff;padding:8px 16px;border-radius:0 0 var(--rmd) var(--rmd);font-size:.82rem;font-weight:700;z-index:9999;transition:top .2s}.skip-link:focus{top:0}
+.w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
+.gt{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}20%{transform:translate(20px,-15px) scale(1.05)}60%{transform:translate(15px,-10px) scale(1.03)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}25%{transform:translate(-25px,15px)}50%{transform:translate(10px,30px)}}
+@keyframes float3{0%,100%{transform:translate(0,0)}33%{transform:translate(18px,-18px)}66%{transform:translate(-12px,12px)}}
+@keyframes floatBadge{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+@keyframes wppBeat{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,.4)}50%{box-shadow:0 4px 28px rgba(34,197,94,.55),0 0 0 6px rgba(34,197,94,.08)}}
+@keyframes scanLine{0%{top:0}100%{top:100%}}
+@keyframes orbPulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.55;transform:scale(1.08)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes meterAnim{0%,100%{width:58%}50%{width:82%}}
+/* WPP */
+.wppf{position:fixed;bottom:26px;right:26px;z-index:900;display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:var(--rpill);padding:12px 20px;font-size:.82rem;font-weight:700;animation:wppBeat 3s ease-in-out infinite;transition:var(--tr);box-shadow:0 4px 20px rgba(34,197,94,.4)}
+.wppf:hover{transform:translateY(-2px) scale(1.02);background:#16a34a}
+.wppf svg{width:16px;height:16px;fill:#fff}
+@media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
+/* Mobile menu */
+.mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:var(--blur-l);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.mob.open{display:flex}
+.mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78)}
+.mob a:hover{color:var(--tl)}
+.mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
+/* Navbar — idêntico ao homepage */
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:20px 0;transition:all .4s}
+#nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
+.navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nlogo-txt{font-family:'M',sans-serif;font-weight:900;font-size:1.5rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em}
+.nlinks{display:flex;align-items:center;gap:26px;list-style:none}
+.nlinks a{font-size:.78rem;font-weight:500;color:var(--txs);transition:color .2s;position:relative;padding-bottom:2px}
+.nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gb);border-radius:2px;transition:width .25s}
+.nlinks a:hover{color:var(--p1)}.nlinks a:hover::after{width:100%}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:21px;height:1.5px;background:var(--p1);border-radius:2px}
+.nd{display:flex}
+/* Glass */
+.glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,255,255,.7);border-radius:var(--rxl);box-shadow:var(--shm),inset 0 1px 0 rgba(255,255,255,.9);position:relative;overflow:hidden;transition:var(--tr)}
+.glass::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-15deg);transition:left .6s ease;pointer-events:none}
+.glass:hover::before{left:140%}
+.glass:hover{box-shadow:var(--shl),inset 0 1px 0 rgba(255,255,255,.95);transform:translateY(-4px)}
+.lbl{display:inline-flex;align-items:center;gap:7px;font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p3);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:var(--rpill);padding:5px 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:var(--rpill);font-family:'M',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;border:none;transition:var(--tr);white-space:nowrap;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
+.btn:hover::after{transform:translateX(120%)}
+.bp{background:var(--gc);color:#fff}.bp:hover{transform:translateY(-2px)}
+.bw{background:var(--green);color:#fff}.bw:hover{transform:translateY(-2px)}
+.bt{background:var(--teal-d);color:#fff}.bt:hover{transform:translateY(-2px);background:var(--teal-dd)}
+.bo{background:rgba(255,255,255,.75);color:var(--p1);border:1.5px solid var(--border2)}.bo:hover{border-color:rgba(79,209,197,.45);transform:translateY(-1px)}
+/* Reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+.rv.rl{transform:translateX(-28px)}.rv.rl.on{transform:none}
+.rv.rr{transform:translateX(28px)}.rv.rr.on{transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+/* ─── HERO ─── */
+#hero{min-height:52vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:140px 0 80px}
+.hbg{position:absolute;inset:0;background:linear-gradient(155deg,#e2f5f3 0%,#f0fafa 40%,#d8eeec 100%)}
+/* Premiere photo ampliada: scale(2.2) → só textura, opacity 10% */
+.hero-bg-img{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero-bg-img img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(2.2);width:100%;height:100%;object-fit:cover;opacity:.10}
+.hdots{position:absolute;inset:0;z-index:2;background-image:radial-gradient(rgba(79,209,197,.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 60% 50%,black,transparent);pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(64px);pointer-events:none;z-index:2}
+.orb1{width:680px;height:680px;background:radial-gradient(circle,rgba(79,209,197,.18) 0%,transparent 70%);top:-200px;right:-140px;animation:orbPulse 8s ease-in-out infinite,float1 13s ease-in-out infinite}
+.orb2{width:420px;height:420px;background:radial-gradient(circle,rgba(10,34,37,.06) 0%,transparent 70%);bottom:-100px;left:-80px;animation:orbPulse 10s ease-in-out infinite 2s,float2 15s ease-in-out infinite}
+.orb3{width:300px;height:300px;background:radial-gradient(circle,rgba(129,230,217,.15) 0%,transparent 70%);top:30%;left:25%;animation:orbPulse 9s ease-in-out infinite 1s,float3 11s ease-in-out infinite}
+.hero-inner{position:relative;z-index:3;text-align:center;max-width:700px;margin:0 auto}
+.hero-hl{font-family:'M',sans-serif;font-weight:900;font-size:clamp(3.2rem,8vw,6rem);color:var(--p1);line-height:.95;letter-spacing:-.05em;margin-bottom:20px}
+.hero-sub{font-size:1rem;font-weight:300;color:var(--txs);line-height:1.8;max-width:520px;margin:0 auto}
+
+/* ─── HUMAN ─── */
+#human{padding:112px 0;background:var(--bg)}
+.incl-hdr{text-align:center;margin-bottom:52px}
+.incl-hdr h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em;color:var(--p1);line-height:1.04}
+.incl-hdr p{font-size:.92rem;font-weight:300;color:var(--txs);margin-top:10px;max-width:480px;margin-left:auto;margin-right:auto}
+.incl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto}
+.incl-card{padding:36px 28px;border-radius:var(--rxl);transition:var(--tr)}
+.incl-card:hover{transform:translateY(-4px)}
+.incl-ico{width:46px;height:46px;border-radius:14px;background:rgba(79,209,197,.08);border:1px solid rgba(79,209,197,.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.3rem;transition:var(--tr)}
+.incl-card:hover .incl-ico{background:rgba(79,209,197,.16);transform:scale(1.1) rotate(-4deg)}
+.incl-t{font-family:'M',sans-serif;font-weight:700;font-size:.96rem;color:var(--p1);margin-bottom:8px}
+.incl-d{font-size:.82rem;font-weight:300;color:var(--txs);line-height:1.7}
+
+/* ─── NÃO É IA ─── */
+#not-ai{padding:112px 0;background:var(--bg);position:relative;overflow:hidden}
+.notai-wbg{position:absolute;font-family:'M',sans-serif;font-weight:900;font-size:22vw;color:rgba(10,34,37,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.06em;z-index:0}
+.notai-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:2}
+.notai-img-wrap{border-radius:var(--rx2);overflow:hidden;box-shadow:var(--shl);position:relative}
+.notai-img-wrap img{width:100%;display:block;object-fit:cover;aspect-ratio:4/3}
+.notai-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(10,34,37,.85);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:var(--rpill);padding:8px 16px;font-size:.7rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px}
+.notai-img-badge span.dot-red{width:8px;height:8px;border-radius:50%;background:#ff5f57;display:inline-block}
+.notai-txt .lbl{margin-bottom:18px}
+.notai-txt h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,3.8vw,3rem);color:var(--p1);letter-spacing:-.04em;line-height:1.04;margin-bottom:16px}
+.notai-txt p{font-size:.92rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:14px}
+.notai-analogy{background:var(--gc);border-radius:var(--rlg);padding:28px 32px;margin-top:22px;position:relative;overflow:hidden}
+.notai-analogy::before{content:'';position:absolute;top:-30px;right:-30px;width:150px;height:150px;border-radius:50%;background:rgba(79,209,197,.08);filter:blur(40px);pointer-events:none}
+.notai-analogy p{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.85);line-height:1.7;position:relative;z-index:1}
+.notai-analogy strong{color:var(--tl);font-weight:700}
+
+/* ─── PIPELINE ─── */
+#pipeline{padding:112px 0;background:#e8f6f5;position:relative;overflow:hidden}
+.pipe-wbg{position:absolute;font-family:'M',sans-serif;font-weight:900;font-size:22vw;color:rgba(10,34,37,.025);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.06em;z-index:0}
+.pipe-hdr{text-align:center;margin-bottom:68px;position:relative;z-index:2}
+.pipe-hdr h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2.2rem,4vw,3.2rem);color:var(--p1);letter-spacing:-.035em;line-height:1.06}
+.pipe-hdr p{font-size:.94rem;font-weight:300;color:var(--txs);margin-top:10px;max-width:500px;margin-left:auto;margin-right:auto}
+.how-flow{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:900px;margin:0 auto;position:relative;z-index:2}
+.how-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 14px}
+.how-box{width:100px;height:100px;border-radius:30px;background:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.9);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.95);backdrop-filter:var(--blur);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:var(--tr);font-size:1.9rem}
+.how-step.act .how-box{background:var(--p1);border-color:transparent;box-shadow:0 12px 40px rgba(10,34,37,.22),0 0 0 5px rgba(79,209,197,.18)}
+.how-lbl{font-family:'M',sans-serif;font-weight:700;font-size:.88rem;color:var(--p1);margin-bottom:4px}
+.how-step.act .how-lbl{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.how-sub{font-size:.74rem;font-weight:300;color:var(--txm);line-height:1.55;max-width:130px;margin:0 auto}
+.how-connector{width:52px;flex-shrink:0;display:flex;align-items:flex-start;justify-content:center;padding-top:44px}
+.how-line{width:100%;height:1.5px;background:rgba(79,209,197,.25);position:relative}
+.how-line::after{content:'';position:absolute;right:-6px;top:-4.5px;width:10px;height:10px;border-right:1.5px solid rgba(79,209,197,.35);border-top:1.5px solid rgba(79,209,197,.35);transform:rotate(45deg)}
+.how-connector.act .how-line{background:var(--teal-d)}
+.how-connector.act .how-line::after{border-color:var(--teal-d)}
+.prob-sol-banner{background:var(--gc);border-radius:var(--rx2);padding:52px 48px;text-align:center;position:relative;overflow:hidden;margin-top:72px}
+.prob-sol-banner::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:rgba(79,209,197,.1);filter:blur(60px);pointer-events:none}
+.prob-sol-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.7rem,3.5vw,2.8rem);color:#fff;line-height:1.08;letter-spacing:-.035em;position:relative;z-index:1}
+.prob-sol-h em{font-style:normal;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.prob-sol-sub{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.45);margin-top:10px;position:relative;z-index:1}
+
+/* ─── OBS ─── */
+#obs{padding:112px 0;background:var(--gs);position:relative;overflow:hidden}
+.obs-wbg{position:absolute;font-family:'M',sans-serif;font-weight:900;font-size:28vw;color:rgba(10,34,37,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.06em;z-index:0}
+.obs-sec-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:2}
+.obs-txt .lbl{margin-bottom:18px}
+.obs-txt h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,3.8vw,3rem);color:var(--p1);letter-spacing:-.04em;line-height:1.04;margin-bottom:16px}
+.obs-txt p{font-size:.92rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:14px}
+.nc-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.nc{background:rgba(255,255,255,.75);backdrop-filter:var(--blur);border:1px solid rgba(255,255,255,.9);border-radius:var(--rpill);padding:7px 15px;font-size:.76rem;font-weight:600;color:var(--p2);box-shadow:var(--sh);transition:var(--tr)}
+.nc:hover{box-shadow:var(--shm);border-color:rgba(79,209,197,.35);transform:translateY(-1px)}
+.obs-screen-card{background:var(--p1);border-radius:var(--rx2);overflow:hidden;box-shadow:var(--shl),0 0 0 1px rgba(255,255,255,.04);transition:var(--tr)}
+.obs-screen-card:hover{transform:translateY(-6px);box-shadow:0 32px 80px rgba(10,34,37,.22),0 0 0 1px rgba(79,209,197,.15)}
+.obs-sc-bar{background:#0d0d1a;padding:12px 18px;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,.05)}
+.obs-sc-dots{display:flex;gap:6px}
+.ohdot{width:10px;height:10px;border-radius:50%}
+.ohdot.r{background:#ff5f57}.ohdot.y{background:#febc2e}.ohdot.g{background:#28c840}
+.obs-sc-title{font-size:.63rem;font-weight:700;color:rgba(255,255,255,.22);letter-spacing:.08em;margin-left:8px}
+.obs-sc-rec{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:.58rem;font-weight:700;color:#ff5f57}
+.obs-sc-recdot{width:6px;height:6px;border-radius:50%;background:#ff5f57;animation:blink 1.1s ease-in-out infinite}
+.obs-sc-body{position:relative;overflow:hidden;line-height:0}
+.obs-sc-scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(79,209,197,.45),transparent);animation:scanLine 4s linear infinite;pointer-events:none;z-index:3}
+.obs-sc-img{width:100%;display:block;object-fit:cover}
+.obs-sc-badge{position:absolute;bottom:12px;left:12px;z-index:4;background:rgba(10,34,37,.82);backdrop-filter:blur(10px);border:1px solid rgba(79,209,197,.35);border-radius:var(--rpill);padding:6px 14px;font-family:'M',sans-serif;font-size:.64rem;font-weight:700;color:var(--tl);display:flex;align-items:center;gap:6px;animation:floatBadge 4s ease-in-out infinite}
+.obs-sc-bdot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:blink .9s ease-in-out infinite}
+.obs-sc-foot{background:#0d0d1a;border-top:1px solid rgba(255,255,255,.04);padding:9px 16px;display:flex;align-items:center;gap:8px}
+.obs-sc-meter{flex:1;height:3px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.obs-sc-mfill{height:100%;background:linear-gradient(90deg,var(--teal-d),var(--tl));border-radius:2px;animation:meterAnim 2.2s ease-in-out infinite}
+.obs-sc-status{font-size:.52rem;font-weight:700;color:var(--tl);background:rgba(79,209,197,.1);padding:3px 9px;border-radius:4px}
+
+/* ─── DASHBOARD ─── */
+#dashboard{padding:112px 0;background:#e8f6f5}
+.dash-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.dash-txt .lbl{margin-bottom:18px}
+.dash-txt h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,3.8vw,3rem);color:var(--p1);letter-spacing:-.04em;line-height:1.04;margin-bottom:16px}
+.dash-txt p{font-size:.92rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:14px}
+.dash-card{background:#fff;border-radius:var(--rx2);overflow:hidden;box-shadow:var(--shl);border:1px solid rgba(10,34,37,.06)}
+.dash-hdr{background:var(--p1);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.dash-logo{font-family:'M',sans-serif;font-weight:900;font-size:.9rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dash-user{display:flex;align-items:center;gap:7px;font-size:.65rem;font-weight:700;color:rgba(255,255,255,.45)}
+.dash-av{width:24px;height:24px;border-radius:50%;background:var(--gb)}
+.dash-body{padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dash-stat{background:var(--bg);border-radius:12px;padding:10px 12px;border:1px solid rgba(79,209,197,.1)}
+.dash-stat-val{font-family:'M',sans-serif;font-weight:900;font-size:1.25rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dash-stat-lbl{font-size:.56rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--txm);margin-top:3px}
+.dash-jlbl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--txm);margin-bottom:2px}
+.dash-jobs{display:flex;flex-direction:column;gap:6px}
+.dash-job{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--bg);border-radius:10px;border:1px solid rgba(10,34,37,.05)}
+.dash-job-ico{font-size:.9rem}
+.dash-job-info{flex:1}
+.dash-job-name{font-size:.72rem;font-weight:700;color:var(--p1)}
+.dash-job-sub{font-size:.6rem;font-weight:300;color:var(--txm)}
+.dash-job-badge{font-size:.56rem;font-weight:700;padding:3px 9px;border-radius:var(--rpill)}
+.badge-rev{background:rgba(254,188,46,.12);color:#b8860b;border:1px solid rgba(254,188,46,.3)}
+.badge-done{background:rgba(34,197,94,.1);color:#16a34a;border:1px solid rgba(34,197,94,.2)}
+.badge-new{background:rgba(79,209,197,.1);color:var(--teal-d);border:1px solid rgba(79,209,197,.25)}
+
+/* ─── CTA STRIP ─── */
+.cta-wrap{padding:12px 48px 76px}
+.cta-strip{background:linear-gradient(120deg,#2e7d94 0%,#5bbaa8 100%);border-radius:22px;padding:52px 58px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(46,125,148,.30)}
+.cta-strip::before{content:'';position:absolute;right:-80px;top:-80px;width:300px;height:300px;background:rgba(255,255,255,.09);border-radius:50%;pointer-events:none}
+.cta-strip::after{content:'';position:absolute;right:80px;bottom:-110px;width:260px;height:260px;background:rgba(255,255,255,.05);border-radius:50%;pointer-events:none}
+.cta-inner{position:relative;z-index:1}
+.cta-strip h2{font-family:'M',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.7px;color:#fff;line-height:1.2}
+.cta-strip p{color:rgba(255,255,255,.8);margin-top:8px;font-size:.9rem}
+.cta-btns{display:flex;gap:11px;flex-wrap:wrap;position:relative;z-index:1}
+.btn-wh{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--teal-d);font-family:'M',sans-serif;font-weight:800;font-size:.93rem;padding:13px 26px;border-radius:11px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.14);transition:transform .2s,box-shadow .2s}
+.btn-wh:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.btn-ghost-w{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);color:#fff;font-family:'M',sans-serif;font-weight:700;font-size:.93rem;padding:13px 26px;border-radius:11px;text-decoration:none;border:1px solid rgba(255,255,255,.28);transition:background .2s,transform .2s}
+.btn-ghost-w:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+
+#tech{padding:0;background:var(--p1);position:relative;overflow:hidden}
+.tech-scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(79,209,197,.3),transparent);animation:scanLine 5s linear infinite;pointer-events:none;z-index:5}
+
+/* bloco foto: ocupa 100% da largura, sem bordas */
+.tech-photo{position:relative;width:100%;line-height:0;overflow:hidden}
+.tech-photo img{width:100%;display:block;object-fit:cover;max-height:580px;object-position:center top;filter:brightness(.82)}
+/* fade topo→transparente→escuro na base */
+.tech-photo-fade{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to bottom,var(--p1) 0%,transparent 14%,transparent 66%,var(--p1) 100%);
+  z-index:2;
+}
+/* badge flutuante sobre a foto */
+.tech-photo-badge{
+  position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:3;
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(10,34,37,.76);backdrop-filter:blur(12px);
+  border:1px solid rgba(79,209,197,.3);border-radius:var(--rpill);
+  padding:8px 20px;font-size:.64rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tl);white-space:nowrap;
+}
+.tech-photo-badge .bdot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:blink .9s ease-in-out infinite}
+
+/* corpo: texto + form centralizado */
+.tech-body{position:relative;z-index:2;padding:60px 0 80px;text-align:center}
+.tech-lbl{display:inline-flex;align-items:center;gap:7px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(163,230,235,.6);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.15);border-radius:var(--rpill);padding:5px 13px;margin-bottom:22px}
+.tech-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.9rem,3.5vw,3rem);color:#fff;letter-spacing:-.035em;line-height:1.05;margin-bottom:14px}
+.tech-sub{font-size:.92rem;font-weight:300;color:rgba(255,255,255,.48);line-height:1.8;max-width:520px;margin:0 auto 36px}
+/* badges Adobe/DaVinci — espaço generoso (40px) antes do email */
+.tech-apps{display:inline-flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.tech-app{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--rmd);padding:10px 20px;font-size:.82rem;font-weight:700;color:rgba(255,255,255,.7);transition:var(--tr)}
+.tech-app:hover{background:rgba(255,255,255,.11);transform:translateY(-1px);border-color:rgba(79,209,197,.28)}
+/* campo email */
+.tech-fm-label{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:12px}
+.tech-fm{display:inline-flex;gap:10px;max-width:440px;width:100%;flex-wrap:wrap;justify-content:center}
+.tech-fm input{flex:1;min-width:200px;padding:13px 20px;border-radius:var(--rpill);border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);font-family:'M',sans-serif;font-size:.86rem;color:#fff;outline:none;transition:var(--tr)}
+.tech-fm input::placeholder{color:rgba(255,255,255,.28)}
+.tech-fm input:focus{border-color:var(--teal-d);background:rgba(255,255,255,.1)}
+.tech-suc{display:none;font-size:.84rem;color:var(--tl);margin-top:14px;font-weight:600}
+.tech-suc.show{display:block}
+
+/* ─── FOOTER — idêntico ao homepage ─── */
+#foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04)}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
+.ft-logo{font-family:'M',sans-serif;font-weight:900;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
+.ft-bp{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
+.ft-socs{display:flex;gap:7px}
+.ftsoc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:var(--tr)}
+.ftsoc svg{width:15px;height:15px;fill:currentColor}
+.ftsoc:hover{background:rgba(255,255,255,.12);color:#fff}
+.ft-col h4{font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul a{font-size:.8rem;color:rgba(255,255,255,.46);transition:color .2s}
+.ft-col ul a:hover{color:#fff}
+.ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.ft-bot p{font-size:.7rem;color:rgba(255,255,255,.22)}
+
+/* ─── Responsive ─── */
+@media(max-width:1024px){
+  .ft-top{grid-template-columns:1fr 1fr}
+  .incl-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nlinks,.nd{display:none}.ham{display:flex}
+  .obs-sec-inner,.dash-inner,.notai-inner{grid-template-columns:1fr}
+  .incl-grid{grid-template-columns:1fr}
+  .how-flow{flex-direction:column;align-items:center;gap:20px;max-width:300px;margin:0 auto}
+  .how-connector{width:auto;height:24px;padding:0;align-items:center;transform:rotate(90deg)}
+  .ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}
+  .cta-wrap{padding:12px 22px 52px}
+  .cta-strip{padding:36px 28px;flex-direction:column}
+  .cta-btns{flex-direction:column;width:100%}
+  .btn-wh,.btn-ghost-w{justify-content:center}
+  .tech-photo img{max-height:220px}
+  .tech-photo-badge{font-size:.56rem;padding:5px 12px}
+  .tech-body{padding:40px 0 52px}
+  .tech-fm{flex-direction:column;align-items:stretch;width:100%}
+  .tech-fm input,.tech-fm .btn{width:100%}
+  .prob-sol-banner{padding:36px 24px}
+  .w{padding:0 22px}
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Pular para o conte&uacute;do principal</a>
+
+<a href="https://wa.me/5548996367511" class="wppf" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#10005;</button>
+  <a href="https://libras.se/produtos" onclick="cm()">Produtos</a>
+  <a href="https://libras.se/portfolio" onclick="cm()">Trabalhos</a>
+  <a href="https://libras.se/blog" onclick="cm()">Blog</a>
+  <a href="https://huet.libras.se/" class="btn bw" onclick="cm()">Enviar seu v&iacute;deo</a>
+</div>
+
+<nav id="nav">
+  <div class="w">
+    <div class="navi">
+      <a href="https://libras.se/"><span class="nlogo-txt">Libras.se</span></a>
+      <ul class="nlinks">
+        <li><a href="https://libras.se/proposito">Propósito</a></li>
+        <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
+        <li><a href="https://libras.se/solucoes">Soluções</a></li>
+        <li><a href="https://libras.se/portfolio">Portfolio</a></li>
+        <li><a href="https://libras.se/blog">Blog</a></li>
+      </ul>
+      <a href="https://huet.libras.se/" class="btn bp nd" style="font-size:.8rem;padding:10px 20px">Enviar seu v&iacute;deo</a>
+      <button class="ham" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobm"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg" aria-hidden="true"></div>
+  <div class="hero-bg-img" aria-hidden="true">
+    <img src="https://libras.se/wp-content/uploads/2026/04/PLUGIN-PREMIERE.png" alt=""/>
+  </div>
+  <div class="hdots" aria-hidden="true"></div>
+  <div class="orb orb1" aria-hidden="true"></div>
+  <div class="orb orb2" aria-hidden="true"></div>
+  <div class="orb orb3" aria-hidden="true"></div>
+  <div class="w">
+    <div class="hero-inner">
+      <div class="lbl rv">&#9881;&#65039; Infraestrutura pr&oacute;pria</div>
+      <h1 class="hero-hl rv d1" style="margin-top:18px">Nossa<span class="gt">.</span><br/>Tecnologia<span class="gt">.</span></h1>
+      <p class="hero-sub rv d2">Desenvolvemos nossas pr&oacute;prias ferramentas para que a grava&ccedil;&atilde;o seja simples, o envio seja autom&aacute;tico e a entrega chegue pronta para publicar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HUMAN -->
+<section id="human">
+  <div class="w">
+    <div class="incl-hdr rv">
+      <div class="lbl">&#129309; A tecnologia serve ao humano</div>
+      <h2 style="margin-top:14px">Automatizamos o que pode.<br/>O resto s&atilde;o <span class="gt">pessoas</span>.</h2>
+      <p>Tecnologia para eliminar o trabalho repetitivo. Mas a qualidade da interpreta&ccedil;&atilde;o e o cuidado com o cliente ficam com pessoas reais.</p>
+    </div>
+    <div class="incl-grid">
+      <div class="glass incl-card rv d1"><div class="incl-ico">&#129335;</div><div class="incl-t">Int&eacute;rpretes certificados</div><div class="incl-d">Todo job &eacute; gravado por um int&eacute;rprete certificado pelo PROLIBRAS. Nenhuma IA gera os sinais.</div></div>
+      <div class="glass incl-card rv d2"><div class="incl-ico">&#9997;&#65039;</div><div class="incl-t">Revis&atilde;o humana em cada entrega</div><div class="incl-d">Nossa equipe assiste, revisa e edita cada arquivo antes de chegar ao cliente.</div></div>
+      <div class="glass incl-card rv d3"><div class="incl-ico">&#127916;</div><div class="incl-t">Entrega pronta para publicar</div><div class="incl-d">O arquivo chega ao cliente em ProRes 4444 com canal alpha, pronto para a timeline.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NÃO É IA -->
+<section id="not-ai">
+  <div class="notai-wbg" aria-hidden="true">HUMANO</div>
+  <div class="w">
+    <div class="notai-inner">
+      <div class="rv rl d1">
+        <div class="notai-img-wrap">
+          <img src="https://libras.se/wp-content/uploads/2026/04/LIBRAS-SE-imprensa-2.jpg" alt="Int&eacute;rprete de Libras gravando em est&uacute;dio profissional"/>
+          <div class="notai-img-badge"><span class="dot-red"></span> Int&eacute;rprete real em est&uacute;dio</div>
+        </div>
+      </div>
+      <div class="notai-txt rv rr d2">
+        <div class="lbl">&#128683; Isso aqui n&atilde;o &eacute; IA</div>
+        <h2>A comunidade surda n&atilde;o aceita <span class="gt">avatares</span>.</h2>
+        <p>Avatares 3D, bonecos animados e sintetizadores de sinais n&atilde;o t&ecirc;m a express&atilde;o facial, a corporalidade e as nuances que Libras exige. A comunidade surda rejeita essas solu&ccedil;&otilde;es &mdash; e com raz&atilde;o.</p>
+        <p>Em filmes, v&iacute;deos e cinema, n&atilde;o existe substituto para um int&eacute;rprete humano. Express&otilde;es n&atilde;o-manuais, ritmo, afeto &mdash; tudo isso se perde numa anima&ccedil;&atilde;o.</p>
+        <div class="notai-analogy">
+          <p>Pense assim: <strong>Libras equivale a dublagem.</strong><br/>Voc&ecirc; assistiria um filme inteiro dublado por uma voz rob&oacute;tica? S&oacute; com a voz humana temos entona&ccedil;&atilde;o, sarcasmo, carinho, medo &mdash; tudo que uma l&iacute;ngua pode transmitir. Com Libras &eacute; a mesma coisa: s&oacute; um int&eacute;rprete real entrega o que o surdo merece receber.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section id="pipeline">
+  <div class="pipe-wbg" aria-hidden="true">FLUXO</div>
+  <div class="w">
+    <div class="pipe-hdr rv">
+      <div class="lbl">&#128260; Fluxo completo</div>
+      <h2 style="margin-top:14px">Do int&eacute;rprete ao cliente,<br/><span class="gt">sem atrito</span>.</h2>
+      <p>Quatro etapas conectadas por tecnologia pr&oacute;pria. Cada uma pensada para eliminar retrabalho e garantir entrega r&aacute;pida.</p>
+    </div>
+    <div class="how-flow">
+      <div class="how-step act" id="hs1"><div class="how-box">&#127916;</div><div class="how-lbl">Grava&ccedil;&atilde;o no OBS</div><div class="how-sub">Int&eacute;rprete usa nosso fork customizado do OBS Studio</div></div>
+      <div class="how-connector act" id="ha1"><div class="how-line"></div></div>
+      <div class="how-step" id="hs2"><div class="how-box">&#9889;</div><div class="how-lbl">Envio autom&aacute;tico</div><div class="how-sub">Arquivo vai direto ao nosso backend, sem upload manual</div></div>
+      <div class="how-connector" id="ha2"><div class="how-line"></div></div>
+      <div class="how-step" id="hs3"><div class="how-box">&#9997;&#65039;</div><div class="how-lbl">Revis&atilde;o e edi&ccedil;&atilde;o</div><div class="how-sub">Equipe revisa e edita no Dashboard Libras.se</div></div>
+      <div class="how-connector" id="ha3"><div class="how-line"></div></div>
+      <div class="how-step" id="hs4"><div class="how-box">&#128230;</div><div class="how-lbl">Entrega ao cliente</div><div class="how-sub">Arquivo final dispon&iacute;vel no Dashboard, pronto para publicar</div></div>
+    </div>
+    <div class="prob-sol-banner rv" style="max-width:900px;margin-left:auto;margin-right:auto">
+      <p class="prob-sol-h">Tecnologia feita para <em>int&eacute;rpretes reais</em>.<br/>Resultado que chega <em>editado e pronto</em>.</p>
+      <p class="prob-sol-sub">Automatizamos o que pode ser automatizado. O resto fica com gente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OBS — screenshot da interface/margem -->
+<section id="obs">
+  <div class="obs-wbg" aria-hidden="true">OBS</div>
+  <div class="w">
+    <div class="obs-sec-inner">
+      <div class="rv rl d1">
+        <div class="obs-screen-card">
+          <div class="obs-sc-bar">
+            <div class="obs-sc-dots"><div class="ohdot r"></div><div class="ohdot y"></div><div class="ohdot g"></div></div>
+            <span class="obs-sc-title">OBS Libras.se &mdash; v2.4 (fork)</span>
+            <div class="obs-sc-rec"><div class="obs-sc-recdot"></div>GRAVANDO</div>
+          </div>
+          <div class="obs-sc-body">
+            <div class="obs-sc-scan" aria-hidden="true"></div>
+            <img src="https://libras.se/wp-content/uploads/2026/03/Captura-de-Tela-2026-03-27-as-08.26.36.png" alt="Interface do OBS Libras.se" class="obs-sc-img" style="aspect-ratio:16/9;object-fit:cover;object-position:top left"/>
+            <div class="obs-sc-badge"><div class="obs-sc-bdot"></div>Upload autom&aacute;tico via API</div>
+          </div>
+          <div class="obs-sc-foot">
+            <div class="obs-sc-meter"><div class="obs-sc-mfill"></div></div>
+            <div class="obs-sc-status">&#10022; Pipeline conectado</div>
+          </div>
+        </div>
+      </div>
+      <div class="obs-txt rv rr d2">
+        <div class="lbl">&#127916; OBS Libras.se</div>
+        <h2>Um fork do <span class="gt">OBS Studio</span> feito sob medida.</h2>
+        <p>O <strong>OBS Studio</strong> &eacute; o padr&atilde;o open-source da ind&uacute;stria para captura e streaming de v&iacute;deo &mdash; amplamente adotado por creators, broadcasters e est&uacute;dios ao redor do mundo. Escolhemos ele como base justamente por ser a solu&ccedil;&atilde;o mais robusta, audit&aacute;vel e difundida do mercado.</p>
+        <p>A partir do c&oacute;digo-fonte aberto, criamos um <strong>fork customizado</strong> que integra nossa l&oacute;gica de neg&oacute;cio direto no runtime da aplica&ccedil;&atilde;o: autentica&ccedil;&atilde;o via token JWT, binding autom&aacute;tico do job ao iniciar a sess&atilde;o de captura, encode em ProRes 4444 com alpha channel nativo e upload ass&iacute;ncrono para o nosso object storage via API REST &mdash; tudo sem interven&ccedil;&atilde;o manual do int&eacute;rprete.</p>
+        <p>O resultado: o int&eacute;rprete abre o app, grava e o asset j&aacute; chega no backend pronto para review. Zero atrito, zero retrabalho, zero depend&ecirc;ncia de servi&ccedil;os de terceiros para transfer&ecirc;ncia de arquivos.</p>
+        <div class="nc-row">
+          <span class="nc">Open-source (GPLv2)</span><span class="nc">Fork customizado</span><span class="nc">JWT auth</span><span class="nc">REST API upload</span><span class="nc">ProRes 4444 + alpha</span><span class="nc">Job binding autom&aacute;tico</span><span class="nc">Chroma key pr&eacute;-configurado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="w">
+    <div class="dash-inner">
+      <div class="dash-txt rv rl">
+        <div class="lbl">&#128202; Dashboard Libras.se</div>
+        <h2>Tudo em um s&oacute; <span class="gt">lugar</span>.</h2>
+        <p>Quando a grava&ccedil;&atilde;o chega, ela cai direto no Dashboard interno do Libras.se. Nossa equipe revisa, edita e aprova cada entrega antes de liberar para o cliente.</p>
+        <p>O cliente acessa o mesmo Dashboard para acompanhar o andamento e fazer o download do arquivo final &mdash; sem depender de e-mail ou link de terceiros.</p>
+        <p>Um sistema central que mant&eacute;m int&eacute;rprete, equipe e cliente na mesma p&aacute;gina, em tempo real.</p>
+      </div>
+      <div class="rv rr d1">
+        <div class="dash-card">
+          <div class="dash-hdr"><span class="dash-logo">Libras.se</span><div class="dash-user"><div class="dash-av"></div>Equipe interna</div></div>
+          <div class="dash-body">
+            <div class="dash-stats">
+              <div class="dash-stat"><div class="dash-stat-val">12</div><div class="dash-stat-lbl">Em revis&atilde;o</div></div>
+              <div class="dash-stat"><div class="dash-stat-val">47</div><div class="dash-stat-lbl">Entregues</div></div>
+              <div class="dash-stat"><div class="dash-stat-val">3</div><div class="dash-stat-lbl">Novos hoje</div></div>
+            </div>
+            <div class="dash-jlbl">Fila de trabalhos</div>
+            <div class="dash-jobs">
+              <div class="dash-job"><span class="dash-job-ico">&#127916;</span><div class="dash-job-info"><div class="dash-job-name">Nubank &mdash; Campanha 30s</div><div class="dash-job-sub">Recebido h&aacute; 12 min &middot; Ana C.</div></div><span class="dash-job-badge badge-rev">Revis&atilde;o</span></div>
+              <div class="dash-job"><span class="dash-job-ico">&#127916;</span><div class="dash-job-info"><div class="dash-job-name">Natura &mdash; V&iacute;deo institucional</div><div class="dash-job-sub">Recebido h&aacute; 1h &middot; Marcos L.</div></div><span class="dash-job-badge badge-rev">Revis&atilde;o</span></div>
+              <div class="dash-job"><span class="dash-job-ico">&#128218;</span><div class="dash-job-info"><div class="dash-job-name">Cogna &mdash; Videoaula EAD</div><div class="dash-job-sub">Entregue ontem &middot; Cliente notificado</div></div><span class="dash-job-badge badge-done">Entregue</span></div>
+              <div class="dash-job"><span class="dash-job-ico">&#128225;</span><div class="dash-job-info"><div class="dash-job-name">MPDFT &mdash; Evento ao vivo</div><div class="dash-job-sub">Grava&ccedil;&atilde;o recebida agora</div></div><span class="dash-job-badge badge-new">Novo</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-wrap rv">
+  <div class="w">
+    <div class="cta-strip">
+      <div class="cta-inner">
+        <h2>Quer colocar isso pra trabalhar<br/>no seu projeto?</h2>
+        <p>Fale com o Debiasi agora. Resposta imediata pelo WhatsApp.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="https://wa.me/5548996367511" class="btn-wh">&#129335; Falar no WhatsApp</a>
+        <a href="https://libras.se/produtos" class="btn-ghost-w">Ver produtos</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TECH — Em Desenvolvimento -->
+<section id="tech">
+  <div class="tech-scan" aria-hidden="true"></div>
+
+  <!-- Foto grande preenchendo o topo da seção -->
+  <div class="tech-photo rv">
+    <img src="https://libras.se/wp-content/uploads/2026/04/PLUGIN-PREMIERE.png" alt="Plugin Libras.se no Adobe Premiere Pro"/>
+    <div class="tech-photo-fade" aria-hidden="true"></div>
+    <div class="tech-photo-badge">
+      <span class="bdot"></span>Em desenvolvimento &mdash; Adobe Premiere &amp; DaVinci Resolve
+    </div>
+  </div>
+
+  <!-- Texto e formulário centralizados abaixo da foto -->
+  <div class="tech-body rv d1">
+    <div class="w" style="display:flex;flex-direction:column;align-items:center">
+      <div class="tech-lbl">&#128302; Em desenvolvimento</div>
+      <h2 class="tech-h">Libras direto na sua <span style="background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">timeline</span>.</h2>
+      <p class="tech-sub">Estamos desenvolvendo a integra&ccedil;&atilde;o completa com softwares avan&ccedil;ados de edi&ccedil;&atilde;o. O objetivo: inserir a janela de Libras direto na timeline, sem sair do seu editor, sem exportar, sem retrabalho.</p>
+
+      <div class="tech-apps">
+        <div class="tech-app"><svg width="16" height="16" viewBox="0 0 24 24" fill="#9999FF"><path d="M5.422.007 0 23.997h8.648l1.428-5.683h3.983l1.428 5.683H24L18.578.007Zm6.577 13.177L10 6l-1.999 7.184Z"/></svg> Adobe Premiere</div>
+        <div class="tech-app">&#127916; DaVinci Resolve</div>
+      </div>
+
+      <div class="tech-fm-label">&#128231; Entrar na lista de espera &mdash; aviso em primeira m&atilde;o</div>
+      <div class="tech-fm">
+        <input type="email" id="techEmail" placeholder="Seu e-mail" autocomplete="email"/>
+        <button class="btn bt" onclick="joinWait()" type="button">Entrar na lista</button>
+      </div>
+      <div class="tech-suc" id="techSuc">&#10003; Voc&ecirc; est&aacute; na lista. Aviso em primeira m&atilde;o. &#128640;</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="foot" aria-label="Rodapé do site">
+  <div class="w">
+    <div class="ft-top">
+      <div>
+        <a href="https://libras.se/" class="ft-logo">Libras.se</a>
+        <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
+        <div class="ft-socs">
+          <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://youtube.com/@librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://facebook.com/portallibrasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col"><h4>Serviços</h4><ul><li><a href="https://libras.se/#tech">Audiovisual</a></li><li><a href="https://libras.se/#tech">Videoaulas</a></li><li><a href="https://libras.se/#tech">Ao Vivo</a></li><li><a href="https://libras.se/#tech">Social Media</a></li></ul></div>
+      <div class="ft-col"><h4>Empresa</h4><ul><li><a href="https://libras.se/tecnologia/">Nossa Tecnologia</a></li><li><a href="https://libras.se/portfolio/">Portfólio</a></li><li><a href="https://libras.se/#press">Blog</a></li><li><a href="#">Seja Tradutor</a></li></ul></div>
+      <div class="ft-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+estava+no+site+do+Libras.se+e+quero+saber+mais!" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="mailto:contato@libras.se">contato@libras.se</a></li><li><a href="https://instagram.com/libras.se" target="_blank" rel="noopener noreferrer">@libras.se</a></li><li><a href="#">Florianópolis, SC</a></li></ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2026 Libras.se · Vídeos para todos · Todos os direitos reservados.</p>
+      <p>CNPJ 22.943.329/0001-91 · Florianópolis, Santa Catarina, Brasil</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>60),{passive:true});
+const mob=document.getElementById('mobm'),hamb=document.getElementById('hamb'),mobx=document.getElementById('mobx');
+function openMenu(){mob.classList.add('open');hamb.setAttribute('aria-expanded','true');}
+function closeMenu(){mob.classList.remove('open');hamb.setAttribute('aria-expanded','false');}
+function cm(){closeMenu();}
+hamb.addEventListener('click',openMenu);
+mobx.addEventListener('click',closeMenu);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mob.classList.contains('open'))closeMenu();});
+const rvO=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rvO.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.rv').forEach(el=>rvO.observe(el));
+const hs=['hs1','hs2','hs3','hs4'],ha=['ha1','ha2','ha3'];let hsi=0;
+function cycleH(){hs.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('act');});ha.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('act');});const el=document.getElementById(hs[hsi]);if(el)el.classList.add('act');if(hsi>0){const a=document.getElementById(ha[hsi-1]);if(a)a.classList.add('act');}hsi=(hsi+1)%hs.length;}
+cycleH();setInterval(cycleH,1400);
+async function joinWait(){const email=document.getElementById('techEmail').value.trim();if(!email||!email.includes('@')){alert('Informe um e-mail v\u00e1lido.');return;}try{await fetch('https://n8n.libras.se/webhook/waitlist-plugin',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,product:'premiere-davinci',timestamp:new Date().toISOString()}),mode:'no-cors'});}catch(e){}document.getElementById('techEmail').value='';document.getElementById('techSuc').classList.add('show');}
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});closeMenu();}});});
+</script>
+</body>
+</html>

@@ -4,17 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Página não encontrada | Libras.se</title>
-  <meta name="description" content="A página que você tentou acessar não foi encontrada." />
+  <title>Nenhum sinal por aqui | Libras.se</title>
+  <meta name="description" content="Essa página foi embora sem deixar sinal. Nossos intérpretes estão esperando por você na página inicial." />
+
+  <link rel="preload" href="https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded900.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded300.otf" as="font" type="font/otf" crossorigin>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #102421;
+    @font-face {
+      font-family: 'M';
+      src: url('https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded300.otf') format('opentype');
+      font-weight: 300;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'M';
+      src: url('https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded500.otf') format('opentype');
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'M';
+      src: url('https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded700.otf') format('opentype');
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'M';
+      src: url('https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded900.otf') format('opentype');
+      font-weight: 900;
+      font-display: swap;
     }
 
+    :root {
+      --bg: #f0fafa;
+      --p1: #0e3538;
+      --teal: #4fd1c5;
+      --teal-d: #2eb8c0;
+      --txt: #12393d;
+      --txs: #3d6063;
+      --txm: #7aacad;
+      --card: rgba(255,255,255,.72);
+      --gb: linear-gradient(130deg, #1aa8b0 0%, #4fd1c5 50%, #81e6d9 100%);
+      --gc: linear-gradient(135deg, #0e3538, #2a6069);
+      --rxl: 32px;
+      --rpill: 999px;
+      --blur: blur(22px);
+      --shm: 0 8px 40px rgba(10,34,37,.1);
+      --tr: .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'M', Arial, sans-serif;
+      font-weight: 500;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--txt);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── ORBS ─── */
+    .orbs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      will-change: transform;
+    }
+
+    .orb-1 {
+      width: 500px; height: 500px;
+      top: -5%; left: -8%;
+      background: radial-gradient(circle, rgba(143,231,226,.35), transparent 70%);
+      animation: orbDrift1 22s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      top: 25%; right: -12%;
+      background: radial-gradient(circle, rgba(72,209,204,.25), transparent 70%);
+      animation: orbDrift2 28s ease-in-out infinite alternate;
+    }
+    .orb-3 {
+      width: 350px; height: 350px;
+      top: 55%; left: 10%;
+      background: radial-gradient(circle, rgba(197,240,237,.3), transparent 70%);
+      animation: orbDrift3 20s ease-in-out infinite alternate;
+    }
+    .orb-4 {
+      width: 450px; height: 450px;
+      top: 80%; right: 5%;
+      background: radial-gradient(circle, rgba(143,231,226,.28), transparent 70%);
+      animation: orbDrift4 25s ease-in-out infinite alternate;
+    }
+    .orb-5 {
+      width: 300px; height: 300px;
+      top: 42%; left: 45%;
+      background: radial-gradient(circle, rgba(72,209,204,.18), transparent 70%);
+      animation: orbDrift5 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbDrift1 {
+      0%   { transform: translate(0,0) scale(1); }
+      50%  { transform: translate(60px,80px) scale(1.12); }
+      100% { transform: translate(-30px,150px) scale(.95); }
+    }
+    @keyframes orbDrift2 {
+      0%   { transform: translate(0,0) scale(1); }
+      50%  { transform: translate(-80px,50px) scale(1.08); }
+      100% { transform: translate(-40px,120px) scale(1.15); }
+    }
+    @keyframes orbDrift3 {
+      0%   { transform: translate(0,0) scale(1); }
+      100% { transform: translate(70px,-60px) scale(1.1); }
+    }
+    @keyframes orbDrift4 {
+      0%   { transform: translate(0,0) scale(1); }
+      100% { transform: translate(-50px,-80px) scale(1.05); }
+    }
+    @keyframes orbDrift5 {
+      0%   { transform: translate(0,0) scale(.9); }
+      100% { transform: translate(40px,60px) scale(1.15); }
+    }
+
+    /* ─── LAYOUT ─── */
     main {
       min-height: 100vh;
       display: flex;
@@ -22,38 +145,267 @@
       justify-content: center;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .box {
-      max-width: 640px;
+    /* ─── GLASS CARD ─── */
+    .card {
+      max-width: 540px;
+      width: 100%;
+      background: var(--card);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: var(--rxl);
+      box-shadow: var(--shm), inset 0 1px 0 rgba(255,255,255,.9);
+      padding: 56px 52px;
+      position: relative;
+      overflow: hidden;
     }
 
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: skewX(-15deg);
+      transition: left .8s ease;
+      pointer-events: none;
+    }
+    .card:hover::before { left: 140%; }
+
+    /* ─── BADGE ─── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--txm);
+      background: rgba(79,209,197,.1);
+      border: 1px solid rgba(79,209,197,.2);
+      border-radius: var(--rpill);
+      padding: 5px 14px;
+      margin-bottom: 24px;
+    }
+
+    /* ─── HAND ─── */
+    .hand {
+      font-size: 3.6rem;
+      display: block;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 6px 18px rgba(79,209,197,.35));
+      animation: floatHand 5s ease-in-out infinite;
+    }
+
+    @keyframes floatHand {
+      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+      20%       { transform: translateY(-14px) rotate(10deg) scale(1.07); }
+      45%       { transform: translateY(-8px) rotate(-5deg) scale(1.02); }
+      70%       { transform: translateY(-18px) rotate(7deg) scale(1.05); }
+    }
+
+    /* ─── 404 ─── */
+    .num {
+      font-size: clamp(5rem, 18vw, 8.5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.04em;
+      background: linear-gradient(90deg, #1aa8b0, #4fd1c5, #81e6d9, #4fd1c5, #1aa8b0);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: refraction 4s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes refraction {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ─── COPY ─── */
     h1 {
-      font-size: 48px;
-      margin: 0 0 16px;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -.04em;
+      color: var(--txt);
+      margin-bottom: 14px;
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.5;
-      margin: 0 0 28px;
+      font-size: .92rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--txs);
+      margin-bottom: 36px;
     }
 
-    a {
-      color: #007d68;
+    /* ─── DIVIDER ─── */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .divider-line {
+      width: 40px;
+      height: 1px;
+      background: rgba(79,209,197,.3);
+    }
+
+    .divider-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: .25s; background: var(--teal-d); }
+    .dot:nth-child(3) { animation-delay: .5s; opacity: .5; }
+
+    @keyframes dotPulse {
+      0%, 100% { transform: scale(1); opacity: .45; }
+      50%       { transform: scale(1.6); opacity: 1; }
+    }
+
+    /* ─── BUTTON ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: var(--rpill);
+      font-family: 'M', Arial, sans-serif;
+      font-size: .88rem;
       font-weight: 700;
       text-decoration: none;
+      cursor: pointer;
+      transition: var(--tr);
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      background: var(--gc);
+      color: #fff;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+      transform: translateX(-120%);
+      transition: transform .5s ease;
+      pointer-events: none;
+    }
+    .btn:hover::after { transform: translateX(120%); }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(10,34,37,.3);
+    }
+    .btn:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+    }
+
+    /* ─── REVEAL ─── */
+    .rv {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal .75s ease forwards;
+    }
+    .d1 { animation-delay: .08s; }
+    .d2 { animation-delay: .18s; }
+    .d3 { animation-delay: .30s; }
+    .d4 { animation-delay: .44s; }
+    .d5 { animation-delay: .58s; }
+    .d6 { animation-delay: .72s; }
+
+    @keyframes reveal {
+      to { opacity: 1; transform: none; }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 480px) {
+      .card { padding: 44px 28px; }
+    }
+
+    /* ─── MOTION ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+
   <main>
-    <div class="box">
-      <h1>Página não encontrada</h1>
-      <p>O endereço acessado não existe ou pode ter sido removido.</p>
-      <a href="/">Voltar para a página inicial</a>
+    <div class="card">
+
+      <span class="hand rv" role="img" aria-label="Mão fazendo sinal">🤟</span>
+
+      <div class="badge rv d1">
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true">
+          <circle cx="4" cy="4" r="3" fill="#4fd1c5" opacity=".7"/>
+        </svg>
+        Erro 404
+      </div>
+
+      <div class="num rv d2" aria-label="404">404</div>
+
+      <h1 class="rv d3">Nenhum sinal<br>por aqui</h1>
+
+      <p class="rv d4">
+        Essa página foi embora sem deixar nenhum sinal.<br>
+        Mas não se preocupe — nossos intérpretes estão<br>
+        esperando por você na página inicial.
+      </p>
+
+      <div class="divider rv d5" aria-hidden="true">
+        <div class="divider-line"></div>
+        <div class="divider-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="divider-line"></div>
+      </div>
+
+      <a href="/" class="btn rv d6">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Voltar para o início
+      </a>
+
     </div>
   </main>
+
 </body>
 </html>

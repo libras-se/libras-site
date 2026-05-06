@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Seja um TIL Parceiro &mdash; Libras.se</title>
-<meta name="description" content="Intérprete de Libras? Trabalhe conosco. Horário flexível, software próprio de gravação e pagamento semanal pelo que você entrega. Cadastre-se no Libras.se."/>
+<meta name="description" content="Intérprete de Libras? Trabalhe conosco. Horário flexível, software próprio de gravação e pagamento semanal pelo que você entrega."/>
 <link rel="preconnect" href="https://libras.se" crossorigin/>
 <link rel="preload" href="https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded300.otf" as="font" type="font/otf" crossorigin/>
 <link rel="preload" href="https://libras.se/wp-content/uploads/2026/03/MuseoSansRounded700.otf" as="font" type="font/otf" crossorigin/>
@@ -22,23 +22,20 @@
   --bg:#f0fafa;
   --bg2:#e8f6f5;
   --bg3:#dff2f0;
-  --p1:#0a2225;--p2:#0f3338;--p3:#2a6069;
+  --p1:#0e3538;--p2:#154245;--p3:#2a6069;
   --teal:#4fd1c5;--tl:#81e6d9;--txl:#b2f5ea;
   --teal-d:#2eb8c0;--teal-dd:#1a9ca4;
   --green:#22c55e;
   --card:rgba(255,255,255,.72);
-  --card-s:rgba(255,255,255,.85);
   --border:rgba(79,209,197,.18);
-  --border2:rgba(10,34,37,.07);
-  --txt:#0a2225;--txs:#3d6063;--txm:#7aacad;
+  --border2:rgba(14,53,56,.07);
+  --txt:#12393d;--txs:#3d6063;--txm:#7aacad;
   --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
-  --gb2:linear-gradient(135deg,#1aa8b0,#81e6d9);
-  --gc:linear-gradient(135deg,#0a2225,#2a6069);
+  --gc:linear-gradient(135deg,#0e3538,#2a6069);
   --gs:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
-  --sh:0 2px 16px rgba(10,34,37,.06);
-  --shm:0 8px 40px rgba(10,34,37,.1);
-  --shl:0 20px 72px rgba(10,34,37,.14);
-  --shg:0 8px 40px rgba(79,209,197,.22);
+  --sh:0 2px 16px rgba(14,53,56,.06);
+  --shm:0 8px 40px rgba(14,53,56,.1);
+  --shl:0 20px 72px rgba(14,53,56,.14);
   --blur:blur(22px);--blur-l:blur(40px);
   --tr:.3s cubic-bezier(.4,0,.2,1);
   --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
@@ -56,19 +53,16 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .skip-link:focus{top:0}
 
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
+.wn{max-width:880px;margin:0 auto;padding:0 40px;width:100%}
 
 /* ── GRADIENT TEXT ── */
 .gt{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.refract{background:linear-gradient(90deg,#1aa8b0,#4fd1c5,#81e6d9,#4fd1c5,#1aa8b0);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:refraction 4s ease-in-out infinite}
-@keyframes refraction{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
 /* ── GLASS ── */
 .glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,255,255,.7);border-radius:var(--rxl);box-shadow:var(--shm),inset 0 1px 0 rgba(255,255,255,.9);position:relative;overflow:hidden;transition:var(--tr);will-change:transform}
 .glass::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-15deg);transition:left .6s ease;pointer-events:none}
 .glass:hover::before{left:140%}
 .glass:hover{box-shadow:var(--shl),inset 0 1px 0 rgba(255,255,255,.95);transform:translateY(-4px)}
-.border-glow{animation:borderGlow 2.5s ease-in-out infinite}
-@keyframes borderGlow{0%,100%{box-shadow:var(--shm),0 0 0 0 rgba(79,209,197,0)}50%{box-shadow:var(--shl),0 0 0 4px rgba(79,209,197,.18)}}
 
 /* ── LABEL ── */
 .lbl{display:inline-flex;align-items:center;gap:7px;font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p3);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:var(--rpill);padding:5px 14px}
@@ -78,8 +72,8 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
 .btn:hover::after{transform:translateX(120%)}
 .btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-.bp{background:var(--gc);color:#fff;box-shadow:0 4px 18px rgba(10,34,37,.22)}
-.bp:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(10,34,37,.3)}
+.bp{background:var(--gc);color:#fff;box-shadow:0 4px 18px rgba(14,53,56,.22)}
+.bp:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(14,53,56,.3)}
 .bw{background:var(--green);color:#fff;box-shadow:0 4px 16px rgba(34,197,94,.28)}
 .bw:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,197,94,.38)}
 .bt{background:var(--teal-d);color:#fff;box-shadow:0 4px 18px rgba(46,184,192,.28)}
@@ -88,7 +82,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .bgl:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(79,209,197,.45)}
 .bo{background:rgba(255,255,255,.75);color:var(--p1);border:1.5px solid var(--border2);backdrop-filter:var(--blur)}
 .bo:hover{border-color:rgba(79,209,197,.45);transform:translateY(-1px);box-shadow:var(--shm)}
-.bo-dark{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.22);backdrop-filter:var(--blur)}
+.bo-dark{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.22)}
 .bo-dark:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-1px)}
 
 /* ── SCROLL REVEAL ── */
@@ -96,9 +90,8 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .rv.on{opacity:1;transform:none}
 .rv.rl{transform:translateX(-28px)}.rv.rl.on{transform:none}
 .rv.rr{transform:translateX(28px)}.rv.rr.on{transform:none}
-.rv.rs{transform:scale(.96);opacity:0}.rv.rs.on{transform:scale(1);opacity:1}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
-.d4{transition-delay:.28s}.d5{transition-delay:.35s}.d6{transition-delay:.42s}
+.d4{transition-delay:.28s}.d5{transition-delay:.35s}
 
 /* ── KEYFRAMES ── */
 @keyframes float1{0%,100%{transform:translate(0,0) scale(1)}20%{transform:translate(20px,-15px) scale(1.05)}40%{transform:translate(-10px,-25px) scale(.97)}60%{transform:translate(15px,-10px) scale(1.03)}80%{transform:translate(-5px,-20px) scale(1)}}
@@ -107,7 +100,8 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 @keyframes orbPulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.55;transform:scale(1.08)}}
 @keyframes wppBeat{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,.4)}50%{box-shadow:0 4px 28px rgba(34,197,94,.55),0 0 0 6px rgba(34,197,94,.08)}}
 @keyframes scanLine{0%{top:0}100%{top:100%}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes barPulse{0%,100%{width:68%}50%{width:86%}}
 
 /* ── FLOAT WPP ── */
 .wppf{position:fixed;bottom:26px;right:26px;z-index:900;display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:var(--rpill);padding:12px 20px;font-size:.82rem;font-weight:700;animation:wppBeat 3s ease-in-out infinite;transition:var(--tr);box-shadow:0 4px 20px rgba(34,197,94,.4)}
@@ -124,9 +118,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 
 /* ── NAVBAR ── */
 #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:20px 0;transition:all .4s}
-#nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
+#nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(14,53,56,.05)}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.nlogo-txt{font-family:'M',sans-serif;font-weight:900;font-size:1.5rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+.nlogo-txt{font-family:'M',sans-serif;font-weight:1000;font-size:1.5rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
 .nlinks{display:flex;align-items:center;gap:26px;list-style:none}
 .nlinks a{font-size:.82rem;font-weight:500;color:var(--txs);transition:color .2s;position:relative;padding-bottom:2px}
 .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gb);border-radius:2px;transition:width .25s}
@@ -139,154 +133,134 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 /* ═══════════════════
    PAGE HERO
 ═══════════════════ */
-#phero{padding:140px 0 100px;position:relative;overflow:hidden;min-height:52vh;display:flex;align-items:center}
+#phero{padding:140px 0 96px;position:relative;overflow:hidden;min-height:50vh;display:flex;align-items:center}
 .hbg2{position:absolute;inset:0;background:linear-gradient(155deg,#e2f5f3 0%,#f0fafa 40%,#d8eeec 100%)}
 .hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(79,209,197,.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 60% 50%,black,transparent);pointer-events:none}
 .orb{position:absolute;border-radius:50%;filter:blur(64px);pointer-events:none;will-change:transform,opacity;contain:layout style}
-.orb1{width:580px;height:580px;background:radial-gradient(circle,rgba(79,209,197,.16) 0%,transparent 70%);top:-180px;right:-120px;animation:orbPulse 8s ease-in-out infinite,float1 13s ease-in-out infinite}
-.orb2{width:360px;height:360px;background:radial-gradient(circle,rgba(10,34,37,.05) 0%,transparent 70%);bottom:-80px;left:-60px;animation:orbPulse 10s ease-in-out infinite 2s,float2 15s ease-in-out infinite}
-.orb3{width:260px;height:260px;background:radial-gradient(circle,rgba(129,230,217,.13) 0%,transparent 70%);top:40%;left:20%;animation:orbPulse 9s ease-in-out infinite 1s,float3 11s ease-in-out infinite}
-.phero-inner{position:relative;z-index:2;text-align:center;max-width:780px;margin:0 auto}
-.phero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.25);border-radius:var(--rpill);padding:8px 20px;margin-bottom:28px;font-size:.8rem;font-weight:700;color:var(--p3);letter-spacing:.06em}
-.phero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-d);animation:pulse 2s ease-in-out infinite}
-.phero-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(3rem,8vw,6rem);color:var(--p1);line-height:.95;letter-spacing:-.05em;margin-bottom:22px}
-.phero-sub{font-size:1.05rem;font-weight:300;color:var(--txs);max-width:560px;margin:0 auto 36px;line-height:1.8}
-.phero-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.orb1{width:560px;height:560px;background:radial-gradient(circle,rgba(79,209,197,.15) 0%,transparent 70%);top:-180px;right:-120px;animation:orbPulse 8s ease-in-out infinite,float1 13s ease-in-out infinite}
+.orb2{width:340px;height:340px;background:radial-gradient(circle,rgba(14,53,56,.05) 0%,transparent 70%);bottom:-80px;left:-60px;animation:orbPulse 10s ease-in-out infinite 2s,float2 15s ease-in-out infinite}
+.orb3{width:240px;height:240px;background:radial-gradient(circle,rgba(129,230,217,.12) 0%,transparent 70%);top:40%;left:20%;animation:orbPulse 9s ease-in-out infinite 1s,float3 11s ease-in-out infinite}
+.phero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
+.phero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.22);border-radius:var(--rpill);padding:7px 18px;margin-bottom:26px;font-size:.76rem;font-weight:700;color:var(--p3);letter-spacing:.06em}
+.phero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-d);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+.phero-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(3rem,7.5vw,5.6rem);color:var(--txt);line-height:.96;letter-spacing:-.05em;margin-bottom:20px}
+.phero-sub{font-size:1rem;font-weight:300;color:var(--txs);max-width:520px;margin:0 auto 34px;line-height:1.8}
+.phero-acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* ── PARTNER TAGLINE ── */
-.tagline-strip{background:var(--p1);padding:28px 0;overflow:hidden;position:relative}
-.tagline-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(79,209,197,.05) 50%,transparent 100%)}
-.tagline-inner{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center;position:relative;z-index:1}
-.tagline-txt{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.1rem,2.4vw,1.6rem);color:#fff;letter-spacing:-.02em}
-.tagline-hs{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.1rem,2.4vw,1.6rem);background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em}
-.tagline-hand{font-size:clamp(1.4rem,3vw,2rem);line-height:1}
+/* ── PARTNER STRIP ── */
+.partner-strip{background:var(--p1);padding:24px 0;position:relative;overflow:hidden}
+.partner-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(79,209,197,.04),transparent)}
+.partner-inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center;position:relative;z-index:1}
+.ptxt{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1rem,2.2vw,1.5rem);color:#fff;letter-spacing:-.02em}
+.phs{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1rem,2.2vw,1.5rem);background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.phand{font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1}
+.pdiv{color:rgba(255,255,255,.3);font-weight:300;font-size:clamp(.9rem,1.8vw,1.2rem)}
 
 /* ═══════════════════
-   BENEFITS SECTION
+   BENEFITS
 ═══════════════════ */
 #beneficios{padding:96px 0;background:var(--gs)}
-.sec-hdr{text-align:center;margin-bottom:64px}
-.sec-hdr h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--p1);letter-spacing:-.035em;line-height:1.06;margin-top:14px}
-.sec-hdr p{font-size:.92rem;font-weight:300;color:var(--txs);margin-top:10px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75}
+.sec-hdr{text-align:center;margin-bottom:56px}
+.sec-hdr h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--txt);letter-spacing:-.035em;line-height:1.06;margin-top:12px}
+.sec-hdr p{font-size:.9rem;font-weight:300;color:var(--txs);margin-top:10px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.75}
 
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-
-.ben-card{padding:36px 32px;border-radius:var(--rx2);display:flex;flex-direction:column;gap:16px}
-.ben-ico{width:58px;height:58px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.14);flex-shrink:0;transition:var(--tr)}
+.ben-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:860px;margin:0 auto}
+.ben-card{padding:34px 30px;border-radius:var(--rx2);display:flex;flex-direction:column;gap:14px}
+.ben-ico{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.14);flex-shrink:0;transition:var(--tr)}
 .ben-card:hover .ben-ico{transform:scale(1.1) rotate(-5deg)}
-.ben-card h3{font-family:'M',sans-serif;font-weight:900;font-size:1.25rem;color:var(--p1);letter-spacing:-.03em;line-height:1.15}
-.ben-card p{font-size:.88rem;font-weight:300;color:var(--txs);line-height:1.78}
+.ben-card h3{font-family:'M',sans-serif;font-weight:900;font-size:1.1rem;color:var(--txt);letter-spacing:-.025em;line-height:1.2}
+.ben-card p{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.76}
 
 /* ═══════════════════
-   HOW IT WORKS
-═══════════════════ */
-#como{padding:96px 0}
-.steps-wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:0}
-.step{display:flex;align-items:flex-start;gap:28px;padding:32px 0;border-bottom:1px solid rgba(79,209,197,.1);position:relative}
-.step:last-child{border-bottom:none}
-.step-num{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--gb);display:flex;align-items:center;justify-content:center;font-family:'M',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;box-shadow:0 4px 16px rgba(79,209,197,.3);position:relative;z-index:1}
-.step-connector{position:absolute;left:25px;top:84px;width:2px;bottom:-32px;background:linear-gradient(180deg,rgba(79,209,197,.3),transparent);pointer-events:none}
-.step:last-child .step-connector{display:none}
-.step-body h3{font-family:'M',sans-serif;font-weight:900;font-size:1.1rem;color:var(--p1);letter-spacing:-.025em;margin-bottom:6px}
-.step-body p{font-size:.88rem;font-weight:300;color:var(--txs);line-height:1.78;max-width:600px}
-
-/* ═══════════════════
-   TECH HIGHLIGHT
+   SOFTWARE
 ═══════════════════ */
 #softtil{padding:96px 0;background:var(--p1);position:relative;overflow:hidden}
-.soft-scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(79,209,197,.3),transparent);animation:scanLine 5s linear infinite;pointer-events:none}
-.soft-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;display:flex;align-items:center;gap:64px;flex-wrap:wrap}
+.soft-scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(79,209,197,.28),transparent);animation:scanLine 5s linear infinite;pointer-events:none}
+.soft-wrap{position:relative;z-index:2;display:flex;align-items:center;gap:64px;flex-wrap:wrap}
 .soft-text{flex:1;min-width:280px}
 .soft-lbl{display:inline-flex;align-items:center;gap:7px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(163,230,235,.6);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.15);border-radius:var(--rpill);padding:5px 13px;margin-bottom:16px}
-.soft-text h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.2vw,2.6rem);color:#fff;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}
-.soft-text p{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:14px}
-.soft-feats{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:4px}
-.soft-feats li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.5}
-.soft-feats .sfchk{color:var(--tl);font-size:.78rem;margin-top:3px;flex-shrink:0}
-.soft-visual{flex-shrink:0;width:300px;height:280px;border-radius:var(--rx2);background:rgba(255,255,255,.04);border:1px solid rgba(79,209,197,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden}
+.soft-text h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.5rem);color:#fff;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px}
+.soft-text p{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.58);line-height:1.8;margin-bottom:10px}
+.soft-feats{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.soft-feats li{display:flex;align-items:flex-start;gap:9px;font-size:.84rem;color:rgba(255,255,255,.68);line-height:1.5}
+.sf-chk{color:var(--tl);font-size:.76rem;margin-top:3px;flex-shrink:0}
+.soft-visual{flex-shrink:0;width:280px;height:260px;border-radius:var(--rx2);background:rgba(255,255,255,.04);border:1px solid rgba(79,209,197,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden}
 .soft-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(79,209,197,.06),transparent);pointer-events:none}
-.soft-cam-wrap{width:160px;height:130px;border-radius:16px;background:rgba(10,34,37,.7);border:2px solid rgba(79,209,197,.25);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.soft-cam-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px}
-.soft-cam-icon{font-size:2.4rem;opacity:.9}
-.soft-pip{position:absolute;bottom:10px;right:10px;width:44px;height:36px;border-radius:8px;background:rgba(79,209,197,.15);border:1px solid rgba(79,209,197,.3);display:flex;align-items:center;justify-content:center;font-size:.9rem}
-.soft-bar{width:160px;height:6px;border-radius:3px;background:rgba(79,209,197,.15);overflow:hidden}
-.soft-bar-fill{height:100%;width:72%;background:var(--gb);border-radius:3px;animation:barPulse 2s ease-in-out infinite}
-@keyframes barPulse{0%,100%{width:72%}50%{width:88%}}
-.soft-tag{font-size:.68rem;font-weight:700;color:var(--tl);letter-spacing:.08em}
-.soft-rec{position:absolute;top:14px;right:14px;display:flex;align-items:center;gap:5px;font-size:.62rem;font-weight:700;color:rgba(255,100,100,.9);letter-spacing:.08em}
-.soft-rec-dot{width:7px;height:7px;border-radius:50%;background:#ff4444;animation:pulse 1.2s ease-in-out infinite}
+.sv-rec{position:absolute;top:14px;right:14px;display:flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;color:rgba(255,100,100,.9);letter-spacing:.08em}
+.sv-dot{width:7px;height:7px;border-radius:50%;background:#ff4444;animation:pulse 1.2s ease-in-out infinite}
+.sv-cam{width:152px;height:120px;border-radius:14px;background:rgba(14,53,56,.7);border:1.5px solid rgba(79,209,197,.22);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;font-size:2.2rem}
+.sv-pip{position:absolute;bottom:8px;right:8px;width:40px;height:32px;border-radius:7px;background:rgba(79,209,197,.15);border:1px solid rgba(79,209,197,.28);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+.sv-bar{width:152px;height:5px;border-radius:3px;background:rgba(79,209,197,.14);overflow:hidden}
+.sv-fill{height:100%;width:68%;background:var(--gb);border-radius:3px;animation:barPulse 2s ease-in-out infinite}
+.sv-tag{font-size:.64rem;font-weight:700;color:var(--tl);letter-spacing:.1em}
 
 /* ═══════════════════
-   PAYMENT SECTION
+   COMO FUNCIONA — flow horizontal
 ═══════════════════ */
-#pagamento{padding:96px 0;background:var(--gs)}
-.pay-wrap{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.pay-text .lbl{margin-bottom:16px}
-.pay-text h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--p1);letter-spacing:-.04em;line-height:1.1;margin-bottom:14px}
-.pay-text p{font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:20px}
-.pay-points{list-style:none;display:flex;flex-direction:column;gap:12px}
-.pay-points li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--txs);line-height:1.6}
-.pay-points .ppico{font-size:1rem;flex-shrink:0;margin-top:1px}
-.pay-visual{padding:36px 32px;border-radius:var(--rx2);display:flex;flex-direction:column;gap:18px}
-.pay-week{background:rgba(79,209,197,.07);border:1px solid rgba(79,209,197,.18);border-radius:var(--rlg);padding:18px 20px}
-.pay-week-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.pay-week-lbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--txm)}
-.pay-week-badge{font-size:.62rem;font-weight:700;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.08em}
-.pay-week-val{font-family:'M',sans-serif;font-weight:900;font-size:1.7rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
-.pay-week-note{font-size:.72rem;color:var(--txm);font-weight:300}
-.pay-detail{display:flex;gap:12px}
-.pay-chip{flex:1;background:rgba(255,255,255,.6);border:1px solid rgba(79,209,197,.12);border-radius:var(--rmd);padding:14px 16px;text-align:center}
-.pay-chip .pc-val{font-family:'M',sans-serif;font-weight:900;font-size:1.05rem;color:var(--p1);line-height:1;margin-bottom:3px}
-.pay-chip .pc-lbl{font-size:.67rem;color:var(--txm);font-weight:300}
+#como{padding:96px 0}
+.how-wrap{max-width:900px;margin:0 auto}
+.how-flow{display:flex;align-items:flex-start;justify-content:center;gap:0}
+.how-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 14px}
+.how-num{width:48px;height:48px;border-radius:50%;background:var(--gb);display:flex;align-items:center;justify-content:center;font-family:'M',sans-serif;font-weight:900;font-size:1rem;color:#fff;box-shadow:0 4px 16px rgba(79,209,197,.28);margin-bottom:14px;flex-shrink:0}
+.how-step h3{font-family:'M',sans-serif;font-weight:700;font-size:.88rem;color:var(--txt);letter-spacing:-.01em;margin-bottom:6px}
+.how-step p{font-size:.8rem;font-weight:300;color:var(--txs);line-height:1.7}
+.how-conn{width:48px;flex-shrink:0;display:flex;align-items:flex-start;justify-content:center;padding-top:24px}
+.how-line{width:100%;height:1.5px;background:rgba(79,209,197,.22)}
 
 /* ═══════════════════
-   FORM SECTION
+   FORM
 ═══════════════════ */
-#cadastro{padding:96px 0}
-.form-wrap{max-width:680px;margin:0 auto}
-.form-box{padding:52px 52px;border-radius:var(--rx2)}
-.form-box .sec-hdr{margin-bottom:40px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#cadastro{padding:96px 0;background:var(--gs)}
+.form-outer{max-width:680px;margin:0 auto}
+.form-intro{text-align:center;margin-bottom:48px}
+.form-intro h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--txt);letter-spacing:-.035em;line-height:1.06;margin-top:12px}
+.form-intro p{font-size:.9rem;font-weight:300;color:var(--txs);margin-top:10px;line-height:1.75}
+.pay-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.ppill{display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;color:var(--txs);background:rgba(79,209,197,.07);border:1px solid rgba(79,209,197,.16);border-radius:var(--rpill);padding:7px 16px}
+.ppill .ppi{color:var(--teal-d)}
+
+.form-box{padding:48px 48px;border-radius:var(--rx2)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-full{grid-column:1/-1}
-.fld{display:flex;flex-direction:column;gap:6px}
-.fld label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--p3)}
-.fld input,.fld select,.fld textarea{font-family:'M',sans-serif;font-size:.88rem;color:var(--txt);background:rgba(255,255,255,.8);border:1.5px solid rgba(79,209,197,.2);border-radius:var(--rmd);padding:12px 16px;outline:none;transition:var(--tr);-webkit-appearance:none}
+.fld{display:flex;flex-direction:column;gap:5px}
+.fld label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--p3)}
+.fld input,.fld select,.fld textarea{font-family:'M',sans-serif;font-size:.87rem;color:var(--txt);background:rgba(255,255,255,.82);border:1.5px solid rgba(79,209,197,.18);border-radius:var(--rmd);padding:11px 15px;outline:none;transition:var(--tr);-webkit-appearance:none}
 .fld input::placeholder,.fld textarea::placeholder{color:var(--txm);font-weight:300}
-.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal-d);background:#fff;box-shadow:0 0 0 3px rgba(79,209,197,.12)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--teal-d);background:#fff;box-shadow:0 0 0 3px rgba(79,209,197,.1)}
 .fld select{cursor:pointer;color:var(--txt)}
-.fld textarea{resize:vertical;min-height:100px;line-height:1.6}
-.fld-file-wrap{border:1.5px dashed rgba(79,209,197,.3);border-radius:var(--rmd);padding:20px;text-align:center;cursor:pointer;transition:var(--tr);background:rgba(79,209,197,.03)}
-.fld-file-wrap:hover{border-color:var(--teal-d);background:rgba(79,209,197,.06)}
-.fld-file-wrap input[type=file]{display:none}
-.fld-file-ico{font-size:1.6rem;margin-bottom:6px}
-.fld-file-txt{font-size:.8rem;color:var(--txm);font-weight:300}
-.fld-file-txt strong{color:var(--teal-d);font-weight:700}
-.form-submit{margin-top:10px}
-.form-note{font-size:.74rem;color:var(--txm);text-align:center;margin-top:14px;line-height:1.6;font-weight:300}
-.form-suc{display:none;text-align:center;padding:40px 20px}
+.fld textarea{resize:vertical;min-height:90px;line-height:1.6}
+.file-zone{border:1.5px dashed rgba(79,209,197,.28);border-radius:var(--rmd);padding:18px;text-align:center;cursor:pointer;transition:var(--tr);background:rgba(79,209,197,.02)}
+.file-zone:hover{border-color:var(--teal-d);background:rgba(79,209,197,.05)}
+.file-zone input[type=file]{display:none}
+.file-ico{font-size:1.5rem;margin-bottom:5px}
+.file-txt{font-size:.78rem;color:var(--txm);font-weight:300}
+.file-txt strong{color:var(--teal-d);font-weight:700}
+.form-foot{margin-top:10px}
+.form-note{font-size:.72rem;color:var(--txm);text-align:center;margin-top:12px;line-height:1.6;font-weight:300}
+
+.form-suc{display:none;text-align:center;padding:48px 24px}
 .form-suc.show{display:block}
-.form-suc-ico{font-size:3.5rem;margin-bottom:14px}
-.form-suc h3{font-family:'M',sans-serif;font-weight:900;font-size:1.5rem;color:var(--p1);letter-spacing:-.03em;margin-bottom:8px}
-.form-suc p{font-size:.9rem;color:var(--txs);font-weight:300;line-height:1.75}
+.form-suc-ico{font-size:3.2rem;margin-bottom:12px}
+.form-suc h3{font-family:'M',sans-serif;font-weight:900;font-size:1.45rem;color:var(--txt);letter-spacing:-.03em;margin-bottom:8px}
+.form-suc p{font-size:.88rem;color:var(--txs);font-weight:300;line-height:1.75}
 
 /* ── CTA STRIP ── */
-#ctastrip{padding:76px 0;background:var(--bg2)}
-.cta-inner-box{background:linear-gradient(120deg,#2e7d94 0%,#5bbaa8 100%);border-radius:22px;padding:52px 58px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(46,125,148,.30)}
-.cta-inner-box::before{content:'';position:absolute;right:-80px;top:-80px;width:300px;height:300px;background:rgba(255,255,255,.09);border-radius:50%;pointer-events:none}
-.cta-inner-box::after{content:'';position:absolute;right:80px;bottom:-110px;width:260px;height:260px;background:rgba(255,255,255,.05);border-radius:50%;pointer-events:none}
-.cta-txt{position:relative;z-index:1;flex:1;text-align:center}
-.cta-txt h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.03em;color:#fff;line-height:1.2}
-.cta-txt p{color:rgba(255,255,255,.8);margin-top:8px;font-size:.9rem;font-weight:300}
-.cta-acts{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1;align-items:center;justify-content:center;flex-shrink:0}
-.btn-cta-wh{background:#fff;color:var(--teal-d);font-weight:800;font-size:.93rem;padding:13px 26px;border-radius:11px;box-shadow:0 4px 14px rgba(0,0,0,.14);width:220px;justify-content:center}
-.btn-cta-wh:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
-.btn-cta-ghost{background:rgba(255,255,255,.15);color:#fff;font-weight:700;font-size:.93rem;padding:13px 26px;border-radius:11px;border:1px solid rgba(255,255,255,.28);width:220px;justify-content:center}
-.btn-cta-ghost:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+#ctastrip{padding:72px 0;background:var(--bg2)}
+.cta-box{background:linear-gradient(120deg,#2e7d94 0%,#5bbaa8 100%);border-radius:22px;padding:48px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:26px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(46,125,148,.28)}
+.cta-box::before{content:'';position:absolute;right:-80px;top:-80px;width:280px;height:280px;background:rgba(255,255,255,.08);border-radius:50%;pointer-events:none}
+.cta-txt{position:relative;z-index:1;flex:1}
+.cta-txt h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.4rem,2.8vw,2rem);letter-spacing:-.03em;color:#fff;line-height:1.2}
+.cta-txt p{color:rgba(255,255,255,.75);margin-top:6px;font-size:.88rem;font-weight:300}
+.cta-acts{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1;align-items:center;flex-shrink:0}
+.btn-cta-wh{background:#fff;color:var(--teal-d);font-weight:700;font-size:.9rem;padding:12px 24px;border-radius:11px;box-shadow:0 4px 14px rgba(14,53,56,.14);width:210px;justify-content:center;display:inline-flex;align-items:center;gap:7px;transition:var(--tr);cursor:pointer;border:none;font-family:'M',sans-serif}
+.btn-cta-wh:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(14,53,56,.2)}
+.btn-cta-ghost{background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:.9rem;padding:12px 24px;border-radius:11px;border:1px solid rgba(255,255,255,.26);width:210px;justify-content:center;display:inline-flex;align-items:center;transition:var(--tr);cursor:pointer;font-family:'M',sans-serif}
+.btn-cta-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
 
 /* ── FOOTER ── */
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04)}
 .ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
-.ft-logo{font-family:'M',sans-serif;font-weight:900;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
+.ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
 .ft-bp{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
 .ft-socs{display:flex;gap:7px}
 .ftsoc{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:.72rem;color:rgba(255,255,255,.5);transition:var(--tr)}
@@ -300,36 +274,36 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 
 /* ── MOBILE PERF ── */
 @media(max-width:768px){
-  .orb{animation:none!important;opacity:.2}
-  .glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,.92)}
-  .bo{backdrop-filter:none;-webkit-backdrop-filter:none}
-  .bo-dark{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .orb{animation:none!important;opacity:.18}
+  .glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,255,255,.94)}
   .mob{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(5,20,24,.98)}
 }
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .nlinks,.nd{display:none}.ham{display:flex}
-  .ben-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}
-  .soft-inner{gap:40px}
-  .soft-visual{width:100%;height:220px}
-  .pay-wrap{grid-template-columns:1fr}
-  .form-box{padding:36px 28px}
+  .ben-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+  .soft-wrap{gap:36px}
+  .soft-visual{width:100%;height:200px}
+  .how-flow{flex-direction:column;align-items:center;gap:14px}
+  .how-conn{transform:rotate(90deg);padding:0;width:30px;height:30px}
+  .how-step{max-width:340px;width:100%}
+  .form-box{padding:32px 24px}
   .form-grid{grid-template-columns:1fr}
   .form-full{grid-column:1}
-  .cta-inner-box{padding:44px 32px}
+  .cta-box{padding:40px 30px}
   .ft-top{grid-template-columns:1fr 1fr}
   .ft-bot{flex-direction:column;align-items:flex-start}
-  .w{padding:0 22px}
+  .w,.wn{padding:0 22px}
 }
 @media(max-width:600px){
-  .phero-h{letter-spacing:-.03em}
   .phero-acts{flex-direction:column;align-items:center}
-  .phero-acts .btn{width:100%;max-width:320px;justify-content:center}
+  .phero-acts .btn{width:100%;max-width:310px}
+  .partner-inner{gap:8px}
   .ft-top{grid-template-columns:1fr}
   .cta-acts{flex-direction:column;width:100%}
-  .cta-acts .btn{justify-content:center}
-  .tagline-inner{gap:10px}
+  .btn-cta-wh,.btn-cta-ghost{width:100%}
+  .pay-pills{flex-direction:column;align-items:center}
 }
 </style>
 </head>
@@ -338,7 +312,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <a href="#main-content" class="skip-link">Pular para o conte&uacute;do principal</a>
 
 <!-- FLOAT WPP -->
-<a href="https://wa.me/5548999999999" class="wppf" aria-label="Falar no WhatsApp">
+<a href="https://wa.me/5548996367511" class="wppf" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   <span>WhatsApp</span>
 </a>
@@ -379,28 +353,26 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
   <div class="orb orb3" aria-hidden="true"></div>
   <div class="w" style="position:relative;z-index:2">
     <div class="phero-inner rv">
-      <div class="phero-badge">
-        <span class="dot"></span>
-        Vagas abertas para int&eacute;rpretes
-      </div>
+      <div class="phero-badge"><span class="dot"></span>Vagas abertas para int&eacute;rpretes</div>
       <h1 id="phero-title" class="phero-h">Seja um <span class="gt">TIL</span><br/>parceiro.</h1>
       <p class="phero-sub">Voc&ecirc; interpreta. N&oacute;s cuidamos da tecnologia, dos clientes e do pagamento. Juntos, levamos Libras a cada canto do Brasil.</p>
       <div class="phero-acts">
-        <a href="#cadastro" class="btn bgl" style="font-size:.94rem;padding:14px 32px">&#9996;&#65039; Enviar meu curr&iacute;culo</a>
-        <a href="#beneficios" class="btn bo" style="font-size:.94rem;padding:14px 32px">Ver como funciona</a>
+        <a href="#cadastro" class="btn bgl" style="font-size:.92rem;padding:14px 30px">&#9996;&#65039; Enviar meu curr&iacute;culo</a>
+        <a href="#beneficios" class="btn bo" style="font-size:.92rem;padding:14px 30px">Ver como funciona</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TAGLINE STRIP ═══ -->
-<div class="tagline-strip" aria-hidden="true">
+<!-- ═══ PARTNER STRIP ═══ -->
+<div class="partner-strip">
   <div class="w">
-    <div class="tagline-inner">
-      <span class="tagline-txt">TILs</span>
-      <span class="tagline-hand">🤝</span>
-      <span class="tagline-hs">LIBRAS.SE</span>
-      <span class="tagline-txt" style="color:rgba(255,255,255,.5)">&mdash; bons parceiros juntos.</span>
+    <div class="partner-inner">
+      <span class="ptxt">TILs</span>
+      <span class="phand">🤝</span>
+      <span class="phs">LIBRAS.SE</span>
+      <span class="pdiv">&mdash;</span>
+      <span class="ptxt" style="color:rgba(255,255,255,.48);font-weight:300">bons parceiros juntos.</span>
     </div>
   </div>
 </div>
@@ -409,111 +381,35 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <section id="beneficios" aria-labelledby="ben-title">
   <div class="w">
     <div class="sec-hdr rv">
-      <div class="lbl">&#127381; Por que trabalhar conosco</div>
-      <h2 id="ben-title">O que o <span class="gt">Libras.se</span><br/>oferece para voc&ecirc;</h2>
-      <p>Estrutura real para quem interpreta. Tecnologia, flexibilidade e pagamento justo &mdash; semana a semana.</p>
+      <div class="lbl">Por que trabalhar conosco</div>
+      <h2 id="ben-title">O que o <span class="gt">Libras.se</span> oferece</h2>
+      <p>Tecnologia pr&oacute;pria, hor&aacute;rio flex&iacute;vel e pagamento semanal direto pelo que voc&ecirc; entrega.</p>
     </div>
 
     <div class="ben-grid">
 
-      <!-- 1 -->
       <div class="glass ben-card rv d1">
         <div class="ben-ico">&#128250;</div>
         <h3>Software pr&oacute;prio de grava&ccedil;&atilde;o</h3>
-        <p>Desenvolvemos nossa pr&oacute;pria ferramenta de grava&ccedil;&atilde;o. Voc&ecirc; j&aacute; se v&ecirc; na tela em tempo real &mdash; como num espelho &mdash; e grava no conforto de casa com qualidade profissional.</p>
+        <p>Desenvolvemos nossa pr&oacute;pria ferramenta. Voc&ecirc; j&aacute; se v&ecirc; na tela em tempo real &mdash; como num espelho &mdash; enquanto grava com qualidade profissional, de casa.</p>
       </div>
 
-      <!-- 2 -->
       <div class="glass ben-card rv d2">
         <div class="ben-ico">&#128337;</div>
         <h3>Hor&aacute;rio flex&iacute;vel</h3>
-        <p>Voc&ecirc; escolhe quando trabalha. Pegue os projetos que cabem na sua agenda, em variados momentos do dia. Sem carga m&iacute;nima obrigat&oacute;ria, sem escala r&iacute;gida.</p>
+        <p>Voc&ecirc; escolhe quando trabalha. Projetos em variados momentos do dia, sem carga m&iacute;nima obrigat&oacute;ria nem escala r&iacute;gida.</p>
       </div>
 
-      <!-- 3 -->
       <div class="glass ben-card rv d3">
         <div class="ben-ico">&#128176;</div>
         <h3>Pagamento semanal direto</h3>
-        <p>Faturamento preferencialmente semanal, direto para voc&ecirc;, com base exata no que foi entregue na semana anterior. Transparente, pontual e sem burocracia.</p>
+        <p>Faturamento preferencialmente semanal, diretamente para voc&ecirc;, baseado exatamente no que foi entregue na semana anterior. Transparente e pontual.</p>
       </div>
 
-      <!-- 4 -->
       <div class="glass ben-card rv d4">
         <div class="ben-ico">&#127775;</div>
-        <h3>Ganhos por demanda</h3>
-        <p>Quanto mais voc&ecirc; entrega, mais recebe. N&atilde;o h&aacute; teto. Voc&ecirc; &eacute; remunerado conforme a sua produ&ccedil;&atilde;o real &mdash; sem desconto de tempo ocioso.</p>
-      </div>
-
-      <!-- 5 -->
-      <div class="glass ben-card rv d5">
-        <div class="ben-ico">&#127758;</div>
-        <h3>100% remoto</h3>
-        <p>De qualquer cidade do Brasil. Tudo o que voc&ecirc; precisa &eacute; de uma boa internet e um espa&ccedil;o bem iluminado. Sem deslocamento, sem depend&ecirc;ncia de localidade.</p>
-      </div>
-
-      <!-- 6 -->
-      <div class="glass ben-card rv d6">
-        <div class="ben-ico">&#129309;</div>
-        <h3>Parceria de verdade</h3>
-        <p>Voc&ecirc; n&atilde;o &eacute; apenas um fornecedor. Valorizamos cada int&eacute;rprete, damos feedback, crescemos juntos e tratamos como parceiro de longo prazo.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ COMO FUNCIONA ═══ -->
-<section id="como" aria-labelledby="como-title">
-  <div class="w">
-    <div class="sec-hdr rv">
-      <div class="lbl">&#127919; Passo a passo</div>
-      <h2 id="como-title">Como funciona na <span class="gt">pr&aacute;tica</span></h2>
-      <p>Do cadastro &agrave; primeira entrega em poucos passos.</p>
-    </div>
-    <div class="steps-wrap">
-
-      <div class="step rv d1">
-        <div class="step-num" aria-hidden="true">1</div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step-body">
-          <h3>Envie seu curr&iacute;culo e formac&ccedil;&atilde;o</h3>
-          <p>Preencha o formul&aacute;rio abaixo com seus dados, experi&ecirc;ncia em Libras, especialidades e um v&iacute;deo de apresenta&ccedil;&atilde;o se quiser. Analisamos todos os perfis com aten&ccedil;&atilde;o.</p>
-        </div>
-      </div>
-
-      <div class="step rv d2">
-        <div class="step-num" aria-hidden="true">2</div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step-body">
-          <h3>Convers&atilde;o e alinhamento</h3>
-          <p>Se o perfil combinar, entramos em contato pelo WhatsApp para uma conversa r&aacute;pida. Apresentamos como o Libras.se funciona, tiramos d&uacute;vidas e alinhamos expectativas.</p>
-        </div>
-      </div>
-
-      <div class="step rv d3">
-        <div class="step-num" aria-hidden="true">3</div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step-body">
-          <h3>Acesso ao software de grava&ccedil;&atilde;o</h3>
-          <p>Liberam&shy;os o acesso &agrave; nossa plataforma. Voc&ecirc; se familiariza com a ferramenta, se v&ecirc; na tela em tempo real e est&aacute; pronto para gravar com qualidade profissional de casa.</p>
-        </div>
-      </div>
-
-      <div class="step rv d4">
-        <div class="step-num" aria-hidden="true">4</div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step-body">
-          <h3>Escolha os projetos e comece</h3>
-          <p>Projetos s&atilde;o disponibilizados conforme surgem. Voc&ecirc; aceita os que cabem na sua agenda, grava no seu tempo e nos envia a entrega finalizada.</p>
-        </div>
-      </div>
-
-      <div class="step rv d5">
-        <div class="step-num" aria-hidden="true">5</div>
-        <div class="step-body">
-          <h3>Receba na semana seguinte</h3>
-          <p>O pagamento pelo que foi entregue na semana &eacute; feito preferencialmente na semana seguinte, diretamente para voc&ecirc;. Simples, transparente e pontual.</p>
-        </div>
+        <h3>Ganhos pela sua produ&ccedil;&atilde;o</h3>
+        <p>Quanto mais voc&ecirc; entrega, mais recebe &mdash; sem teto. Remunerado pela sua produ&ccedil;&atilde;o real, sem desconto por tempo n&atilde;o trabalhado.</p>
       </div>
 
     </div>
@@ -524,74 +420,71 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <section id="softtil" aria-labelledby="soft-title">
   <div class="soft-scan" aria-hidden="true"></div>
   <div class="w">
-    <div class="soft-inner rv">
+    <div class="soft-wrap rv">
       <div class="soft-text">
         <div class="soft-lbl">&#128187; Nossa tecnologia</div>
         <h2 id="soft-title">Voc&ecirc; j&aacute; se v&ecirc; na tela enquanto grava.</h2>
-        <p>Desenvolvemos um software pr&oacute;prio de grava&ccedil;&atilde;o pensado para int&eacute;rpretes. A experi&ecirc;ncia &eacute; fluida: &eacute; como se olhar num espelho enquanto interpreta, s&oacute; que gravando em alta qualidade.</p>
+        <p>Desenvolvemos um software pr&oacute;prio de grava&ccedil;&atilde;o pensado para int&eacute;rpretes. A experi&ecirc;ncia &eacute; fluida &mdash; &eacute; como olhar num espelho enquanto interpreta, s&oacute; que gravando em alta qualidade.</p>
         <ul class="soft-feats">
-          <li><span class="sfchk">✦</span><span>Pr&eacute;-visualiza&ccedil;&atilde;o em tempo real da sua imagem na tela</span></li>
-          <li><span class="sfchk">✦</span><span>Interface simples &mdash; nenhum conhecimento t&eacute;cnico necess&aacute;rio</span></li>
-          <li><span class="sfchk">✦</span><span>Grava&ccedil;&atilde;o em alta resolu&ccedil;&atilde;o diretamente no navegador</span></li>
-          <li><span class="sfchk">✦</span><span>Funciona 100% pelo navegador, sem instala&ccedil;&atilde;o</span></li>
-          <li><span class="sfchk">✦</span><span>Entrega autom&aacute;tica ap&oacute;s a grava&ccedil;&atilde;o finalizada</span></li>
+          <li><span class="sf-chk">✦</span><span>Pr&eacute;-visualiza&ccedil;&atilde;o em tempo real da sua imagem</span></li>
+          <li><span class="sf-chk">✦</span><span>Interface simples &mdash; nenhum conhecimento t&eacute;cnico necess&aacute;rio</span></li>
+          <li><span class="sf-chk">✦</span><span>Funciona pelo navegador, sem instala&ccedil;&atilde;o</span></li>
+          <li><span class="sf-chk">✦</span><span>Entrega autom&aacute;tica ao finalizar</span></li>
         </ul>
       </div>
       <div class="soft-visual" aria-hidden="true">
-        <div class="soft-rec"><span class="soft-rec-dot"></span>REC</div>
-        <div class="soft-cam-wrap">
-          <div class="soft-cam-inner">
-            <div class="soft-cam-icon">🤟</div>
-          </div>
-          <div class="soft-pip">👤</div>
+        <div class="sv-rec"><span class="sv-dot"></span>REC</div>
+        <div class="sv-cam">
+          🤟
+          <div class="sv-pip">👤</div>
         </div>
-        <div class="soft-bar"><div class="soft-bar-fill"></div></div>
-        <div class="soft-tag">LIBRAS.SE STUDIO</div>
+        <div class="sv-bar"><div class="sv-fill"></div></div>
+        <div class="sv-tag">LIBRAS.SE STUDIO</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PAGAMENTO ═══ -->
-<section id="pagamento" aria-labelledby="pay-title">
+<!-- ═══ COMO FUNCIONA ═══ -->
+<section id="como" aria-labelledby="como-title">
   <div class="w">
-    <div class="pay-wrap">
-      <div class="pay-text rv rl">
-        <div class="lbl" style="margin-bottom:16px">&#128176; Pagamento justo</div>
-        <h2 id="pay-title">Receba pelo que voc&ecirc; realmente entrega.</h2>
-        <p>Nenhum desconto por tempo n&atilde;o trabalhado. Nenhuma redu&ccedil;&atilde;o por per&iacute;odo de baixa demanda. Voc&ecirc; recebe exatamente pelo que produziu &mdash; toda semana.</p>
-        <ul class="pay-points">
-          <li><span class="ppico">&#9989;</span><span>Faturamento <strong>preferencialmente semanal</strong>, direto para voc&ecirc;</span></li>
-          <li><span class="ppico">&#9989;</span><span>Calculado com base na entrega da <strong>semana anterior</strong></span></li>
-          <li><span class="ppico">&#9989;</span><span>Sem cota m&iacute;nima &mdash; trabalhe no seu ritmo</span></li>
-          <li><span class="ppico">&#9989;</span><span>Transpar&ecirc;ncia total sobre o valor por minuto entregue</span></li>
-          <li><span class="ppico">&#9989;</span><span>Quanto mais voc&ecirc; produz, mais ganha &mdash; sem teto</span></li>
-        </ul>
-      </div>
-      <div class="glass pay-visual rv rr">
-        <div class="pay-week">
-          <div class="pay-week-hdr">
-            <span class="pay-week-lbl">Semana passada</span>
-            <span class="pay-week-badge">PAGO &#10003;</span>
-          </div>
-          <div class="pay-week-val">R$ 1.240,00</div>
-          <div class="pay-week-note">Baseado nas entregas de seg a dom</div>
+    <div class="sec-hdr rv">
+      <div class="lbl">Passo a passo</div>
+      <h2 id="como-title">Do cadastro &agrave; primeira <span class="gt">entrega</span></h2>
+    </div>
+    <div class="how-wrap rv d1">
+      <div class="how-flow" role="list">
+
+        <div class="how-step" role="listitem">
+          <div class="how-num">1</div>
+          <h3>Envie o curr&iacute;culo</h3>
+          <p>Preencha o formul&aacute;rio com seus dados, experi&ecirc;ncia e especialidades.</p>
         </div>
-        <div class="pay-detail">
-          <div class="pay-chip">
-            <div class="pc-val">12 min</div>
-            <div class="pc-lbl">Entregues</div>
-          </div>
-          <div class="pay-chip">
-            <div class="pc-val">3 proj.</div>
-            <div class="pc-lbl">Projetos</div>
-          </div>
-          <div class="pay-chip">
-            <div class="pc-val">Sex</div>
-            <div class="pc-lbl">Pagamento</div>
-          </div>
+
+        <div class="how-conn" aria-hidden="true"><div class="how-line"></div></div>
+
+        <div class="how-step" role="listitem">
+          <div class="how-num">2</div>
+          <h3>Conversa r&aacute;pida</h3>
+          <p>Se o perfil combinar, entramos em contato pelo WhatsApp para alinhar tudo.</p>
         </div>
-        <p style="font-size:.76rem;color:var(--txm);font-weight:300;line-height:1.6">* Valores ilustrativos. O valor real depende do volume e tipo de projeto entregue.</p>
+
+        <div class="how-conn" aria-hidden="true"><div class="how-line"></div></div>
+
+        <div class="how-step" role="listitem">
+          <div class="how-num">3</div>
+          <h3>Acesse o software</h3>
+          <p>Liberamos o acesso &agrave; plataforma e voc&ecirc; j&aacute; est&aacute; pronto para gravar.</p>
+        </div>
+
+        <div class="how-conn" aria-hidden="true"><div class="how-line"></div></div>
+
+        <div class="how-step" role="listitem">
+          <div class="how-num">4</div>
+          <h3>Entregue e receba</h3>
+          <p>Aceite projetos no seu tempo. O pagamento sai na semana seguinte.</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -600,14 +493,20 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <!-- ═══ FORMULÁRIO ═══ -->
 <section id="cadastro" aria-labelledby="form-title">
   <div class="w">
-    <div class="form-wrap">
-      <div class="glass form-box rv">
-        <div class="sec-hdr">
-          <div class="lbl">&#128203; Cadastro de int&eacute;rprete</div>
-          <h2 id="form-title">Manda seu <span class="gt">curr&iacute;culo</span></h2>
-          <p>Preencha os campos abaixo. Analisamos cada perfil individualmente e retornamos pelo WhatsApp em at&eacute; 3 dias &uacute;teis.</p>
-        </div>
+    <div class="form-outer">
 
+      <div class="form-intro rv">
+        <div class="lbl">Cadastro de int&eacute;rprete</div>
+        <h2 id="form-title">Manda seu <span class="gt">curr&iacute;culo</span></h2>
+        <p>Analisamos cada perfil individualmente e retornamos pelo WhatsApp em at&eacute; 3 dias &uacute;teis.</p>
+        <div class="pay-pills">
+          <span class="ppill"><span class="ppi">&#9989;</span> Pagamento semanal direto</span>
+          <span class="ppill"><span class="ppi">&#9989;</span> Hor&aacute;rio flex&iacute;vel</span>
+          <span class="ppill"><span class="ppi">&#9989;</span> 100% remoto</span>
+        </div>
+      </div>
+
+      <div class="glass form-box rv d1">
         <div id="formFields">
           <form id="tilForm" novalidate>
             <div class="form-grid">
@@ -656,43 +555,43 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
               </div>
 
               <div class="fld form-full">
-                <label for="fareas">Especialidades / &aacute;reas de atua&ccedil;&atilde;o</label>
-                <input type="text" id="fareas" name="areas" placeholder="Ex: educacional, jur&iacute;dico, sa&uacute;de, audiovisual..."/>
+                <label for="fareas">Especialidades</label>
+                <input type="text" id="fareas" name="areas" placeholder="Ex: educacional, jur&iacute;dico, audiovisual..."/>
               </div>
 
               <div class="fld form-full">
                 <label for="fmsg">Apresente-se brevemente</label>
-                <textarea id="fmsg" name="mensagem" placeholder="Conte um pouco sobre sua trajet&oacute;ria, disponibilidade e por que quer trabalhar conosco..."></textarea>
+                <textarea id="fmsg" name="mensagem" placeholder="Conte sobre sua trajet&oacute;ria, disponibilidade e por que quer trabalhar conosco..."></textarea>
               </div>
 
               <div class="fld form-full">
                 <label>Portf&oacute;lio / v&iacute;deo de apresenta&ccedil;&atilde;o (opcional)</label>
-                <div class="fld-file-wrap" onclick="document.getElementById('ffile').click()" role="button" tabindex="0" aria-label="Selecionar arquivo">
-                  <input type="file" id="ffile" name="arquivo" accept="video/*,.pdf,.doc,.docx" aria-label="Arquivo de portf&oacute;lio"/>
-                  <div class="fld-file-ico">&#128190;</div>
-                  <div class="fld-file-txt"><strong>Clique para selecionar</strong> ou arraste aqui<br/>V&iacute;deo, PDF ou documento &mdash; at&eacute; 50 MB</div>
+                <div class="file-zone" onclick="document.getElementById('ffile').click()" role="button" tabindex="0" aria-label="Selecionar arquivo">
+                  <input type="file" id="ffile" name="arquivo" accept="video/*,.pdf,.doc,.docx"/>
+                  <div class="file-ico">&#128190;</div>
+                  <div class="file-txt"><strong>Clique para selecionar</strong> ou arraste aqui<br/>V&iacute;deo, PDF ou documento &mdash; at&eacute; 50 MB</div>
                 </div>
-                <div id="fileName" style="font-size:.74rem;color:var(--teal-d);margin-top:4px;font-weight:600"></div>
+                <div id="fileName" style="font-size:.72rem;color:var(--teal-d);margin-top:4px;font-weight:600"></div>
               </div>
 
-            </div><!-- /form-grid -->
+            </div>
 
-            <div class="form-submit">
-              <button type="submit" class="btn bgl" style="width:100%;padding:16px;font-size:.95rem">
+            <div class="form-foot">
+              <button type="submit" class="btn bgl" style="width:100%;padding:15px;font-size:.93rem">
                 &#9996;&#65039; Enviar candidatura
               </button>
             </div>
-            <p class="form-note">Seus dados ficam seguros conosco e n&atilde;o s&atilde;o compartilhados. Retornamos em at&eacute; 3 dias &uacute;teis pelo WhatsApp informado.</p>
+            <p class="form-note">Seus dados ficam seguros e n&atilde;o s&atilde;o compartilhados. Retornamos em at&eacute; 3 dias &uacute;teis.</p>
           </form>
         </div>
 
         <div class="form-suc" id="formSuc" role="status" aria-live="polite">
           <div class="form-suc-ico">🤟</div>
           <h3>Candidatura enviada!</h3>
-          <p>Recebemos seu cadastro e vamos analisar com aten&ccedil;&atilde;o.<br/>Retornamos em at&eacute; 3 dias &uacute;teis pelo WhatsApp que voc&ecirc; informou.</p>
+          <p>Recebemos seu cadastro. Retornamos em at&eacute; 3 dias &uacute;teis<br/>pelo WhatsApp que voc&ecirc; informou.</p>
         </div>
-
       </div>
+
     </div>
   </div>
 </section>
@@ -700,16 +599,16 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <!-- ═══ CTA STRIP ═══ -->
 <section id="ctastrip">
   <div class="w">
-    <div class="cta-inner-box rv">
+    <div class="cta-box rv">
       <div class="cta-txt">
         <h2>D&uacute;vidas antes de se candidatar?</h2>
         <p>Fale direto com o Debiasi pelo WhatsApp. Resposta r&aacute;pida.</p>
       </div>
       <div class="cta-acts">
-        <a href="https://wa.me/5548999999999?text=Oi!%20Tenho%20interesse%20em%20ser%20TIL%20parceiro%20do%20Libras.se." class="btn btn-cta-wh">
+        <a href="https://wa.me/5548996367511?text=Oi!%20Tenho%20interesse%20em%20ser%20TIL%20parceiro%20do%20Libras.se." class="btn-cta-wh">
           🤟 Falar no WhatsApp
         </a>
-        <a href="#cadastro" class="btn btn-cta-ghost">Preencher formul&aacute;rio</a>
+        <a href="#cadastro" class="btn-cta-ghost">Preencher formul&aacute;rio</a>
       </div>
     </div>
   </div>
@@ -743,7 +642,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
       <div class="ft-col">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="https://libras.se/solucoes#tech">Nossa Tecnologia</a></li>
+          <li><a href="https://libras.se/nossa-tecnologia">Nossa Tecnologia</a></li>
           <li><a href="https://libras.se/sejatils">Seja um TIL</a></li>
           <li><a href="https://libras.se/blog">Blog</a></li>
           <li><a href="https://libras.se/trabalhos">Trabalhos</a></li>
@@ -752,7 +651,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
       <div class="ft-col">
         <h4>Contato</h4>
         <ul>
-          <li><a href="https://wa.me/5548999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://wa.me/5548996367511" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
           <li><a href="mailto:contato@libras.se">contato@libras.se</a></li>
           <li><a href="https://instagram.com/libras.se" target="_blank" rel="noopener noreferrer">@libras.se</a></li>
           <li><a href="https://libras.se/">Florian&oacute;polis, SC</a></li>
@@ -776,8 +675,7 @@ const mob  = document.getElementById('mobm');
 const hamb = document.getElementById('hamb');
 const mobx = document.getElementById('mobx');
 function cm(){ mob.classList.remove('open'); hamb.setAttribute('aria-expanded','false'); }
-function openMenu(){ mob.classList.add('open'); hamb.setAttribute('aria-expanded','true'); }
-hamb.addEventListener('click', openMenu);
+hamb.addEventListener('click', () => { mob.classList.add('open'); hamb.setAttribute('aria-expanded','true'); });
 mobx.addEventListener('click', cm);
 document.addEventListener('keydown', e => { if(e.key==='Escape' && mob.classList.contains('open')) cm(); });
 
@@ -789,8 +687,7 @@ document.querySelectorAll('.rv').forEach(el => rvO.observe(el));
 
 /* File input label */
 document.getElementById('ffile').addEventListener('change', function(){
-  const fn = document.getElementById('fileName');
-  fn.textContent = this.files.length ? '📎 ' + this.files[0].name : '';
+  document.getElementById('fileName').textContent = this.files.length ? '📎 ' + this.files[0].name : '';
 });
 
 /* Form submit */
@@ -799,16 +696,9 @@ document.getElementById('tilForm').addEventListener('submit', async function(e){
   const btn = this.querySelector('button[type=submit]');
   btn.disabled = true;
   btn.textContent = 'Enviando...';
-
-  const fd = new FormData(this);
   try {
-    await fetch('https://n8n.libras.se/webhook/cadastro-til', {
-      method: 'POST',
-      body: fd,
-      mode: 'no-cors'
-    });
+    await fetch('https://n8n.libras.se/webhook/cadastro-til', { method:'POST', body: new FormData(this), mode:'no-cors' });
   } catch(_){}
-
   document.getElementById('formFields').style.display = 'none';
   document.getElementById('formSuc').classList.add('show');
 });

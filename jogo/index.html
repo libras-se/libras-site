@@ -94,23 +94,19 @@ header {
   max-width: 600px; margin: 0 auto; padding: 0 18px;
   height: 58px; display: flex; align-items: center; justify-content: space-between;
 }
-.logo-wrap { display:flex;flex-direction:column;gap:1px; }
-.logo-line { display:flex;align-items:baseline;gap:9px; }
+.logo-wrap { display:flex;align-items:baseline;gap:10px; }
 .logo {
   font-family:'M',sans-serif;
-  font-weight: 1000; font-size: 1.38rem; letter-spacing: -.04em;
+  font-weight: 1000; font-size: 1.38rem; letter-spacing: -.03em;
+  text-transform: uppercase;
   background: var(--gb); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text;
-  line-height: 1;
+  line-height: 1; text-decoration: none;
 }
 .logo-tag {
   font-family:'M',sans-serif;
-  font-weight: 100; font-size: .88rem; letter-spacing: .01em;
-  color: rgba(255,255,255,.42); line-height: 1;
-}
-.logo-sub {
-  font-size: .5rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: rgba(79,209,197,.45);
+  font-weight: 300; font-size: .95rem; letter-spacing: .01em;
+  color: rgba(255,255,255,.48); line-height: 1;
 }
 .hdr-right { display:flex;align-items:center;gap:8px; }
 .streak {
@@ -490,11 +486,8 @@ main { padding: 20px 0 140px; }
 <header role="banner">
   <div class="hdr">
     <div class="logo-wrap">
-      <div class="logo-line">
-        <a href="https://libras.se/" class="logo" aria-label="Libras.se — Página inicial">Libras.se</a>
-        <span class="logo-tag">Joguinho</span>
-      </div>
-      <div class="logo-sub">Descubra o sinal do dia</div>
+      <a href="https://libras.se/" class="logo" aria-label="Libras.se — Página inicial">LIBRAS.SE</a>
+      <span class="logo-tag">Joguinhos</span>
     </div>
     <div class="hdr-right">
       <div class="streak" aria-label="Sequência de dias">🔥 <span id="streakCount">0</span></div>
@@ -513,7 +506,7 @@ main { padding: 20px 0 140px; }
   <!-- CHALLENGE CARD -->
   <div class="ch-card">
     <div class="ch-meta">
-      <span class="ch-num" id="chNum">Desafio #001</span>
+      <span class="ch-num">Descubra o sinal do dia</span>
       <span class="cat-badge" id="catBadge">📚 Educação</span>
     </div>
 
@@ -944,7 +937,7 @@ function init() {
 function setupGame() {
   wordLen = ch.word.length;
 
-  document.getElementById('chNum').textContent   = `Desafio #${String(ch.id).padStart(3,'0')}`;
+  // ch-num é estático ("Descubra o sinal do dia")
   document.getElementById('catBadge').textContent = `${ch.categoryIcon} ${ch.category}`;
   document.getElementById('signIcon').textContent = ch.signIcon;
   document.getElementById('signDesc').textContent = ch.signDesc;

@@ -166,7 +166,6 @@
 <meta name="author" content="Libras.se"/>
 <meta name="keywords" content="tradução Libras, intérprete Libras, vídeo com Libras, janela de Libras, acessibilidade, Lei Brasileira de Inclusão, LBI, TIL, surdos, Libras.se, Florianópolis"/>
 <style>
-@font-face{font-family:'M';src:url('assets/fonts/museo-sans-rounded-100.woff2') format('woff2');font-weight:100;font-display:swap}
 @font-face{font-family:'M';src:url('assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
 @font-face{font-family:'M';src:url('assets/fonts/museo-sans-rounded-500.woff2') format('woff2');font-weight:500;font-display:swap}
 @font-face{font-family:'M';src:url('assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
@@ -391,8 +390,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .nc:hover{box-shadow:var(--shm);border-color:rgba(79,209,197,.35);transform:translateY(-1px)}
 .map-outer{position:relative;min-height:420px}
 .map-blob{position:absolute;inset:-24px;border-radius:52% 58% 48% 55%;background:rgba(79,209,197,.055);border:1px solid rgba(79,209,197,.1);pointer-events:none}
-.map-img-el{position:relative;z-index:2;width:100%;max-width:460px;margin:0 auto;display:block;filter:drop-shadow(0 8px 30px rgba(79,209,197,.18))}
-.pins{position:absolute;inset:0;z-index:3;transform:translate(53px, 62px)}
+.map-wrap{position:relative;width:100%;max-width:460px;margin:0 auto}
+.map-img-el{width:100%;display:block;position:relative;z-index:2;filter:drop-shadow(0 8px 30px rgba(79,209,197,.18))}
+.pins{position:absolute;inset:0;z-index:3}
 .pin{position:absolute;cursor:pointer;display:flex;align-items:center;gap:6px}
 .pdot{width:9px;height:9px;border-radius:50%;background:var(--teal-d);flex-shrink:0;position:relative;box-shadow:0 0 0 3px rgba(79,209,197,.22)}
 .pdot .pring{position:absolute;inset:-4px;border-radius:50%;background:rgba(79,209,197,.28);animation:pingDot 2s ease-out infinite}
@@ -627,7 +627,6 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
   .press-logo-link img{height:48px;max-width:168px;width:auto}
   .press-logo-link.bigger img{height:62px;max-width:216px;width:auto}
   .bento-purpose h2{white-space:normal}
-  .pins{transform:translate(53px, 57px)}
 }
 @media(max-width:480px){
   .cd-v{font-size:3.2rem}
@@ -696,7 +695,7 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="#" class="nlogo" aria-label="Libras.se — Página inicial"><span class="nlogo-txt" aria-hidden="true">Libras.se</span></a>
+      <a href="#" class="nlogo" aria-label="Libras.se — Página inicial"><span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span></a>
       <ul class="nlinks" role="list">
         <li><a href="https://libras.se/proposito">Propósito</a></li>
         <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
@@ -912,8 +911,9 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
       </div>
       <div class="map-outer rv rr d1">
         <div class="map-blob" aria-hidden="true"></div>
-        <img class="map-img-el" src="assets/img/home/home-mapa-brasil.png" alt="Mapa do Brasil com cidades onde a Libras.se atua" width="460" height="520" loading="lazy" decoding="async" onerror="this.style.opacity='.05'"/>
-        <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
+        <div class="map-wrap">
+          <img class="map-img-el" src="assets/img/home/home-mapa-brasil.png" alt="Mapa do Brasil com cidades onde a Libras.se atua" width="460" height="520" loading="lazy" decoding="async" onerror="this.style.opacity='.05'"/>
+          <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
           <div class="pin" style="top:1%;left:40%;transform:translate(-50%, -50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
           <div class="pin" style="top:4%;left:48%;transform:translate(-200%, 80%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>
           <div class="pin" style="top:17%;left:80%;transform:translate(-50%, -50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Fortaleza</span></div></div>
@@ -929,6 +929,7 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
           <div class="pin" style="top:69%;left:54%;transform:translate(-50%, -50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Curitiba</span></div></div>
           <div class="pin" style="top:77%;left:56%;transform:translate(-50%, -50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Floripa</span></div></div>
           <div class="pin" style="top:82%;left:50%;transform:translate(-50%, -50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">POA</span></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -942,22 +943,34 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
     </div>
     <div class="interp-track-wrap">
       <div class="interp-track" id="interpTrack">
-        <div class="interp-card"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🧏‍♀️</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🧏</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🧏‍♂️</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🧏‍♀️</div></div>
-        <div class="interp-card"><div class="interp-card-placeholder">🧏</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🧏‍♀️</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🧏</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🧏‍♂️</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🤟</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🧏‍♀️</div></div>
-        <div class="interp-card" aria-hidden="true"><div class="interp-card-placeholder">🧏</div></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-joab.webp" alt="Joab, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-bruna.webp" alt="Bruna, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-dani.webp" alt="Dani, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-emilyn.webp" alt="Emilyn, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-gabriel.webp" alt="Gabriel, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-isah.webp" alt="Isah, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-jessika.webp" alt="Jessika, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-luana.webp" alt="Luana, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-summit.webp" alt="Intérprete no Summit" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-summit2.webp" alt="Intérprete no Summit" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-thulio.webp" alt="Thulio, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-thomé.webp" alt="Thomé, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils_1.webp" alt="Intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card"><img src="assets/img/home/interpretes/tils-3.webp" alt="Intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-joab.webp" alt="Joab, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-bruna.webp" alt="Bruna, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-dani.webp" alt="Dani, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-emilyn.webp" alt="Emilyn, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-gabriel.webp" alt="Gabriel, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-isah.webp" alt="Isah, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-jessika.webp" alt="Jessika, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-luana.webp" alt="Luana, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-summit.webp" alt="Intérprete no Summit" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-summit2.webp" alt="Intérprete no Summit" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-thulio.webp" alt="Thulio, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-thomé.webp" alt="Thomé, intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils_1.webp" alt="Intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
+        <div class="interp-card" aria-hidden="true"><img src="assets/img/home/interpretes/tils-3.webp" alt="Intérprete de Libras" width="160" height="200" loading="lazy" decoding="async"/></div>
       </div>
     </div>
   </div>
@@ -967,7 +980,8 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
   <div class="wc-bg" aria-hidden="true"></div>
   <div class="wc-video" aria-hidden="true">
     <video autoplay muted loop playsinline preload="metadata">
-      <source src="https://libras.se/wp-content/uploads/2026/04/0414-12.mp4" type="video/mp4"/>
+      <source src="assets/img/videos/clientes_demonstrativos.webm" type="video/webm"/>
+      <source src="assets/img/videos/clientes_demonstrativos.mp4" type="video/mp4"/>
     </video>
   </div>
   <div class="wc-grad" aria-hidden="true"></div>

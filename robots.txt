@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-login.php
-Disallow: /teste-publicacao/
 
 # Crawlers de IA — permitidos explicitamente para indexação e respostas de LLMs
 User-agent: GPTBot

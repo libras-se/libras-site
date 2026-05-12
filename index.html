@@ -6,14 +6,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');</script>
-<title>Tradução em Libras para Vídeo | Libras.se — Intérpretes Reais, Entrega em 1h</title>
-<meta name="description" content="Tradução de vídeos em Libras com intérpretes certificados. Entrega em 7 dias, 24h ou 1 hora. Arquivo ProRes editado, pronto para publicar. Todo o Brasil. Cumpre a Lei 13.146."/>
+<title>Tradução em Libras para Vídeos | Entrega em 1h</title>
+<meta name="description" content="Traduza vídeos para Libras com intérpretes reais. Entrega em 1h, 24h ou 7 dias. Arquivo ProRes editado, pronto para publicar. Todo o Brasil."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://libras.se/"/>
+<link rel="alternate" hreflang="pt-BR" href="https://libras.se/"/>
+<link rel="alternate" hreflang="x-default" href="https://libras.se/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://libras.se/"/>
-<meta property="og:title" content="Tradução em Libras para Vídeo | Libras.se — Intérpretes Reais, Entrega em 1h"/>
-<meta property="og:description" content="Tradução de vídeos em Libras com intérpretes certificados. Entrega em 7 dias, 24h ou 1 hora. Arquivo ProRes editado, pronto para publicar. Todo o Brasil."/>
+<meta property="og:title" content="Tradução em Libras para Vídeos | Libras.se"/>
+<meta property="og:description" content="Traduza vídeos para Libras com intérpretes reais. Entrega em 1h, 24h ou 7 dias. Arquivo ProRes editado, pronto para publicar. Todo o Brasil."/>
 <meta property="og:image" content="https://libras.se/assets/img/home/home-JOAB_hero.webp"/>
 <meta property="og:image:width" content="290"/>
 <meta property="og:image:height" content="420"/>
@@ -22,11 +24,11 @@
 <meta property="og:site_name" content="Libras.se"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@librasse"/>
-<meta name="twitter:title" content="Tradução em Libras para Vídeo | Libras.se — Intérpretes Reais"/>
-<meta name="twitter:description" content="Tradução de vídeos em Libras com intérpretes certificados. Entrega em 7 dias, 24h ou 1 hora. Todo o Brasil."/>
+<meta name="twitter:title" content="Tradução em Libras para Vídeos | Libras.se"/>
+<meta name="twitter:description" content="Traduza vídeos para Libras com intérpretes reais. Entrega em 1h, 24h ou 7 dias. Arquivo ProRes editado, pronto para publicar."/>
 <meta name="twitter:image" content="https://libras.se/assets/img/home/home-JOAB_hero.webp"/>
 <meta name="twitter:image:alt" content="Libras.se — Tradução de vídeos em Libras com intérpretes reais"/>
-<link rel="dns-prefetch" href="//www.googletagmanager.com"/>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin/>
 <link rel="dns-prefetch" href="//wa.me"/>
 <link rel="dns-prefetch" href="//huet.libras.se"/>
 <link rel="dns-prefetch" href="//n8n.trngl.com.br"/>
@@ -192,7 +194,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'M',sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{text-decoration:none;color:inherit}
 button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .skip-link{position:absolute;top:-100%;left:16px;background:var(--p1);color:#fff;padding:8px 16px;border-radius:0 0 var(--rmd) var(--rmd);font-size:.82rem;font-weight:700;z-index:9999;transition:top .2s}
@@ -245,8 +247,8 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 @keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes pingDot{0%{transform:scale(1);opacity:1}100%{transform:scale(3);opacity:0}}
-@keyframes wppBeat{0%,100%{box-shadow:0 4px 20px rgba(34,197,94,.4)}50%{box-shadow:0 4px 28px rgba(34,197,94,.55),0 0 0 6px rgba(34,197,94,.08)}}
-@keyframes scanLine{0%{top:0}100%{top:100%}}
+@keyframes wppBeat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
+@keyframes scanLine{0%{transform:translateY(0)}100%{transform:translateY(600px)}}
 @keyframes cdPulse{0%,100%{color:var(--teal-d)}50%{color:var(--teal)}}
 @keyframes interpGlow{0%,100%{filter:drop-shadow(0 20px 40px rgba(79,209,197,.15))}50%{filter:drop-shadow(0 28px 56px rgba(79,209,197,.32))}}
 @keyframes interpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
@@ -287,7 +289,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .nlinks a:hover{color:var(--p1)}
 .nlinks a:hover::after{width:100%}
 .nlinks a:focus-visible{outline:2px solid var(--teal);border-radius:3px;outline-offset:2px}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
 .ham span{display:block;width:21px;height:1.5px;background:var(--p1);border-radius:2px;transition:var(--tr)}
 .ham:focus-visible{outline:2px solid var(--teal);border-radius:4px;outline-offset:4px}
 #hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:96px 0 0;z-index:1}
@@ -529,7 +531,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .wf-suc p{font-size:.85rem;color:var(--txs)}
 #tech{padding:52px 0;background:var(--p1);position:relative;overflow:hidden;z-index:1}
 .tech-bg-img{position:absolute;inset:0;z-index:0;background:image-set(url('assets/img/home/home-PLUGIN-PREMIERE.avif') type('image/avif'),url('assets/img/home/home-PLUGIN-PREMIERE.png') type('image/png')) center/cover no-repeat;opacity:.05;pointer-events:none}
-.tech-scan{position:absolute;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(79,209,197,.3),transparent);animation:scanLine 5s linear infinite;pointer-events:none;z-index:1}
+.tech-scan{position:absolute;top:0;left:0;right:0;height:1.5px;will-change:transform;background:linear-gradient(90deg,transparent,rgba(79,209,197,.3),transparent);animation:scanLine 5s linear infinite;pointer-events:none;z-index:1}
 .tech-in{position:relative;z-index:2;text-align:center;max-width:660px;margin:0 auto}
 .tech-lbl{display:inline-flex;align-items:center;gap:7px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(163,230,235,.6);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.15);border-radius:var(--rpill);padding:5px 13px;margin-bottom:16px}
 .tech-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.4rem,2.8vw,2rem);color:#fff;margin-bottom:10px;letter-spacing:-.03em}
@@ -549,7 +551,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .ft-logo{font-family:'M',sans-serif;font-weight:900;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
 .ft-bp{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
 .ft-socs{display:flex;gap:7px}
-.ftsoc{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:var(--tr)}
+.ftsoc{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:var(--tr)}
 .ftsoc:hover{background:rgba(255,255,255,.12);color:#fff;transform:translateY(-2px)}
 .ftsoc:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .ftsoc svg{width:15px;height:15px;fill:currentColor}
@@ -805,7 +807,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
     </div>
     <div class="bento-grid">
       <div class="bento-hero rv rs">
-        <picture aria-hidden="true" class="bento-hero-map-wrap"><source srcset="assets/img/home/home-mapa-brasil.avif" type="image/avif"/><img class="bento-hero-map" src="assets/img/home/home-mapa-brasil.png" alt="" loading="lazy" decoding="async"/></picture>
+        <picture aria-hidden="true" class="bento-hero-map-wrap"><source srcset="assets/img/home/home-mapa-brasil.avif" type="image/avif"/><img class="bento-hero-map" src="assets/img/home/home-mapa-brasil.png" alt="" width="460" height="520" loading="lazy" decoding="async"/></picture>
         <div class="bento-hero-num" aria-label="10,7 milhões">10,7M</div>
         <div id="problem-title" class="bento-hero-sub">de brasileiros são surdos e não acessam seu conteúdo hoje</div>
         <div class="bento-hero-src">IBGE 2020</div>

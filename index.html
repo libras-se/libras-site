@@ -305,11 +305,11 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .hero-trust{display:flex;flex-wrap:wrap;gap:16px;font-size:.71rem;font-weight:600;color:var(--txm)}
 .hero-trust span::before{content:'\2713 ';color:var(--teal-d);font-weight:900}
 .hero-right{position:relative;height:500px;display:flex;align-items:flex-end;justify-content:center}
-.iw{position:relative;width:290px;z-index:3}
+.iw{position:relative;width:290px;z-index:3;aspect-ratio:290/420}
 .ig{position:absolute;top:-8px;left:-8px;right:-8px;bottom:0;border-radius:56px 56px 4px 4px;background:linear-gradient(180deg,rgba(255,255,255,.32) 0%,rgba(255,255,255,.15) 40%,rgba(79,209,197,.08) 100%);backdrop-filter:blur(28px) saturate(1.4);-webkit-backdrop-filter:blur(28px) saturate(1.4);border:1.5px solid rgba(255,255,255,.65);border-bottom:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.2),0 8px 32px rgba(79,209,197,.15),0 24px 64px rgba(10,34,37,.08)}
 .ig::before{content:'';position:absolute;top:12px;left:16px;right:16px;height:40%;border-radius:44px 44px 50% 50%;background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.1) 60%,transparent 100%);pointer-events:none}
 .ig::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(180deg,transparent,rgba(79,209,197,.06));pointer-events:none}
-.ii-wrap{position:relative;z-index:2;display:block;width:100%}.ii{width:100%;display:block;animation:interpGlow 4s ease-in-out infinite}
+.ii-wrap{position:relative;z-index:2;display:block;width:100%;height:100%}.ii{width:100%;height:100%;display:block;object-fit:contain;object-position:center bottom;animation:interpGlow 4s ease-in-out infinite}
 .fb{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,255,255,.95);border-radius:var(--rpill);box-shadow:var(--shm);z-index:5;white-space:nowrap}
 .fb::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);border-radius:var(--rpill)}
 .fb .fi{font-size:.95rem}

@@ -70,7 +70,10 @@
       "itemListElement": [
         {"@type": "ListItem","position": 1,"item": {"@type": "BlogPosting","headline": "Libras ou legendas? Quando usar cada recurso de acessibilidade","description": "Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas e conteúdos digitais.","url": "https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/","datePublished": "2026-05-20","author": {"@type": "Organization","name": "Libras.se"}}},
         {"@type": "ListItem","position": 2,"item": {"@type": "BlogPosting","headline": "Você sabe o que é datilologia?","description": "Do abecedário da Xuxa às palavras que nascem dos sinais soletrados — entenda o que é datilologia e seu papel na Língua Brasileira de Sinais.","url": "https://libras.se/blog/voce-sabe-o-que-e-datilologia/","datePublished": "2025-07-15","author": {"@type": "Organization","name": "Libras.se"}}},
-        {"@type": "ListItem","position": 3,"item": {"@type": "BlogPosting","headline": "Acessibilidade em eventos: como garantir interpretação em Libras sem improviso","description": "Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais.","url": "https://libras.se/blog/garantir-libras-sem-improviso/","datePublished": "2025-07-15","author": {"@type": "Organization","name": "Libras.se"}}}
+        {"@type": "ListItem","position": 3,"item": {"@type": "BlogPosting","headline": "Acessibilidade em eventos: como garantir interpretação em Libras sem improviso","description": "Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais.","url": "https://libras.se/blog/garantir-libras-sem-improviso/","datePublished": "2025-07-15","author": {"@type": "Organization","name": "Libras.se"}}},
+        {"@type": "ListItem","position": 4,"item": {"@type": "BlogPosting","headline": "Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado","description": "Entenda como criar videoaulas acessíveis com Libras, legendas, transcrição e recursos visuais bem planejados para ampliar o acesso ao aprendizado.","url": "https://libras.se/blog/videoaulas-acessiveis-com-libras/","datePublished": "2026-05-20","author": {"@type": "Organization","name": "Libras.se"}}},
+        {"@type": "ListItem","position": 5,"item": {"@type": "BlogPosting","headline": "Libras tem sotaque e gíria? Entenda as variações regionais","description": "Libras também tem variações regionais, usos informais e sinais que mudam conforme comunidade, contexto e região. Entenda por que isso não é erro.","url": "https://libras.se/blog/libras-tem-sotaque-e-giria/","datePublished": "2026-05-20","author": {"@type": "Organization","name": "Libras.se"}}},
+        {"@type": "ListItem","position": 6,"item": {"@type": "BlogPosting","headline": "Libras não é a segunda língua oficial do Brasil: entenda a lei","description": "Entenda por que a Libras não é a segunda língua oficial do Brasil, o que a Lei nº 10.436/2002 realmente reconhece e como falar sobre Libras com precisão.","url": "https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/","datePublished": "2026-03-18","author": {"@type": "Organization","name": "Libras.se"}}}
       ]
     }
   ]
@@ -254,6 +257,9 @@ main{padding-top:80px}
 .bl-featured__grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
 .bl-featured__side{display:flex;flex-direction:column;gap:24px}
 @media(max-width:900px){.bl-featured__grid{grid-template-columns:1fr}}
+.bl-posts-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+@media(max-width:900px){.bl-posts-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.bl-posts-row{grid-template-columns:1fr}}
 
 /* ── BLOG CARD ── */
 .bl-card{background:#fff;border-radius:var(--brad);overflow:hidden;box-shadow:var(--bsh);transition:box-shadow .28s ease,transform .28s ease;height:100%;display:flex;flex-direction:column}
@@ -479,7 +485,7 @@ main{padding-top:80px}
 
         <div class="bl-hero__stats rv d2">
           <div class="bl-hero__stat">
-            <strong>3</strong>
+            <strong>6</strong>
             <span>Artigos</span>
           </div>
           <div class="bl-hero__stat">
@@ -502,7 +508,7 @@ main{padding-top:80px}
 
       <div class="bl-sec-head rv">
         <h2 class="bl-sec-head__title" id="bl-featured-title"><em>Artigos</em> publicados</h2>
-        <span id="bl-post-count" class="bl-sec-head__link">3 publicações</span>
+        <span id="bl-post-count" class="bl-sec-head__link">6 publicações</span>
       </div>
 
       <div class="bl-theme-bar rv d1" role="group" aria-label="Filtrar por tema">
@@ -606,6 +612,96 @@ main{padding-top:80px}
           </article>
 
         </div>
+      </div>
+
+      <!-- LINHA DE POSTS ADICIONAIS -->
+      <div class="bl-posts-row">
+
+        <article class="bl-card bl-card--sm rv"
+          data-post
+          data-search="videoaulas acessíveis libras legendas transcrição aprendizado ead educação inclusão"
+          data-cat="acessibilidade instrucional"
+          itemscope itemtype="https://schema.org/BlogPosting">
+          <a href="/blog/videoaulas-acessiveis-com-libras/" class="bl-card__thumb" aria-label="Videoaulas acessíveis com Libras">
+            <picture>
+              <source srcset="/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.avif" type="image/avif">
+              <source srcset="/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.webp" type="image/webp">
+              <img src="/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.png" alt="Videoaula com janela de Libras" loading="lazy" decoding="async" itemprop="image">
+            </picture>
+            <span class="bl-card__badge">Acessibilidade</span>
+          </a>
+          <div class="bl-card__body">
+            <div class="bl-card__meta">
+              <time datetime="2026-05-20" itemprop="datePublished">20 mai 2026</time>
+              <span class="bl-card__dot" aria-hidden="true"></span>
+              <span>7 min de leitura</span>
+            </div>
+            <h3 class="bl-card__title" itemprop="headline">
+              <a href="/blog/videoaulas-acessiveis-com-libras/">Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado</a>
+            </h3>
+            <p class="bl-card__excerpt" itemprop="description">
+              Como criar videoaulas com Libras, legendas, transcrição e recursos visuais bem planejados para ampliar o acesso ao aprendizado.
+            </p>
+            <a href="/blog/videoaulas-acessiveis-com-libras/" class="bl-card__read" aria-label="Ler artigo: Videoaulas acessíveis com Libras">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="bl-card bl-card--sm rv d1"
+          data-post
+          data-search="libras sotaque gíria variações regionais dialeto comunidade surda informalidade"
+          data-cat="língua cultura"
+          itemscope itemtype="https://schema.org/BlogPosting">
+          <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__thumb" aria-label="Libras tem sotaque e gíria?">
+            <picture>
+              <source srcset="/assets/img/blog/libras-tem-sotaque-e-giria/libras-tem-sotaque-e-giria.avif" type="image/avif">
+              <img src="/assets/img/blog/libras-tem-sotaque-e-giria/libras-tem-sotaque-e-giria.avif" alt="Sinais de Libras com variações regionais" loading="lazy" decoding="async" itemprop="image">
+            </picture>
+            <span class="bl-card__badge">Língua &amp; Cultura</span>
+          </a>
+          <div class="bl-card__body">
+            <div class="bl-card__meta">
+              <time datetime="2026-05-20" itemprop="datePublished">20 mai 2026</time>
+              <span class="bl-card__dot" aria-hidden="true"></span>
+              <span>7 min de leitura</span>
+            </div>
+            <h3 class="bl-card__title" itemprop="headline">
+              <a href="/blog/libras-tem-sotaque-e-giria/">Libras tem sotaque e gíria? Entenda as variações regionais</a>
+            </h3>
+            <p class="bl-card__excerpt" itemprop="description">
+              Libras tem variações regionais, usos informais e sinais que mudam conforme comunidade e contexto. Entenda por que isso não é erro.
+            </p>
+            <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__read" aria-label="Ler artigo: Libras tem sotaque e gíria?">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="bl-card bl-card--sm rv d2"
+          data-post
+          data-search="libras segunda língua oficial brasil lei 10436 reconhecimento jurídico legislação"
+          data-cat="língua instrucional"
+          itemscope itemtype="https://schema.org/BlogPosting">
+          <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__thumb" aria-label="Libras não é a segunda língua oficial do Brasil">
+            <picture>
+              <source srcset="/assets/img/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/libras-nao-e-segunda-lingua-oficial-do-brasil.png.avif" type="image/avif">
+              <img src="/assets/img/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/libras-nao-e-segunda-lingua-oficial-do-brasil.png.avif" alt="Lei de reconhecimento da Libras" loading="lazy" decoding="async" itemprop="image">
+            </picture>
+            <span class="bl-card__badge">Língua &amp; Cultura</span>
+          </a>
+          <div class="bl-card__body">
+            <div class="bl-card__meta">
+              <time datetime="2026-03-18" itemprop="datePublished">18 mar 2026</time>
+              <span class="bl-card__dot" aria-hidden="true"></span>
+              <span>7 min de leitura</span>
+            </div>
+            <h3 class="bl-card__title" itemprop="headline">
+              <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/">Libras não é a segunda língua oficial do Brasil: entenda a lei</a>
+            </h3>
+            <p class="bl-card__excerpt" itemprop="description">
+              Entenda por que a Libras não é a segunda língua oficial do Brasil, o que a Lei nº 10.436/2002 realmente reconhece e como falar com precisão.
+            </p>
+            <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__read" aria-label="Ler artigo: Libras não é a segunda língua oficial">Ler artigo →</a>
+          </div>
+        </article>
+
       </div>
 
       <p class="bl-no-results" id="bl-no-results" role="alert" aria-live="polite">

@@ -1,0 +1,483 @@
+# TEXTO BASE ANTIGO
+
+Use o texto abaixo apenas como referencia editorial e contexto do post original. Reescreva com mais rigor, SEO, estrutura, acessibilidade e cuidado cultural, seguindo o prompt completo depois deste bloco.
+
+---
+
+Você já pensou em como sinalizar o nome de uma pessoa sem a necessidade de fazer a datilologia, ou seja, sem fazer a gesticulação de letra por letra? Assim como existe um sinal para cada coisa, objeto ou ação, também é super comum ter um sinal para o nome de cada pessoa. Afinal, seria muito cansativo ficar fazendo vários gestos a todo momento só para falar um nome, não é mesmo? Mas então, surge a dúvida: como são criados os sinais de pessoas na Língua Brasileira de Sinais (Libras)? 
+
+Traços, trejeitos e personalidade inspiram nomes das pessoas. Os sinais sempre são criados por alguém da comunidade surda. Por exemplo, o nome de um dos nossos intérpretes e tradutores do time Libras-se é Joab. Ele conta que usava um blackpower quando começou a se inserir na comunidade e esse elemento marcante virou inspiração para sua identificação. A identificação dele, com nome soletrado em alfabeto manual e em gesto, é assim: 
+
+[video de joab em libras]
+
+“O sinal e meu nome, minha identidade. Mesmo mudando o penteado, deixando o blackpower, se ficar careca, mudar o estilo, sempre vou ser identificado por esse sinal”, conta o Joab, que já não usa mais o mesmo visual. 
+
+Mas como será que se faz para dar nomes de pessoas famosas? Novamente, a comunidade surda encontra alguma característica marcante da pessoa e a transforma em um gesto. Citando um caso bem curioso: vocês lembram do hit Single Ladies, da Beyoncé? Na coreografia, ela fazia movimentos com a mão mostrando que não havia anel de compromisso.  É esse gesto tão marcante que levou a seu batismo na Libras. Veja o alfabeto manual e, depois, o sinal de Beyoncé:  
+
+[video de beyoncé em libras]
+
+
+Outro exemplo é sinal do Luciano Huck. Quando se pensa nele, a primeira característica que possivelmente vêm à mente é o nariz dele - marca quase registrada do apresentador. Foi então que surgiu o gesto para se referir a ele. 
+
+[video de luciano huck em libras]
+
+Um bônus: você consegue identificar as características que ajudaram a batizar a cantora Anitta, o comunicador Sílvio Santos e a apresentadora Xuxa? 
+
+[video de famosos em libras]
+
+Conta pra gente se você já tem um gesto que define o seu nome ou qual você acha que iria ser escolhido para você!
+
+TITLE: Como são criados os sinais de pessoas na Libras?
+
+por Nina Martins | equipe LIBRAS-SE
+
+---
+
+# PROMPT PARA O CLAUDE CRIAR O POST
+
+Voce e um especialista em SEO tecnico, arquitetura de conteudo, HTML semantico, acessibilidade digital, cultura surda, Libras e design editorial para sites estaticos.
+
+Crie o post completo do blog da Libras.se em HTML, seguindo exatamente o guia visual e estrutural definido em:
+
+- `blog/CLAUDE.md`
+
+O arquivo final deve ser criado em:
+
+- `blog/como-sao-criados-sinais-de-pessoas-na-libras/index.html`
+
+Use tambem os assets ja existentes em:
+
+- `assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/`
+
+Assets disponiveis:
+
+- `LIBRASGIF-FAMOSOS.webm`
+- `LIBRASGIF-FAMOSOS.mp4`
+- `LIBRASGIF-FAMOSOS.avif`
+- `FAMOSOS - LIBRAS-SE_GIF.webm`
+- `FAMOSOS - LIBRAS-SE_GIF.gif`
+- `FAMOSOS - LIBRAS-SE_GIF.avif`
+- `JOAB - LIBRAS-SE_GIFS.webm`
+- `JOAB - LIBRAS-SE_GIFS.mp4`
+- `JOAB - LIBRAS-SE_GIFS.gif`
+- `JOAB - LIBRAS-SE_GIFS.avif`
+- `beyonce - LIBRAS-SE_GIFS.webm`
+- `beyonce - LIBRAS-SE_GIFS.mp4`
+- `beyonce - LIBRAS-SE_GIFS.gif`
+- `beyonce - LIBRAS-SE_GIFS.avif`
+- `HUCK - LIBRAS-SE_GIFS.webm`
+- `HUCK - LIBRAS-SE_GIFS.mp4`
+- `HUCK - LIBRAS-SE_GIFS.gif`
+- `HUCK - LIBRAS-SE_GIFS.avif`
+
+Tema do artigo:
+
+Como sao criados os sinais de pessoas na Libras.
+
+Objetivo editorial:
+
+Explicar, de forma clara, respeitosa e culturalmente correta, que os sinais pessoais em Libras nao sao simples apelidos inventados ao acaso. Eles nascem da convivencia, da percepcao visual, da identidade, da comunidade surda e do uso social. O artigo deve mostrar que um sinal pessoal pode se relacionar com caracteristicas fisicas, jeito de se expressar, profissao, trajetoria publica, comportamento marcante ou outro elemento visualmente reconhecivel, mas sempre dentro de uma logica cultural da Libras.
+
+Publico-alvo:
+
+- pessoas ouvintes curiosas sobre Libras;
+- empresas e instituicoes que querem comunicar melhor com pessoas surdas;
+- criadores de conteudo;
+- equipes de marketing, educacao, eventos e comunicacao;
+- estudantes de Libras;
+- pessoas que ja viram sinais de famosos e querem entender como isso funciona.
+
+Tom de voz:
+
+- didatico, humano e acessivel;
+- autoridade sem arrogancia;
+- linguagem simples, mas sem simplificar demais a cultura surda;
+- evitar tom folclorico, caricato ou exotizante;
+- tratar a Libras como lingua natural, visual, espacial e cultural;
+- reforcar que a comunidade surda tem protagonismo nesse processo.
+
+Palavra-chave principal:
+
+como sao criados sinais de pessoas na Libras
+
+Palavras-chave secundarias:
+
+- sinais pessoais em Libras
+- sinal de nome em Libras
+- nomes em Libras
+- sinais de famosos em Libras
+- cultura surda
+- Libras e identidade
+- como uma pessoa ganha um sinal em Libras
+- sinal pessoal na comunidade surda
+
+Slug:
+
+como-sao-criados-sinais-de-pessoas-na-libras
+
+URL canonica:
+
+https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/
+
+Titulo SEO:
+
+Como sao criados os sinais de pessoas na Libras? Entenda o sinal pessoal
+
+H1 sugerido:
+
+Como sao criados os sinais de pessoas na Libras?
+
+Subtitulo do hero:
+
+Na Libras, uma pessoa pode ganhar um sinal proprio. Mas esse sinal nao nasce por acaso: ele envolve identidade, convivencia, visualidade e cultura surda.
+
+Categoria:
+
+Lingua & Cultura
+
+Tempo de leitura:
+
+7 min de leitura
+
+Autor:
+
+LIBRAS.SE
+
+Data:
+
+20 de maio de 2026
+
+Meta description:
+
+Entenda como surgem os sinais de pessoas na Libras, por que eles nao sao apelidos comuns e qual o papel da comunidade surda nesse processo.
+
+Estrutura obrigatoria do artigo:
+
+1. Hero
+
+- Usar o padrao do `blog/CLAUDE.md`.
+- Categoria: `Lingua & Cultura`.
+- H1: `Como sao criados os sinais de pessoas na Libras?`
+- Subtitulo conforme sugerido acima.
+- Data: `20 de maio de 2026`.
+- Tempo: `7 min de leitura`.
+- Autor: `LIBRAS.SE`.
+- O hero pode usar gradiente com elementos visuais inspirados em maos, nomes, identidade e sinais. Se usar asset no hero, prefira um poster/AVIF disponivel e mantenha overlay forte para legibilidade.
+
+2. Introducao
+
+Abrir com a pergunta central:
+
+"Voce ja reparou que algumas pessoas famosas tem um sinal proprio em Libras?"
+
+Explicar que, em conversas em Libras, soletrar o nome de alguem sempre pode ser cansativo e pouco natural. Por isso, muitas pessoas passam a ser identificadas por um sinal pessoal, especialmente quando sao mencionadas com frequencia.
+
+Mensagem central:
+
+Um sinal pessoal em Libras nao e uma traducao literal do nome. Ele e uma forma visual de referencia, reconhecimento e identidade dentro de uma lingua visual.
+
+3. Secao: O que e um sinal pessoal em Libras?
+
+Explicar:
+
+- e um sinal usado para identificar uma pessoa;
+- pode funcionar como uma especie de "nome visual";
+- nao substitui o nome civil;
+- nao e necessariamente escolhido pela propria pessoa;
+- normalmente surge no uso, na convivencia ou pela comunidade que passa a se referir aquela pessoa;
+- pode conviver com a datilologia do nome.
+
+Incluir link interno natural para:
+
+- `/blog/voce-sabe-o-que-e-datilologia/`
+
+Sugestao de texto de link:
+
+Para entender melhor a soletracao manual, veja tambem o artigo sobre datilologia na Libras.
+
+4. Secao: Por que sinais pessoais existem?
+
+Explicar que Libras e uma lingua visual e espacial. Em vez de depender sempre da soletracao letra por letra, a lingua favorece referencias visuais eficientes, memoraveis e socialmente compreensiveis.
+
+Trazer exemplos de situacoes:
+
+- sala de aula;
+- eventos;
+- entrevistas;
+- conteudos em video;
+- conversas sobre artistas, politicos, professores, colegas e figuras publicas.
+
+Criar um destaque visual com a ideia:
+
+"O sinal pessoal nao encurta apenas um nome. Ele cria uma referencia visual que faz sentido dentro da conversa."
+
+5. Secao: Como um sinal de pessoa pode ser criado?
+
+Criar uma timeline/process steps com 5 criterios possiveis:
+
+1. Caracteristica fisica marcante
+   Exemplo: cabelo, barba, oculos, pinta, formato do rosto ou outro aspecto visual reconhecivel.
+
+2. Jeito de se expressar
+   Exemplo: um gesto recorrente, uma expressao facial, uma postura ou forma marcante de aparecer em publico.
+
+3. Profissao ou papel social
+   Exemplo: artista, apresentador, professor, atleta, politico, influenciador.
+
+4. Trajetoria ou imagem publica
+   Exemplo: algo pelo qual a pessoa ficou conhecida socialmente.
+
+5. Uso pela comunidade
+   O sinal so se fortalece quando outras pessoas entendem, repetem e reconhecem aquela referencia.
+
+Importante:
+
+Nao afirmar que existe uma regra unica e universal. Dizer que os criterios variam conforme contexto, regiao, grupo, relacao com a pessoa e uso social.
+
+6. Secao: Quem pode dar um sinal para uma pessoa?
+
+Explicar com cuidado cultural:
+
+- em muitos contextos, o sinal pessoal surge dentro da comunidade surda ou em ambientes onde a Libras e usada de forma viva;
+- pessoas surdas tem protagonismo cultural nesse processo;
+- estudantes ouvintes devem evitar "batizar" pessoas de forma aleatoria;
+- criar sinal sem conhecimento linguistico e cultural pode gerar formas inadequadas, confusas ou desrespeitosas;
+- em aulas de Libras, professores podem atribuir sinais aos alunos como parte da convivencia da turma, mas isso depende do contexto.
+
+Criar um callout:
+
+Titulo: `Nao e so inventar um gesto`
+
+Texto:
+
+Um sinal pessoal precisa fazer sentido visualmente, ser compreensivel no grupo e respeitar a pessoa representada. Por isso, contexto e convivencia importam.
+
+7. Secao: Sinais de famosos em Libras
+
+Usar os assets de video/GIF para criar uma secao visual com exemplos de famosos ou pessoas publicas.
+
+Use blocos `video-showcase` do guia `blog/CLAUDE.md`.
+
+Sugestao de organizacao:
+
+- Primeiro bloco: `LIBRASGIF-FAMOSOS.webm` com fallback `LIBRASGIF-FAMOSOS.mp4` e poster `LIBRASGIF-FAMOSOS.avif`
+- Segundo bloco: `beyonce - LIBRAS-SE_GIFS.webm` com fallback MP4 e poster AVIF
+- Terceiro bloco: `HUCK - LIBRAS-SE_GIFS.webm` com fallback MP4 e poster AVIF
+- Quarto bloco opcional: `JOAB - LIBRAS-SE_GIFS.webm` com fallback MP4 e poster AVIF
+
+Legendas devem ser descritivas, sem afirmar detalhes que nao estejam evidentes no arquivo. Exemplos:
+
+- `Exemplo visual de sinal usado para identificar uma pessoa conhecida em Libras.`
+- `Sinais pessoais costumam se apoiar em referencias visuais reconheciveis.`
+- `O uso social ajuda um sinal a se tornar compreendido por mais pessoas.`
+
+Nao inventar fatos biograficos especificos se eles nao forem necessarios.
+
+8. Secao: O sinal pessoal e igual em todo o Brasil?
+
+Explicar:
+
+- nem sempre;
+- Libras tem variacao regional, social e geracional;
+- uma pessoa pode ser conhecida por sinais diferentes em grupos diferentes;
+- sinais podem mudar com o tempo;
+- a comunidade e o uso real influenciam a consolidacao.
+
+Link interno natural para:
+
+- `/blog/libras-tem-sotaque-e-giria/`
+
+Sugestao de texto:
+
+Essa variacao tambem aparece em outros aspectos da lingua. Ja explicamos no blog que Libras tem sotaque e giria.
+
+9. Secao: Sinal pessoal, identidade e respeito
+
+Trabalhar uma reflexao:
+
+- o sinal pessoal carrega uma forma de reconhecimento;
+- pode aproximar a pessoa da comunidade;
+- deve evitar zombaria, estereotipo ofensivo ou reducao da pessoa a uma caracteristica sensivel;
+- em contexto profissional, educacional ou institucional, e importante respeitar a forma como a pessoa e apresentada e como a comunidade a reconhece.
+
+Criar um pull quote:
+
+"Em Libras, nomear alguem visualmente tambem e uma forma de reconhecer como essa pessoa aparece, circula e cria sentido na comunidade."
+
+10. Secao: Posso escolher meu proprio sinal em Libras?
+
+Responder de forma equilibrada:
+
+- voce pode sugerir, mas isso nao garante que o grupo va usar;
+- um sinal pessoal ganha forca no uso compartilhado;
+- em aulas, o professor pode orientar;
+- em relacoes com pessoas surdas, a convivencia costuma ser mais importante do que a vontade individual;
+- o ideal e aprender Libras com respeito, observar o uso real e pedir orientacao a pessoas qualificadas.
+
+11. Secao: Como empresas e criadores de conteudo devem lidar com sinais de pessoas?
+
+Conectar com Libras.se:
+
+- em videos institucionais, eventos, cursos e lives, nomes de pessoas podem aparecer muitas vezes;
+- a interpretacao em Libras precisa lidar com nomes, cargos, marcas e pessoas citadas;
+- quando ha recorrencia, sinais ou estrategias de referencia visual podem tornar a comunicacao mais fluida;
+- isso deve ser feito por profissionais de Libras, com criterio linguistico e respeito cultural.
+
+Link interno natural para:
+
+- `/solucoes/`
+- `/blog/garantir-libras-sem-improviso/`
+
+12. Conclusao
+
+Fechar reforcando:
+
+- sinais pessoais sao parte viva da Libras;
+- eles mostram que a lingua nao e apenas traducao de palavras do portugues;
+- Libras tem cultura, visualidade, variacao e formas proprias de nomear o mundo;
+- entender isso ajuda empresas, educadores, criadores e pessoas curiosas a se aproximarem da Libras com mais respeito.
+
+13. CTA final
+
+Usar `cta-block` do guia.
+
+Titulo:
+
+Seu conteudo cita pessoas, nomes e historias?
+
+Texto:
+
+A Libras.se ajuda videos, aulas, eventos e comunicacoes digitais a chegarem com mais clareza e respeito ao publico surdo.
+
+Botao:
+
+Conheca as solucoes da Libras.se
+
+Link:
+
+https://libras.se/solucoes
+
+14. Referencias
+
+Incluir uma secao de referencias com links confiaveis. Pode usar referencias gerais sobre Libras, cultura surda e legislacao brasileira. Priorize fontes institucionais e educativas.
+
+Sugestoes:
+
+- Lei nº 10.436/2002, que reconhece a Libras como meio legal de comunicacao e expressao.
+- Decreto nº 5.626/2005, que regulamenta a Lei de Libras.
+- Materiais educativos sobre Libras e cultura surda de instituicoes reconhecidas.
+
+Requisitos tecnicos obrigatorios:
+
+- HTML completo com `<!DOCTYPE html>`.
+- `lang="pt-BR"`.
+- SEO completo:
+  - `<title>`
+  - meta description
+  - canonical
+  - robots
+  - Open Graph
+  - Twitter Card
+  - JSON-LD `BlogPosting`
+- Usar as fontes do blog definidas em `blog/CLAUDE.md`.
+- Usar o header minimalista do blog, nao o header completo do site.
+- Usar o CSS no proprio arquivo, seguindo o padrao dos posts existentes.
+- Usar componentes do guia:
+  - progress bar
+  - hero
+  - article wrapper
+  - section label
+  - body text
+  - drop cap
+  - highlight box
+  - info/law callout
+  - process steps
+  - video showcase
+  - pull quote
+  - references
+  - CTA final
+  - footer
+  - JavaScript de progress bar e reveal
+- Todos os caminhos de assets dentro do HTML devem ser relativos a partir do post:
+  - `../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/NOME_DO_ARQUIVO`
+- Videos nativos devem usar:
+  - `controls`
+  - `playsinline`
+  - `preload="metadata"`
+  - `poster` quando houver AVIF correspondente
+  - source WebM primeiro e MP4 como fallback quando existir
+- Imagens decorativas devem ter `alt=""` e `aria-hidden="true"`.
+- Conteudo informativo deve ter texto alternativo ou legenda adequada.
+- Nao usar bibliotecas externas alem das fontes do Google previstas no guia.
+- Nao criar layout em React, Vue ou framework. O post e HTML estatico.
+- Nao criar conteudo em Markdown. O resultado final deve ser `index.html`.
+- Nao alterar `blog/CLAUDE.md`.
+
+Cuidados editoriais:
+
+- Nao tratar sinais pessoais como brincadeira ou apelido simples.
+- Nao dizer que qualquer pessoa pode inventar qualquer sinal.
+- Nao afirmar que todos os sinais pessoais sao dados exclusivamente por pessoas surdas, porque os contextos variam, mas deixe claro o protagonismo da comunidade surda.
+- Nao transformar pessoas famosas em curiosidade superficial; use os exemplos para explicar funcionamento linguistico e cultural.
+- Evitar frases como "linguagem de sinais"; use "Libras", "Lingua Brasileira de Sinais" ou "lingua de sinais" quando apropriado.
+- Evitar prometer regra fixa. Use termos como "pode", "costuma", "em muitos contextos", "dependendo do grupo" e "no uso social".
+
+Links internos que devem aparecer naturalmente:
+
+- `https://libras.se/blog/voce-sabe-o-que-e-datilologia/`
+- `https://libras.se/blog/libras-tem-sotaque-e-giria/`
+- `https://libras.se/blog/garantir-libras-sem-improviso/`
+- `https://libras.se/solucoes`
+
+Metadados editoriais para orientar o HTML:
+
+```yaml
+title: "Como sao criados os sinais de pessoas na Libras?"
+seo_title: "Como sao criados os sinais de pessoas na Libras? Entenda o sinal pessoal"
+meta_description: "Entenda como surgem os sinais de pessoas na Libras, por que eles nao sao apelidos comuns e qual o papel da comunidade surda nesse processo."
+slug: "como-sao-criados-sinais-de-pessoas-na-libras"
+canonical_url: "https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/"
+category: "Lingua & Cultura"
+tags:
+  - Libras
+  - cultura surda
+  - sinais pessoais
+  - nomes em Libras
+  - acessibilidade
+primary_keyword: "como sao criados sinais de pessoas na Libras"
+secondary_keywords:
+  - sinais pessoais em Libras
+  - sinal de nome em Libras
+  - nomes em Libras
+  - sinais de famosos em Libras
+  - cultura surda
+  - Libras e identidade
+search_intent: "informacional"
+reading_time: "7 min"
+author: "LIBRAS.SE"
+published_at: "2026-05-20"
+updated_at: "2026-05-20"
+cover_image: "https://libras.se/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif"
+cover_alt: "Exemplo visual de sinal em Libras usado para identificar pessoas conhecidas."
+og_title: "Como sao criados os sinais de pessoas na Libras?"
+og_description: "Sinais pessoais em Libras envolvem identidade, convivencia, visualidade e cultura surda. Entenda como eles surgem."
+og_image: "https://libras.se/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif"
+twitter_title: "Como sao criados os sinais de pessoas na Libras?"
+twitter_description: "Entenda o que sao sinais pessoais em Libras e por que eles nao sao simples apelidos."
+twitter_image: "https://libras.se/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif"
+schema_type: "BlogPosting"
+related_glossary_terms:
+  - Libras
+  - datilologia
+  - cultura surda
+internal_links:
+  - "https://libras.se/blog/voce-sabe-o-que-e-datilologia/"
+  - "https://libras.se/blog/libras-tem-sotaque-e-giria/"
+  - "https://libras.se/blog/garantir-libras-sem-improviso/"
+  - "https://libras.se/solucoes"
+cta_type: "solucoes"
+```
+
+Entrega esperada:
+
+Crie `blog/como-sao-criados-sinais-de-pessoas-na-libras/index.html` completo, bonito, responsivo, leve, semanticamente correto, otimizado para SEO e consistente com os posts existentes da Libras.se.

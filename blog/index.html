@@ -32,7 +32,7 @@
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -259,6 +259,7 @@ main{padding-top:80px}
   display:block;position:relative;overflow:hidden;
   background:rgba(223,242,240,.5);
 }
+.bl-card__thumb picture{display:block;width:100%;height:100%}
 .bl-card--lg .bl-card__thumb{aspect-ratio:16/9}
 .bl-card--sm .bl-card__thumb{aspect-ratio:3/2}
 .bl-card__ph{
@@ -422,7 +423,7 @@ main{padding-top:80px}
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="https://blog.libras.se/" onclick="cm()">Blog</a>
+  <a href="https://libras.se/blog/" onclick="cm()">Blog</a>
   <a href="/jogo/" onclick="cm()">Jogo</a>
   <a href="/sinal/" onclick="cm()">Vocabulário</a>
   <a href="/glossario/" onclick="cm()">Glossário</a>
@@ -456,7 +457,7 @@ main{padding-top:80px}
   <header class="bl-hero" role="banner">
     <div class="bl-container">
       <div class="bl-hero__inner">
-        <div class="bl-hero__kicker rv">Conteúdo & Inclusão</div>
+        <div class="bl-hero__kicker rv">Conteúdo &amp; Inclusão</div>
         <h1 class="bl-hero__title rv d1">
           Conhecimento sobre<br><em>Libras e Acessibilidade</em>
         </h1>
@@ -493,9 +494,11 @@ main{padding-top:80px}
         <!-- Post principal -->
         <article class="bl-card bl-card--lg rv" itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" aria-label="Você sabe o que é datilologia?">
-            <div class="bl-card__ph">
-              <div class="bl-card__ph-icon" aria-hidden="true">🤟</div>
-            </div>
+            <picture>
+              <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.avif" type="image/avif">
+              <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.webp" type="image/webp">
+              <img src="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.png" alt="Mãos sinalizando em Libras" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+            </picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
           <div class="bl-card__body">
@@ -517,9 +520,11 @@ main{padding-top:80px}
         <!-- Post secundário -->
         <article class="bl-card bl-card--sm rv d1" itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__thumb" aria-label="Acessibilidade em eventos">
-            <div class="bl-card__ph">
-              <div class="bl-card__ph-icon" aria-hidden="true">🎤</div>
-            </div>
+            <picture>
+              <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.avif" type="image/avif">
+              <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.webp" type="image/webp">
+              <img src="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.png" alt="Intérprete de Libras em evento presencial" loading="lazy" decoding="async" itemprop="image">
+            </picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
           <div class="bl-card__body">
@@ -593,21 +598,21 @@ main{padding-top:80px}
       </div>
       <div class="bl-cats__grid">
 
-        <a href="/blog/" class="bl-cat rv" aria-label="Ver artigos Educacional">
+        <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-cat rv" aria-label="Ver artigo Educacional: Você sabe o que é datilologia?">
           <span class="bl-cat__icon" aria-hidden="true">📚</span>
           <div class="bl-cat__name">Educacional</div>
           <p class="bl-cat__desc">Aprenda sobre Libras, gramática, história e cultura surda com conteúdo acessível e bem fundamentado.</p>
           <span class="bl-cat__count">1 artigo</span>
         </a>
 
-        <a href="/blog/" class="bl-cat rv d1" aria-label="Ver artigos Instrucional">
+        <a href="/blog/garantir-libras-sem-improviso/" class="bl-cat rv d1" aria-label="Ver artigo Instrucional: Acessibilidade em eventos">
           <span class="bl-cat__icon" aria-hidden="true">🎯</span>
           <div class="bl-cat__name">Instrucional</div>
           <p class="bl-cat__desc">Guias práticos para produzir conteúdo acessível em Libras, eventos inclusivos e materiais com janela de Libras.</p>
           <span class="bl-cat__count">1 artigo</span>
         </a>
 
-        <a href="/blog/" class="bl-cat rv d2" aria-label="Ver artigos Institucional">
+        <a href="/blog/" class="bl-cat rv d2" aria-label="Ver artigos Institucional — em breve">
           <span class="bl-cat__icon" aria-hidden="true">🏛️</span>
           <div class="bl-cat__name">Institucional</div>
           <p class="bl-cat__desc">Legislação, direitos da comunidade surda, políticas públicas e avanços na inclusão no Brasil.</p>

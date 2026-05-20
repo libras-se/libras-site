@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libras ou legendas? Quando usar cada recurso de acessibilidade | LIBRAS.SE</title>
+<meta name="description" content="Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas, eventos e conteúdos digitais.">
+<meta name="keywords" content="Libras, legendas, LSE, legenda para surdos e ensurdecidos, acessibilidade audiovisual, janela de Libras, acessibilidade digital">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --teal-dark:   #1e6e6e;
+    --teal-mid:    #2a9090;
+    --teal-light:  #48bfb2;
+    --teal-pale:   #a8e6df;
+    --teal-bg:     #f0fafa;
+    --ink:         #0f2a2a;
+    --ink-soft:    #2d4f4f;
+    --white:       #ffffff;
+    --cream:       #f8fdfd;
+    --orange:      #f4892a;
+    --orange-soft: #fef3e8;
+    --grey-light:  #e8f4f4;
+    --radius:      16px;
+    --radius-lg:   28px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 18px;
+    overflow-x: hidden;
+  }
+
+  /* ── PROGRESS BAR ── */
+  #progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--teal-mid), var(--orange));
+    z-index: 1000;
+    transition: width 0.1s linear;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(16px);
+    background: rgba(240, 250, 250, 0.88);
+    border-bottom: 1px solid rgba(42,144,144,0.12);
+    transition: all 0.3s;
+  }
+
+  .nav-logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--teal-dark);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .nav-logo .hand-icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--teal-mid), var(--teal-light));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+  }
+
+  .nav-tag {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    background: var(--grey-light);
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 700px) {
+    nav { padding: 14px 20px; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 0;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg picture,
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(155deg,
+      rgba(13,61,61,0.88) 0%,
+      rgba(30,110,110,0.82) 35%,
+      rgba(42,144,144,0.75) 65%,
+      rgba(72,191,178,0.65) 100%);
+  }
+
+  .hero-noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px;
+  }
+
+  .hero-grid-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-circles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-circles span {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .hero-circles span:nth-child(1) {
+    width: 600px; height: 600px;
+    top: -200px; right: -100px;
+    animation: float1 14s ease-in-out infinite;
+  }
+  .hero-circles span:nth-child(2) {
+    width: 400px; height: 400px;
+    top: 100px; right: 100px;
+    border-color: rgba(255,255,255,0.05);
+    animation: float1 18s ease-in-out infinite reverse;
+  }
+  .hero-circles span:nth-child(3) {
+    width: 200px; height: 200px;
+    bottom: 80px; left: 10%;
+    animation: float2 10s ease-in-out infinite;
+  }
+
+  /* Hero floating labels */
+  .hero-labels {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hlabel {
+    position: absolute;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.65);
+    animation: float2 8s ease-in-out infinite;
+  }
+
+  .hlabel:nth-child(1) { top: 22%; right: 8%; animation-delay: 0s; }
+  .hlabel:nth-child(2) { top: 38%; right: 14%; animation-delay: 1.2s; font-size: 0.63rem; opacity: 0.7; }
+  .hlabel:nth-child(3) { top: 54%; right: 6%; animation-delay: 2.4s; opacity: 0.55; }
+  .hlabel:nth-child(4) { top: 68%; right: 18%; animation-delay: 0.8s; font-size: 0.6rem; opacity: 0.45; }
+
+  @keyframes float1 {
+    0%,100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-30px) scale(1.03); }
+  }
+  @keyframes float2 {
+    0%,100% { transform: translateY(0) translateX(0); }
+    50%      { transform: translateY(-15px) translateX(10px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    width: 100%;
+  }
+
+  .hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal-pale);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-kicker::before {
+    content: '';
+    width: 24px; height: 2px;
+    background: var(--orange);
+    display: inline-block;
+  }
+
+  .hero-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+    color: var(--white);
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--teal-pale);
+    position: relative;
+  }
+
+  .hero-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 580px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.6s forwards;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.8s forwards;
+  }
+
+  .meta-badge {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .meta-badge svg { opacity: 0.6; }
+
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+  }
+
+  .scroll-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    animation: scrollBounce 1.5s ease-in-out infinite;
+  }
+  .scroll-dot:nth-child(2) { animation-delay: 0.2s; opacity: 0.3; }
+  .scroll-dot:nth-child(3) { animation-delay: 0.4s; opacity: 0.15; }
+
+  @keyframes scrollBounce {
+    0%,100% { transform: translateY(0); opacity: 0.5; }
+    50%      { transform: translateY(6px); opacity: 0.9; }
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(24px); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+    from { opacity: 0; }
+  }
+
+  /* ── ARTICLE WRAPPER ── */
+  .article-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+  }
+
+  @media (max-width: 700px) {
+    .article-wrapper { padding: 50px 20px 80px; }
+    .hero-content { padding: 0 20px 70px; }
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--teal-pale);
+    max-width: 60px;
+  }
+
+  /* ── BODY TEXT ── */
+  .body-text {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+  .body-text strong { color: var(--ink); font-weight: 600; }
+
+  mark {
+    background: linear-gradient(120deg, rgba(72,191,178,0.25) 0%, rgba(72,191,178,0.1) 100%);
+    color: inherit;
+    border-radius: 3px;
+    padding: 1px 4px;
+  }
+
+  /* ── DROP CAP ── */
+  .drop-cap::first-letter {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 3.8em;
+    line-height: 0.75;
+    float: left;
+    margin-right: 8px;
+    margin-top: 6px;
+    color: var(--teal-dark);
+  }
+
+  /* ── H2 TÍTULOS DE SEÇÃO ── */
+  .section-h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 48px 0;
+  }
+
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(30,110,110,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(30,110,110,0.12);
+  }
+
+  .stat-number {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--teal-dark);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .stat-desc {
+    font-family: 'Lora', serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 700px) { .stat-row { grid-template-columns: 1fr; gap: 14px; } }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    margin: 56px 0;
+    padding: 40px 48px;
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-mid) 100%);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pull-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 24px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.07);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .pull-quote p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--white);
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pull-quote p strong { color: var(--teal-pale); font-style: normal; }
+
+  @media (max-width: 700px) { .pull-quote { padding: 28px 28px; } .pull-quote p { font-size: 1.1rem; } }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    margin: 40px 0;
+    padding: 32px 36px;
+    background: var(--orange-soft);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .highlight-box p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #5a3200;
+    line-height: 1.75;
+  }
+
+  .highlight-box .highlight-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* ── LAW CALLOUT ── */
+  .law-callout {
+    margin: 48px 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background: var(--teal-bg);
+    border: 1px solid var(--teal-pale);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+  }
+
+  .law-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--teal-mid), var(--teal-light));
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .law-content h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--teal-dark);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .law-content p {
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .law-content p a {
+    color: var(--teal-mid);
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 700px) { .law-callout { flex-direction: column; gap: 16px; padding: 24px; } }
+
+  /* ── USE GRID ── */
+  .use-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 48px 0;
+  }
+
+  .use-card {
+    background: var(--white);
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .use-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(30,110,110,0.1);
+  }
+
+  .use-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal-mid), var(--teal-light));
+  }
+
+  .use-card .card-icon {
+    width: 44px; height: 44px;
+    background: var(--teal-bg);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .use-card h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .use-card p {
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 700px) { .use-grid { grid-template-columns: 1fr; } }
+
+  /* ── COMPARISON GRID ── */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 48px 0;
+  }
+
+  .comparison-card {
+    background: var(--white);
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 6px 28px rgba(30,110,110,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .comparison-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal-mid), var(--teal-light));
+  }
+
+  .comparison-card.orange-top::before {
+    background: linear-gradient(90deg, var(--orange), #f9b96a);
+  }
+
+  .comparison-card h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--teal-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .comparison-card.orange-top h3 { color: #7a3800; }
+
+  .comparison-card dl {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .comparison-card dt {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-bottom: 3px;
+  }
+
+  .comparison-card.orange-top dt { color: var(--orange); }
+
+  .comparison-card dd {
+    font-family: 'Lora', serif;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) { .comparison-grid { grid-template-columns: 1fr; } }
+
+  /* ── PROCESS STEPS ── */
+  .process-steps {
+    margin: 48px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    bottom: 24px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--teal-mid), var(--teal-pale));
+    z-index: 0;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .step:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 24px rgba(30,110,110,0.08);
+  }
+
+  .step-num {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--teal-mid), var(--teal-light));
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .step-body h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .step-body p {
+    font-family: 'Lora', serif;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ── ERROS COMUNS (cards laranja) ── */
+  .error-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 48px 0;
+  }
+
+  .error-card {
+    background: var(--orange-soft);
+    border: 1px solid rgba(244,137,42,0.2);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .error-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .error-card p {
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    color: #5a3200;
+    line-height: 1.65;
+  }
+
+  .error-card strong {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #7a3800;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 700px) { .error-grid { grid-template-columns: 1fr; } }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--teal-mid), var(--teal-pale));
+    border-radius: 2px;
+    margin: 48px 0;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    margin-top: 72px;
+    background: linear-gradient(145deg, var(--teal-dark), var(--teal-mid) 60%, var(--teal-light));
+    border-radius: var(--radius-lg);
+    padding: 56px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    top: -100px; right: -60px;
+  }
+  .cta-block::after {
+    content: '';
+    position: absolute;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    bottom: -80px; left: -40px;
+  }
+
+  .cta-block h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    position: relative; z-index: 1;
+  }
+
+  .cta-block p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto 36px;
+    position: relative; z-index: 1;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--teal-dark);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 16px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    position: relative; z-index: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  }
+  .cta-btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+  .cta-btn .arrow { display: inline-block; transition: transform 0.2s; }
+  .cta-btn:hover .arrow { transform: translateX(4px); }
+
+  @media (max-width: 700px) { .cta-block { padding: 40px 24px; } .cta-block h2 { font-size: 1.4rem; } }
+
+  /* ── REFERENCES ── */
+  .references {
+    margin: 48px 0 0;
+    padding: 32px 36px;
+    background: var(--white);
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+  }
+
+  .references h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-bottom: 16px;
+  }
+
+  .references ol { padding-left: 20px; }
+
+  .references li {
+    font-family: 'Lora', serif;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .references li a {
+    color: var(--teal-mid);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 40px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  footer a {
+    color: var(--teal-pale);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="hand-icon">🤟</span>
+    LIBRAS.SE
+  </a>
+  <span class="nav-tag">Blog · Acessibilidade</span>
+</nav>
+
+<section class="hero" aria-label="Cabeçalho do artigo">
+  <div class="hero-bg">
+    <picture>
+      <source srcset="../../assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.avif" type="image/avif">
+      <source srcset="../../assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.webp" type="image/webp">
+      <img src="../../assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.webp" alt="" aria-hidden="true" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-noise"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-circles">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="hero-labels" aria-hidden="true">
+    <span class="hlabel">LIBRAS</span>
+    <span class="hlabel">LSE</span>
+    <span class="hlabel">CC · Closed Caption</span>
+    <span class="hlabel">[música suave]</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-kicker" aria-label="Categoria do artigo">Acessibilidade audiovisual</div>
+    <h1 class="hero-title">
+      Libras ou legendas?<br>
+      <em>quando usar cada recurso</em>
+    </h1>
+    <p class="hero-subtitle">
+      Nem toda acessibilidade para pessoas surdas acontece do mesmo jeito. Entender a diferença entre Libras, legenda comum e LSE evita escolhas incompletas.
+    </p>
+    <div class="hero-meta">
+      <span class="meta-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        20 de maio de 2026
+      </span>
+      <span class="meta-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        7 min de leitura
+      </span>
+      <span class="meta-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        LIBRAS.SE
+      </span>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span class="scroll-dot"></span>
+    <span class="scroll-dot"></span>
+    <span class="scroll-dot"></span>
+  </div>
+</section>
+
+<main class="article-wrapper" id="article">
+
+  <!-- STAT ROW -->
+  <div class="stat-row reveal">
+    <div class="stat-card">
+      <span class="stat-number" id="stat1">14,4M</span>
+      <span class="stat-desc">pessoas com deficiência no Brasil, segundo o Censo 2022</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" id="stat2">3</span>
+      <span class="stat-desc">caminhos principais: Libras, legenda comum e LSE</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" id="stat3">2</span>
+      <span class="stat-desc">recursos que se complementam — Libras e legenda não competem</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <p class="section-label reveal">A pergunta parece simples, mas não é</p>
+
+  <p class="body-text drop-cap reveal">Muita gente ainda trata Libras e legendas como se fossem duas formas diferentes de entregar exatamente a mesma coisa. Na prática, não é assim. <strong>Libras é uma língua visual, com estrutura própria.</strong> Legenda é um recurso textual, baseado na língua portuguesa escrita. As duas soluções podem aparecer no mesmo vídeo, mas não atendem às mesmas pessoas nem resolvem os mesmos problemas.</p>
+
+  <p class="body-text reveal">A pergunta certa, portanto, não é "qual é melhor?". É: <mark>para quem, em qual contexto e com qual objetivo?</mark> A resposta muda dependendo do público, do canal, do formato e da finalidade do conteúdo.</p>
+
+  <!-- LAW CALLOUT 1 -->
+  <div class="law-callout reveal">
+    <div class="law-icon">⚖️</div>
+    <div class="law-content">
+      <h4>Lei nº 10.436/2002 — Libras é língua reconhecida</h4>
+      <p>A Lei de Libras reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. O Decreto nº 5.626/2005 reforça: pessoa surda é aquela que compreende e interage com o mundo por <strong>experiências visuais</strong>, manifestando sua cultura principalmente por meio de Libras. Isso significa que Libras não é adaptação do português — é uma língua independente. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
+    </div>
+  </div>
+
+  <!-- O QUE A LIBRAS ENTREGA -->
+  <p class="section-label reveal">O que a Libras entrega</p>
+
+  <h2 class="section-h2 reveal">Libras é língua, não gesto do português</h2>
+
+  <p class="body-text reveal">Quando uma pessoa surda tem a Libras como primeira língua, a <strong>janela de Libras</strong> pode ser o caminho mais natural para compreender uma explicação, uma aula, uma palestra ou uma campanha. A informação chega por uma língua visual, com expressões faciais, movimento, ritmo, espaço e gramática próprios.</p>
+
+  <p class="body-text reveal">Reduzir Libras a "gestos do português" é um erro técnico e cultural. Libras tem estrutura, sintaxe e nuances que não existem em outras línguas. Por isso, a janela de Libras é essencial para pessoas surdas sinalizantes — e muito relevante em qualquer conteúdo que precise alcançar esse público.</p>
+
+  <div class="use-grid reveal">
+    <div class="use-card">
+      <div class="card-icon">🎓</div>
+      <h3>Vídeos educacionais e aulas</h3>
+      <p>Cursos, treinamentos e videoaulas ganham muito com janela de Libras. O aprendizado por língua visual é mais eficiente para pessoas sinalizantes do que acompanhar texto sincronizado.</p>
+    </div>
+    <div class="use-card">
+      <div class="card-icon">🏛️</div>
+      <h3>Campanhas e conteúdos institucionais</h3>
+      <p>Vídeos de interesse público, comunicados de órgãos governamentais e campanhas de saúde têm maior alcance quando oferecem interpretação em Libras.</p>
+    </div>
+    <div class="use-card">
+      <div class="card-icon">📡</div>
+      <h3>Eventos ao vivo e transmissões</h3>
+      <p>Conferências, cerimônias e lives precisam de intérprete visível tanto para o público presencial quanto para quem assiste online.</p>
+    </div>
+    <div class="use-card">
+      <div class="card-icon">🤝</div>
+      <h3>Conteúdos para a comunidade surda</h3>
+      <p>Qualquer material voltado diretamente para pessoas surdas sinalizantes — informativos, orientações, comunicações internas — deve priorizar Libras como canal principal.</p>
+    </div>
+  </div>
+
+  <!-- O QUE A LEGENDA ENTREGA -->
+  <div class="divider reveal"></div>
+
+  <p class="section-label reveal">O que a legenda entrega</p>
+
+  <h2 class="section-h2 reveal">Legenda comum e LSE não são a mesma coisa</h2>
+
+  <p class="body-text reveal">A <strong>legenda comum</strong> transforma a fala em texto sincronizado. É útil para pessoas surdas oralizadas, pessoas ensurdecidas, quem assiste sem som, quem acompanha termos técnicos e até quem está em ambiente barulhento. Mas a legenda comum geralmente registra apenas as falas.</p>
+
+  <p class="body-text reveal">Para acessibilidade plena de pessoas surdas e ensurdecidas, o recurso adequado é a <strong>LSE — Legenda para Surdos e Ensurdecidos</strong>. A LSE vai além do diálogo: ela indica quem está falando quando isso não é visualmente óbvio e registra sons importantes para a compreensão da cena.</p>
+
+  <div class="highlight-box reveal">
+    <span class="highlight-label">Como a LSE funciona na prática</span>
+    <p>Em uma entrevista, saber quem fala evita confusão. Em um vídeo institucional, a música pode indicar tom emocional. Em uma aula, um alarme pode orientar uma ação. Por isso, a LSE inclui marcações como <strong>[música suave]</strong>, <strong>[aplausos]</strong>, <strong>[alarme]</strong>, <strong>[Joana fala]</strong> ou <strong>[risos]</strong> — elementos que a legenda comum simplesmente omite.</p>
+  </div>
+
+  <!-- LAW CALLOUT 2 - LBI -->
+  <div class="law-callout reveal">
+    <div class="law-icon">📋</div>
+    <div class="law-content">
+      <h4>Lei Brasileira de Inclusão (Lei nº 13.146/2015)</h4>
+      <p>A LBI define comunicação de forma ampla, incluindo Libras, visualização de textos, Braille, linguagem simples, dispositivos multimídia e tecnologias da informação e comunicação. Isso sustenta diretamente a ideia de que <strong>acessibilidade não é um recurso único</strong> — diferentes pessoas precisam de caminhos diferentes para acessar o mesmo conteúdo. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
+    </div>
+  </div>
+
+  <!-- COMPARATIVO -->
+  <div class="divider reveal"></div>
+
+  <p class="section-label reveal">Quadro comparativo</p>
+
+  <h2 class="section-h2 reveal">Libras, legenda comum e LSE lado a lado</h2>
+
+  <div class="comparison-grid reveal">
+    <div class="comparison-card">
+      <h3>🤟 Libras</h3>
+      <dl>
+        <div>
+          <dt>Melhor para</dt>
+          <dd>Pessoas surdas sinalizantes com Libras como primeira língua</dd>
+        </div>
+        <div>
+          <dt>Cobre</dt>
+          <dd>Toda a informação falada, em língua visual com gramática própria</dd>
+        </div>
+        <div>
+          <dt>Não cobre</dt>
+          <dd>Quem usa o texto como canal principal de leitura</dd>
+        </div>
+        <div>
+          <dt>Quando usar</dt>
+          <dd>Vídeos institucionais, aulas, eventos, campanhas de alto alcance</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="comparison-card">
+      <h3>💬 Legenda comum</h3>
+      <dl>
+        <div>
+          <dt>Melhor para</dt>
+          <dd>Pessoas em ambientes sem som, aprendizes de português, usuários ouvintes</dd>
+        </div>
+        <div>
+          <dt>Cobre</dt>
+          <dd>As falas do conteúdo, sincronizadas com o áudio</dd>
+        </div>
+        <div>
+          <dt>Não cobre</dt>
+          <dd>Sons relevantes, identificação de falantes, elementos sonoros não-verbais</dd>
+        </div>
+        <div>
+          <dt>Quando usar</dt>
+          <dd>Redes sociais, conteúdos de autoconsumo, plataformas de streaming</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="comparison-card orange-top">
+      <h3>📝 LSE</h3>
+      <dl>
+        <div>
+          <dt>Melhor para</dt>
+          <dd>Pessoas surdas oralizadas e ensurdecidas que usam o texto como canal</dd>
+        </div>
+        <div>
+          <dt>Cobre</dt>
+          <dd>Falas, identificação de falantes e sons relevantes para a compreensão</dd>
+        </div>
+        <div>
+          <dt>Não cobre</dt>
+          <dd>Pessoas que acessam melhor por língua visual do que por texto escrito</dd>
+        </div>
+        <div>
+          <dt>Quando usar</dt>
+          <dd>Filmes, entrevistas, webinars, vídeos com múltiplas vozes e sons</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- QUANDO USAR OS DOIS -->
+  <div class="divider reveal"></div>
+
+  <p class="section-label reveal">O ponto central</p>
+
+  <h2 class="section-h2 reveal">Quando usar os dois</h2>
+
+  <p class="body-text reveal">Em muitos projetos, a escolha mais responsável não é "Libras <em>ou</em> legenda", mas <strong>Libras <em>e</em> legenda</strong>. A Libras amplia o acesso para pessoas sinalizantes. A legenda amplia o acesso para quem usa o texto. Juntas, elas reduzem barreiras para públicos diferentes.</p>
+
+  <p class="body-text reveal">Vídeos de alto alcance, cursos, campanhas públicas, eventos e materiais institucionais se beneficiam dos dois recursos ao mesmo tempo. A WCAG 2.2 trata legendas e interpretação em língua de sinais como critérios distintos — não como substitutos.</p>
+
+  <blockquote class="pull-quote reveal">
+    <p>Acessibilidade boa não força a pessoa a caber no recurso. <strong>Ela oferece caminhos diferentes</strong> para que cada pessoa acesse o conteúdo com autonomia.</p>
+  </blockquote>
+
+  <!-- ERROS COMUNS -->
+  <p class="section-label reveal">Erros frequentes</p>
+
+  <h2 class="section-h2 reveal">O que evitar na hora de decidir</h2>
+
+  <p class="body-text reveal">Mesmo com boa intenção, alguns equívocos aparecem repetidamente em projetos de acessibilidade audiovisual. Conhecê-los ajuda a não repeti-los.</p>
+
+  <div class="error-grid reveal">
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"Já tem legenda, então não precisa de Libras."</strong> Legenda e Libras atendem públicos diferentes. Uma não substitui a outra.</p>
+    </div>
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"A legenda automática resolve."</strong> Erros de reconhecimento de fala, nomes trocados e ausência de marcação sonora comprometem o entendimento. Não é entrega final.</p>
+    </div>
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"A janela de Libras pode ficar pequena."</strong> Uma janela pequena demais, mal posicionada ou sem contraste vira recurso simbólico — sem utilidade real para quem precisa.</p>
+    </div>
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"É só colocar o intérprete em qualquer canto."</strong> O posicionamento, o enquadramento e a visibilidade do intérprete fazem parte da acessibilidade. Não é detalhe.</p>
+    </div>
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"Todo surdo prefere a mesma solução."</strong> A comunidade surda é diversa. Surdos sinalizantes, oralizados e ensurdecidos têm necessidades distintas de comunicação.</p>
+    </div>
+    <div class="error-card">
+      <span class="error-icon">❌</span>
+      <p><strong>"Acessibilidade é opcional."</strong> Legislações como a LBI e normas técnicas como a ABNT NBR 15290 estabelecem obrigações. Planejar é mais barato do que corrigir depois.</p>
+    </div>
+  </div>
+
+  <!-- CHECKLIST DE DECISÃO -->
+  <div class="divider reveal"></div>
+
+  <p class="section-label reveal">Checklist prático</p>
+
+  <h2 class="section-h2 reveal">Cinco perguntas antes de decidir</h2>
+
+  <p class="body-text reveal">Antes de escolher o recurso, responda estas perguntas. Elas orientam a decisão sem complicar o processo.</p>
+
+  <div class="process-steps reveal">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <h4>Quem é o público?</h4>
+        <p>O conteúdo será visto por pessoas surdas sinalizantes, por pessoas que usam texto como canal principal ou por um público misto? Cada perfil aponta para um recurso diferente.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <h4>O conteúdo é ao vivo ou gravado?</h4>
+        <p>Em eventos ao vivo, o intérprete de Libras precisa estar visível em tempo real. Para conteúdo gravado, a janela pode ser incorporada na edição. Legendas ao vivo exigem infraestrutura específica.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <h4>Há informação sonora importante além da fala?</h4>
+        <p>Se o áudio carrega música, ruídos, alertas ou elementos que alteram o sentido, a LSE é necessária — não a legenda comum. Esses sons precisam ser descritos no texto.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-body">
+        <h4>O conteúdo tem finalidade pública, educacional, legal ou institucional?</h4>
+        <p>Quanto maior o alcance e a responsabilidade do conteúdo, maior a necessidade de combinar recursos. Campanhas de saúde, comunicações oficiais e conteúdos educativos devem usar Libras e LSE juntos sempre que possível.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">05</div>
+      <div class="step-body">
+        <h4>O recurso escolhido será visível, sincronizado e confortável?</h4>
+        <p>Acessibilidade que existe apenas no papel não é acessibilidade. A janela de Libras precisa ter tamanho adequado, posição visível e boa iluminação. A legenda precisa ser legível e sincronizada com o áudio.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FECHAMENTO -->
+  <div class="divider reveal"></div>
+
+  <p class="section-label reveal">Fechamento</p>
+
+  <p class="body-text reveal">Libras e legendas não competem. Elas se complementam. Quando a acessibilidade é bem planejada, cada pessoa encontra um caminho possível para acompanhar, compreender e participar. A decisão técnica deve começar no planejamento — não ser adicionada no fim da produção.</p>
+
+  <p class="body-text reveal">Quanto mais cedo o recurso for pensado, melhor o resultado: mais integrado, mais eficiente e mais honesto com as pessoas que precisam dele.</p>
+
+  <!-- CTA -->
+  <div class="cta-block reveal">
+    <h2>Precisa decidir o melhor<br>formato acessível?</h2>
+    <p>A LIBRAS.SE ajuda empresas, instituições e produtores de conteúdo a escolher e executar Libras, legendas e formatos acessíveis para vídeos, eventos e treinamentos.</p>
+    <a href="https://www.libras.se" class="cta-btn" target="_blank" rel="noopener">
+      Fale com a LIBRAS.SE <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <div class="references reveal">
+    <h4>Referências</h4>
+    <ol>
+      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais – Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
+      <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei de Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Decreto/D5626.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
+      <li>BRASIL. <em>Lei nº 13.146, de 6 de julho de 2015.</em> Lei Brasileira de Inclusão da Pessoa com Deficiência. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
+      <li>W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2.</em> Disponível em: <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">w3.org</a></li>
+      <li>IBGE. <em>Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
+      <li>IBGE. <em>PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-algum-tipo-de-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
+      <li>ABNT NBR 15290. <em>Acessibilidade em comunicação na televisão</em> — escopo de consulta pública. Disponível em: <a href="https://www.normas.com.br/visualizar/abnt-nbr-nm/24743/abnt-nbr15290-acessibilidade-em-comunicacao-na-televisao" target="_blank" rel="noopener">normas.com.br</a></li>
+    </ol>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 <a href="https://libras.se">LIBRAS.SE</a> · Vídeos para todos · Florianópolis, Santa Catarina, Brasil</p>
+  <p style="margin-top: 8px; font-size: 0.72rem;">CNPJ 22.943.329/0001-91</p>
+</footer>
+
+<script>
+  // ── Progress bar ──
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  });
+
+  // ── Scroll reveal ──
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach((el, i) => {
+    el.style.transitionDelay = (i % 3 * 0.08) + 's';
+    io.observe(el);
+  });
+
+  // ── Stat counters ──
+  function animateCounter(el, target, suffix = '') {
+    const duration = 1200;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val = target * ease;
+      el.textContent = (Number.isInteger(target) ? Math.floor(val) : val.toFixed(1)) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(document.getElementById('stat2'), 3);
+        animateCounter(document.getElementById('stat3'), 2);
+        statObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const statRow = document.querySelector('.stat-row');
+  if (statRow) statObserver.observe(statRow);
+</script>
+</body>
+</html>

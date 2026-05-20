@@ -115,7 +115,7 @@ Cole este bloco logo após `<body>`, antes do `<main>`:
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="https://blog.libras.se/" onclick="cm()">Blog</a>
+  <a href="https://libras.se/blog" onclick="cm()">Blog</a>
   <a href="/jogo/" onclick="cm()">Jogo</a>
   <a href="/sinal/" onclick="cm()">Vocabulário</a>
   <a href="/glossario/" onclick="cm()">Glossário</a>
@@ -133,7 +133,7 @@ Cole este bloco logo após `<body>`, antes do `<main>`:
         <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
         <li><a href="https://libras.se/solucoes">Soluções</a></li>
         <li><a href="https://libras.se/portfolio">Portfólio</a></li>
-        <li><a href="https://blog.libras.se/">Blog</a></li>
+        <li><a href="https://libras.se/blog">Blog</a></li>
       </ul>
       <a href="https://huet.libras.se/" class="btn bp nd" style="font-size:.8rem;padding:10px 20px">Enviar seu vídeo</a>
       <button class="ham" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobm">
@@ -214,13 +214,13 @@ Cole este bloco após `</main>`, antes de `</body>`:
           <li><a href="https://libras.se/tecnologia">Nossa Tecnologia</a></li>
           <li><a href="/sejatils/">Seja TILs no Libras.se</a></li>
           <li><a href="https://libras.se/politica">Nossa Política</a></li>
-          <li><a href="https://blog.libras.se/">Blog</a></li>
+          <li><a href="https://libras.se/blog">Blog</a></li>
         </ul>
       </div>
       <div class="ft-col">
         <h4>Explorar</h4>
         <ul>
-          <li><a href="https://blog.libras.se/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><a href="https://libras.se/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
           <li><a href="/jogo/">Jogo de Libras</a></li>
           <li><a href="/sinal/">Vocabulário</a></li>
           <li><a href="/glossario/">Glossário</a></li>
@@ -327,7 +327,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 | Soluções         | `/solucoes/index.html`        |
 | Tecnologia       | `/tecnologia/index.html`      |
 | Propósito        | `/proposito/index.html`       |
-| Blog             | `https://blog.libras.se/`     |
+| Blog             | `https://libras.se/blog`     |
 | Plataforma Huet  | `https://huet.libras.se/`     |
 
 ## Contatos e links institucionais

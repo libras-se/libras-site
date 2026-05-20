@@ -29,10 +29,11 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//wa.me">
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -50,18 +51,10 @@
         "@id": "https://libras.se/#organization",
         "name": "Libras.se",
         "url": "https://libras.se",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://libras.se/wp-content/uploads/2026/03/favicon.png"
-        },
+        "logo": {"@type": "ImageObject","url": "https://libras.se/wp-content/uploads/2026/03/favicon.png"},
         "telephone": "+55-48-99636-7511",
         "email": "contato@libras.se",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Florianópolis",
-          "addressRegion": "SC",
-          "addressCountry": "BR"
-        }
+        "address": {"@type": "PostalAddress","addressLocality": "Florianópolis","addressRegion": "SC","addressCountry": "BR"}
       }
     },
     {
@@ -75,30 +68,9 @@
       "@type": "ItemList",
       "name": "Artigos do Blog Libras.se",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "BlogPosting",
-            "headline": "Você sabe o que é datilologia?",
-            "description": "Do abecedário da Xuxa às palavras que nascem dos sinais soletrados — entenda o que é datilologia e seu papel na Língua Brasileira de Sinais.",
-            "url": "https://libras.se/blog/voce-sabe-o-que-e-datilologia/",
-            "datePublished": "2025-07-15",
-            "author": {"@type": "Organization","name": "Libras.se"}
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "BlogPosting",
-            "headline": "Acessibilidade em eventos: como garantir interpretação em Libras sem improviso",
-            "description": "Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais.",
-            "url": "https://libras.se/blog/garantir-libras-sem-improviso/",
-            "datePublished": "2025-07-15",
-            "author": {"@type": "Organization","name": "Libras.se"}
-          }
-        }
+        {"@type": "ListItem","position": 1,"item": {"@type": "BlogPosting","headline": "Libras ou legendas? Quando usar cada recurso de acessibilidade","description": "Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas e conteúdos digitais.","url": "https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/","datePublished": "2026-05-20","author": {"@type": "Organization","name": "Libras.se"}}},
+        {"@type": "ListItem","position": 2,"item": {"@type": "BlogPosting","headline": "Você sabe o que é datilologia?","description": "Do abecedário da Xuxa às palavras que nascem dos sinais soletrados — entenda o que é datilologia e seu papel na Língua Brasileira de Sinais.","url": "https://libras.se/blog/voce-sabe-o-que-e-datilologia/","datePublished": "2025-07-15","author": {"@type": "Organization","name": "Libras.se"}}},
+        {"@type": "ListItem","position": 3,"item": {"@type": "BlogPosting","headline": "Acessibilidade em eventos: como garantir interpretação em Libras sem improviso","description": "Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais.","url": "https://libras.se/blog/garantir-libras-sem-improviso/","datePublished": "2025-07-15","author": {"@type": "Organization","name": "Libras.se"}}}
       ]
     }
   ]
@@ -131,7 +103,6 @@
   --blur:blur(22px);--blur-l:blur(40px);
   --tr:.3s cubic-bezier(.4,0,.2,1);
   --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
-  /* blog sub-system */
   --bk:#0f2a2a;--bk-s:#2d4f4f;
   --brad:20px;--bsh:0 2px 16px rgba(30,110,110,.09),0 1px 4px rgba(30,110,110,.05);
   --bsh-h:0 8px 32px rgba(30,110,110,.16),0 2px 8px rgba(30,110,110,.08);
@@ -139,11 +110,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Bricolage Grotesque',system-ui,sans-serif;
-  background:var(--bg);color:var(--txt);
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
+body{font-family:'Bricolage Grotesque',system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;width:100%;height:100%;object-fit:cover}
 
@@ -208,178 +175,206 @@ main{padding-top:80px}
 /* ── BLOG HERO ── */
 .bl-hero{
   background:linear-gradient(155deg,#0d3d3d 0%,#1e6e6e 40%,#2a9090 70%,#48bfb2 100%);
-  padding:80px 0 64px;position:relative;overflow:hidden;
+  padding:80px 0 72px;position:relative;overflow:hidden;
 }
 .bl-hero::before{
   content:'';position:absolute;inset:0;
   background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-.bl-hero__inner{position:relative;text-align:center;max-width:660px;margin:0 auto}
-.bl-hero__kicker{
-  display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--txl);margin-bottom:18px;
-  padding:5px 16px;border:1px solid rgba(178,245,234,.3);border-radius:var(--rpill);
+.bl-hero__inner{position:relative;text-align:center;max-width:680px;margin:0 auto}
+
+/* brand identity */
+.bl-hero__brand{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:32px}
+.bl-hero__brand-img{
+  width:68px;height:68px;border-radius:18px;overflow:hidden;flex-shrink:0;
+  box-shadow:0 8px 32px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.1);
 }
-.bl-hero__title{
-  font-size:clamp(2rem,4.5vw,3rem);font-weight:800;color:#fff;
-  letter-spacing:-.03em;line-height:1.15;margin-bottom:16px;
+.bl-hero__brand-img picture,.bl-hero__brand-img img{width:100%;height:100%;object-fit:cover;display:block}
+.bl-hero__brand-text{text-align:left}
+.bl-hero__brand-name{
+  font-family:'M',sans-serif;font-weight:1000;font-size:2.4rem;
+  background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:-.03em;line-height:1;display:block;
 }
-.bl-hero__title em{font-style:normal;color:var(--txl)}
-.bl-hero__desc{
-  font-family:'Lora',serif;font-style:italic;font-size:1.05rem;
-  color:rgba(255,255,255,.78);line-height:1.65;margin-bottom:32px;
+.bl-hero__brand-sub{
+  font-family:'M',sans-serif;font-weight:300;font-size:1.05rem;
+  color:rgba(255,255,255,.52);letter-spacing:.05em;display:block;margin-top:5px;
 }
+
+/* search */
+.bl-search{position:relative;max-width:580px;margin:0 auto 36px}
+.bl-search__input{
+  width:100%;padding:17px 60px 17px 22px;
+  font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:.95rem;font-weight:400;
+  border:1.5px solid rgba(255,255,255,.18);border-radius:var(--rpill);
+  background:rgba(255,255,255,.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  color:#fff;outline:none;transition:all .3s;
+  box-shadow:0 4px 28px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.bl-search__input::placeholder{color:rgba(255,255,255,.42)}
+.bl-search__input:focus{background:rgba(255,255,255,.17);border-color:rgba(255,255,255,.36);box-shadow:0 8px 40px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.1)}
+.bl-search__btn{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.15);border:none;border-radius:var(--rpill);
+  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s;color:rgba(255,255,255,.75);
+}
+.bl-search__btn:hover{background:rgba(255,255,255,.26)}
+.bl-search__btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* stats */
 .bl-hero__stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
 .bl-hero__stat strong{display:block;font-size:1.5rem;font-weight:800;color:#fff}
 .bl-hero__stat span{font-size:.72rem;color:var(--txl);letter-spacing:.06em;text-transform:uppercase}
 
 /* ── SECTION HEADER ── */
-.bl-sec-head{
-  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
-  margin-bottom:28px;padding-bottom:14px;border-bottom:2px solid rgba(79,209,197,.12);
-}
+.bl-sec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid rgba(79,209,197,.12)}
 .bl-sec-head__title{font-size:1.15rem;font-weight:800;color:var(--bk);letter-spacing:-.02em}
 .bl-sec-head__title em{font-style:normal;color:#1e6e6e}
 .bl-sec-head__link{font-size:.78rem;font-weight:600;color:#2a9090;transition:color .2s}
 .bl-sec-head__link:hover{color:#1e6e6e}
 
+/* ── THEME PILLS ── */
+.bl-theme-bar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:28px}
+.bl-theme-pill{
+  font-family:'M',sans-serif;font-size:.73rem;font-weight:700;
+  padding:7px 17px;border-radius:var(--rpill);
+  border:1.5px solid rgba(79,209,197,.22);background:rgba(255,255,255,.7);color:var(--txs);
+  cursor:pointer;transition:all .22s;
+}
+.bl-theme-pill:hover{background:rgba(79,209,197,.1);border-color:rgba(79,209,197,.4);color:var(--p1)}
+.bl-theme-pill.active{background:var(--p1);color:#fff;border-color:var(--p1);box-shadow:0 4px 16px rgba(14,53,56,.2)}
+
+/* no results */
+.bl-no-results{text-align:center;padding:48px 24px;color:var(--txm);font-size:.9rem;display:none}
+.bl-no-results.show{display:block}
+
 /* ── FEATURED SECTION ── */
 .bl-featured{padding:64px 0 52px;background:var(--bg)}
 .bl-featured__grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.bl-featured__side{display:flex;flex-direction:column;gap:24px}
 @media(max-width:900px){.bl-featured__grid{grid-template-columns:1fr}}
 
 /* ── BLOG CARD ── */
-.bl-card{
-  background:#fff;border-radius:var(--brad);overflow:hidden;
-  box-shadow:var(--bsh);transition:box-shadow .28s ease,transform .28s ease;
-  height:100%;display:flex;flex-direction:column;
-}
+.bl-card{background:#fff;border-radius:var(--brad);overflow:hidden;box-shadow:var(--bsh);transition:box-shadow .28s ease,transform .28s ease;height:100%;display:flex;flex-direction:column}
 .bl-card:hover{box-shadow:var(--bsh-h);transform:translateY(-3px)}
-.bl-card__thumb{
-  display:block;position:relative;overflow:hidden;
-  background:rgba(223,242,240,.5);
-}
+.bl-card__thumb{display:block;position:relative;overflow:hidden;background:rgba(223,242,240,.5)}
 .bl-card__thumb picture{display:block;width:100%;height:100%}
 .bl-card--lg .bl-card__thumb{aspect-ratio:16/9}
 .bl-card--sm .bl-card__thumb{aspect-ratio:3/2}
-.bl-card__ph{
-  display:flex;align-items:center;justify-content:center;
-  width:100%;height:100%;min-height:200px;
-  background:linear-gradient(135deg,#0e3538,#2a6069);
-  position:relative;overflow:hidden;
-}
-.bl-card__ph::before{
-  content:'';position:absolute;inset:0;opacity:.06;
-  background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-}
+.bl-card__ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:200px;background:linear-gradient(135deg,#0e3538,#2a6069);position:relative;overflow:hidden}
+.bl-card__ph::before{content:'';position:absolute;inset:0;opacity:.06;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")}
 .bl-card__ph-icon{font-size:3rem;filter:drop-shadow(0 4px 12px rgba(79,209,197,.4));position:relative;z-index:1}
-.bl-card__badge{
-  position:absolute;top:12px;left:12px;
-  font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  background:#1e6e6e;color:#fff;padding:4px 11px;border-radius:var(--rpill);
-}
+.bl-card__badge{position:absolute;top:12px;left:12px;font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#1e6e6e;color:#fff;padding:4px 11px;border-radius:var(--rpill)}
 .bl-card__body{padding:22px;display:flex;flex-direction:column;flex:1}
 .bl-card--lg .bl-card__body{padding:26px 28px}
-.bl-card__meta{
-  display:flex;align-items:center;gap:8px;
-  font-size:.72rem;color:var(--bk-s);opacity:.65;margin-bottom:10px;
-}
+.bl-card__meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--bk-s);opacity:.65;margin-bottom:10px}
 .bl-card__dot{width:3px;height:3px;border-radius:50%;background:currentColor}
-.bl-card__title{
-  font-size:1rem;font-weight:700;color:var(--bk);
-  line-height:1.35;margin-bottom:10px;letter-spacing:-.015em;
-}
+.bl-card__title{font-size:1rem;font-weight:700;color:var(--bk);line-height:1.35;margin-bottom:10px;letter-spacing:-.015em}
 .bl-card--lg .bl-card__title{font-size:1.28rem;margin-bottom:12px}
 .bl-card__title a:hover{color:#1e6e6e}
-.bl-card__excerpt{
-  font-family:'Lora',serif;font-size:.875rem;color:var(--bk-s);
-  line-height:1.65;flex:1;margin-bottom:18px;
-}
-.bl-card__read{
-  font-size:.78rem;font-weight:700;color:#1e6e6e;
-  transition:color .2s;align-self:flex-start;
-}
+.bl-card__excerpt{font-family:'Lora',serif;font-size:.875rem;color:var(--bk-s);line-height:1.65;flex:1;margin-bottom:18px}
+.bl-card__read{font-size:.78rem;font-weight:700;color:#1e6e6e;transition:color .2s;align-self:flex-start}
 .bl-card__read:hover{color:#2a9090}
 
-/* ── TOOLS SECTION ── */
-.bl-tools{padding:56px 0;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
-.bl-tools__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:820px){.bl-tools__grid{grid-template-columns:1fr 1fr}}
-@media(max-width:540px){.bl-tools__grid{grid-template-columns:1fr}}
-.bl-tool{
-  background:rgba(255,255,255,.82);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
-  border:1px solid rgba(255,255,255,.7);border-radius:var(--rxl);
-  box-shadow:var(--sh);padding:28px 24px;
-  display:flex;flex-direction:column;align-items:flex-start;
-  transition:box-shadow .28s ease,transform .28s ease;
+/* ── GAME BOX ── */
+.bl-gamebox{background:linear-gradient(135deg,#0e3538 0%,#154245 45%,#1a6060 100%);position:relative;overflow:hidden}
+.bl-gamebox__deco{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bl-gamebox__deco span{position:absolute;border-radius:50%;border:1px solid rgba(79,209,197,.08)}
+.bl-gamebox__deco span:nth-child(1){width:520px;height:520px;right:-120px;top:-160px}
+.bl-gamebox__deco span:nth-child(2){width:340px;height:340px;right:20px;top:-60px;border-color:rgba(79,209,197,.05)}
+.bl-gamebox__deco span:nth-child(3){width:180px;height:180px;right:120px;top:60px;border-color:rgba(79,209,197,.06)}
+.bl-gamebox__wrap{max-width:1160px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 360px;align-items:center;min-height:400px}
+.bl-gamebox__content{padding:72px 48px 72px 0;position:relative;z-index:2}
+.bl-gamebox__label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'M',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tl);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);
+  border-radius:var(--rpill);padding:5px 14px;margin-bottom:22px;
+}
+.bl-gamebox__title{
+  font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.9rem,3.5vw,2.9rem);
+  color:#fff;letter-spacing:-.03em;line-height:1.08;margin-bottom:14px;
+}
+.bl-gamebox__title em{font-style:normal;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bl-gamebox__desc{font-size:.93rem;color:rgba(255,255,255,.62);line-height:1.7;margin-bottom:30px;max-width:440px}
+.bl-gamebox__cta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'M',sans-serif;font-size:.88rem;font-weight:700;
+  color:var(--p1);background:var(--gb);padding:13px 28px;border-radius:var(--rpill);
+  transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(79,209,197,.28);
+}
+.bl-gamebox__cta:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(79,209,197,.42)}
+.bl-gamebox__visual{display:flex;align-items:center;justify-content:center;padding:56px 0;position:relative;z-index:2}
+.bl-gamebox__logo-wrap{
+  width:240px;height:240px;border-radius:40px;overflow:hidden;
+  box-shadow:0 24px 72px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.06);
+  transition:transform .3s;display:block;
+}
+.bl-gamebox__logo-wrap:hover{transform:scale(1.04) rotate(-1deg)}
+.bl-gamebox__logo-wrap picture,.bl-gamebox__logo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:900px){
+  .bl-gamebox__wrap{grid-template-columns:1fr;padding:0 22px}
+  .bl-gamebox__content{padding:56px 0 32px}
+  .bl-gamebox__visual{padding:0 0 52px;justify-content:flex-start}
+  .bl-gamebox__logo-wrap{width:180px;height:180px;border-radius:28px}
+}
+
+/* ── VOCAB BOX ── */
+.bl-vocabbox{
+  background:var(--bg2);border-top:1px solid rgba(79,209,197,.1);
   position:relative;overflow:hidden;
 }
-.bl-tool::before{
-  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
-  transform:skewX(-15deg);transition:left .6s ease;pointer-events:none;
+.bl-vocabbox::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 50%,rgba(79,209,197,.08) 0%,transparent 60%);
+  pointer-events:none;
 }
-.bl-tool:hover::before{left:140%}
-.bl-tool:hover{box-shadow:var(--shm);transform:translateY(-4px)}
-.bl-tool__icon{
-  width:52px;height:52px;border-radius:var(--rlg);margin-bottom:16px;
-  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
-  background:var(--gc);box-shadow:0 4px 16px rgba(10,34,37,.18);
-}
-.bl-tool__tag{
-  font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+.bl-vocabbox__wrap{max-width:1160px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;align-items:stretch}
+.bl-vocabbox__intro{padding:72px 48px 72px 0;border-right:1px solid rgba(79,209,197,.1);display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.bl-vocabbox__label{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'M',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
   color:var(--p3);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);
-  border-radius:var(--rpill);padding:3px 10px;margin-bottom:10px;
+  border-radius:var(--rpill);padding:5px 14px;margin-bottom:18px;align-self:flex-start;
 }
-.bl-tool__name{
-  font-size:1.08rem;font-weight:800;color:var(--bk);letter-spacing:-.02em;margin-bottom:7px;
+.bl-vocabbox__title{
+  font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.5rem,2.5vw,2.2rem);
+  color:var(--p1);letter-spacing:-.03em;line-height:1.15;margin-bottom:12px;
 }
-.bl-tool__desc{
-  font-family:'Lora',serif;font-size:.84rem;color:var(--bk-s);
-  line-height:1.6;flex:1;margin-bottom:18px;
+.bl-vocabbox__title em{font-style:normal;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bl-vocabbox__desc{font-size:.9rem;color:var(--txs);line-height:1.7}
+.bl-vocabbox__card{
+  padding:56px 40px;display:flex;flex-direction:column;justify-content:space-between;
+  border-left:1px solid rgba(79,209,197,.1);
+  transition:background .28s;position:relative;z-index:1;
 }
-.bl-tool__cta{
-  font-size:.78rem;font-weight:700;color:#1e6e6e;transition:color .2s;
+.bl-vocabbox__card:hover{background:rgba(79,209,197,.05)}
+.bl-vocabbox__card-icon{
+  width:56px;height:56px;border-radius:var(--rlg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:18px;
+  background:var(--gc);box-shadow:0 4px 20px rgba(10,34,37,.18);
 }
-.bl-tool__cta:hover{color:#2a9090}
-
-/* ── CATEGORIES ── */
-.bl-cats{padding:56px 0;background:var(--bg)}
-.bl-cats__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:820px){.bl-cats__grid{grid-template-columns:1fr 1fr}}
-@media(max-width:540px){.bl-cats__grid{grid-template-columns:1fr}}
-.bl-cat{
-  background:#fff;border-radius:var(--brad);padding:28px 24px;
-  border:1.5px solid rgba(79,209,197,.12);
-  transition:border-color .28s,box-shadow .28s,transform .28s;
+.bl-vocabbox__card-name{font-family:'M',sans-serif;font-weight:900;font-size:1.15rem;color:var(--p1);letter-spacing:-.02em;margin-bottom:8px}
+.bl-vocabbox__card-desc{font-size:.85rem;color:var(--txs);line-height:1.65;flex:1;margin-bottom:22px}
+.bl-vocabbox__card-link{font-family:'M',sans-serif;font-size:.8rem;font-weight:700;color:var(--teal-d);display:inline-flex;align-items:center;gap:7px;transition:color .2s,gap .2s}
+.bl-vocabbox__card-link:hover{color:var(--p1);gap:11px}
+@media(max-width:900px){
+  .bl-vocabbox__wrap{grid-template-columns:1fr;padding:0 22px}
+  .bl-vocabbox__intro{padding:52px 0 32px;border-right:none;border-bottom:1px solid rgba(79,209,197,.1)}
+  .bl-vocabbox__card{border-left:none;border-top:1px solid rgba(79,209,197,.08);padding:36px 0}
 }
-.bl-cat:hover{border-color:rgba(79,209,197,.35);box-shadow:0 4px 24px rgba(30,110,110,.10);transform:translateY(-2px)}
-.bl-cat__icon{font-size:2rem;margin-bottom:12px;display:block}
-.bl-cat__name{font-size:1.05rem;font-weight:800;color:var(--bk);margin-bottom:6px;letter-spacing:-.02em}
-.bl-cat__desc{font-family:'Lora',serif;font-size:.82rem;color:var(--bk-s);line-height:1.55;margin-bottom:14px}
-.bl-cat__count{font-size:.68rem;font-weight:700;color:#2a9090;letter-spacing:.07em;text-transform:uppercase}
 
 /* ── CTA SECTION ── */
-.bl-cta{
-  padding:72px 0;
-  background:linear-gradient(135deg,#0d3d3d 0%,#1e6e6e 60%,#2a9090 100%);
-  text-align:center;
-}
+.bl-cta{padding:72px 0;background:linear-gradient(135deg,#0d3d3d 0%,#1e6e6e 60%,#2a9090 100%);text-align:center}
 .bl-cta__kicker{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--txl);margin-bottom:12px}
 .bl-cta__title{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:10px}
 .bl-cta__desc{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,.72);font-size:.95rem;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
 .bl-cta__btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.bl-cta__btn-primary{
-  font-family:'M',sans-serif;font-size:.88rem;font-weight:700;
-  background:#fff;color:#1e6e6e;padding:13px 28px;border-radius:var(--rpill);
-  transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(0,0,0,.15);
-}
+.bl-cta__btn-primary{font-family:'M',sans-serif;font-size:.88rem;font-weight:700;background:#fff;color:#1e6e6e;padding:13px 28px;border-radius:var(--rpill);transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(0,0,0,.15)}
 .bl-cta__btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.2)}
-.bl-cta__btn-ghost{
-  font-family:'M',sans-serif;font-size:.88rem;font-weight:700;
-  background:transparent;color:#fff;padding:13px 28px;border-radius:var(--rpill);
-  border:1.5px solid rgba(255,255,255,.38);transition:border-color .2s;
-}
+.bl-cta__btn-ghost{font-family:'M',sans-serif;font-size:.88rem;font-weight:700;background:transparent;color:#fff;padding:13px 28px;border-radius:var(--rpill);border:1.5px solid rgba(255,255,255,.38);transition:border-color .2s}
 .bl-cta__btn-ghost:hover{border-color:rgba(255,255,255,.85)}
 
 /* ── CANONICAL FOOTER CSS ── */
@@ -457,16 +452,34 @@ main{padding-top:80px}
   <header class="bl-hero" role="banner">
     <div class="bl-container">
       <div class="bl-hero__inner">
-        <div class="bl-hero__kicker rv">Conteúdo &amp; Inclusão</div>
-        <h1 class="bl-hero__title rv d1">
-          Conhecimento sobre<br><em>Libras e Acessibilidade</em>
-        </h1>
-        <p class="bl-hero__desc rv d2">
-          Artigos educacionais, instrucionais e institucionais para quem quer entender, aprender e produzir conteúdo acessível em Língua Brasileira de Sinais.
-        </p>
-        <div class="bl-hero__stats rv d3">
+
+        <div class="bl-hero__brand rv">
+          <div class="bl-hero__brand-img">
+            <picture>
+              <source srcset="/assets/img/blog/blog-256.avif" type="image/avif">
+              <source srcset="/assets/img/blog/blog-128.webp" type="image/webp">
+              <img src="/assets/img/blog/blog.png" alt="Blog Libras.se" loading="eager" decoding="async" fetchpriority="high">
+            </picture>
+          </div>
+          <div class="bl-hero__brand-text">
+            <span class="bl-hero__brand-name">LIBRAS.SE</span>
+            <span class="bl-hero__brand-sub">conteúdos</span>
+          </div>
+        </div>
+
+        <div class="bl-search rv d1" role="search" aria-label="Buscar conteúdo">
+          <input type="search" id="bl-search-input" class="bl-search__input"
+            placeholder="Buscar artigos, sinais e recursos em Libras…"
+            aria-label="Buscar conteúdo do blog"
+            autocomplete="off" spellcheck="false">
+          <button class="bl-search__btn" type="button" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+
+        <div class="bl-hero__stats rv d2">
           <div class="bl-hero__stat">
-            <strong>2</strong>
+            <strong>3</strong>
             <span>Artigos</span>
           </div>
           <div class="bl-hero__stat">
@@ -478,148 +491,192 @@ main{padding-top:80px}
             <span>Surdos no Brasil</span>
           </div>
         </div>
+
       </div>
     </div>
   </header>
 
-  <!-- POSTS EM DESTAQUE -->
-  <section class="bl-featured" aria-labelledby="bl-featured-title">
+  <!-- POSTS -->
+  <section class="bl-featured" aria-labelledby="bl-featured-title" id="posts">
     <div class="bl-container">
+
       <div class="bl-sec-head rv">
-        <h2 class="bl-sec-head__title" id="bl-featured-title"><em>Artigos</em> em destaque</h2>
-        <span class="bl-sec-head__link">2 publicações</span>
+        <h2 class="bl-sec-head__title" id="bl-featured-title"><em>Artigos</em> publicados</h2>
+        <span id="bl-post-count" class="bl-sec-head__link">3 publicações</span>
       </div>
+
+      <div class="bl-theme-bar rv d1" role="group" aria-label="Filtrar por tema">
+        <button class="bl-theme-pill active" data-filter="todos" type="button">Todos</button>
+        <button class="bl-theme-pill" data-filter="língua" type="button">Língua &amp; Cultura</button>
+        <button class="bl-theme-pill" data-filter="acessibilidade" type="button">Acessibilidade</button>
+        <button class="bl-theme-pill" data-filter="instrucional" type="button">Instrucional</button>
+      </div>
+
       <div class="bl-featured__grid">
 
-        <!-- Post principal -->
-        <article class="bl-card bl-card--lg rv" itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" aria-label="Você sabe o que é datilologia?">
+        <!-- POST DESTAQUE: mais recente -->
+        <article class="bl-card bl-card--lg rv"
+          data-post
+          data-search="libras legendas quando usar recurso acessibilidade lse janela legenda surdo"
+          data-cat="acessibilidade instrucional"
+          itemscope itemtype="https://schema.org/BlogPosting">
+          <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bl-card__thumb" aria-label="Libras ou legendas? Quando usar cada recurso de acessibilidade">
             <picture>
-              <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.avif" type="image/avif">
-              <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.webp" type="image/webp">
-              <img src="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.png" alt="Mãos sinalizando em Libras" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
+              <source srcset="/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.avif" type="image/avif">
+              <source srcset="/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.webp" type="image/webp">
+              <img src="/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.png" alt="Libras ou legendas" loading="eager" decoding="async" fetchpriority="high" itemprop="image">
             </picture>
-            <span class="bl-card__badge">Língua &amp; Cultura</span>
+            <span class="bl-card__badge">Acessibilidade audiovisual</span>
           </a>
           <div class="bl-card__body">
             <div class="bl-card__meta">
-              <time datetime="2025-07-15" itemprop="datePublished">15 jul 2025</time>
+              <time datetime="2026-05-20" itemprop="datePublished">20 mai 2026</time>
               <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
+              <span>4 min de leitura</span>
             </div>
             <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/voce-sabe-o-que-e-datilologia/">Você sabe o que é datilologia?</a>
+              <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/">Libras ou legendas? Quando usar cada recurso de acessibilidade</a>
             </h3>
             <p class="bl-card__excerpt" itemprop="description">
-              Do abecedário da Xuxa às palavras que nascem dos sinais soletrados — entenda o que é datilologia e seu papel na Língua Brasileira de Sinais.
+              Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas, eventos e conteúdos digitais.
             </p>
-            <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__read" aria-label="Ler artigo: Você sabe o que é datilologia?">Ler artigo →</a>
+            <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bl-card__read" aria-label="Ler artigo: Libras ou legendas?">Ler artigo →</a>
           </div>
         </article>
 
-        <!-- Post secundário -->
-        <article class="bl-card bl-card--sm rv d1" itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__thumb" aria-label="Acessibilidade em eventos">
-            <picture>
-              <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.avif" type="image/avif">
-              <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.webp" type="image/webp">
-              <img src="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.png" alt="Intérprete de Libras em evento presencial" loading="lazy" decoding="async" itemprop="image">
-            </picture>
-            <span class="bl-card__badge">Acessibilidade</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta">
-              <time datetime="2025-07-15" itemprop="datePublished">15 jul 2025</time>
-              <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>2 min de leitura</span>
-            </div>
-            <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/garantir-libras-sem-improviso/">Acessibilidade em eventos: como garantir interpretação em Libras sem improviso</a>
-            </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais com interpretação de qualidade.
-            </p>
-            <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__read" aria-label="Ler artigo: Acessibilidade em eventos">Ler artigo →</a>
-          </div>
-        </article>
+        <!-- COLUNA LATERAL -->
+        <div class="bl-featured__side" id="bl-featured-side">
 
+          <article class="bl-card bl-card--sm rv d1"
+            data-post
+            data-search="datilologia abecedário língua brasileira sinais soletrar letras dedos mãos"
+            data-cat="língua cultura educacional"
+            itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" aria-label="Você sabe o que é datilologia?">
+              <picture>
+                <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.avif" type="image/avif">
+                <source srcset="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.webp" type="image/webp">
+                <img src="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia.png" alt="Mãos sinalizando em Libras" loading="lazy" decoding="async" itemprop="image">
+              </picture>
+              <span class="bl-card__badge">Língua &amp; Cultura</span>
+            </a>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <time datetime="2025-07-15" itemprop="datePublished">15 jul 2025</time>
+                <span class="bl-card__dot" aria-hidden="true"></span>
+                <span>3 min de leitura</span>
+              </div>
+              <h3 class="bl-card__title" itemprop="headline">
+                <a href="/blog/voce-sabe-o-que-e-datilologia/">Você sabe o que é datilologia?</a>
+              </h3>
+              <p class="bl-card__excerpt" itemprop="description">
+                Do abecedário da Xuxa às palavras que nascem dos sinais soletrados — entenda o que é datilologia e seu papel na Língua Brasileira de Sinais.
+              </p>
+              <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__read" aria-label="Ler artigo: Você sabe o que é datilologia?">Ler artigo →</a>
+            </div>
+          </article>
+
+          <article class="bl-card bl-card--sm rv d2"
+            data-post
+            data-search="acessibilidade eventos interpretação libras ao vivo palco telão inclusão presencial"
+            data-cat="acessibilidade instrucional"
+            itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__thumb" aria-label="Acessibilidade em eventos">
+              <picture>
+                <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.avif" type="image/avif">
+                <source srcset="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.webp" type="image/webp">
+                <img src="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso.png" alt="Intérprete de Libras em evento presencial" loading="lazy" decoding="async" itemprop="image">
+              </picture>
+              <span class="bl-card__badge">Acessibilidade</span>
+            </a>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <time datetime="2025-07-15" itemprop="datePublished">15 jul 2025</time>
+                <span class="bl-card__dot" aria-hidden="true"></span>
+                <span>2 min de leitura</span>
+              </div>
+              <h3 class="bl-card__title" itemprop="headline">
+                <a href="/blog/garantir-libras-sem-improviso/">Acessibilidade em eventos: como garantir interpretação em Libras sem improviso</a>
+              </h3>
+              <p class="bl-card__excerpt" itemprop="description">
+                Do palco ao telão, opções viáveis e planejadas para incluir a comunidade surda em encontros presenciais com interpretação de qualidade.
+              </p>
+              <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__read" aria-label="Ler artigo: Acessibilidade em eventos">Ler artigo →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <p class="bl-no-results" id="bl-no-results" role="alert" aria-live="polite">
+        Nenhum artigo encontrado. Tente outro termo ou categoria.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- GAME BOX -->
+  <section class="bl-gamebox" aria-labelledby="bl-game-title">
+    <div class="bl-gamebox__deco" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="bl-gamebox__wrap">
+      <div class="bl-gamebox__content rv">
+        <div class="bl-gamebox__label">Gratuito · Diário · Libras</div>
+        <h2 class="bl-gamebox__title" id="bl-game-title">
+          Joguinho<br>de <em>Libras</em>
+        </h2>
+        <p class="bl-gamebox__desc">
+          Descubra o sinal do dia, ganhe dicas sobre gramática e cultura surda, e construa um vocabulário real em Libras — um desafio novo a cada dia.
+        </p>
+        <a href="/jogo/" class="bl-gamebox__cta">
+          Jogar agora →
+        </a>
+      </div>
+      <div class="bl-gamebox__visual">
+        <a href="/jogo/" class="bl-gamebox__logo-wrap" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source srcset="/assets/img/blog/jogo-256.avif" type="image/avif">
+            <source srcset="/assets/img/blog/jogo-128.webp" type="image/webp">
+            <img src="/assets/img/blog/jogo.png" alt="Logo do Joguinho de Libras" loading="lazy" decoding="async">
+          </picture>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FERRAMENTAS INTERATIVAS -->
-  <section class="bl-tools" aria-labelledby="bl-tools-title">
-    <div class="bl-container">
-      <div class="bl-sec-head rv">
-        <h2 class="bl-sec-head__title" id="bl-tools-title">Ferramentas <em>interativas</em></h2>
-        <span class="bl-sec-head__link">Aprenda praticando</span>
+  <!-- VOCAB BOX -->
+  <section class="bl-vocabbox" aria-labelledby="bl-vocab-title">
+    <div class="bl-vocabbox__wrap">
+      <div class="bl-vocabbox__intro rv">
+        <div class="bl-vocabbox__label">Explore · Aprenda</div>
+        <h2 class="bl-vocabbox__title" id="bl-vocab-title">
+          Vocabulário<br>e <em>sinais</em>
+        </h2>
+        <p class="bl-vocabbox__desc">
+          Consulte sinais, aprenda termos técnicos e expanda seu vocabulário em Libras com conteúdo visual e bem fundamentado.
+        </p>
       </div>
-      <div class="bl-tools__grid">
-
-        <a href="/jogo/" class="bl-tool rv" aria-label="Joguinho em Libras — adivinhe o sinal do dia">
-          <div class="bl-tool__icon" aria-hidden="true">🎮</div>
-          <span class="bl-tool__tag">Gratuito · Diário</span>
-          <div class="bl-tool__name">Joguinho em Libras</div>
-          <p class="bl-tool__desc">
-            Descubra o sinal do dia, ganhe dicas sobre gramática e cultura surda, e construa um vocabulário real em Libras — um desafio por dia.
+      <a href="/sinal/" class="bl-vocabbox__card rv d1" aria-label="Ver vocabulário em Libras">
+        <div>
+          <div class="bl-vocabbox__card-icon" aria-hidden="true">📖</div>
+          <div class="bl-vocabbox__card-name">Vocabulário</div>
+          <p class="bl-vocabbox__card-desc">
+            Sinais por palavra com explicações sobre configuração de mão, ponto de articulação e exemplos em contexto real.
           </p>
-          <span class="bl-tool__cta">Jogar agora →</span>
-        </a>
-
-        <a href="/sinal/" class="bl-tool rv d1" aria-label="Vocabulário visual em Libras">
-          <div class="bl-tool__icon" aria-hidden="true">📖</div>
-          <span class="bl-tool__tag">Vocabulário · Visual</span>
-          <div class="bl-tool__name">Vocabulário em Libras</div>
-          <p class="bl-tool__desc">
-            Consulte sinais por palavra, com explicações sobre configuração de mão, ponto de articulação e exemplos de uso em contexto real.
-          </p>
-          <span class="bl-tool__cta">Ver sinais →</span>
-        </a>
-
-        <a href="/glossario/" class="bl-tool rv d2" aria-label="Glossário de termos de Libras e acessibilidade">
-          <div class="bl-tool__icon" aria-hidden="true">📚</div>
-          <span class="bl-tool__tag">Referência · +25 termos</span>
-          <div class="bl-tool__name">Glossário de Libras</div>
-          <p class="bl-tool__desc">
+        </div>
+        <span class="bl-vocabbox__card-link">Ver sinais →</span>
+      </a>
+      <a href="/glossario/" class="bl-vocabbox__card rv d2" aria-label="Ver glossário de Libras">
+        <div>
+          <div class="bl-vocabbox__card-icon" aria-hidden="true">📚</div>
+          <div class="bl-vocabbox__card-name">Glossário</div>
+          <p class="bl-vocabbox__card-desc">
             Mais de 25 termos da área — datilologia, TILs, LBI, glosa, configuração de mão — com definições claras e fontes verificadas.
           </p>
-          <span class="bl-tool__cta">Consultar →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CATEGORIAS EDITORIAIS -->
-  <section class="bl-cats" aria-labelledby="bl-cats-title">
-    <div class="bl-container">
-      <div class="bl-sec-head rv">
-        <h2 class="bl-sec-head__title" id="bl-cats-title">Navegar por <em>tema</em></h2>
-      </div>
-      <div class="bl-cats__grid">
-
-        <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-cat rv" aria-label="Ver artigo Educacional: Você sabe o que é datilologia?">
-          <span class="bl-cat__icon" aria-hidden="true">📚</span>
-          <div class="bl-cat__name">Educacional</div>
-          <p class="bl-cat__desc">Aprenda sobre Libras, gramática, história e cultura surda com conteúdo acessível e bem fundamentado.</p>
-          <span class="bl-cat__count">1 artigo</span>
-        </a>
-
-        <a href="/blog/garantir-libras-sem-improviso/" class="bl-cat rv d1" aria-label="Ver artigo Instrucional: Acessibilidade em eventos">
-          <span class="bl-cat__icon" aria-hidden="true">🎯</span>
-          <div class="bl-cat__name">Instrucional</div>
-          <p class="bl-cat__desc">Guias práticos para produzir conteúdo acessível em Libras, eventos inclusivos e materiais com janela de Libras.</p>
-          <span class="bl-cat__count">1 artigo</span>
-        </a>
-
-        <a href="/blog/" class="bl-cat rv d2" aria-label="Ver artigos Institucional — em breve">
-          <span class="bl-cat__icon" aria-hidden="true">🏛️</span>
-          <div class="bl-cat__name">Institucional</div>
-          <p class="bl-cat__desc">Legislação, direitos da comunidade surda, políticas públicas e avanços na inclusão no Brasil.</p>
-          <span class="bl-cat__count">Em breve</span>
-        </a>
-
-      </div>
+        </div>
+        <span class="bl-vocabbox__card-link">Consultar →</span>
+      </a>
     </div>
   </section>
 
@@ -630,12 +687,8 @@ main{padding-top:80px}
       <h2 class="bl-cta__title rv d1">Seu vídeo em Libras em até 1 hora</h2>
       <p class="bl-cta__desc rv d2">Intérpretes reais, entrega editada, pronta para publicar. Sem burocracia, sem espera.</p>
       <div class="bl-cta__btns rv d3">
-        <a href="https://huet.libras.se/" class="bl-cta__btn-primary" target="_blank" rel="noopener noreferrer">
-          Traduzir agora →
-        </a>
-        <a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+estava+no+blog+do+Libras.se+e+quero+saber+mais!" class="bl-cta__btn-ghost" target="_blank" rel="noopener noreferrer">
-          Falar no WhatsApp
-        </a>
+        <a href="https://huet.libras.se/" class="bl-cta__btn-primary" target="_blank" rel="noopener noreferrer">Traduzir agora →</a>
+        <a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+estava+no+blog+do+Libras.se+e+quero+saber+mais!" class="bl-cta__btn-ghost" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -748,6 +801,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+/* ── SEARCH & FILTER ── */
+const searchInput = document.getElementById('bl-search-input');
+const allPosts    = document.querySelectorAll('[data-post]');
+const pills       = document.querySelectorAll('.bl-theme-pill');
+const noResults   = document.getElementById('bl-no-results');
+const countEl     = document.getElementById('bl-post-count');
+const sideEl      = document.getElementById('bl-featured-side');
+let activeFilter  = 'todos';
+let scrolled      = false;
+
+function filterPosts() {
+  const q = searchInput.value.toLowerCase().trim();
+  let visible = 0;
+
+  allPosts.forEach(post => {
+    const text = ((post.dataset.search || '') + ' ' + (post.querySelector('.bl-card__title')?.textContent || '')).toLowerCase();
+    const cat  = (post.dataset.cat || '').toLowerCase();
+    const matchQ   = !q || text.includes(q);
+    const matchCat = activeFilter === 'todos' || cat.includes(activeFilter);
+    const show = matchQ && matchCat;
+    post.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  /* collapse empty side column so featured card expands */
+  if (sideEl) {
+    const sideVisible = [...sideEl.querySelectorAll('[data-post]')].some(p => p.style.display !== 'none');
+    sideEl.style.display = sideVisible ? '' : 'none';
+  }
+
+  noResults.classList.toggle('show', visible === 0);
+  countEl.textContent = visible + (visible === 1 ? ' publicação' : ' publicações');
+
+  /* scroll to posts section on first keystroke */
+  if (q.length >= 1 && !scrolled) {
+    scrolled = true;
+    document.getElementById('posts').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  if (!q) scrolled = false;
+}
+
+searchInput.addEventListener('input', filterPosts);
+
+pills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    pills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    activeFilter = pill.dataset.filter;
+    filterPosts();
   });
 });
 </script>

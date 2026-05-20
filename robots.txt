@@ -29,5 +29,18 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Arquivos editoriais e páginas de teste — não indexar
+Disallow: /CLAUDE.md
+Disallow: /blog/CLAUDE.md
+Disallow: /blog/CLAUDE 2.md
+Disallow: /blog/template-blog.php
+Disallow: /blog/template-blog-home-v2.php
+Disallow: /blog/*/prompt-claude.md
+Disallow: /.DS_Store
+Disallow: /blog/.DS_Store
+Disallow: /sinal/.DS_Store
+Disallow: /assets/.DS_Store
+Disallow: /teste-publicacao/
+
 Sitemap: https://libras.se/sitemap.xml
 

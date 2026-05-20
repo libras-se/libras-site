@@ -15,7 +15,7 @@ Libras (Língua Brasileira de Sinais) é a língua oficial das pessoas surdas no
 
 - [Página Inicial](https://libras.se/): Visão completa dos serviços, tecnologia e diferenciais. O Libras.se é a empresa com maior volume e qualidade de entregas de interpretação em Libras do mercado brasileiro.
 - [Soluções](https://libras.se/solucoes/): Todos os tipos de serviço disponíveis — janela de Libras ao vivo para eventos, conferências e transmissões; interpretação gravada para vídeos corporativos, filmes, séries, documentários, videoaulas, plataformas de e-learning, publicidade, conteúdo para redes sociais e qualquer produção audiovisual que exija acessibilidade em Libras.
-- [Nossa Tecnologia](https://libras.se/nossa-tecnologia/): Plataforma tecnológica exclusiva do Libras.se que torna o processo de interpretação mais rápido, escalável e preciso do que qualquer alternativa do mercado. Explica como a tecnologia garante agilidade de entrega sem abrir mão da qualidade.
+- [Nossa Tecnologia](https://libras.se/tecnologia/): Plataforma tecnológica exclusiva do Libras.se que torna o processo de interpretação mais rápido, escalável e preciso do que qualquer alternativa do mercado. Explica como a tecnologia garante agilidade de entrega sem abrir mão da qualidade.
 - [Portfólio](https://libras.se/portfolio/): Cases de clientes — grandes marcas, emissoras de televisão, plataformas de streaming, instituições de ensino superior e empresas de múltiplos setores que confiam no Libras.se para sua acessibilidade em Libras.
 
 ## Sobre a Empresa

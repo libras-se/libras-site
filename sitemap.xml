@@ -270,4 +270,32 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://libras.se/blog/libras-tem-sotaque-e-giria/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://libras.se/blog/videoaulas-acessiveis-com-libras/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://libras.se/sinal/desculpa/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

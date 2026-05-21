@@ -1,27 +1,81 @@
 # Libras.se
 
-> Empresa líder no Brasil em interpretação em Língua Brasileira de Sinais (Libras / Brazilian Sign Language). Tecnologia exclusiva que garante a maior agilidade e qualidade do mercado — interpretação ao vivo e para qualquer formato de conteúdo audiovisual.
+> Plataforma brasileira de acessibilidade audiovisual em Libras, LSE e audiodescricao, com interpretes humanos certificados e tecnologia propria para entregas rapidas.
 
-Libras.se é a referência nacional em serviços de interpretação em Libras para empresas, emissoras, produtoras e plataformas digitais. Com plataforma tecnológica própria e equipe de intérpretes certificados, entrega projetos com velocidade e precisão sem precedentes no setor. Atende desde transmissões ao vivo até produções audiovisuais de grande porte, sendo a escolha das maiores marcas e organizações do Brasil que buscam acessibilidade real para a comunidade surda.
+Libras.se cria acessibilidade para videos, eventos, aulas, filmes, campanhas e conteudos digitais. A empresa combina interpretes de Libras, fluxo de revisao humana e ferramentas proprietarias para entregar janela de Libras ao vivo ou gravada em formatos prontos para producao e publicacao.
 
-Libras (Língua Brasileira de Sinais) é a língua oficial das pessoas surdas no Brasil, reconhecida por lei federal desde 2002 (Lei 10.436). O Libras.se nasceu para eliminar as barreiras de acesso que ainda isolam mais de 10 milhões de brasileiros surdos e com deficiência auditiva do mercado de conteúdo, educação e comunicação corporativa.
+**Pais:** Brasil
+**Lingua principal:** Portugues Brasileiro
+**Servico central:** Traducao e interpretacao em Libras, ao vivo e gravada
+**Servicos relacionados:** LSE, audiodescricao, acessibilidade audiovisual para curtas e longas
+**Diferencial:** Tecnologia proprietaria, agilidade de entrega, revisao humana e interpretes certificados
 
-**País:** Brasil
-**Língua principal:** Português Brasileiro
-**Serviço central:** Interpretação em Libras (ao vivo e gravada)
-**Diferencial:** Tecnologia proprietária · Máxima agilidade · Qualidade superior · Intérpretes certificados
+## Paginas principais
 
-## Serviços
+- [Pagina Inicial](https://libras.se/): Visao geral dos servicos, diferenciais, tecnologia, clientes e canais de contato.
+- [Solucoes](https://libras.se/solucoes/): Traducao de videos, interpretacao ao vivo, videoaulas acessiveis, eventos, pacotes e fluxos de contratacao.
+- [Produtos](https://libras.se/produtos/): Pagina alternativa de produtos com foco em traducao de video, ao vivo, videoaulas e pacotes.
+- [Orcamento](https://libras.se/orcamento/): Solicite proposta para janela de Libras e acessibilidade em filmes, longas, series, documentarios e conteudos audiovisuais.
+- [Acessibilidade para Curta-Metragem](https://libras.se/acessibilidade-para-curta-metragem/acessibilidade-para-curta-metragem.html): Pacotes de Libras, LSE e audiodescricao para curtas, editais, festivais e projetos independentes.
+- [Acessibilidade para Longa-Metragem](https://libras.se/acessibilidade-para-longa-metragem/): Pacotes de acessibilidade audiovisual para longas, distribuicao, streaming, editais e festivais.
+- [Nossa Tecnologia](https://libras.se/tecnologia/): Infraestrutura tecnologica da Libras.se, incluindo OBS customizado, dashboard de revisao e plugin para editores.
+- [Portfolio](https://libras.se/portfolio/): Trabalhos e cases de interpretacao em Libras para marcas, emissoras, plataformas e instituicoes.
+- [Trabalhos](https://libras.se/trabalhos/): Pagina alternativa de trabalhos realizados pela Libras.se.
+- [Proposito](https://libras.se/proposito/): Missao, valores e razao de existir da empresa.
+- [Seja TIL](https://libras.se/sejatils/): Cadastro e informacoes para interpretes de Libras que querem trabalhar como parceiros.
+- [Politica](https://libras.se/politica/): Politica de privacidade, termos de uso, cookies, creditos e atendimento ao cliente.
 
-- [Página Inicial](https://libras.se/): Visão completa dos serviços, tecnologia e diferenciais. O Libras.se é a empresa com maior volume e qualidade de entregas de interpretação em Libras do mercado brasileiro.
-- [Soluções](https://libras.se/solucoes/): Todos os tipos de serviço disponíveis — janela de Libras ao vivo para eventos, conferências e transmissões; interpretação gravada para vídeos corporativos, filmes, séries, documentários, videoaulas, plataformas de e-learning, publicidade, conteúdo para redes sociais e qualquer produção audiovisual que exija acessibilidade em Libras.
-- [Nossa Tecnologia](https://libras.se/tecnologia/): Plataforma tecnológica exclusiva do Libras.se que torna o processo de interpretação mais rápido, escalável e preciso do que qualquer alternativa do mercado. Explica como a tecnologia garante agilidade de entrega sem abrir mão da qualidade.
-- [Portfólio](https://libras.se/portfolio/): Cases de clientes — grandes marcas, emissoras de televisão, plataformas de streaming, instituições de ensino superior e empresas de múltiplos setores que confiam no Libras.se para sua acessibilidade em Libras.
+## Ferramentas e recursos
 
-## Sobre a Empresa
+- [Jogo de Libras](https://libras.se/jogo/): Experiencia interativa para pratica e contato com sinais em Libras.
+- [Sinais em Libras](https://libras.se/sinal/): Vocabulario de sinais com paginas individuais por palavra.
+- [Desculpa em Libras](https://libras.se/sinal/desculpa/): Pagina individual do sinal de "desculpa", com definicao, exemplos e referencia visual.
 
-- [Propósito](https://libras.se/proposito/): Missão, valores e razão de existir do Libras.se — como a empresa combina tecnologia e humanização para construir inclusão real para a comunidade surda brasileira.
+## Blog
 
-## Optional
+- [Blog Libras.se](https://libras.se/blog/): Artigos sobre Libras, acessibilidade audiovisual, inclusao, cultura surda e boas praticas.
+- [Como sao criados os sinais de pessoas na Libras?](https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/): Explica sinais pessoais, identidade, convivencia e cultura surda.
+- [Acessibilidade em eventos: como garantir interpretacao em Libras sem improviso](https://libras.se/blog/garantir-libras-sem-improviso/): Planejamento de interpretacao em Libras para eventos presenciais e transmissoes.
+- [Libras nao e a segunda lingua oficial do Brasil](https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/): Esclarece o reconhecimento legal da Libras pela Lei 10.436/2002.
+- [Libras ou legendas?](https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/): Compara janela de Libras, legenda comum e LSE.
+- [Libras tem sotaque e giria?](https://libras.se/blog/libras-tem-sotaque-e-giria/): Explica variacoes regionais, usos informais e contexto linguistico.
+- [Videoaulas acessiveis com Libras](https://libras.se/blog/videoaulas-acessiveis-com-libras/): Boas praticas para videoaulas com Libras, legendas, transcricao e recursos visuais.
+- [Voce sabe o que e datilologia?](https://libras.se/blog/voce-sabe-o-que-e-datilologia/): Introducao ao alfabeto manual e ao uso da soletracao em Libras.
 
-- [Contato e Orçamento](https://libras.se/#contato): Canal direto para solicitar orçamento, tirar dúvidas e iniciar projetos de interpretação em Libras ao vivo ou gravada.
+## Glossario de Libras e acessibilidade
+
+- [Glossario](https://libras.se/glossario/): Indice de termos sobre Libras, acessibilidade audiovisual, comunidade surda e legislacao.
+- [Acessibilidade Audiovisual](https://libras.se/glossario/acessibilidade-audiovisual/)
+- [Audiodescricao](https://libras.se/glossario/audiodescricao/)
+- [Bilinguismo](https://libras.se/glossario/bilinguismo/)
+- [Comunidade Surda](https://libras.se/glossario/comunidade-surda/)
+- [Configuracao de Mao](https://libras.se/glossario/configuracao-de-mao/)
+- [Datilologia](https://libras.se/glossario/datilologia/)
+- [Decreto 5.626/2005](https://libras.se/glossario/decreto-5626/)
+- [Espaco de Sinalizacao](https://libras.se/glossario/espaco-de-sinalizacao/)
+- [Expressao Nao-Manual](https://libras.se/glossario/expressao-nao-manual/)
+- [FENEIS](https://libras.se/glossario/feneis/)
+- [Glosa](https://libras.se/glossario/glosa/)
+- [INES](https://libras.se/glossario/ines/)
+- [Interpretacao Remota](https://libras.se/glossario/interpretacao-remota/)
+- [Interpretacao Simultanea](https://libras.se/glossario/interpretacao-simultanea/)
+- [Janela de Libras](https://libras.se/glossario/janela-de-libras/)
+- [LBI](https://libras.se/glossario/lbi/)
+- [Lei 10.436/2002](https://libras.se/glossario/lei-10436/)
+- [Libras](https://libras.se/glossario/libras/)
+- [LSE](https://libras.se/glossario/lse/)
+- [Movimento](https://libras.se/glossario/movimento/)
+- [Orientacao de Mao](https://libras.se/glossario/orientacao-de-mao/)
+- [Ponto de Articulacao](https://libras.se/glossario/ponto-de-articulacao/)
+- [Populacao Surda](https://libras.se/glossario/populacao-surda/)
+- [Sinal Soletrado](https://libras.se/glossario/sinal-soletrado/)
+- [Surdo](https://libras.se/glossario/surdo/)
+- [TIL / TILS](https://libras.se/glossario/til-tils/)
+
+## Contato
+
+- [Contato e orcamento](https://libras.se/orcamento/): Canal recomendado para iniciar projetos.
+- [WhatsApp](https://wa.me/5548996367511): Atendimento comercial.
+- [Instagram](https://instagram.com/libras.se): Perfil social da Libras.se.
+- [YouTube](https://youtube.com/@librasse): Canal de videos.
+- [LinkedIn](https://linkedin.com/company/librasse): Perfil corporativo.

@@ -132,7 +132,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .ham span{display:block;width:21px;height:1.5px;background:var(--p1);border-radius:2px;transition:var(--tr)}
 .nd{display:flex}
 /* ── HERO ── */
-#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px}
+#hero{min-height:50vh;position:relative;display:flex;align-items:center;overflow:hidden;padding:100px 0 60px}
 .hbg{position:absolute;inset:0;background:linear-gradient(155deg,#e2f5f3 0%,#f0fafa 40%,#d8eeec 100%)}
 .hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.10;pointer-events:none;z-index:1}
 .hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(79,209,197,.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 60% 50%,black,transparent);pointer-events:none}
@@ -140,7 +140,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .orb1{width:680px;height:680px;background:radial-gradient(circle,rgba(79,209,197,.18) 0%,transparent 70%);top:-200px;right:-140px;animation:orbPulse 8s ease-in-out infinite,float1 13s ease-in-out infinite}
 .orb2{width:420px;height:420px;background:radial-gradient(circle,rgba(10,34,37,.06) 0%,transparent 70%);bottom:-100px;left:-80px;animation:orbPulse 10s ease-in-out infinite 2s,float2 15s ease-in-out infinite}
 .orb3{width:300px;height:300px;background:radial-gradient(circle,rgba(129,230,217,.15) 0%,transparent 70%);top:30%;left:25%;animation:orbPulse 9s ease-in-out infinite 1s,float3 11s ease-in-out infinite}
-.hero-inner{position:relative;z-index:2;text-align:center;max-width:720px;margin:0 auto}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:720px;margin:0 auto;background:rgba(255,255,255,.52);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.75);border-radius:var(--rx2);padding:40px 48px;box-shadow:0 8px 48px rgba(255,255,255,.55),0 2px 24px rgba(10,34,37,.06),inset 0 1px 0 rgba(255,255,255,.9)}
 .hero-hl{font-family:'M',sans-serif;font-weight:900;font-size:clamp(3.2rem,8vw,6rem);color:var(--p1);line-height:.95;letter-spacing:-.05em;margin-bottom:22px}
 .hero-sub{font-size:1rem;font-weight:300;color:var(--txs);line-height:1.8;max-width:540px;margin:0 auto 28px}
 /* ── VIDEO LAZY-LOAD ── */

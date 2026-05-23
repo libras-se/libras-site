@@ -30,6 +30,8 @@
 <link rel="dns-prefetch" href="//wa.me"/>
 <link rel="dns-prefetch" href="//huet.libras.se"/>
 <link rel="dns-prefetch" href="//n8n.trngl.com.br"/>
+<link rel="preload" href="assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="assets/fonts/museo-sans-rounded-900.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="assets/img/home/home-JOAB_hero.avif" as="image" type="image/avif" fetchpriority="high"/>
 <meta name="geo.region" content="BR-SC"/>
@@ -189,13 +191,14 @@
   --blur:blur(22px);--blur-l:blur(40px);
   --tr:.3s cubic-bezier(.4,0,.2,1);
   --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
+  color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'M',sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'M',sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 img{display:block;max-width:100%;height:auto}
-a{text-decoration:none;color:inherit}
-button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
+a{text-decoration:none;color:inherit;touch-action:manipulation}
+button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipulation}
 .skip-link{position:absolute;top:-100%;left:16px;background:var(--p1);color:#fff;padding:8px 16px;border-radius:0 0 var(--rmd) var(--rmd);font-size:.82rem;font-weight:700;z-index:9999;transition:top .2s}
 .skip-link:focus{top:0}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}
@@ -266,18 +269,18 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 @keyframes orbDrift5{0%{transform:translate(0,0) scale(.9)}100%{transform:translate(40px,60px) scale(1.15)}}
 .gradient-sweep{position:fixed;top:0;left:0;width:200vw;height:200vh;pointer-events:none;z-index:0;background:conic-gradient(from 0deg at 40% 30%,transparent 0deg,rgba(143,231,226,.06) 60deg,transparent 120deg,rgba(72,209,204,.04) 200deg,transparent 280deg,rgba(197,240,237,.05) 340deg,transparent 360deg);animation:sweepRotate 60s linear infinite}
 @keyframes sweepRotate{0%{transform:translate(-25%,-25%) rotate(0deg)}100%{transform:translate(-25%,-25%) rotate(360deg)}}
-.wppf{position:fixed;bottom:26px;right:26px;z-index:900;display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:var(--rpill);padding:12px 20px;font-size:.82rem;font-weight:700;animation:wppBeat 3s ease-in-out infinite;transition:var(--tr);box-shadow:0 4px 20px rgba(34,197,94,.4)}
+.wppf{position:fixed;bottom:max(26px,env(safe-area-inset-bottom,0px));right:max(26px,env(safe-area-inset-right,0px));z-index:900;display:flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:var(--rpill);padding:12px 20px;font-size:.82rem;font-weight:700;animation:wppBeat 3s ease-in-out infinite;transition:var(--tr);box-shadow:0 4px 20px rgba(34,197,94,.4)}
 .wppf:hover{transform:translateY(-2px) scale(1.02);background:#16a34a}
 .wppf:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .wppf svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
 @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
-.mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:var(--blur-l);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:var(--blur-l);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px;overscroll-behavior:contain}
 .mob.open{display:flex}
 .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
 .mob a:hover{color:var(--tl)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
 .mob-x:focus-visible{outline:2px solid var(--teal);border-radius:4px}
-#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:20px 0;transition:all .4s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:20px 0;transition:padding .4s,background .4s,backdrop-filter .4s,-webkit-backdrop-filter .4s,box-shadow .4s}
 #nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .nlogo{text-decoration:none}
@@ -667,6 +670,9 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
 .explore-card-cta{font-size:.8rem;font-weight:700;color:var(--teal-d)}
 @media(max-width:768px){.explore-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.explore-grid{grid-template-columns:1fr}}
+#problem,#how,#notai,#works,#press,#pricing,#packages,#faq,#explore,#ctastrip,#wppform{scroll-margin-top:90px}
+details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:var(--rlg)}
+.wf-err{display:none;font-size:.76rem;font-weight:700;color:#dc2626;margin-top:-4px;margin-bottom:6px}
 </style>
 <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json"/>
 <link rel="describedby" href="/.well-known/agent-skills/index.json" type="application/json"/>
@@ -697,7 +703,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
-  <a href="https://libras.se/portfolio" onclick="cm()">Portfolio</a>
+  <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
   <a href="https://libras.se/blog" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="btn bw" onclick="cm()">Enviar seu vídeo</a>
 </div>
@@ -706,7 +712,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="#" class="nlogo" aria-label="Libras.se — Página inicial"><span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span></a>
+      <a href="/" class="nlogo" aria-label="Libras.se — Página inicial"><span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span></a>
       <ul class="nlinks" role="list">
         <li><a href="https://libras.se/proposito">Propósito</a></li>
         <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
@@ -818,7 +824,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
       <div class="bento-hero rv rs">
         <picture aria-hidden="true" class="bento-hero-map-wrap"><source srcset="assets/img/home/home-mapa-brasil.avif" type="image/avif"/><img class="bento-hero-map" src="assets/img/home/home-mapa-brasil.png" alt="" width="460" height="520" loading="lazy" decoding="async"/></picture>
         <div class="bento-hero-num" aria-label="10,7 milhões">10,7M</div>
-        <div id="problem-title" class="bento-hero-sub">de brasileiros são surdos e não acessam seu conteúdo hoje</div>
+        <div id="problem-title" class="bento-hero-sub" role="heading" aria-level="2">de brasileiros são surdos e não acessam seu conteúdo hoje</div>
         <div class="bento-hero-src">IBGE 2020</div>
       </div>
       <div class="bento-stat rv d1">
@@ -994,7 +1000,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
   </div>
 </section>
 
-<div class="works-cta" id="works">
+<section class="works-cta" id="works" aria-labelledby="works-title">
   <div class="wc-bg" aria-hidden="true"></div>
   <div class="wc-video" aria-hidden="true">
     <video id="wcv" muted loop playsinline preload="none" poster="assets/img/home/home-PLUGIN-PREMIERE.avif">
@@ -1006,7 +1012,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
   <div class="wc-orb" aria-hidden="true"></div>
   <div class="w">
     <div class="wc-in rv">
-      <h2>Veja nossos trabalhos.</h2>
+      <h2 id="works-title">Veja nossos trabalhos.</h2>
       <p>Campanhas reais. Intérpretes reais. Resultados reais.</p>
       <div class="wc-btns">
         <a href="https://libras.se/portfolio" class="btn bo-dark" target="_blank" rel="noopener noreferrer">Ver portfólio</a>
@@ -1014,7 +1020,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <section id="press" aria-labelledby="press-title">
   <div class="press-glow" aria-hidden="true"></div>
@@ -1184,32 +1190,32 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
       <div class="lbl" style="margin:0 auto 14px">Dúvidas frequentes</div>
       <h2 id="faq-title">Perguntas <span class="gt2">frequentes</span></h2>
     </div>
-    <div class="faq-grid" role="list">
-      <details class="faq-item rv d1" role="listitem">
+    <div class="faq-grid">
+      <details class="faq-item rv d1">
         <summary>O que é Libras e por que incluir nos vídeos? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Libras (Língua Brasileira de Sinais) é a língua oficial da comunidade surda no Brasil, reconhecida pela Lei 10.436/2002. Incluir Libras no seu conteúdo conecta sua mensagem aos <strong>10,7 milhões de brasileiros surdos</strong>, cumpre a Lei Brasileira de Inclusão (13.146/2015) e fortalece o pilar S do seu ESG com inclusão de verdade.</p></div>
       </details>
-      <details class="faq-item rv d2" role="listitem">
+      <details class="faq-item rv d2">
         <summary>A Libras.se usa inteligência artificial? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Não. Todos os nossos tradutores são <strong>TILs (Tradutores e Intérpretes de Língua de Sinais) humanos</strong>, formados e certificados. Nenhum sinal é gerado por IA ou avatar — garantindo fidelidade, fluência e respeito genuíno à cultura surda.</p></div>
       </details>
-      <details class="faq-item rv d3" role="listitem">
+      <details class="faq-item rv d3">
         <summary>Quais são os prazos e preços disponíveis? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Três planos: <strong>7 dias</strong> por R$100/min, <strong>24 horas</strong> por R$150/min e <strong>Expresso em 1 hora</strong> por R$450/min. Há também pacotes com minutos bônus: 15 min + 5 grátis, 30 min + 10 grátis e 45 min + 15 grátis — quanto maior o pacote, mais você economiza.</p></div>
       </details>
-      <details class="faq-item rv d4" role="listitem">
+      <details class="faq-item rv d4">
         <summary>Que arquivo recebo após a tradução? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Você recebe o vídeo com a janela de Libras já inserida no formato <strong>Apple ProRes 4444 com canal alpha</strong> — padrão profissional para TV e cinema, editável em Adobe Premiere, DaVinci Resolve ou qualquer NLE profissional, ou já pronto para publicar direto nas redes.</p></div>
       </details>
-      <details class="faq-item rv d5" role="listitem">
+      <details class="faq-item rv d5">
         <summary>Como envio meu vídeo para tradução? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Acesse <a href="https://huet.libras.se/" target="_blank" rel="noopener noreferrer">huet.libras.se</a>, faça o upload do vídeo, escolha o prazo de entrega e realize o pagamento online. Nosso sistema aciona um intérprete imediatamente. Você recebe o arquivo finalizado dentro do prazo, sem instalar nada.</p></div>
       </details>
-      <details class="faq-item rv d6" role="listitem">
+      <details class="faq-item rv d6">
         <summary>A Libras.se atende todo o Brasil? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Sim. Operamos <strong>100% de forma remota</strong> com uma rede de mais de 50 intérpretes distribuídos por todo o país — de Florianópolis a Manaus. Atendemos qualquer empresa ou pessoa física em qualquer estado, sem custo adicional de deslocamento.</p></div>
       </details>
-      <details class="faq-item rv" role="listitem">
+      <details class="faq-item rv">
         <summary>A tradução cumpre a Lei Brasileira de Inclusão? <span class="faq-icon" aria-hidden="true">+</span></summary>
         <div class="faq-body"><p>Sim. Nosso serviço atende à <strong>Lei 13.146/2015 (LBI)</strong> e ao Decreto 5.626/2005. A tradução por intérpretes certificados garante conformidade legal real — não a pseudoconformidade de avatares de IA que os órgãos fiscalizadores já rejeitam.</p></div>
       </details>
@@ -1253,11 +1259,11 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
   </div>
 </section>
 
-<section id="ctastrip">
+<section id="ctastrip" aria-labelledby="ctastrip-title">
   <div class="w">
     <div class="cta-inner-box rv">
       <div class="cta-txt">
-        <h2>Conheça todos os produtos do Libras.se</h2>
+        <h2 id="ctastrip-title">Conheça todos os produtos do Libras.se</h2>
         <p>Vídeos, vídeo aulas, lives, eventos presenciais e digitais. Temos a solução ideal para cada necessidade.</p>
       </div>
       <div class="cta-acts">
@@ -1275,17 +1281,18 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
       <p>Deixa seu WhatsApp.<br/>Entramos em contato agora mesmo.</p>
     </div>
     <div class="wf-card rv d2">
-      <div id="wff" style="position:relative;z-index:2">
+      <form id="wff" onsubmit="submitWf(event)" novalidate style="position:relative;z-index:2">
         <div class="wf-grp">
           <label for="wfwpp">WhatsApp <span style="font-weight:300;letter-spacing:0;text-transform:none;color:var(--txm)">(obrigatório)</span></label>
-          <input type="tel" id="wfwpp" name="whatsapp" placeholder="(11) 9 9000-0000" required autocomplete="tel" aria-required="true"/>
+          <input type="tel" id="wfwpp" name="whatsapp" placeholder="(11) 9 9000-0000" required autocomplete="tel" aria-required="true" aria-describedby="wferr"/>
         </div>
-        <button class="btn bw wf-submit" onclick="submitWf()" type="button" aria-label="Enviar dados e entrar em contato pelo WhatsApp">
+        <p class="wf-err" id="wferr" aria-live="assertive"></p>
+        <button class="btn bw wf-submit" type="submit" aria-label="Enviar dados e entrar em contato pelo WhatsApp">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Entrar em contato agora
         </button>
         <p class="wf-priv">🔒 Sem spam. Seus dados ficam seguros.</p>
-      </div>
+      </form>
       <div class="wf-suc" id="wfsuc" role="status" aria-live="polite">
         <span class="wf-suc-ico" aria-hidden="true">🤟</span>
         <h3>Recebemos seu contato!</h3>
@@ -1304,7 +1311,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
   <div class="w">
     <div class="ft-top">
       <div>
-        <a href="#" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se">
@@ -1357,7 +1364,7 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
           <li><a href="#wppform">WhatsApp</a></li>
           <li><a href="mailto:contato@libras.se">contato@libras.se</a></li>
           <li><a href="https://instagram.com/libras.se" target="_blank" rel="noopener noreferrer">@libras.se</a></li>
-          <li><a href="#">Florianópolis, SC</a></li>
+          <li><span style="font-size:.8rem;color:rgba(255,255,255,.46)">Florianópolis, SC</span></li>
         </ul>
       </div>
     </div>
@@ -1407,7 +1414,17 @@ hamb.addEventListener('click', openMenu);
 mobx.addEventListener('click', closeMenu);
 function cm() { closeMenu(); }
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && mob.classList.contains('open')) closeMenu();
+  if (e.key === 'Escape' && mob.classList.contains('open')) { closeMenu(); return; }
+  if (mob.classList.contains('open') && e.key === 'Tab') {
+    const focusable = Array.from(mob.querySelectorAll('a[href], button:not([disabled])'));
+    if (!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
 });
 
 const rvO = new IntersectionObserver(entries => {
@@ -1466,9 +1483,18 @@ const N8N_WEBHOOK_URL = "https://n8n.trngl.com.br/webhook/lead-capture";
 const WPP_NUMBER = "5548996367511";
 const WPP_MSG = encodeURIComponent("Olá, estava no site do Libras.se e quero saber mais!");
 
-async function submitWf() {
+async function submitWf(e) {
+  if (e) e.preventDefault();
   const wpp = document.getElementById('wfwpp').value.trim();
-  if (!wpp) { alert('Por favor, informe seu WhatsApp.'); return; }
+  const errEl = document.getElementById('wferr');
+  errEl.textContent = '';
+  errEl.style.display = 'none';
+  if (!wpp) {
+    errEl.textContent = 'Por favor, informe seu WhatsApp.';
+    errEl.style.display = 'block';
+    document.getElementById('wfwpp').focus();
+    return;
+  }
 
   const payload = {
     whatsapp:  wpp,

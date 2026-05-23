@@ -287,7 +287,8 @@ section{padding:80px 0}
 .prob-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .prob-card{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:var(--rlg);padding:24px;transition:var(--tr)}
 .prob-card:hover{transform:translateY(-3px);box-shadow:var(--shm)}
-.prob-icon{width:40px;height:40px;border-radius:var(--rmd);background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.2rem}
+.prob-icon{width:40px;height:40px;border-radius:var(--rmd);background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--teal-dd)}
+.prob-icon svg{width:20px;height:20px}
 .prob-card h3{font-size:.9rem;font-weight:900;color:var(--p1);margin-bottom:8px}
 .prob-card p{font-size:.82rem;color:var(--txs);line-height:1.6}
 @media(max-width:900px){.prob-grid{grid-template-columns:1fr 1fr}}
@@ -320,7 +321,8 @@ section{padding:80px 0}
 .svcs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .svc-card{background:rgba(255,255,255,.7);border:1px solid var(--border);border-radius:var(--rlg);padding:24px;transition:var(--tr)}
 .svc-card:hover{transform:translateY(-3px);box-shadow:var(--shm);background:rgba(255,255,255,.92)}
-.svc-icon{font-size:1.6rem;margin-bottom:12px}
+.svc-icon{width:40px;height:40px;border-radius:var(--rmd);background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--teal-dd)}
+.svc-icon svg{width:20px;height:20px}
 .svc-card h3{font-size:.88rem;font-weight:900;color:var(--p1);margin-bottom:8px}
 .svc-card p{font-size:.8rem;color:var(--txs);line-height:1.65}
 @media(max-width:900px){.svcs-grid{grid-template-columns:1fr 1fr}}
@@ -344,7 +346,6 @@ section{padding:80px 0}
 .price-range-card .range{font-size:1rem;font-weight:900;color:var(--p1)}
 .price-range-card .avg{font-size:.8rem;color:var(--txs);margin-top:4px}
 .price-libras-note{background:rgba(255,255,255,.8);border-left:3px solid var(--teal);border-radius:0 var(--rmd) var(--rmd) 0;padding:16px 20px;margin:16px 0;font-size:.82rem;color:var(--txs);line-height:1.65}
-.price-caveat{font-size:.8rem;color:var(--txm);line-height:1.65;margin-top:12px}
 .price-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .price-micro{font-size:.74rem;color:var(--txm);margin-top:12px}
 @media(max-width:600px){.price-ranges{grid-template-columns:1fr}.price-ctas{flex-direction:column}.price-ctas .btn{justify-content:center}}
@@ -354,10 +355,10 @@ section{padding:80px 0}
 .single-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .single-card{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:var(--rlg);padding:20px 22px;transition:var(--tr)}
 .single-card:hover{transform:translateY(-2px);box-shadow:var(--shm)}
-.single-card-icon{font-size:1.4rem;margin-bottom:10px}
+.single-card-icon{width:36px;height:36px;border-radius:var(--rmd);background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;margin-bottom:10px;color:var(--teal-dd)}
+.single-card-icon svg{width:18px;height:18px}
 .single-card h4{font-size:.88rem;font-weight:900;color:var(--p1);margin-bottom:6px}
 .single-card p{font-size:.78rem;color:var(--txs);line-height:1.6}
-.single-quote{background:var(--gc);color:#fff;border-radius:var(--rlg);padding:24px 28px;font-size:.88rem;line-height:1.7;margin-top:28px}
 @media(max-width:900px){.single-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.single-cards{grid-template-columns:1fr}}
 
@@ -380,40 +381,25 @@ section{padding:80px 0}
 .entrega-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .entrega-card{background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:var(--rlg);padding:22px 18px;text-align:center;transition:var(--tr)}
 .entrega-card:hover{transform:translateY(-3px);box-shadow:var(--shm)}
-.entrega-icon{font-size:1.5rem;margin-bottom:10px}
+.entrega-icon{width:44px;height:44px;border-radius:50%;background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--teal-dd)}
+.entrega-icon svg{width:20px;height:20px}
 .entrega-card h4{font-size:.82rem;font-weight:900;color:var(--p1)}
-.entrega-note{margin-top:28px;font-size:.8rem;color:var(--txm);text-align:center;font-style:italic}
 @media(max-width:900px){.entrega-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.entrega-grid{grid-template-columns:1fr}}
 
 /* ── AUTORIDADE ── */
 .auth{background:var(--bg2)}
-.auth-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.auth-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .auth-points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
 .auth-point{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:var(--txs)}
 .auth-point::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0}
-.auth-visual{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:var(--rxl);padding:32px;box-shadow:var(--sh)}
-.auth-stat{text-align:center;padding:20px 0;border-bottom:1px solid var(--border)}
-.auth-stat:last-child{border-bottom:none}
-.auth-stat-num{font-size:2rem;font-weight:900;margin-bottom:6px}
-.auth-stat-label{font-size:.78rem;color:var(--txs)}
-@media(max-width:900px){.auth-inner{grid-template-columns:1fr}.auth-points{grid-template-columns:1fr}}
+.auth-photo{width:100%;border-radius:var(--rxl);object-fit:cover;aspect-ratio:4/3;box-shadow:var(--shm);display:block;margin-bottom:16px}
+.auth-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.auth-stat{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:var(--rlg);padding:16px;text-align:center}
+.auth-stat-num{font-size:1.5rem;font-weight:900;margin-bottom:4px}
+.auth-stat-label{font-size:.72rem;color:var(--txs);line-height:1.4}
+@media(max-width:900px){.auth-inner{grid-template-columns:1fr}.auth-points{grid-template-columns:1fr}.auth-stats{grid-template-columns:repeat(3,1fr)}}
 
-/* ── COMPARAÇÃO ── */
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
-.compare-col{border-radius:var(--rxl);padding:32px;overflow:hidden}
-.compare-col.bad{background:rgba(255,255,255,.7);border:1px solid rgba(220,38,38,.12)}
-.compare-col.good{background:var(--gc);border:none}
-.compare-col h3{font-size:1rem;font-weight:900;margin-bottom:20px}
-.compare-col.bad h3{color:var(--p1)}
-.compare-col.good h3{color:#fff}
-.compare-items{display:flex;flex-direction:column;gap:10px}
-.compare-item{display:flex;align-items:center;gap:10px;font-size:.84rem}
-.compare-col.bad .compare-item{color:var(--txs)}
-.compare-col.good .compare-item{color:rgba(255,255,255,.88)}
-.compare-dot-bad{width:20px;height:20px;border-radius:50%;background:rgba(220,38,38,.12);border:1.5px solid rgba(220,38,38,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.7rem;color:#dc2626}
-.compare-dot-good{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.7rem;color:#fff}
-@media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
 
 /* ── FAQ ── */
 .faq-list{display:flex;flex-direction:column;gap:12px;max-width:800px;margin:0 auto}
@@ -522,7 +508,7 @@ section{padding:80px 0}
             <span class="lbl">Acessibilidade audiovisual para curta-metragem</span>
           </div>
           <h1 class="rv d1">Acessibilidade profissional para <span class="gt">curta-metragem</span></h1>
-          <p class="hero-sub rv d2">Libras, LSE e audiodescrição para curtas com orçamento viável, escopo claro e entrega organizada para edital, festival ou circuito de exibição.</p>
+          <p class="hero-sub rv d2">Libras, LSE e audiodescrição para curtas — escopo claro, pacote por minutagem e entrega pronta para edital ou festival.</p>
           <div class="hero-pills rv d3" role="list">
             <span class="hero-pill" role="listitem">Libras com intérpretes reais</span>
             <span class="hero-pill" role="listitem">LSE com parceiros especializados</span>
@@ -534,7 +520,6 @@ section{padding:80px 0}
             <a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+quero+montar+um+pacote+de+acessibilidade+para+meu+curta-metragem!" target="_blank" rel="noopener noreferrer" class="btn bw">Montar pacote para meu curta</a>
             <a href="https://huet.libras.se/" target="_blank" rel="noopener noreferrer" class="btn bp">Enviar vídeo pelo HUET</a>
           </div>
-          <p class="hero-micro rv d5">Pacotes por minutagem &bull; Escopo simples &bull; Entrega pronta para edital ou festival</p>
         </div>
 
         <div class="rv d2" aria-label="Simulação de pacotes para curta-metragem">
@@ -584,28 +569,27 @@ section{padding:80px 0}
       <div class="sec-head rv">
         <span class="lbl sec-label">O desafio da pós-produção</span>
         <h2 class="sec-title" id="prob-title">Seu curta precisa chegar ao festival ou edital sem retrabalho</h2>
-        <p class="sec-sub">Em curtas-metragens, a equipe costuma trabalhar com verba menor, prazo curto e muitas decisões acumuladas na pós-produção. Quando a acessibilidade entra no fim do processo, surgem dúvidas sobre LSE, Libras, audiodescrição, arquivos finais, documentação e orçamento.</p>
       </div>
       <div class="prob-grid">
         <div class="prob-card rv d1">
-          <div class="prob-icon" aria-hidden="true">💰</div>
+          <div class="prob-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <h3>Verba menor</h3>
-          <p>A Libras.se ajuda a montar um pacote proporcional ao objetivo do curta, sem contratar recursos além do necessário.</p>
+          <p>Pacote proporcional ao objetivo do curta, sem contratar recursos além do necessário.</p>
         </div>
         <div class="prob-card rv d2">
-          <div class="prob-icon" aria-hidden="true">⏱</div>
+          <div class="prob-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <h3>Prazo apertado</h3>
-          <p>O fluxo centralizado reduz ruído entre etapas e ajuda a organizar prioridades antes da entrega.</p>
+          <p>Fluxo centralizado que reduz ruído entre etapas e organiza prioridades antes da entrega.</p>
         </div>
         <div class="prob-card rv d3">
-          <div class="prob-icon" aria-hidden="true">🗺</div>
+          <div class="prob-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
           <h3>Falta de orientação técnica</h3>
-          <p>A produtora informa o destino do filme e a Libras.se ajuda a estruturar o escopo adequado.</p>
+          <p>Informe o destino do filme e a Libras.se estrutura o escopo adequado.</p>
         </div>
         <div class="prob-card rv d4">
-          <div class="prob-icon" aria-hidden="true">🏆</div>
+          <div class="prob-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
           <h3>Festival ou edital exigindo acessibilidade</h3>
-          <p>A entrega pode ser ajustada conforme as exigências informadas pelo festival, edital ou circuito de exibição.</p>
+          <p>Entrega ajustada conforme as exigências do festival, edital ou circuito de exibição.</p>
         </div>
       </div>
     </div>
@@ -617,7 +601,6 @@ section{padding:80px 0}
       <div class="sec-head center rv">
         <span class="lbl sec-label">Como funciona</span>
         <h2 class="sec-title" id="flow-title">Um fluxo simples para deixar seu curta acessível</h2>
-        <p class="sec-sub">A Libras.se centraliza a produção dos recursos de acessibilidade do seu curta-metragem. Você envia a minutagem, o tipo de obra, o prazo e o destino da entrega. Nós organizamos o escopo, indicamos o pacote mais adequado e montamos uma proposta clara.</p>
       </div>
       <div class="flow-steps rv" role="list">
         <div class="flow-step" role="listitem">
@@ -685,7 +668,6 @@ section{padding:80px 0}
       </div>
 
       <div class="mid-cta rv">
-        <p style="font-size:.9rem;color:var(--txs);max-width:500px;text-align:center">Não sabe qual pacote escolher? Envie a minutagem e o destino do curta. A Libras.se monta a proposta adequada.</p>
         <div class="cta-wrap">
           <a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+quero+montar+um+pacote+para+meu+curta-metragem!" target="_blank" rel="noopener noreferrer" class="btn bw">Montar pacote para meu curta</a>
           <a href="https://huet.libras.se/" target="_blank" rel="noopener noreferrer" class="btn bt">Enviar vídeo pelo HUET</a>
@@ -704,24 +686,24 @@ section{padding:80px 0}
       </div>
       <div class="svcs-grid">
         <div class="svc-card rv d1">
-          <div class="svc-icon" aria-hidden="true">🤟</div>
+          <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
           <h3>Libras para curta-metragem</h3>
-          <p>Tradução em Libras com intérpretes reais, respeitando contexto, ritmo, vocabulário e linguagem audiovisual do curta. A Libras.se não usa avatar nem substitui intérpretes humanos por IA.</p>
+          <p>Intérpretes reais, respeitando ritmo e linguagem audiovisual do curta. Sem avatar, sem IA.</p>
         </div>
         <div class="svc-card rv d2">
-          <div class="svc-icon" aria-hidden="true">💬</div>
+          <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></svg></div>
           <h3>LSE para curta</h3>
-          <p>Legenda para Surdos e Ensurdecidos, com falas, identificação de personagens, sons relevantes, efeitos e informações auditivas importantes para a compreensão da obra.</p>
+          <p>Legenda para Surdos e Ensurdecidos com falas, identificação de personagens e sons relevantes da obra.</p>
         </div>
         <div class="svc-card rv d3">
-          <div class="svc-icon" aria-hidden="true">🎙</div>
+          <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></div>
           <h3>Audiodescrição para curta</h3>
-          <p>Roteiro e narração de audiodescrição pensados para preservar ritmo, atmosfera e narrativa do curta-metragem, tornando-o acessível a pessoas cegas ou com baixa visão.</p>
+          <p>Roteiro e narração que preservam ritmo, atmosfera e narrativa para pessoas cegas ou com baixa visão.</p>
         </div>
         <div class="svc-card rv d4">
-          <div class="svc-icon" aria-hidden="true">📁</div>
+          <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
           <h3>Organização técnica</h3>
-          <p>Apoio na organização dos arquivos finais conforme o destino do projeto, seja edital, festival, mostra, sala de exibição ou plataforma.</p>
+          <p>Arquivos finais organizados conforme o destino: edital, festival, mostra ou plataforma.</p>
         </div>
       </div>
     </div>
@@ -792,10 +774,8 @@ section{padding:80px 0}
       </div>
 
       <div class="price-libras-note rv">
-        Para Libras, usamos a base oficial da Libras.se: <strong>R$ 100/min</strong> na entrega em 7 dias, <strong>R$ 150/min</strong> na entrega em 24 horas e <strong>R$ 450/min</strong> na entrega em 1 hora. Em curtas-metragens, a escolha do prazo depende da data de inscrição, exibição ou entrega do edital.
+        Libras: <strong>R$ 100/min</strong> em 7 dias · <strong>R$ 150/min</strong> em 24 h · <strong>R$ 450/min</strong> em 1 h. Escolha o prazo conforme a data do edital ou inscrição.
       </div>
-
-      <p class="price-caveat rv">Um curta com muitos diálogos, música ou vozes sobrepostas pode exigir mais tratamento em LSE e audiodescrição. Já um curta contemplativo, com pausas longas ou poucos diálogos, pode ter outro nível de complexidade. A análise prévia evita escopo genérico e ajuda a montar uma proposta proporcional ao filme.</p>
 
       <div class="mid-cta rv">
         <div class="cta-wrap">
@@ -814,31 +794,28 @@ section{padding:80px 0}
         <div>
           <span class="lbl sec-label rv">Fluxo centralizado</span>
           <h2 class="sec-title rv d1" id="single-title">Libras, LSE e audiodescrição em uma proposta simples</h2>
-          <p class="sec-sub rv d2">Você não precisa contratar fornecedores separados para fechar a acessibilidade do seu curta. A Libras.se centraliza Libras, LSE e audiodescrição em uma única proposta, com organização de prazo, escopo e arquivos finais.</p>
-          <blockquote class="single-quote rv d3">
-            "A produção de LSE e audiodescrição pode ser realizada por parceiros técnicos especializados da Libras.se. Para o cliente, porém, o fluxo é único: um contrato, uma coordenação, um prazo e uma entrega centralizada com o padrão de qualidade Libras.se."
-          </blockquote>
+          <p class="sec-sub rv d2">Libras, LSE e audiodescrição em uma única proposta — um contrato, uma coordenação e uma entrega centralizada.</p>
         </div>
         <div class="single-cards">
           <div class="single-card rv d1">
-            <div class="single-card-icon" aria-hidden="true">📄</div>
+            <div class="single-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
             <h4>Um contrato</h4>
-            <p>A produtora, coletivo ou realizador negocia com a Libras.se e recebe uma proposta consolidada.</p>
+            <p>Proposta consolidada para a produtora, coletivo ou realizador.</p>
           </div>
           <div class="single-card rv d2">
-            <div class="single-card-icon" aria-hidden="true">🎯</div>
+            <div class="single-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
             <h4>Uma coordenação</h4>
             <p>A Libras.se organiza o fluxo entre intérpretes, parceiros técnicos e entrega final.</p>
           </div>
           <div class="single-card rv d3">
-            <div class="single-card-icon" aria-hidden="true">📅</div>
+            <div class="single-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
             <h4>Um prazo</h4>
-            <p>O cronograma é tratado de forma centralizada, reduzindo ruído e risco de atraso.</p>
+            <p>Cronograma centralizado, reduzindo ruído e risco de atraso.</p>
           </div>
           <div class="single-card rv d4">
-            <div class="single-card-icon" aria-hidden="true">⭐</div>
+            <div class="single-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             <h4>Um padrão de qualidade</h4>
-            <p>Mesmo quando há parceiros técnicos, a entrega segue o padrão de atendimento e revisão da Libras.se.</p>
+            <p>Entrega com padrão de atendimento e revisão da Libras.se, mesmo com parceiros técnicos.</p>
           </div>
         </div>
       </div>
@@ -855,17 +832,11 @@ section{padding:80px 0}
           <p class="sec-sub rv d2">Se o seu curta precisa comprovar acessibilidade, apresentar orçamento, descrever recursos ou organizar arquivos dentro das exigências de um edital ou festival, a Libras.se ajuda a estruturar esse processo com clareza.</p>
           <ul class="editais-bullets rv d3" aria-label="O que a Libras.se oferece para editais e festivais">
             <li class="editais-bullet">Orçamento por minutagem</li>
-            <li class="editais-bullet">Escopo claro e documentado</li>
-            <li class="editais-bullet">Descrição objetiva dos serviços</li>
-            <li class="editais-bullet">Proposta consolidada</li>
-            <li class="editais-bullet">Entrega organizada</li>
-            <li class="editais-bullet">Apoio na definição dos recursos necessários</li>
-            <li class="editais-bullet">Compatibilidade com prazos de pós-produção</li>
+            <li class="editais-bullet">Proposta consolidada com escopo claro</li>
+            <li class="editais-bullet">Entrega organizada conforme cada edital</li>
             <li class="editais-bullet">Atendimento remoto para todo o Brasil</li>
+            <li class="editais-bullet">Compatível com prazos de pós-produção</li>
           </ul>
-          <div class="editais-note rv d4">
-            <strong>Atenção:</strong> as exigências podem variar conforme edital, festival, mostra, distribuidora ou plataforma. Por isso, a proposta final considera os requisitos específicos informados pela produção.
-          </div>
           <div style="margin-top:24px" class="rv d5">
             <a href="https://wa.me/5548996367511?text=Quero+montar+uma+proposta+de+acessibilidade+para+meu+edital!" target="_blank" rel="noopener noreferrer" class="btn bw">Montar proposta para meu edital</a>
           </div>
@@ -875,28 +846,28 @@ section{padding:80px 0}
             <div class="editais-step-num" aria-hidden="true">1</div>
             <div>
               <h4>Informe o edital ou festival</h4>
-              <p>Compartilhe as exigências de acessibilidade do edital ou as regras do festival.</p>
+              <p>Compartilhe as exigências e regras de acessibilidade.</p>
             </div>
           </div>
           <div class="editais-step rv d2">
             <div class="editais-step-num" aria-hidden="true">2</div>
             <div>
               <h4>Defina a minutagem e o prazo</h4>
-              <p>A proposta é construída com base na duração real do curta e na data-limite.</p>
+              <p>Proposta construída com base na duração real e na data-limite.</p>
             </div>
           </div>
           <div class="editais-step rv d3">
             <div class="editais-step-num" aria-hidden="true">3</div>
             <div>
               <h4>Receba a proposta consolidada</h4>
-              <p>Um documento com escopo, preço e prazo — pronto para apresentar no edital.</p>
+              <p>Escopo, preço e prazo — pronto para apresentar no edital.</p>
             </div>
           </div>
           <div class="editais-step rv d4">
             <div class="editais-step-num" aria-hidden="true">4</div>
             <div>
               <h4>Produção e entrega organizadas</h4>
-              <p>A Libras.se coordena a produção e entrega os arquivos conforme o destino informado.</p>
+              <p>Arquivos entregues conforme o destino informado pela produção.</p>
             </div>
           </div>
         </div>
@@ -914,27 +885,26 @@ section{padding:80px 0}
       </div>
       <div class="entrega-grid">
         <div class="entrega-card rv d1">
-          <div class="entrega-icon" aria-hidden="true">🏛</div>
+          <div class="entrega-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></div>
           <h4>Editais municipais e estaduais</h4>
         </div>
         <div class="entrega-card rv d2">
-          <div class="entrega-icon" aria-hidden="true">🎭</div>
+          <div class="entrega-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
           <h4>Festivais e mostras</h4>
         </div>
         <div class="entrega-card rv d3">
-          <div class="entrega-icon" aria-hidden="true">🎬</div>
+          <div class="entrega-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z"/><path d="m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z"/><path d="m6.6 4.99 3.38 4.2"/><path d="m11.86 3.38 3.38 4.2"/></svg></div>
           <h4>Sala de exibição</h4>
         </div>
         <div class="entrega-card rv d4">
-          <div class="entrega-icon" aria-hidden="true">💻</div>
+          <div class="entrega-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
           <h4>Plataformas digitais</h4>
         </div>
         <div class="entrega-card rv d5">
-          <div class="entrega-icon" aria-hidden="true">📋</div>
+          <div class="entrega-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
           <h4>Prestação de contas</h4>
         </div>
       </div>
-      <p class="entrega-note rv">Os formatos finais podem ser ajustados conforme as exigências do edital, festival, distribuidora ou plataforma.</p>
     </div>
   </section>
 
@@ -945,62 +915,37 @@ section{padding:80px 0}
         <div>
           <span class="lbl sec-label rv">Quem somos</span>
           <h2 class="sec-title rv d1" id="auth-title">Acessibilidade audiovisual com padrão Libras.se</h2>
-          <p class="sec-sub rv d2">A Libras.se nasceu para tornar a produção de acessibilidade mais simples, rápida e organizada. Unimos tecnologia, rede de intérpretes reais e parceiros técnicos especializados para atender projetos audiovisuais com clareza de escopo, prazo e entrega.</p>
+          <p class="sec-sub rv d2">Intérpretes reais, parceiros técnicos especializados e fluxo digital para atender projetos audiovisuais com clareza de escopo, prazo e entrega.</p>
           <div class="auth-points rv d3">
             <span class="auth-point">Intérpretes reais</span>
             <span class="auth-point">Atendimento nacional</span>
-            <span class="auth-point">Fluxo digital de envio</span>
             <span class="auth-point">Plataforma HUET</span>
             <span class="auth-point">Proposta por minutagem</span>
             <span class="auth-point">Coordenação centralizada</span>
             <span class="auth-point">Parceiros técnicos especializados</span>
-            <span class="auth-point">Entrega com organização técnica</span>
           </div>
         </div>
-        <div class="auth-visual rv d2">
-          <div class="auth-stat">
-            <div class="auth-stat-num gt">+340</div>
-            <div class="auth-stat-label">conteúdos acessibilizados</div>
-          </div>
-          <div class="auth-stat">
-            <div class="auth-stat-num gt">100%</div>
-            <div class="auth-stat-label">intérpretes humanos — sem avatar, sem IA</div>
-          </div>
-          <div class="auth-stat">
-            <div class="auth-stat-num gt">Brasil</div>
-            <div class="auth-stat-label">atendimento remoto para todo o país</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── COMPARAÇÃO ── -->
-  <section aria-labelledby="compare-title">
-    <div class="w">
-      <div class="sec-head center rv">
-        <span class="lbl sec-label">Por que a Libras.se</span>
-        <h2 class="sec-title" id="compare-title">Menos fornecedores. Mais controle sobre a entrega.</h2>
-      </div>
-      <div class="compare-grid">
-        <div class="compare-col bad rv d1">
-          <h3>Contratação separada</h3>
-          <div class="compare-items">
-            <div class="compare-item"><div class="compare-dot-bad" aria-hidden="true">✕</div>Vários contatos e contratos</div>
-            <div class="compare-item"><div class="compare-dot-bad" aria-hidden="true">✕</div>Vários prazos para coordenar</div>
-            <div class="compare-item"><div class="compare-dot-bad" aria-hidden="true">✕</div>Comunicação fragmentada</div>
-            <div class="compare-item"><div class="compare-dot-bad" aria-hidden="true">✕</div>Maior risco de retrabalho</div>
-            <div class="compare-item"><div class="compare-dot-bad" aria-hidden="true">✕</div>Dificuldade de consolidar arquivos</div>
-          </div>
-        </div>
-        <div class="compare-col good rv d2">
-          <h3>Com a Libras.se</h3>
-          <div class="compare-items">
-            <div class="compare-item"><div class="compare-dot-good" aria-hidden="true">✓</div>Uma proposta, um contrato</div>
-            <div class="compare-item"><div class="compare-dot-good" aria-hidden="true">✓</div>Uma coordenação, um prazo</div>
-            <div class="compare-item"><div class="compare-dot-good" aria-hidden="true">✓</div>Libras, LSE e audiodescrição no mesmo fluxo</div>
-            <div class="compare-item"><div class="compare-dot-good" aria-hidden="true">✓</div>Pacote proporcional à minutagem do curta</div>
-            <div class="compare-item"><div class="compare-dot-good" aria-hidden="true">✓</div>Entrega organizada e centralizada</div>
+        <div>
+          <img
+            src="/assets/img/banco-editorial/LIBRAS.SE_4.webp"
+            alt="Intérprete de Libras sorrindo e sinalizando em estúdio com camiseta da Libras.se"
+            class="auth-photo rv d1"
+            loading="lazy"
+            width="560"
+            height="420">
+          <div class="auth-stats rv d2">
+            <div class="auth-stat">
+              <div class="auth-stat-num gt">+340</div>
+              <div class="auth-stat-label">conteúdos acessibilizados</div>
+            </div>
+            <div class="auth-stat">
+              <div class="auth-stat-num gt">100%</div>
+              <div class="auth-stat-label">intérpretes humanos</div>
+            </div>
+            <div class="auth-stat">
+              <div class="auth-stat-num gt">BR</div>
+              <div class="auth-stat-label">atendimento em todo o país</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1018,11 +963,11 @@ section{padding:80px 0}
 
         <div class="faq-item rv" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
-            O que é acessibilidade para curta-metragem?
+            Quanto custa acessibilizar um curta de 15 minutos?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
-            Acessibilidade para curta-metragem envolve recursos como Libras, LSE (Legenda para Surdos e Ensurdecidos) e audiodescrição, que tornam o curta acessível a pessoas surdas, ensurdecidas, cegas ou com baixa visão.
+            Estimativa preliminar para o pacote completo (Libras + LSE + audiodescrição): R$ 3.045. Libras a R$ 100/min, LSE a R$ 28/min, audiodescrição a R$ 75/min. O valor final depende da análise da obra.
           </div>
         </div>
 
@@ -1032,107 +977,57 @@ section{padding:80px 0}
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
-            Depende do edital, festival, plataforma, distribuidora ou estratégia de acessibilidade do projeto. A Libras.se ajuda a definir o escopo adequado conforme o destino do seu curta.
+            Depende do edital, festival ou estratégia do projeto. A Libras.se ajuda a definir o escopo adequado conforme o destino do seu curta.
           </div>
         </div>
 
         <div class="faq-item rv d2" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
-            Quanto custa acessibilizar um curta de 15 minutos?
+            Posso contratar apenas LSE para meu curta?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
-            Uma estimativa preliminar para um curta de 15 minutos com Libras, LSE e audiodescrição é de R$ 3.045, considerando Libras a R$ 100/min, LSE a R$ 28/min e audiodescrição a R$ 75/min. O valor final depende da análise da obra.
+            Sim. O pacote Essencial é indicado para projetos com verba reduzida ou exigência específica de legenda LSE.
           </div>
         </div>
 
         <div class="faq-item rv d3" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
-            Posso contratar apenas LSE para meu curta?
+            O que é LSE para curta?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
-            Sim. O pacote Essencial é indicado para projetos com verba reduzida ou com exigência específica de legenda LSE. Você pode contratar apenas o recurso que faz sentido para o seu curta.
+            LSE vai além da legenda comum: inclui falas, identificação de personagens e sons relevantes como efeitos sonoros, trilha e ruídos importantes para a compreensão da obra.
           </div>
         </div>
 
         <div class="faq-item rv d4" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
-            O que é LSE para curta?
+            A entrega serve para festivais e editais?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
-            LSE é a Legenda para Surdos e Ensurdecidos. Ela vai além da legenda comum ao incluir falas, identificação de personagens e sons relevantes como efeitos sonoros, trilha e ruídos de ambiente importantes para a compreensão da obra.
+            Sim. Os formatos finais são ajustados conforme as exigências do festival, mostra, edital ou plataforma informados pela produção.
           </div>
         </div>
 
         <div class="faq-item rv" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
-            O que é audiodescrição para curta-metragem?
+            A tradução em Libras é feita por intérpretes reais?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
           <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
-            Audiodescrição descreve elementos visuais relevantes para pessoas cegas ou com baixa visão, respeitando o ritmo, a atmosfera e a narrativa do curta-metragem.
+            Sim. A Libras.se trabalha com intérpretes reais. A tecnologia organiza gravação, envio e entrega — não substitui pessoas.
           </div>
         </div>
 
         <div class="faq-item rv d1" role="listitem">
           <button class="faq-q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
-            A Libras.se atende projetos aprovados em edital municipal ou estadual?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">
-            Sim. A Libras.se oferece orçamento por minutagem, escopo claro e proposta consolidada para projetos aprovados em editais municipais, estaduais ou federais, com atendimento remoto para todo o Brasil.
-          </div>
-        </div>
-
-        <div class="faq-item rv d2" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">
-            A entrega serve para festivais de curta-metragem?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8">
-            Os formatos finais podem ser ajustados conforme as exigências do festival, mostra, edital ou plataforma informados pela produção.
-          </div>
-        </div>
-
-        <div class="faq-item rv d3" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">
-            Posso contratar Libras, LSE e audiodescrição em um único pacote?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9">
-            Sim. O pacote Completo centraliza Libras, LSE e audiodescrição em uma única proposta, com um contrato, uma coordenação e uma entrega.
-          </div>
-        </div>
-
-        <div class="faq-item rv d4" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a10" id="faq-q10">
-            LSE e audiodescrição são feitas pela Libras.se?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a" id="faq-a10" role="region" aria-labelledby="faq-q10">
-            LSE e audiodescrição podem ser realizadas por parceiros técnicos especializados da Libras.se. Para o cliente, o contrato, a coordenação, o prazo e a entrega são centralizados pela Libras.se.
-          </div>
-        </div>
-
-        <div class="faq-item rv" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a11" id="faq-q11">
-            A tradução em Libras é feita por intérpretes reais?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a" id="faq-a11" role="region" aria-labelledby="faq-q11">
-            Sim. A Libras.se trabalha com intérpretes reais e não usa avatar ou IA para substituir intérpretes humanos. A tecnologia é usada para organizar gravação, envio, revisão e entrega — não para substituir pessoas.
-          </div>
-        </div>
-
-        <div class="faq-item rv d1" role="listitem">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq-a12" id="faq-q12">
             Como envio meu curta para orçamento?
             <span class="faq-chevron" aria-hidden="true">▼</span>
           </button>
-          <div class="faq-a" id="faq-a12" role="region" aria-labelledby="faq-q12">
-            Envie a minutagem, o tipo de obra, o prazo, o destino da entrega e, quando possível, o arquivo ou trecho de referência pelo HUET (huet.libras.se) ou pelo WhatsApp. A Libras.se retorna com uma proposta ajustada ao seu curta.
+          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">
+            Envie a minutagem, o tipo de obra, o prazo e o destino da entrega pelo HUET (huet.libras.se) ou pelo WhatsApp. A Libras.se retorna com uma proposta ajustada.
           </div>
         </div>
 

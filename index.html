@@ -393,12 +393,17 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .nc:hover{box-shadow:var(--shm);border-color:rgba(79,209,197,.35);transform:translateY(-1px)}
 .map-outer{position:relative}
 .map-blob{position:absolute;inset:-24px;border-radius:52% 58% 48% 55%;background:rgba(79,209,197,.055);border:1px solid rgba(79,209,197,.1);pointer-events:none}
-.map-wrap{position:relative;width:100%;max-width:460px;margin:0 auto;aspect-ratio:500/504;overflow:hidden}
-.map-img-el{width:100%;height:100%;object-fit:fill;display:block;position:relative;z-index:2;filter:drop-shadow(0 8px 30px rgba(10,34,37,.18))}
-.pins{position:absolute;inset:0;z-index:3}
-.pin{position:absolute;cursor:pointer;display:flex;align-items:center;gap:6px}
+.map-wrap{position:relative;width:100%;max-width:460px;margin:0 auto}
+/* map-stage: aspect-ratio exato do viewBox do SVG (0 0 500 560) — garante que imagem e camada de pins compartilhem o mesmo sistema de coordenadas sem distorção */
+.map-stage{position:relative;width:100%;aspect-ratio:500/560}
+.map-img-el{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;z-index:2;filter:drop-shadow(0 8px 30px rgba(10,34,37,.18))}
+.pins{position:absolute;inset:0;z-index:3;pointer-events:none}
+.pin{position:absolute;left:var(--px,50%);top:var(--py,50%);transform:translate(-50%,-50%);cursor:pointer;display:flex;align-items:center;gap:6px;pointer-events:all}
+.pin.pl{transform:translate(-100%,-50%)}
+.pin.pr{transform:translate(0,-50%)}
 .pin-body{display:flex;align-items:center;gap:6px}
 .pin.pt .pin-body{flex-direction:column-reverse;gap:3px;align-items:center}
+/* animação só no pring — não altera a posição base do .pin */
 .pdot{width:9px;height:9px;border-radius:50%;background:var(--teal-d);flex-shrink:0;position:relative;box-shadow:0 0 0 3px rgba(79,209,197,.22)}
 .pdot .pring{position:absolute;inset:-4px;border-radius:50%;background:rgba(79,209,197,.28);animation:pingDot 2s ease-out infinite}
 .pname{font-size:.59rem;font-weight:700;color:var(--p2);background:rgba(255,255,255,.9);backdrop-filter:blur(8px);padding:2px 7px;border-radius:5px;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.08)}
@@ -937,23 +942,25 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
       <div class="map-outer rv rr d1">
         <div class="map-blob" aria-hidden="true"></div>
         <div class="map-wrap">
-          <img class="map-img-el" src="assets/img/home/brazil-map.svg" alt="Mapa do Brasil com cidades onde a Libras.se atua" width="500" height="504" loading="lazy" decoding="async"/>
-          <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
-          <div class="pin" style="top:7.84%;left:30.32%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
-          <div class="pin" style="top:22.47%;left:31.70%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>
-          <div class="pin" style="top:18.39%;left:56.22%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Belém</span></div></div>
-          <div class="pin" style="top:24.00%;left:77.38%;transform:translate(-100%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Fortaleza</span></div></div>
-          <div class="pin" style="top:32.40%;left:85.18%;transform:translate(-100%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">João Pessoa</span></div></div>
-          <div class="pin" style="top:46.86%;left:77.42%;transform:translate(-100%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Salvador</span></div></div>
-          <div class="pin" style="top:36.46%;left:23.45%;transform:translate(0,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Porto Velho</span></div></div>
-          <div class="pin pt" style="top:53.81%;left:57.41%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Brasília</span></div></div>
-          <div class="pin" style="top:56.01%;left:54.58%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Goiânia</span></div></div>
-          <div class="pin" style="top:64.04%;left:65.89%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">BH</span></div></div>
-          <div class="pin" style="top:71.43%;left:67.53%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Rio</span></div></div>
-          <div class="pin" style="top:73.01%;left:60.17%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">SP</span></div></div>
-          <div class="pin pt" style="top:77.65%;left:54.56%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Curitiba</span></div></div>
-          <div class="pin" style="top:83.02%;left:56.09%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Floripa</span></div></div>
-          <div class="pin" style="top:89.02%;left:50.39%;transform:translate(-50%,-50%)"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">POA</span></div></div>
+          <div class="map-stage">
+            <img class="map-img-el" src="assets/img/home/brazil-map.svg" alt="Mapa do Brasil com cidades onde a Libras.se atua" width="500" height="560" loading="lazy" decoding="async"/>
+            <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
+              <div class="pin" style="--px:30.32%;--py:7.84%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
+              <div class="pin" style="--px:31.70%;--py:22.47%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>
+              <div class="pin" style="--px:56.22%;--py:18.39%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Belém</span></div></div>
+              <div class="pin pl" style="--px:77.38%;--py:24.00%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Fortaleza</span></div></div>
+              <div class="pin pl" style="--px:85.18%;--py:32.40%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">João Pessoa</span></div></div>
+              <div class="pin pl" style="--px:77.42%;--py:46.86%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Salvador</span></div></div>
+              <div class="pin pr" style="--px:23.45%;--py:36.46%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Porto Velho</span></div></div>
+              <div class="pin pt" style="--px:57.41%;--py:53.81%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Brasília</span></div></div>
+              <div class="pin" style="--px:54.58%;--py:56.01%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Goiânia</span></div></div>
+              <div class="pin" style="--px:65.89%;--py:64.04%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">BH</span></div></div>
+              <div class="pin" style="--px:67.53%;--py:71.43%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Rio</span></div></div>
+              <div class="pin" style="--px:60.17%;--py:73.01%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">SP</span></div></div>
+              <div class="pin pt" style="--px:54.56%;--py:77.65%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Curitiba</span></div></div>
+              <div class="pin" style="--px:56.09%;--py:83.02%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Floripa</span></div></div>
+              <div class="pin" style="--px:50.39%;--py:89.02%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">POA</span></div></div>
+            </div>
           </div>
         </div>
       </div>

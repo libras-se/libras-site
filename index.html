@@ -660,11 +660,13 @@ details.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--teal-d
   .faq-body{padding:0 18px 18px}
 }
 picture{display:block}.li picture,.press-logo-link picture{display:contents}.map-wrap>picture{display:block;width:100%}.bento-hero-map-wrap{display:contents}
-#explore{padding:88px 0;background:linear-gradient(135deg,#14532d 0%,#166534 50%,#22c55e 100%);position:relative;z-index:1}
+#explore{padding:88px 0;background:var(--gc);position:relative;z-index:1}
 .explore-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1060px;margin:0 auto}
 .explore-card{display:flex;flex-direction:column;padding:32px 26px;border-radius:var(--rxl);transition:var(--tr);text-decoration:none;color:inherit}
 .explore-card:hover{transform:translateY(-6px)}
-.explore-card-ico{font-size:2rem;margin-bottom:14px;display:block}
+.explore-card-ico{width:52px;height:52px;border-radius:14px;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:var(--tr);color:var(--teal-d);flex-shrink:0}
+.explore-card:hover .explore-card-ico{background:rgba(79,209,197,.2);transform:scale(1.06)}
+.explore-card-ico svg{width:24px;height:24px;stroke:var(--teal-d);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .explore-card-title{font-family:'M',sans-serif;font-weight:900;font-size:1.1rem;color:var(--p1);margin-bottom:8px;letter-spacing:-.02em}
 .explore-card-desc{font-size:.82rem;font-weight:300;color:var(--txs);line-height:1.7;flex:1;margin-bottom:16px}
 .explore-card-cta{font-size:.8rem;font-weight:700;color:var(--teal-d)}
@@ -1278,25 +1280,25 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
     </div>
     <div class="explore-grid">
       <a href="https://libras.se/blog" target="_blank" rel="noopener noreferrer" class="explore-card glass rv d1" aria-label="Ir para o Blog do Libras.se">
-        <span class="explore-card-ico" aria-hidden="true">✍️</span>
+        <span class="explore-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span>
         <div class="explore-card-title">Blog</div>
         <div class="explore-card-desc">Conteúdo sobre Libras, acessibilidade e inclusão para o seu dia a dia.</div>
         <span class="explore-card-cta">Ler artigos →</span>
       </a>
       <a href="/jogo/" class="explore-card glass rv d2" aria-label="Jogar o jogo de Libras">
-        <span class="explore-card-ico" aria-hidden="true">🎮</span>
+        <span class="explore-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="6"/><path d="M6 12h4M8 10v4M16 11h.01M18 13h.01"/></svg></span>
         <div class="explore-card-title">Jogo de Libras</div>
         <div class="explore-card-desc">Aprenda sinais de forma divertida e interativa. Ideal para iniciantes.</div>
         <span class="explore-card-cta">Jogar agora →</span>
       </a>
       <a href="/sinal/" class="explore-card glass rv d3" aria-label="Descobrir os sinais em Libras">
-        <span class="explore-card-ico" aria-hidden="true">🤟</span>
+        <span class="explore-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 00-4 0M14 10.5V4a2 2 0 00-4 0v1M10 10.5V6a2 2 0 00-4 0v8a6 6 0 0012 0v-2a2 2 0 00-4 0"/></svg></span>
         <div class="explore-card-title">Vocabulário</div>
         <div class="explore-card-desc">Descubra os sinais — explore o vocabulário completo em Libras.</div>
         <span class="explore-card-cta">Ver sinais →</span>
       </a>
       <a href="/glossario/" class="explore-card glass rv d4" aria-label="Acessar o glossário de Libras">
-        <span class="explore-card-ico" aria-hidden="true">📖</span>
+        <span class="explore-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></span>
         <div class="explore-card-title">Glossário</div>
         <div class="explore-card-desc">Termos em Libras que você precisa conhecer. Referência completa.</div>
         <span class="explore-card-cta">Explorar glossário →</span>

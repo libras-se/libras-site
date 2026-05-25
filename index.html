@@ -398,7 +398,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .map-stage{position:relative;width:100%;aspect-ratio:500/560}
 .map-img-el{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;z-index:2;filter:drop-shadow(0 8px 30px rgba(10,34,37,.18))}
 .pins{position:absolute;inset:0;z-index:3;pointer-events:none}
-.pin{position:absolute;left:var(--px,50%);top:var(--py,50%);transform:translate(-50%,-50%);cursor:pointer;display:flex;align-items:center;gap:6px;pointer-events:all}
+.pin{position:absolute;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);cursor:pointer;display:flex;align-items:center;gap:6px;pointer-events:all}
 .pin.pl{transform:translate(-100%,-50%)}
 .pin.pr{transform:translate(0,-50%)}
 .pin-body{display:flex;align-items:center;gap:6px}
@@ -945,21 +945,21 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
           <div class="map-stage">
             <img class="map-img-el" src="assets/img/home/brazil-map.svg" alt="Mapa do Brasil com cidades onde a Libras.se atua" width="500" height="560" loading="lazy" decoding="async"/>
             <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
-              <div class="pin" style="--px:30.32%;--py:7.84%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
-              <div class="pin" style="--px:31.70%;--py:22.47%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>
-              <div class="pin" style="--px:56.22%;--py:18.39%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Belém</span></div></div>
-              <div class="pin pl" style="--px:77.38%;--py:24.00%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Fortaleza</span></div></div>
-              <div class="pin pl" style="--px:85.18%;--py:32.40%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">João Pessoa</span></div></div>
-              <div class="pin pl" style="--px:77.42%;--py:46.86%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Salvador</span></div></div>
-              <div class="pin pr" style="--px:23.45%;--py:36.46%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Porto Velho</span></div></div>
-              <div class="pin pt" style="--px:57.41%;--py:53.81%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Brasília</span></div></div>
-              <div class="pin" style="--px:54.58%;--py:56.01%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Goiânia</span></div></div>
-              <div class="pin" style="--px:65.89%;--py:64.04%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">BH</span></div></div>
-              <div class="pin" style="--px:67.53%;--py:71.43%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Rio</span></div></div>
-              <div class="pin" style="--px:60.17%;--py:73.01%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">SP</span></div></div>
-              <div class="pin pt" style="--px:54.56%;--py:77.65%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Curitiba</span></div></div>
-              <div class="pin" style="--px:56.09%;--py:83.02%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Floripa</span></div></div>
-              <div class="pin" style="--px:50.39%;--py:89.02%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">POA</span></div></div>
+              <div class="pin" style="--x:30.77%;--y:8.16%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
+              <div class="pin" style="--x:32.16%;--y:22.68%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>
+              <div class="pin" style="--x:56.72%;--y:18.63%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Belém</span></div></div>
+              <div class="pin pl" style="--x:77.92%;--y:24.2%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Fortaleza</span></div></div>
+              <div class="pin pl" style="--x:85.73%;--y:32.54%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">João Pessoa</span></div></div>
+              <div class="pin pl" style="--x:77.96%;--y:46.89%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Salvador</span></div></div>
+              <div class="pin pr" style="--x:23.89%;--y:36.56%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Porto Velho</span></div></div>
+              <div class="pin pt" style="--x:57.91%;--y:53.78%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Brasília</span></div></div>
+              <div class="pin" style="--x:55.08%;--y:55.96%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Goiânia</span></div></div>
+              <div class="pin" style="--x:66.41%;--y:63.93%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">BH</span></div></div>
+              <div class="pin" style="--x:68.05%;--y:71.27%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Rio</span></div></div>
+              <div class="pin" style="--x:60.68%;--y:72.84%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">SP</span></div></div>
+              <div class="pin pt" style="--x:55.06%;--y:77.45%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Curitiba</span></div></div>
+              <div class="pin" style="--x:56.59%;--y:82.77%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Floripa</span></div></div>
+              <div class="pin" style="--x:50.88%;--y:88.73%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">POA</span></div></div>
             </div>
           </div>
         </div>

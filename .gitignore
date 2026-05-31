@@ -1,3 +1,40 @@
+# macOS / editor noise
 .DS_Store
+**/.DS_Store
+*.code-workspace
+
+# Local dependencies, logs and build/cache output
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.tmp/
+dist/
+build/
+
+# AI / agent / local assistant workspaces
+.agents/
+.claude/
+.cursor/
+CLAUDE.md
+blog/CLAUDE.md
+blog/CLAUDE 2.md
+skills-lock.json
+
+# Editorial drafts, migration exports, prompts and templates
+blog/**/prompt-claude.md
+blog/**/post antigo*
+blog/**/texto antigo
+blog/template-blog.php
+blog/template-blog-home-v2.php
+blog/old-libras-se-blog-export.json
+scripts/
+
+# Generated OG workspace
 og/.tmp/
+
+# Local/private docs not needed for GitHub Pages
+libras.se-site.code-workspace
+politica/*.docx

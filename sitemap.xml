@@ -2,301 +2,343 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://libras.se/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://libras.se/solucoes/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/orcamento/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://libras.se/produtos/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://libras.se/orcamento/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://libras.se/libras-para-empresas/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://libras.se/acessibilidade-para-curta-metragem/acessibilidade-para-curta-metragem.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://libras.se/libras-para-publicidade/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/libras-para-videoaulas/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/acessibilidade-para-curta-metragem/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/acessibilidade-para-longa-metragem/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/acessibilidade-para-documentario/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/acessibilidade-para-serie/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/acessibilidade-para-festival-de-cinema/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/tecnologia/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/portfolio/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/trabalhos/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/proposito/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/sejatils/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/politica/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://libras.se/jogo/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/sinal/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/sinal/desculpa/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/garantir-libras-sem-improviso/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/libras-tem-sotaque-e-giria/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/videoaulas-acessiveis-com-libras/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/voce-sabe-o-que-e-datilologia/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/acessibilidade-audiovisual/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/audiodescricao/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/bilinguismo/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/comunidade-surda/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/configuracao-de-mao/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/datilologia/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/decreto-5626/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/espaco-de-sinalizacao/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/expressao-nao-manual/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/feneis/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/glosa/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/ines/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/interpretacao-remota/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/interpretacao-simultanea/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/janela-de-libras/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/lbi/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/lei-10436/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/libras/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/lse/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/movimento/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/orientacao-de-mao/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/ponto-de-articulacao/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/populacao-surda/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/glossario/populacao-surda-107-milhoes/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/sinal-soletrado/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/surdo/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/glossario/til-tils/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

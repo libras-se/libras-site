@@ -1,0 +1,149 @@
+{
+  "_comment": "Manifesto do sistema de imagens sociais (OG) do Libras.se. Cada entrada vira /assets/img/og/<slug>.webp e é injetada nas meta tags da página. theme: sempre 'light' (fundo claro). Título = lead + accent (em degradê) + tail. Sem travessões. Mantenha o título curto p/ legibilidade no WhatsApp. Rode: npm run og -- --skip=jogo,glossario",
+  "pages": [
+    {
+      "slug": "home", "page": "index.html", "theme": "light",
+      "eyebrow": "Plataforma de acessibilidade",
+      "lead": "A tradução em Libras", "accent": "mais ágil", "tail": "do Brasil",
+      "badge": "Vídeos para todos"
+    },
+    {
+      "slug": "libras-ao-vivo", "page": "libras-ao-vivo/index.html", "theme": "light",
+      "eyebrow": "Libras remota · TV e eventos",
+      "lead": "Libras ao vivo", "accent": "para TV, eventos e lives", "tail": "",
+      "badge": "Latência mínima · escala ilimitada"
+    },
+    {
+      "slug": "libras-para-campanhas-politicas", "page": "libras-para-campanhas-politicas/index.html", "theme": "light",
+      "eyebrow": "Propaganda eleitoral acessível",
+      "lead": "Libras em", "accent": "ritmo de campanha", "tail": "",
+      "badge": "Entrega expressa em 1h"
+    },
+    {
+      "slug": "libras-para-empresas", "page": "libras-para-empresas/index.html", "theme": "light",
+      "eyebrow": "Comunicação interna",
+      "lead": "Comunicação", "accent": "acessível", "tail": "para toda a equipe",
+      "badge": "Libras · LSE · audiodescrição"
+    },
+    {
+      "slug": "libras-para-publicidade", "page": "libras-para-publicidade/index.html", "theme": "light",
+      "eyebrow": "Realidade de agência",
+      "lead": "A janela de Libras", "accent": "entrega em 1 hora", "tail": "",
+      "badge": "Pronta para ir ao ar"
+    },
+    {
+      "slug": "libras-para-videoaulas", "page": "libras-para-videoaulas/index.html", "theme": "light",
+      "eyebrow": "Acessibilidade para EAD",
+      "lead": "Videoaulas acessíveis em", "accent": "Libras, LSE e audiodescrição", "tail": "",
+      "badge": "Glossário por disciplina"
+    },
+    {
+      "slug": "acessibilidade-para-curta-metragem", "page": "acessibilidade-para-curta-metragem/index.html", "theme": "light",
+      "eyebrow": "Cinema acessível · Curta",
+      "lead": "Acessibilidade profissional para", "accent": "curta-metragem", "tail": "",
+      "badge": "Libras · LSE · audiodescrição"
+    },
+    {
+      "slug": "acessibilidade-para-longa-metragem", "page": "acessibilidade-para-longa-metragem/index.html", "theme": "light",
+      "eyebrow": "Cinema acessível · Longa",
+      "lead": "Acessibilidade completa para", "accent": "longa-metragem", "tail": "",
+      "badge": "Libras · LSE · audiodescrição"
+    },
+    {
+      "slug": "acessibilidade-para-documentario", "page": "acessibilidade-para-documentario/index.html", "theme": "light",
+      "eyebrow": "Cinema acessível · Documentário",
+      "lead": "Acessibilidade que respeita a", "accent": "narrativa", "tail": "do documentário",
+      "badge": "Cuidado narrativo e cultural"
+    },
+    {
+      "slug": "acessibilidade-para-festival-de-cinema", "page": "acessibilidade-para-festival-de-cinema/index.html", "theme": "light",
+      "eyebrow": "Cinema acessível · Festival",
+      "lead": "Toda a programação", "accent": "acessível", "tail": "para todo o público",
+      "badge": "Escala de festival"
+    },
+    {
+      "slug": "acessibilidade-para-serie", "page": "acessibilidade-para-serie/index.html", "theme": "light",
+      "eyebrow": "Cinema acessível · Séries",
+      "lead": "Acessibilidade escalável para", "accent": "séries e TV", "tail": "",
+      "badge": "Padrão em todos os episódios"
+    },
+    {
+      "slug": "acessibilidade-para-projetos-culturais", "page": "acessibilidade-para-projetos-culturais/index.html", "theme": "light",
+      "eyebrow": "Cultura acessível · Editais",
+      "lead": "Acessibilidade para", "accent": "projetos culturais", "tail": "",
+      "badge": "Libras · audiodescrição · LSE"
+    },
+    {
+      "slug": "produtos", "page": "produtos/index.html", "theme": "light",
+      "eyebrow": "O que oferecemos",
+      "lead": "Produtos em", "accent": "Libras", "tail": "para cada formato",
+      "badge": "Vídeo · ao vivo · videoaulas"
+    },
+    {
+      "slug": "trabalhos", "page": "trabalhos/index.html", "theme": "light",
+      "eyebrow": "Quem já confiou no Libras.se",
+      "lead": "Trabalhos de", "accent": "interpretação em Libras", "tail": "",
+      "badge": "Itaú, Nubank, Salesforce e mais"
+    },
+    {
+      "slug": "solucoes", "page": "solucoes/index.html", "theme": "light",
+      "eyebrow": "O que fazemos",
+      "lead": "Soluções de", "accent": "acessibilidade", "tail": "audiovisual",
+      "badge": "Libras · LSE · audiodescrição"
+    },
+    {
+      "slug": "tecnologia", "page": "tecnologia/index.html", "theme": "light",
+      "eyebrow": "Como fazemos",
+      "lead": "Nossa", "accent": "tecnologia", "tail": "de tradução em Libras",
+      "badge": "Plataforma HUET"
+    },
+    {
+      "slug": "proposito", "page": "proposito/index.html", "theme": "light",
+      "eyebrow": "Por que existimos",
+      "lead": "Libras é", "accent": "comunicação", "tail": "",
+      "badge": "Vídeos para todos"
+    },
+    {
+      "slug": "portfolio", "page": "portfolio/index.html", "theme": "light",
+      "eyebrow": "Quem confia no Libras.se",
+      "lead": "Nosso", "accent": "portfólio", "tail": "de acessibilidade",
+      "badge": "Marcas, canais e produtoras"
+    },
+    {
+      "slug": "sejatils", "page": "sejatils/index.html", "theme": "light",
+      "eyebrow": "Trabalhe conosco",
+      "lead": "Seja um", "accent": "TIL parceiro", "tail": "no Libras.se",
+      "badge": "Para intérpretes de Libras"
+    },
+    {
+      "slug": "jogo", "page": "jogo/index.html", "theme": "light",
+      "eyebrow": "Aprenda brincando",
+      "lead": "Jogo de", "accent": "Libras", "tail": "",
+      "badge": "Aprenda sinais jogando"
+    },
+    {
+      "slug": "sinal", "page": "sinal/index.html", "theme": "light",
+      "eyebrow": "Vocabulário",
+      "lead": "Sinais em", "accent": "Libras", "tail": "",
+      "badge": "Dicionário visual de sinais"
+    },
+    {
+      "slug": "glossario", "page": "glossario/index.html", "theme": "light",
+      "eyebrow": "Glossário",
+      "lead": "Glossário de", "accent": "Libras", "tail": "",
+      "badge": "Termos da Libras explicados"
+    },
+    {
+      "slug": "orcamento", "page": "orcamento/index.html", "theme": "light",
+      "eyebrow": "Solicite um orçamento",
+      "lead": "Orçamento para", "accent": "Libras em filmes", "tail": "e obras audiovisuais",
+      "badge": "Resposta rápida"
+    },
+    {
+      "slug": "politica", "page": "politica/index.html", "theme": "light",
+      "eyebrow": "Transparência",
+      "lead": "Políticas", "accent": "Libras.se", "tail": "",
+      "badge": false
+    }
+  ]
+}

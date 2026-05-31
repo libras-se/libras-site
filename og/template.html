@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>OG template — Libras.se</title>
+<style>
+/* Fonts resolve relative to /og/template.html when loaded via file:// */
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:block}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-500.woff2') format('woff2');font-weight:500;font-display:block}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:block}
+@font-face{font-family:'M';src:url('../assets/fonts/museo-sans-rounded-1000.woff2') format('woff2');font-weight:1000;font-display:block}
+
+:root{
+  --bg:#f0fafa;--bg2:#e8f6f5;
+  --p1:#0e3538;--p2:#154245;--p3:#2a6069;
+  --teal:#4fd1c5;--tl:#81e6d9;--txl:#b2f5ea;
+  --txt:#12393d;--txs:#3d6063;
+  --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{font-family:'M',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+
+/* ===== Frame ===== */
+#card{position:relative;width:1200px;height:630px;overflow:hidden;display:flex;flex-direction:column;
+  padding:74px 80px 64px;isolation:isolate}
+
+/* Background field */
+.bg{position:absolute;inset:0;z-index:-3}
+.blob{position:absolute;border-radius:50%;filter:blur(72px);z-index:-2}
+.grain{position:absolute;inset:0;z-index:-1;opacity:.5;
+  background:radial-gradient(circle at 1px 1px, rgba(10,34,37,.05) 1px, transparent 0);background-size:26px 26px}
+
+/* ---- Light theme ---- */
+.light .bg{background:linear-gradient(135deg,#f3fbfb 0%,#e6f5f4 55%,#dcf1ee 100%)}
+.light .blob.a{width:560px;height:560px;top:-200px;right:-150px;background:radial-gradient(circle,rgba(79,209,197,.55),transparent 68%)}
+.light .blob.b{width:420px;height:420px;bottom:-200px;left:-120px;background:radial-gradient(circle,rgba(129,230,217,.45),transparent 70%)}
+/* No fundo claro usamos um degradê de teal mais profundo p/ o texto não sumir */
+#card.light{--gb:linear-gradient(125deg,#0b8088 0%,#159aa3 45%,#2bb8bd 100%)}
+.light .eyebrow{color:#1a7a82;background:rgba(79,209,197,.12);border:1px solid rgba(79,209,197,.30)}
+.light .title{color:var(--p1)}
+.light .foot{color:#5a8587}
+.light .badge{background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.85);color:var(--p2);
+  box-shadow:0 8px 30px rgba(10,34,37,.08)}
+
+/* ---- Deep theme ---- */
+.deep .bg{background:linear-gradient(155deg,#0c3033 0%,#123c40 55%,#235460 100%)}
+.deep .blob.a{width:620px;height:620px;top:-220px;right:-170px;background:radial-gradient(circle,rgba(79,209,197,.42),transparent 66%)}
+.deep .blob.b{width:460px;height:460px;bottom:-230px;left:-140px;background:radial-gradient(circle,rgba(26,168,176,.40),transparent 70%)}
+.deep .grain{background:radial-gradient(circle at 1px 1px, rgba(255,255,255,.05) 1px, transparent 0);opacity:.45}
+.deep .eyebrow{color:var(--txl);background:rgba(129,230,217,.12);border:1px solid rgba(129,230,217,.26)}
+.deep .title{color:#fff}
+.deep .foot{color:rgba(178,245,234,.62)}
+.deep .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#eafffb;
+  box-shadow:0 8px 30px rgba(0,0,0,.22)}
+
+/* ===== Brand lockup ===== */
+.brand{display:flex;align-items:center;gap:16px}
+.brand .ico{width:62px;height:62px;border-radius:50%;flex-shrink:0;
+  box-shadow:0 6px 22px rgba(26,168,176,.34)}
+.nlogo-txt{font-weight:1000;font-size:33px;letter-spacing:-.02em;line-height:1;
+  background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ===== Body ===== */
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;padding:6px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
+  font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:9px 20px;border-radius:999px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#1aa8b0,#81e6d9);flex-shrink:0}
+.title{font-weight:900;font-size:74px;line-height:1.06;letter-spacing:-.018em;max-width:940px;text-wrap:balance}
+.title .gt{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.title.s1{font-size:64px}
+.title.s2{font-size:56px}
+
+/* ===== Footer row ===== */
+.foot{display:flex;align-items:center;justify-content:space-between}
+.foot .bar{height:5px;width:96px;border-radius:999px;background:var(--gb)}
+.foot .meta{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:700;letter-spacing:.01em}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:16px;font-weight:700;
+  padding:11px 20px;border-radius:999px;backdrop-filter:blur(10px)}
+</style>
+</head>
+<body>
+  <div id="card" class="light">
+    <div class="bg"></div>
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="grain"></div>
+
+    <div class="brand">
+      <img class="ico" src="../assets/img/favicon/cropped-FAVICONpng-1-192x192.png" alt="">
+      <span class="nlogo-txt">LIBRAS.SE</span>
+    </div>
+
+    <div class="body">
+      <span class="eyebrow"><span class="dot"></span><span id="eyebrow">Acessibilidade audiovisual</span></span>
+      <h1 class="title" id="title">Título da <span class="gt">página</span> aqui</h1>
+    </div>
+
+    <div class="foot">
+      <div class="meta"><span class="bar"></span><span id="foottext">libras.se · Vídeos para todos</span></div>
+      <span class="badge" id="badge">Tradução em Libras mais ágil do Brasil</span>
+    </div>
+  </div>
+
+<script>
+// Called by the generator via page.evaluate(render, data)
+window.render = function (d) {
+  d = d || {};
+  var card = document.getElementById('card');
+  card.className = (d.theme === 'deep') ? 'deep' : 'light';
+
+  document.getElementById('eyebrow').textContent = d.eyebrow || 'Libras.se';
+
+  var titleEl = document.getElementById('title');
+  var lead = d.lead || '', accent = d.accent || '', tail = d.tail || '';
+  titleEl.innerHTML = escapeHtml(lead) +
+    (accent ? (lead ? ' ' : '') + '<span class="gt">' + escapeHtml(accent) + '</span>' : '') +
+    (tail ? ' ' + escapeHtml(tail) : '');
+
+  document.getElementById('foottext').textContent = d.foot || 'libras.se';
+
+  var badge = document.getElementById('badge');
+  if (d.badge === false) { badge.style.display = 'none'; }
+  else { badge.style.display = ''; badge.textContent = d.badge || 'libras.se'; }
+
+  // Auto-fit: shrink title if it overflows its column
+  titleEl.classList.remove('s1','s2');
+  var steps = ['', 's1', 's2'];
+  for (var i = 0; i < steps.length; i++) {
+    titleEl.className = 'title' + (steps[i] ? ' ' + steps[i] : '');
+    if (titleEl.scrollHeight <= 360) break;
+  }
+};
+function escapeHtml(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+</script>
+</body>
+</html>

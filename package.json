@@ -1,0 +1,14 @@
+{
+  "name": "libras-se-site",
+  "version": "1.0.0",
+  "description": "Site Libras.se — utilitários de build (gerador de imagens sociais/OG).",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "og": "node og/generate.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "puppeteer-core": "^25.1.0"
+  }
+}

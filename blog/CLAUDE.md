@@ -388,39 +388,76 @@ imagem tem um `.md` companheiro com a descrição completa.
 
 ---
 
-## 8. Footer da matéria — posts relacionados (obrigatório)
+## 8. Fechamento "Com Barra" — obrigatório em todos os posts
 
-Todo post termina com **CTA + bloco de posts relacionados** ("Leia mais no blog")
-antes do footer canônico do site. Isso fortalece os links internos e o tempo de
-permanência. Relacione 3 posts do mesmo tema/categoria.
+Todo post termina com a sequência completa **"Com Barra"** antes do footer
+canônico do site. Ordem obrigatória:
+
+1. `.pa-tags` — tags em `#` com barra divisória superior (`border-top`)
+2. `.pa-cta` — bloco escuro com CTA "Precisa do seu conteúdo em Libras?"
+3. `.pa-actions` — 3 cards de recursos com **ícones SVG** (sem emojis): Jogo / Vocabulário / Glossário
+4. `.pa-related` — 3 artigos variados ("Leia mais no blog") + botão lateral "Ver todos os posts"
+5. `<footer id="foot">` — footer canônico do site
+
+> **Posts relacionados variados:** escolha 3 artigos de temas **diferentes** entre si e diferentes do tema principal do post atual. Diversidade de categoria aumenta o tempo de permanência.
 
 ```html
 <section class="pa-cta" aria-label="Soluções e recursos da Libras.se">
   <div class="pa-cta__lead rv">
-    <h2>Precisa do seu vídeo em Libras?</h2>
-    <p>A Libras.se traduz seu vídeo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
+    <h2>Precisa do seu conteúdo em Libras?</h2>
+    <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
     <div class="pa-cta__btns">
-      <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar seu vídeo</a>
+      <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
       <a href="https://libras.se/solucoes" class="btn bp">Conhecer soluções</a>
     </div>
   </div>
   <div class="pa-actions">
-    <a href="/jogo/" class="pa-act rv"><span class="pa-act__ic">🎮</span><span class="pa-act__t">Joguinho de Libras</span><span class="pa-act__d">Descubra o sinal do dia e aprenda brincando.</span><span class="pa-act__go">Jogar agora →</span></a>
-    <a href="/sinal/" class="pa-act rv"><span class="pa-act__ic">🤟</span><span class="pa-act__t">Vocabulário</span><span class="pa-act__d">Consulte sinais e amplie seu vocabulário em Libras.</span><span class="pa-act__go">Ver sinais →</span></a>
-    <a href="/glossario/" class="pa-act rv"><span class="pa-act__ic">📖</span><span class="pa-act__t">Glossário</span><span class="pa-act__d">Termos da área com definições claras e verificadas.</span><span class="pa-act__go">Consultar →</span></a>
+    <a href="/jogo/" class="pa-act rv">
+      <span class="pa-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+      </span>
+      <span class="pa-act__t">Joguinho de Libras</span>
+      <span class="pa-act__d">Descubra o sinal do dia e aprenda brincando.</span>
+      <span class="pa-act__go">Jogar agora →</span>
+    </a>
+    <a href="/sinal/" class="pa-act rv">
+      <span class="pa-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+      </span>
+      <span class="pa-act__t">Vocabulário</span>
+      <span class="pa-act__d">Consulte sinais e amplie seu vocabulário em Libras.</span>
+      <span class="pa-act__go">Ver sinais →</span>
+    </a>
+    <a href="/glossario/" class="pa-act rv">
+      <span class="pa-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </span>
+      <span class="pa-act__t">Glossário</span>
+      <span class="pa-act__d">Termos da área com definições claras e verificadas.</span>
+      <span class="pa-act__go">Consultar →</span>
+    </a>
   </div>
 </section>
 
 <section class="pa-related" aria-label="Mais posts do blog">
-  <h2>Leia mais no blog</h2>
-  <div class="pa-rel-grid">
-    <a class="pa-rel" href="/blog/[slug-relacionado]/">
-      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug]/[slug].jpg" alt="[Título]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post relacionado]</span></span>
-    </a>
-    <!-- mais 2 cards -->
+  <div class="pa-related__head">
+    <h2>Leia mais no blog</h2>
+    <a href="/blog/" class="btn bp" style="font-size:.78rem;padding:9px 18px">Ver todos os posts →</a>
   </div>
-  <p style="margin-top:22px"><a href="/blog/" class="btn bp">Ver todos os posts →</a></p>
+  <div class="pa-rel-grid">
+    <a class="pa-rel" href="/blog/[slug-1]/">
+      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-1]/[slug-1].webp" alt="[Título 1]" loading="lazy" decoding="async" width="1200" height="675"></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 1 — tema diferente do post atual]</span></span>
+    </a>
+    <a class="pa-rel" href="/blog/[slug-2]/">
+      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-2]/[slug-2].webp" alt="[Título 2]" loading="lazy" decoding="async" width="1200" height="675"></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 2 — tema diferente dos outros]</span></span>
+    </a>
+    <a class="pa-rel" href="/blog/[slug-3]/">
+      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-3]/[slug-3].webp" alt="[Título 3]" loading="lazy" decoding="async" width="1200" height="675"></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 3 — tema diferente dos outros]</span></span>
+    </a>
+  </div>
 </section>
 ```
 
@@ -475,12 +512,14 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
 .pa-act{display:flex;flex-direction:column;gap:8px;background:var(--card-s);border:1px solid var(--border);border-radius:var(--rlg);padding:22px 20px;transition:var(--tr)}
 .pa-act:hover{transform:translateY(-3px);box-shadow:var(--shm);border-color:rgba(79,209,197,.35)}
-.pa-act__ic{width:42px;height:42px;border-radius:12px;background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center;font-size:20px}
+.pa-act__ic{width:42px;height:42px;border-radius:12px;background:rgba(79,209,197,.12);display:flex;align-items:center;justify-content:center}
+.pa-act__ic svg{width:22px;height:22px;stroke:var(--teal-dd)}
 .pa-act__t{font-weight:900;font-size:.98rem;color:var(--p1)}
 .pa-act__d{font-size:.82rem;font-weight:300;color:var(--txs);line-height:1.5}
 .pa-act__go{font-size:.78rem;font-weight:700;color:var(--teal-dd)}
 .pa-related{margin:56px 0 8px}
-.pa-related h2{font-family:'M',sans-serif;font-weight:900;font-size:1.3rem;color:var(--p1);letter-spacing:-.02em;margin-bottom:20px}
+.pa-related__head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.pa-related__head h2{font-family:'M',sans-serif;font-weight:900;font-size:1.3rem;color:var(--p1);letter-spacing:-.02em;margin:0}
 .pa-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pa-rel{background:#fff;border:1px solid var(--border);border-radius:var(--rlg);overflow:hidden;transition:var(--tr);display:flex;flex-direction:column}
 .pa-rel:hover{transform:translateY(-3px);box-shadow:var(--shm)}
@@ -524,7 +563,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <a class="pa-tag" href="/glossario/til-tils/">#tils</a>
     </div>
 
-    <!-- §8: pa-cta + pa-related -->
+    <!-- §8: fechamento "Com Barra" — pa-tags → pa-cta → pa-related → footer canônico -->
   </article>
 </main>
 ```
@@ -812,7 +851,7 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 - [ ] **Todo termo da área linkado ao glossário** na 1ª ocorrência (§6, conferir `termos.csv`)
 - [ ] Imagem própria em `/assets/img/blog/<slug>/` **ou** do banco editorial (§7) com `alt` correto
 - [ ] Imagens com `.avif` + `.webp` + fallback, `width`/`height` e `loading` corretos
-- [ ] **Footer da matéria com 3 posts relacionados** ("Leia mais") + CTA (§8)
+- [ ] **Fechamento "Com Barra" completo** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" + 3 ícones SVG (jogo/vocabulário/glossário) + 3 posts variados ("Leia mais") + botão "Ver todos os posts" lateral
 - [ ] Footer canônico do site (`#foot`) ao final
 - [ ] Post adicionado à **home do blog**: card com `data-cat`/`data-search`, contador e `ItemList` atualizados (§5)
 - [ ] CTA aponta para páginas reais (huet/soluções/jogo/sinal/glossário)

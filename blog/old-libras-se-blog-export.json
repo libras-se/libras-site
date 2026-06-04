@@ -295,7 +295,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Reflexao social relevante, mas menos direta como pagina pilar."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "surdos-estrangeiros-na-propria-patria"
     },
     {
       "url": "https://old.libras.se/post/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo",
@@ -542,7 +544,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "deficiente-auditivo-adota-cao-abandonado-por-ser-surdo"
     },
     {
       "url": "https://old.libras.se/post/surdos-voce-precisa-saber-se-comunicar-com-eles",
@@ -893,7 +897,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema educativo amplo, com potencial de busca recorrente sobre comunicação com pessoas surdas."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "surdos-voce-precisa-saber-se-comunicar-com-eles"
     },
     {
       "url": "https://old.libras.se/post/como-sao-criados-sinais-de-pessoas-na-libras",
@@ -1297,7 +1303,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo explicativo evergreen, ja publicado com tratamento editorial."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "como-sao-criados-sinais-de-pessoas-na-libras"
     },
     {
       "url": "https://old.libras.se/post/projeto-traduz-poesias-de-cruz-e-souza-para-libras",
@@ -1571,7 +1579,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "projeto-traduz-poesias-de-cruz-e-souza-para-libras"
     },
     {
       "url": "https://old.libras.se/post/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras",
@@ -1890,7 +1900,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Pode virar analise educativa sobre representacao, Libras e cultura surda."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras"
     },
     {
       "url": "https://old.libras.se/post/urnas-eletronicas-terao-video-com-libras",
@@ -2158,7 +2170,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "urnas-eletronicas-terao-video-com-libras"
     },
     {
       "url": "https://old.libras.se/post/dia-nacional-dos-surdos-conquistas-e-reflexões",
@@ -2423,7 +2437,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Data recorrente com potencial institucional e SEO anual."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "dia-nacional-dos-surdos-conquistas-e-reflexoes"
     },
     {
       "url": "https://old.libras.se/post/influenciadores-surdos-relatam-dificuldade-com-publis",
@@ -2726,7 +2742,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema de mercado e representatividade, pode render analise sem exigir layout complexo."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "influenciadores-surdos-relatam-dificuldade-com-publis"
     },
     {
       "url": "https://old.libras.se/post/voce-sabe-o-que-e-datilologia",
@@ -3058,7 +3076,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo conceitual evergreen, ja publicado com pagina elaborada."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "voce-sabe-o-que-e-datilologia"
     },
     {
       "url": "https://old.libras.se/post/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
@@ -3261,7 +3281,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Comparativo educativo direto para busca e decisao de acessibilidade."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
     },
     {
       "url": "https://old.libras.se/post/uso-de-libras-em-propaganda-eleitoral-é-obrigatório",
@@ -3538,7 +3560,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio"
     },
     {
       "url": "https://old.libras.se/post/entenda-porque-e-errado-o-termo-surdo-mudo",
@@ -3833,7 +3857,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema conceitual recorrente com forte intencao educativa."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "entenda-porque-e-errado-o-termo-surdo-mudo"
     },
     {
       "url": "https://old.libras.se/post/professora-aprende-libras-para-se-comunicar-com-estudante",
@@ -4092,7 +4118,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "professora-aprende-libras-para-se-comunicar-com-estudante"
     },
     {
       "url": "https://old.libras.se/post/com-libras-inclusao-marca-sao-joao-de-caruaru",
@@ -4381,7 +4409,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "com-libras-inclusao-marca-sao-joao-de-caruaru"
     },
     {
       "url": "https://old.libras.se/post/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar",
@@ -4625,7 +4655,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar"
     },
     {
       "url": "https://old.libras.se/post/recenseadora-entrevista-mulher-surda-em-libras",
@@ -4883,7 +4915,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "recenseadora-entrevista-mulher-surda-em-libras"
     },
     {
       "url": "https://old.libras.se/post/dia-mundial-da-conscientização-sobre-o-autismo-como-a-língua-de-sinais-tem-ajudado-crianças-com-aut",
@@ -5102,7 +5136,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema explicativo que cruza acessibilidade, autismo e lingua de sinais."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "lingua-de-sinais-e-autismo"
     },
     {
       "url": "https://old.libras.se/post/conheca-a-primeira-dupla-musical-de-libras",
@@ -5461,7 +5497,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "conheca-a-primeira-dupla-musical-de-libras"
     },
     {
       "url": "https://old.libras.se/post/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022",
@@ -5716,7 +5754,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "curso-de-papai-noel-ensina-libras-para-o-natal-de-2022"
     },
     {
       "url": "https://old.libras.se/post/personagens-da-disney-adotam-língua-de-sinais-com-o-público",
@@ -5969,7 +6009,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "personagens-da-disney-adotam-lingua-de-sinais-com-o-publico"
     },
     {
       "url": "https://old.libras.se/post/tocantins-tem-libras-na-rede-estadual-de-ensino",
@@ -6246,7 +6288,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "tocantins-tem-libras-na-rede-estadual-de-ensino"
     },
     {
       "url": "https://old.libras.se/post/documentarios-sobre-surdez-gratis-youtube",
@@ -6583,7 +6627,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Lista util com potencial de busca moderado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "documentarios-sobre-surdez-gratis-youtube"
     },
     {
       "url": "https://old.libras.se/post/projeto-garante-interprete-de-libras-em-hospitais",
@@ -6830,7 +6876,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "projeto-garante-interprete-de-libras-em-hospitais"
     },
     {
       "url": "https://old.libras.se/post/df-tem-instrutor-e-examinador-de-transito-surdo",
@@ -7137,7 +7185,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "df-tem-instrutor-e-examinador-de-transito-surdo"
     },
     {
       "url": "https://old.libras.se/post/libras-pode-ser-reconhecida-como-lingua-de-instrução-em-bh",
@@ -7345,7 +7395,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh"
     },
     {
       "url": "https://old.libras.se/post/interpretes-de-libras-traduzem-partos-para-pais-surdos",
@@ -7710,7 +7762,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Materia pontual com tema humano forte e possibilidade de contextualizacao."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "interpretes-de-libras-traduzem-partos-para-pais-surdos"
     },
     {
       "url": "https://old.libras.se/post/por-que-nao-ha-surdos-nas-paralimpiadas",
@@ -8047,7 +8101,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Pergunta evergreen com potencial de busca e explicacao cultural/esportiva."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "por-que-nao-ha-surdos-nas-paralimpiadas"
     },
     {
       "url": "https://old.libras.se/post/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira",
@@ -8320,7 +8376,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-pode-ser-reconhecida-como-referencia-cultural-brasileira"
     },
     {
       "url": "https://old.libras.se/post/mandalorian-fez-sua-propria-lingua-de-sinais",
@@ -8622,7 +8680,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "mandalorian-fez-sua-propria-lingua-de-sinais"
     },
     {
       "url": "https://old.libras.se/post/papel-do-tradutor-e-interprete-de-libras-na-escola-bilingue",
@@ -8893,7 +8953,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema de servico e educacao com alta profundidade possivel."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "papel-do-interprete-de-libras-na-escola-bilingue"
     },
     {
       "url": "https://old.libras.se/post/o-papel-do-interprete-de-libras-na-sociedade",
@@ -9205,7 +9267,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema educativo amplo sobre funcao profissional e impacto social."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "o-papel-do-interprete-de-libras-na-sociedade"
     },
     {
       "url": "https://old.libras.se/post/futebol-paixao-nacional-libras",
@@ -9537,7 +9601,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "futebol-paixao-nacional-libras"
     },
     {
       "url": "https://old.libras.se/post/o-que-e-capacitismo",
@@ -9884,7 +9950,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conceito evergreen importante para busca e educacao inclusiva."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "o-que-e-capacitismo"
     },
     {
       "url": "https://old.libras.se/post/disney-lanca-jogos-que-ensinam-libras",
@@ -10197,7 +10265,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "disney-lanca-jogos-que-ensinam-libras"
     },
     {
       "url": "https://old.libras.se/post/doutora-surda-defendeu-tese-em-libras",
@@ -10464,7 +10534,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "doutora-surda-defendeu-tese-em-libras"
     },
     {
       "url": "https://old.libras.se/post/passatempo-tera-biscoitos-com-libras",
@@ -10781,7 +10853,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "passatempo-tera-biscoitos-com-libras"
     },
     {
       "url": "https://old.libras.se/post/libras-nao-e-segunda-lingua-oficial-do-brasil",
@@ -11040,7 +11114,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema conceitual evergreen, ja publicado com pagina elaborada."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-nao-e-segunda-lingua-oficial-do-brasil"
     },
     {
       "url": "https://old.libras.se/post/4-erros-comuns-ao-inserir-libras-em-vídeos-e-como-evitá-los",
@@ -11241,7 +11317,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Guia pratico com forte potencial de conversao e SEO."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "4-erros-comuns-ao-inserir-libras-em-videos"
     },
     {
       "url": "https://old.libras.se/post/dia-nacional-da-libras-inclusao-da-comunidade-surda",
@@ -11379,7 +11457,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Data recorrente e tema institucional com potencial de atualizacao anual."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "dia-nacional-da-libras-inclusao-da-comunidade-surda"
     },
     {
       "url": "https://old.libras.se/post/rosas-de-ouro-leva-libras-pro-carnaval-paulista",
@@ -11701,7 +11781,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "rosas-de-ouro-leva-libras-pro-carnaval-paulista"
     },
     {
       "url": "https://old.libras.se/post/drag-queen-surda-faz-sucesso-com-libras-no-youtube",
@@ -12031,7 +12113,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "drag-queen-surda-faz-sucesso-com-libras-no-youtube"
     },
     {
       "url": "https://old.libras.se/post/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia",
@@ -12317,7 +12401,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia"
     },
     {
       "url": "https://old.libras.se/post/entrevista-libras-nao-e-portugues-com-as-maos",
@@ -12648,7 +12734,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema conceitual forte que pode virar pilar editorial sobre Libras."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "entrevista-libras-nao-e-portugues-com-as-maos"
     },
     {
       "url": "https://old.libras.se/post/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade",
@@ -12922,7 +13010,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema amplo, mas mais opinativo do que pilar direto de busca."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade"
     },
     {
       "url": "https://old.libras.se/post/idoso-estuda-lingua-de-sinais-por-sobrinha",
@@ -13160,7 +13250,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "idoso-estuda-lingua-de-sinais-por-sobrinha"
     },
     {
       "url": "https://old.libras.se/post/rock-in-rio-tem-show-de-rap-com-libras",
@@ -13387,7 +13479,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "rock-in-rio-tem-show-de-rap-com-libras"
     },
     {
       "url": "https://old.libras.se/post/reitor-faz-primeiro-discurso-em-libras-em-colação-de-grau",
@@ -13661,7 +13755,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau"
     },
     {
       "url": "https://old.libras.se/post/gestuante-entra-para-a-língua-portuguesa-entenda-o-significado-e-o-uso-do-novo-termo",
@@ -13961,7 +14057,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Explicacao de termo com potencial de busca e educacao linguistica."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "gestuante-entra-para-a-lingua-portuguesa"
     },
     {
       "url": "https://old.libras.se/post/manifesto-por-libras-em-videos",
@@ -14240,7 +14338,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Conteudo de posicionamento editorial, bom para campanha e autoridade."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "manifesto-por-libras-em-videos"
     },
     {
       "url": "https://old.libras.se/post/o-que-e-libras",
@@ -14557,7 +14657,8 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo pilar evergreen, ja publicado com pagina elaborada."
-      }
+      },
+      "publicacao": "nao"
     },
     {
       "url": "https://old.libras.se/post/criança-surda-batizada-em-libras-em-caruaru",
@@ -14801,7 +14902,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "crianca-surda-batizada-em-libras-em-caruaru"
     },
     {
       "url": "https://old.libras.se/post/makkari-a-super-heroína-surda",
@@ -15206,7 +15309,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema cultural com potencial de representatividade, mas baseado em personagem especifica."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "makkari-a-super-heroina-surda"
     },
     {
       "url": "https://old.libras.se/post/4-dicas-para-ser-mais-inclusivo-na-internet",
@@ -15454,7 +15559,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Guia pratico evergreen sobre inclusao digital."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "4-dicas-para-ser-mais-inclusivo-na-internet"
     },
     {
       "url": "https://old.libras.se/post/bíblia-completamente-traduzida-para-libras",
@@ -15728,7 +15835,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Noticia com impacto cultural amplo e valor de contexto."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "biblia-completamente-traduzida-para-libras"
     },
     {
       "url": "https://old.libras.se/post/tradutor-de-libras-se-destaca-no-rock-in-rio",
@@ -16014,7 +16123,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "tradutor-de-libras-se-destaca-no-rock-in-rio"
     },
     {
       "url": "https://old.libras.se/post/videoaulas-acessiveis-com-libras",
@@ -16227,7 +16338,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo de servico com potencial comercial e SEO, ja publicado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "videoaulas-acessiveis-com-libras"
     },
     {
       "url": "https://old.libras.se/post/por-que-incluir-janela-de-libras-em-videos",
@@ -16511,7 +16624,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Pergunta comercial/educativa com alta intencao de busca."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "por-que-incluir-janela-de-libras-em-videos"
     },
     {
       "url": "https://old.libras.se/post/o-papel-da-libras-na-inclusao-do-surdo",
@@ -16974,7 +17089,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo pilar sobre inclusao e Libras."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "o-papel-da-libras-na-inclusao-do-surdo"
     },
     {
       "url": "https://old.libras.se/post/20-anos-da-lei-de-libras-avancos-e-desafios",
@@ -17276,7 +17393,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema legal e historico, recorrente em buscas sobre a Lei de Libras."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "20-anos-da-lei-de-libras-avancos-e-desafios"
     },
     {
       "url": "https://old.libras.se/post/4-marcas-que-investem-em-libras-nos-videos",
@@ -17679,7 +17798,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Lista de exemplos com potencial comercial moderado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "4-marcas-que-investem-em-libras-nos-videos"
     },
     {
       "url": "https://old.libras.se/post/responsavel-pelo-que-entendem",
@@ -17944,7 +18065,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Reflexao de marca/conteudo, boa para autoridade mas menor demanda orgânica."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "responsavel-pelo-que-entendem"
     },
     {
       "url": "https://old.libras.se/post/acessibilidade-em-eventos-para-pessoas-surdas",
@@ -18141,7 +18264,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema de servico com potencial comercial e SEO para eventos acessiveis."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "acessibilidade-em-eventos-para-pessoas-surdas"
     },
     {
       "url": "https://old.libras.se/post/libras-tem-sotaque-e-giria",
@@ -18485,7 +18610,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Conteudo conceitual evergreen, ja publicado com pagina elaborada."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "libras-tem-sotaque-e-giria"
     },
     {
       "url": "https://old.libras.se/post/sueli-a-primeira-personagem-surda-da-turma-da-monica",
@@ -18776,7 +18903,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "sueli-a-primeira-personagem-surda-da-turma-da-monica"
     },
     {
       "url": "https://old.libras.se/post/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar",
@@ -18969,7 +19098,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar"
     },
     {
       "url": "https://old.libras.se/post/atacante-do-flamengo-comemora-gol-em-libras",
@@ -19199,7 +19330,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "atacante-do-flamengo-comemora-gol-em-libras"
     },
     {
       "url": "https://old.libras.se/post/acessibilidade-em-eventos-como-garantir-interpretação-em-libras-sem-improviso",
@@ -19421,7 +19554,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Guia de servico e conversao para eventos, ja publicado com novo slug."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "garantir-libras-sem-improviso"
     },
     {
       "url": "https://old.libras.se/post/oscar-coda-melhor-filme-do-mundo-sobre-surdez",
@@ -19752,7 +19887,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema cultural relevante, mais contextual do que pilar evergreen."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "oscar-coda-melhor-filme-do-mundo-sobre-surdez"
     },
     {
       "url": "https://old.libras.se/post/dia-internacional-linguas-de-sinais",
@@ -20044,7 +20181,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Data recorrente e tema institucional com potencial SEO anual."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "dia-internacional-das-linguas-de-sinais"
     },
     {
       "url": "https://old.libras.se/post/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos",
@@ -20401,7 +20540,9 @@
         "incluirNoBacklog": "sim",
         "complexidadeLayout": "alta",
         "motivoComplexidade": "Tema explicativo com potencial de busca sobre esporte e cultura surda."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "surdolimpiadas-as-olimpiadas-exclusivas-para-surdos"
     },
     {
       "url": "https://old.libras.se/post/com-libras-quadrilha-junina-vence-concurso-no-maranhao",
@@ -20624,7 +20765,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "com-libras-quadrilha-junina-vence-concurso-no-maranhao"
     },
     {
       "url": "https://old.libras.se/post/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian",
@@ -20981,7 +21124,9 @@
         "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
-      }
+      },
+      "publicacao": "sim",
+      "slug_publicado": "vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian"
     }
   ],
   "errors": [],

@@ -146,8 +146,14 @@
   </url>
   <url>
     <loc>https://libras.se/blog/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/blog/o-que-e-libras/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

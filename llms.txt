@@ -47,7 +47,7 @@ Libras.se cria acessibilidade para videos, eventos, aulas, filmes, campanhas, se
 
 ## Conteudo editorial e educativo
 
-- [Blog](https://libras.se/blog/): artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
+- [Blog](https://libras.se/blog/): 74 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
 - [Glossario](https://libras.se/glossario/): definicoes de termos de Libras e acessibilidade com exemplos praticos e fontes verificadas.
 - [Sinais em Libras](https://libras.se/sinal/): consulta de sinais por palavra, categoria ou contexto de uso.
 - [Desculpa em Libras](https://libras.se/sinal/desculpa/): pagina individual com video de referencia, definicao e exemplos.
@@ -55,13 +55,22 @@ Libras.se cria acessibilidade para videos, eventos, aulas, filmes, campanhas, se
 
 ## Artigos do blog
 
-- [Como sao criados os sinais de pessoas na Libras?](https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/)
-- [Acessibilidade em eventos: como garantir interpretacao em Libras sem improviso](https://libras.se/blog/garantir-libras-sem-improviso/)
-- [Libras nao e a segunda lingua oficial do Brasil: entenda a lei](https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/)
+O blog tem 74 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
+
+- [O que e Libras? Entenda a Lingua Brasileira de Sinais](https://libras.se/blog/o-que-e-libras/)
+- [Libras e reconhecida como lingua de instrucao em Belo Horizonte](https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/)
 - [Libras ou legendas? Quando usar cada recurso de acessibilidade](https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/)
-- [Libras tem sotaque e giria?](https://libras.se/blog/libras-tem-sotaque-e-giria/)
-- [Videoaulas acessiveis com Libras](https://libras.se/blog/videoaulas-acessiveis-com-libras/)
+- [Por que incluir janela de Libras em videos?](https://libras.se/blog/por-que-incluir-janela-de-libras-em-videos/)
+- [Acessibilidade em eventos: como garantir interpretacao em Libras sem improviso](https://libras.se/blog/garantir-libras-sem-improviso/)
+- [Videoaulas acessiveis com Libras: como ampliar o acesso ao aprendizado](https://libras.se/blog/videoaulas-acessiveis-com-libras/)
+- [4 erros comuns ao inserir Libras em videos e como evita-los](https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/)
+- [Dia Nacional da Libras: desafios e conquistas na inclusao da comunidade surda](https://libras.se/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/)
+- [Libras nao e a segunda lingua oficial do Brasil: entenda a lei](https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/)
 - [Datilologia: o alfabeto manual da Libras explicado](https://libras.se/blog/voce-sabe-o-que-e-datilologia/)
+- [Libras tem sotaque e giria? Entenda as variacoes regionais](https://libras.se/blog/libras-tem-sotaque-e-giria/)
+- [Como sao criados os sinais de pessoas na Libras?](https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/)
+
+Para o inventario completo de URLs do blog, consulte [llms-full.txt](https://libras.se/llms-full.txt).
 
 ## Glossario de Libras e acessibilidade
 

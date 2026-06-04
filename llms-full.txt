@@ -101,15 +101,88 @@ Conjunto de paginas voltadas ao audiovisual profissional, editais, cultura, dist
 
 O blog da Libras.se e usado para educar sobre Libras, acessibilidade audiovisual, cultura surda, legislacao, producao de conteudo acessivel e boas praticas para eventos, educacao e comunicacao.
 
-Artigos publicados:
+URLs de navegacao editorial:
 
-- https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/ - explica sinais pessoais, identidade, convivencia e cultura surda.
-- https://libras.se/blog/garantir-libras-sem-improviso/ - orienta planejamento de interpretacao em Libras para eventos.
-- https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/ - corrige a ideia de que Libras seria a segunda lingua oficial do Brasil e explica a Lei 10.436/2002.
-- https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/ - diferencia Libras, legenda comum e LSE.
-- https://libras.se/blog/libras-tem-sotaque-e-giria/ - explica variacoes regionais e usos informais em Libras.
-- https://libras.se/blog/videoaulas-acessiveis-com-libras/ - apresenta boas praticas para videoaulas acessiveis.
-- https://libras.se/blog/voce-sabe-o-que-e-datilologia/ - introduz datilologia e alfabeto manual.
+- https://libras.se/blog/ - home do blog.
+- https://libras.se/blog/todos/ - acervo navegavel de posts.
+- https://libras.se/blog/temas/ - posts agrupados por tema.
+
+Artigos publicados (74 paginas indexaveis):
+
+- https://libras.se/blog/o-que-e-libras/ - Libras e a Lingua Brasileira de Sinais: uma lingua visual, completa e com gramatica propria. Entenda o que e Libras, sua historia, reconhecimento legal e importancia para a comunidade surda.
+- https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/ - Belo Horizonte reconheceu oficialmente a Libras como lingua de instrucao e meio de comunicacao da comunidade surda por meio da Lei no 11.463/2023.
+- https://libras.se/blog/garantir-libras-sem-improviso/ - Do palco ao telao, opcoes viaveis e planejadas para incluir a comunidade surda em encontros presenciais. Saiba como garantir interpretacao em Libras com planejamento.
+- https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/ - Libras e legendas nao sao recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em videos, aulas, eventos e conteudos digitais.
+- https://libras.se/blog/videoaulas-acessiveis-com-libras/ - Entenda como criar videoaulas acessiveis com Libras, legendas, transcricao e recursos visuais bem planejados para ampliar o acesso ao aprendizado.
+- https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/ - Conheca 4 erros comuns ao inserir Libras em videos - profissional, tamanho da janela, ambiente e contexto - e aprenda como evita-los para um conteudo acessivel.
+- https://libras.se/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/ - No Dia Nacional da Libras, refletimos sobre conquistas e desafios da inclusao da comunidade surda. Entenda por que a regulamentacao precisa sair do papel.
+- https://libras.se/blog/acessibilidade-em-eventos-para-pessoas-surdas/ - Acessibilidade em eventos para pessoas surdas: por que Libras e legendas sao essenciais no entretenimento, o que diz a lei e como incluir mais de 10 milhoes de pessoas.
+- https://libras.se/blog/lingua-de-sinais-e-autismo/ - Como a lingua de sinais ajuda criancas com autismo? Entenda por que a Libras, como comunicacao visual, pode favorecer a expressao e a inclusao de criancas com TEA.
+- https://libras.se/blog/gestuante-entra-para-a-lingua-portuguesa/ - Gestuante e o termo oficializado pela ABL para quem se comunica em lingua de sinais. Entenda o significado, como usar corretamente e o impacto para a comunidade surda.
+- https://libras.se/blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/ - Este ano, formacao em Papai Noel incluiu o ensino de Lingua Brasileira de Sinais para que os bons-velhinhos possam se comunicar com surdos.
+- https://libras.se/blog/recenseadora-entrevista-mulher-surda-em-libras/ - Apesar de nao ser fluente em Libras, a recenseadora pos em pratica os conhecimentos adquiridos em curso de capacitacao.
+- https://libras.se/blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/ - Historia foi desenvolvida em formato plurilingue e sinalizada tambem na Lingua Brasileira de Sinais (Libras).
+- https://libras.se/blog/df-tem-instrutor-e-examinador-de-transito-surdo/ - Profissional passou a participar da banca examinadora do processo de avaliacao pratica para obtencao da CNH. Ele se comunica em Libras.
+- https://libras.se/blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/ - O projeto "Cruz e Souza Para Todos" engloba 96 criacoes do autor, todas incluidas na obra Ultimos Sonetos.
+- https://libras.se/blog/disney-lanca-jogos-que-ensinam-libras/ - A acao faz parte da campanha de Dia das Criancas. Os games gratuitos sao inspirados nos universos Marvel, Pixar, Mickey e das Princesas.
+- https://libras.se/blog/biblia-completamente-traduzida-para-libras/ - A Biblia foi traduzida integralmente para Libras pela primeira vez no Brasil: 16 anos de voluntariado e mais de 200 mil horas para tornar as escrituras acessiveis a surdos.
+- https://libras.se/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/ - 26 de setembro e o Dia Nacional dos Surdos. Conheca a origem da data, o Setembro Azul, as conquistas da comunidade surda e os desafios que ainda permanecem.
+- https://libras.se/blog/entrevista-libras-nao-e-portugues-com-as-maos/ - Libras nao e portugues com as maos nem linguagem: e uma lingua autonoma, com gramatica propria. Entenda em entrevista com a interprete Carine Gurunga.
+- https://libras.se/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/ - Materia original de 2022 sobre o PL que reconheceria Libras como lingua de instrucao em BH, com nota sobre a Lei no 11.463/2023.
+- https://libras.se/blog/o-papel-da-libras-na-inclusao-do-surdo/ - Entenda o papel da Libras na inclusao do surdo: o que e a lingua de sinais, graus de surdez, educacao bilingue, saude e os desafios da inclusao no Brasil.
+- https://libras.se/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/ - Tradutor e interprete de Libras levou experiencia profunda aos surdos que foram ao festival no primeiro fim de semana de Rock in Rio.
+- https://libras.se/blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/ - Em uma fala de pouco mais de sete minutos, reitor da Universidade Federal de Roraima discursou em Libras sobre a importancia da inclusao.
+- https://libras.se/blog/rock-in-rio-tem-show-de-rap-com-libras/ - Show de Papatinho e L7nnon contou com interpretes de Libras no palco Sunset do Rock in Rio.
+- https://libras.se/blog/tocantins-tem-libras-na-rede-estadual-de-ensino/ - O Tocantins e o unico estado a incluir Libras como componente curricular na rede estadual de ensino.
+- https://libras.se/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/ - Videos mostram Pato Donald, Mickey e princesa Anna conversando com as criancas usando lingua de sinais.
+- https://libras.se/blog/projeto-garante-interprete-de-libras-em-hospitais/ - PL 1752/22 autoriza a entrada e a permanencia de interpretes para acompanhar paciente surdo que necessite de cuidados medicos.
+- https://libras.se/blog/professora-aprende-libras-para-se-comunicar-com-estudante/ - Uma professora da rede publica de ensino de Curitiba (PR) aprendeu Libras para se comunicar com um estudante surdo.
+- https://libras.se/blog/crianca-surda-batizada-em-libras-em-caruaru/ - Pastor de igreja em Caruaru (CE) aprendeu um pouco de Libras para batizar a crianca que tambem tem pais surdos.
+- https://libras.se/blog/passatempo-tera-biscoitos-com-libras/ - Biscoitos terao ilustracoes de alfabeto manual em Libras. Em um site especial, a marca oferece atividades e jogos didaticos.
+- https://libras.se/blog/atacante-do-flamengo-comemora-gol-em-libras/ - Depois de balancar a rede que selou a classificacao do time para a semifinal da Libertadores, o jogador Pedro Guilherme comemorou sinalizando "Jesus, Gloria a Deus".
+- https://libras.se/blog/influenciadores-surdos-relatam-dificuldade-com-publis/ - Influenciadores surdos quebram estereotipos na internet, mas relatam caches menores e dificuldade para fechar publis. Entenda os desafios da criacao de conteudo surda.
+- https://libras.se/blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/ - Material pedagogico focado no ensino de Libras foi criado por alunos e educadores de Cacador (SC).
+- https://libras.se/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/ - As normas buscam garantir que surdos tenham participacao plena e independente nas eleicoes.
+- https://libras.se/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/ - O projeto Libras na Quebrada ensina lingua de sinais gratuitamente e aproxima ouvintes da comunidade surda.
+- https://libras.se/blog/papel-do-interprete-de-libras-na-escola-bilingue/ - Qual o papel do interprete de Libras na escola bilingue? Entenda a mediacao linguistica e cultural, o Decreto 5.626 e a Educacao Bilingue de Surdos como modalidade.
+- https://libras.se/blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/ - A combinacao perfeita! Cao atende a comandos feitos por lingua de sinais e ganhou novo nome.
+- https://libras.se/blog/urnas-eletronicas-terao-video-com-libras/ - A partir deste ano, video feito por uma interprete de Libras sera apresentado em todas as 577 mil urnas eletronicas do pais.
+- https://libras.se/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/ - A proposta teve a anuencia de pesquisadores que participaram da elaboracao de amplo inventario sobre a Libras.
+- https://libras.se/blog/com-libras-inclusao-marca-sao-joao-de-caruaru/ - O publico escolhe, por meio de votacao na internet, um show para ser interpretado em Libras no telao do Sao Joao 2022 de Caruaru.
+- https://libras.se/blog/idoso-estuda-lingua-de-sinais-por-sobrinha/ - Para se comunicar com sobrinha surda, idoso comecou a aprender o alfabeto manual da lingua de sinais espanhola.
+- https://libras.se/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/ - Inovacao e o caminho para avancar em acessibilidade. Entenda como a traducao de videos para Libras inclui milhoes de surdos e amplia o mercado das empresas.
+- https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/ - Entenda por que a Libras nao e a segunda lingua oficial do Brasil, o que a Lei no 10.436/2002 realmente reconhece e como falar sobre Libras com precisao.
+- https://libras.se/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/ - A principal dificuldade da comunidade surda e a comunicacao. Entenda por que saber se comunicar com surdos e respeito, direito garantido por lei e questao de cidadania.
+- https://libras.se/blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/ - Quadrilha junina com Libras vence concurso no Maranhao e mostra como acessibilidade amplia participacao cultural e aproxima publicos surdos e ouvintes.
+- https://libras.se/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/ - No Rio de Janeiro, interpretes de Libras acompanharam partos de maes surdas. Veja como a acessibilidade na saude garante o direito de viver o nascimento por inteiro.
+- https://libras.se/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/ - As Surdolimpiadas sao os jogos mundiais exclusivos para surdoatletas. Conheca a competicao que o Brasil sediou, suas regras, adaptacoes e o papel dos interpretes.
+- https://libras.se/blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/ - A personagem se comunica por Libras e deve reforcar a importancia da acessibilidade e da inclusao.
+- https://libras.se/blog/doutora-surda-defendeu-tese-em-libras/ - Michelle Murta e a primeira doutora surda da UFMG. Ela levou se apresentou em Libras e levou interpretes para traduzir para o portugues.
+- https://libras.se/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/ - A escola levou pro sambodromo um interprete de Libras que passou todo o desfile interpretando o samba-enredo para a lingua de sinais.
+- https://libras.se/blog/20-anos-da-lei-de-libras-avancos-e-desafios/ - Os 20 anos da Lei de Libras (Lei 10.436/2002): conheca a historia, os avancos na inclusao e os desafios que ainda mantem direitos da comunidade surda no papel.
+- https://libras.se/blog/surdos-estrangeiros-na-propria-patria/ - Aos 20 anos da Lei de Libras, a interprete Ligia Klein afirma que os surdos ainda sao "estrangeiros na propria patria". Entenda os avancos e os entraves que faltam.
+- https://libras.se/blog/conheca-a-primeira-dupla-musical-de-libras/ - Conheca a dupla musical de Libras que une musica, performance visual e cultura surda para ampliar o acesso e a representacao nos palcos.
+- https://libras.se/blog/futebol-paixao-nacional-libras/ - Times do futebol brasileiro fizeram transmissoes de partidas com narracao em Libras.
+- https://libras.se/blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/ - O ator Troy Kotsur foi um dos convidados para elaborar os sinais do Povo da Areia.
+- https://libras.se/blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/ - Conteudo que mescla dicas de maquiagem, comentarios sobre BBB e dicas sobre o universo LGBTQIA+ - tudo em Libras.
+- https://libras.se/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/ - CODA - No Ritmo do Coracao levou tres Oscars em 2022, incluindo Melhor Filme. Entenda por que o filme sobre uma familia surda e um marco de representatividade.
+- https://libras.se/blog/o-papel-do-interprete-de-libras-na-sociedade/ - O interprete de Libras (TILS) e a ponte da inclusao de pessoas surdas. Conheca a profissao, sua regulamentacao por lei e o que difere traduzir de interpretar.
+- https://libras.se/blog/o-que-e-capacitismo/ - Capacitismo e o preconceito contra pessoas com deficiencia, tratadas como incapazes. Entenda o conceito, veja exemplos de expressoes capacitistas e o que evitar.
+- https://libras.se/blog/makkari-a-super-heroina-surda/ - Makkari e a primeira super-heroina surda do Universo Marvel, vivida pela atriz surda Lauren Ridloff em "Eternos". Veja por que e um marco de representatividade.
+- https://libras.se/blog/dia-internacional-das-linguas-de-sinais/ - 23 de setembro e o Dia Internacional das Linguas de Sinais. Conheca a origem da data instituida pela ONU, a diversidade de linguas e o status da Libras no Brasil.
+- https://libras.se/blog/por-que-nao-ha-surdos-nas-paralimpiadas/ - Por que nao ha surdos nas Paralimpiadas? Entenda a razao: surdoatletas tem sua propria competicao, as Surdolimpiadas, com regras e entidade proprias desde 1924.
+- https://libras.se/blog/como-sao-criados-sinais-de-pessoas-na-libras/ - Entenda como surgem os sinais de pessoas na Libras, por que eles nao sao apelidos comuns e qual o papel da comunidade surda nesse processo.
+- https://libras.se/blog/voce-sabe-o-que-e-datilologia/ - Do abecedario da Xuxa as palavras que nascem dos sinais soletrados - entenda o que e datilologia e seu papel na Lingua Brasileira de Sinais.
+- https://libras.se/blog/por-que-incluir-janela-de-libras-em-videos/ - Por que incluir janela de Libras em videos? Entenda por que a legenda nao basta, o que e a janela (PIP) e o que diz a norma ABNT NBR 15.290 sobre o tamanho.
+- https://libras.se/blog/mandalorian-fez-sua-propria-lingua-de-sinais/ - Na serie de Star Wars da Disney, surdos foram recrutados para criar uma lingua propria para esses personagens ficticios.
+- https://libras.se/blog/entenda-porque-e-errado-o-termo-surdo-mudo/ - O termo "surdo-mudo" e errado: surdos tem cordas vocais e podem aprender a falar. Entenda a diferenca entre surdez, mudez e surdo oralizado.
+- https://libras.se/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/ - "O Som do Silencio" (Sound of Metal) ganhou o Oscar e ensina muito sobre Libras e identidade surda. Entenda como o filme retrata a comunidade surda e a lingua de sinais.
+- https://libras.se/blog/documentarios-sobre-surdez-gratis-youtube/ - Tres documentarios sobre surdez para assistir de graca no YouTube: historias reais sobre identidade surda, implante coclear, oralizacao e lingua de sinais.
+- https://libras.se/blog/responsavel-pelo-que-entendem/ - "Sou responsavel pelo que falo, nao pelo que voce entende" esta ultrapassado. Entenda por que comunicar com acessibilidade - e com janela de Libras - e responsabilidade de todos.
+- https://libras.se/blog/4-marcas-que-investem-em-libras-nos-videos/ - Conheca 4 marcas que investem na janela de Libras em videos: Coca-Cola, Nestle, Casas Bahia e Extra apostam em acessibilidade para alcancar milhoes de surdos.
+- https://libras.se/blog/4-dicas-para-ser-mais-inclusivo-na-internet/ - Quer um conteudo mais acessivel? Veja 4 dicas para ser mais inclusivo na internet: audiodescricao, texto alternativo, legendas e janela de Libras em videos.
+- https://libras.se/blog/libras-tem-sotaque-e-giria/ - Libras tambem tem variacoes regionais, usos informais e sinais que mudam conforme comunidade, contexto e regiao. Entenda por que isso nao e erro.
+- https://libras.se/blog/manifesto-por-libras-em-videos/ - O manifesto da Libras.se por videos acessiveis: por que incluir a janela de Libras e um passo essencial para trazer a comunidade surda para a sociedade.
 
 ## Glossario
 

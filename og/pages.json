@@ -1,11 +1,18 @@
 {
-  "_comment": "Manifesto do sistema de imagens sociais (OG) do Libras.se. Cada entrada vira /assets/img/og/<slug>.webp e é injetada nas meta tags da página. theme: sempre 'light' (fundo claro). Título = lead + accent (em degradê) + tail. Sem travessões. Mantenha o título curto p/ legibilidade no WhatsApp. Rode: npm run og -- --skip=jogo,glossario",
+  "_comment": "Manifesto do sistema de imagens sociais (OG) do Libras.se. Cada entrada vira /assets/img/og/<slug>.webp e é injetada nas meta tags da página. theme: 'light' ou 'deep'. Título = lead + accent (em degradê) + tail. Sem travessões. Mantenha o título curto p/ legibilidade no WhatsApp. Rode: npm run og -- --skip=jogo,glossario",
   "pages": [
     {
       "slug": "home", "page": "index.html", "theme": "light",
       "eyebrow": "Plataforma de acessibilidade",
       "lead": "A tradução em Libras", "accent": "mais ágil", "tail": "do Brasil",
       "badge": "Vídeos para todos"
+    },
+    {
+      "slug": "blog", "page": "blog/index.html", "theme": "deep", "variant": "blog",
+      "eyebrow": "Blog Libras.se",
+      "lead": "Conteúdo sobre", "accent": "Libras", "tail": "e inclusão",
+      "foot": "libras.se/blog · Conteúdo & inclusão",
+      "badge": "Guias, cultura surda e acessibilidade"
     },
     {
       "slug": "libras-ao-vivo", "page": "libras-ao-vivo/index.html", "theme": "light",

@@ -187,6 +187,8 @@ main{padding-top:80px}
 .pa-body h4{font-family:'M',sans-serif;font-weight:700;font-size:1.05rem;color:var(--p2);margin:24px 0 10px}
 .pa-body blockquote{margin:28px 0;padding:18px 26px;border-left:4px solid var(--teal);background:var(--bg2);border-radius:0 var(--rmd) var(--rmd) 0;font-size:1.1rem;color:var(--p2);font-style:italic}
 .pa-body .pa-cap{font-size:.82rem;color:var(--txm);font-style:italic;margin:-12px 0 26px;line-height:1.5}
+.pa-social-embed{display:flex;justify-content:center;margin:8px 0 28px}
+.pa-social-embed .instagram-media{max-width:540px!important;width:100%!important;min-width:0!important}
 .pa-tags{display:flex;flex-wrap:wrap;gap:9px;margin:40px 0 0;padding-top:26px;border-top:1px solid var(--border2)}
 .pa-tag{font-size:.74rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.1);border:1px solid var(--border);border-radius:var(--rpill);padding:6px 14px}
 a.pa-tag{transition:var(--tr)}
@@ -298,6 +300,11 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>Vídeos de personagens da Disney usando língua de sinais para se comunicar com crianças <a href="/glossario/surdo/">surdas</a> têm mostrado como é possível promover a acessibilidade e a inclusão de crianças por meio do entretenimento. Em uma publicação no Instagram, o Pato Donald surge conversando carinhosamente com um menino que estava na plateia do parque, utilizando a Língua de Sinais Americana (ASL).</p>
 <p>“Quantos anos você tem?”, sinaliza o personagem, que em seguida deseja um bom dia para o pequeno espectador. Na publicação, que já ultrapassa a marca de 3,8 milhões de likes, a mãe da criança escreveu: “Espero que esse Donald consiga ver isso um dia e saber o quanto temos gratidão por esse momento simples e mágico”.</p>
 <p>Veja a publicação:</p>
+<div class="pa-social-embed">
+  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Cgz-iDsjIkM/" data-instgrm-version="14">
+    <a href="https://www.instagram.com/reel/Cgz-iDsjIkM/" target="_blank" rel="noopener noreferrer">Ver publicação de Christy Keane no Instagram</a>
+  </blockquote>
+</div>
 <p>Em outro vídeo, dessa vez postado no TikTok, a princesa Anna aparece conversando com uma garota surda em um parque. No registro dá pra perceber que elas conversam bastante e com carinho. A mãe contou na legenda que a filha nunca havia conseguido conversar com uma princesa sem a ajuda de um intérprete. &quot;Isso foi mágico. Obrigada princesa Anna por tornar a nossa viagem tão especial!&quot;.</p>
 <p>Equipe LIBRAS-SE, com <a href="https://www.terra.com.br/nos/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico,a5eb717157d711a38a2941282e6791cbw3h9xy8y.html" target="_blank" rel="noopener noreferrer">Terra</a></p>
     </div>
@@ -421,5 +428,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && mob.classL
 const rvO = new IntersectionObserver(entries => {entries.forEach(e => {if (e.isIntersecting){e.target.classList.add('on');rvO.unobserve(e.target);}});},{threshold:0.1, rootMargin:'0px 0px -24px 0px'});
 document.querySelectorAll('.rv').forEach(el => rvO.observe(el));
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>

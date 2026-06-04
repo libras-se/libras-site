@@ -8,7 +8,41 @@
 
   <title>Nenhum sinal por aqui | Libras.se</title>
   <meta name="description" content="Essa página foi embora sem deixar sinal. Nossos intérpretes estão esperando por você na página inicial." />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, follow" />
+
+  <script>
+    (function () {
+      const redirects = {
+        "/post/gestuante-entra-para-a-lingua-portuguesa-entenda-o-significado-e-o-uso-do-novo-termo": "/blog/gestuante-entra-para-a-lingua-portuguesa/",
+        "/post/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos": "/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/",
+        "/post/acessibilidade-em-eventos-como-garantir-interpretacao-em-libras-sem-improviso": "/blog/garantir-libras-sem-improviso/",
+        "/post/entenda-porque-e-errado-o-termo-surdo-mudo": "/blog/entenda-porque-e-errado-o-termo-surdo-mudo/",
+        "/post/voce-sabe-o-que-e-datilologia": "/blog/voce-sabe-o-que-e-datilologia/",
+        "/post/voce-sabe-logia": "/blog/voce-sabe-o-que-e-datilologia/",
+        "/voce-sabe-o-que-e-datilologia": "/blog/voce-sabe-o-que-e-datilologia/",
+        "/acessibilidade-para-curta-metragem/acessibilidade-para-curta-metragem.html": "/acessibilidade-para-curta-metragem/",
+        "/nossa-tecnologia": "/tecnologia/",
+        "/video": "/orcamento/",
+        "/category/uncategorized": "/blog/",
+        "/elementor-466": "/",
+        "/hello-world": "/blog/",
+        "/contato": "/orcamento/",
+        "/privacidade": "/politica/",
+        "/politica": "/politica/",
+        "/blog/startup-premiada-sebrae": "/blog/",
+        "/proposito": "/proposito/",
+        "/nossa-te": "/tecnologia/"
+      };
+
+      const rawPath = window.location.pathname.replace(/\/index\.html$/, "/");
+      const path = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
+      const destination = redirects[rawPath] || redirects[path];
+
+      if (destination) {
+        window.location.replace("https://libras.se" + destination);
+      }
+    })();
+  </script>
 
   <link rel="preload" href="assets/fonts/museo-sans-rounded-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin>

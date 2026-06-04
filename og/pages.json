@@ -15,6 +15,20 @@
       "badge": "Guias, cultura surda e acessibilidade"
     },
     {
+      "slug": "blog-todos", "page": "blog/todos/index.html", "theme": "deep", "variant": "blog",
+      "eyebrow": "Acervo do Blog",
+      "lead": "Todos os", "accent": "posts", "tail": "sobre Libras",
+      "foot": "libras.se/blog/todos · Acervo completo",
+      "badge": "Busca, filtros e conteúdo editorial"
+    },
+    {
+      "slug": "blog-temas", "page": "blog/temas/index.html", "theme": "deep", "variant": "blog",
+      "eyebrow": "Blog por tema",
+      "lead": "Conteúdo por", "accent": "tema", "tail": "em Libras",
+      "foot": "libras.se/blog/temas · Educação, cultura e acessibilidade",
+      "badge": "Navegue por assunto"
+    },
+    {
       "slug": "libras-ao-vivo", "page": "libras-ao-vivo/index.html", "theme": "light",
       "eyebrow": "Libras remota · TV e eventos",
       "lead": "Libras ao vivo", "accent": "para TV, eventos e lives", "tail": "",

@@ -1267,9 +1267,16 @@ main{padding-top:80px}
 
 /* ── FEATURED SECTION ── */
 .bl-featured{padding:72px 0 64px;background:var(--bg);position:relative;overflow:hidden}
-.bl-featured__grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;align-items:start}
-.bl-featured__side{display:flex;flex-direction:column;gap:24px}
-@media(max-width:900px){.bl-featured__grid{grid-template-columns:1fr}}
+.bl-featured__grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(320px,.88fr);gap:20px;align-items:stretch}
+.bl-featured__side{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:18px}
+.bl-featured__side .bl-card{display:grid;grid-template-columns:minmax(132px,36%) minmax(0,1fr);min-height:0}
+.bl-featured__side .bl-card__thumb,.bl-featured__side .bl-card__thumb picture{height:100%}
+.bl-featured__side .bl-card__thumb img{height:100%;object-fit:cover}
+.bl-featured__side .bl-card__body{padding:18px 20px}
+.bl-featured__side .bl-card__meta{font-size:.68rem;margin-bottom:8px}
+.bl-featured__side .bl-card__title{font-size:.94rem;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bl-featured__side .bl-card__excerpt{font-size:.78rem;line-height:1.5;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:900px){.bl-featured__grid{grid-template-columns:1fr}.bl-featured__side{grid-template-rows:auto}.bl-featured__side .bl-card{display:flex;min-height:0}.bl-featured__side .bl-card__thumb,.bl-featured__side .bl-card__thumb picture{height:auto}.bl-featured__side .bl-card__thumb img{height:auto;object-fit:contain}}
 .bl-posts-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
 @media(max-width:900px){.bl-posts-row{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.bl-posts-row{grid-template-columns:1fr}}
@@ -1776,7 +1783,7 @@ main{padding-top:80px}
 
       <div class="bl-sec-head rv">
         <h2 class="bl-sec-head__title" id="bl-featured-title">Todos os <em>artigos</em></h2>
-        <span id="bl-post-count" class="bl-sec-head__link">75 publicações</span>
+        <span id="bl-post-count" class="bl-sec-head__link">74 publicações</span>
       </div>
 
       <div class="bl-theme-bar rv d1" role="group" aria-label="Filtrar por tema">
@@ -1881,6 +1888,35 @@ main{padding-top:80px}
                 A maior barreira da comunidade surda é a comunicação — e, mesmo com lei, a realidade ainda é de dependência e exclusão.
               </p>
               <a href="/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/" class="bl-card__read" aria-label="Ler artigo: Surdos: você precisa saber se comunicar com eles">Ler artigo →</a>
+            </div>
+          </article>
+
+          <article class="bl-card bl-card--sm rv d3"
+            data-post
+            data-search="como sao criados sinais de pessoas na libras sinal pessoal sinal de nome nomes em libras famosos cultura surda identidade comunidade surda"
+            data-cat="língua"
+            itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Como são criados os sinais de pessoas na Libras?"></a>
+            <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__thumb" aria-label="Como são criados os sinais de pessoas na Libras?">
+              <picture>
+                <source srcset="/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif" type="image/avif">
+                <img src="/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif" alt="Sinais de pessoas famosas em Libras" loading="lazy" decoding="async" itemprop="image" width="1200" height="630">
+              </picture>
+              <span class="bl-card__badge">Língua &amp; Cultura</span>
+            </a>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <time datetime="2021-06-16" itemprop="datePublished">16 jun 2021</time>
+                <span class="bl-card__dot" aria-hidden="true"></span>
+                <span>4 min de leitura</span>
+              </div>
+              <h3 class="bl-card__title" itemprop="headline">
+                <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/">Como são criados os sinais de pessoas na Libras?</a>
+              </h3>
+              <p class="bl-card__excerpt" itemprop="description">
+                Sinais pessoais em Libras envolvem identidade, convivência, visualidade e cultura surda. Entenda como eles surgem.
+              </p>
+              <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__read" aria-label="Ler artigo: Como são criados os sinais de pessoas na Libras?">Ler artigo →</a>
             </div>
           </article>
 

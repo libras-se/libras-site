@@ -290,9 +290,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/surdos-estrangeiros-na-propria-patria/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Reflexao social relevante, mas menos direta como pagina pilar."
       }
@@ -537,9 +537,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -1566,9 +1566,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -2153,9 +2153,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/urnas-eletronicas-terao-video-com-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -2721,9 +2721,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/influenciadores-surdos-relatam-dificuldade-com-publis/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema de mercado e representatividade, pode render analise sem exigir layout complexo."
       }
@@ -3533,9 +3533,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -4087,9 +4087,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/professora-aprende-libras-para-se-comunicar-com-estudante/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -4376,9 +4376,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/com-libras-inclusao-marca-sao-joao-de-caruaru/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -4620,9 +4620,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -4878,9 +4878,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/recenseadora-entrevista-mulher-surda-em-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -5456,9 +5456,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/conheca-a-primeira-dupla-musical-de-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -5711,9 +5711,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -5964,9 +5964,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -6241,9 +6241,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/tocantins-tem-libras-na-rede-estadual-de-ensino/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -6578,9 +6578,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/documentarios-sobre-surdez-gratis-youtube/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Lista util com potencial de busca moderado."
       }
@@ -6825,9 +6825,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/projeto-garante-interprete-de-libras-em-hospitais/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -7132,9 +7132,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/df-tem-instrutor-e-examinador-de-transito-surdo/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -7340,9 +7340,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -7705,9 +7705,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Materia pontual com tema humano forte e possibilidade de contextualizacao."
       }
@@ -8315,9 +8315,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -8617,9 +8617,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/mandalorian-fez-sua-propria-lingua-de-sinais/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -9532,9 +9532,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/futebol-paixao-nacional-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -10192,9 +10192,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/disney-lanca-jogos-que-ensinam-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -10459,9 +10459,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/doutora-surda-defendeu-tese-em-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -10776,9 +10776,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/passatempo-tera-biscoitos-com-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -11696,9 +11696,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -12026,9 +12026,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -12312,9 +12312,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -12917,9 +12917,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema amplo, mas mais opinativo do que pilar direto de busca."
       }
@@ -13155,9 +13155,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/idoso-estuda-lingua-de-sinais-por-sobrinha/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -13382,9 +13382,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/rock-in-rio-tem-show-de-rap-com-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -13656,9 +13656,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -14235,9 +14235,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/manifesto-por-libras-em-videos/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Conteudo de posicionamento editorial, bom para campanha e autoridade."
       }
@@ -14796,9 +14796,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/crianca-surda-batizada-em-libras-em-caruaru/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -15201,9 +15201,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/makkari-a-super-heroina-surda/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema cultural com potencial de representatividade, mas baseado em personagem especifica."
       }
@@ -15723,9 +15723,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/biblia-completamente-traduzida-para-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Noticia com impacto cultural amplo e valor de contexto."
       }
@@ -16009,9 +16009,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/tradutor-de-libras-se-destaca-no-rock-in-rio/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -17674,9 +17674,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/4-marcas-que-investem-em-libras-nos-videos/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Lista de exemplos com potencial comercial moderado."
       }
@@ -17939,9 +17939,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/responsavel-pelo-que-entendem/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Reflexao de marca/conteudo, boa para autoridade mas menor demanda orgânica."
       }
@@ -18771,9 +18771,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -18964,9 +18964,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -19194,9 +19194,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/atacante-do-flamengo-comemora-gol-em-libras/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -19747,9 +19747,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "media",
         "motivoComplexidade": "Tema cultural relevante, mais contextual do que pilar evergreen."
       }
@@ -20619,9 +20619,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -20976,9 +20976,9 @@
         }
       },
       "migration": {
-        "publicado": "nao",
-        "currentBlogPath": null,
-        "incluirNoBacklog": "sim",
+        "publicado": "sim",
+        "currentBlogPath": "blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/",
+        "incluirNoBacklog": "nao",
         "complexidadeLayout": "baixa",
         "motivoComplexidade": "Noticia ou caso pontual sobre Libras/surdez, importante para acervo, mas com menor potencial de SEO evergreen e menor necessidade de layout elaborado."
       }
@@ -20988,16 +20988,16 @@
   "migrationSummary": {
     "classifiedAt": "2026-05-31T14:41:06.205Z",
     "totalPosts": 73,
-    "publishedPosts": 8,
-    "backlogPosts": 65,
+    "publishedPosts": 53,
+    "backlogPosts": 20,
     "byComplexity": {
       "media": 11,
       "baixa": 34,
       "alta": 28
     },
     "backlogByComplexity": {
-      "media": 11,
-      "baixa": 34,
+      "media": 0,
+      "baixa": 0,
       "alta": 20
     },
     "notes": [

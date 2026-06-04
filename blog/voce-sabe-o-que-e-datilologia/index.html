@@ -58,6 +58,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
+  @font-face {
+    font-family: 'Libras2020';
+    src: url('../../assets/fonts/Libras2020-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --teal-dark:   #1e6e6e;
     --teal-mid:    #2a9090;
@@ -479,14 +487,33 @@
     color: var(--teal-pale);
     letter-spacing: -0.02em;
     transition: background 0.2s, transform 0.2s, border-color 0.2s;
-    cursor: default;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    line-height: 1;
+    padding: 0;
   }
 
-  .alpha-letter:hover {
+  .alpha-letter:hover,
+  .alpha-letter:focus-visible,
+  .alpha-letter.is-libras {
     background: rgba(72,191,178,0.2);
     border-color: rgba(72,191,178,0.6);
     transform: translateY(-3px) scale(1.1);
     color: white;
+  }
+
+  .alpha-letter:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.75);
+    outline-offset: 3px;
+  }
+
+  .alpha-letter.is-libras {
+    font-family: 'Libras2020', monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-shadow: 0 2px 14px rgba(79,209,197,0.45);
   }
 
   /* ── PULL QUOTE ── */
@@ -1161,7 +1188,7 @@
 
   <!-- ALPHABET SHOWCASE -->
   <div class="alphabet-showcase reveal">
-    <span class="showcase-label">✋ O alfabeto manual · Passe o mouse para explorar</span>
+    <span class="showcase-label">✋ O alfabeto manual · Clique ou toque para explorar</span>
     <div class="alphabet-grid" id="alpha-grid"></div>
   </div>
 
@@ -1439,10 +1466,20 @@
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const grid = document.getElementById('alpha-grid');
   letters.forEach(l => {
-    const span = document.createElement('span');
-    span.className = 'alpha-letter';
-    span.textContent = l;
-    grid.appendChild(span);
+    const button = document.createElement('button');
+    button.className = 'alpha-letter';
+    button.type = 'button';
+    button.textContent = l;
+    button.setAttribute('aria-pressed', 'false');
+    button.setAttribute('aria-label', `Mostrar letra ${l} em Libras`);
+    button.dataset.letter = l;
+    button.addEventListener('click', () => {
+      const isLibras = button.classList.toggle('is-libras');
+      button.textContent = isLibras ? l.toLowerCase() : l;
+      button.setAttribute('aria-pressed', String(isLibras));
+      button.setAttribute('aria-label', isLibras ? `Letra ${l} em Libras` : `Mostrar letra ${l} em Libras`);
+    });
+    grid.appendChild(button);
   });
 
   // ── Animated stat counters ──

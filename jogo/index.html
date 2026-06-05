@@ -8,6 +8,7 @@
 <title>Jogo de Libras — Aprenda sinais de forma interativa | Libras.se</title>
 <meta name="description" content="Aprenda Libras jogando! Descubra e pratique os sinais da Língua Brasileira de Sinais de forma interativa com o joguinho da Libras.se.">
 <link rel="canonical" href="https://libras.se/jogo/">
+<link rel="manifest" href="/manifest.json">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://libras.se/jogo/">
@@ -482,6 +483,8 @@ main { padding: 20px 0 140px; }
 /* === A11Y === */
 :focus-visible { outline:3px solid var(--teal);outline-offset:2px;border-radius:6px; }
 .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }
+.skip-link{position:absolute;top:-100%;left:16px;background:#0e3538;color:#fff;padding:8px 16px;border-radius:0 0 16px 16px;font-size:.82rem;font-weight:700;z-index:9999;transition:top .2s}
+.skip-link:focus{top:0}
 
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after {
@@ -500,7 +503,7 @@ main { padding: 20px 0 140px; }
   <div class="orb orb-3"></div>
 </div>
 
-<a class="sr-only" href="#main">Ir para o conteúdo</a>
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
 <!-- HEADER -->
 <header role="banner">
@@ -524,7 +527,7 @@ main { padding: 20px 0 140px; }
 <div class="toast-area" id="toastArea" aria-live="polite" aria-atomic="true"></div>
 
 <!-- MAIN -->
-<main id="main">
+<main id="main-content">
 <div class="wrap">
 
   <!-- CHALLENGE CARD -->

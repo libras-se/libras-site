@@ -32,7 +32,7 @@ Allow: /
 # Arquivos editoriais e páginas de teste — não indexar
 Disallow: /CLAUDE.md
 Disallow: /blog/CLAUDE.md
-Disallow: /blog/CLAUDE 2.md
+Disallow: /blog/CLAUDE%202.md
 Disallow: /blog/template-blog.php
 Disallow: /blog/template-blog-home-v2.php
 Disallow: /blog/*/prompt-claude.md

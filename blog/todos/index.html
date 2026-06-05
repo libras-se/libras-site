@@ -26,14 +26,14 @@
 <meta name="twitter:description" content="Todo o acervo do blog da Libras.se: artigos e notícias sobre Libras, acessibilidade, cultura surda, educação e inclusão.">
 <meta name="twitter:image" content="https://libras.se/assets/img/og/blog-todos.webp">
 <meta name="twitter:image:alt" content="Libras.se — Acervo do Blog: Todos os posts sobre Libras">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#4fd1c5">
 <link rel="icon" href="https://libras.se/assets/img/favicon/FAVICONpng.png">
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,6 +61,13 @@
 }
 </script>
 <style>
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Lora';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/lora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Lora';font-style:normal;font-weight:400 600;font-display:swap;src:url('/assets/fonts/lora-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
 /* ── FONTS ── */
 @font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
 @font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
@@ -226,10 +233,9 @@ main{padding-top:80px}
 /* ── BLOG CARD ── */
 .bl-card{background:#fff;border-radius:var(--brad);overflow:hidden;box-shadow:var(--bsh);transition:box-shadow .28s ease,transform .28s ease;height:100%;display:flex;flex-direction:column}
 .bl-card:hover{box-shadow:var(--bsh-h);transform:translateY(-3px)}
-.bl-card__thumb{display:block;position:relative;overflow:hidden;background:rgba(223,242,240,.5)}
-.bl-card__thumb picture{display:block;width:100%;height:100%}
-.bl-card--lg .bl-card__thumb{aspect-ratio:16/9}
-.bl-card--sm .bl-card__thumb{aspect-ratio:3/2}
+.bl-card__thumb{display:block;position:relative;background:rgba(223,242,240,.5)}
+.bl-card__thumb picture{display:block;width:100%}
+.bl-card__thumb picture img{width:100%;height:auto;object-fit:initial}
 .bl-card__ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:200px;background:linear-gradient(135deg,#0e3538,#2a6069);position:relative;overflow:hidden}
 .bl-card__ph::before{content:'';position:absolute;inset:0;opacity:.06;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")}
 .bl-card__ph-icon{font-size:3rem;filter:drop-shadow(0 4px 12px rgba(79,209,197,.4));position:relative;z-index:1}

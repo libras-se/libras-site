@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');gtag('config','AW-16996694944');</script>
 <title>O que é capacitismo? Significado e exemplos | Blog Libras.se</title>
 <meta name="description" content="Capacitismo é o preconceito contra pessoas com deficiência, tratadas como incapazes. Entenda o conceito, veja exemplos de expressões capacitistas e o que evitar.">
 <meta name="keywords" content="capacitismo, o que é capacitismo, preconceito contra deficiência, pessoa com deficiência, inclusão, expressões capacitistas, acessibilidade">
@@ -38,7 +38,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://libras.se/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://libras.se/blog/"},{"@type":"ListItem","position":3,"name":"Você sabe o que é capacitismo?","item":"https://libras.se/blog/o-que-e-capacitismo/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que significa capacitismo?","acceptedAnswer":{"@type":"Answer","text":"É o preconceito ou a discriminação contra pessoas com deficiência, que são tratadas como inferiores ou incapazes por causa de suas características físicas ou cognitivas."}},{"@type":"Question","name":"Qual é o termo correto: deficiente ou pessoa com deficiência?","acceptedAnswer":{"@type":"Answer","text":"O termo correto é \"pessoa com deficiência\". Dizer apenas \"deficiente\" reduz e limita a pessoa à sua deficiência."}},{"@type":"Question","name":"\"Exemplo de superação\" é capacitismo?","acceptedAnswer":{"@type":"Answer","text":"Sim, pode ser. A expressão parte da ideia de que viver com deficiência é, por si só, algo extraordinário a ser superado — o que reforça a visão da deficiência como incapacidade."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que significa capacitismo?","acceptedAnswer":{"@type":"Answer","text":"É o preconceito ou a discriminação contra pessoas com deficiência, que são tratadas como inferiores ou incapazes por causa de suas características físicas ou cognitivas."}},{"@type":"Question","name":"Qual é o termo correto: deficiente ou pessoa com deficiência?","acceptedAnswer":{"@type":"Answer","text":"O termo correto é \"pessoa com deficiência\". Dizer apenas \"deficiente\" reduz e limita a pessoa à sua deficiência."}},{"@type":"Question","name":"\"Exemplo de superação\" é capacitismo?","acceptedAnswer":{"@type":"Answer","text":"Sim, pode ser. A expressão parte da ideia de que viver com deficiência é, por si só, algo extraordinário a ser superado, o que reforça a visão da deficiência como incapacidade."}}]}
 </script>
 <style>
 :root{
@@ -73,7 +73,7 @@ ul,ol{margin:0;padding:0}
 .mob a{font-family:var(--bf);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
 .mob a:hover{color:var(--teal-pale)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
-#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s;background:rgba(248,253,253,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,144,144,.1)}
 #nav.sc{padding:11px 0;background:rgba(248,253,253,.88);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -237,6 +237,26 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 @media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* padronizacao: icones SVG */
+.info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+.pa-note__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.pa-act__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.ic-n svg{width:20px;height:20px;stroke:#1e6e6e;fill:none}
+
+/* padronizacao: fechamento Com Barra (tags + recursos) */
+.pa-tags-alt{display:flex;flex-wrap:wrap;gap:9px;margin:56px 0 0;padding-top:26px;border-top:1px solid var(--grey-light)}
+.pa-tags-alt a,.pa-tags-alt span{font-family:var(--bf);font-size:.74rem;font-weight:700;color:var(--teal-dark);background:var(--teal-bg);border:1px solid var(--teal-pale);border-radius:999px;padding:6px 14px;transition:all .2s}
+.pa-tags-alt a:hover{background:var(--teal-pale)}
+.pa-acts-alt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 0}
+.pa-act-alt{display:flex;flex-direction:column;gap:8px;background:var(--white);border:1px solid var(--grey-light);border-radius:var(--radius);padding:24px 22px;transition:transform .3s,box-shadow .3s}
+.pa-act-alt:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(30,110,110,.1)}
+.pa-act-alt__ic{width:44px;height:44px;border-radius:12px;background:var(--teal-bg);display:grid;place-items:center;color:var(--teal-dark)}
+.pa-act-alt__ic svg{width:23px;height:23px;stroke:currentColor;fill:none}
+.pa-act-alt__t{font-family:var(--bf);font-weight:800;font-size:1rem;color:var(--ink)}
+.pa-act-alt__d{font-family:var(--lf);font-size:.85rem;color:var(--ink-soft);line-height:1.55}
+.pa-act-alt__go{font-family:var(--bf);font-size:.78rem;font-weight:700;color:var(--teal-dark)}
+@media(max-width:700px){.pa-acts-alt{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -304,19 +324,10 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
-<nav class="toc reveal" aria-label="Neste artigo">
-  <p class="toc-h">Neste artigo</p>
-  <ol>
-      <li><a href="#conceito">O que é capacitismo</a></li>
-      <li><a href="#como">Como ele se manifesta</a></li>
-      <li><a href="#exemplos">Expressões para não repetir</a></li>
-      <li><a href="#faq">Perguntas frequentes</a></li>
-  </ol>
-</nav>
-<p class="body-text drop-cap"><strong>Capacitismo</strong> é o preconceito social, a discriminação, a opressão ou o abuso contra uma pessoa com deficiência. É a desvalorização de alguém com base em suas capacidades corporais ou cognitivas — quando a pessoa com deficiência é tratada como inferior ou incapaz.</p>
+<p class="body-text drop-cap"><strong>Capacitismo</strong> é o preconceito social, a discriminação, a opressão ou o abuso contra uma pessoa com deficiência. É a desvalorização de alguém com base em suas capacidades corporais ou cognitivas, quando a pessoa com deficiência é tratada como inferior ou incapaz.</p>
 
 <h2 id="conceito">O que é capacitismo</h2>
-<p class="body-text">Isso acontece porque a sociedade é marcada por uma discriminação histórica. Foi só no século XX que a humanidade começou a adotar uma abordagem inclusiva. Com a Constituição Federal e o Estatuto da Pessoa com Deficiência, esse grupo começou a sair da margem — mas ainda há muitas barreiras para o acesso a direitos básicos.</p>
+<p class="body-text">Isso acontece porque a sociedade é marcada por uma discriminação histórica. Foi só no século XX que a humanidade começou a adotar uma abordagem inclusiva. Com a Constituição Federal e o Estatuto da Pessoa com Deficiência, esse grupo começou a sair da margem, mas ainda há muitas barreiras para o acesso a direitos básicos.</p>
 
 <figure class="fig reveal"><picture><source srcset="/assets/img/blog/o-que-e-capacitismo/o-que-e-capacitismo.avif" type="image/avif"><source srcset="/assets/img/blog/o-que-e-capacitismo/o-que-e-capacitismo.webp" type="image/webp"><img src="/assets/img/blog/o-que-e-capacitismo/o-que-e-capacitismo.jpg" alt="Arte colorida com ilustrações de pessoas com diferentes deficiências" width="1200" height="675" loading="lazy" decoding="async"></picture><figcaption>O capacitismo aparece em palavras, “brincadeiras” e na falta de acessibilidade.</figcaption></figure>
 
@@ -325,32 +336,44 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 
 <div class="highlight-box reveal">
   <span class="hl-label">Por que isso importa</span>
-  <p>Muitas expressões capacitistas são ditas sem intenção, por falta de conhecimento. Reconhecê-las é o primeiro passo para uma comunicação mais respeitosa — inclusive com a <a href="/glossario/comunidade-surda/">comunidade surda</a>.</p>
+  <p>Muitas expressões capacitistas são ditas sem intenção, por falta de conhecimento. Reconhecê-las é o primeiro passo para uma comunicação mais respeitosa, inclusive com a <a href="/glossario/comunidade-surda/">comunidade surda</a>.</p>
 </div>
 
 <h2 id="exemplos">Expressões para não repetir</h2>
 <ul class="body-list">
   <li><strong>"Portador de deficiência":</strong> deficiência não se porta, como um documento. Prefira <em>pessoa com deficiência</em>.</li>
-  <li><strong>"Portador de necessidades especiais":</strong> as necessidades são as mesmas de qualquer pessoa — não são "especiais".</li>
+  <li><strong>"Portador de necessidades especiais":</strong> as necessidades são as mesmas de qualquer pessoa, não são "especiais".</li>
   <li><strong>"Exemplo de superação":</strong> deficiência não é sinônimo de incapacidade, e viver não é superação.</li>
   <li><strong>"Aleijado", "deu uma mancada", "joão sem braço":</strong> usam a deficiência como ofensa ou piada.</li>
   <li><strong>"Deficiente" (como substantivo):</strong> define e limita a pessoa pela deficiência. Ela não é a deficiência dela.</li>
 </ul>
 
-<p class="body-text">Por isso, é preciso fomentar a inclusão e lutar contra o capacitismo no trabalho, na educação, na política e nas redes sociais — na vida de modo geral.</p>
+<p class="body-text">Por isso, é preciso fomentar a inclusão e lutar contra o capacitismo no trabalho, na educação, na política e nas redes sociais, na vida de modo geral.</p>
 <section class="faq-section" aria-label="Perguntas frequentes">
   <h2 id="faq">Perguntas frequentes</h2>
   <details class="faq-item reveal"><summary>O que significa capacitismo?</summary><div class="faq-a">É o preconceito ou a discriminação contra pessoas com deficiência, que são tratadas como inferiores ou incapazes por causa de suas características físicas ou cognitivas.</div></details>
   <details class="faq-item reveal"><summary>Qual é o termo correto: deficiente ou pessoa com deficiência?</summary><div class="faq-a">O termo correto é "pessoa com deficiência". Dizer apenas "deficiente" reduz e limita a pessoa à sua deficiência.</div></details>
-  <details class="faq-item reveal"><summary>&quot;Exemplo de superação&quot; é capacitismo?</summary><div class="faq-a">Sim, pode ser. A expressão parte da ideia de que viver com deficiência é, por si só, algo extraordinário a ser superado — o que reforça a visão da deficiência como incapacidade.</div></details>
+  <details class="faq-item reveal"><summary>&quot;Exemplo de superação&quot; é capacitismo?</summary><div class="faq-a">Sim, pode ser. A expressão parte da ideia de que viver com deficiência é, por si só, algo extraordinário a ser superado, o que reforça a visão da deficiência como incapacidade.</div></details>
 </section>
-<section class="cta-block reveal">
-  <h2>Entenda a Libras de verdade</h2>
-  <p>Conceitos, sinais e cultura surda explicados com clareza. Explore o glossário e o vocabulário da Libras.se para ir além desta leitura.</p>
+<div class="pa-tags-alt reveal" aria-label="Tags">
+  <span>#capacitismo</span>
+  <span>#inclusão</span>
+  <span>#pessoa com deficiência</span>
+  <span>#acessibilidade</span>
+  <a href="/glossario/comunidade-surda/">#comunidade surda</a>
+</div>
+<section class="cta-block reveal" aria-label="Soluções e recursos da Libras.se">
+  <h2>Precisa do seu conteúdo em Libras?</h2>
+  <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
   <div class="cta-btns">
-    <a href="/glossario/" class="btn bw">Abrir o glossário</a>
-    <a href="/sinal/" class="btn bp">Ver vocabulário</a>
+    <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
+    <a href="https://libras.se/solucoes" class="btn bp">Conhecer soluções</a>
   </div>
+</section>
+<section class="pa-acts-alt" aria-label="Recursos da Libras.se">
+  <a href="/jogo/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg></span><span class="pa-act-alt__t">Joguinho de Libras</span><span class="pa-act-alt__d">Descubra o sinal do dia e aprenda brincando.</span><span class="pa-act-alt__go">Jogar agora →</span></a>
+  <a href="/sinal/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span><span class="pa-act-alt__t">Vocabulário</span><span class="pa-act-alt__d">Consulte sinais e amplie seu vocabulário em Libras.</span><span class="pa-act-alt__go">Ver sinais →</span></a>
+  <a href="/glossario/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="pa-act-alt__t">Glossário</span><span class="pa-act-alt__d">Termos da área com definições claras e verificadas.</span><span class="pa-act-alt__go">Consultar →</span></a>
 </section>
 </main>
 <section class="blog-more" aria-label="Mais conteúdos do blog">

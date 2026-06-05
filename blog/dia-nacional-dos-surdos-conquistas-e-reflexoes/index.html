@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');gtag('config','AW-16996694944');</script>
 <title>Dia Nacional dos Surdos: conquistas e reflexões | Blog Libras.se</title>
 <meta name="description" content="26 de setembro é o Dia Nacional dos Surdos. Conheça a origem da data, o Setembro Azul, as conquistas da comunidade surda e os desafios que ainda permanecem.">
 <meta name="keywords" content="dia nacional dos surdos, 26 de setembro, setembro azul, comunidade surda, ines, libras, inclusão, cultura surda, conquistas dos surdos">
@@ -73,7 +73,7 @@ ul,ol{margin:0;padding:0}
 .mob a{font-family:var(--bf);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
 .mob a:hover{color:var(--teal-pale)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
-#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s;background:rgba(248,253,253,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,144,144,.1)}
 #nav.sc{padding:11px 0;background:rgba(248,253,253,.88);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -237,6 +237,26 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 @media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* padronizacao: icones SVG */
+.info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+.pa-note__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.pa-act__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.ic-n svg{width:20px;height:20px;stroke:#1e6e6e;fill:none}
+
+/* padronizacao: fechamento Com Barra (tags + recursos) */
+.pa-tags-alt{display:flex;flex-wrap:wrap;gap:9px;margin:56px 0 0;padding-top:26px;border-top:1px solid var(--grey-light)}
+.pa-tags-alt a,.pa-tags-alt span{font-family:var(--bf);font-size:.74rem;font-weight:700;color:var(--teal-dark);background:var(--teal-bg);border:1px solid var(--teal-pale);border-radius:999px;padding:6px 14px;transition:all .2s}
+.pa-tags-alt a:hover{background:var(--teal-pale)}
+.pa-acts-alt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 0}
+.pa-act-alt{display:flex;flex-direction:column;gap:8px;background:var(--white);border:1px solid var(--grey-light);border-radius:var(--radius);padding:24px 22px;transition:transform .3s,box-shadow .3s}
+.pa-act-alt:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(30,110,110,.1)}
+.pa-act-alt__ic{width:44px;height:44px;border-radius:12px;background:var(--teal-bg);display:grid;place-items:center;color:var(--teal-dark)}
+.pa-act-alt__ic svg{width:23px;height:23px;stroke:currentColor;fill:none}
+.pa-act-alt__t{font-family:var(--bf);font-weight:800;font-size:1rem;color:var(--ink)}
+.pa-act-alt__d{font-family:var(--lf);font-size:.85rem;color:var(--ink-soft);line-height:1.55}
+.pa-act-alt__go{font-family:var(--bf);font-size:.78rem;font-weight:700;color:var(--teal-dark)}
+@media(max-width:700px){.pa-acts-alt{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -295,7 +315,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     </nav>
     <div class="hero-kicker">Cultura Surda · Data</div>
     <h1 class="hero-title">Dia Nacional dos Surdos: <em>conquistas e reflexões</em></h1>
-    <p class="hero-subtitle">Celebrado em 26 de setembro, o Dia Nacional dos Surdos é um convite à reflexão sobre as conquistas alcançadas — e os desafios que ainda precisam ser enfrentados.</p>
+    <p class="hero-subtitle">Celebrado em 26 de setembro, o Dia Nacional dos Surdos é um convite à reflexão sobre as conquistas alcançadas, e os desafios que ainda precisam ser enfrentados.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por Jéssica Rodrigues</span>
       <span class="meta-badge">26 de setembro de 2022</span>
@@ -304,23 +324,14 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
-<nav class="toc reveal" aria-label="Neste artigo">
-  <p class="toc-h">Neste artigo</p>
-  <ol>
-      <li><a href="#origem">A origem da data</a></li>
-      <li><a href="#setembro-azul">O Setembro Azul</a></li>
-      <li><a href="#conquistas">Conquistas e desafios</a></li>
-      <li><a href="#faq">Perguntas frequentes</a></li>
-  </ol>
-</nav>
-<p class="body-text drop-cap">Luta por direito, por respeito, por visibilidade e por inclusão social. O dia <strong>26 de setembro</strong> é o Dia Nacional dos Surdos — uma data que convida à reflexão sobre as conquistas e os desafios que ainda precisam ser enfrentados no Brasil.</p>
+<p class="body-text drop-cap">Luta por direito, por respeito, por visibilidade e por inclusão social. O dia <strong>26 de setembro</strong> é o Dia Nacional dos Surdos, uma data que convida à reflexão sobre as conquistas e os desafios que ainda precisam ser enfrentados no Brasil.</p>
 
 <h2 id="origem">A origem da data</h2>
 <p class="body-text">A data foi oficializada em 2008 e é uma homenagem à fundação da primeira escola para surdos no país, em 1857. Essa escola ainda existe e hoje é o <a href="/glossario/ines/">Instituto Nacional de Educação de Surdos (INES)</a>, fundamental na formação de crianças, jovens e adultos surdos.</p>
 
 <h2 id="setembro-azul">O Setembro Azul</h2>
 <div class="info-callout reveal">
-  <div class="info-icon" aria-hidden="true">💙</div>
+  <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
   <div class="info-content">
     <h4>Você sabia?</h4>
     <p>Além de um dia, a comunidade tem um mês de celebração: o <strong>Setembro Azul</strong>. A cor remonta a um período da Segunda Guerra Mundial, quando os nazistas identificavam pessoas com deficiência com uma faixa azul no braço. Hoje, o mês é dedicado à conscientização sobre a <a href="/glossario/comunidade-surda/">comunidade surda</a>.</p>
@@ -334,20 +345,32 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <span class="hl-label">Por que isso importa</span>
   <p>Apesar dos avanços, muitos direitos ficaram no papel. Ser atendido em Libras numa delegacia ou num posto de saúde ainda é exceção. Na TV, no cinema e no teatro, a comunicação ainda foca a oralidade e deixa a comunidade surda à margem.</p>
 </div>
-<p class="body-text">Há muito pelo que lutar para garantir a inclusão plena. Um dos desafios é difundir a Libras como uma necessidade — que, de fato, é — em todas as esferas da sociedade.</p>
+<p class="body-text">Há muito pelo que lutar para garantir a inclusão plena. Um dos desafios é difundir a Libras como uma necessidade, que, de fato, é, em todas as esferas da sociedade.</p>
 <section class="faq-section" aria-label="Perguntas frequentes">
   <h2 id="faq">Perguntas frequentes</h2>
   <details class="faq-item reveal"><summary>Quando é o Dia Nacional dos Surdos?</summary><div class="faq-a">Em 26 de setembro, data que homenageia a fundação da primeira escola para surdos do país, hoje o INES.</div></details>
   <details class="faq-item reveal"><summary>O que é o Setembro Azul?</summary><div class="faq-a">É o mês de celebração e conscientização sobre a comunidade surda. A cor azul remete a um símbolo histórico ressignificado pela comunidade.</div></details>
   <details class="faq-item reveal"><summary>Qual a diferença entre Dia Nacional dos Surdos e Dia Nacional da Libras?</summary><div class="faq-a">O Dia Nacional dos Surdos (26 de setembro) celebra a comunidade surda; o Dia Nacional da Libras (24 de abril) marca o reconhecimento legal da língua.</div></details>
 </section>
-<section class="cta-block reveal">
-  <h2>Inclusão começa pela comunicação</h2>
-  <p>A Libras.se leva informação, cultura e serviços à comunidade surda com tradução em Libras feita por intérpretes reais.</p>
+<div class="pa-tags-alt reveal" aria-label="Tags">
+  <span>#dia nacional dos surdos</span>
+  <span>#setembro azul</span>
+  <a href="/glossario/comunidade-surda/">#comunidade surda</a>
+  <a href="/glossario/ines/">#INES</a>
+  <span>#cultura surda</span>
+</div>
+<section class="cta-block reveal" aria-label="Soluções e recursos da Libras.se">
+  <h2>Precisa do seu conteúdo em Libras?</h2>
+  <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
   <div class="cta-btns">
-    <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar seu vídeo</a>
+    <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
     <a href="https://libras.se/solucoes" class="btn bp">Conhecer soluções</a>
   </div>
+</section>
+<section class="pa-acts-alt" aria-label="Recursos da Libras.se">
+  <a href="/jogo/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg></span><span class="pa-act-alt__t">Joguinho de Libras</span><span class="pa-act-alt__d">Descubra o sinal do dia e aprenda brincando.</span><span class="pa-act-alt__go">Jogar agora →</span></a>
+  <a href="/sinal/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span><span class="pa-act-alt__t">Vocabulário</span><span class="pa-act-alt__d">Consulte sinais e amplie seu vocabulário em Libras.</span><span class="pa-act-alt__go">Ver sinais →</span></a>
+  <a href="/glossario/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="pa-act-alt__t">Glossário</span><span class="pa-act-alt__d">Termos da área com definições claras e verificadas.</span><span class="pa-act-alt__go">Consultar →</span></a>
 </section>
 </main>
 <section class="blog-more" aria-label="Mais conteúdos do blog">

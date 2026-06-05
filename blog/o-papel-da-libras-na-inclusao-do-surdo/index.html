@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');gtag('config','AW-16996694944');</script>
 <title>O papel da Libras na inclusão do surdo: guia completo | Blog Libras.se</title>
 <meta name="description" content="Entenda o papel da Libras na inclusão do surdo: o que é a língua de sinais, graus de surdez, educação bilíngue, saúde e os desafios da inclusão no Brasil.">
 <meta name="keywords" content="papel da libras, inclusão do surdo, língua de sinais, libras, comunidade surda, educação bilíngue, surdez, setembro azul, acessibilidade">
@@ -38,7 +38,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://libras.se/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://libras.se/blog/"},{"@type":"ListItem","position":3,"name":"O papel da Libras na inclusão do surdo","item":"https://libras.se/blog/o-papel-da-libras-na-inclusao-do-surdo/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"A Libras é uma língua ou uma linguagem?","acceptedAnswer":{"@type":"Answer","text":"A Libras é uma língua, reconhecida nos estudos linguísticos como qualquer outra língua natural. Tem gramática, sintaxe e vocabulário próprios — não é uma simples \"linguagem\" de gestos."}},{"@type":"Question","name":"Todo surdo sabe Libras?","acceptedAnswer":{"@type":"Answer","text":"Não. Alguns surdos são oralizados e usam leitura labial e fala; outros se comunicam prioritariamente em Libras. O acesso à língua de sinais depende de fatores como família, escola e momento em que a surdez surgiu."}},{"@type":"Question","name":"Quantos surdos existem no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Estima-se cerca de 10 milhões de pessoas surdas ou com deficiência auditiva, aproximadamente 5% da população, segundo o IBGE."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"A Libras é uma língua ou uma linguagem?","acceptedAnswer":{"@type":"Answer","text":"A Libras é uma língua, reconhecida nos estudos linguísticos como qualquer outra língua natural. Tem gramática, sintaxe e vocabulário próprios, não é uma simples \"linguagem\" de gestos."}},{"@type":"Question","name":"Todo surdo sabe Libras?","acceptedAnswer":{"@type":"Answer","text":"Não. Alguns surdos são oralizados e usam leitura labial e fala; outros se comunicam prioritariamente em Libras. O acesso à língua de sinais depende de fatores como família, escola e momento em que a surdez surgiu."}},{"@type":"Question","name":"Quantos surdos existem no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Estima-se cerca de 10 milhões de pessoas surdas ou com deficiência auditiva, aproximadamente 5% da população, segundo o IBGE."}}]}
 </script>
 <style>
 :root{
@@ -73,7 +73,7 @@ ul,ol{margin:0;padding:0}
 .mob a{font-family:var(--bf);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
 .mob a:hover{color:var(--teal-pale)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
-#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s;background:rgba(248,253,253,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,144,144,.1)}
 #nav.sc{padding:11px 0;background:rgba(248,253,253,.88);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -237,6 +237,26 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 @media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* padronizacao: icones SVG */
+.info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+.pa-note__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.pa-act__ic svg{width:22px;height:22px;stroke:#1a9ca4;fill:none}
+.ic-n svg{width:20px;height:20px;stroke:#1e6e6e;fill:none}
+
+/* padronizacao: fechamento Com Barra (tags + recursos) */
+.pa-tags-alt{display:flex;flex-wrap:wrap;gap:9px;margin:56px 0 0;padding-top:26px;border-top:1px solid var(--grey-light)}
+.pa-tags-alt a,.pa-tags-alt span{font-family:var(--bf);font-size:.74rem;font-weight:700;color:var(--teal-dark);background:var(--teal-bg);border:1px solid var(--teal-pale);border-radius:999px;padding:6px 14px;transition:all .2s}
+.pa-tags-alt a:hover{background:var(--teal-pale)}
+.pa-acts-alt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 0}
+.pa-act-alt{display:flex;flex-direction:column;gap:8px;background:var(--white);border:1px solid var(--grey-light);border-radius:var(--radius);padding:24px 22px;transition:transform .3s,box-shadow .3s}
+.pa-act-alt:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(30,110,110,.1)}
+.pa-act-alt__ic{width:44px;height:44px;border-radius:12px;background:var(--teal-bg);display:grid;place-items:center;color:var(--teal-dark)}
+.pa-act-alt__ic svg{width:23px;height:23px;stroke:currentColor;fill:none}
+.pa-act-alt__t{font-family:var(--bf);font-weight:800;font-size:1rem;color:var(--ink)}
+.pa-act-alt__d{font-family:var(--lf);font-size:.85rem;color:var(--ink-soft);line-height:1.55}
+.pa-act-alt__go{font-family:var(--bf);font-size:.78rem;font-weight:700;color:var(--teal-dark)}
+@media(max-width:700px){.pa-acts-alt{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -295,7 +315,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     </nav>
     <div class="hero-kicker">Língua &amp; Cultura · Guia</div>
     <h1 class="hero-title">O papel da Libras na <em>inclusão do surdo</em></h1>
-    <p class="hero-subtitle">Da língua de sinais à educação, da saúde à vida social: entenda por que a Libras é a base da inclusão de milhões de surdos no Brasil — e o que ainda falta avançar.</p>
+    <p class="hero-subtitle">Da língua de sinais à educação, da saúde à vida social: entenda por que a Libras é a base da inclusão de milhões de surdos no Brasil, e o que ainda falta avançar.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por Jéssica Rodrigues</span>
       <span class="meta-badge">15 de setembro de 2022</span>
@@ -304,18 +324,8 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
-<nav class="toc reveal" aria-label="Neste artigo">
-  <p class="toc-h">Neste artigo</p>
-  <ol>
-      <li><a href="#o-que-e">O que é a língua de sinais</a></li>
-      <li><a href="#surdez">O que caracteriza a surdez</a></li>
-      <li><a href="#educacao">Libras e educação</a></li>
-      <li><a href="#sociedade">O surdo e a sociedade</a></li>
-      <li><a href="#faq">Perguntas frequentes</a></li>
-  </ol>
-</nav>
 <div class="takeaways reveal">
-  <p class="takeaways-h">📌 O que você vai encontrar neste artigo</p>
+  <p class="takeaways-h">O que você vai encontrar neste artigo</p>
   <ul>
     <li>O que é a língua de sinais e por que ela é uma língua completa</li>
     <li>Os graus de surdez e como cada um afeta a comunicação</li>
@@ -326,23 +336,23 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 
 <p class="body-text drop-cap">Setembro é azul em homenagem às conquistas da comunidade surda. É também a celebração do movimento que luta pela inclusão do surdo, por estudo de qualidade e pela preservação da <a href="/glossario/libras/">língua de sinais</a> e da <a href="/glossario/comunidade-surda/">cultura surda</a>. O mês foi escolhido por concentrar datas importantes, como o Dia Internacional das Línguas de Sinais (23 de setembro) e o Dia Nacional do Surdo (26 de setembro).</p>
 
-<p class="body-text">Mais do que uma efeméride, o Setembro Azul é um convite para entender uma questão central: a Libras não é um detalhe da vida do surdo — ela é a base da sua inclusão. É por meio dela que milhões de brasileiros pensam, aprendem, trabalham e se expressam.</p>
+<p class="body-text">Mais do que uma efeméride, o Setembro Azul é um convite para entender uma questão central: a Libras não é um detalhe da vida do surdo, ela é a base da sua inclusão. É por meio dela que milhões de brasileiros pensam, aprendem, trabalham e se expressam.</p>
 
 <h2 id="o-que-e">O que é a língua de sinais</h2>
 <p class="body-text">A língua de sinais tem mais de 300 variantes no mundo e se caracteriza por sinais e <a href="/glossario/expressao-nao-manual/">expressões faciais</a> que representam pensamentos e ideias. Muito mais do que gestos, é uma língua plena, com gramática própria. No Brasil, a língua oficial da comunidade é a <strong>Língua Brasileira de Sinais (Libras)</strong>, com milhares de sinais reunidos no dicionário oficial mantido pelo <a href="/glossario/ines/">INES</a>.</p>
 
 <div class="info-callout reveal">
-  <div class="info-icon" aria-hidden="true">🤟</div>
+  <div class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
   <div class="info-content">
     <h4>Entenda o conceito</h4>
     <p>A Libras tem regras gramaticais próprias e é mais direta e visual que o português. Não é "português com as mãos": é uma língua autônoma, com sintaxe, <a href="/glossario/configuracao-de-mao/">configurações de mão</a>, <a href="/glossario/movimento/">movimento</a> e <a href="/glossario/ponto-de-articulacao/">ponto de articulação</a> próprios.</p>
   </div>
 </div>
 
-<p class="body-text">No Brasil, estima-se que existam <strong>cerca de 10 milhões de surdos</strong> — aproximadamente 5% da população, segundo o IBGE — que dependem da língua de sinais para se comunicar.</p>
+<p class="body-text">No Brasil, estima-se que existam <strong>cerca de 10 milhões de surdos</strong>, aproximadamente 5% da população, segundo o IBGE, que dependem da língua de sinais para se comunicar.</p>
 
 <h2 id="surdez">O que caracteriza a surdez</h2>
-<p class="body-text">A surdez pode ser de nascença (congênita) ou adquirida ao longo da vida — por idade, traumas ou doenças — e afetar um ou ambos os ouvidos. A perda auditiva tem diferentes graus, medidos em decibéis (dB):</p>
+<p class="body-text">A surdez pode ser de nascença (congênita) ou adquirida ao longo da vida, por idade, traumas ou doenças, e afetar um ou ambos os ouvidos. A perda auditiva tem diferentes graus, medidos em decibéis (dB):</p>
 
 <ul class="body-list">
   <li><strong>Leve (até 40 dB):</strong> não altera a fala, mas dificulta entender tudo em uma conversa.</li>
@@ -351,7 +361,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <li><strong>Profunda (acima de 90 dB):</strong> pouquíssimos sons são percebidos.</li>
 </ul>
 
-<p class="body-text">O diagnóstico é feito pelo otorrinolaringologista, geralmente a partir de uma audiometria. Mas a surdez vai muito além do exame: uma das maiores barreiras é o <strong>acesso à saúde</strong>, já que a comunicação com profissionais costuma depender da fala ou da leitura labial — tornando a presença de um <a href="/glossario/til-tils/">intérprete de Libras</a> essencial.</p>
+<p class="body-text">O diagnóstico é feito pelo otorrinolaringologista, geralmente a partir de uma audiometria. Mas a surdez vai muito além do exame: uma das maiores barreiras é o <strong>acesso à saúde</strong>, já que a comunicação com profissionais costuma depender da fala ou da leitura labial, tornando a presença de um <a href="/glossario/til-tils/">intérprete de Libras</a> essencial.</p>
 
 <div class="highlight-box reveal">
   <span class="hl-label">Por que isso importa</span>
@@ -359,33 +369,45 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 </div>
 
 <h2 id="educacao">Libras e educação</h2>
-<p class="body-text">Nem todo surdo sabe Libras — alguns optam pela leitura labial e pela oralização. Mas, para quem se comunica em sinais, o acesso à <a href="/glossario/bilinguismo/">educação bilíngue</a> é determinante. Hoje, todas as regiões do Brasil já contam com pelo menos uma graduação em Letras-Libras, e universidades públicas disponibilizam material on-line para aprender o alfabeto e os sinais.</p>
+<p class="body-text">Nem todo surdo sabe Libras, alguns optam pela leitura labial e pela oralização. Mas, para quem se comunica em sinais, o acesso à <a href="/glossario/bilinguismo/">educação bilíngue</a> é determinante. Hoje, todas as regiões do Brasil já contam com pelo menos uma graduação em Letras-Libras, e universidades públicas disponibilizam material on-line para aprender o alfabeto e os sinais.</p>
 
 <p class="body-text">Garantir a Libras na escola não é um favor: é condição para que crianças surdas se desenvolvam com plenitude, no mesmo ritmo dos colegas ouvintes.</p>
 
 <h2 id="sociedade">O surdo e a sociedade</h2>
-<p class="body-text">Ainda estamos longe de uma sociedade igualitária para os surdos. Para que a inclusão aconteça, é preciso que ouvintes se informem, estimulem a participação e abram espaço para a pessoa surda se expressar — em outras palavras, <mark>empatia na prática</mark>. Compreender o surdo a partir de suas construções históricas, sociais e culturais é o caminho para avançar tanto na educação quanto na saúde.</p>
+<p class="body-text">Ainda estamos longe de uma sociedade igualitária para os surdos. Para que a inclusão aconteça, é preciso que ouvintes se informem, estimulem a participação e abram espaço para a pessoa surda se expressar, em outras palavras, <mark>empatia na prática</mark>. Compreender o surdo a partir de suas construções históricas, sociais e culturais é o caminho para avançar tanto na educação quanto na saúde.</p>
 
 <div class="references reveal">
   <h4>Fontes</h4>
   <ul>
     <li>Equipe LIBRAS.SE, com <a href="https://www.revistaencontro.com.br/canal/atualidades/2022/09/o-papel-da-lingua-dos-sinais-na-inclusao-do-surdo.html" target="_blank" rel="noopener noreferrer">Revista Encontro</a>.</li>
-    <li><a href="https://www.gov.br/ines/pt-br" target="_blank" rel="noopener noreferrer">INES — Instituto Nacional de Educação de Surdos</a> e <a href="https://www.ines.gov.br/dicionario-de-libras/" target="_blank" rel="noopener noreferrer">Dicionário de Libras</a>.</li>
+    <li><a href="https://www.gov.br/ines/pt-br" target="_blank" rel="noopener noreferrer">INES, Instituto Nacional de Educação de Surdos</a> e <a href="https://www.ines.gov.br/dicionario-de-libras/" target="_blank" rel="noopener noreferrer">Dicionário de Libras</a>.</li>
   </ul>
 </div>
 <section class="faq-section" aria-label="Perguntas frequentes">
   <h2 id="faq">Perguntas frequentes</h2>
-  <details class="faq-item reveal"><summary>A Libras é uma língua ou uma linguagem?</summary><div class="faq-a">A Libras é uma língua, reconhecida nos estudos linguísticos como qualquer outra língua natural. Tem gramática, sintaxe e vocabulário próprios — não é uma simples "linguagem" de gestos.</div></details>
+  <details class="faq-item reveal"><summary>A Libras é uma língua ou uma linguagem?</summary><div class="faq-a">A Libras é uma língua, reconhecida nos estudos linguísticos como qualquer outra língua natural. Tem gramática, sintaxe e vocabulário próprios, não é uma simples "linguagem" de gestos.</div></details>
   <details class="faq-item reveal"><summary>Todo surdo sabe Libras?</summary><div class="faq-a">Não. Alguns surdos são oralizados e usam leitura labial e fala; outros se comunicam prioritariamente em Libras. O acesso à língua de sinais depende de fatores como família, escola e momento em que a surdez surgiu.</div></details>
   <details class="faq-item reveal"><summary>Quantos surdos existem no Brasil?</summary><div class="faq-a">Estima-se cerca de 10 milhões de pessoas surdas ou com deficiência auditiva, aproximadamente 5% da população, segundo o IBGE.</div></details>
 </section>
-<section class="cta-block reveal">
-  <h2>Inclusão começa pela comunicação</h2>
-  <p>A Libras.se leva informação, cultura e serviços à comunidade surda com tradução em Libras feita por intérpretes reais.</p>
+<div class="pa-tags-alt reveal" aria-label="Tags">
+  <a href="/glossario/libras/">#libras</a>
+  <span>#inclusão</span>
+  <a href="/glossario/comunidade-surda/">#comunidade surda</a>
+  <a href="/glossario/bilinguismo/">#educação bilíngue</a>
+  <a href="/glossario/surdo/">#surdez</a>
+</div>
+<section class="cta-block reveal" aria-label="Soluções e recursos da Libras.se">
+  <h2>Precisa do seu conteúdo em Libras?</h2>
+  <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
   <div class="cta-btns">
-    <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar seu vídeo</a>
+    <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
     <a href="https://libras.se/solucoes" class="btn bp">Conhecer soluções</a>
   </div>
+</section>
+<section class="pa-acts-alt" aria-label="Recursos da Libras.se">
+  <a href="/jogo/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg></span><span class="pa-act-alt__t">Joguinho de Libras</span><span class="pa-act-alt__d">Descubra o sinal do dia e aprenda brincando.</span><span class="pa-act-alt__go">Jogar agora →</span></a>
+  <a href="/sinal/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span><span class="pa-act-alt__t">Vocabulário</span><span class="pa-act-alt__d">Consulte sinais e amplie seu vocabulário em Libras.</span><span class="pa-act-alt__go">Ver sinais →</span></a>
+  <a href="/glossario/" class="pa-act-alt reveal"><span class="pa-act-alt__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="pa-act-alt__t">Glossário</span><span class="pa-act-alt__d">Termos da área com definições claras e verificadas.</span><span class="pa-act-alt__go">Consultar →</span></a>
 </section>
 </main>
 <section class="blog-more" aria-label="Mais conteúdos do blog">

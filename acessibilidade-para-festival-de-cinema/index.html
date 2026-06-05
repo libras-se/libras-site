@@ -230,7 +230,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .hero-sub{font-size:.98rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:30px;max-width:500px}
 .hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
 .hero-pill{display:flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;color:rgba(255,255,255,.65);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);padding:5px 13px}
-.hero-pill::before{content:'✓';color:var(--tl);font-size:.8rem}
+.hero-pill::before{content:'';display:block;width:.75rem;height:.75rem;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%2381e6d9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .hero-micro{font-size:.74rem;color:rgba(255,255,255,.28);font-weight:300}
 
@@ -358,7 +358,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .vol-desc{font-size:.82rem;font-weight:300;color:var(--txs);line-height:1.65;margin-bottom:16px;flex:1}
 .vol-includes{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
 .vol-inc{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--txs);font-weight:700}
-.vol-inc::before{content:'✓';color:var(--teal-d);font-size:.8rem;flex-shrink:0}
+.vol-inc::before{content:'';display:block;width:.75rem;height:.75rem;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%232eb8c0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 .vol-cta{width:100%;justify-content:center}
 .vol-note{max-width:760px;margin:0 auto;background:rgba(255,255,255,.7);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 var(--rlg) var(--rlg) 0;padding:20px 24px;font-size:.84rem;font-weight:300;color:var(--txs);line-height:1.75}
 @media(max-width:660px){.vol-grid{grid-template-columns:1fr}}
@@ -451,7 +451,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:1.2rem;height:1.2rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>

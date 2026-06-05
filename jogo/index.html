@@ -662,7 +662,7 @@ main { padding: 20px 0 140px; }
   <div class="modal">
     <div class="modal-hd">
       <div class="modal-ttl" id="helpTtl">Como jogar</div>
-      <button class="modal-x" id="closeHelp" aria-label="Fechar">✕</button>
+      <button class="modal-x" id="closeHelp" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:.85rem;height:.85rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
 
     <div class="instr-s">
@@ -712,7 +712,7 @@ main { padding: 20px 0 140px; }
   <div class="modal">
     <div class="modal-hd">
       <div class="modal-ttl" id="resTtl">Resultado</div>
-      <button class="modal-x" id="closeResult" aria-label="Fechar resultado">✕</button>
+      <button class="modal-x" id="closeResult" aria-label="Fechar resultado"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:.85rem;height:.85rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
 
     <div class="res-word" id="resWord"></div>
@@ -1077,7 +1077,12 @@ function buildKbd() {
     KBD[i].forEach(k => {
       const b = document.createElement('button');
       b.className = 'key' + (k.length > 1 ? ' wide' : '');
-      b.textContent = k; b.dataset.k = k;
+      b.dataset.k = k;
+      if (k === '⌫') {
+        b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.1em;height:1.1em;display:inline-block;vertical-align:-.125em"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><line x1="18" y1="9" x2="12" y2="15"/><line x1="12" y1="9" x2="18" y2="15"/></svg>';
+      } else {
+        b.textContent = k;
+      }
       b.setAttribute('aria-label', k === 'ENTER' ? 'Confirmar' : k === '⌫' ? 'Apagar' : `Letra ${k}`);
       b.addEventListener('click', () => onKey(k));
       el.appendChild(b);

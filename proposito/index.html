@@ -218,7 +218,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .hero-sub{font-size:1rem;font-weight:300;color:var(--txs);max-width:460px;margin-bottom:36px;line-height:1.8}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
 .hero-trust{display:flex;flex-wrap:wrap;gap:16px;font-size:.72rem;font-weight:600;color:var(--txm)}
-.hero-trust span::before{content:'✓ ';color:var(--teal-d);font-weight:900}
+.hero-trust span::before{content:'';display:inline-block;width:.75rem;height:.75rem;vertical-align:-.15em;margin-right:3px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%232eb8c0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 .hero-visual{position:relative;height:480px;display:flex;align-items:center;justify-content:center}
 .hero-orb-lg{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(79,209,197,.18),transparent 70%);filter:blur(40px);animation:orbDrift1 12s ease-in-out infinite alternate}
 .hero-card-main{position:relative;z-index:3;width:300px;padding:36px 28px;text-align:center}
@@ -513,7 +513,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:1.2rem;height:1.2rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   <a href="https://libras.se/proposito/" aria-current="page" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>

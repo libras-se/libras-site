@@ -241,7 +241,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .hero-sub{font-size:1rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:30px;max-width:480px}
 .hero-micro{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
 .hero-micro span{display:flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1px solid rgba(79,209,197,.18);border-radius:var(--rpill);padding:5px 13px}
-.hero-micro span::before{content:'✓';color:var(--teal-d);font-size:.8rem}
+.hero-micro span::before{content:'';display:block;width:.75rem;height:.75rem;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%232eb8c0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .hero-microcopy{font-size:.75rem;color:var(--txm);font-weight:300}
 .hero-card{background:rgba(255,255,255,.88);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1.5px solid rgba(79,209,197,.22);border-radius:var(--rx2);padding:36px;box-shadow:var(--shl),inset 0 1px 0 rgba(255,255,255,.95);position:relative;overflow:hidden}
@@ -378,7 +378,7 @@ table.ptable tr.discount td:not(:first-child){background:none;-webkit-text-fill-
 .canais-text p{font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:20px}
 .canais-bullets{list-style:none;display:flex;flex-direction:column;gap:10px}
 .canais-bullets li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:var(--txs);font-weight:300;line-height:1.6}
-.canais-bullets li::before{content:'✓';color:var(--teal-d);font-size:.8rem;margin-top:2px;flex-shrink:0}
+.canais-bullets li::before{content:'';display:block;width:.75rem;height:.75rem;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%232eb8c0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 .canais-visual{display:flex;flex-direction:column;gap:16px}
 .canal-card{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:var(--rlg);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;transition:var(--tr)}
 .canal-card:hover{transform:translateX(4px);box-shadow:var(--sh)}
@@ -415,7 +415,7 @@ table.ptable tr.discount td:not(:first-child){background:none;-webkit-text-fill-
 .ctaf-microcopy{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:300}
 .ctaf-benefits{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:32px}
 .ctaf-benefit{display:flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:rgba(255,255,255,.65);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--rpill);padding:6px 14px}
-.ctaf-benefit::before{content:'✓';color:var(--tl);font-size:.75rem}
+.ctaf-benefit::before{content:'';display:block;width:.75rem;height:.75rem;flex-shrink:0;margin-top:2px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%2381e6d9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain}
 
 /* ── FOOTER ── */
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
@@ -447,7 +447,7 @@ table.ptable tr.discount td:not(:first-child){background:none;-webkit-text-fill-
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:1.2rem;height:1.2rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>

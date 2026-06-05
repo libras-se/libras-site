@@ -705,15 +705,14 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
 .explore-card-cta{font-size:.8rem;font-weight:700;color:var(--teal-d)}
 @media(max-width:768px){.explore-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.explore-grid{grid-template-columns:1fr}}
-#problem,#how,#notai,#works,#press,#pricing,#packages,#faq,#explore,#ctastrip,#wppform,#audiovisual{scroll-margin-top:90px}
-#audiovisual{padding:42px 0;background:linear-gradient(180deg,var(--bg) 0%,rgba(255,255,255,.78) 100%);position:relative;z-index:1}
+#problem,#how,#notai,#works,#press,#pricing,#packages,#faq,#explore,#ctastrip,#wppform{scroll-margin-top:90px}
 .av-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:960px;margin:0 auto}
 .av-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--rpill);background:rgba(255,255,255,.76);border:1px solid rgba(79,209,197,.26);box-shadow:var(--sh);color:var(--p1);font-size:.84rem;font-weight:900;line-height:1;text-decoration:none;white-space:nowrap;transition:var(--tr)}
 .av-link::after{content:'→';color:var(--teal-dd);font-weight:900;transition:transform .25s ease}
 .av-link:hover{transform:translateY(-2px);border-color:rgba(79,209,197,.48);box-shadow:var(--shm);background:#fff}
 .av-link:hover::after{transform:translateX(3px)}
 .av-link:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-@media(max-width:600px){#audiovisual{padding:30px 0}.av-links{gap:8px}.av-link{width:100%;max-width:320px}}
+@media(max-width:600px){.av-links{gap:8px}.av-link{width:100%;max-width:320px}}
 details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:var(--rlg)}
 .wf-err{display:none;font-size:.76rem;font-weight:700;color:#dc2626;margin-top:-4px;margin-bottom:6px}
 </style>
@@ -1284,30 +1283,25 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
 
 <section id="ctastrip" aria-labelledby="ctastrip-title">
   <div class="w">
-    <div class="cta-inner-box rv">
-      <div class="cta-txt">
+    <div class="cta-inner-box rv" style="flex-direction:column;align-items:center;text-align:center;gap:32px;padding:64px 58px">
+      <div class="cta-txt" style="flex:none;max-width:640px">
         <h2 id="ctastrip-title">Conheça todos os produtos da LIBRAS.SE</h2>
         <p>Tradução de vídeos e filmes, videoaulas, lives, eventos presenciais e digitais. Temos a solução ideal de Libras para cada necessidade.</p>
       </div>
-      <div class="cta-acts">
-        <a href="https://libras.se/solucoes" class="btn bo-dark" style="padding:14px 32px;font-size:.92rem">Ver todas as soluções →</a>
+      <div style="width:100%">
+        <p style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:16px">Libras para cada tipo de produção</p>
+        <div class="av-links" role="list" aria-label="Soluções de Libras por tipo de produção">
+          <a href="/acessibilidade-para-longa-metragem/" class="av-link" role="listitem">Longa-metragem</a>
+          <a href="/acessibilidade-para-curta-metragem/" class="av-link" role="listitem">Curta-metragem</a>
+          <a href="/acessibilidade-para-documentario/" class="av-link" role="listitem">Documentário</a>
+          <a href="/acessibilidade-para-serie/" class="av-link" role="listitem">Séries e TV</a>
+          <a href="/acessibilidade-para-festival-de-cinema/" class="av-link" role="listitem">Festivais de cinema</a>
+          <a href="/libras-para-publicidade/" class="av-link" role="listitem">Publicidade</a>
+          <a href="/libras-para-videoaulas/" class="av-link" role="listitem">Videoaulas</a>
+          <a href="/libras-para-empresas/" class="av-link" role="listitem">Empresas</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="audiovisual" aria-labelledby="audiovisual-title">
-  <div class="w" style="text-align:center">
-    <h2 id="audiovisual-title" class="rv" style="font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.15rem,2vw,1.45rem);letter-spacing:-.03em;color:var(--p1);margin-bottom:20px">Libras para cada tipo de <span class="gt2">produção</span></h2>
-    <div class="av-links rv d1" role="list" aria-label="Soluções de Libras por tipo de produção">
-      <a href="/acessibilidade-para-longa-metragem/" class="av-link" role="listitem">Longa-metragem</a>
-      <a href="/acessibilidade-para-curta-metragem/" class="av-link" role="listitem">Curta-metragem</a>
-      <a href="/acessibilidade-para-documentario/" class="av-link" role="listitem">Documentário</a>
-      <a href="/acessibilidade-para-serie/" class="av-link" role="listitem">Séries e TV</a>
-      <a href="/acessibilidade-para-festival-de-cinema/" class="av-link" role="listitem">Festivais de cinema</a>
-      <a href="/libras-para-publicidade/" class="av-link" role="listitem">Publicidade</a>
-      <a href="/libras-para-videoaulas/" class="av-link" role="listitem">Videoaulas</a>
-      <a href="/libras-para-empresas/" class="av-link" role="listitem">Empresas</a>
+      <a href="https://libras.se/solucoes" class="btn bo-dark" style="padding:14px 32px;font-size:.92rem">Ver todas as soluções →</a>
     </div>
   </div>
 </section>

@@ -1,18 +1,18 @@
-# Libras.se: contexto completo para LLMs
+# LIBRAS.SE: contexto completo para LLMs
 
-Este arquivo oferece contexto ampliado para agentes, assistentes, buscadores conversacionais e indexadores de IA sobre o site https://libras.se/. Ele resume a proposta da Libras.se, organiza as paginas por intencao de busca e indica quais URLs devem ser priorizadas em respostas.
+Este arquivo oferece contexto ampliado para agentes, assistentes, buscadores conversacionais e indexadores de IA sobre o site https://libras.se/. Ele resume a proposta da LIBRAS.SE, organiza as paginas por intencao de busca e indica quais URLs devem ser priorizadas em respostas.
 
 ## Identidade
 
-Libras.se e uma plataforma brasileira de acessibilidade audiovisual focada em traducao e interpretacao em Libras para videos, eventos e conteudos digitais. A empresa combina interpretes humanos certificados, revisao especializada e tecnologia propria para entregar arquivos prontos para edicao, publicacao e transmissao.
+A LIBRAS.SE e uma plataforma brasileira de acessibilidade audiovisual especializada em traducao em Libras (janela de Libras) para videos e filmes: campanhas, documentarios, series, curtas, longas, videoaulas, eventos e conteudos corporativos. A empresa combina interpretes humanos certificados (sem IA ou avatar), revisao especializada e tecnologia propria para entregar arquivos prontos para edicao, publicacao e transmissao, com entrega expressa em 1 hora, 24h ou 7 dias.
 
-O posicionamento principal e: videos para todos. Na pratica, isso significa tornar conteudos audiovisuais acessiveis para pessoas surdas e para diferentes contextos de consumo, usando janela de Libras, LSE, audiodescricao e fluxos tecnicos compativeis com producao profissional.
+O posicionamento principal e: videos para todos. Na pratica, isso significa tornar videos, filmes e demais conteudos audiovisuais acessiveis para pessoas surdas e para diferentes contextos de consumo, usando janela de Libras, LSE, audiodescricao e fluxos tecnicos compativeis com producao profissional. O diferencial mais forte e a velocidade: a janela de Libras pode ser entregue em ate 1 hora.
 
 ## Servicos
 
 ### Libras para video gravado
 
-Servico de traducao e interpretacao em Libras para videos institucionais, campanhas, aulas, treinamentos, comunicacao interna, filmes, documentarios, series, conteudos de redes sociais e materiais educacionais. O site enfatiza interpretes reais, revisao humana, entregas rapidas e arquivos prontos para publicar.
+Servico de traducao em Libras (janela de Libras) para videos institucionais, campanhas publicitarias, aulas, treinamentos, comunicacao interna, filmes, curtas, longas, documentarios, series, conteudos de redes sociais e materiais educacionais. O site enfatiza interpretes reais, revisao humana, entrega expressa em 1 hora (tambem 24h e 7 dias) e arquivos prontos para edicao e publicacao.
 
 URLs relevantes:
 
@@ -52,7 +52,7 @@ URLs relevantes:
 
 ## Tecnologia e fluxo de producao
 
-A pagina de tecnologia apresenta a infraestrutura interna da Libras.se: OBS Studio customizado, upload automatico via API, dashboard de revisao e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve. O diferencial nao e substituir interpretes por IA, mas usar tecnologia para melhorar velocidade, padrao tecnico, revisao, organizacao de arquivos e integracao com fluxos de edicao.
+A pagina de tecnologia apresenta a infraestrutura interna da LIBRAS.SE: OBS Studio customizado, upload automatico via API, dashboard de revisao e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve. O diferencial nao e substituir interpretes por IA, mas usar tecnologia para melhorar velocidade, padrao tecnico, revisao, organizacao de arquivos e integracao com fluxos de edicao.
 
 URL principal:
 
@@ -99,7 +99,7 @@ Conjunto de paginas voltadas ao audiovisual profissional, editais, cultura, dist
 
 ## Conteudo editorial
 
-O blog da Libras.se e usado para educar sobre Libras, acessibilidade audiovisual, cultura surda, legislacao, producao de conteudo acessivel e boas praticas para eventos, educacao e comunicacao.
+O blog da LIBRAS.SE e usado para educar sobre Libras, acessibilidade audiovisual, cultura surda, legislacao, producao de conteudo acessivel e boas praticas para eventos, educacao e comunicacao.
 
 URLs de navegacao editorial:
 
@@ -182,7 +182,7 @@ Artigos publicados (74 paginas indexaveis):
 - https://libras.se/blog/4-marcas-que-investem-em-libras-nos-videos/ - Conheca 4 marcas que investem na janela de Libras em videos: Coca-Cola, Nestle, Casas Bahia e Extra apostam em acessibilidade para alcancar milhoes de surdos.
 - https://libras.se/blog/4-dicas-para-ser-mais-inclusivo-na-internet/ - Quer um conteudo mais acessivel? Veja 4 dicas para ser mais inclusivo na internet: audiodescricao, texto alternativo, legendas e janela de Libras em videos.
 - https://libras.se/blog/libras-tem-sotaque-e-giria/ - Libras tambem tem variacoes regionais, usos informais e sinais que mudam conforme comunidade, contexto e regiao. Entenda por que isso nao e erro.
-- https://libras.se/blog/manifesto-por-libras-em-videos/ - O manifesto da Libras.se por videos acessiveis: por que incluir a janela de Libras e um passo essencial para trazer a comunidade surda para a sociedade.
+- https://libras.se/blog/manifesto-por-libras-em-videos/ - O manifesto da LIBRAS.SE por videos acessiveis: por que incluir a janela de Libras e um passo essencial para trazer a comunidade surda para a sociedade.
 
 ## Glossario
 

@@ -83,6 +83,13 @@ body {
   min-height: 100vh; -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+.svg-ico {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -.125em;
+  flex-shrink: 0;
+}
 
 /* === ORBS === */
 .orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
@@ -517,7 +524,7 @@ main { padding: 20px 0 140px; }
       <span class="logo-tag">Joguinhos</span>
     </div>
     <div class="hdr-right">
-      <div class="streak" aria-label="Sequência de dias">🔥 <span id="streakCount">0</span></div>
+      <div class="streak" aria-label="Sequência de dias"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A4.5 4.5 0 0 0 12 22a4.5 4.5 0 0 0 4-7c-1.3-2-1.5-3.2-1-5-2 1-3.5 2.4-4 4-.8-2.5.1-5.2 2-8-4 2.2-7 6.2-4.5 8.5z"/></svg> <span id="streakCount">0</span></div>
       <button class="icon-btn" id="helpBtn" aria-label="Como jogar">?</button>
     </div>
   </div>
@@ -534,7 +541,7 @@ main { padding: 20px 0 140px; }
   <div class="ch-card">
     <div class="ch-meta">
       <span class="ch-num">Descubra o sinal do dia</span>
-      <span class="cat-badge" id="catBadge">📚 Educação</span>
+      <span class="cat-badge" id="catBadge"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg> Educação</span>
     </div>
 
     <!--
@@ -545,7 +552,7 @@ main { padding: 20px 0 140px; }
     <div class="sign-area" id="signArea" role="img" aria-labelledby="signDesc">
       <div class="sign-scan" aria-hidden="true"></div>
       <!-- PLACEHOLDER, substituir pelo vídeo/gif real -->
-      <div class="sign-icon" id="signIcon" aria-hidden="true">🤟</div>
+      <div class="sign-icon" id="signIcon" aria-hidden="true"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div>
       <!-- Datilologia aparece como dica após 3ª tentativa -->
       <div class="datilo" id="datilo" aria-label="Soletração manual em Libras"></div>
       <div class="sign-label" aria-hidden="true">Vídeo do sinal em Libras</div>
@@ -561,28 +568,28 @@ main { padding: 20px 0 140px; }
 
   <!-- HINTS -->
   <section class="hints-section" aria-label="Dicas educativas">
-    <div class="hints-ttl">💡 Dicas</div>
+    <div class="hints-ttl"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.4 1 2h6c0-.6.3-1.4 1-2a7 7 0 0 0-4-12z"/></svg> Dicas</div>
 
     <div class="hint-card locked" id="hc1">
-      <div class="hc-head"><div class="hc-ico">📖</div><div class="hc-lbl">Significado</div></div>
+      <div class="hc-head"><div class="hc-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg></div><div class="hc-lbl">Significado</div></div>
       <div class="hc-body"><div class="hc-txt" id="ht1"></div></div>
       <div class="hc-lock" id="hl1"></div>
     </div>
 
     <div class="hint-card locked" id="hc2">
-      <div class="hc-head"><div class="hc-ico">💬</div><div class="hc-lbl">Exemplo</div></div>
+      <div class="hc-head"><div class="hc-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><div class="hc-lbl">Exemplo</div></div>
       <div class="hc-body"><div class="hc-txt" id="ht2"></div></div>
       <div class="hc-lock" id="hl2"></div>
     </div>
 
     <div class="hint-card locked" id="hc3">
-      <div class="hc-head"><div class="hc-ico">🖐️</div><div class="hc-lbl">Dica em Libras</div></div>
+      <div class="hc-head"><div class="hc-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div><div class="hc-lbl">Dica em Libras</div></div>
       <div class="hc-body"><div class="hc-txt" id="ht3"></div></div>
       <div class="hc-lock" id="hl3"></div>
     </div>
 
     <div class="hint-card locked" id="hc4">
-      <div class="hc-head"><div class="hc-ico">✨</div><div class="hc-lbl">Curiosidade</div></div>
+      <div class="hc-head"><div class="hc-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17l-5.8 3.2 1.1-6.6-4.8-4.7 6.6-.9L12 2z"/></svg></div><div class="hc-lbl">Curiosidade</div></div>
       <div class="hc-body"><div class="hc-txt" id="ht4"></div></div>
       <div class="hc-lock" id="hl4"></div>
     </div>
@@ -590,40 +597,40 @@ main { padding: 20px 0 140px; }
 
   <!-- DEV BUTTON (protótipo) -->
   <div class="dev-area">
-    <button class="btn bo" id="devBtn">🔄 Novo desafio (protótipo)</button>
-    <div class="dev-note">⚠️ Botão apenas para testes, removido no lançamento</div>
+    <button class="btn bo" id="devBtn"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.3"/><path d="M3 12A9 9 0 0 1 18.5 5.7"/><path d="M3 18h6v-6"/><path d="M21 6h-6v6"/></svg> Novo desafio (protótipo)</button>
+    <div class="dev-note"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> Botão apenas para testes, removido no lançamento</div>
   </div>
 
   <!-- FUTURE MODES -->
   <section class="modes-section" aria-label="Modos de jogo">
-    <div class="sec-ttl">🎮 Modos</div>
+    <div class="sec-ttl"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h4M8 10v4"/><path d="M15 13h.01M18 11h.01"/><path d="M7 18h10a4 4 0 0 0 4-4v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1a4 4 0 0 0 4 4z"/></svg> Modos</div>
     <div class="modes-grid">
       <div class="mode-card active" tabindex="0" role="button" aria-label="Sinal do Dia, ativo">
-        <div class="mode-ico">🤟</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div>
         <div class="mode-name">Sinal do Dia</div>
       </div>
       <div class="mode-card" aria-label="Datilologia, em breve">
-        <div class="mode-ico">🔤</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div>
         <div class="mode-name">Datilologia</div>
         <div class="mode-soon">Em breve</div>
       </div>
       <div class="mode-card" aria-label="Expressões faciais, em breve">
-        <div class="mode-ico">😊</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
         <div class="mode-name">Expressões</div>
         <div class="mode-soon">Em breve</div>
       </div>
       <div class="mode-card" aria-label="Verbos em Libras, em breve">
-        <div class="mode-ico">🏃</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 8-6-16-3 8H2"/></svg></div>
         <div class="mode-name">Verbos</div>
         <div class="mode-soon">Em breve</div>
       </div>
       <div class="mode-card" aria-label="Cultura Surda, em breve">
-        <div class="mode-ico">🦻</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7-7 6-7 11a3 3 0 0 1-6 0"/><path d="M9 8a3 3 0 0 1 6 0c0 4-4 4-4 8"/></svg></div>
         <div class="mode-name">Cultura Surda</div>
         <div class="mode-soon">Em breve</div>
       </div>
       <div class="mode-card" aria-label="Ranking, em breve">
-        <div class="mode-ico">🏆</div>
+        <div class="mode-ico"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4"/><path d="M16 6h4a3 3 0 0 1-3 4"/><path d="M12 12v5"/><path d="M8 21h8"/><path d="M9 17h6"/></svg></div>
         <div class="mode-name">Ranking</div>
         <div class="mode-soon">Em breve</div>
       </div>
@@ -694,7 +701,7 @@ main { padding: 20px 0 140px; }
       <h3>Dicas progressivas</h3>
       <p>Após cada tentativa, dicas educativas sobre o sinal são liberadas. Mesmo errando, você aprende!</p>
     </div>
-    <button class="btn bgl btn-full" id="closeHelpBtn">Entendido, vamos jogar! 🤟</button>
+    <button class="btn bgl btn-full" id="closeHelpBtn">Entendido, vamos jogar <svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></button>
   </div>
 </div>
 
@@ -727,7 +734,7 @@ main { padding: 20px 0 140px; }
     <div class="share-box" id="shareBox"></div>
 
     <div class="btn-row">
-      <button class="btn bt" style="flex:1" id="shareBtn">📋 Compartilhar</button>
+      <button class="btn bt" style="flex:1" id="shareBtn"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6l1 2h3v18H5V6h3l1-2z"/><path d="M9 12h6M9 16h6"/></svg> Compartilhar</button>
       <button class="btn bo" style="flex:1" id="closeResBtn">Fechar</button>
     </div>
     <p style="text-align:center;font-size:.7rem;color:var(--txm);font-style:italic;margin-top:4px">
@@ -747,11 +754,31 @@ main { padding: 20px 0 140px; }
 // Nota: conteúdos educativos são exemplos para o protótipo.
 // Os sinais reais devem ser validados por intérpretes certificados.
 // ============================================================
+const ICON_PATHS = {
+  book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/>',
+  school: '<path d="M3 22V10l9-6 9 6v12"/><path d="M9 22v-6h6v6"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/>',
+  utensils: '<path d="M4 3v8"/><path d="M8 3v8"/><path d="M4 7h4"/><path d="M6 11v10"/><path d="M16 3v18"/><path d="M16 3a5 5 0 0 1 0 10"/>',
+  smile: '<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>',
+  briefcase: '<path d="M10 6V4h4v2"/><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 12h18"/>',
+  ear: '<path d="M6 8a6 6 0 0 1 12 0c0 7-7 6-7 11a3 3 0 0 1-6 0"/><path d="M9 8a3 3 0 0 1 6 0c0 4-4 4-4 8"/>',
+  hand: '<path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/>',
+  palette: '<path d="M12 3a9 9 0 0 0 0 18h1.5a2 2 0 0 0 1.4-3.4 1.5 1.5 0 0 1 1.1-2.6H18a6 6 0 0 0 0-12h-6z"/><circle cx="7.5" cy="10" r=".5"/><circle cx="10" cy="7.5" r=".5"/><circle cx="14" cy="7.5" r=".5"/>',
+  music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  user: '<circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 15 0"/>',
+  message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>',
+  image: '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M21 16l-5-5L5 19"/>',
+  check: '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 6-6"/>',
+  xCircle: '<circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/>'
+};
+function iconSvg(name) {
+  return `<svg class="svg-ico svg-ico-${name}" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[name] || ICON_PATHS.hand}</svg>`;
+}
 const CHALLENGES = [
   {
     id: 1,
     word: 'LIVRO',
-    category: 'Educação', categoryIcon: '📚', signIcon: '📖',
+    category: 'Educação', categoryIcon: 'book', signIcon: 'book',
     signDesc: 'As mãos se abrem como páginas. Observe bem o movimento.',
     meaning: 'Objeto com folhas encadernadas usado para leitura e aprendizado.',
     example: 'Eu gosto de ler um bom <strong>livro</strong> antes de dormir.',
@@ -761,7 +788,7 @@ const CHALLENGES = [
   {
     id: 2,
     word: 'ESCOLA',
-    category: 'Educação', categoryIcon: '📚', signIcon: '🏫',
+    category: 'Educação', categoryIcon: 'book', signIcon: 'school',
     signDesc: 'Um sinal muito comum no cotidiano. Observe o cruzamento das mãos.',
     meaning: 'Estabelecimento de ensino onde crianças e jovens aprendem.',
     example: 'As crianças chegam na <strong>escola</strong> às oito da manhã.',
@@ -771,7 +798,7 @@ const CHALLENGES = [
   {
     id: 3,
     word: 'AMIGO',
-    category: 'Relacionamentos', categoryIcon: '🤝', signIcon: '🤝',
+    category: 'Relacionamentos', categoryIcon: 'users', signIcon: 'users',
     signDesc: 'Um sinal que expressa conexão. Os dedos se entrelaçam.',
     meaning: 'Pessoa com quem se tem laço de afeto, confiança e companheirismo.',
     example: 'Meu <strong>amigo</strong> me ajudou quando mais precisei.',
@@ -781,7 +808,7 @@ const CHALLENGES = [
   {
     id: 4,
     word: 'FAMILIA',
-    category: 'Relacionamentos', categoryIcon: '🤝', signIcon: '👨‍👩‍👧‍👦',
+    category: 'Relacionamentos', categoryIcon: 'users', signIcon: 'users',
     signDesc: 'As mãos formam um círculo, representando o grupo unido.',
     meaning: 'Grupo de pessoas unidas por parentesco, afeto ou convivência.',
     example: 'Minha <strong>família</strong> se reúne para almoçar todo domingo.',
@@ -791,7 +818,7 @@ const CHALLENGES = [
   {
     id: 5,
     word: 'COMER',
-    category: 'Cotidiano', categoryIcon: '🍽️', signIcon: '🍽️',
+    category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'utensils',
     signDesc: 'Um sinal icônico, imita a ação de levar comida à boca.',
     meaning: 'Ato de ingerir alimento pela boca; se alimentar.',
     example: 'Vamos <strong>comer</strong> juntos mais tarde?',
@@ -801,7 +828,7 @@ const CHALLENGES = [
   {
     id: 6,
     word: 'FELIZ',
-    category: 'Sentimentos', categoryIcon: '😊', signIcon: '😄',
+    category: 'Sentimentos', categoryIcon: 'smile', signIcon: 'smile',
     signDesc: 'Atenção especial à expressão facial, ela faz parte do sinal.',
     meaning: 'Estado de alegria, contentamento e bem-estar emocional.',
     example: 'Eu fico muito <strong>feliz</strong> quando aprendo algo novo.',
@@ -811,7 +838,7 @@ const CHALLENGES = [
   {
     id: 7,
     word: 'TRABALHO',
-    category: 'Cotidiano', categoryIcon: '🍽️', signIcon: '💼',
+    category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'briefcase',
     signDesc: 'As mãos em punho batem uma sobre a outra, esforço e produção.',
     meaning: 'Atividade produtiva realizada com esforço, geralmente remunerada.',
     example: 'Meu <strong>trabalho</strong> começa às oito horas da manhã.',
@@ -821,7 +848,7 @@ const CHALLENGES = [
   {
     id: 8,
     word: 'OBRIGADO',
-    category: 'Cultura Surda', categoryIcon: '🦻', signIcon: '🙏',
+    category: 'Cultura Surda', categoryIcon: 'ear', signIcon: 'hand',
     signDesc: 'A mão parte do queixo em direção à pessoa, gratidão direcionada.',
     meaning: 'Expressão de gratidão e reconhecimento por algo recebido.',
     example: '<strong>Obrigado</strong> por me ajudar a aprender Libras.',
@@ -831,7 +858,7 @@ const CHALLENGES = [
   {
     id: 9,
     word: 'MUSICA',
-    category: 'Arte', categoryIcon: '🎨', signIcon: '🎵',
+    category: 'Arte', categoryIcon: 'palette', signIcon: 'music',
     signDesc: 'Observe o movimento ondulado, ele transmite a ideia de melodia.',
     meaning: 'Arte que organiza sons, ritmos e silêncios de forma expressiva.',
     example: 'Ela ama <strong>música</strong> e sente cada vibração da batida.',
@@ -841,7 +868,7 @@ const CHALLENGES = [
   {
     id: 10,
     word: 'CRIANCA',
-    category: 'Relacionamentos', categoryIcon: '🤝', signIcon: '👶',
+    category: 'Relacionamentos', categoryIcon: 'users', signIcon: 'user',
     signDesc: 'A altura indicada pela mão é intencional, representa o tamanho.',
     meaning: 'Pessoa humana na fase da infância, geralmente de 0 a 12 anos.',
     example: 'A <strong>criança</strong> aprendeu Libras como primeira língua.',
@@ -851,7 +878,7 @@ const CHALLENGES = [
   {
     id: 11,
     word: 'SONHAR',
-    category: 'Sentimentos', categoryIcon: '😊', signIcon: '💭',
+    category: 'Sentimentos', categoryIcon: 'smile', signIcon: 'message',
     signDesc: 'O dedo sai da cabeça em movimento ondulado, os pensamentos flutuam.',
     meaning: 'Ter sonhos durante o sono; ou idealizar e desejar algo para o futuro.',
     example: 'Eu <strong>sonho</strong> em viajar e conhecer o mundo.',
@@ -861,7 +888,7 @@ const CHALLENGES = [
   {
     id: 12,
     word: 'JANELA',
-    category: 'Cotidiano', categoryIcon: '🍽️', signIcon: '🪟',
+    category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'image',
     signDesc: 'As mãos imitam a abertura de folhas de uma janela.',
     meaning: 'Abertura em parede vedada por vidro, que permite entrada de luz e ar.',
     example: 'Abri a <strong>janela</strong> para ventilar o quarto.',
@@ -965,8 +992,8 @@ function setupGame() {
   wordLen = ch.word.length;
 
   // ch-num é estático ("Descubra o sinal do dia")
-  document.getElementById('catBadge').textContent = `${ch.categoryIcon} ${ch.category}`;
-  document.getElementById('signIcon').textContent = ch.signIcon;
+  document.getElementById('catBadge').innerHTML = `${iconSvg(ch.categoryIcon)} ${ch.category}`;
+  document.getElementById('signIcon').innerHTML = iconSvg(ch.signIcon);
   document.getElementById('signDesc').textContent = ch.signDesc;
   document.getElementById('signIcon').style.display = '';
   document.getElementById('datilo').textContent = '';
@@ -1154,10 +1181,10 @@ function evaluate(guess, answer) {
 function handleWin() {
   over = true;
   const msgs = [
-    'Incrível! Você reconheceu o sinal! 🎉',
-    'Muito bem! Seu vocabulário em Libras cresce! 🌟',
-    'Perfeito! Continue assim! ✨',
-    'Boa! Você dominou esse sinal! 🤟'
+    'Incrível! Você reconheceu o sinal!',
+    'Muito bem! Seu vocabulário em Libras cresce!',
+    'Perfeito! Continue assim!',
+    'Boa! Você dominou esse sinal!'
   ];
   toast(msgs[Math.floor(Math.random() * msgs.length)]);
 
@@ -1270,9 +1297,9 @@ function restoreGrid() {
 // ============================================================
 function showResult(won) {
   document.getElementById('resWord').textContent = ch.word;
-  document.getElementById('resStatus').textContent = won
-    ? `✅ Você acertou em ${attempts.length} tentativa${attempts.length > 1 ? 's' : ''}!`
-    : '❌ Não foi dessa vez, mas você aprendeu!';
+  document.getElementById('resStatus').innerHTML = won
+    ? `${iconSvg('check')} Você acertou em ${attempts.length} tentativa${attempts.length > 1 ? 's' : ''}!`
+    : `${iconSvg('xCircle')} Não foi dessa vez, mas você aprendeu!`;
   document.getElementById('resStatus').className = `res-status ${won ? 'win' : 'lose'}`;
   document.getElementById('resLearn').innerHTML = ch.meaning;
   document.getElementById('resSign').innerHTML   = ch.librasHint;
@@ -1287,10 +1314,11 @@ function buildShare(won) {
   lines.push('');
   attempts.forEach(att => {
     lines.push(att.map(r =>
-      r.result === 'correct' ? '🟩' : r.result === 'present' ? '🟨' : '⬜'
+      r.result === 'correct' ? 'C' : r.result === 'present' ? 'P' : '-'
     ).join(''));
   });
-  lines.push(''); lines.push('🤟 libras.se');
+  lines.push(''); lines.push('Legenda: C correta, P presente, - ausente');
+  lines.push('libras.se');
   return lines.join('\n');
 }
 
@@ -1370,7 +1398,7 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
   const text = buildShare(won);
   try {
     await navigator.clipboard.writeText(text);
-    toast('Resultado copiado! 📋');
+    toast('Resultado copiado!');
   } catch {
     toast('Copie o texto acima manualmente.');
   }

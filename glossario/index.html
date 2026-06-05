@@ -438,7 +438,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
   </aside>
   <section id="tmain" aria-label="Lista de termos">
     <div id="nores" class="nores" hidden>
-      <span>&#128269;</span>
+      <span><svg class="svg-ico svg-ico-search" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
       <p>Nenhum termo encontrado para &ldquo;<span id="nores-q"></span>&rdquo;</p>
     </div>
   </section>
@@ -490,7 +490,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <section id="apoio" aria-label="Apoiado por Libras.se">
   <div class="w">
     <div class="apoio-card rv">
-      <div class="apoio-ico">&#129304;</div>
+      <div class="apoio-ico"><svg class="svg-ico svg-ico-hand" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div>
       <div class="apoio-body">
         <h3>Apoiado por Libras.se</h3>
         <p>Este gloss&aacute;rio &eacute; produzido e mantido pela equipe da <a href="https://libras.se">Libras.se</a>, plataforma brasileira de tradu&ccedil;&atilde;o audiovisual para a L&iacute;ngua Brasileira de Sinais com int&eacute;rpretes humanos certificados. Acreditamos que o acesso &agrave; informa&ccedil;&atilde;o sobre Libras &eacute; o primeiro passo para uma comunica&ccedil;&atilde;o verdadeiramente inclusiva. Todas as defini&ccedil;&otilde;es s&atilde;o revisadas por profissionais especializados e referenciadas em fontes acad&ecirc;micas e legisla&ccedil;&atilde;o vigente.</p>
@@ -524,7 +524,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
         <p class="ft-bp">A plataforma de tradu&ccedil;&atilde;o em Libras mais &aacute;gil do Brasil. V&iacute;deos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram">In</a>
-          <a href="https://youtube.com/@librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">&#9654;</a>
+          <a href="https://youtube.com/@librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="svg-ico svg-ico-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M8 5v14l11-7-11-7z"/></svg></a>
           <a href="https://linkedin.com/company/librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">Li</a>
           <a href="https://facebook.com/librasse" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Facebook">fb</a>
         </div>
@@ -757,7 +757,7 @@ function card(t) {
     ? `<div class="tcard-media"><img src="${t.gif}" alt="GIF: ${t.term}" loading="lazy" width="280" height="160"/><span class="tcard-mbadge">GIF</span></div>`
     : '';
   const relHtml = t.related?.length
-    ? `<div class="tcard-related">&#128214; <a href="/blog/${t.related[0].slug}">${t.related[0].title}</a></div>`
+    ? `<div class="tcard-related"><svg class="svg-ico svg-ico-book" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg> <a href="/blog/${t.related[0].slug}">${t.related[0].title}</a></div>`
     : '';
   return `<article class="tcard${hasGif?' has-media':''}" id="${t.slug}" itemscope itemtype="https://schema.org/DefinedTerm">
     ${mediaHtml}

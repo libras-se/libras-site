@@ -1,15 +1,15 @@
 {
-  "_comment": "Manifesto do sistema de imagens sociais (OG) do Libras.se. Cada entrada vira /assets/img/og/<slug>.webp e é injetada nas meta tags da página. theme: 'light' ou 'deep'. Título = lead + accent (em degradê) + tail. Sem travessões. Mantenha o título curto p/ legibilidade no WhatsApp. Rode: npm run og -- --skip=jogo,glossario",
+  "_comment": "Manifesto do sistema de imagens sociais (OG) da LIBRAS.SE. Cada entrada vira /assets/img/og/<slug>.webp e é injetada nas meta tags da página. theme: 'light' ou 'deep'. Título = lead + accent (em degradê) + tail. Sem travessões. Mantenha o título curto p/ legibilidade no WhatsApp. Rode: npm run og -- --skip=jogo,glossario",
   "pages": [
     {
       "slug": "home", "page": "index.html", "theme": "light",
-      "eyebrow": "Plataforma de acessibilidade",
-      "lead": "A tradução em Libras", "accent": "mais ágil", "tail": "do Brasil",
-      "badge": "Vídeos para todos"
+      "eyebrow": "Entrega expressa em 1 hora",
+      "lead": "Tradução em Libras para", "accent": "vídeos e filmes", "tail": "",
+      "badge": "Intérpretes reais · todo o Brasil"
     },
     {
       "slug": "blog", "page": "blog/index.html", "theme": "deep", "variant": "blog",
-      "eyebrow": "Blog Libras.se",
+      "eyebrow": "Blog LIBRAS.SE",
       "lead": "Conteúdo sobre", "accent": "Libras", "tail": "e inclusão",
       "foot": "libras.se/blog · Conteúdo & inclusão",
       "badge": "Guias, cultura surda e acessibilidade"
@@ -48,9 +48,9 @@
     },
     {
       "slug": "libras-para-publicidade", "page": "libras-para-publicidade/index.html", "theme": "light",
-      "eyebrow": "Realidade de agência",
+      "eyebrow": "Publicidade · entrega em 1 hora",
       "lead": "A janela de Libras", "accent": "entrega em 1 hora", "tail": "",
-      "badge": "Pronta para ir ao ar"
+      "badge": "Campanha pronta para ir ao ar"
     },
     {
       "slug": "libras-para-videoaulas", "page": "libras-para-videoaulas/index.html", "theme": "light",
@@ -102,7 +102,7 @@
     },
     {
       "slug": "trabalhos", "page": "trabalhos/index.html", "theme": "light",
-      "eyebrow": "Quem já confiou no Libras.se",
+      "eyebrow": "Quem já confiou no LIBRAS.SE",
       "lead": "Trabalhos de", "accent": "interpretação em Libras", "tail": "",
       "badge": "Itaú, Nubank, Salesforce e mais"
     },
@@ -126,14 +126,14 @@
     },
     {
       "slug": "portfolio", "page": "portfolio/index.html", "theme": "light",
-      "eyebrow": "Quem confia no Libras.se",
+      "eyebrow": "Quem confia no LIBRAS.SE",
       "lead": "Nosso", "accent": "portfólio", "tail": "de acessibilidade",
       "badge": "Marcas, canais e produtoras"
     },
     {
       "slug": "sejatils", "page": "sejatils/index.html", "theme": "light",
       "eyebrow": "Trabalhe conosco",
-      "lead": "Seja um", "accent": "TIL parceiro", "tail": "no Libras.se",
+      "lead": "Seja um", "accent": "TIL parceiro", "tail": "no LIBRAS.SE",
       "badge": "Para intérpretes de Libras"
     },
     {
@@ -163,7 +163,7 @@
     {
       "slug": "politica", "page": "politica/index.html", "theme": "light",
       "eyebrow": "Transparência",
-      "lead": "Políticas", "accent": "Libras.se", "tail": "",
+      "lead": "Políticas", "accent": "LIBRAS.SE", "tail": "",
       "badge": false
     }
   ]

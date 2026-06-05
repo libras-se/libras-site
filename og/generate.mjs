@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Gerador do sistema de imagens sociais (OG) do Libras.se.
+ * Gerador do sistema de imagens sociais (OG) da LIBRAS.SE.
  *
  * Para cada entrada de og/pages.json:
  *   1. renderiza og/template.html (Museo Sans + tokens do design system) a 1200x630 @2x
@@ -55,7 +55,7 @@ function magick(inFile, outFile) {
 
 function altText(p) {
   const title = [p.lead, p.accent, p.tail].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
-  return `Libras.se, ${p.eyebrow}: ${title}`;
+  return `LIBRAS.SE, ${p.eyebrow}: ${title}`;
 }
 
 /** Substitui o content="" de uma meta tag (property OU name) sem duplicar. */

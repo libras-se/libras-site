@@ -31,17 +31,33 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
+  "serviceType": "Janela de Libras para vídeos e filmes",
   "name": "Orçamento para Libras em Audiovisual",
   "provider": {
     "@type": "Organization",
     "name": "LIBRAS.SE",
     "url": "https://libras.se",
+    "logo": "https://libras.se/assets/img/favicon/FAVICONpng.png",
     "telephone": "+55-48-99636-7511",
     "email": "contato@libras.se"
   },
-  "description": "Serviço de janela de Libras para filmes, longas, documentários, séries e obras audiovisuais com intérpretes humanos certificados.",
+  "description": "Solicite orçamento de janela de Libras para filmes, longas, curtas, documentários, séries, publicidade, videoaulas e obras audiovisuais. Intérpretes humanos certificados, revisão especializada e entrega expressa em 1 hora, 24h ou 7 dias.",
   "areaServed": {"@type": "Country", "name": "Brasil"},
-  "url": "https://libras.se/orcamento/"
+  "url": "https://libras.se/orcamento/",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://libras.se/orcamento/",
+    "servicePhone": "+55-48-99636-7511"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Planos de tradução em Libras para vídeos e filmes",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Entrega em 7 dias", "description": "Tradução em Libras para vídeos, filmes e obras audiovisuais com entrega em 7 dias", "price": "100", "priceCurrency": "BRL", "unitCode": "MIN"},
+      {"@type": "Offer", "name": "Entrega em 24 horas", "description": "Tradução em Libras para vídeos, filmes e obras audiovisuais com entrega em 24 horas", "price": "150", "priceCurrency": "BRL", "unitCode": "MIN"},
+      {"@type": "Offer", "name": "Entrega Expressa em 1 hora", "description": "Janela de Libras urgente para vídeos, filmes e campanhas com entrega expressa em 1 hora", "price": "450", "priceCurrency": "BRL", "unitCode": "MIN"}
+    ]
+  }
 }
 </script>
 <style>

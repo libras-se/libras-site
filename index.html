@@ -17,7 +17,7 @@
 <meta property="og:title" content="Tradução em Libras para Vídeos e Filmes | Entrega em 1 Hora"/>
 <meta property="og:description" content="Janela de Libras para vídeos, filmes, documentários, séries, publicidade e videoaulas. Intérpretes humanos, arquivo pronto para edição e entrega expressa em 1 hora para todo o Brasil."/>
 <meta property="og:image" content="https://libras.se/assets/img/og/home.webp"/>
-<meta property="og:image:alt" content="LIBRAS.SE — Tradução em Libras para vídeos e filmes com entrega expressa em 1 hora"/>
+<meta property="og:image:alt" content="LIBRAS.SE, Entrega expressa em 1 hora: Tradução em Libras para vídeos e filmes"/>
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:site_name" content="LIBRAS.SE"/>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -25,7 +25,7 @@
 <meta name="twitter:title" content="Tradução em Libras para Vídeos e Filmes | Entrega em 1 Hora"/>
 <meta name="twitter:description" content="Janela de Libras para vídeos, filmes, documentários, séries, publicidade e videoaulas. Intérpretes humanos e entrega expressa em 1 hora para todo o Brasil."/>
 <meta name="twitter:image" content="https://libras.se/assets/img/og/home.webp"/>
-<meta name="twitter:image:alt" content="LIBRAS.SE — Tradução em Libras para vídeos e filmes com entrega expressa em 1 hora"/>
+<meta name="twitter:image:alt" content="LIBRAS.SE, Entrega expressa em 1 hora: Tradução em Libras para vídeos e filmes"/>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin/>
 <link rel="dns-prefetch" href="//wa.me"/>
 <link rel="dns-prefetch" href="//huet.libras.se"/>
@@ -706,24 +706,14 @@ picture{display:block}.li picture,.press-logo-link picture{display:contents}.map
 @media(max-width:768px){.explore-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.explore-grid{grid-template-columns:1fr}}
 #problem,#how,#notai,#works,#press,#pricing,#packages,#faq,#explore,#ctastrip,#wppform,#audiovisual{scroll-margin-top:90px}
-#audiovisual{padding:96px 0;background:var(--gs);position:relative;z-index:1}
-.av-hdr{text-align:center;max-width:760px;margin:0 auto 44px}
-.av-hdr h2{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.6vw,2.7rem);color:var(--p1);letter-spacing:-.03em;line-height:1.1}
-.av-hdr p{font-size:.95rem;font-weight:300;color:var(--txs);line-height:1.8;margin-top:14px}
-.av-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
-.av-card{display:flex;flex-direction:column;gap:7px;padding:24px 22px;text-decoration:none;color:inherit}
-.av-card-k{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal-dd)}
-.av-card-t{font-family:'M',sans-serif;font-weight:900;font-size:1.02rem;color:var(--p1);letter-spacing:-.02em;line-height:1.2}
-.av-card-d{font-size:.78rem;font-weight:300;color:var(--txs);line-height:1.65;flex:1}
-.av-card-a{font-size:.78rem;font-weight:700;color:var(--teal-d);margin-top:4px}
-.av-seo{max-width:880px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:var(--rxl);padding:40px 44px;box-shadow:var(--sh)}
-.av-seo h3{font-family:'M',sans-serif;font-weight:900;font-size:1.12rem;color:var(--p1);letter-spacing:-.02em;margin:22px 0 8px}
-.av-seo h3:first-child{margin-top:0}
-.av-seo p{font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.85;margin-bottom:10px}
-.av-seo a{color:var(--teal-dd);font-weight:700}
-.av-seo-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-@media(max-width:1024px){.av-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.av-grid{grid-template-columns:1fr}.av-seo{padding:28px 22px}#audiovisual{padding:56px 0}}
+#audiovisual{padding:42px 0;background:linear-gradient(180deg,var(--bg) 0%,rgba(255,255,255,.78) 100%);position:relative;z-index:1}
+.av-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:960px;margin:0 auto}
+.av-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 18px;border-radius:var(--rpill);background:rgba(255,255,255,.76);border:1px solid rgba(79,209,197,.26);box-shadow:var(--sh);color:var(--p1);font-size:.84rem;font-weight:900;line-height:1;text-decoration:none;white-space:nowrap;transition:var(--tr)}
+.av-link::after{content:'→';color:var(--teal-dd);font-weight:900;transition:transform .25s ease}
+.av-link:hover{transform:translateY(-2px);border-color:rgba(79,209,197,.48);box-shadow:var(--shm);background:#fff}
+.av-link:hover::after{transform:translateX(3px)}
+.av-link:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+@media(max-width:600px){#audiovisual{padding:30px 0}.av-links{gap:8px}.av-link{width:100%;max-width:320px}}
 details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:var(--rlg)}
 .wf-err{display:none;font-size:.76rem;font-weight:700;color:#dc2626;margin-top:-4px;margin-bottom:6px}
 </style>
@@ -1307,73 +1297,17 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
 </section>
 
 <section id="audiovisual" aria-labelledby="audiovisual-title">
-  <div class="w">
-    <div class="av-hdr rv">
-      <div class="lbl" style="margin:0 auto 16px">Acessibilidade audiovisual</div>
-      <h2 id="audiovisual-title">Acessibilidade em Libras para o <span class="gt2">audiovisual</span></h2>
-      <p>A LIBRAS.SE atende produtoras, agências, festivais, marcas, instituições e equipes de comunicação que precisam incluir <strong>janela de Libras</strong> em vídeos, filmes, documentários, séries, campanhas e videoaulas, com entrega expressa em 1 hora.</p>
-    </div>
-    <div class="av-grid" role="list" aria-label="Soluções de Libras por tipo de produção">
-      <a href="/acessibilidade-para-longa-metragem/" class="av-card glass rv d1" role="listitem">
-        <span class="av-card-k">Cinema</span>
-        <span class="av-card-t">Libras para longa-metragem</span>
-        <span class="av-card-d">Janela de Libras, LSE e audiodescrição para longas, distribuição, streaming e editais.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/acessibilidade-para-curta-metragem/" class="av-card glass rv d2" role="listitem">
-        <span class="av-card-k">Cinema</span>
-        <span class="av-card-t">Libras para curta-metragem</span>
-        <span class="av-card-d">Acessibilidade por minutagem para curtas, editais, festivais e projetos independentes.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/acessibilidade-para-documentario/" class="av-card glass rv d3" role="listitem">
-        <span class="av-card-k">Documentário</span>
-        <span class="av-card-t">Libras para documentário</span>
-        <span class="av-card-d">Tradução em Libras com cuidado narrativo, técnico e cultural para documentaristas.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/acessibilidade-para-serie/" class="av-card glass rv d4" role="listitem">
-        <span class="av-card-k">Séries e TV</span>
-        <span class="av-card-t">Libras para séries e TV</span>
-        <span class="av-card-d">Entrega por lote e padrão recorrente para séries, programas de TV e streaming.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/acessibilidade-para-festival-de-cinema/" class="av-card glass rv d1" role="listitem">
-        <span class="av-card-k">Festivais</span>
-        <span class="av-card-t">Libras para festivais de cinema</span>
-        <span class="av-card-d">Acessibilidade em escala para mostras e festivais, com intérprete ao vivo nas cerimônias.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/libras-para-publicidade/" class="av-card glass rv d2" role="listitem">
-        <span class="av-card-k">Publicidade</span>
-        <span class="av-card-t">Libras para publicidade</span>
-        <span class="av-card-d">Janela de Libras urgente para campanhas, com entrega em 1 hora para TV, reels e mídia paga.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/libras-para-videoaulas/" class="av-card glass rv d3" role="listitem">
-        <span class="av-card-k">Educação</span>
-        <span class="av-card-t">Libras para videoaulas</span>
-        <span class="av-card-d">Libras, LSE e audiodescrição para EAD, universidades, edtechs e plataformas de ensino.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-      <a href="/libras-para-empresas/" class="av-card glass rv d4" role="listitem">
-        <span class="av-card-k">Corporativo</span>
-        <span class="av-card-t">Libras para empresas</span>
-        <span class="av-card-d">Acessibilidade para vídeos corporativos, treinamentos, endomarketing e comunicação interna.</span>
-        <span class="av-card-a">Ver solução →</span>
-      </a>
-    </div>
-    <div class="av-seo rv d1">
-      <h3>Tradução em Libras para vídeos, filmes, séries e documentários</h3>
-      <p>A LIBRAS.SE é a plataforma brasileira de acessibilidade audiovisual especializada em <strong>tradução em Libras para vídeos e filmes</strong>. Inserimos a janela de Libras em <a href="/acessibilidade-para-curta-metragem/">curtas-metragens</a>, <a href="/acessibilidade-para-longa-metragem/">longas-metragens</a>, <a href="/acessibilidade-para-documentario/">documentários</a>, <a href="/acessibilidade-para-serie/">séries</a>, <a href="/libras-para-publicidade/">campanhas publicitárias</a>, <a href="/libras-para-videoaulas/">videoaulas</a> e <a href="/libras-para-empresas/">conteúdos corporativos</a>. Nada de avatar ou IA: cada sinal é feito por um Tradutor e Intérprete de Libras (TIL) humano, com fidelidade à gramática da Língua Brasileira de Sinais e respeito à cultura surda.</p>
-      <h3>Janela de Libras com entrega em 1 hora, 24h ou 7 dias</h3>
-      <p>O audiovisual trabalha com prazos, então oferecemos três velocidades: <strong>entrega expressa em 1 hora</strong>, em 24 horas ou em 7 dias. A tradução em Libras urgente atende campanhas que vão ao ar amanhã, estreias e peças de última hora, sem abrir mão da qualidade. Você recebe o vídeo com a janela de Libras já inserida em Apple ProRes 4444 com canal alpha: um arquivo pronto para edição em Adobe Premiere, DaVinci Resolve e qualquer NLE, ou pronto para publicar direto nas redes, no streaming e na TV.</p>
-      <h3>Acessibilidade audiovisual para produtoras, agências e festivais em todo o Brasil</h3>
-      <p>Atendemos produtoras, agências, festivais e mostras de cinema, marcas, emissoras, plataformas de streaming e instituições. Para editais e leis de incentivo, como Lei Paulo Gustavo, Aldir Blanc e PNAB, entregamos Libras, LSE e audiodescrição com a documentação que a prestação de contas exige. Trabalhamos 100% de forma remota, com uma rede de mais de 50 intérpretes pelo país, o que garante escala para programações inteiras, entrega por lote e padrão recorrente para temporadas. Conte com a LIBRAS.SE para tornar cada produção acessível, do roteiro à distribuição.</p>
-      <div class="av-seo-cta">
-        <a href="/orcamento/" class="btn bp" style="font-size:.86rem">Pedir orçamento</a>
-        <a href="https://huet.libras.se/" class="btn bo" target="_blank" rel="noopener noreferrer" style="font-size:.86rem">Enviar seu vídeo</a>
-      </div>
+  <div class="w" style="text-align:center">
+    <h2 id="audiovisual-title" class="rv" style="font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.15rem,2vw,1.45rem);letter-spacing:-.03em;color:var(--p1);margin-bottom:20px">Libras para cada tipo de <span class="gt2">produção</span></h2>
+    <div class="av-links rv d1" role="list" aria-label="Soluções de Libras por tipo de produção">
+      <a href="/acessibilidade-para-longa-metragem/" class="av-link" role="listitem">Longa-metragem</a>
+      <a href="/acessibilidade-para-curta-metragem/" class="av-link" role="listitem">Curta-metragem</a>
+      <a href="/acessibilidade-para-documentario/" class="av-link" role="listitem">Documentário</a>
+      <a href="/acessibilidade-para-serie/" class="av-link" role="listitem">Séries e TV</a>
+      <a href="/acessibilidade-para-festival-de-cinema/" class="av-link" role="listitem">Festivais de cinema</a>
+      <a href="/libras-para-publicidade/" class="av-link" role="listitem">Publicidade</a>
+      <a href="/libras-para-videoaulas/" class="av-link" role="listitem">Videoaulas</a>
+      <a href="/libras-para-empresas/" class="av-link" role="listitem">Empresas</a>
     </div>
   </div>
 </section>

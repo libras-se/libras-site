@@ -83,6 +83,11 @@
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -136,21 +141,21 @@
   @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
   .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mob.open{display:flex}
-  .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
   .mob a:hover{color:var(--teal-pale)}
   .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px;font-family:'Bricolage Grotesque',sans-serif}
   #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 40px;transition:all .4s;display:flex;align-items:center;justify-content:space-between;gap:20px;backdrop-filter:blur(16px);background:rgba(240,250,250,.88);border-bottom:1px solid rgba(42,144,144,.12)}
   #nav.sc{padding:12px 40px;box-shadow:0 2px 20px rgba(30,110,110,.06)}
   .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-  .nlogo-txt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-  .nsub{font-family:'Bricolage Grotesque',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a9090;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+  .nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
   .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-  .nlinks a{font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
   .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);border-radius:2px;transition:width .25s}
   .nlinks a:hover{color:#0e3538}.nlinks a:hover::after{width:100%}
   .nlinks a[aria-current="page"]{color:#0e3538}.nlinks a[aria-current="page"]::after{width:100%}
   .nd{display:flex;align-items:center;gap:12px}
-  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
+  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
@@ -354,14 +359,11 @@
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
   <a href="/blog/" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -369,6 +371,7 @@
     <li><a href="https://libras.se/proposito">Propósito</a></li>
     <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
     <li><a href="https://libras.se/solucoes">Soluções</a></li>
+    <li><a href="https://libras.se/portfolio">Portfólio</a></li>
     <li><a href="/blog/" aria-current="page">Blog</a></li>
   </ul>
   <div class="nd">
@@ -432,10 +435,10 @@
   <div class="reveal">
     <h2 class="section-label">A língua que você talvez não conheça ainda</h2>
     <p class="body-text drop-cap">
-      O Brasil fala, escreve, digita e também sinaliza. A <a href="/glossario/libras/"><strong>Língua Brasileira de Sinais</strong></a> — a Libras — é a língua usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Não é um código secreto. Não é português com as mãos. Não é mímica. É uma língua de verdade: com gramática, história, cultura e papel central na vida de milhões de pessoas.
+      O Brasil fala, escreve, digita e também sinaliza. A <a href="/glossario/libras/"><strong>Língua Brasileira de Sinais</strong></a>, a Libras, é a língua usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Não é um código secreto. Não é português com as mãos. Não é mímica. É uma língua de verdade: com gramática, história, cultura e papel central na vida de milhões de pessoas.
     </p>
     <p class="body-text">
-      Você provavelmente já viu alguém sinalizando em um vídeo, em um evento ou na televisão. A primeira impressão costuma ser a de que aquilo é uma tradução palavra por palavra do português. Mas a estrutura é diferente, a lógica é diferente, e a língua é diferente — no bom sentido.
+      Você provavelmente já viu alguém sinalizando em um vídeo, em um evento ou na televisão. A primeira impressão costuma ser a de que aquilo é uma tradução palavra por palavra do português. Mas a estrutura é diferente, a lógica é diferente, e a língua é diferente, no bom sentido.
     </p>
     <p class="body-text">
       Entender o que é Libras é o primeiro passo para compreender por que ela importa. E ela importa muito.
@@ -446,10 +449,10 @@
   <div class="reveal">
     <h2 class="section-label">O que é Libras</h2>
     <p class="body-text">
-      <strong>Libras é a Língua Brasileira de Sinais</strong>: uma língua visual-espacial, percebida pelos olhos e produzida com mãos, rosto, corpo e movimento. Ela tem vocabulário, gramática, sintaxe e estrutura próprios — independentes do português.
+      <strong>Libras é a Língua Brasileira de Sinais</strong>: uma língua visual-espacial, percebida pelos olhos e produzida com mãos, rosto, corpo e movimento. Ela tem vocabulário, gramática, sintaxe e estrutura próprios, independentes do português.
     </p>
     <p class="body-text">
-      O termo correto é <mark>Língua Brasileira de Sinais</mark>, não "linguagem de sinais". A diferença não é apenas semântica: enquanto "linguagem" descreve qualquer sistema de comunicação (linguagem dos pássaros, linguagem de programação), "língua" se refere a um sistema linguístico natural, com gramática, fonologia e capacidade plena de expressão humana. A Libras é, portanto, uma língua — e merece ser tratada como tal.
+      O termo correto é <mark>Língua Brasileira de Sinais</mark>, não "linguagem de sinais". A diferença não é apenas semântica: enquanto "linguagem" descreve qualquer sistema de comunicação (linguagem dos pássaros, linguagem de programação), "língua" se refere a um sistema linguístico natural, com gramática, fonologia e capacidade plena de expressão humana. A Libras é, portanto, uma língua, e merece ser tratada como tal.
     </p>
   </div>
 
@@ -465,7 +468,7 @@
   <div class="reveal">
     <h2 class="section-label">Uma língua construída com parâmetros</h2>
     <p class="body-text">
-      Cada sinal em Libras é formado por elementos específicos chamados parâmetros. Mudar qualquer um deles pode mudar completamente o significado do sinal — assim como trocar uma letra em uma palavra escrita altera o sentido. Esses parâmetros mostram que <strong>Libras tem estrutura, regras e precisão linguística</strong>.
+      Cada sinal em Libras é formado por elementos específicos chamados parâmetros. Mudar qualquer um deles pode mudar completamente o significado do sinal, assim como trocar uma letra em uma palavra escrita altera o sentido. Esses parâmetros mostram que <strong>Libras tem estrutura, regras e precisão linguística</strong>.
     </p>
   </div>
 
@@ -478,7 +481,7 @@
     <div class="use-card">
       <div class="card-icon">📍</div>
       <h3><a href="/glossario/ponto-de-articulacao/" style="color:inherit;text-decoration:none">Ponto de Articulação (PA)</a></h3>
-      <p>O local do corpo ou do espaço onde o sinal é realizado — frente ao rosto, no peito, na altura da cintura. A posição muda o sentido.</p>
+      <p>O local do corpo ou do espaço onde o sinal é realizado, frente ao rosto, no peito, na altura da cintura. A posição muda o sentido.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">↕️</div>
@@ -488,7 +491,7 @@
     <div class="use-card">
       <div class="card-icon">😊</div>
       <h3><a href="/glossario/expressao-nao-manual/" style="color:inherit;text-decoration:none">Expressão Não-Manual (ENM)</a></h3>
-      <p>O rosto, os olhos, o corpo. As expressões faciais e corporais não são enfeite — elas marcam perguntas, negações, intensidade e emoção na frase.</p>
+      <p>O rosto, os olhos, o corpo. As expressões faciais e corporais não são enfeite, elas marcam perguntas, negações, intensidade e emoção na frase.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">🔄</div>
@@ -509,13 +512,13 @@
       Mímica tenta imitar uma ideia de forma visual, geralmente improvisada e sem regra fixa. Libras é diferente: cada sinal tem parâmetros definidos, e a troca de qualquer um deles pode mudar o significado da palavra.
     </p>
     <p class="body-text">
-      Além disso, as <a href="/glossario/expressao-nao-manual/">expressões não-manuais</a> — o rosto, o olhar, os movimentos de cabeça e ombros — fazem parte da gramática da língua. Uma pergunta de resposta sim/não tem uma expressão facial específica. Uma oração condicional tem outra. Uma intensidade diferente muda a forma como o rosto acompanha o sinal.
+      Além disso, as <a href="/glossario/expressao-nao-manual/">expressões não-manuais</a>, o rosto, o olhar, os movimentos de cabeça e ombros, fazem parte da gramática da língua. Uma pergunta de resposta sim/não tem uma expressão facial específica. Uma oração condicional tem outra. Uma intensidade diferente muda a forma como o rosto acompanha o sinal.
     </p>
   </div>
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Ponto-chave</span>
-    <p>Aprender Libras não é decorar gestos avulsos. É aprender uma língua com lógica própria — assim como aprender inglês não é "traduzir o português para inglês palavra por palavra".</p>
+    <p>Aprender Libras não é decorar gestos avulsos. É aprender uma língua com lógica própria, assim como aprender inglês não é "traduzir o português para inglês palavra por palavra".</p>
   </div>
 
   <!-- NÃO É PORTUGUÊS COM AS MÃOS -->
@@ -534,7 +537,7 @@
       Em Libras, a ordem dos elementos na frase pode seguir uma lógica diferente do português. O uso do <a href="/glossario/espaco-de-sinalizacao/">espaço de sinalização</a> organiza as referências. As marcações gramaticais não são feitas por palavras escritas, mas por movimentos, posições e expressões.
     </p>
     <p class="body-text">
-      Isso tem implicações diretas na educação. Na perspectiva do <a href="/glossario/bilinguismo/">bilinguismo</a> aplicado à surdez, a Libras é reconhecida como primeira língua para muitas pessoas surdas — e o português escrito, como segunda língua. Não é hierarquia: é respeito à língua natural de cada pessoa.
+      Isso tem implicações diretas na educação. Na perspectiva do <a href="/glossario/bilinguismo/">bilinguismo</a> aplicado à surdez, a Libras é reconhecida como primeira língua para muitas pessoas surdas, e o português escrito, como segunda língua. Não é hierarquia: é respeito à língua natural de cada pessoa.
     </p>
   </div>
 
@@ -542,7 +545,7 @@
     <div class="info-icon">🏫</div>
     <div class="info-content">
       <h4>Educação bilíngue de surdos</h4>
-      <p>A Lei nº 14.191/2021 incluiu a modalidade de educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional. Ela define essa modalidade como a que se realiza em <strong>Libras como primeira língua</strong> e em português escrito como segunda língua. Esse reconhecimento reforça que a Libras não é um recurso auxiliar na educação — é a língua de instrução.</p>
+      <p>A Lei nº 14.191/2021 incluiu a modalidade de educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional. Ela define essa modalidade como a que se realiza em <strong>Libras como primeira língua</strong> e em português escrito como segunda língua. Esse reconhecimento reforça que a Libras não é um recurso auxiliar na educação, é a língua de instrução.</p>
     </div>
   </div>
 
@@ -551,7 +554,7 @@
     <img src="/assets/img/banco-editorial/LIBRAS.SE_4.webp" alt="Intérprete de Libras sorrindo e sinalizando em estúdio com fundo verde e luzes de gravação" width="1200" height="675" loading="lazy" decoding="async">
     <figcaption>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-      Intérprete de Libras durante gravação profissional — Equipe Libras.se
+      Intérprete de Libras durante gravação profissional, Equipe Libras.se
     </figcaption>
   </figure>
 
@@ -582,7 +585,7 @@
       <div class="step-num">Séc. XX</div>
       <div class="step-body">
         <h4>A língua cresce com a comunidade</h4>
-        <p>A Libras se desenvolveu por décadas fora dos currículos oficiais — nas escolas de surdos, nas associações, nas famílias. A influência da Língua de Sinais Francesa se mesclou com sinais já usados por surdos brasileiros, formando uma língua própria.</p>
+        <p>A Libras se desenvolveu por décadas fora dos currículos oficiais, nas escolas de surdos, nas associações, nas famílias. A influência da Língua de Sinais Francesa se mesclou com sinais já usados por surdos brasileiros, formando uma língua própria.</p>
       </div>
     </div>
     <div class="step">
@@ -619,7 +622,7 @@
   <div class="law-callout reveal">
     <div class="law-icon">📋</div>
     <div class="law-content">
-      <h4>Lei nº 10.436/2002 — Reconhecimento da Libras</h4>
+      <h4>Lei nº 10.436/2002, Reconhecimento da Libras</h4>
       <p>Reconhece a <a href="/glossario/libras/">Língua Brasileira de Sinais</a> como meio legal de comunicação e expressão, com estrutura gramatical própria. Proíbe a substituição da Libras pelo ensino exclusivo de linguagem oral. É a base legal do direito linguístico da <a href="/glossario/comunidade-surda/">comunidade surda</a>.</p>
     </div>
   </div>
@@ -627,7 +630,7 @@
   <div class="law-callout reveal">
     <div class="law-icon">📑</div>
     <div class="law-content">
-      <h4>Decreto nº 5.626/2005 — Regulamentação</h4>
+      <h4>Decreto nº 5.626/2005, Regulamentação</h4>
       <p>Regulamenta a Lei de Libras com detalhes sobre a formação de professores, a certificação de <a href="/glossario/til-tils/">tradutores e intérpretes de Libras</a>, o uso da Libras na educação básica e superior, e o acesso de <a href="/glossario/populacao-surda/">pessoas surdas</a> a serviços públicos com <a href="/glossario/interpretacao-simultanea/">interpretação simultânea</a>.</p>
     </div>
   </div>
@@ -635,8 +638,8 @@
   <div class="law-callout reveal">
     <div class="law-icon">🏛️</div>
     <div class="law-content">
-      <h4>Lei nº 14.191/2021 — Educação bilíngue na LDB</h4>
-      <p>Inseriu a modalidade de educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional, definindo a Libras como primeira língua e o português escrito como segunda. Garantiu também que escolas bilíngues de surdos são reconhecidas como instituições de ensino com características próprias — não como adaptações do ensino regular.</p>
+      <h4>Lei nº 14.191/2021, Educação bilíngue na LDB</h4>
+      <p>Inseriu a modalidade de educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional, definindo a Libras como primeira língua e o português escrito como segunda. Garantiu também que escolas bilíngues de surdos são reconhecidas como instituições de ensino com características próprias, não como adaptações do ensino regular.</p>
     </div>
   </div>
 
@@ -652,7 +655,7 @@
     </div>
     <div class="stat-card">
       <span class="stat-number" id="stat3">300+</span>
-      <span class="stat-desc">Línguas de sinais distintas ao redor do mundo — cada uma com gramática e cultura próprias</span>
+      <span class="stat-desc">Línguas de sinais distintas ao redor do mundo, cada uma com gramática e cultura próprias</span>
     </div>
   </div>
 
@@ -660,7 +663,7 @@
   <div class="reveal">
     <h2 class="section-label">Quem usa Libras?</h2>
     <p class="body-text">
-      A Libras é usada principalmente por <a href="/glossario/surdo/">pessoas surdas</a> no Brasil, mas não apenas por elas. Qualquer pessoa pode aprender e usar Libras — e quando mais pessoas a usam, mais natural se torna a comunicação em contextos inclusivos.
+      A Libras é usada principalmente por <a href="/glossario/surdo/">pessoas surdas</a> no Brasil, mas não apenas por elas. Qualquer pessoa pode aprender e usar Libras, e quando mais pessoas a usam, mais natural se torna a comunicação em contextos inclusivos.
     </p>
   </div>
 
@@ -668,7 +671,7 @@
     <div class="advantage-card">
       <div class="card-icon">🤟</div>
       <h3>Pessoas surdas e surdocegas</h3>
-      <p>A Libras é a língua principal de grande parte da <a href="/glossario/comunidade-surda/">comunidade surda</a> brasileira. Para muitas pessoas surdas, ela é a primeira língua — aprendida naturalmente desde a infância, especialmente quando a família ou a escola a oferece.</p>
+      <p>A Libras é a língua principal de grande parte da <a href="/glossario/comunidade-surda/">comunidade surda</a> brasileira. Para muitas pessoas surdas, ela é a primeira língua, aprendida naturalmente desde a infância, especialmente quando a família ou a escola a oferece.</p>
     </div>
     <div class="advantage-card">
       <div class="card-icon">👨‍👩‍👧</div>
@@ -708,23 +711,23 @@
   <div class="reveal">
     <h2 class="section-label">Libras é universal?</h2>
     <p class="body-text">
-      Não. Esse é um dos mitos mais comuns sobre línguas de sinais. Cada país — e, em muitos casos, cada região — tem sua própria língua de sinais, desenvolvida historicamente pela sua comunidade surda local.
+      Não. Esse é um dos mitos mais comuns sobre línguas de sinais. Cada país, e, em muitos casos, cada região, tem sua própria língua de sinais, desenvolvida historicamente pela sua comunidade surda local.
     </p>
     <p class="body-text">
-      Nos Estados Unidos existe a ASL (American Sign Language). Na França, a LSF (Langue des Signes Française). Em Portugal, a Língua Gestual Portuguesa. Na Argentina, a Lengua de Señas Argentina. São línguas distintas, com vocabulário, gramática e cultura próprias — e nenhuma delas é intercambiável com a Libras.
+      Nos Estados Unidos existe a ASL (American Sign Language). Na França, a LSF (Langue des Signes Française). Em Portugal, a Língua Gestual Portuguesa. Na Argentina, a Lengua de Señas Argentina. São línguas distintas, com vocabulário, gramática e cultura próprias, e nenhuma delas é intercambiável com a Libras.
     </p>
   </div>
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Variações regionais no Brasil</span>
-    <p>Assim como o português falado em Fortaleza tem diferenças em relação ao de Porto Alegre, a Libras também tem variações regionais. Alguns sinais mudam de acordo com o estado, a cidade, a geração ou o contexto da comunidade surda local. Isso não é erro — é uma característica natural de qualquer língua viva.</p>
+    <p>Assim como o português falado em Fortaleza tem diferenças em relação ao de Porto Alegre, a Libras também tem variações regionais. Alguns sinais mudam de acordo com o estado, a cidade, a geração ou o contexto da comunidade surda local. Isso não é erro, é uma característica natural de qualquer língua viva.</p>
   </div>
 
   <!-- LIBRAS E LEGENDA -->
   <div class="reveal">
     <h2 class="section-label">Libras e legenda: recursos diferentes</h2>
     <p class="body-text">
-      Libras e legenda não são equivalentes — e entender essa diferença é essencial para criar conteúdos verdadeiramente acessíveis.
+      Libras e legenda não são equivalentes, e entender essa diferença é essencial para criar conteúdos verdadeiramente acessíveis.
     </p>
     <p class="body-text">
       A legenda apresenta o conteúdo em português escrito. Ela é muito importante para diversas pessoas: <a href="/glossario/surdo/">pessoas surdas</a> oralizadas, pessoas com deficiência auditiva, quem está em ambiente sem som, ou quem simplesmente prefere acompanhar o texto. A <a href="/glossario/lse/">Legenda para Surdos e Ensurdecidos (LSE)</a> vai além da transcrição e inclui informações sonoras do contexto.
@@ -739,7 +742,7 @@
     <span class="case-tag">Libras no cotidiano</span>
     <h3>Onde a Libras aparece na prática</h3>
     <p>
-      A presença da Libras cresce em vídeos com <strong style="color:#a8e6df"><a href="/glossario/janela-de-libras/" style="color:#a8e6df;text-decoration:underline">janela de Libras</a></strong>, em eventos com <a href="/glossario/interpretacao-simultanea/" style="color:#a8e6df;text-decoration:underline">intérpretes</a>, em escolas bilíngues, em universidades, em atendimentos públicos, em campanhas institucionais, em conteúdos das redes sociais, em programas de televisão e em serviços de saúde, cultura e turismo. No meio digital, a Libras é cada vez mais necessária: parte da população brasileira se comunica prioritariamente em uma língua visual — e os conteúdos precisam alcançar essas pessoas.
+      A presença da Libras cresce em vídeos com <strong style="color:#a8e6df"><a href="/glossario/janela-de-libras/" style="color:#a8e6df;text-decoration:underline">janela de Libras</a></strong>, em eventos com <a href="/glossario/interpretacao-simultanea/" style="color:#a8e6df;text-decoration:underline">intérpretes</a>, em escolas bilíngues, em universidades, em atendimentos públicos, em campanhas institucionais, em conteúdos das redes sociais, em programas de televisão e em serviços de saúde, cultura e turismo. No meio digital, a Libras é cada vez mais necessária: parte da população brasileira se comunica prioritariamente em uma língua visual, e os conteúdos precisam alcançar essas pessoas.
     </p>
   </div>
 
@@ -770,7 +773,7 @@
       <div class="info-icon">🔤</div>
       <div class="info-content">
         <h4>"Linguagem de sinais" é correto?</h4>
-        <p>Tecnicamente, não. O termo correto é <strong>Língua Brasileira de Sinais</strong>. Libras é uma língua natural — com gramática, fonologia e capacidade plena de expressão humana. "Linguagem" é um conceito mais amplo, usado para qualquer sistema de comunicação. Usar "língua" é reconhecer o status linguístico completo da Libras.</p>
+        <p>Tecnicamente, não. O termo correto é <strong>Língua Brasileira de Sinais</strong>. Libras é uma língua natural, com gramática, fonologia e capacidade plena de expressão humana. "Linguagem" é um conceito mais amplo, usado para qualquer sistema de comunicação. Usar "língua" é reconhecer o status linguístico completo da Libras.</p>
       </div>
     </div>
 
@@ -792,7 +795,7 @@
 
   <div class="reveal">
     <p class="body-text">
-      Entender o que é Libras é, antes de tudo, reconhecer que a comunicação não precisa acontecer de uma única forma. O Brasil se expressa de muitos modos — e a Libras é um deles. Respeitar essa língua, dar espaço a ela em vídeos, eventos, escolas e serviços é reconhecer que a inclusão começa pela comunicação.
+      Entender o que é Libras é, antes de tudo, reconhecer que a comunicação não precisa acontecer de uma única forma. O Brasil se expressa de muitos modos, e a Libras é um deles. Respeitar essa língua, dar espaço a ela em vídeos, eventos, escolas e serviços é reconhecer que a inclusão começa pela comunicação.
     </p>
     <p class="body-text">
       Quer saber mais? Consulte nosso <a href="/glossario/"><strong>Glossário de termos da área</strong></a>, explore os <a href="/sinal/"><strong>sinais no Vocabulário</strong></a> ou aprenda brincando no <a href="/jogo/"><strong>Joguinho de Libras</strong></a>.
@@ -807,8 +810,8 @@
       <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei nº 10.436/2002. Brasília: Presidência da República, 2005. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>.</li>
       <li>BRASIL. <em>Lei nº 14.191, de 3 de agosto de 2021.</em> Altera a Lei de Diretrizes e Bases da Educação Nacional para dispor sobre a modalidade de educação bilíngue de surdos. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>.</li>
       <li>QUADROS, Ronice Muller de; KARNOPP, Lodenir Becker. <em>Língua de sinais brasileira: estudos linguísticos.</em> Porto Alegre: Artmed, 2004.</li>
-      <li>IBGE. <em>Censo Demográfico 2010 — Características gerais da população.</em> Rio de Janeiro: IBGE, 2010. Disponível em: <a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer">ibge.gov.br</a>.</li>
-      <li>INES — Instituto Nacional de Educação de Surdos. <em>Histórico.</em> Rio de Janeiro: INES/MEC. Disponível em: <a href="https://www.ines.gov.br" target="_blank" rel="noopener noreferrer">ines.gov.br</a>.</li>
+      <li>IBGE. <em>Censo Demográfico 2010, Características gerais da população.</em> Rio de Janeiro: IBGE, 2010. Disponível em: <a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer">ibge.gov.br</a>.</li>
+      <li>INES, Instituto Nacional de Educação de Surdos. <em>Histórico.</em> Rio de Janeiro: INES/MEC. Disponível em: <a href="https://www.ines.gov.br" target="_blank" rel="noopener noreferrer">ines.gov.br</a>.</li>
     </ol>
   </div>
 
@@ -829,7 +832,7 @@
     <div>
       <h3 class="bm-title">Leia Também</h3>
       <div class="bm-links">
-        <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">O que é datilologia — o alfabeto manual da Libras</span></a>
+        <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">O que é datilologia, o alfabeto manual da Libras</span></a>
         <a href="/blog/libras-tem-sotaque-e-giria/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Libras tem sotaque e gíria?</span></a>
         <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Entrevista: "Libras não é português com as mãos"</span></a>
         <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Libras ou legendas? Quando usar cada recurso</span></a>
@@ -855,7 +858,7 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

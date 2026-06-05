@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Crawlers de IA — permitidos explicitamente para indexação e respostas de LLMs
+# Crawlers de IA, permitidos explicitamente para indexação e respostas de LLMs
 User-agent: GPTBot
 Allow: /
 
@@ -29,7 +29,7 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Arquivos editoriais e páginas de teste — não indexar
+# Arquivos editoriais e páginas de teste, não indexar
 Disallow: /CLAUDE.md
 Disallow: /blog/CLAUDE.md
 Disallow: /blog/CLAUDE%202.md

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');gtag('config','AW-16996694944');</script>
-<title>Jogo de Libras — Aprenda sinais de forma interativa | Libras.se</title>
+<title>Jogo de Libras, Aprenda sinais de forma interativa | Libras.se</title>
 <meta name="description" content="Aprenda Libras jogando! Descubra e pratique os sinais da Língua Brasileira de Sinais de forma interativa com o joguinho da Libras.se.">
 <link rel="canonical" href="https://libras.se/jogo/">
 <link rel="manifest" href="/manifest.json">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://libras.se/jogo/">
-<meta property="og:title" content="Jogo de Libras — Aprenda sinais de forma interativa | Libras.se">
+<meta property="og:title" content="Jogo de Libras, Aprenda sinais de forma interativa | Libras.se">
 <meta property="og:description" content="Aprenda Libras jogando! Descubra e pratique os sinais da Língua Brasileira de Sinais de forma interativa com o joguinho da Libras.se.">
 <meta property="og:image" content="https://libras.se/assets/img/og/jogo.webp">
 <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="Libras.se">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:title" content="Jogo de Libras — Aprenda sinais de forma interativa | Libras.se">
+<meta name="twitter:title" content="Jogo de Libras, Aprenda sinais de forma interativa | Libras.se">
 <meta name="twitter:description" content="Aprenda Libras jogando! Descubra e pratique os sinais da Língua Brasileira de Sinais com o joguinho da Libras.se.">
 <meta name="twitter:image" content="https://libras.se/assets/img/og/jogo.webp">
 <style>
@@ -46,7 +46,7 @@
   src: url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');
   font-weight: 900; font-display: swap;
 }
-/* Fonte de sinais — mapeamento de A-Z para configurações de mão */
+/* Fonte de sinais, mapeamento de A-Z para configurações de mão */
 @font-face {
   font-family: 'Libras2020';
   src: url('../assets/fonts/Libras2020-Regular.woff2') format('woff2');
@@ -211,7 +211,7 @@ main { padding: 20px 0 140px; }
   padding:0 18px;position:relative;z-index:1;
   font-style:italic;line-height:1.5;
 }
-/* Datilologia — usa fonte Libras2020 para mostrar soletração manual */
+/* Datilologia, usa fonte Libras2020 para mostrar soletração manual */
 .datilo {
   font-family:'Libras2020',monospace;
   font-size:2.6rem;letter-spacing:.1em;
@@ -513,7 +513,7 @@ main { padding: 20px 0 140px; }
         <source srcset="../assets/img/blog/logo/jogo-128.avif" type="image/avif">
         <img src="../assets/img/blog/logo/jogo-128.webp" alt="" class="logo-ico" aria-hidden="true" width="32" height="32">
       </picture>
-      <a href="https://libras.se/" class="logo" aria-label="Libras.se — Página inicial">LIBRAS.SE</a>
+      <a href="https://libras.se/" class="logo" aria-label="Libras.se, Página inicial">LIBRAS.SE</a>
       <span class="logo-tag">Joguinhos</span>
     </div>
     <div class="hdr-right">
@@ -544,7 +544,7 @@ main { padding: 20px 0 140px; }
     -->
     <div class="sign-area" id="signArea" role="img" aria-labelledby="signDesc">
       <div class="sign-scan" aria-hidden="true"></div>
-      <!-- PLACEHOLDER — substituir pelo vídeo/gif real -->
+      <!-- PLACEHOLDER, substituir pelo vídeo/gif real -->
       <div class="sign-icon" id="signIcon" aria-hidden="true">🤟</div>
       <!-- Datilologia aparece como dica após 3ª tentativa -->
       <div class="datilo" id="datilo" aria-label="Soletração manual em Libras"></div>
@@ -565,25 +565,25 @@ main { padding: 20px 0 140px; }
 
     <div class="hint-card locked" id="hc1">
       <div class="hc-head"><div class="hc-ico">📖</div><div class="hc-lbl">Significado</div></div>
-      <div class="hc-body"><div class="hc-txt" id="ht1">—</div></div>
+      <div class="hc-body"><div class="hc-txt" id="ht1"></div></div>
       <div class="hc-lock" id="hl1"></div>
     </div>
 
     <div class="hint-card locked" id="hc2">
       <div class="hc-head"><div class="hc-ico">💬</div><div class="hc-lbl">Exemplo</div></div>
-      <div class="hc-body"><div class="hc-txt" id="ht2">—</div></div>
+      <div class="hc-body"><div class="hc-txt" id="ht2"></div></div>
       <div class="hc-lock" id="hl2"></div>
     </div>
 
     <div class="hint-card locked" id="hc3">
       <div class="hc-head"><div class="hc-ico">🖐️</div><div class="hc-lbl">Dica em Libras</div></div>
-      <div class="hc-body"><div class="hc-txt" id="ht3">—</div></div>
+      <div class="hc-body"><div class="hc-txt" id="ht3"></div></div>
       <div class="hc-lock" id="hl3"></div>
     </div>
 
     <div class="hint-card locked" id="hc4">
       <div class="hc-head"><div class="hc-ico">✨</div><div class="hc-lbl">Curiosidade</div></div>
-      <div class="hc-body"><div class="hc-txt" id="ht4">—</div></div>
+      <div class="hc-body"><div class="hc-txt" id="ht4"></div></div>
       <div class="hc-lock" id="hl4"></div>
     </div>
   </section>
@@ -591,38 +591,38 @@ main { padding: 20px 0 140px; }
   <!-- DEV BUTTON (protótipo) -->
   <div class="dev-area">
     <button class="btn bo" id="devBtn">🔄 Novo desafio (protótipo)</button>
-    <div class="dev-note">⚠️ Botão apenas para testes — removido no lançamento</div>
+    <div class="dev-note">⚠️ Botão apenas para testes, removido no lançamento</div>
   </div>
 
   <!-- FUTURE MODES -->
   <section class="modes-section" aria-label="Modos de jogo">
     <div class="sec-ttl">🎮 Modos</div>
     <div class="modes-grid">
-      <div class="mode-card active" tabindex="0" role="button" aria-label="Sinal do Dia — ativo">
+      <div class="mode-card active" tabindex="0" role="button" aria-label="Sinal do Dia, ativo">
         <div class="mode-ico">🤟</div>
         <div class="mode-name">Sinal do Dia</div>
       </div>
-      <div class="mode-card" aria-label="Datilologia — em breve">
+      <div class="mode-card" aria-label="Datilologia, em breve">
         <div class="mode-ico">🔤</div>
         <div class="mode-name">Datilologia</div>
         <div class="mode-soon">Em breve</div>
       </div>
-      <div class="mode-card" aria-label="Expressões faciais — em breve">
+      <div class="mode-card" aria-label="Expressões faciais, em breve">
         <div class="mode-ico">😊</div>
         <div class="mode-name">Expressões</div>
         <div class="mode-soon">Em breve</div>
       </div>
-      <div class="mode-card" aria-label="Verbos em Libras — em breve">
+      <div class="mode-card" aria-label="Verbos em Libras, em breve">
         <div class="mode-ico">🏃</div>
         <div class="mode-name">Verbos</div>
         <div class="mode-soon">Em breve</div>
       </div>
-      <div class="mode-card" aria-label="Cultura Surda — em breve">
+      <div class="mode-card" aria-label="Cultura Surda, em breve">
         <div class="mode-ico">🦻</div>
         <div class="mode-name">Cultura Surda</div>
         <div class="mode-soon">Em breve</div>
       </div>
-      <div class="mode-card" aria-label="Ranking — em breve">
+      <div class="mode-card" aria-label="Ranking, em breve">
         <div class="mode-ico">🏆</div>
         <div class="mode-name">Ranking</div>
         <div class="mode-soon">Em breve</div>
@@ -664,7 +664,7 @@ main { padding: 20px 0 140px; }
     <div class="instr-s">
       <h3>Regras</h3>
       <p>Você tem <strong>6 tentativas</strong> para acertar a palavra do dia.</p>
-      <p>O número de caixas indica o tamanho da palavra. Não use acentos — <strong>FAMÍLIA = FAMILIA</strong>.</p>
+      <p>O número de caixas indica o tamanho da palavra. Não use acentos, <strong>FAMÍLIA = FAMILIA</strong>.</p>
     </div>
     <div class="instr-s">
       <h3>Cores das letras</h3>
@@ -673,21 +673,21 @@ main { padding: 20px 0 140px; }
           <div class="ex-t correct">E</div><div class="ex-t empty">S</div><div class="ex-t empty">C</div>
           <div class="ex-t empty">O</div><div class="ex-t empty">L</div><div class="ex-t empty">A</div>
         </div>
-        <p><strong style="color:var(--correct)">Verde</strong> — letra correta na posição certa.</p>
+        <p><strong style="color:var(--correct)">Verde</strong>, letra correta na posição certa.</p>
       </div>
       <div style="margin-bottom:10px">
         <div class="ex-tiles">
           <div class="ex-t empty">E</div><div class="ex-t present">S</div><div class="ex-t empty">C</div>
           <div class="ex-t empty">O</div><div class="ex-t empty">L</div><div class="ex-t empty">A</div>
         </div>
-        <p><strong style="color:var(--present)">Amarelo</strong> — letra existe, mas está em outra posição.</p>
+        <p><strong style="color:var(--present)">Amarelo</strong>, letra existe, mas está em outra posição.</p>
       </div>
       <div>
         <div class="ex-tiles">
           <div class="ex-t empty">E</div><div class="ex-t empty">S</div><div class="ex-t absent">C</div>
           <div class="ex-t empty">O</div><div class="ex-t empty">L</div><div class="ex-t empty">A</div>
         </div>
-        <p><strong style="color:var(--absent)">Cinza</strong> — letra não está na palavra.</p>
+        <p><strong style="color:var(--absent)">Cinza</strong>, letra não está na palavra.</p>
       </div>
     </div>
     <div class="instr-s">
@@ -755,8 +755,8 @@ const CHALLENGES = [
     signDesc: 'As mãos se abrem como páginas. Observe bem o movimento.',
     meaning: 'Objeto com folhas encadernadas usado para leitura e aprendizado.',
     example: 'Eu gosto de ler um bom <strong>livro</strong> antes de dormir.',
-    librasHint: 'Configuração: mãos abertas e planas, palmas para cima, movimento lateral de abertura — como abrir um livro. Ponto de articulação: neutro, à frente do corpo.',
-    funFact: 'Libras tem mais de 10.000 sinais catalogados. Cada região do Brasil pode ter variações regionais — assim como ocorre com sotaques no português.'
+    librasHint: 'Configuração: mãos abertas e planas, palmas para cima, movimento lateral de abertura, como abrir um livro. Ponto de articulação: neutro, à frente do corpo.',
+    funFact: 'Libras tem mais de 10.000 sinais catalogados. Cada região do Brasil pode ter variações regionais, assim como ocorre com sotaques no português.'
   },
   {
     id: 2,
@@ -776,7 +776,7 @@ const CHALLENGES = [
     meaning: 'Pessoa com quem se tem laço de afeto, confiança e companheirismo.',
     example: 'Meu <strong>amigo</strong> me ajudou quando mais precisei.',
     librasHint: 'AMIGO: os dedos indicadores das duas mãos se entrelaçam, representando a união entre as pessoas. Movimento suave e recíproco.',
-    funFact: 'Libras é uma língua completa, com gramática própria. Não é uma tradução de gestos do português — ela possui estrutura visual-espacial independente.'
+    funFact: 'Libras é uma língua completa, com gramática própria. Não é uma tradução de gestos do português, ela possui estrutura visual-espacial independente.'
   },
   {
     id: 4,
@@ -792,27 +792,27 @@ const CHALLENGES = [
     id: 5,
     word: 'COMER',
     category: 'Cotidiano', categoryIcon: '🍽️', signIcon: '🍽️',
-    signDesc: 'Um sinal icônico — imita a ação de levar comida à boca.',
+    signDesc: 'Um sinal icônico, imita a ação de levar comida à boca.',
     meaning: 'Ato de ingerir alimento pela boca; se alimentar.',
     example: 'Vamos <strong>comer</strong> juntos mais tarde?',
     librasHint: 'COMER é icônico: a mão dominante, com os dedos juntos em pinça, leva o alimento imaginário até a boca repetidamente. Movimento natural e intuitivo.',
-    funFact: 'Muitos sinais em Libras são icônicos — imitam visualmente a ação ou o objeto. Isso facilita a aprendizagem para iniciantes, pois cria memória visual imediata.'
+    funFact: 'Muitos sinais em Libras são icônicos, imitam visualmente a ação ou o objeto. Isso facilita a aprendizagem para iniciantes, pois cria memória visual imediata.'
   },
   {
     id: 6,
     word: 'FELIZ',
     category: 'Sentimentos', categoryIcon: '😊', signIcon: '😄',
-    signDesc: 'Atenção especial à expressão facial — ela faz parte do sinal.',
+    signDesc: 'Atenção especial à expressão facial, ela faz parte do sinal.',
     meaning: 'Estado de alegria, contentamento e bem-estar emocional.',
     example: 'Eu fico muito <strong>feliz</strong> quando aprendo algo novo.',
-    librasHint: 'Em Libras, a expressão facial é parte da gramática. FELIZ exige expressão sorridente — sem ela, o sinal pode mudar de significado ou soar neutro demais.',
+    librasHint: 'Em Libras, a expressão facial é parte da gramática. FELIZ exige expressão sorridente, sem ela, o sinal pode mudar de significado ou soar neutro demais.',
     funFact: 'As expressões faciais em Libras funcionam como entonação: indicam perguntas, negação, ênfase e intensidade. Elas são tão gramaticais quanto as mãos.'
   },
   {
     id: 7,
     word: 'TRABALHO',
     category: 'Cotidiano', categoryIcon: '🍽️', signIcon: '💼',
-    signDesc: 'As mãos em punho batem uma sobre a outra — esforço e produção.',
+    signDesc: 'As mãos em punho batem uma sobre a outra, esforço e produção.',
     meaning: 'Atividade produtiva realizada com esforço, geralmente remunerada.',
     example: 'Meu <strong>trabalho</strong> começa às oito horas da manhã.',
     librasHint: 'TRABALHO: punhos fechados, um bate sobre o outro em movimento alternado. Representa o esforço repetitivo e a produção inerentes ao trabalho.',
@@ -822,27 +822,27 @@ const CHALLENGES = [
     id: 8,
     word: 'OBRIGADO',
     category: 'Cultura Surda', categoryIcon: '🦻', signIcon: '🙏',
-    signDesc: 'A mão parte do queixo em direção à pessoa — gratidão direcionada.',
+    signDesc: 'A mão parte do queixo em direção à pessoa, gratidão direcionada.',
     meaning: 'Expressão de gratidão e reconhecimento por algo recebido.',
     example: '<strong>Obrigado</strong> por me ajudar a aprender Libras.',
-    librasHint: 'OBRIGADO: a mão dominante, com dedos juntos e planos, parte do queixo e se move para frente — como se "enviasse" gratidão para o interlocutor.',
+    librasHint: 'OBRIGADO: a mão dominante, com dedos juntos e planos, parte do queixo e se move para frente, como se "enviasse" gratidão para o interlocutor.',
     funFact: 'O Dia Nacional do Surdo é 26 de setembro, data que marca a fundação do INES em 1857. É celebrado com eventos, mostras culturais e disseminação de Libras.'
   },
   {
     id: 9,
     word: 'MUSICA',
     category: 'Arte', categoryIcon: '🎨', signIcon: '🎵',
-    signDesc: 'Observe o movimento ondulado — ele transmite a ideia de melodia.',
+    signDesc: 'Observe o movimento ondulado, ele transmite a ideia de melodia.',
     meaning: 'Arte que organiza sons, ritmos e silêncios de forma expressiva.',
     example: 'Ela ama <strong>música</strong> e sente cada vibração da batida.',
-    librasHint: 'MÚSICA: uma mão em "C" faz movimentos ondulatórios sobre o antebraço da outra — transmitindo visualmente o fluxo de uma melodia.',
+    librasHint: 'MÚSICA: uma mão em "C" faz movimentos ondulatórios sobre o antebraço da outra, transmitindo visualmente o fluxo de uma melodia.',
     funFact: 'Surdos percebem música por meio de vibrações. Eventos musicais inclusivos utilizam pisos vibratórios e intérpretes de Libras para que a comunidade surda acesse a experiência completa.'
   },
   {
     id: 10,
     word: 'CRIANCA',
     category: 'Relacionamentos', categoryIcon: '🤝', signIcon: '👶',
-    signDesc: 'A altura indicada pela mão é intencional — representa o tamanho.',
+    signDesc: 'A altura indicada pela mão é intencional, representa o tamanho.',
     meaning: 'Pessoa humana na fase da infância, geralmente de 0 a 12 anos.',
     example: 'A <strong>criança</strong> aprendeu Libras como primeira língua.',
     librasHint: 'CRIANÇA: a mão aberta, palma para baixo, é posicionada na altura de uma criança pequena. A altura pode variar para indicar a faixa etária.',
@@ -852,11 +852,11 @@ const CHALLENGES = [
     id: 11,
     word: 'SONHAR',
     category: 'Sentimentos', categoryIcon: '😊', signIcon: '💭',
-    signDesc: 'O dedo sai da cabeça em movimento ondulado — os pensamentos flutuam.',
+    signDesc: 'O dedo sai da cabeça em movimento ondulado, os pensamentos flutuam.',
     meaning: 'Ter sonhos durante o sono; ou idealizar e desejar algo para o futuro.',
     example: 'Eu <strong>sonho</strong> em viajar e conhecer o mundo.',
-    librasHint: 'SONHAR: o dedo indicador parte da têmpora e faz um movimento ondulado para cima e para fora — como se os pensamentos escapassem da mente durante o sonho.',
-    funFact: 'Pesquisas mostram que surdos que usam língua de sinais sonham em sinais. Suas memórias de sonho são visuo-espaciais, não auditivas — a língua molda o inconsciente.'
+    librasHint: 'SONHAR: o dedo indicador parte da têmpora e faz um movimento ondulado para cima e para fora, como se os pensamentos escapassem da mente durante o sonho.',
+    funFact: 'Pesquisas mostram que surdos que usam língua de sinais sonham em sinais. Suas memórias de sonho são visuo-espaciais, não auditivas, a língua molda o inconsciente.'
   },
   {
     id: 12,
@@ -865,7 +865,7 @@ const CHALLENGES = [
     signDesc: 'As mãos imitam a abertura de folhas de uma janela.',
     meaning: 'Abertura em parede vedada por vidro, que permite entrada de luz e ar.',
     example: 'Abri a <strong>janela</strong> para ventilar o quarto.',
-    librasHint: 'JANELA: as duas mãos abertas, posicionadas uma sobre a outra, se movem horizontalmente para os lados — imitando as folhas de uma janela se abrindo.',
+    librasHint: 'JANELA: as duas mãos abertas, posicionadas uma sobre a outra, se movem horizontalmente para os lados, imitando as folhas de uma janela se abrindo.',
     funFact: 'Libras foi reconhecida oficialmente como língua da comunidade surda brasileira pela Lei 10.436/2002. Esse reconhecimento foi um marco histórico para a inclusão no país.'
   }
 ];
@@ -1272,7 +1272,7 @@ function showResult(won) {
   document.getElementById('resWord').textContent = ch.word;
   document.getElementById('resStatus').textContent = won
     ? `✅ Você acertou em ${attempts.length} tentativa${attempts.length > 1 ? 's' : ''}!`
-    : '❌ Não foi dessa vez — mas você aprendeu!';
+    : '❌ Não foi dessa vez, mas você aprendeu!';
   document.getElementById('resStatus').className = `res-status ${won ? 'win' : 'lose'}`;
   document.getElementById('resLearn').innerHTML = ch.meaning;
   document.getElementById('resSign').innerHTML   = ch.librasHint;

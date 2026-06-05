@@ -1,4 +1,4 @@
-# CLAUDE.md — Libras.se Site Standards
+# CLAUDE.md, Libras.se Site Standards
 
 Este arquivo define o header e footer canônicos do site Libras.se.
 Ao criar ou editar qualquer página, copie exatamente estes blocos.
@@ -18,7 +18,7 @@ Arquivo absoluto (subpastas): `/assets/fonts/museo-sans-rounded-*.woff2`
 @font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 ```
 
-> **O peso 1000 aponta para o arquivo 900 — é intencional.** Só use 1000 no logo LIBRAS.SE.
+> **O peso 1000 aponta para o arquivo 900, é intencional.** Só use 1000 no logo LIBRAS.SE.
 
 ### Variáveis CSS obrigatórias
 ```css
@@ -45,7 +45,7 @@ Arquivo absoluto (subpastas): `/assets/fonts/museo-sans-rounded-*.woff2`
 
 ### Regras invioláveis
 - Logo `LIBRAS.SE` sempre em `font-weight:1000` com gradiente `--gb`
-- Cor primária escura: `#0e3538` — nunca `#0a2225` nem preto puro
+- Cor primária escura: `#0e3538`, nunca `#0a2225` nem preto puro
 - Sem `font-weight:1000` em nenhum outro elemento além do logo
 - WhatsApp: `5548996367511`
 
@@ -125,7 +125,7 @@ Cole este bloco logo após `<body>`, antes do `<main>`:
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+      <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
       </a>
       <ul class="nlinks" role="list">
@@ -179,7 +179,7 @@ Cole este bloco após `</main>`, antes de `</body>`:
   <div class="w">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se">

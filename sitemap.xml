@@ -145,6 +145,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://libras.se/autora/jessica-rodrigues/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/autora/guilherme-cruz/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://libras.se/blog/o-que-e-libras/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>

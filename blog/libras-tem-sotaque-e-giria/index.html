@@ -59,6 +59,11 @@
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -111,25 +116,25 @@
   @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
   .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mob.open{display:flex}
-  .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
   .mob a:hover{color:var(--teal-pale)}
   .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
   #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 40px;transition:all .4s;display:flex;align-items:center;justify-content:space-between;gap:20px;backdrop-filter:blur(16px);background:rgba(240,250,250,.88);border-bottom:1px solid rgba(42,144,144,.12)}
   #nav.sc{padding:12px 40px;box-shadow:0 2px 20px rgba(30,110,110,.06)}
   .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-  .nlogo-txt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-  .nsub{font-family:'Bricolage Grotesque',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+  .nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
   .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-  .nlinks a{font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
   .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);border-radius:2px;transition:width .25s}
   .nlinks a:hover,.nlinks a[aria-current="page"]{color:#0e3538}.nlinks a:hover::after,.nlinks a[aria-current="page"]::after{width:100%}
   .nav-tag-pill{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:var(--grey-light);padding:5px 12px;border-radius:20px}
   .nd{display:flex;align-items:center;gap:12px}
-  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
+  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
-  @media(max-width:768px){.nlinks,.nd .nav-cta{display:none}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
+  @media(max-width:768px){.nlinks,.nd .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
 
   .hero {
     min-height: 92vh; display: flex; flex-direction: column;
@@ -348,20 +353,17 @@
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="/blog/" aria-current="page" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
+  <a href="/blog/" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -442,15 +444,15 @@
   <div class="law-callout reveal">
     <div class="law-icon">⚖️</div>
     <div class="law-content">
-      <h4><a href="https://libras.se/glossario/lei-10436/">Lei nº 10.436/2002</a> — Libras é reconhecida como língua</h4>
-      <p>A lei reconhece a Libras como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora, com estrutura gramatical própria. Toda língua com estrutura própria e falantes reais está sujeita a variação — é assim que ela se mantém viva.</p>
+      <h4><a href="https://libras.se/glossario/lei-10436/">Lei nº 10.436/2002</a>, Libras é reconhecida como língua</h4>
+      <p>A lei reconhece a Libras como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora, com estrutura gramatical própria. Toda língua com estrutura própria e falantes reais está sujeita a variação, é assim que ela se mantém viva.</p>
     </div>
   </div>
 
   <div class="reveal">
-    <h2 class="section-label">Libras é língua — e línguas variam</h2>
+    <h2 class="section-label">Libras é língua, e línguas variam</h2>
     <p class="body-text">
-      O <a href="https://libras.se/glossario/decreto-5626/">Decreto nº 5.626/2005</a> define a pessoa <a href="https://libras.se/glossario/surdo/">surda</a> como aquela que compreende e interage com o mundo por experiências visuais, manifestando sua cultura principalmente pelo uso da Libras. Essa experiência visual é a base de tudo: a língua existe porque pessoas reais a usam em contextos reais — e esses contextos variam.
+      O <a href="https://libras.se/glossario/decreto-5626/">Decreto nº 5.626/2005</a> define a pessoa <a href="https://libras.se/glossario/surdo/">surda</a> como aquela que compreende e interage com o mundo por experiências visuais, manifestando sua cultura principalmente pelo uso da Libras. Essa experiência visual é a base de tudo: a língua existe porque pessoas reais a usam em contextos reais, e esses contextos variam.
     </p>
     <p class="body-text">
       Quando uma <a href="https://libras.se/glossario/comunidade-surda/">comunidade surda</a> do interior de Minas Gerais se encontra com outra do litoral de Santa Catarina, ou quando jovens surdos de São Paulo criam novos usos em redes sociais, a Libras está se movendo. Ela absorve influências, cria formas, mantém outras e deixa algumas irem. É exatamente assim que funciona uma língua viva.
@@ -460,7 +462,7 @@
   <div class="reveal">
     <h2 class="section-label">Sotaque visual?</h2>
     <p class="body-text">
-      A palavra "sotaque" é útil como metáfora — especialmente para quem está chegando ao tema pela primeira vez. Em línguas orais, sotaque costuma envolver pronúncia, ritmo e entonação. Em Libras, a variação pode aparecer em aspectos igualmente perceptíveis, mas visuais.
+      A palavra "sotaque" é útil como metáfora, especialmente para quem está chegando ao tema pela primeira vez. Em línguas orais, sotaque costuma envolver pronúncia, ritmo e entonação. Em Libras, a variação pode aparecer em aspectos igualmente perceptíveis, mas visuais.
     </p>
     <p class="body-text">
       O termo técnico mais adequado é <strong>variação linguística</strong>. Em vez de som, a variação aparece na forma do sinal. Os parâmetros que podem mudar são cinco: <a href="https://libras.se/glossario/configuracao-de-mao/">configuração de mão</a>, <a href="https://libras.se/glossario/ponto-de-articulacao/">ponto de articulação</a>, <a href="https://libras.se/glossario/movimento/">movimento</a>, <a href="https://libras.se/glossario/orientacao-de-mao/">orientação da palma</a> e <a href="https://libras.se/glossario/expressao-nao-manual/">expressões não-manuais</a>. Uma mudança em qualquer um desses elementos pode gerar uma variante regional ou, em alguns casos, outro significado completamente diferente.
@@ -485,7 +487,7 @@
   <div class="reveal">
     <h2 class="section-label">O que pode mudar em um sinal</h2>
     <p class="body-text">
-      Cada sinal em <a href="https://libras.se/glossario/libras/">Libras</a> é composto por parâmetros — elementos articulatórios que, juntos, formam o significado. A variação regional costuma aparecer em um ou mais desses parâmetros simultaneamente:
+      Cada sinal em <a href="https://libras.se/glossario/libras/">Libras</a> é composto por parâmetros, elementos articulatórios que, juntos, formam o significado. A variação regional costuma aparecer em um ou mais desses parâmetros simultaneamente:
     </p>
   </div>
 
@@ -493,7 +495,7 @@
     <div class="use-card">
       <div class="card-icon">✋</div>
       <h3><a href="https://libras.se/glossario/configuracao-de-mao/">Configuração de mão</a></h3>
-      <p>A forma que a mão assume ao produzir o sinal. É um dos parâmetros que mais varia regionalmente — a mesma ideia pode ser sinalizada com dedos em posições diferentes.</p>
+      <p>A forma que a mão assume ao produzir o sinal. É um dos parâmetros que mais varia regionalmente, a mesma ideia pode ser sinalizada com dedos em posições diferentes.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">📍</div>
@@ -503,7 +505,7 @@
     <div class="use-card">
       <div class="card-icon">🔄</div>
       <h3><a href="https://libras.se/glossario/movimento/">Movimento</a></h3>
-      <p>A trajetória, a velocidade e o ritmo do sinal. Pode ser linear, circular, repetido ou único — e pequenas diferenças de movimento podem marcar variantes de comunidades distintas.</p>
+      <p>A trajetória, a velocidade e o ritmo do sinal. Pode ser linear, circular, repetido ou único, e pequenas diferenças de movimento podem marcar variantes de comunidades distintas.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">↩️</div>
@@ -518,14 +520,14 @@
     <div class="use-card">
       <div class="card-icon">🔤</div>
       <h3>Variação lexical</h3>
-      <p>Casos em que regiões diferentes usam sinais completamente distintos para o mesmo conceito — como acontece com <strong>verde</strong>, <strong>cerveja</strong>, <strong>triste</strong> e <strong>mas</strong> nos exemplos abaixo.</p>
+      <p>Casos em que regiões diferentes usam sinais completamente distintos para o mesmo conceito, como acontece com <strong>verde</strong>, <strong>cerveja</strong>, <strong>triste</strong> e <strong>mas</strong> nos exemplos abaixo.</p>
     </div>
   </div>
 
   <div class="reveal">
     <h2 class="section-label">Exemplos regionais</h2>
     <p class="body-text">
-      Os GIFs a seguir comparam sinais usados em diferentes comunidades surdas do Brasil. Eles não representam todas as variantes possíveis — apenas mostram que a variação existe, é real e é documentada. Nenhuma das formas apresentadas é mais correta do que a outra.
+      Os GIFs a seguir comparam sinais usados em diferentes comunidades surdas do Brasil. Eles não representam todas as variantes possíveis, apenas mostram que a variação existe, é real e é documentada. Nenhuma das formas apresentadas é mais correta do que a outra.
     </p>
   </div>
 
@@ -536,35 +538,35 @@
     </figure>
     <figure class="sign-figure">
       <img src="../../assets/img/blog/libras-tem-sotaque-e-giria/CERVEJA%20EM%20LIBRAS.gif" alt="GIF comparando variações regionais do sinal de cerveja em Libras em Minas Gerais e em São Paulo." loading="lazy" width="600" height="338">
-      <figcaption><strong>CERVEJA:</strong> Minas Gerais e São Paulo apresentam formas diferentes para o mesmo sinal — um exemplo claro de variação lexical regional, onde o mesmo objeto recebe sinais distintos em comunidades diferentes.</figcaption>
+      <figcaption><strong>CERVEJA:</strong> Minas Gerais e São Paulo apresentam formas diferentes para o mesmo sinal, um exemplo claro de variação lexical regional, onde o mesmo objeto recebe sinais distintos em comunidades diferentes.</figcaption>
     </figure>
     <figure class="sign-figure">
       <img src="../../assets/img/blog/libras-tem-sotaque-e-giria/TRISTE%20EM%20LIBRAS.gif" alt="GIF comparando variações regionais do sinal de triste em Libras em São Paulo, no Rio de Janeiro e no Mato Grosso do Sul." loading="lazy" width="600" height="338">
-      <figcaption><strong>TRISTE:</strong> São Paulo, Rio de Janeiro e Mato Grosso do Sul mostram variações que diferem na configuração da mão, na localização ou na nuance expressiva — às vezes de forma sutil, às vezes bem marcada.</figcaption>
+      <figcaption><strong>TRISTE:</strong> São Paulo, Rio de Janeiro e Mato Grosso do Sul mostram variações que diferem na configuração da mão, na localização ou na nuance expressiva, às vezes de forma sutil, às vezes bem marcada.</figcaption>
     </figure>
     <figure class="sign-figure">
       <img src="../../assets/img/blog/libras-tem-sotaque-e-giria/MAS%20EM%20LIBRAS.gif" alt="GIF comparando variações regionais do sinal de mas em Libras em São Paulo e no Rio de Janeiro." loading="lazy" width="600" height="338">
-      <figcaption><strong>MAS:</strong> até conectivos — palavras que ligam ideias — podem variar. O movimento, a pausa e a configuração das mãos podem mudar de uma comunidade para outra sem alterar a função gramatical do sinal.</figcaption>
+      <figcaption><strong>MAS:</strong> até conectivos, palavras que ligam ideias, podem variar. O movimento, a pausa e a configuração das mãos podem mudar de uma comunidade para outra sem alterar a função gramatical do sinal.</figcaption>
     </figure>
   </div>
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Ponto central</span>
     <p>
-      Essas diferenças não tornam uma forma melhor ou mais correta do que as outras. Elas mostram que a <a href="https://libras.se/glossario/libras/">Libras</a> circula por <strong>comunidades reais</strong>, em regiões reais, com histórias próprias. <strong>Variação não é erro — é evidência de que a língua está viva.</strong>
+      Essas diferenças não tornam uma forma melhor ou mais correta do que as outras. Elas mostram que a <a href="https://libras.se/glossario/libras/">Libras</a> circula por <strong>comunidades reais</strong>, em regiões reais, com histórias próprias. <strong>Variação não é erro, é evidência de que a língua está viva.</strong>
     </p>
   </div>
 
   <div class="reveal">
     <h2 class="section-label">E gíria em Libras, existe?</h2>
     <p class="body-text">
-      Depende de como entendemos o que é uma gíria. Se pensarmos em gíria como uso formal registrado em dicionário, a resposta é mais complexa. Mas se entendermos gíria como uso informal, expressão de grupo, forma que circula entre pessoas de uma comunidade específica — jovens, redes sociais, determinados contextos — então sim, a Libras também pode ter esse tipo de uso.
+      Depende de como entendemos o que é uma gíria. Se pensarmos em gíria como uso formal registrado em dicionário, a resposta é mais complexa. Mas se entendermos gíria como uso informal, expressão de grupo, forma que circula entre pessoas de uma comunidade específica, jovens, redes sociais, determinados contextos, então sim, a Libras também pode ter esse tipo de uso.
     </p>
     <p class="body-text">
-      Sinais que surgem em escolas bilíngues, que se espalham por vídeos nas redes sociais, que nascem em comunidades específicas e passam a circular entre jovens surdos — esses usos funcionam de forma parecida com o que as gírias fazem no português. Alguns se consolidam. Outros ficam restritos a determinados grupos. Outros ainda mudam ou desaparecem.
+      Sinais que surgem em escolas bilíngues, que se espalham por vídeos nas redes sociais, que nascem em comunidades específicas e passam a circular entre jovens surdos, esses usos funcionam de forma parecida com o que as gírias fazem no português. Alguns se consolidam. Outros ficam restritos a determinados grupos. Outros ainda mudam ou desaparecem.
     </p>
     <p class="body-text">
-      Tratar esses usos como erro ou como "Libras incorreta" seria o mesmo que dizer que expressões informais do português são erros de quem não sabe falar. <mark>Toda língua tem registros — do mais formal ao mais informal — e a Libras não é diferente.</mark>
+      Tratar esses usos como erro ou como "Libras incorreta" seria o mesmo que dizer que expressões informais do português são erros de quem não sabe falar. <mark>Toda língua tem registros, do mais formal ao mais informal, e a Libras não é diferente.</mark>
     </p>
   </div>
 
@@ -575,10 +577,10 @@
   <div class="reveal">
     <h2 class="section-label">Variação não é falta de padrão</h2>
     <p class="body-text">
-      Uma das confusões mais comuns é tratar variação como bagunça ou ausência de norma. A ideia de que existe "uma Libras única, pura e neutra" não se sustenta — nem linguisticamente, nem culturalmente. A <a href="https://libras.se/glossario/comunidade-surda/">comunidade surda</a> brasileira é diversa: tem gerações diferentes, regiões diferentes, contextos diferentes, histórias diferentes.
+      Uma das confusões mais comuns é tratar variação como bagunça ou ausência de norma. A ideia de que existe "uma Libras única, pura e neutra" não se sustenta, nem linguisticamente, nem culturalmente. A <a href="https://libras.se/glossario/comunidade-surda/">comunidade surda</a> brasileira é diversa: tem gerações diferentes, regiões diferentes, contextos diferentes, histórias diferentes.
     </p>
     <p class="body-text">
-      Padronização pode ser útil em dicionários, materiais didáticos e serviços públicos — para que um termo seja amplamente compreendido. Mas documentar uma variante como referência não transforma as outras em erros. Pesquisas publicadas na <a href="https://libras.se/glossario/ines/">Revista Espaço do INES</a> e em periódicos acadêmicos já tratam variação lexical e fonológica em Libras como objeto legítimo de investigação sociolinguística — não como problema a ser corrigido.
+      Padronização pode ser útil em dicionários, materiais didáticos e serviços públicos, para que um termo seja amplamente compreendido. Mas documentar uma variante como referência não transforma as outras em erros. Pesquisas publicadas na <a href="https://libras.se/glossario/ines/">Revista Espaço do INES</a> e em periódicos acadêmicos já tratam variação lexical e fonológica em Libras como objeto legítimo de investigação sociolinguística, não como problema a ser corrigido.
     </p>
   </div>
 
@@ -586,14 +588,14 @@
     <div class="info-icon">📚</div>
     <div class="info-content">
       <h4>Pesquisa e documentação da Libras</h4>
-      <p>O <a href="https://corpuslibras.ufsc.br/" target="_blank" rel="noopener">Corpus de Libras da UFSC</a> reúne material que subsidia pesquisas linguísticas sobre variação, gramática e uso da língua. O <a href="https://signbank.libras.ufsc.br/" target="_blank" rel="noopener">Signbank Libras</a> apresenta sinais com dados sistematizados. Esses recursos são referências de documentação — não a única autoridade sobre todas as variantes possíveis em todo o Brasil.</p>
+      <p>O <a href="https://corpuslibras.ufsc.br/" target="_blank" rel="noopener">Corpus de Libras da UFSC</a> reúne material que subsidia pesquisas linguísticas sobre variação, gramática e uso da língua. O <a href="https://signbank.libras.ufsc.br/" target="_blank" rel="noopener">Signbank Libras</a> apresenta sinais com dados sistematizados. Esses recursos são referências de documentação, não a única autoridade sobre todas as variantes possíveis em todo o Brasil.</p>
     </div>
   </div>
 
   <div class="reveal">
     <h2 class="section-label">O que isso muda na prática</h2>
     <p class="body-text">
-      Para quem produz vídeos, cursos, eventos e atendimentos com Libras, entender a variação não é detalhe acadêmico — é parte do planejamento. Um vídeo nacional pode precisar de escolhas de sinais mais amplamente reconhecidas. Um material regional pode usar sinais locais com naturalidade. Uma videoaula com termos técnicos pode precisar contextualizar conceitos que ainda não têm sinal consolidado em todas as regiões.
+      Para quem produz vídeos, cursos, eventos e atendimentos com Libras, entender a variação não é detalhe acadêmico, é parte do planejamento. Um vídeo nacional pode precisar de escolhas de sinais mais amplamente reconhecidas. Um material regional pode usar sinais locais com naturalidade. Uma videoaula com termos técnicos pode precisar contextualizar conceitos que ainda não têm sinal consolidado em todas as regiões.
     </p>
     <p class="body-text">
       <strong>Não basta colocar uma <a href="https://libras.se/glossario/janela-de-libras/">janela de Libras</a> no vídeo e imaginar que todo sinal será compreendido da mesma forma por toda a audiência.</strong> O público importa. A região importa. O contexto importa. E os <a href="https://libras.se/glossario/til-tils/">tradutores-intérpretes de Libras</a> com repertório amplo e contato real com a comunidade surda são essenciais para fazer essas escolhas com responsabilidade.
@@ -621,7 +623,7 @@
       <div class="step-num">02</div>
       <div class="step-body">
         <h4>Levante termos sensíveis, técnicos ou muito locais</h4>
-        <p>Palavras especializadas, siglas e termos sem sinal amplamente reconhecido merecem atenção antes da produção — não durante a edição.</p>
+        <p>Palavras especializadas, siglas e termos sem sinal amplamente reconhecido merecem atenção antes da produção, não durante a edição.</p>
       </div>
     </div>
     <div class="step">
@@ -635,14 +637,14 @@
       <div class="step-num">04</div>
       <div class="step-body">
         <h4>Evite corrigir uma variante sem entender o contexto</h4>
-        <p>Dizer que um sinal está "errado" sem conhecer a região e a comunidade de origem pode ser equivocado — e desrespeitoso com a história da língua naquele lugar.</p>
+        <p>Dizer que um sinal está "errado" sem conhecer a região e a comunidade de origem pode ser equivocado, e desrespeitoso com a história da língua naquele lugar.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">05</div>
       <div class="step-body">
         <h4>Quando necessário, explique o termo no próprio vídeo</h4>
-        <p>Em contextos técnicos ou especializados, contextualizar o sinal usado aumenta a compreensão — sem precisar tratar outras formas como incorretas.</p>
+        <p>Em contextos técnicos ou especializados, contextualizar o sinal usado aumenta a compreensão, sem precisar tratar outras formas como incorretas.</p>
       </div>
     </div>
     <div class="step">
@@ -659,7 +661,7 @@
   <div class="reveal">
     <h2 class="section-label">Libras pertence a quem a usa</h2>
     <p class="body-text">
-      A <a href="https://libras.se/glossario/libras/">Libras</a> tem variação porque é língua. Ela tem território, memória, <a href="https://libras.se/glossario/comunidade-surda/">comunidade</a>, criação e mudança. Não existe uma versão correta e imutável guardada em algum lugar — existe uma língua que vive nas mãos, no rosto, no corpo e no repertório de pessoas reais, espalhadas por um país enorme.
+      A <a href="https://libras.se/glossario/libras/">Libras</a> tem variação porque é língua. Ela tem território, memória, <a href="https://libras.se/glossario/comunidade-surda/">comunidade</a>, criação e mudança. Não existe uma versão correta e imutável guardada em algum lugar, existe uma língua que vive nas mãos, no rosto, no corpo e no repertório de pessoas reais, espalhadas por um país enorme.
     </p>
     <p class="body-text">
       Para empresas, escolas, produtores de conteúdo e qualquer pessoa que queira trabalhar com acessibilidade de verdade, entender isso não é detalhe. É o ponto de partida.
@@ -671,11 +673,11 @@
     <ol>
       <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais – Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
       <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei nº 10.436/2002. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Decreto/D5626.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>INES — Revista Espaço. <em>Variação linguística em preposições na Libras: os sinais "sobre" e "contra".</em> Disponível em: <a href="https://seer.ines.gov.br/index.php/revista-espaco/article/view/1552" target="_blank" rel="noopener">seer.ines.gov.br</a></li>
+      <li>INES, Revista Espaço. <em>Variação linguística em preposições na Libras: os sinais "sobre" e "contra".</em> Disponível em: <a href="https://seer.ines.gov.br/index.php/revista-espaco/article/view/1552" target="_blank" rel="noopener">seer.ines.gov.br</a></li>
       <li>DOMÍNIOS DE LINGU@GEM. <em>Análise de variações lexicais e regionalismos em Libras.</em> Disponível em: <a href="https://seer.ufu.br/index.php/dominiosdelinguagem/article/view/80463" target="_blank" rel="noopener">seer.ufu.br</a></li>
       <li>UFSC. <em>Corpus de Libras.</em> Disponível em: <a href="https://corpuslibras.ufsc.br/" target="_blank" rel="noopener">corpuslibras.ufsc.br</a></li>
       <li>UFSC. <em>Signbank Libras.</em> Disponível em: <a href="https://signbank.libras.ufsc.br/" target="_blank" rel="noopener">signbank.libras.ufsc.br</a></li>
-      <li>LIBRAS.SE. <em>Libras tem sotaque e gíria? — post original.</em> Disponível em: <a href="https://libras.se/blog/libras-tem-sotaque-e-giria/" target="_blank" rel="noopener">libras.se</a></li>
+      <li>LIBRAS.SE. <em>Libras tem sotaque e gíria?, post original.</em> Disponível em: <a href="https://libras.se/blog/libras-tem-sotaque-e-giria/" target="_blank" rel="noopener">libras.se</a></li>
     </ol>
   </div>
 
@@ -720,7 +722,7 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

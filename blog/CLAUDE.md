@@ -1,11 +1,11 @@
-# CLAUDE.md — Blog Libras.se
+# CLAUDE.md, Blog Libras.se
 
 Guia único de criação e manutenção do **blog da Libras.se**: a página inicial
 (`/blog/`), os posts e todas as regras editoriais, de SEO e de design.
 
 > Para o design system geral do site (variáveis CSS, logo, fontes locais, header
 > e footer canônicos) consulte o **`CLAUDE.md` da raiz**. Este arquivo só
-> documenta o que é específico do blog e **não repete** o que já está na raiz —
+> documenta o que é específico do blog e **não repete** o que já está na raiz,
 > header, footer e JS de navegação são reaproveitados da raiz em todos os posts.
 
 ---
@@ -19,7 +19,7 @@ Todo post se encaixa em **um de dois níveis**. Escolha pelo tipo de conteúdo
 |---|---|---|
 | **Quando usar** | Notícias, repostagens, factuais, releases, conteúdo curto e direto | Conteúdo evergreen, guias, explicações densas, pilar de SEO, autoridade temática |
 | **Exemplos reais** | [`tradutor-de-libras-se-destaca-no-rock-in-rio`](./tradutor-de-libras-se-destaca-no-rock-in-rio/index.html), [`urnas-eletronicas-terao-video-com-libras`](./urnas-eletronicas-terao-video-com-libras/index.html) | [`voce-sabe-o-que-e-datilologia`](./voce-sabe-o-que-e-datilologia/index.html), [`libras-tem-sotaque-e-giria`](./libras-tem-sotaque-e-giria/index.html), [`libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado`](./libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/index.html) |
-| **Tipografia** | Museo Sans Rounded (`'M'`) — fontes locais do site | Bricolage Grotesque (títulos/UI) + Lora (corpo) — Google Fonts |
+| **Tipografia** | Museo Sans Rounded (`'M'`), fontes locais do site | Bricolage Grotesque (títulos/UI) + Lora (corpo), Google Fonts |
 | **Tamanho típico** | ~250–450 linhas | ~700–1600 linhas |
 | **Hero** | Título + subtítulo + meta, sem imagem de fundo dramática (`.pa-hero`) | Hero cheio com imagem/gradiente, kicker, scroll hint |
 | **Componentes** | Texto, subtítulos, blockquote simples, figura, tags | Biblioteca completa: pull-quote, callouts, cards, stat-row, process-steps, vídeo, referências |
@@ -32,13 +32,13 @@ Se é um conteúdo que queremos ranquear e manter por anos, vá de **alta comple
 ### O que é IGUAL nos dois níveis (regras universais)
 
 1. **Header e footer canônicos do site** (da raiz `CLAUDE.md`), com o badge `Blog`
-   no logo e `aria-current="page"` no link do Blog — ver §4.
-2. **Footer da matéria com posts relacionados** ("Leia mais no blog") — ver §8.
-3. **Citação ao Glossário** sempre que um termo for mencionado — ver §6.
-4. **Imagens vindas do banco editorial** quando não houver foto própria — ver §7.
+   no logo e `aria-current="page"` no link do Blog, ver §4.
+2. **Footer da matéria com posts relacionados** ("Leia mais no blog"), ver §8.
+3. **Citação ao Glossário** sempre que um termo for mencionado, ver §6.
+4. **Imagens vindas do banco editorial** quando não houver foto própria, ver §7.
 5. **Botão flutuante de WhatsApp** (`.wppf`) e **skip-link**.
 6. `<html lang="pt-BR">`, `<meta>` SEO completos, OG/Twitter, canonical, JSON-LD.
-7. Cada post é citado na **home do blog** com seu card e `data-cat` — ver §5.
+7. Cada post é citado na **home do blog** com seu card e `data-cat`, ver §5.
 
 ---
 
@@ -74,7 +74,7 @@ campos. Eles alimentam `<title>`, `<meta>`, OG/Twitter e o JSON-LD:
 
 ```yaml
 title:                  # H1 do post
-seo_title:              # <title> — título + " | Blog Libras.se"
+seo_title:              # <title>, título + " | Blog Libras.se"
 meta_description:        # ~155 caracteres, com a palavra-chave principal
 slug:                   # kebab-case
 canonical_url:          # https://libras.se/blog/<slug>/
@@ -98,7 +98,7 @@ external_references:    # fontes externas
 cta_type:               # vídeo | soluções | jogo | glossário
 ```
 
-### `<head>` — esqueleto comum aos dois níveis
+### `<head>`, esqueleto comum aos dois níveis
 
 ```html
 <meta charset="UTF-8">
@@ -159,11 +159,11 @@ perguntas frequentes, adicione um terceiro bloco `FAQPage`.
 O blog **usa o header e o footer canônicos do site** (copie da raiz `CLAUDE.md`),
 com duas marcações específicas do blog:
 
-- **Badge `Blog` ao lado do logo** — a mesma "marcação de conteúdo" usada na home
+- **Badge `Blog` ao lado do logo**, a mesma "marcação de conteúdo" usada na home
   do blog, que identifica que estamos na seção de conteúdo:
 
   ```html
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -264,7 +264,7 @@ Cada card carrega os atributos que alimentam o filtro e a busca:
 </div>
 ```
 
-### JS de busca + filtro (já presente na home — manter)
+### JS de busca + filtro (já presente na home, manter)
 
 ```javascript
 const searchInput = document.getElementById('bl-search-input');
@@ -321,7 +321,7 @@ hyperlink para o Glossário.** A fonte única dos termos é
 [`/glossario/termos.csv`](../glossario/termos.csv).
 
 - Linke a **primeira ocorrência** do termo em cada seção relevante (não repita
-  em todo parágrafo — evite spam de links).
+  em todo parágrafo, evite spam de links).
 - A URL é a da coluna `url` do CSV (`https://libras.se/glossario/<slug>/`); em
   posts use o caminho relativo `/glossario/<slug>/`.
 - Use o termo natural na frase como texto âncora:
@@ -329,7 +329,7 @@ hyperlink para o Glossário.** A fonte única dos termos é
 - As **tags** do post que coincidam com termos do glossário também viram link
   (ex.: `<a class="pa-tag" href="/glossario/til-tils/">#tils</a>`).
 
-### Termos disponíveis (consulte sempre o CSV — pode crescer)
+### Termos disponíveis (consulte sempre o CSV, pode crescer)
 
 | Termo | slug | Categoria |
 |---|---|---|
@@ -379,7 +379,7 @@ Libras.se. Fonte única: [`/assets/img/banco-editorial/imagens.csv`](../assets/i
 4. Use a coluna **`meta_descricao`** como base para a metadescrição da imagem.
 
 São 12 imagens (`LIBRAS.SE_1` … `LIBRAS.SE_12`), majoritariamente de intérpretes
-em estúdio/chroma key, equipe e bastidores de produção acessível — ideais para
+em estúdio/chroma key, equipe e bastidores de produção acessível, ideais para
 posts sobre tradução em Libras, gravação, tecnologia e a própria Libras.se. Cada
 imagem tem um `.md` companheiro com a descrição completa.
 
@@ -388,16 +388,16 @@ imagem tem um `.md` companheiro com a descrição completa.
 
 ---
 
-## 8. Fechamento "Com Barra" — obrigatório em todos os posts
+## 8. Fechamento "Com Barra", obrigatório em todos os posts
 
 Todo post termina com a sequência completa **"Com Barra"** antes do footer
 canônico do site. Ordem obrigatória:
 
-1. `.pa-tags` — tags em `#` com barra divisória superior (`border-top`)
-2. `.pa-cta` — bloco escuro com CTA "Precisa do seu conteúdo em Libras?"
-3. `.pa-actions` — 3 cards de recursos com **ícones SVG** (sem emojis): Jogo / Vocabulário / Glossário
-4. `.pa-related` — 3 artigos variados ("Leia mais no blog") + botão lateral "Ver todos os posts"
-5. `<footer id="foot">` — footer canônico do site
+1. `.pa-tags`, tags em `#` com barra divisória superior (`border-top`)
+2. `.pa-cta`, bloco escuro com CTA "Precisa do seu conteúdo em Libras?"
+3. `.pa-actions`, 3 cards de recursos com **ícones SVG** (sem emojis): Jogo / Vocabulário / Glossário
+4. `.pa-related`, 3 artigos variados ("Leia mais no blog") + botão lateral "Ver todos os posts"
+5. `<footer id="foot">`, footer canônico do site
 
 > **Posts relacionados variados:** escolha 3 artigos de temas **diferentes** entre si e diferentes do tema principal do post atual. Diversidade de categoria aumenta o tempo de permanência.
 
@@ -447,15 +447,15 @@ canônico do site. Ordem obrigatória:
   <div class="pa-rel-grid">
     <a class="pa-rel" href="/blog/[slug-1]/">
       <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-1]/[slug-1].webp" alt="[Título 1]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 1 — tema diferente do post atual]</span></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 1, tema diferente do post atual]</span></span>
     </a>
     <a class="pa-rel" href="/blog/[slug-2]/">
       <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-2]/[slug-2].webp" alt="[Título 2]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 2 — tema diferente dos outros]</span></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 2, tema diferente dos outros]</span></span>
     </a>
     <a class="pa-rel" href="/blog/[slug-3]/">
       <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-3]/[slug-3].webp" alt="[Título 3]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 3 — tema diferente dos outros]</span></span>
+      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 3, tema diferente dos outros]</span></span>
     </a>
   </div>
 </section>
@@ -470,7 +470,7 @@ copiado da raiz `CLAUDE.md`), com os links do Blog apontando para `/blog/`.
 
 ---
 
-# TIER BAIXO — Post de baixa complexidade
+# TIER BAIXO, Post de baixa complexidade
 
 Base: **design system principal do site** (fonte `'M'` Museo Sans Rounded,
 variáveis `:root` da raiz). Header e footer canônicos. Artigo no wrapper `.pa-wrap`.
@@ -563,7 +563,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <a class="pa-tag" href="/glossario/til-tils/">#tils</a>
     </div>
 
-    <!-- §8: fechamento "Com Barra" — pa-tags → pa-cta → pa-related → footer canônico -->
+    <!-- §8: fechamento "Com Barra", pa-tags → pa-cta → pa-related → footer canônico -->
   </article>
 </main>
 ```
@@ -573,7 +573,7 @@ de progress bar nem contadores.
 
 ---
 
-# TIER ALTO — Post de alta complexidade (editorial)
+# TIER ALTO, Post de alta complexidade (editorial)
 
 Base: **tipografia editorial** (Bricolage Grotesque + Lora) sobre o header/footer
 canônicos, com biblioteca de componentes ricos, hero cheio, barra de progresso e
@@ -621,14 +621,14 @@ body{font-family:'Lora',Georgia,serif;background:var(--cream);color:var(--ink);l
 
 ## Hero
 
-### Variante A — gradiente (sem foto de capa)
+### Variante A, gradiente (sem foto de capa)
 
 ```css
 .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:120px 0 0}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(155deg,#0d3d3d 0%,#1e6e6e 35%,#2a9090 65%,#48bfb2 100%);z-index:0}
 ```
 
-### Variante B — imagem de fundo com overlay
+### Variante B, imagem de fundo com overlay
 
 ```css
 .hero-bg{position:absolute;inset:0;z-index:0}

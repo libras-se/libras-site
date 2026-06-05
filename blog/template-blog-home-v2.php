@@ -3,7 +3,7 @@
  * Template Name: Blog LIBRAS.SE v2
  * Template Post Type: page
  *
- * Homepage do blog — usa design system do librase-blog-template.md
+ * Homepage do blog, usa design system do librase-blog-template.md
  * (Bricolage Grotesque + Lora, paleta teal-dark)
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -1093,7 +1093,7 @@ get_header();
       </div>
     </div>
     <div class="lbs2-footer__bottom">
-      <p class="lbs2-footer__copy">&copy; <?php echo date( 'Y' ); ?> LIBRAS.SE — Todos os direitos reservados.</p>
+      <p class="lbs2-footer__copy">&copy; <?php echo date( 'Y' ); ?> LIBRAS.SE, Todos os direitos reservados.</p>
       <nav class="lbs2-footer__legal" aria-label="Links legais">
         <a href="https://libras.se/privacidade">Privacidade</a>
         <a href="https://libras.se/termos">Termos</a>

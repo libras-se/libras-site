@@ -59,6 +59,11 @@
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -111,25 +116,25 @@
   @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
   .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mob.open{display:flex}
-  .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
   .mob a:hover{color:var(--teal-pale)}
   .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
   #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 40px;transition:all .4s;display:flex;align-items:center;justify-content:space-between;gap:20px;backdrop-filter:blur(16px);background:rgba(240,250,250,.88);border-bottom:1px solid rgba(42,144,144,.12)}
   #nav.sc{padding:12px 40px;box-shadow:0 2px 20px rgba(30,110,110,.06)}
   .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-  .nlogo-txt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-  .nsub{font-family:'Bricolage Grotesque',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+  .nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
   .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-  .nlinks a{font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
   .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);border-radius:2px;transition:width .25s}
   .nlinks a:hover,.nlinks a[aria-current="page"]{color:#0e3538}.nlinks a:hover::after,.nlinks a[aria-current="page"]::after{width:100%}
   .nav-tag-pill{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:var(--grey-light);padding:5px 12px;border-radius:20px}
   .nd{display:flex;align-items:center;gap:12px}
-  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
+  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
-  @media(max-width:768px){.nlinks,.nd .nav-cta{display:none}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
+  @media(max-width:768px){.nlinks,.nd .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
 
   .hero {
     min-height: 92vh; display: flex; flex-direction: column;
@@ -351,20 +356,17 @@
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="/blog/" aria-current="page" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
+  <a href="/blog/" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -433,7 +435,7 @@
 <main class="article-wrapper" id="main-content">
 
   <p class="body-text drop-cap reveal">
-    Você já reparou que algumas pessoas famosas têm um sinal próprio em Libras? Em vez de soletrar letra por letra, quem usa a língua de sinais pode identificar uma pessoa com um único gesto — visual, direto e carregado de sentido. Isso não é uma curiosidade superficial: é parte da gramática, da cultura e do cotidiano de quem usa a <strong>Língua Brasileira de Sinais</strong>.
+    Você já reparou que algumas pessoas famosas têm um sinal próprio em Libras? Em vez de soletrar letra por letra, quem usa a língua de sinais pode identificar uma pessoa com um único gesto, visual, direto e carregado de sentido. Isso não é uma curiosidade superficial: é parte da gramática, da cultura e do cotidiano de quem usa a <strong>Língua Brasileira de Sinais</strong>.
   </p>
 
   <p class="body-text reveal">
@@ -458,7 +460,7 @@
   <h2 class="section-label reveal">O que é um sinal pessoal em Libras</h2>
 
   <p class="body-text reveal">
-    Um <strong>sinal pessoal</strong> é um sinal usado para identificar uma pessoa dentro de uma conversa em Libras. Ele funciona como uma espécie de "nome visual" — uma referência que, uma vez estabelecida no grupo, permite citar aquela pessoa sem precisar recorrer à datilologia a cada vez.
+    Um <strong>sinal pessoal</strong> é um sinal usado para identificar uma pessoa dentro de uma conversa em Libras. Ele funciona como uma espécie de "nome visual", uma referência que, uma vez estabelecida no grupo, permite citar aquela pessoa sem precisar recorrer à datilologia a cada vez.
   </p>
 
   <p class="body-text reveal">
@@ -469,7 +471,7 @@
   <h2 class="section-label reveal">Por que sinais pessoais existem</h2>
 
   <p class="body-text reveal">
-    A Libras é uma língua <strong>visual e espacial</strong>. Ela não é uma versão gestualizada do português — tem gramática própria, estrutura própria e, como qualquer língua viva, cria recursos que tornam a comunicação mais eficiente. Em vez de depender sempre da soletração letra por letra, a língua favorece referências visuais memoráveis e socialmente compreensíveis.
+    A Libras é uma língua <strong>visual e espacial</strong>. Ela não é uma versão gestualizada do português, tem gramática própria, estrutura própria e, como qualquer língua viva, cria recursos que tornam a comunicação mais eficiente. Em vez de depender sempre da soletração letra por letra, a língua favorece referências visuais memoráveis e socialmente compreensíveis.
   </p>
 
   <div class="use-grid reveal">
@@ -497,14 +499,14 @@
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Ponto-chave</span>
-    <p>O sinal pessoal não encurta apenas um nome. Ele cria uma referência visual que faz sentido dentro de uma conversa — e isso é característico de como a Libras pensa e organiza a comunicação.</p>
+    <p>O sinal pessoal não encurta apenas um nome. Ele cria uma referência visual que faz sentido dentro de uma conversa, e isso é característico de como a Libras pensa e organiza a comunicação.</p>
   </div>
 
   <!-- Como um sinal pode ser criado -->
   <h2 class="section-label reveal">Como um sinal de pessoa pode ser criado</h2>
 
   <p class="body-text reveal">
-    Não existe uma regra única e universal. Os critérios variam conforme o contexto, o grupo, a relação com a pessoa e o uso social. O que costuma acontecer é que o sinal se apoia em alguma <strong>referência visual reconhecível</strong> — algo que o grupo identifica como característico daquela pessoa. Veja os caminhos mais comuns:
+    Não existe uma regra única e universal. Os critérios variam conforme o contexto, o grupo, a relação com a pessoa e o uso social. O que costuma acontecer é que o sinal se apoia em alguma <strong>referência visual reconhecível</strong>, algo que o grupo identifica como característico daquela pessoa. Veja os caminhos mais comuns:
   </p>
 
   <div class="process-steps reveal">
@@ -526,14 +528,14 @@
       <div class="step-num">03</div>
       <div class="step-body">
         <h4>Profissão ou papel social</h4>
-        <p>Artista, apresentador, professor, atleta, político, influenciador — o papel social pode ser o ponto de partida quando há um elemento visual associado a essa função.</p>
+        <p>Artista, apresentador, professor, atleta, político, influenciador, o papel social pode ser o ponto de partida quando há um elemento visual associado a essa função.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">04</div>
       <div class="step-body">
         <h4>Trajetória ou imagem pública</h4>
-        <p>Algo pelo qual a pessoa ficou conhecida socialmente — um movimento, um símbolo, uma cena marcante que se tornou referência visual associada a ela.</p>
+        <p>Algo pelo qual a pessoa ficou conhecida socialmente, um movimento, um símbolo, uma cena marcante que se tornou referência visual associada a ela.</p>
       </div>
     </div>
     <div class="step">
@@ -549,18 +551,18 @@
   <h2 class="section-label reveal">Quem pode dar um sinal para uma pessoa</h2>
 
   <p class="body-text reveal">
-    Em muitos contextos, o sinal pessoal surge dentro da comunidade surda ou em ambientes onde a Libras é usada de forma viva e cotidiana. <strong>Pessoas surdas têm protagonismo cultural nesse processo</strong> — não como guardiãs de uma regra burocrática, mas porque são elas que usam a língua no dia a dia e que naturalmente desenvolvem referências visuais para nomear o mundo à sua volta.
+    Em muitos contextos, o sinal pessoal surge dentro da comunidade surda ou em ambientes onde a Libras é usada de forma viva e cotidiana. <strong>Pessoas surdas têm protagonismo cultural nesse processo</strong>, não como guardiãs de uma regra burocrática, mas porque são elas que usam a língua no dia a dia e que naturalmente desenvolvem referências visuais para nomear o mundo à sua volta.
   </p>
 
   <p class="body-text reveal">
-    Estudantes ouvintes que estão aprendendo Libras devem evitar "batizar" pessoas de forma aleatória. Criar um sinal sem conhecimento linguístico e cultural pode gerar formas inadequadas, visualmente confusas ou desrespeitosas. Em aulas de Libras, professores podem atribuir sinais aos alunos como parte da convivência da turma — mas isso depende do contexto e da relação estabelecida.
+    Estudantes ouvintes que estão aprendendo Libras devem evitar "batizar" pessoas de forma aleatória. Criar um sinal sem conhecimento linguístico e cultural pode gerar formas inadequadas, visualmente confusas ou desrespeitosas. Em aulas de Libras, professores podem atribuir sinais aos alunos como parte da convivência da turma, mas isso depende do contexto e da relação estabelecida.
   </p>
 
   <div class="info-callout reveal">
     <div class="info-icon">🤚</div>
     <div class="info-content">
       <h4>Não é só inventar um gesto</h4>
-      <p>Um sinal pessoal precisa fazer sentido visualmente, ser compreensível no grupo e respeitar a pessoa representada. Contexto e convivência importam — muito mais do que qualquer regra formal.</p>
+      <p>Um sinal pessoal precisa fazer sentido visualmente, ser compreensível no grupo e respeitar a pessoa representada. Contexto e convivência importam, muito mais do que qualquer regra formal.</p>
     </div>
   </div>
 
@@ -572,7 +574,7 @@
   </p>
 
   <p class="body-text reveal">
-    Um exemplo que ilustra bem essa lógica: a cantora Beyoncé ficou mundialmente conhecida pela coreografia de <em>Single Ladies</em>, em que fazia movimentos com a mão mostrando que não havia anel. Esse gesto tão marcante tornou-se a base do sinal usado para identificá-la em Libras — não uma escolha arbitrária, mas uma referência visual que o grupo reconhece imediatamente.
+    Um exemplo que ilustra bem essa lógica: a cantora Beyoncé ficou mundialmente conhecida pela coreografia de <em>Single Ladies</em>, em que fazia movimentos com a mão mostrando que não havia anel. Esse gesto tão marcante tornou-se a base do sinal usado para identificá-la em Libras, não uma escolha arbitrária, mas uma referência visual que o grupo reconhece imediatamente.
   </p>
 
   <div class="video-showcase reveal">
@@ -585,7 +587,7 @@
   </div>
 
   <p class="body-text reveal">
-    Outro exemplo é o sinal do apresentador Luciano Huck. Quando a comunidade pensa nele, uma das primeiras referências visuais é o nariz — traço marcante que se tornou o ponto de partida do gesto usado para identificá-lo.
+    Outro exemplo é o sinal do apresentador Luciano Huck. Quando a comunidade pensa nele, uma das primeiras referências visuais é o nariz, traço marcante que se tornou o ponto de partida do gesto usado para identificá-lo.
   </p>
 
   <div class="video-showcase reveal">
@@ -598,11 +600,11 @@
   </div>
 
   <p class="body-text reveal">
-    Um exemplo mais próximo: o Joab, intérprete e tradutor do time Libras.se, recebeu seu sinal quando começou a se inserir na comunidade surda. Na época, usava um blackpower — penteado marcante que virou a base do seu sinal de identificação. Como ele mesmo conta: <em>"O sinal é meu nome, minha identidade. Mesmo mudando o penteado, sempre vou ser identificado por esse sinal."</em>
+    Um exemplo mais próximo: o Joab, intérprete e tradutor do time Libras.se, recebeu seu sinal quando começou a se inserir na comunidade surda. Na época, usava um blackpower, penteado marcante que virou a base do seu sinal de identificação. Como ele mesmo conta: <em>"O sinal é meu nome, minha identidade. Mesmo mudando o penteado, sempre vou ser identificado por esse sinal."</em>
   </p>
 
   <div class="video-showcase reveal">
-    <span class="video-tag">✋ Joab — time Libras.se</span>
+    <span class="video-tag">✋ Joab, time Libras.se</span>
     <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.avif">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.mp4" type="video/mp4">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.webm" type="video/webm">
@@ -616,11 +618,11 @@
   <h2 class="section-label reveal">O sinal pessoal é igual em todo o Brasil</h2>
 
   <p class="body-text reveal">
-    Nem sempre. A Libras tem <strong>variação regional, social e geracional</strong> — assim como acontece com qualquer língua viva. Uma mesma pessoa pode ser conhecida por sinais diferentes em grupos diferentes, dependendo de onde esses sinais se originaram e como se espalharam ao longo do tempo.
+    Nem sempre. A Libras tem <strong>variação regional, social e geracional</strong>, assim como acontece com qualquer língua viva. Uma mesma pessoa pode ser conhecida por sinais diferentes em grupos diferentes, dependendo de onde esses sinais se originaram e como se espalharam ao longo do tempo.
   </p>
 
   <p class="body-text reveal">
-    Sinais podem mudar com o tempo. A comunidade e o uso real influenciam a consolidação — um sinal que nasce em um grupo pode ou não se popularizar para outros contextos. Essa variação também aparece em outros aspectos da língua: já explicamos no blog que <a href="https://libras.se/blog/libras-tem-sotaque-e-giria/">Libras tem sotaque e gíria</a>, e os sinais pessoais fazem parte desse universo dinâmico.
+    Sinais podem mudar com o tempo. A comunidade e o uso real influenciam a consolidação, um sinal que nasce em um grupo pode ou não se popularizar para outros contextos. Essa variação também aparece em outros aspectos da língua: já explicamos no blog que <a href="https://libras.se/blog/libras-tem-sotaque-e-giria/">Libras tem sotaque e gíria</a>, e os sinais pessoais fazem parte desse universo dinâmico.
   </p>
 
   <!-- Identidade e respeito -->
@@ -631,7 +633,7 @@
   </p>
 
   <p class="body-text reveal">
-    Em contextos profissionais, educacionais ou institucionais, é importante respeitar a forma como a pessoa é apresentada e como a comunidade a reconhece. Um sinal que nasce de forma depreciativa não é neutro — ele carrega intenção, e isso importa.
+    Em contextos profissionais, educacionais ou institucionais, é importante respeitar a forma como a pessoa é apresentada e como a comunidade a reconhece. Um sinal que nasce de forma depreciativa não é neutro, ele carrega intenção, e isso importa.
   </p>
 
   <blockquote class="pull-quote reveal">
@@ -642,18 +644,18 @@
   <h2 class="section-label reveal">Posso escolher meu próprio sinal em Libras</h2>
 
   <p class="body-text reveal">
-    Você pode <em>sugerir</em>, mas isso não garante que o grupo vá usar. Um sinal pessoal ganha força no uso compartilhado — não é uma escolha individual, mas uma construção coletiva. Em aulas, o professor pode orientar o processo. Em relações com pessoas surdas, a convivência costuma ser mais importante do que a vontade individual.
+    Você pode <em>sugerir</em>, mas isso não garante que o grupo vá usar. Um sinal pessoal ganha força no uso compartilhado, não é uma escolha individual, mas uma construção coletiva. Em aulas, o professor pode orientar o processo. Em relações com pessoas surdas, a convivência costuma ser mais importante do que a vontade individual.
   </p>
 
   <p class="body-text reveal">
-    O ideal é aprender Libras com respeito, observar o uso real e pedir orientação a pessoas qualificadas. Querer ter um sinal pessoal é legítimo — mas reconhecer que ele nasce da relação com os outros é fundamental para entender como a língua funciona.
+    O ideal é aprender Libras com respeito, observar o uso real e pedir orientação a pessoas qualificadas. Querer ter um sinal pessoal é legítimo, mas reconhecer que ele nasce da relação com os outros é fundamental para entender como a língua funciona.
   </p>
 
   <!-- Como empresas devem lidar -->
   <h2 class="section-label reveal">Como empresas e criadores devem lidar</h2>
 
   <p class="body-text reveal">
-    Em vídeos institucionais, eventos, cursos e transmissões ao vivo, nomes de pessoas aparecem com frequência. A interpretação em Libras precisa lidar com nomes, cargos, marcas e figuras citadas — e quando há recorrência, sinais ou estratégias de referência visual podem tornar a comunicação muito mais fluida e natural para o público surdo.
+    Em vídeos institucionais, eventos, cursos e transmissões ao vivo, nomes de pessoas aparecem com frequência. A interpretação em Libras precisa lidar com nomes, cargos, marcas e figuras citadas, e quando há recorrência, sinais ou estratégias de referência visual podem tornar a comunicação muito mais fluida e natural para o público surdo.
   </p>
 
   <p class="body-text reveal">
@@ -666,7 +668,7 @@
   <h2 class="section-label reveal">Conclusão</h2>
 
   <p class="body-text reveal">
-    Sinais pessoais em Libras são parte viva da língua. Eles mostram que a Libras não é apenas uma tradução do português — ela tem <mark>cultura, visualidade, variação e formas próprias de nomear o mundo</mark>. Entender isso ajuda empresas, educadores, criadores e pessoas curiosas a se aproximar da Libras com mais respeito e menos ingenuidade.
+    Sinais pessoais em Libras são parte viva da língua. Eles mostram que a Libras não é apenas uma tradução do português, ela tem <mark>cultura, visualidade, variação e formas próprias de nomear o mundo</mark>. Entender isso ajuda empresas, educadores, criadores e pessoas curiosas a se aproximar da Libras com mais respeito e menos ingenuidade.
   </p>
 
   <p class="body-text reveal">
@@ -686,11 +688,11 @@
   <div class="references reveal">
     <h4>Referências</h4>
     <ol>
-      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais — Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a>.</li>
+      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais, Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a>.</li>
       <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei nº 10.436/2002. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener">planalto.gov.br</a>.</li>
       <li>QUADROS, Ronice Müller de; KARNOPP, Lodenir Becker. <em>Língua de Sinais Brasileira: Estudos Linguísticos.</em> Porto Alegre: Artmed, 2004.</li>
       <li>GESSER, Audrei. <em>Libras? Que língua é essa? Crenças e preconceitos em torno da língua de sinais e da realidade surda.</em> São Paulo: Parábola Editorial, 2009.</li>
-      <li>INES — Instituto Nacional de Educação de Surdos. <em>Recursos educativos sobre Libras e cultura surda.</em> Disponível em: <a href="https://www.ines.gov.br" target="_blank" rel="noopener">ines.gov.br</a>.</li>
+      <li>INES, Instituto Nacional de Educação de Surdos. <em>Recursos educativos sobre Libras e cultura surda.</em> Disponível em: <a href="https://www.ines.gov.br" target="_blank" rel="noopener">ines.gov.br</a>.</li>
     </ol>
   </div>
 
@@ -727,7 +729,7 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

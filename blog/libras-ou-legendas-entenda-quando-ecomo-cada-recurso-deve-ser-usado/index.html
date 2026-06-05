@@ -60,6 +60,11 @@
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -118,27 +123,27 @@
   @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
   .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mob.open{display:flex}
-  .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
   .mob a:hover{color:var(--teal-pale)}
   .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
   .mob-x:focus-visible{outline:2px solid var(--teal-light);border-radius:4px}
   #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 40px;transition:all .4s;display:flex;align-items:center;justify-content:space-between;gap:20px;backdrop-filter:blur(16px);background:rgba(240,250,250,.88);border-bottom:1px solid rgba(42,144,144,.12)}
   #nav.sc{padding:12px 40px;box-shadow:0 2px 20px rgba(30,110,110,.06)}
   .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-  .nlogo-txt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-  .nsub{font-family:'Bricolage Grotesque',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+  .nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
   .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-  .nlinks a{font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
   .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);border-radius:2px;transition:width .25s}
   .nlinks a:hover,.nlinks a[aria-current="page"]{color:#0e3538}
   .nlinks a:hover::after,.nlinks a[aria-current="page"]::after{width:100%}
-  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
+  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
   .ham:focus-visible{outline:2px solid var(--teal-light);border-radius:4px;outline-offset:4px}
   .nd{display:flex;align-items:center;gap:12px}
-  @media(max-width:768px){.nlinks,.nd .nav-cta{display:none}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
+  @media(max-width:768px){.nlinks,.nd .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
 
   /* ── HERO ── */
   .hero {
@@ -1011,20 +1016,17 @@
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="/blog/" aria-current="page" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
+  <a href="/blog/" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -1111,7 +1113,7 @@
     </div>
     <div class="stat-card">
       <span class="stat-number" id="stat3">2</span>
-      <span class="stat-desc">recursos que se complementam — Libras e legenda não competem</span>
+      <span class="stat-desc">recursos que se complementam, Libras e legenda não competem</span>
     </div>
   </div>
 
@@ -1126,8 +1128,8 @@
   <div class="law-callout reveal">
     <div class="law-icon">⚖️</div>
     <div class="law-content">
-      <h4>Lei nº 10.436/2002 — Libras é língua reconhecida</h4>
-      <p>A Lei de Libras reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. O Decreto nº 5.626/2005 reforça: pessoa surda é aquela que compreende e interage com o mundo por <strong>experiências visuais</strong>, manifestando sua cultura principalmente por meio de Libras. Isso significa que Libras não é adaptação do português — é uma língua independente. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
+      <h4>Lei nº 10.436/2002, Libras é língua reconhecida</h4>
+      <p>A Lei de Libras reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. O Decreto nº 5.626/2005 reforça: pessoa surda é aquela que compreende e interage com o mundo por <strong>experiências visuais</strong>, manifestando sua cultura principalmente por meio de Libras. Isso significa que Libras não é adaptação do português, é uma língua independente. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
     </div>
   </div>
 
@@ -1138,7 +1140,7 @@
 
   <p class="body-text reveal">Quando uma pessoa surda tem a Libras como primeira língua, a <strong>janela de Libras</strong> pode ser o caminho mais natural para compreender uma explicação, uma aula, uma palestra ou uma campanha. A informação chega por uma língua visual, com expressões faciais, movimento, ritmo, espaço e gramática próprios.</p>
 
-  <p class="body-text reveal">Reduzir Libras a "gestos do português" é um erro técnico e cultural. Libras tem estrutura, sintaxe e nuances que não existem em outras línguas. Por isso, a janela de Libras é essencial para pessoas surdas sinalizantes — e muito relevante em qualquer conteúdo que precise alcançar esse público.</p>
+  <p class="body-text reveal">Reduzir Libras a "gestos do português" é um erro técnico e cultural. Libras tem estrutura, sintaxe e nuances que não existem em outras línguas. Por isso, a janela de Libras é essencial para pessoas surdas sinalizantes, e muito relevante em qualquer conteúdo que precise alcançar esse público.</p>
 
   <div class="use-grid reveal">
     <div class="use-card">
@@ -1159,7 +1161,7 @@
     <div class="use-card">
       <div class="card-icon">🤝</div>
       <h3>Conteúdos para a comunidade surda</h3>
-      <p>Qualquer material voltado diretamente para pessoas surdas sinalizantes — informativos, orientações, comunicações internas — deve priorizar Libras como canal principal.</p>
+      <p>Qualquer material voltado diretamente para pessoas surdas sinalizantes, informativos, orientações, comunicações internas, deve priorizar Libras como canal principal.</p>
     </div>
   </div>
 
@@ -1172,11 +1174,11 @@
 
   <p class="body-text reveal">A <strong>legenda comum</strong> transforma a fala em texto sincronizado. É útil para pessoas surdas oralizadas, pessoas ensurdecidas, quem assiste sem som, quem acompanha termos técnicos e até quem está em ambiente barulhento. Mas a legenda comum geralmente registra apenas as falas.</p>
 
-  <p class="body-text reveal">Para acessibilidade plena de pessoas surdas e ensurdecidas, o recurso adequado é a <strong>LSE — Legenda para Surdos e Ensurdecidos</strong>. A LSE vai além do diálogo: ela indica quem está falando quando isso não é visualmente óbvio e registra sons importantes para a compreensão da cena.</p>
+  <p class="body-text reveal">Para acessibilidade plena de pessoas surdas e ensurdecidas, o recurso adequado é a <strong>LSE, Legenda para Surdos e Ensurdecidos</strong>. A LSE vai além do diálogo: ela indica quem está falando quando isso não é visualmente óbvio e registra sons importantes para a compreensão da cena.</p>
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Como a LSE funciona na prática</span>
-    <p>Em uma entrevista, saber quem fala evita confusão. Em um vídeo institucional, a música pode indicar tom emocional. Em uma aula, um alarme pode orientar uma ação. Por isso, a LSE inclui marcações como <strong>[música suave]</strong>, <strong>[aplausos]</strong>, <strong>[alarme]</strong>, <strong>[Joana fala]</strong> ou <strong>[risos]</strong> — elementos que a legenda comum simplesmente omite.</p>
+    <p>Em uma entrevista, saber quem fala evita confusão. Em um vídeo institucional, a música pode indicar tom emocional. Em uma aula, um alarme pode orientar uma ação. Por isso, a LSE inclui marcações como <strong>[música suave]</strong>, <strong>[aplausos]</strong>, <strong>[alarme]</strong>, <strong>[Joana fala]</strong> ou <strong>[risos]</strong>, elementos que a legenda comum simplesmente omite.</p>
   </div>
 
   <!-- LAW CALLOUT 2 - LBI -->
@@ -1184,7 +1186,7 @@
     <div class="law-icon">📋</div>
     <div class="law-content">
       <h4>Lei Brasileira de Inclusão (Lei nº 13.146/2015)</h4>
-      <p>A LBI define comunicação de forma ampla, incluindo Libras, visualização de textos, Braille, linguagem simples, dispositivos multimídia e tecnologias da informação e comunicação. Isso sustenta diretamente a ideia de que <strong>acessibilidade não é um recurso único</strong> — diferentes pessoas precisam de caminhos diferentes para acessar o mesmo conteúdo. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
+      <p>A LBI define comunicação de forma ampla, incluindo Libras, visualização de textos, Braille, linguagem simples, dispositivos multimídia e tecnologias da informação e comunicação. Isso sustenta diretamente a ideia de que <strong>acessibilidade não é um recurso único</strong>, diferentes pessoas precisam de caminhos diferentes para acessar o mesmo conteúdo. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
     </div>
   </div>
 
@@ -1270,7 +1272,7 @@
 
   <p class="body-text reveal">Em muitos projetos, a escolha mais responsável não é "Libras <em>ou</em> legenda", mas <strong>Libras <em>e</em> legenda</strong>. A Libras amplia o acesso para pessoas sinalizantes. A legenda amplia o acesso para quem usa o texto. Juntas, elas reduzem barreiras para públicos diferentes.</p>
 
-  <p class="body-text reveal">Vídeos de alto alcance, cursos, campanhas públicas, eventos e materiais institucionais se beneficiam dos dois recursos ao mesmo tempo. A WCAG 2.2 trata legendas e interpretação em língua de sinais como critérios distintos — não como substitutos.</p>
+  <p class="body-text reveal">Vídeos de alto alcance, cursos, campanhas públicas, eventos e materiais institucionais se beneficiam dos dois recursos ao mesmo tempo. A WCAG 2.2 trata legendas e interpretação em língua de sinais como critérios distintos, não como substitutos.</p>
 
   <blockquote class="pull-quote reveal">
     <p>Acessibilidade boa não força a pessoa a caber no recurso. <strong>Ela oferece caminhos diferentes</strong> para que cada pessoa acesse o conteúdo com autonomia.</p>
@@ -1294,7 +1296,7 @@
     </div>
     <div class="error-card">
       <span class="error-icon">❌</span>
-      <p><strong>"A janela de Libras pode ficar pequena."</strong> Uma janela pequena demais, mal posicionada ou sem contraste vira recurso simbólico — sem utilidade real para quem precisa.</p>
+      <p><strong>"A janela de Libras pode ficar pequena."</strong> Uma janela pequena demais, mal posicionada ou sem contraste vira recurso simbólico, sem utilidade real para quem precisa.</p>
     </div>
     <div class="error-card">
       <span class="error-icon">❌</span>
@@ -1338,7 +1340,7 @@
       <div class="step-num">03</div>
       <div class="step-body">
         <h4>Há informação sonora importante além da fala?</h4>
-        <p>Se o áudio carrega música, ruídos, alertas ou elementos que alteram o sentido, a LSE é necessária — não a legenda comum. Esses sons precisam ser descritos no texto.</p>
+        <p>Se o áudio carrega música, ruídos, alertas ou elementos que alteram o sentido, a LSE é necessária, não a legenda comum. Esses sons precisam ser descritos no texto.</p>
       </div>
     </div>
     <div class="step">
@@ -1362,7 +1364,7 @@
 
   <h2 class="section-label reveal">Fechamento</h2>
 
-  <p class="body-text reveal">Libras e legendas não competem. Elas se complementam. Quando a acessibilidade é bem planejada, cada pessoa encontra um caminho possível para acompanhar, compreender e participar. A decisão técnica deve começar no planejamento — não ser adicionada no fim da produção.</p>
+  <p class="body-text reveal">Libras e legendas não competem. Elas se complementam. Quando a acessibilidade é bem planejada, cada pessoa encontra um caminho possível para acompanhar, compreender e participar. A decisão técnica deve começar no planejamento, não ser adicionada no fim da produção.</p>
 
   <p class="body-text reveal">Quanto mais cedo o recurso for pensado, melhor o resultado: mais integrado, mais eficiente e mais honesto com as pessoas que precisam dele.</p>
 
@@ -1385,7 +1387,7 @@
       <li>W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2.</em> Disponível em: <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">w3.org</a></li>
       <li>IBGE. <em>Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
       <li>IBGE. <em>PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-algum-tipo-de-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
-      <li>ABNT NBR 15290. <em>Acessibilidade em comunicação na televisão</em> — escopo de consulta pública. Disponível em: <a href="https://www.normas.com.br/visualizar/abnt-nbr-nm/24743/abnt-nbr15290-acessibilidade-em-comunicacao-na-televisao" target="_blank" rel="noopener">normas.com.br</a></li>
+      <li>ABNT NBR 15290. <em>Acessibilidade em comunicação na televisão</em>, escopo de consulta pública. Disponível em: <a href="https://www.normas.com.br/visualizar/abnt-nbr-nm/24743/abnt-nbr15290-acessibilidade-em-comunicacao-na-televisao" target="_blank" rel="noopener">normas.com.br</a></li>
     </ol>
   </div>
 
@@ -1422,7 +1424,7 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

@@ -141,7 +141,7 @@ img{display:block;max-width:100%}
 @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
 .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:var(--blur-l);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
 .mob.open{display:flex}
-.mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
+.mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
 .mob a:hover{color:var(--tl)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
 .mob-x:focus-visible{outline:2px solid var(--teal);border-radius:4px}
@@ -149,10 +149,10 @@ img{display:block;max-width:100%}
 #nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-.nlogo-txt{font-family:'M',sans-serif;font-weight:1000;font-size:1.5rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-.nsub{font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p3);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:var(--rpill);padding:4px 10px;white-space:nowrap}
+.nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+.nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
 .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-.nlinks a{font-size:.78rem;font-weight:700;color:var(--txs);transition:color .2s;position:relative;padding-bottom:2px}
+.nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
 .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gb);border-radius:2px;transition:width .25s}
 .nlinks a:hover{color:var(--p1)}
 .nlinks a:hover::after{width:100%}
@@ -258,32 +258,29 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
   <a href="/blog/" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
   <a href="https://huet.libras.se/" class="btn bw" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+      <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
         <span class="nsub" aria-hidden="true">Blog</span>
       </a>
       <ul class="nlinks" role="list">
-        <li><a href="https://libras.se/proposito">Propósito</a></li>
-        <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
-        <li><a href="https://libras.se/solucoes">Soluções</a></li>
-        <li><a href="https://libras.se/portfolio">Portfólio</a></li>
-        <li><a href="/blog/" aria-current="page">Blog</a></li>
-      </ul>
+    <li><a href="https://libras.se/proposito">Propósito</a></li>
+    <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
+    <li><a href="https://libras.se/solucoes">Soluções</a></li>
+    <li><a href="https://libras.se/portfolio">Portfólio</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+  </ul>
       <a href="https://huet.libras.se/" class="btn bp nd" style="font-size:.8rem;padding:10px 20px">Enviar seu vídeo</a>
       <button class="ham" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobm">
         <span></span><span></span><span></span>
@@ -305,9 +302,9 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>Enquanto o público cantava e dançava ao som de sucessos como &quot;Amor de Fim de Noite&quot;, &quot;Lei do Retorno&quot; e &quot;Gratidão&quot;, os intérpretes mostravam um show inclusivo. Com isso, o público <a href="/glossario/surdo/">surdo</a> do festival conseguiu acompanhar de forma plena a apresentação - indo além da sensação da vibração dos sons.</p>
 <p>Veja os comentários da web:</p>
 <div class="pa-web-comments">
-<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">Esse interprete de libras ta mudando o show, papo reto mandaram muito com essa inclusao!<br><br>Obrigado Rock In Rio e Multishow<a href="https://twitter.com/hashtag/RockinRioNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#RockinRioNoMultishow</a> <a href="https://twitter.com/hashtag/PapatinhoEL7nnonNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#PapatinhoEL7nnonNoMultishow</a></p>&mdash; Buras (@buras1313) <a href="https://twitter.com/buras1313/status/1566141708060004352?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
-<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">fã de todos os intérpretes de libras do rock in rio para sempre <a href="https://twitter.com/hashtag/RockinRio2022?src=hash&amp;ref_src=twsrc%5Etfw">#RockinRio2022</a></p>&mdash; tt (@Lararirarah) <a href="https://twitter.com/Lararirarah/status/1566143883423145986?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
-<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">o intérprete de libras mandando muito<br>eh sobre isso <a href="https://twitter.com/hashtag/RockInRio?src=hash&amp;ref_src=twsrc%5Etfw">#RockInRio</a> <a href="https://twitter.com/hashtag/PapatinhoEL7nnonNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#PapatinhoEL7nnonNoMultishow</a></p>&mdash; vίτσг (@vitormatheuzzz) <a href="https://twitter.com/vitormatheuzzz/status/1566140760487084033?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">Esse interprete de libras ta mudando o show, papo reto mandaram muito com essa inclusao!<br><br>Obrigado Rock In Rio e Multishow<a href="https://twitter.com/hashtag/RockinRioNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#RockinRioNoMultishow</a> <a href="https://twitter.com/hashtag/PapatinhoEL7nnonNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#PapatinhoEL7nnonNoMultishow</a></p>Buras (@buras1313) <a href="https://twitter.com/buras1313/status/1566141708060004352?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">fã de todos os intérpretes de libras do rock in rio para sempre <a href="https://twitter.com/hashtag/RockinRio2022?src=hash&amp;ref_src=twsrc%5Etfw">#RockinRio2022</a></p>tt (@Lararirarah) <a href="https://twitter.com/Lararirarah/status/1566143883423145986?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="pt" dir="ltr">o intérprete de libras mandando muito<br>eh sobre isso <a href="https://twitter.com/hashtag/RockInRio?src=hash&amp;ref_src=twsrc%5Etfw">#RockInRio</a> <a href="https://twitter.com/hashtag/PapatinhoEL7nnonNoMultishow?src=hash&amp;ref_src=twsrc%5Etfw">#PapatinhoEL7nnonNoMultishow</a></p>vίτσг (@vitormatheuzzz) <a href="https://twitter.com/vitormatheuzzz/status/1566140760487084033?ref_src=twsrc%5Etfw">September 3, 2022</a></blockquote>
 </div>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Equipe LIBRAS-SE, com <a href="https://multishow.globo.com/especiais/rock-in-rio/noticia/show-inclusivo-apresentacao-de-papatinho-e-l7nnon-conta-com-interpretes-de-libras.ghtml" target="_blank" rel="noopener noreferrer">g1</a></p>
@@ -353,7 +350,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
   <div class="w">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se">

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-gen_brazil_map.py — Gera brazil-map.svg para o site Libras.se.
+gen_brazil_map.py, Gera brazil-map.svg para o site Libras.se.
 
 Sistema de coordenadas garantido:
   • O bounding box é calculado dos dados reais do IBGE (não fixo).
@@ -15,7 +15,7 @@ CSS obrigatório no site:
   .pin        { position:absolute; left:var(--x); top:var(--y);
                 transform:translate(-50%,-50%); pointer-events:auto; }
 
-NUNCA use object-fit:fill — distorce o mapa e quebra o alinhamento dos pins.
+NUNCA use object-fit:fill, distorce o mapa e quebra o alinhamento dos pins.
 """
 
 import gzip
@@ -94,7 +94,7 @@ def make_projector(lon_min, lon_max, lat_min, lat_max):
     """
     Retorna project(lon, lat) → (x, y) em coordenadas do SVG.
     PAD garante margem visual sem crop.
-    A MESMA função é usada para paths e pins — coordenadas sempre alinhadas.
+    A MESMA função é usada para paths e pins, coordenadas sempre alinhadas.
     """
     inner_w = SVG_W - 2 * PAD
     inner_h = SVG_H - 2 * PAD
@@ -166,7 +166,7 @@ def fetch_geojson():
                 raw = resp.read()
                 if resp.headers.get("Content-Encoding") == "gzip" or raw[:2] == b"\x1f\x8b":
                     raw = gzip.decompress(raw)
-                print(f"  OK — {len(raw):,} bytes", file=sys.stderr)
+                print(f"  OK, {len(raw):,} bytes", file=sys.stderr)
                 return json.loads(raw.decode("utf-8"))
         except Exception as exc:
             print(f"  FALHOU: {exc}", file=sys.stderr)
@@ -175,7 +175,7 @@ def fetch_geojson():
 
 # ── Build SVG ─────────────────────────────────────────────────────────────────
 def build_svg(geojson, project, eps=0.5):
-    # SVG decorativo — aria-hidden="true", sem role="img" (contradição de acessibilidade)
+    # SVG decorativo, aria-hidden="true", sem role="img" (contradição de acessibilidade)
     defs = (
         '<defs>'
         '<linearGradient id="mapGrad" x1="0" y1="0" x2="0" y2="1">'
@@ -209,7 +209,7 @@ def build_svg(geojson, project, eps=0.5):
 # ── Pin positions ─────────────────────────────────────────────────────────────
 def compute_pins(project):
     """
-    Usa a MESMA project() dos paths — alinhamento perfeito garantido.
+    Usa a MESMA project() dos paths, alinhamento perfeito garantido.
     Percentuais relativos ao viewBox completo (inclui PAD).
     """
     pins = []
@@ -267,7 +267,7 @@ def main():
     print(f"Tamanho: {size_kb:.1f} KB ({size_b:,} bytes)", file=sys.stderr)
 
     if size_kb > 200:
-        print(f"AVISO: {size_kb:.0f} KB > 200 KB — reduzindo com epsilon maior…", file=sys.stderr)
+        print(f"AVISO: {size_kb:.0f} KB > 200 KB, reduzindo com epsilon maior…", file=sys.stderr)
         for eps in [1.0, 1.5, 2.0, 3.0]:
             svg = build_svg(geojson, project, eps)
             with open(OUT_PATH, "w", encoding="utf-8") as f:
@@ -276,7 +276,7 @@ def main():
             size_kb = size_b / 1024
             print(f"  epsilon={eps}: {size_kb:.1f} KB", file=sys.stderr)
             if size_kb <= 200:
-                print(f"  OK — cabe com epsilon={eps}", file=sys.stderr)
+                print(f"  OK, cabe com epsilon={eps}", file=sys.stderr)
                 break
         else:
             print("ERRO: não conseguiu reduzir abaixo de 200 KB", file=sys.stderr)
@@ -294,7 +294,7 @@ def main():
     print(f"  tamanho      : {size_kb:.1f} KB")
     print()
     print("  ✓ Use object-fit:contain no .map-img-el")
-    print("  ✗ NUNCA use object-fit:fill — distorce o mapa e quebra os pins")
+    print("  ✗ NUNCA use object-fit:fill, distorce o mapa e quebra os pins")
 
 
 if __name__ == "__main__":

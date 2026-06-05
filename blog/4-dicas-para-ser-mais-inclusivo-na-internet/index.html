@@ -41,6 +41,11 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que é audiodescrição?","acceptedAnswer":{"@type":"Answer","text":"É a tradução do conteúdo visual em palavras, permitindo que pessoas cegas ou com baixa visão acompanhem imagens, vídeos e cenas."}},{"@type":"Question","name":"Texto alternativo e legenda são a mesma coisa?","acceptedAnswer":{"@type":"Answer","text":"Não. O texto alternativo descreve imagens para leitores de tela (público com deficiência visual); a legenda transcreve o áudio de vídeos (público surdo ou ensurdecido que lê português)."}},{"@type":"Question","name":"Legenda substitui a janela de Libras?","acceptedAnswer":{"@type":"Answer","text":"Não. A legenda atende quem domina o português; a janela de Libras é necessária para quem é alfabetizado em língua de sinais."}}]}
 </script>
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -77,7 +82,7 @@ ul,ol{margin:0;padding:0}
 @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
 .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
 .mob.open{display:flex}
-.mob a{font-family:var(--bf);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s}
+.mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
 .mob a:hover{color:var(--teal-pale)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
 #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 0;transition:all .4s;background:rgba(248,253,253,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,144,144,.1)}
@@ -85,18 +90,18 @@ ul,ol{margin:0;padding:0}
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .nlogo{display:flex;align-items:center;gap:10px}
-.nlogo-txt{font-family:var(--bf);font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-.nsub{font-family:var(--bf);font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px}
+.nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+.nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
 .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-.nlinks a{font-family:var(--bf);font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px}
+.nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
 .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);transition:width .25s}
 .nlinks a:hover{color:var(--p1)}.nlinks a:hover::after{width:100%}
 .nlinks a[aria-current="page"]{color:var(--p1)}.nlinks a[aria-current="page"]::after{width:100%}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:var(--bf);font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;transition:all .3s}
+.nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
 .nav-cta:hover{transform:translateY(-2px)}
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
 .ham span{display:block;width:21px;height:1.5px;background:var(--p1);border-radius:2px}
-@media(max-width:768px){.nlinks,.nav-cta{display:none}.ham{display:flex}.w{padding:0 22px}}
+@media(max-width:768px){.nlinks,.nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}.w{padding:0 22px}}
 /* HERO */
 .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:120px 0 0}
 .hero-bg{position:absolute;inset:0;z-index:0}
@@ -274,31 +279,28 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <span>WhatsApp</span>
 </a>
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
   <a href="/blog/" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
-  <a href="https://huet.libras.se/" class="btn bw" onclick="cm()">Enviar seu vídeo</a>
+  <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+      <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
         <span class="nsub" aria-hidden="true">Blog</span>
       </a>
       <ul class="nlinks" role="list">
-        <li><a href="https://libras.se/proposito">Propósito</a></li>
-        <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
-        <li><a href="https://libras.se/solucoes">Soluções</a></li>
-        <li><a href="https://libras.se/portfolio">Portfólio</a></li>
-        <li><a href="/blog/" aria-current="page">Blog</a></li>
-      </ul>
+    <li><a href="https://libras.se/proposito">Propósito</a></li>
+    <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
+    <li><a href="https://libras.se/solucoes">Soluções</a></li>
+    <li><a href="https://libras.se/portfolio">Portfólio</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+  </ul>
       <a href="https://huet.libras.se/" class="nav-cta">Enviar seu vídeo</a>
       <button class="ham" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobm">
         <span></span><span></span><span></span>
@@ -324,7 +326,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     <h1 class="hero-title">4 dicas para ser <em>mais inclusivo</em> na internet</h1>
     <p class="hero-subtitle">Cerca de 20% da população brasileira tem algum tipo de deficiência. Navegar deveria ser para todos, e quatro práticas simples já tornam seu conteúdo muito mais acessível.</p>
     <div class="hero-meta">
-      <span class="meta-badge">Por Jéssica Rodrigues</span>
+      <span class="meta-badge">Por <a href="/autora/jessica-rodrigues/">Jéssica Rodrigues</a></span>
       <span class="meta-badge">14 de abril de 2021</span>
       <span class="meta-badge">3 min de leitura</span>
     </div>
@@ -390,7 +392,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
       <span class="rel-b"><span class="rel-t">Por que incluir janela de Libras em vídeos?</span></span>
     </a>
     <a class="rel" href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/">
-      <span class="rel-thumb"><img src="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.jpg" alt="Erros ao inserir Libras" loading="lazy" decoding="async" width="1200" height="675"></span>
+      <span class="rel-thumb"><img src="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.jpg" alt="Erros ao inserir Libras" loading="lazy" decoding="async" width="925" height="520"></span>
       <span class="rel-b"><span class="rel-t">4 erros comuns ao inserir Libras em vídeos</span></span>
     </a>
     <a class="rel" href="/blog/o-que-e-capacitismo/">
@@ -404,7 +406,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <div class="w">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

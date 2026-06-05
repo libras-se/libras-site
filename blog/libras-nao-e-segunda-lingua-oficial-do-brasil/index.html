@@ -59,6 +59,11 @@
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:300 800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400 500;font-display:swap;src:url('/assets/fonts/lora-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -113,25 +118,25 @@
   @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
   .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mob.open{display:flex}
-  .mob a{font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
   .mob a:hover{color:var(--teal-pale)}
   .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
   #nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:18px 40px;transition:all .4s;display:flex;align-items:center;justify-content:space-between;gap:20px;backdrop-filter:blur(16px);background:rgba(240,250,250,.88);border-bottom:1px solid rgba(42,144,144,.12)}
   #nav.sc{padding:12px 40px;box-shadow:0 2px 20px rgba(30,110,110,.06)}
   .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-  .nlogo-txt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-  .nsub{font-family:'Bricolage Grotesque',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+  .nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
   .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-  .nlinks a{font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif}
+  .nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
   .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:linear-gradient(130deg,#1aa8b0,#81e6d9);border-radius:2px;transition:width .25s}
   .nlinks a:hover,.nlinks a[aria-current="page"]{color:#0e3538}.nlinks a:hover::after,.nlinks a[aria-current="page"]::after{width:100%}
   .nav-tag-pill{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);background:var(--grey-light);padding:5px 12px;border-radius:20px}
   .nd{display:flex;align-items:center;gap:12px}
-  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
+  .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
-  @media(max-width:768px){.nlinks,.nd .nav-cta{display:none}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
+  @media(max-width:768px){.nlinks,.nd .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
 
   /* HERO */
   .hero {
@@ -364,20 +369,17 @@
 </a>
 
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="mob-x" id="mobx" aria-label="Fechar menu">✕</button>
+  <button class="mob-x" id="mobx" aria-label="Fechar menu">&#x2715;</button>
   <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
   <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="/blog/" aria-current="page" onclick="cm()">Blog</a>
-  <a href="/jogo/" onclick="cm()">Jogo</a>
-  <a href="/sinal/" onclick="cm()">Vocabulário</a>
-  <a href="/glossario/" onclick="cm()">Glossário</a>
+  <a href="/blog/" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
 <nav id="nav" aria-label="Navegação principal">
-  <a href="/" class="nlogo" aria-label="Libras.se — Página inicial">
+  <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
     <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
     <span class="nsub" aria-hidden="true">Blog</span>
   </a>
@@ -449,10 +451,10 @@
   <div class="reveal">
     <h2 class="section-label">Uma frase bem-intencionada, mas imprecisa</h2>
     <p class="body-text drop-cap">
-      Você provavelmente já leu ou ouviu: "a <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> é a segunda língua oficial do Brasil." Ela aparece em cursos, eventos, publicações e até em materiais institucionais. Quase sempre, a intenção é boa — valorizar a Língua Brasileira de Sinais e reconhecer sua importância para a <a href="https://libras.se/glossario/comunidade-surda/" class="gloss">comunidade surda</a>. Mas do ponto de vista legal, a frase não está correta.
+      Você provavelmente já leu ou ouviu: "a <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> é a segunda língua oficial do Brasil." Ela aparece em cursos, eventos, publicações e até em materiais institucionais. Quase sempre, a intenção é boa, valorizar a Língua Brasileira de Sinais e reconhecer sua importância para a <a href="https://libras.se/glossario/comunidade-surda/" class="gloss">comunidade surda</a>. Mas do ponto de vista legal, a frase não está correta.
     </p>
     <p class="body-text">
-      Isso não diminui a Libras em nada. Ela é uma língua completa, com gramática própria, valor cultural e papel direto no acesso a direitos. O que muda é a forma de descrever esse reconhecimento. E essa diferença importa — tanto para quem escreve sobre Libras quanto para quem planeja acessibilidade na prática.
+      Isso não diminui a Libras em nada. Ela é uma língua completa, com gramática própria, valor cultural e papel direto no acesso a direitos. O que muda é a forma de descrever esse reconhecimento. E essa diferença importa, tanto para quem escreve sobre Libras quanto para quem planeja acessibilidade na prática.
     </p>
   </div>
 
@@ -460,7 +462,7 @@
   <div class="reveal">
     <h2 class="section-label">O que é idioma oficial do Brasil</h2>
     <p class="body-text">
-      A Constituição Federal define, no artigo 13, que a língua portuguesa é o idioma oficial da República Federativa do Brasil. Esse é o único idioma com esse status no plano constitucional nacional. A Libras tem um reconhecimento diferente — importante e legítimo, mas diferente.
+      A Constituição Federal define, no artigo 13, que a língua portuguesa é o idioma oficial da República Federativa do Brasil. Esse é o único idioma com esse status no plano constitucional nacional. A Libras tem um reconhecimento diferente, importante e legítimo, mas diferente.
     </p>
   </div>
 
@@ -468,7 +470,7 @@
     <div class="law-icon">🏛️</div>
     <div class="law-content">
       <h4>Constituição Federal, art. 13</h4>
-      <p>A língua portuguesa é o idioma oficial da República Federativa do Brasil. Nenhuma outra língua — incluindo a Libras — é declarada idioma oficial nacional pela Constituição. Isso não é uma ausência de reconhecimento da Libras. É simplesmente o que o texto constitucional diz sobre idioma oficial do país.</p>
+      <p>A língua portuguesa é o idioma oficial da República Federativa do Brasil. Nenhuma outra língua, incluindo a Libras, é declarada idioma oficial nacional pela Constituição. Isso não é uma ausência de reconhecimento da Libras. É simplesmente o que o texto constitucional diz sobre idioma oficial do país.</p>
     </div>
   </div>
 
@@ -479,22 +481,22 @@
       A <a href="https://libras.se/glossario/lei-10436/" class="gloss">Lei nº 10.436/2002</a> reconhece a Língua Brasileira de Sinais como <strong>meio legal de comunicação e expressão</strong>. A lei também descreve a Libras como sistema linguístico de natureza visual-motora, com estrutura gramatical própria.
     </p>
     <p class="body-text">
-      Isso é muito relevante: confirma que <mark>Libras é língua</mark> — não mímica, não gesto solto, não versão gestual do português. Ela tem gramática própria, usa o espaço, o corpo e as expressões faciais para construir sentido, e é a língua de muitas pessoas surdas brasileiras. Mas reconhecer a Libras como meio legal de comunicação e expressão não é o mesmo que declará-la idioma oficial do país.
+      Isso é muito relevante: confirma que <mark>Libras é língua</mark>, não mímica, não gesto solto, não versão gestual do português. Ela tem gramática própria, usa o espaço, o corpo e as expressões faciais para construir sentido, e é a língua de muitas pessoas surdas brasileiras. Mas reconhecer a Libras como meio legal de comunicação e expressão não é o mesmo que declará-la idioma oficial do país.
     </p>
   </div>
 
   <div class="law-callout reveal">
     <div class="law-icon">⚖️</div>
     <div class="law-content">
-      <h4>Lei nº 10.436/2002 — o que a lei diz</h4>
-      <p>A lei reconhece a <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. Não há, no texto legal, nenhuma referência a "segunda língua oficial do Brasil". O reconhecimento existe e é importante — mas tem uma descrição específica e precisa.</p>
+      <h4>Lei nº 10.436/2002, o que a lei diz</h4>
+      <p>A lei reconhece a <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. Não há, no texto legal, nenhuma referência a "segunda língua oficial do Brasil". O reconhecimento existe e é importante, mas tem uma descrição específica e precisa.</p>
     </div>
   </div>
 
   <div class="highlight-box reveal">
     <span class="highlight-label">Distinção importante</span>
     <p>
-      "Reconhecida por lei" e "idioma oficial" não são sinônimos. A Libras foi reconhecida oficialmente por uma lei federal — e isso tem peso jurídico real. Mas idioma oficial do Brasil, no sentido constitucional, é a língua portuguesa. Usar "oficial" como atalho para "reconhecida" é o que gera a confusão.
+      "Reconhecida por lei" e "idioma oficial" não são sinônimos. A Libras foi reconhecida oficialmente por uma lei federal, e isso tem peso jurídico real. Mas idioma oficial do Brasil, no sentido constitucional, é a língua portuguesa. Usar "oficial" como atalho para "reconhecida" é o que gera a confusão.
     </p>
   </div>
 
@@ -510,17 +512,17 @@
     <div class="use-card">
       <div class="card-icon">🗣️</div>
       <h3>Uso popular de "oficial"</h3>
-      <p>Muita gente usa "oficializada" como sinônimo de "reconhecida por lei". A Libras foi, sim, reconhecida oficialmente. Mas no vocabulário jurídico, idioma oficial tem sentido mais restrito — e é o que a Constituição reserva ao português.</p>
+      <p>Muita gente usa "oficializada" como sinônimo de "reconhecida por lei". A Libras foi, sim, reconhecida oficialmente. Mas no vocabulário jurídico, idioma oficial tem sentido mais restrito, e é o que a Constituição reserva ao português.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">📢</div>
       <h3>Materiais que simplificam</h3>
-      <p>Campanhas de divulgação e materiais institucionais às vezes comprimem a informação em uma frase curta e acabam imprecisas. A intenção é valorizar a Libras — o efeito colateral é um dado incorreto circulando com aparência de fato.</p>
+      <p>Campanhas de divulgação e materiais institucionais às vezes comprimem a informação em uma frase curta e acabam imprecisas. A intenção é valorizar a Libras, o efeito colateral é um dado incorreto circulando com aparência de fato.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">🎓</div>
       <h3>Educação bilíngue de surdos</h3>
-      <p>Na legislação sobre educação bilíngue, aparece o conceito de "português escrito como segunda língua para surdos". Essa é uma referência educacional e linguística — não uma declaração de idioma oficial nacional.</p>
+      <p>Na legislação sobre educação bilíngue, aparece o conceito de "português escrito como segunda língua para surdos". Essa é uma referência educacional e linguística, não uma declaração de idioma oficial nacional.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">🔁</div>
@@ -539,15 +541,15 @@
       A Lei nº 14.191/2021 define a educação bilíngue de surdos como modalidade educacional oferecida <em>em Libras, como primeira língua, e em português escrito, como segunda língua</em>, para estudantes surdos que optam por essa modalidade. O <a href="https://libras.se/glossario/decreto-5626/" class="gloss">Decreto nº 5.626/2005</a> também aborda o ensino de Libras e da modalidade escrita do português como segunda língua para alunos surdos.
     </p>
     <p class="body-text">
-      Esse é um conceito linguístico e pedagógico — aplicado a sujeitos específicos, em contextos educacionais específicos. Não transforma a Libras em segunda língua oficial do país. São planos diferentes: o do reconhecimento linguístico na educação e o do idioma oficial nacional.
+      Esse é um conceito linguístico e pedagógico, aplicado a sujeitos específicos, em contextos educacionais específicos. Não transforma a Libras em segunda língua oficial do país. São planos diferentes: o do reconhecimento linguístico na educação e o do idioma oficial nacional.
     </p>
   </div>
 
   <div class="law-callout reveal">
     <div class="law-icon">📚</div>
     <div class="law-content">
-      <h4>Lei nº 14.191/2021 — Educação bilíngue de surdos</h4>
-      <p>A lei define a modalidade como educação escolar em <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> como primeira língua e em português escrito como segunda língua, para educandos optantes. Esse é um direito educacional importante — mas a expressão "segunda língua" aqui se refere à organização pedagógica de um grupo específico, não à definição de idioma oficial da República.</p>
+      <h4>Lei nº 14.191/2021, Educação bilíngue de surdos</h4>
+      <p>A lei define a modalidade como educação escolar em <a href="https://libras.se/glossario/libras/" class="gloss">Libras</a> como primeira língua e em português escrito como segunda língua, para educandos optantes. Esse é um direito educacional importante, mas a expressão "segunda língua" aqui se refere à organização pedagógica de um grupo específico, não à definição de idioma oficial da República.</p>
     </div>
   </div>
 
@@ -558,10 +560,10 @@
       Este é o ponto mais importante do texto: corrigir a frase não é atacar a Libras. É o contrário.
     </p>
     <p class="body-text">
-      A importância da Libras não depende de uma frase imprecisa. Ela é uma língua usada por comunidades surdas brasileiras, com gramática própria, valor cultural, função educacional e papel direto no acesso a direitos. O <a href="https://libras.se/glossario/bilinguismo/" class="gloss">bilinguismo</a> de pessoas surdas — com Libras e português — é uma realidade linguística reconhecida e apoiada por lei. Isso não precisa ser distorcido para ter peso.
+      A importância da Libras não depende de uma frase imprecisa. Ela é uma língua usada por comunidades surdas brasileiras, com gramática própria, valor cultural, função educacional e papel direto no acesso a direitos. O <a href="https://libras.se/glossario/bilinguismo/" class="gloss">bilinguismo</a> de pessoas surdas, com Libras e português, é uma realidade linguística reconhecida e apoiada por lei. Isso não precisa ser distorcido para ter peso.
     </p>
     <p class="body-text">
-      Usar a frase certa não diminui o reconhecimento da Libras. Pelo contrário — mostra que quem escreve sobre o tema o trata com seriedade.
+      Usar a frase certa não diminui o reconhecimento da Libras. Pelo contrário, mostra que quem escreve sobre o tema o trata com seriedade.
     </p>
   </div>
 
@@ -575,7 +577,7 @@
   <div class="reveal">
     <h2 class="section-label">Como escrever melhor</h2>
     <p class="body-text">
-      Há formas mais precisas — e igualmente valorizadoras — de falar sobre a Libras em textos institucionais, materiais educativos e comunicações públicas:
+      Há formas mais precisas, e igualmente valorizadoras, de falar sobre a Libras em textos institucionais, materiais educativos e comunicações públicas:
     </p>
   </div>
 
@@ -602,13 +604,13 @@
   <div class="reveal">
     <h2 class="section-label">Por que a precisão importa em acessibilidade</h2>
     <p class="body-text">
-      Quando um material diz apenas que a Libras é "segunda língua oficial", ele pode parecer inclusivo — e continuar sem oferecer <a href="https://libras.se/glossario/interpretacao-simultanea/" class="gloss">intérprete</a>, <a href="https://libras.se/glossario/janela-de-libras/" class="gloss">janela de Libras</a>, atendimento acessível, legenda, transcrição ou profissionais qualificados. Uma frase bem-intencionada não substitui escolhas concretas.
+      Quando um material diz apenas que a Libras é "segunda língua oficial", ele pode parecer inclusivo, e continuar sem oferecer <a href="https://libras.se/glossario/interpretacao-simultanea/" class="gloss">intérprete</a>, <a href="https://libras.se/glossario/janela-de-libras/" class="gloss">janela de Libras</a>, atendimento acessível, legenda, transcrição ou profissionais qualificados. Uma frase bem-intencionada não substitui escolhas concretas.
     </p>
     <p class="body-text">
       Usar termos corretos ajuda empresas, escolas, eventos e órgãos públicos a planejar melhor. Quem entende que Libras é uma língua com usuários reais e necessidades específicas tende a pensar em recursos concretos. Quem para na frase bonita, não.
     </p>
     <p class="body-text">
-      A <a href="https://libras.se/glossario/lbi/" class="gloss">LBI</a> — Lei Brasileira de Inclusão — define acessibilidade como condição para acesso com segurança e autonomia, reconhecendo a comunicação em sentido amplo: Libras, visualização de textos, dispositivos multimídia e tecnologias da informação. Precisão terminológica e acessibilidade concreta andam juntas.
+      A <a href="https://libras.se/glossario/lbi/" class="gloss">LBI</a>, Lei Brasileira de Inclusão, define acessibilidade como condição para acesso com segurança e autonomia, reconhecendo a comunicação em sentido amplo: Libras, visualização de textos, dispositivos multimídia e tecnologias da informação. Precisão terminológica e acessibilidade concreta andam juntas.
     </p>
   </div>
 
@@ -627,14 +629,14 @@
       <div class="step-num">01</div>
       <div class="step-body">
         <h4>O texto chama Libras de língua, não de linguagem?</h4>
-        <p>Libras é língua — com gramática, estrutura e comunidade de falantes. Chamar de "linguagem" é uma imprecisão que diminui seu estatuto linguístico.</p>
+        <p>Libras é língua, com gramática, estrutura e comunidade de falantes. Chamar de "linguagem" é uma imprecisão que diminui seu estatuto linguístico.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-body">
         <h4>Evita a expressão "surdo-mudo"?</h4>
-        <p>A expressão está errada e é considerada ofensiva pela comunidade surda. Pessoas surdas não são mudas — muitas usam voz. O correto é "pessoa surda" ou "surdo".</p>
+        <p>A expressão está errada e é considerada ofensiva pela comunidade surda. Pessoas surdas não são mudas, muitas usam voz. O correto é "pessoa surda" ou "surdo".</p>
       </div>
     </div>
     <div class="step">
@@ -673,10 +675,10 @@
   <div class="reveal">
     <h2 class="section-label">Corrigir é uma forma de respeitar</h2>
     <p class="body-text">
-      A pergunta não é se a Libras merece importância. Ela merece — e tem. A questão é falar sobre essa importância com responsabilidade. A Libras não precisa de uma frase juridicamente imprecisa para ser reconhecida como língua, como direito e como instrumento de acesso.
+      A pergunta não é se a Libras merece importância. Ela merece, e tem. A questão é falar sobre essa importância com responsabilidade. A Libras não precisa de uma frase juridicamente imprecisa para ser reconhecida como língua, como direito e como instrumento de acesso.
     </p>
     <p class="body-text">
-      Quando um material, uma campanha ou uma apresentação corrige a frase e usa as palavras certas, ela demonstra que trata o tema com seriedade — e que vai além da aparência de inclusão.
+      Quando um material, uma campanha ou uma apresentação corrige a frase e usa as palavras certas, ela demonstra que trata o tema com seriedade, e que vai além da aparência de inclusão.
     </p>
   </div>
 
@@ -735,7 +737,7 @@
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="/" class="ft-logo" aria-label="Libras.se — Voltar ao topo">LIBRAS.SE</a>
+        <a href="/" class="ft-logo" aria-label="Libras.se, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
         <div class="ft-socs" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Libras.se"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>

@@ -55,7 +55,7 @@ function magick(inFile, outFile) {
 
 function altText(p) {
   const title = [p.lead, p.accent, p.tail].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
-  return `Libras.se — ${p.eyebrow}: ${title}`;
+  return `Libras.se, ${p.eyebrow}: ${title}`;
 }
 
 /** Substitui o content="" de uma meta tag (property OU name) sem duplicar. */

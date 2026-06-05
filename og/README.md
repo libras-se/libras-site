@@ -1,4 +1,4 @@
-# Sistema de imagens sociais (OG) — Libras.se
+# Sistema de imagens sociais (OG), Libras.se
 
 Sistema replicável que gera as imagens de compartilhamento (WhatsApp, LinkedIn,
 Facebook, X) de cada página a partir de **um único template** e de um
@@ -16,8 +16,8 @@ comando e o sistema produz imagens visualmente coerentes entre si.
   degradê vivo mas elegante, poucos elementos.
 - **Sempre fundo claro** (`theme: "light"`). O degradê do título usa um teal mais
   profundo (`#0b8088 → #2bb8bd`) para nunca sumir no fundo claro.
-- Título com `text-wrap: balance` — as linhas se equilibram sozinhas, sem deixar
-  a primeira linha longa demais. **Sem travessões (—)** nos textos.
+- Título com `text-wrap: balance`, as linhas se equilibram sozinhas, sem deixar
+  a primeira linha longa demais. **Sem travessões (travessão)** nos textos.
 - O template ainda traz uma variação `deep` (fundo escuro) caso precise no futuro,
   mas hoje o padrão é tudo claro.
 - Tipografia Museo Sans Rounded (mesmos arquivos `assets/fonts/`) e tokens de
@@ -57,14 +57,14 @@ Saída: `assets/img/og/<slug>.webp` (≈20–40 KB cada).
    ```
 
    O título exibido é `lead` + `accent` (em degradê) + `tail`. Mantenha-o curto
-   — o template reduz a fonte automaticamente (74→64→56px) se passar de 3 linhas,
+  , o template reduz a fonte automaticamente (74→64→56px) se passar de 3 linhas,
    mas títulos enxutos ficam mais legíveis na miniatura.
 
 2. `npm run og -- --only=minha-pagina`
 
 A injeção só **substitui** o `content=""` de meta tags que já existem
 (`og:image`, `og:image:alt/width/height/type/secure_url`, `twitter:image`,
-`twitter:image:alt`). Não cria tags do zero — garanta que a página tenha pelo
+`twitter:image:alt`). Não cria tags do zero, garanta que a página tenha pelo
 menos `og:image` e `twitter:image`.
 
 ## Arquivos

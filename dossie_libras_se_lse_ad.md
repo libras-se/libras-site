@@ -1,4 +1,4 @@
-# Dossiê de Base — Libras.se, LSE e Audiodescrição
+# Dossiê de Base, Libras.se, LSE e Audiodescrição
 
 Documento consolidado para orientar páginas, propostas, materiais comerciais e conteúdos de SEO da Libras.se sobre acessibilidade audiovisual, com foco em **Libras, LSE (Legenda para Surdos e Ensurdecidos) e Audiodescrição (AD)**.
 
@@ -75,8 +75,8 @@ A entrega principal de Libras é feita com intérpretes reais e arquivo final pr
 Este documento consolida três frentes de acessibilidade audiovisual:
 
 1. **Libras**
-2. **LSE — Legenda para Surdos e Ensurdecidos**
-3. **Audiodescrição — AD**
+2. **LSE, Legenda para Surdos e Ensurdecidos**
+3. **Audiodescrição, AD**
 
 Esses serviços podem ser contratados separadamente ou em pacote, dependendo do tipo de obra, do edital, da plataforma ou da necessidade do cliente.
 
@@ -119,15 +119,15 @@ A base atual de preços da Libras.se para vídeos é:
 
 | Serviço | Preço-base |
 |---|---:|
-| Libras — entrega em 7 dias | R$ 100/min |
-| Libras — entrega em 24 horas | R$ 150/min |
-| Libras — entrega expressa em 1 hora | R$ 450/min |
+| Libras, entrega em 7 dias | R$ 100/min |
+| Libras, entrega em 24 horas | R$ 150/min |
+| Libras, entrega expressa em 1 hora | R$ 450/min |
 
 Para longas-metragens e projetos planejados com antecedência, a referência principal deve ser a base de **R$ 100/min**, considerando entrega em 7 dias ou cronograma negociado conforme o projeto.
 
 ---
 
-# 6. LSE — Legenda para Surdos e Ensurdecidos
+# 6. LSE, Legenda para Surdos e Ensurdecidos
 
 ## 6.1. O que é LSE
 
@@ -209,7 +209,7 @@ Para comunicação comercial, usar **R$ 28/min** como preço recomendado e deixa
 
 ---
 
-# 7. Audiodescrição — AD
+# 7. Audiodescrição, AD
 
 ## 7.1. O que é audiodescrição
 
@@ -332,10 +332,10 @@ Para longas-metragens, a Libras.se pode apresentar uma solução consolidada de 
 
 | Serviço | Preço recomendado | Filme de 60 min |
 |---|---:|---:|
-| Libras — entrega em 7 dias | R$ 100/min | R$ 6.000 |
+| Libras, entrega em 7 dias | R$ 100/min | R$ 6.000 |
 | LSE | R$ 28/min | R$ 1.680 |
 | Audiodescrição | R$ 75/min | R$ 4.500 |
-| **Total cheio estimado** | — | **R$ 12.180** |
+| **Total cheio estimado** |, | **R$ 12.180** |
 
 ## 9.2. Texto de transparência
 
@@ -569,7 +569,7 @@ A página de portfólio cita trabalhos associados a marcas e instituições como
 
 ---
 
-# 14. SEO — palavras-chave úteis para LSE e AD
+# 14. SEO, palavras-chave úteis para LSE e AD
 
 ## 14.1. LSE
 

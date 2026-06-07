@@ -480,9 +480,30 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--teal-pale);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     display: block;
     opacity: 0.8;
+  }
+
+  .alphabet-showcase .showcase-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal-pale);
+    background: rgba(72,191,178,0.12);
+    border: 1px solid rgba(72,191,178,0.28);
+    border-radius: 100px;
+    padding: 7px 15px;
+    margin-bottom: 22px;
+  }
+  .alphabet-showcase .showcase-hint svg {
+    width: 15px; height: 15px;
+    stroke: currentColor;
+    fill: none;
+    flex-shrink: 0;
   }
 
   .alphabet-grid {
@@ -500,22 +521,25 @@
     border-radius: 10px;
     display: grid;
     place-items: center;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
+    /* Estado padrão = SINAL em Libras (fonte Libras2020), maior, sem mudar o box */
+    font-family: 'Libras2020', monospace;
+    font-weight: 400;
+    font-size: 2.5rem;
     color: var(--teal-pale);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
+    text-shadow: 0 2px 14px rgba(79,209,197,0.4);
     transition: background 0.2s, transform 0.2s, border-color 0.2s;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
     line-height: 1;
     padding: 0;
+    overflow: hidden;
   }
 
   .alpha-letter:hover,
   .alpha-letter:focus-visible,
-  .alpha-letter.is-libras {
+  .alpha-letter.is-original {
     background: rgba(72,191,178,0.2);
     border-color: rgba(72,191,178,0.6);
     transform: translateY(-3px) scale(1.1);
@@ -527,12 +551,13 @@
     outline-offset: 3px;
   }
 
-  .alpha-letter.is-libras {
-    font-family: 'Libras2020', monospace;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0;
-    text-shadow: 0 2px 14px rgba(79,209,197,0.45);
+  /* Estado pressionado = LETRA ORIGINAL (fonte de texto) */
+  .alpha-letter.is-original {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: none;
   }
 
   /* ── PULL QUOTE ── */
@@ -942,100 +967,149 @@
     text-underline-offset: 3px;
   }
 
-  /* ── CTA ── */
-  .cta-block {
-    margin-top: 72px;
+  /* ── POST CLOSING (Com Barra) ── */
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 64px 0 0;
+    padding-top: 28px;
+    border-top: 1px solid var(--grey-light);
+  }
+  .post-tag {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--teal-mid);
+    background: var(--teal-bg);
+    border: 1px solid var(--teal-pale);
+    border-radius: 100px;
+    padding: 6px 14px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  a.post-tag:hover {
+    background: rgba(72,191,178,0.2);
+    color: var(--teal-dark);
+    transform: translateY(-1px);
+  }
+
+  .post-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 14px 26px;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  .post-btn--solid { background: var(--orange); color: #fff; box-shadow: 0 4px 18px rgba(244,137,42,0.32); }
+  .post-btn--solid:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(244,137,42,0.42); }
+  .post-btn--ghost { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.28); }
+  .post-btn--ghost:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  .post-btn--teal { background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid)); color: #fff; box-shadow: 0 4px 16px rgba(30,110,110,0.22); }
+  .post-btn--teal:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,110,110,0.3); }
+
+  .post-cta {
+    margin-top: 56px;
     background: linear-gradient(145deg, var(--teal-dark), var(--teal-mid) 60%, var(--teal-light));
     border-radius: var(--radius-lg);
-    padding: 56px 48px;
-    text-align: center;
+    padding: 48px 44px;
     position: relative;
     overflow: hidden;
   }
-
-  .cta-block::before {
+  .post-cta::before {
     content: '';
     position: absolute;
     width: 300px; height: 300px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-    top: -100px; right: -60px;
+    background: rgba(255,255,255,0.05);
+    top: -110px; right: -70px;
   }
-
-  .cta-block::after {
-    content: '';
-    position: absolute;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-    bottom: -80px; left: -40px;
-  }
-
-  .cta-block h2 {
+  .post-cta h2 {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--white);
     letter-spacing: -0.02em;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     line-height: 1.2;
     position: relative;
     z-index: 1;
   }
-
-  .cta-block p {
+  .post-cta p {
     font-family: 'Lora', serif;
     font-style: italic;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.8);
     font-size: 1rem;
     max-width: 480px;
-    margin: 0 auto 36px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .post-cta__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     position: relative;
     z-index: 1;
   }
 
-  .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+  .post-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .post-act {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     background: var(--white);
-    color: var(--teal-dark);
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.01em;
-    padding: 16px 32px;
-    border-radius: 100px;
+    border: 1px solid var(--grey-light);
+    border-radius: var(--radius);
+    padding: 24px 22px;
     text-decoration: none;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
   }
+  .post-act:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(30,110,110,0.1);
+    border-color: var(--teal-pale);
+  }
+  .post-act__ic {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--teal-bg);
+    display: grid;
+    place-items: center;
+    margin-bottom: 4px;
+  }
+  .post-act__ic svg { width: 22px; height: 22px; stroke: var(--teal-mid); fill: none; }
+  .post-act__t { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.98rem; color: var(--ink); }
+  .post-act__d { font-family: 'Lora', serif; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.55; }
+  .post-act__go { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--teal-mid); margin-top: 2px; }
 
-  .cta-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-  }
-
-  .cta-btn .arrow {
-    display: inline-block;
-    transition: transform 0.2s;
-  }
-  .cta-btn:hover .arrow {
-    transform: translateX(4px);
-  }
-
-  /* ── MORE CONTENT + SITE FOOTER ── */
-  .blog-more{background:var(--teal-bg);border-top:1px solid var(--teal-pale)}
-  .bm-inner{max-width:860px;margin:0 auto;padding:56px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:start}
-  .bm-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
-  .bm-links{display:flex;flex-direction:column;gap:10px}
-  .bm-link{display:flex;align-items:center;gap:12px;padding:13px 18px;background:#fff;border:1px solid var(--grey-light);border-radius:var(--radius);text-decoration:none;transition:transform .2s,box-shadow .2s;color:var(--ink-soft)}
-  .bm-link:hover{transform:translateX(4px);box-shadow:0 4px 16px rgba(30,110,110,.08);color:var(--ink)}
-  .bm-icon{font-size:1.1rem;flex-shrink:0;line-height:1}
-  .bm-text{font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;font-weight:600}
-  .bm-divider{width:1px;background:var(--teal-pale);align-self:stretch}
+  /* ── POST RELATED + SITE FOOTER ── */
+  .post-related{background:var(--teal-bg);border-top:1px solid var(--teal-pale)}
+  .post-related__inner{max-width:860px;margin:0 auto;padding:56px 40px}
+  .post-related__head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+  .post-related__head h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.3rem;color:var(--ink);letter-spacing:-.02em}
+  .post-related__head .post-btn{padding:9px 18px;font-size:.78rem}
+  .post-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .post-rel{background:#fff;border:1px solid var(--grey-light);border-radius:var(--radius);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+  .post-rel:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(30,110,110,.1)}
+  .post-rel__thumb{aspect-ratio:16/9;overflow:hidden;background:var(--grey-light)}
+  .post-rel__thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .post-rel:hover .post-rel__thumb img{transform:scale(1.05)}
+  .post-rel__b{padding:16px 18px}
+  .post-rel__t{font-family:'Bricolage Grotesque',sans-serif;font-size:.92rem;font-weight:700;color:var(--ink);line-height:1.35}
   #foot{background:#0e3538;padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04)}
   .ft-inner{max-width:860px;margin:0 auto;padding:0 40px}
   .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
@@ -1052,7 +1126,7 @@
   .ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
   .ft-bot p{font-size:.7rem;color:rgba(255,255,255,.22);font-family:'Bricolage Grotesque',sans-serif}
   @media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr}}
-  @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}.bm-inner{grid-template-columns:1fr;gap:24px;padding:40px 22px}.bm-divider{width:100%;height:1px}}
+  @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}.post-rel-grid{grid-template-columns:1fr}.post-related__inner{padding:40px 22px}}
 
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
@@ -1064,11 +1138,13 @@
     .pull-quote { padding: 28px 28px; }
     .pull-quote p { font-size: 1.1rem; }
     .case-study { padding: 32px 24px; }
-    .cta-block { padding: 40px 24px; }
-    .cta-block h2 { font-size: 1.4rem; }
+    .post-cta { padding: 32px 24px; }
+    .post-cta h2 { font-size: 1.35rem; }
+    .post-actions { grid-template-columns: 1fr; }
     .info-callout { flex-direction: column; gap: 16px; padding: 24px; }
     .alphabet-showcase { padding: 28px 20px; }
-    .alpha-letter { width: 38px; height: 38px; font-size: 0.95rem; }
+    .alpha-letter { width: 38px; height: 38px; font-size: 2.15rem; }
+    .alpha-letter.is-original { font-size: 0.95rem; }
   }
 </style>
 </head>
@@ -1090,6 +1166,9 @@
   <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
   <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
   <a href="/blog/" onclick="cm()">Blog</a>
+  <a href="/jogo/" onclick="cm()">Jogo</a>
+  <a href="/sinal/" onclick="cm()">Vocabulário</a>
+  <a href="/glossario/" onclick="cm()">Glossário</a>
   <a href="https://huet.libras.se/" class="nav-cta" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
@@ -1209,7 +1288,11 @@
 
   <!-- ALPHABET SHOWCASE -->
   <div class="alphabet-showcase reveal">
-    <span class="showcase-label">✋ O alfabeto manual · Clique ou toque para explorar</span>
+    <span class="showcase-label">O alfabeto manual em Libras</span>
+    <p class="showcase-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 9l5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></svg>
+      Clique e conheça: toque em um sinal para revelar a letra correspondente.
+    </p>
     <div class="alphabet-grid" id="alpha-grid"></div>
   </div>
 
@@ -1382,40 +1465,74 @@
     </ol>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-block reveal">
-    <h2>Quer saber mais sobre<br>Libras e acessibilidade?</h2>
-    <p>Oferecemos soluções de interpretação em Libras para eventos, vídeos corporativos e produções audiovisuais, presenciais ou remotas.</p>
-    <a href="https://libras.se/solucoes" class="cta-btn" target="_blank" rel="noopener">
-      Conheça a LIBRAS.SE <span class="arrow">→</span>
+  <!-- FECHAMENTO: TAGS -->
+  <div class="post-tags reveal" aria-label="Tags do artigo">
+    <a class="post-tag" href="/glossario/datilologia/">#datilologia</a>
+    <span class="post-tag">#alfabeto-manual</span>
+    <a class="post-tag" href="/glossario/sinal-soletrado/">#sinal-soletrado</a>
+    <a class="post-tag" href="/glossario/libras/">#libras</a>
+    <a class="post-tag" href="/glossario/comunidade-surda/">#comunidade-surda</a>
+  </div>
+
+  <!-- FECHAMENTO: CTA -->
+  <div class="post-cta reveal">
+    <h2>Precisa do seu conteúdo em Libras?</h2>
+    <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
+    <div class="post-cta__btns">
+      <a href="https://huet.libras.se/" class="post-btn post-btn--solid" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
+      <a href="https://libras.se/solucoes" class="post-btn post-btn--ghost">Conhecer soluções</a>
+    </div>
+  </div>
+
+  <!-- FECHAMENTO: RECURSOS -->
+  <div class="post-actions reveal">
+    <a href="/jogo/" class="post-act">
+      <span class="post-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+      </span>
+      <span class="post-act__t">Joguinho de Libras</span>
+      <span class="post-act__d">Descubra o sinal do dia e aprenda brincando.</span>
+      <span class="post-act__go">Jogar agora →</span>
+    </a>
+    <a href="/sinal/" class="post-act">
+      <span class="post-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+      </span>
+      <span class="post-act__t">Vocabulário</span>
+      <span class="post-act__d">Consulte sinais e amplie seu vocabulário em Libras.</span>
+      <span class="post-act__go">Ver sinais →</span>
+    </a>
+    <a href="/glossario/" class="post-act">
+      <span class="post-act__ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </span>
+      <span class="post-act__t">Glossário</span>
+      <span class="post-act__d">Termos da área com definições claras e verificadas.</span>
+      <span class="post-act__go">Consultar →</span>
     </a>
   </div>
 
 </main>
 
-<section class="blog-more" aria-label="Explore mais conteúdos">
-  <div class="bm-inner">
-    <div>
-      <h3 class="bm-title">Leia Também</h3>
-      <div class="bm-links">
-        <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Como são criados sinais de pessoas na Libras?</span></a>
-        <a href="/blog/libras-tem-sotaque-e-giria/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Libras tem sotaque e gíria?</span></a>
-        <a href="/blog/passatempo-tera-biscoitos-com-libras/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Passatempo terá biscoitos com Libras</span></a>
-        <a href="/blog/" class="bm-link"><span class="bm-icon">📝</span><span class="bm-text">Acesse o Blog</span></a>
-        <a href="/jogo/" class="bm-link"><span class="bm-icon">🎮</span><span class="bm-text">Joguinho de Libras</span></a>
-        <a href="/sinal/" class="bm-link"><span class="bm-icon">🤟</span><span class="bm-text">Ver mais sinais</span></a>
-        <a href="/glossario/" class="bm-link"><span class="bm-icon">📖</span><span class="bm-text">Glossário de Libras</span></a>
-      </div>
+<section class="post-related" aria-label="Mais posts do blog">
+  <div class="post-related__inner">
+    <div class="post-related__head">
+      <h2>Leia mais no blog</h2>
+      <a href="/blog/" class="post-btn post-btn--teal">Ver todos os posts →</a>
     </div>
-    <div class="bm-divider" aria-hidden="true"></div>
-    <div>
-      <h3 class="bm-title">Conheça o LIBRAS.SE</h3>
-      <div class="bm-links">
-        <a href="https://libras.se/solucoes" class="bm-link"><span class="bm-icon">🎬</span><span class="bm-text">Tradução de vídeo</span></a>
-        <a href="https://libras.se/solucoes" class="bm-link"><span class="bm-icon">📚</span><span class="bm-text">Video Aulas em Libras</span></a>
-        <a href="https://libras.se/solucoes" class="bm-link"><span class="bm-icon">📡</span><span class="bm-text">Transmissão ao vivo</span></a>
-        <a href="https://libras.se/solucoes" class="bm-link"><span class="bm-icon">✨</span><span class="bm-text">Ver todos os serviços</span></a>
-      </div>
+    <div class="post-rel-grid">
+      <a class="post-rel" href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/">
+        <span class="post-rel__thumb"><img src="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.webp" alt="20 anos da Lei de Libras: avanços e desafios" loading="lazy" decoding="async" width="1200" height="675"></span>
+        <span class="post-rel__b"><span class="post-rel__t">20 anos da Lei de Libras: avanços e desafios</span></span>
+      </a>
+      <a class="post-rel" href="/blog/por-que-incluir-janela-de-libras-em-videos/">
+        <span class="post-rel__thumb"><img src="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.webp" alt="Por que incluir janela de Libras em vídeos" loading="lazy" decoding="async" width="1200" height="675"></span>
+        <span class="post-rel__b"><span class="post-rel__t">Por que incluir janela de Libras em vídeos?</span></span>
+      </a>
+      <a class="post-rel" href="/blog/o-que-e-capacitismo/">
+        <span class="post-rel__thumb"><img src="/assets/img/blog/o-que-e-capacitismo/o-que-e-capacitismo.webp" alt="O que é capacitismo" loading="lazy" decoding="async" width="1200" height="675"></span>
+        <span class="post-rel__b"><span class="post-rel__t">O que é capacitismo?</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -1487,18 +1604,21 @@
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const grid = document.getElementById('alpha-grid');
   letters.forEach(l => {
+    const sign = l.toLowerCase(); // glifo do sinal na fonte Libras2020
     const button = document.createElement('button');
     button.className = 'alpha-letter';
     button.type = 'button';
-    button.textContent = l;
+    button.textContent = sign;                      // padrão = sinal em Libras
     button.setAttribute('aria-pressed', 'false');
-    button.setAttribute('aria-label', `Mostrar letra ${l} em Libras`);
+    button.setAttribute('aria-label', `Sinal da letra ${l}. Clique para ver a letra ${l}`);
     button.dataset.letter = l;
     button.addEventListener('click', () => {
-      const isLibras = button.classList.toggle('is-libras');
-      button.textContent = isLibras ? l.toLowerCase() : l;
-      button.setAttribute('aria-pressed', String(isLibras));
-      button.setAttribute('aria-label', isLibras ? `Letra ${l} em Libras` : `Mostrar letra ${l} em Libras`);
+      const showOriginal = button.classList.toggle('is-original');
+      button.textContent = showOriginal ? l : sign; // pressionado = letra original
+      button.setAttribute('aria-pressed', String(showOriginal));
+      button.setAttribute('aria-label', showOriginal
+        ? `Letra ${l}. Clique para ver o sinal`
+        : `Sinal da letra ${l}. Clique para ver a letra ${l}`);
     });
     grid.appendChild(button);
   });

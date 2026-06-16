@@ -387,8 +387,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .clients-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
 .clients-track{display:flex;gap:64px;align-items:center;animation:marquee 44s linear infinite;width:max-content}
 @media(prefers-reduced-motion:reduce){.clients-track{animation:none}}
-.clients-track img{height:44px;width:auto;max-width:120px;object-fit:contain;filter:grayscale(1) brightness(.7);opacity:.4;transition:opacity .3s}
-.clients-track img:hover{opacity:.65}
+.clients-track img{height:84px;width:auto;max-width:180px;object-fit:contain;filter:grayscale(1) brightness(.78);opacity:.5;transition:opacity .3s,filter .3s}
+.clients-track img:hover{opacity:.72;filter:grayscale(1) brightness(.9)}
+@media(max-width:768px){.clients-track{gap:44px}.clients-track img{height:64px}}
 
 /* ── FAQ ── */
 .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -922,11 +923,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/assets/img/clientes/clientes-natura.avif" alt="Natura" loading="lazy"/>
         <img src="/assets/img/clientes/clientes-NuBank.avif" alt="Nubank" loading="lazy"/>
         <img src="/assets/img/clientes/clientes-summit-cidades_.avif" alt="Summit Cidades" loading="lazy"/>
-        <img src="/assets/img/clientes/clientes-cultura-viva.avif" alt="Cultura Viva" loading="lazy"/>
-        <img src="/assets/img/clientes/clientes-GovBr.avif" alt="Gov.br" loading="lazy"/>
-        <img src="/assets/img/clientes/clientes-PNLD.avif" alt="PNLD" loading="lazy"/>
-        <img src="/assets/img/clientes/clientes-record.avif" alt="Record" loading="lazy"/>
-        <img src="/assets/img/clientes/clientes-natura.avif" alt="Natura" loading="lazy"/>
+        <!-- Conjunto duplicado para marquee contínuo -->
+        <img src="/assets/img/clientes/clientes-cultura-viva.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-GovBr.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-PNLD.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-record.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-mpdft.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-coca-cola.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-natura.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-NuBank.avif" alt="" aria-hidden="true" loading="lazy"/>
+        <img src="/assets/img/clientes/clientes-summit-cidades_.avif" alt="" aria-hidden="true" loading="lazy"/>
       </div>
     </div>
   </section>

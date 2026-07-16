@@ -462,6 +462,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
 <!-- /LSE:CSS -->
+<script src="/assets/js/libras-lead.js" defer></script>
 </head>
 <body>
 
@@ -751,7 +752,12 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
                 <svg class="svg-ico svg-ico-send" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Enviar candidatura
               </button>
             </div>
-            <p class="form-note">Seus dados ficam seguros e n&atilde;o s&atilde;o compartilhados. Retornamos em at&eacute; 3 dias &uacute;teis.</p>
+            <!-- honeypot antispam: invisível para humanos, bots preenchem -->
+            <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;height:1px;width:1px;overflow:hidden">
+              <label for="fwebsite">N&atilde;o preencha este campo</label>
+              <input type="text" id="fwebsite" name="website" tabindex="-1" autocomplete="off"/>
+            </div>
+            <p class="form-note">Seus dados ficam seguros e n&atilde;o s&atilde;o compartilhados. Ao enviar, voc&ecirc; concorda com a <a href="/politica/">Pol&iacute;tica de Privacidade</a>. Retornamos em at&eacute; 3 dias &uacute;teis.</p>
           </form>
         </div>
 
@@ -881,6 +887,33 @@ document.getElementById('tilForm').addEventListener('submit', async function(e){
   const btn = this.querySelector('button[type=submit]');
   btn.disabled = true;
   btn.textContent = 'Enviando...';
+
+  /* Captação no CRM interno — campos textuais; o arquivo segue só pelo n8n */
+  if (window.LibrasLead) {
+    const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const hp = document.getElementById('fwebsite');
+    const cidade = val('fcidade');
+    const partes = cidade.split(',');
+    window.LibrasLead.send({
+      formId: 'sejatils',
+      formType: 'tils_application',
+      website: hp ? hp.value : undefined,
+      contact: { name: val('fnome'), email: val('femail'), whatsapp: val('fwhats') },
+      consent: { privacyPolicyAccepted: true },
+      request: {
+        city: partes[0] ? partes[0].trim() : undefined,
+        state: partes[1] ? partes[1].trim() : undefined,
+        description: val('fmsg') || undefined,
+        additionalData: {
+          formacao: val('fformacao') || undefined,
+          experiencia: val('fexp') || undefined,
+          areas: val('fareas') || undefined,
+          enviouArquivo: !!(document.getElementById('ffile') && document.getElementById('ffile').files.length)
+        }
+      }
+    });
+  }
+
   try {
     await fetch('https://n8n.libras.se/webhook/cadastro-til', { method:'POST', body: new FormData(this), mode:'no-cors' });
   } catch(_){}

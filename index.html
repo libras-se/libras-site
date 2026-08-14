@@ -316,7 +316,8 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
 .ham span{display:block;width:21px;height:1.5px;background:var(--p1);border-radius:2px;transition:var(--tr)}
 .ham:focus-visible{outline:2px solid var(--teal);border-radius:4px;outline-offset:4px}
-#hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:96px 0 0;z-index:1}
+#hero{min-height:calc(100vh - var(--promoh,0px));position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:96px 0 0;z-index:1}
+.promo-off #hero,#promo.gone~main #hero{min-height:100vh}
 .hero-content{flex:1;display:flex;align-items:center}
 .hbg{position:absolute;inset:0;background:linear-gradient(155deg,#e2f5f3 0%,#f0fafa 40%,#d8eeec 100%);will-change:transform}
 .hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(79,209,197,.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 60% 50%,black,transparent);pointer-events:none}

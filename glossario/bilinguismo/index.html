@@ -174,9 +174,50 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 @media(max-width:768px){.w{padding:0 22px}.faq-inner,.sources-inner{padding:0 22px}#tcontent{padding:40px 22px}.ft-top{grid-template-columns:1fr 1fr}.nlinks,.nd{display:none}.ham{display:flex}}
 @media(max-width:500px){.ft-top{grid-template-columns:1fr}.gcta-inner{padding:36px 22px}}
 </style>
+<style id="promo-css">
+:root{--promoh:46px}
+#promo{position:relative;z-index:801;height:var(--promoh);display:flex;align-items:center;overflow:hidden;background:linear-gradient(120deg,#0b2d30 0%,#0e3538 38%,#12464b 72%,#0e3538 100%);transition:height .45s cubic-bezier(.4,0,.2,1)}
+#promo.gone{height:0}
+#promo::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 32%,rgba(79,209,197,.14) 46%,rgba(129,230,217,.26) 50%,rgba(79,209,197,.14) 54%,transparent 68%);transform:translateX(-100%);animation:promoSweep 6s ease-in-out 1.4s infinite;pointer-events:none}
+#promo::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gb);opacity:.6;pointer-events:none}
+@keyframes promoSweep{0%,58%{transform:translateX(-100%)}92%,100%{transform:translateX(100%)}}
+.promo-w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
+.promo-badge{display:inline-flex;align-items:center;gap:6px;font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txl);background:rgba(79,209,197,.12);border:1px solid rgba(79,209,197,.28);border-radius:var(--rpill);padding:4px 12px;white-space:nowrap;opacity:0;animation:promoItem .6s cubic-bezier(.22,1,.36,1) .25s forwards}
+.promo-badge svg{width:12px;height:12px;fill:var(--tl);flex-shrink:0;animation:promoGift 4s ease-in-out 2s infinite}
+@keyframes promoGift{0%,86%,100%{transform:rotate(0)}90%{transform:rotate(-9deg)}94%{transform:rotate(9deg)}97%{transform:rotate(-5deg)}}
+.promo-txt{font-size:.82rem;font-weight:300;color:rgba(255,255,255,.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;animation:promoItem .6s cubic-bezier(.22,1,.36,1) .38s forwards}
+.promo-txt strong{font-weight:900;background:var(--gb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.promo-cta{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:#0e3538;background:linear-gradient(135deg,#4fd1c5,#81e6d9);border-radius:var(--rpill);padding:6px 14px;white-space:nowrap;text-decoration:none;box-shadow:0 2px 12px rgba(79,209,197,.35);transition:transform .25s,box-shadow .25s;opacity:0;animation:promoItem .6s cubic-bezier(.22,1,.36,1) .5s forwards}
+.promo-cta:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(79,209,197,.5)}
+.promo-cta:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.promo-cta svg{width:11px;height:11px;fill:none;stroke:#0e3538;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+.promo-cta:hover svg{transform:translateX(3px)}
+@keyframes promoItem{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.promo-x{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);font-size:.85rem;line-height:1;padding:8px;transition:color .2s}
+.promo-x:hover{color:#fff}
+.promo-x:focus-visible{outline:2px solid var(--teal);border-radius:4px}
+.promo-off #promo{display:none}
+@media(max-width:768px){.promo-w{padding:0 34px 0 16px;gap:10px}.promo-badge{display:none}.promo-txt{font-size:.76rem}}
+@media(max-width:420px){.promo-cta span{display:none}.promo-cta{padding:6px 10px}}
+@media(prefers-reduced-motion:reduce){#promo::before,.promo-badge svg{animation:none}.promo-badge,.promo-txt,.promo-cta{animation:none;opacity:1}}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+<aside id="promo" role="region" aria-label="Oferta para novos parceiros">
+  <div class="promo-w">
+    <span class="promo-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 7h-1.17A3 3 0 0 0 19 5.5 3.5 3.5 0 0 0 15.5 2c-1.4 0-2.58.85-3.5 2.09C11.08 2.85 9.9 2 8.5 2A3.5 3.5 0 0 0 5 5.5c0 .54.12 1.05.34 1.5H4a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h8V7h2v5h8a1 1 0 0 0 1-1V9a2 2 0 0 0-2-2zM8.5 7A1.5 1.5 0 0 1 7 5.5 1.5 1.5 0 0 1 8.5 4c.9 0 1.77.87 2.4 2.06.1.2.2.52.28.94H8.5zm8.5-1.5A1.5 1.5 0 0 1 15.5 7h-2.68c.08-.42.18-.74.28-.94C13.73 4.87 14.6 4 15.5 4A1.5 1.5 0 0 1 17 5.5zM3 14v6a2 2 0 0 0 2 2h6v-8H3zm10 8h6a2 2 0 0 0 2-2v-6h-8v8z"/></svg>Novos parceiros</span>
+    <p class="promo-txt"><strong>10% OFF</strong>&nbsp;na sua primeira compra no Libras.se</p>
+    <a class="promo-cta" href="https://huet.libras.se/" target="_blank" rel="noopener noreferrer"><span>Acessar a plataforma</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <button class="promo-x" id="promo-x" aria-label="Fechar aviso de oferta">&#10005;</button>
+</aside>
+<script>if(sessionStorage.getItem('lbPromoOff')){document.documentElement.classList.add('promo-off')}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Offer","name":"10% de desconto na primeira compra para novos parceiros","description":"Novos parceiros do Libras.se ganham 10% de desconto na primeira compra de tradu\u00e7\u00e3o de v\u00eddeos em Libras. Acesse a plataforma Huet para come\u00e7ar.","url":"https://huet.libras.se/","availability":"https://schema.org/InStock","priceCurrency":"BRL","seller":{"@type":"Organization","name":"Libras.se","url":"https://libras.se"}}
+</script>
+
 <a href="https://wa.me/5548996367511?text=Oi%2C%20quero%20saber%20mais%20sobre%20tradu%C3%A7%C3%A3o%20em%20Libras" class="wppf" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><span>WhatsApp</span></a>
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu">
   <button class="mob-x" id="mobx" aria-label="Fechar menu">&#10005;</button>
@@ -469,6 +510,24 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
       document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-q').setAttribute('aria-expanded','false');});
       if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
     });
+  });
+})();
+</script>
+<script id="promo-js">
+(function(){
+  var b=document.getElementById('promo'),n=document.getElementById('nav'),x=document.getElementById('promo-x');
+  if(!b||!n)return;
+  var raf=false;
+  function place(){n.style.top=Math.max(0,b.offsetHeight-(window.scrollY||window.pageYOffset||0))+'px';raf=false}
+  window.addEventListener('scroll',function(){if(!raf){raf=true;requestAnimationFrame(place)}},{passive:true});
+  window.addEventListener('resize',place);
+  place();
+  if(x)x.addEventListener('click',function(){
+    try{sessionStorage.setItem('lbPromoOff','1')}catch(e){}
+    n.style.transition='top .45s cubic-bezier(.4,0,.2,1)';
+    b.classList.add('gone');
+    n.style.top='0px';
+    setTimeout(function(){n.style.transition='';document.documentElement.classList.add('promo-off');place()},500);
   });
 })();
 </script>

@@ -1,0 +1,11 @@
+You are illustrating a Brazilian Sign Language (Libras) dictionary page. Attached: image 1 is the key pose (middle of the sign); image 2 shows the movement in order, from left to right; image 3 is the STYLE REFERENCE, an illustration already approved for this dictionary.
+
+Use your image generation tool to create ONE new image:
+- Match image 3 exactly in style, character design (same woman, same face, hair and t-shirt), line weight, colors, background and framing: waist-up, same camera distance and scale as image 3, head and both hands fully visible. Never draw below the waist.
+- Body: slim build with a noticeably slim waist and a clear, elegant taper from the chest to the waist (natural, not exaggerated).
+- Lips exactly like image 3: almost the same color as the skin, only a faint hint of warm beige-pink (#efd6cf) inside the outline. No lipstick, never red or pink.
+- Pose and hands come from images 1 and 2: reproduce exactly the handshape, finger positions, palm orientation and location seen in the photos. A wrong handshape changes the meaning of the sign. Keep the facial expression of image 1.
+- Movement arrows exactly in the style of image 3: bold, thick teal (#1aa8b0) strokes with large arrowheads and a thin white outline, right next to the moving hands, never covering the fingers. Show the movement seen in image 2 (curved or straight; double-headed if it goes back and forth; small repetition marks if repeated). If the hands do not travel, show the small local movement or no arrow at all.
+- No text, no letters, no numbers, no logo, no watermark. Aspect ratio 4:3.
+{{NOTA}}
+Save the final image as {{SAIDA}} in the current directory. Do not change anything else.

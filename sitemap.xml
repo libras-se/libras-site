@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://libras.se/</loc>
     <lastmod>2026-05-30</lastmod>
@@ -137,12 +137,6 @@
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://libras.se/sinal/desculpa/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/</loc>
@@ -788,4 +782,450 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- SINAIS:SITEMAP -->
+  <url>
+    <loc>https://libras.se/sinal/agua/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/agua.webp</video:thumbnail_loc>
+      <video:title>Sinal de Água em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Água em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/agua.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/alegre/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/alegre.webp</video:thumbnail_loc>
+      <video:title>Sinal de Alegre em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Alegre em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/alegre.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/amor/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/amor.webp</video:thumbnail_loc>
+      <video:title>Sinal de Amor em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Amor em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/amor.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/banana/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/banana.webp</video:thumbnail_loc>
+      <video:title>Sinal de Banana em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Banana em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/banana.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/banheiro/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/banheiro.webp</video:thumbnail_loc>
+      <video:title>Sinal de Banheiro em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Banheiro em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/banheiro.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/calmo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/calmo.webp</video:thumbnail_loc>
+      <video:title>Sinal de Calmo em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Calmo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/calmo.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/cama/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/cama.webp</video:thumbnail_loc>
+      <video:title>Sinal de Cama em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Cama em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/cama.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/carro/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/carro.webp</video:thumbnail_loc>
+      <video:title>Sinal de Carro em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Carro em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/carro.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/casa/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/casa.webp</video:thumbnail_loc>
+      <video:title>Sinal de Casa em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Casa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/casa.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/comer/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/comer.webp</video:thumbnail_loc>
+      <video:title>Sinal de Comer em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Comer em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/comer.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/dinheiro/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/dinheiro.webp</video:thumbnail_loc>
+      <video:title>Sinal de Dinheiro em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Dinheiro em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/dinheiro.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/familia/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/familia.webp</video:thumbnail_loc>
+      <video:title>Sinal de Família em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Família em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/familia.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/feliz/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/feliz.webp</video:thumbnail_loc>
+      <video:title>Sinal de Feliz em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Feliz em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/feliz.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/janela/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/janela.webp</video:thumbnail_loc>
+      <video:title>Sinal de Janela em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Janela em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/janela.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/medo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/medo.webp</video:thumbnail_loc>
+      <video:title>Sinal de Medo em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Medo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/medo.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/obrigado/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/obrigado.webp</video:thumbnail_loc>
+      <video:title>Sinal de Obrigado em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Obrigado em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/obrigado.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/onibus/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/onibus.webp</video:thumbnail_loc>
+      <video:title>Sinal de Ônibus em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Ônibus em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/onibus.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/porta/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/porta.webp</video:thumbnail_loc>
+      <video:title>Sinal de Porta em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Porta em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/porta.mp4</video:content_loc>
+      <video:duration>7</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/raiva/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/raiva.webp</video:thumbnail_loc>
+      <video:title>Sinal de Raiva em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Raiva em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/raiva.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/roupa/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/roupa.webp</video:thumbnail_loc>
+      <video:title>Sinal de Roupa em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Roupa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/roupa.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/sapato/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/sapato.webp</video:thumbnail_loc>
+      <video:title>Sinal de Sapato em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Sapato em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/sapato.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/saudade/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/saudade.webp</video:thumbnail_loc>
+      <video:title>Sinal de Saudade em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Saudade em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/saudade.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/sonhar/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/sonhar.webp</video:thumbnail_loc>
+      <video:title>Sinal de Sonhar em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Sonhar em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/sonhar.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/surpresa/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/surpresa.webp</video:thumbnail_loc>
+      <video:title>Sinal de Surpresa em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Surpresa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/surpresa.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/telefone/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/telefone.webp</video:thumbnail_loc>
+      <video:title>Sinal de Telefone em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Telefone em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/telefone.mp4</video:content_loc>
+      <video:duration>7</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/trabalho/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/trabalho.webp</video:thumbnail_loc>
+      <video:title>Sinal de Trabalho em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Trabalho em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/trabalho.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/triste/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/triste.webp</video:thumbnail_loc>
+      <video:title>Sinal de Triste em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Triste em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/triste.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/vergonha/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/vergonha.webp</video:thumbnail_loc>
+      <video:title>Sinal de Vergonha em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Vergonha em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/vergonha.mp4</video:content_loc>
+      <video:duration>6</video:duration>
+      <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/bom-dia/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/desculpa/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/eu-te-amo/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/por-favor/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- /SINAIS:SITEMAP -->
 </urlset>

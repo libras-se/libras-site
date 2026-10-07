@@ -178,22 +178,32 @@ main { padding: 20px 0 140px; }
 }
 
 /* === SIGN AREA ===
-   !! INSERIR VÍDEO/GIF/IMAGEM REAL AQUI !!
-   Substitua o conteúdo de .sign-area por:
-   <video src="sinal-PALAVRA.mp4" autoplay loop muted playsinline></video>
-   ou <img src="sinal-PALAVRA.gif" alt="Sinal em Libras">
-*/
+   Vídeo do sinal do dia (assets/videos/sinais/<slug>.mp4, 16:9, fundo #f0fafa), publicado por tools/sinais/publicar.py.
+   Sem vídeo, cai no placeholder escuro com ícone (.no-video). */
 .sign-area {
-  background:var(--gc);border-radius:var(--rlg);
-  aspect-ratio:16/9;max-height:210px;
+  background:#f0fafa;border-radius:var(--rlg);
+  aspect-ratio:16/9;width:100%;margin:0 auto;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
   position:relative;overflow:hidden;
   border:1px solid rgba(79,209,197,.2);cursor:default;
 }
-.sign-area::after {
+.sign-video { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block; }
+.sign-area.no-video { background:var(--gc); }
+.sign-area.no-video .sign-video { display:none; }
+.sign-area:not(.no-video) .sign-scan,
+.sign-area:not(.no-video) .sign-icon,
+.sign-area:not(.no-video) .sign-label { display:none; }
+.sign-area.no-video::after {
   content:'';position:absolute;inset:0;
   background:var(--gb);opacity:.05;pointer-events:none;
 }
+.sign-ctrl {
+  position:absolute;left:10px;top:10px;z-index:3;
+  width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(14,53,56,.72);color:#fff;display:flex;align-items:center;justify-content:center;
+}
+.sign-ctrl svg { width:14px;height:14px; }
+.sign-area.no-video .sign-ctrl { display:none; }
 .sign-scan {
   position:absolute;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,rgba(79,209,197,.45),transparent);
@@ -213,19 +223,25 @@ main { padding: 20px 0 140px; }
   position:relative;z-index:1;
 }
 .sign-desc {
-  font-size:.75rem;font-weight:300;
-  color:rgba(255,255,255,.38);text-align:center;
-  padding:0 18px;position:relative;z-index:1;
+  font-size:.78rem;font-weight:300;
+  color:var(--txs);text-align:center;
+  padding:10px 18px 0;position:relative;z-index:1;
   font-style:italic;line-height:1.5;
 }
 /* Datilologia, usa fonte Libras2020 para mostrar soletração manual */
 .datilo {
   font-family:'Libras2020',monospace;
   font-size:2.6rem;letter-spacing:.1em;
-  color:rgba(255,255,255,.88);
+  color:rgba(255,255,255,.92);
   text-shadow:0 2px 14px rgba(79,209,197,.55);
   position:relative;z-index:1;
   display:none;
+}
+/* Com vídeo, a datilologia aparece numa faixa sobre a parte de baixo do vídeo */
+.sign-area:not(.no-video) .datilo {
+  position:absolute;left:0;right:0;bottom:0;z-index:2;text-align:center;
+  padding:12px 6px 4px;font-size:clamp(1.3rem,5vw,1.9rem);line-height:1.1;
+  background:linear-gradient(180deg,transparent,rgba(14,53,56,.85) 55%);
 }
 .datilo.on { display:block; }
 
@@ -546,20 +562,17 @@ main { padding: 20px 0 140px; }
       <span class="cat-badge" id="catBadge"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg> Educação</span>
     </div>
 
-    <!--
-      !! ÁREA DO SINAL EM LIBRAS !!
-      INSERIR AQUI: <video src="sinal-PALAVRA.mp4" autoplay loop muted playsinline style="width:100%;border-radius:16px;"></video>
-      OU:           <img src="sinal-PALAVRA.gif" alt="Sinal em Libras para PALAVRA" style="width:100%;border-radius:16px;">
-    -->
-    <div class="sign-area" id="signArea" role="img" aria-labelledby="signDesc">
+    <div class="sign-area" id="signArea">
+      <video class="sign-video" id="signVideo" muted loop playsinline preload="auto" aria-label="Vídeo do sinal do dia em Libras" aria-describedby="signDesc"></video>
+      <button type="button" class="sign-ctrl" id="signCtrl" aria-label="Pausar vídeo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
       <div class="sign-scan" aria-hidden="true"></div>
-      <!-- PLACEHOLDER, substituir pelo vídeo/gif real -->
+      <!-- Placeholder exibido só quando o desafio não tem vídeo -->
       <div class="sign-icon" id="signIcon" aria-hidden="true"><svg class="svg-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div>
       <!-- Datilologia aparece como dica após 3ª tentativa -->
       <div class="datilo" id="datilo" aria-label="Soletração manual em Libras"></div>
       <div class="sign-label" aria-hidden="true">Vídeo do sinal em Libras</div>
-      <div class="sign-desc" id="signDesc">Observe o sinal e tente descobrir a palavra.</div>
     </div>
+    <p class="sign-desc" id="signDesc">Observe o sinal e tente descobrir a palavra.</p>
   </div>
 
   <!-- MSG -->
@@ -786,35 +799,36 @@ const CHALLENGES = [
     id: 1,
     word: 'LIVRO',
     category: 'Educação', categoryIcon: 'book', signIcon: 'book',
-    signDesc: 'As mãos se abrem como páginas. Observe bem o movimento.',
+    signDesc: 'Observe como as duas mãos trabalham juntas, com o indicador em destaque.',
     meaning: 'Objeto com folhas encadernadas usado para leitura e aprendizado.',
     example: 'Eu gosto de ler um bom <strong>livro</strong> antes de dormir.',
-    librasHint: 'Configuração: mãos abertas e planas, palmas para cima, movimento lateral de abertura, como abrir um livro. Ponto de articulação: neutro, à frente do corpo.',
+    librasHint: 'LIVRO: as duas mãos, com o indicador e o polegar estendidos, se movem juntas à frente do corpo. Observe a posição de uma mão em relação à outra.',
     funFact: 'Libras tem mais de 10.000 sinais catalogados. Cada região do Brasil pode ter variações regionais, assim como ocorre com sotaques no português.'
   },
   {
     id: 2,
     word: 'ESCOLA',
     category: 'Educação', categoryIcon: 'book', signIcon: 'school',
-    signDesc: 'Um sinal muito comum no cotidiano. Observe o cruzamento das mãos.',
+    signDesc: 'Um sinal muito comum no cotidiano. Repare nas duas mãos abertas, uma sobre a outra.',
     meaning: 'Estabelecimento de ensino onde crianças e jovens aprendem.',
     example: 'As crianças chegam na <strong>escola</strong> às oito da manhã.',
-    librasHint: 'O sinal de ESCOLA: as duas mãos em formato de "L" se cruzam com um movimento de rotação. Ponto de articulação próximo ao peito.',
+    librasHint: 'ESCOLA: as duas mãos abertas e planas, uma acima da outra, se cruzam à frente do peito com um movimento curto.',
     funFact: 'O Instituto Nacional de Educação de Surdos (INES), fundado em 1857 no Rio de Janeiro, foi o primeiro espaço de ensino sistematizado para surdos no Brasil.'
   },
   {
     id: 3,
     word: 'AMIGO',
     category: 'Relacionamentos', categoryIcon: 'users', signIcon: 'users',
-    signDesc: 'Um sinal que expressa conexão. Os dedos se entrelaçam.',
+    signDesc: 'Um sinal que expressa afeto. Repare onde a mão se apoia no corpo.',
     meaning: 'Pessoa com quem se tem laço de afeto, confiança e companheirismo.',
     example: 'Meu <strong>amigo</strong> me ajudou quando mais precisei.',
-    librasHint: 'AMIGO: os dedos indicadores das duas mãos se entrelaçam, representando a união entre as pessoas. Movimento suave e recíproco.',
+    librasHint: 'AMIGO: a mão aberta se apoia no peito, do lado do coração, com um movimento suave. O sentido de afeto também aparece no rosto.',
     funFact: 'Libras é uma língua completa, com gramática própria. Não é uma tradução de gestos do português, ela possui estrutura visual-espacial independente.'
   },
   {
     id: 4,
     word: 'FAMILIA',
+    video: 'familia',
     category: 'Relacionamentos', categoryIcon: 'users', signIcon: 'users',
     signDesc: 'As mãos formam um círculo, representando o grupo unido.',
     meaning: 'Grupo de pessoas unidas por parentesco, afeto ou convivência.',
@@ -825,6 +839,7 @@ const CHALLENGES = [
   {
     id: 5,
     word: 'COMER',
+    video: 'comer',
     category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'utensils',
     signDesc: 'Um sinal icônico, imita a ação de levar comida à boca.',
     meaning: 'Ato de ingerir alimento pela boca; se alimentar.',
@@ -835,6 +850,7 @@ const CHALLENGES = [
   {
     id: 6,
     word: 'FELIZ',
+    video: 'feliz',
     category: 'Sentimentos', categoryIcon: 'smile', signIcon: 'smile',
     signDesc: 'Atenção especial à expressão facial, ela faz parte do sinal.',
     meaning: 'Estado de alegria, contentamento e bem-estar emocional.',
@@ -845,31 +861,33 @@ const CHALLENGES = [
   {
     id: 7,
     word: 'TRABALHO',
+    video: 'trabalho',
     category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'briefcase',
-    signDesc: 'As mãos em punho batem uma sobre a outra, esforço e produção.',
+    signDesc: 'As duas mãos se movem de forma alternada, em ritmo de esforço e produção.',
     meaning: 'Atividade produtiva realizada com esforço, geralmente remunerada.',
     example: 'Meu <strong>trabalho</strong> começa às oito horas da manhã.',
-    librasHint: 'TRABALHO: punhos fechados, um bate sobre o outro em movimento alternado. Representa o esforço repetitivo e a produção inerentes ao trabalho.',
+    librasHint: 'TRABALHO: as duas mãos em L (indicador e polegar estendidos), palmas para baixo, se movem para a frente e para trás de forma alternada.',
     funFact: 'A Lei Brasileira de Inclusão (Lei 13.146/2015) garante a pessoas surdas o direito ao trabalho com acessibilidade comunicacional, incluindo intérpretes de Libras no ambiente profissional.'
   },
   {
     id: 8,
     word: 'OBRIGADO',
+    video: 'obrigado',
     category: 'Cultura Surda', categoryIcon: 'ear', signIcon: 'hand',
-    signDesc: 'A mão parte do queixo em direção à pessoa, gratidão direcionada.',
+    signDesc: 'Repare de onde as mãos partem e para onde se abrem.',
     meaning: 'Expressão de gratidão e reconhecimento por algo recebido.',
     example: '<strong>Obrigado</strong> por me ajudar a aprender Libras.',
-    librasHint: 'OBRIGADO: a mão dominante, com dedos juntos e planos, parte do queixo e se move para frente, como se "enviasse" gratidão para o interlocutor.',
+    librasHint: 'OBRIGADO: uma das mãos parte da testa e a outra do peito; as duas se abrem para a frente, como se oferecessem a gratidão ao interlocutor.',
     funFact: 'O Dia Nacional do Surdo é 26 de setembro, data que marca a fundação do INES em 1857. É celebrado com eventos, mostras culturais e disseminação de Libras.'
   },
   {
     id: 9,
     word: 'MUSICA',
     category: 'Arte', categoryIcon: 'palette', signIcon: 'music',
-    signDesc: 'Observe o movimento ondulado, ele transmite a ideia de melodia.',
+    signDesc: 'Observe o movimento ondulado das mãos, ele transmite a ideia de melodia.',
     meaning: 'Arte que organiza sons, ritmos e silêncios de forma expressiva.',
     example: 'Ela ama <strong>música</strong> e sente cada vibração da batida.',
-    librasHint: 'MÚSICA: uma mão em "C" faz movimentos ondulatórios sobre o antebraço da outra, transmitindo visualmente o fluxo de uma melodia.',
+    librasHint: 'MÚSICA: as duas mãos, à frente do peito, se afastam e voltam em movimento ondulado, como quem rege uma melodia.',
     funFact: 'Surdos percebem música por meio de vibrações. Eventos musicais inclusivos utilizam pisos vibratórios e intérpretes de Libras para que a comunidade surda acesse a experiência completa.'
   },
   {
@@ -885,6 +903,7 @@ const CHALLENGES = [
   {
     id: 11,
     word: 'SONHAR',
+    video: 'sonhar',
     category: 'Sentimentos', categoryIcon: 'smile', signIcon: 'message',
     signDesc: 'O dedo sai da cabeça em movimento ondulado, os pensamentos flutuam.',
     meaning: 'Ter sonhos durante o sono; ou idealizar e desejar algo para o futuro.',
@@ -895,11 +914,12 @@ const CHALLENGES = [
   {
     id: 12,
     word: 'JANELA',
+    video: 'janela',
     category: 'Cotidiano', categoryIcon: 'utensils', signIcon: 'image',
-    signDesc: 'As mãos imitam a abertura de folhas de uma janela.',
+    signDesc: 'Os antebraços imitam algo que se abre na parede.',
     meaning: 'Abertura em parede vedada por vidro, que permite entrada de luz e ar.',
     example: 'Abri a <strong>janela</strong> para ventilar o quarto.',
-    librasHint: 'JANELA: as duas mãos abertas, posicionadas uma sobre a outra, se movem horizontalmente para os lados, imitando as folhas de uma janela se abrindo.',
+    librasHint: 'JANELA: os antebraços começam na horizontal, um sobre o outro, e o de cima sobe, como uma janela de guilhotina se abrindo.',
     funFact: 'Libras foi reconhecida oficialmente como língua da comunidade surda brasileira pela Lei 10.436/2002. Esse reconhecimento foi um marco histórico para a inclusão no país.'
   }
 ];
@@ -1002,6 +1022,7 @@ function setupGame() {
   document.getElementById('catBadge').innerHTML = `${iconSvg(ch.categoryIcon)} ${ch.category}`;
   document.getElementById('signIcon').innerHTML = iconSvg(ch.signIcon);
   document.getElementById('signDesc').textContent = ch.signDesc;
+  setupSignVideo();
   document.getElementById('signIcon').style.display = '';
   document.getElementById('datilo').textContent = '';
   document.getElementById('datilo').classList.remove('on');
@@ -1274,6 +1295,30 @@ function setHint(num, unlocked, html, lockMsg) {
 }
 
 // ============================================================
+// VÍDEO DO SINAL (assets/videos/sinais/<video>.mp4 + poster .webp)
+// ============================================================
+function setupSignVideo() {
+  const area = document.getElementById('signArea');
+  const v = document.getElementById('signVideo');
+  const btn = document.getElementById('signCtrl');
+  if (!ch.video) { area.classList.add('no-video'); v.removeAttribute('src'); return; }
+  area.classList.remove('no-video');
+  v.onerror = () => area.classList.add('no-video');
+  v.poster = `/assets/videos/sinais/${ch.video}.webp`;
+  v.src = `/assets/videos/sinais/${ch.video}.mp4`;
+  const sync = () => {
+    btn.setAttribute('aria-label', v.paused ? 'Reproduzir vídeo' : 'Pausar vídeo');
+    btn.innerHTML = v.paused
+      ? '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  };
+  v.onplay = sync; v.onpause = sync;
+  btn.onclick = () => { if (v.paused) v.play().catch(() => {}); else v.pause(); };
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) v.play().catch(sync);
+  sync();
+}
+
+// ============================================================
 // DATILOLOGIA (Libras2020 font)
 // ============================================================
 function showDatilo() {
@@ -1282,7 +1327,7 @@ function showDatilo() {
   el.textContent = ch.word.toLowerCase(); // Libras2020: a-z → handshapes
   el.classList.add('on');
   document.getElementById('signIcon').style.display = 'none';
-  document.getElementById('signDesc').textContent = 'Soletração manual (datilologia) em Libras';
+  document.getElementById('signDesc').textContent = 'Dica: a palavra em datilologia (soletração manual em Libras)';
   el.setAttribute('aria-label', `Soletração em Libras: ${ch.word}`);
 }
 

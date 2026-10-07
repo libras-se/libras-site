@@ -39,3 +39,7 @@ og/.tmp/
 libras.se-site.code-workspace
 politica/*.docx
 CLIENTES/
+
+__pycache__/
+# carimbo local do publicar.py (origem da ilustração)
+assets/img/sinais/*.origem

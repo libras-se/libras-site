@@ -1,0 +1,501 @@
+{
+ "_leia": "Decisões do app tools/sinais/aprovar.py. Não edite à mão com o app aberto.",
+ "ajustes": {},
+ "extras": {},
+ "itens": {
+  "agua": {
+   "aprovado": {
+    "assinatura": "a841348d6217",
+    "em": "2026-10-06T18:42:23-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:23-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "alegre": {
+   "aprovado": {
+    "assinatura": "e00958b86cc4",
+    "em": "2026-10-06T18:43:31-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:31-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "amor": {
+   "aprovado": {
+    "assinatura": "8980fafcd474",
+    "em": "2026-10-06T18:43:15-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:15-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "banana": {
+   "aprovado": {
+    "assinatura": "fbb69f4c310a",
+    "em": "2026-10-06T18:45:13-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:45:13-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "banheiro": {
+   "aprovado": {
+    "assinatura": "02b7079cac35",
+    "em": "2026-10-06T18:43:09-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:09-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "calmo": {
+   "aprovado": {
+    "assinatura": "d4b497dba196",
+    "em": "2026-10-06T18:43:33-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:33-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "cama": {
+   "aprovado": {
+    "assinatura": "e7abc82437e5",
+    "em": "2026-10-06T18:42:47-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:47-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "carro": {
+   "aprovado": {
+    "assinatura": "221cadd4130d",
+    "em": "2026-10-06T18:42:57-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:57-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "casa": {
+   "aprovado": {
+    "assinatura": "3a14973b3381",
+    "em": "2026-10-06T18:42:27-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:27-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "comer": {
+   "aprovado": {
+    "assinatura": "6a4239c84495",
+    "em": "2026-10-06T18:41:58-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:41:58-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "deodoro-da-fonseca": {
+   "atualizado_em": "2026-10-06T17:26:05-03:00",
+   "tomada": 2
+  },
+  "dinheiro": {
+   "aprovado": {
+    "assinatura": "613020568926",
+    "em": "2026-10-06T18:43:11-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:11-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "familia": {
+   "aprovado": {
+    "assinatura": "f7e62a5a74a4",
+    "em": "2026-10-06T18:41:54-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:41:54-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "feliz": {
+   "aprovado": {
+    "assinatura": "bbf8a5bc6ed4",
+    "em": "2026-10-06T18:41:59-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:41:59-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "flamengo": {
+   "atualizado_em": "2026-10-06T17:26:55-03:00",
+   "tomada": 2
+  },
+  "janela": {
+   "aprovado": {
+    "assinatura": "863d0c69f0aa",
+    "em": "2026-10-06T18:42:18-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:18-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "medo": {
+   "aprovado": {
+    "assinatura": "9158ff2e5a56",
+    "em": "2026-10-06T18:43:23-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:23-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "mesa": {
+   "atualizado_em": "2026-10-06T17:14:56-03:00",
+   "nota": "",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "obrigado": {
+   "aprovado": {
+    "assinatura": "96516489d6ba",
+    "em": "2026-10-06T18:41:43-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:41:43-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "onibus": {
+   "aprovado": {
+    "assinatura": "070e23e6ef1d",
+    "em": "2026-10-06T18:43:03-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:03-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "orgulho": {
+   "atualizado_em": "2026-10-06T18:44:00-03:00",
+   "tomada": 2
+  },
+  "porta": {
+   "aprovado": {
+    "assinatura": "463a8b475c7f",
+    "em": "2026-10-06T18:42:43-03:00",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-06T18:42:43-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 2
+  },
+  "raiva": {
+   "aprovado": {
+    "assinatura": "6a84a6ac0c34",
+    "em": "2026-10-06T18:43:17-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:17-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "roupa": {
+   "aprovado": {
+    "assinatura": "85a5de3d6226",
+    "em": "2026-10-06T18:42:51-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:51-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "sapato": {
+   "aprovado": {
+    "assinatura": "9ea0231252a2",
+    "em": "2026-10-06T18:42:54-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:54-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "saudade": {
+   "aprovado": {
+    "assinatura": "c1dc6322726c",
+    "em": "2026-10-06T18:44:27-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:44:27-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "sonhar": {
+   "aprovado": {
+    "assinatura": "e8f07fdf0ad9",
+    "em": "2026-10-06T18:42:16-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:16-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "surpresa": {
+   "aprovado": {
+    "assinatura": "e74810ab7270",
+    "em": "2026-10-06T18:44:39-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:44:39-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "telefone": {
+   "aprovado": {
+    "assinatura": "6cd9a55e01cb",
+    "em": "2026-10-06T18:43:05-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:05-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "trabalho": {
+   "aprovado": {
+    "assinatura": "119f3feac81a",
+    "em": "2026-10-06T18:42:05-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:42:05-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "triste": {
+   "aprovado": {
+    "assinatura": "7e2ed62a1edd",
+    "em": "2026-10-06T18:43:27-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:43:27-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "vergonha": {
+   "aprovado": {
+    "assinatura": "eceed5ddd506",
+    "em": "2026-10-06T18:44:52-03:00",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-06T18:44:52-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-07T19:47:04-03:00",
+    "nota": "Aprovada em lote pelo usuário após a prévia no site local (2026-10-07).",
+    "status": "aprovado",
+    "versao": 1
+   },
+   "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  }
+ }
+}

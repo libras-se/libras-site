@@ -1,0 +1,19 @@
+:root{
+  --bg:#f0fafa;--bg2:#e8f6f5;--bg3:#dff2f0;
+  --p1:#0e3538;--p2:#154245;--p3:#2a6069;
+  --teal:#4fd1c5;--tl:#81e6d9;--txl:#b2f5ea;
+  --teal-d:#2eb8c0;--teal-dd:#1a9ca4;
+  --green:#22c55e;
+  --card:rgba(255,255,255,.72);--card-s:rgba(255,255,255,.85);
+  --border:rgba(79,209,197,.18);--border2:rgba(10,34,37,.07);
+  --txt:#12393d;--txs:#3d6063;--txm:#7aacad;
+  --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
+  --gb2:linear-gradient(135deg,#1aa8b0,#81e6d9);
+  --gc:linear-gradient(135deg,#0e3538,#2a6069);
+  --gs:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+  --sh:0 2px 16px rgba(10,34,37,.06);--shm:0 8px 40px rgba(10,34,37,.1);
+  --shl:0 20px 72px rgba(10,34,37,.14);--shg:0 8px 40px rgba(79,209,197,.22);
+  --blur:blur(22px);--blur-l:blur(40px);
+  --tr:.3s cubic-bezier(.4,0,.2,1);
+  --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
+}

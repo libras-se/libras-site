@@ -1,0 +1,812 @@
+{
+  "_leia": "Fonte das páginas /sinal/<slug>/. Depois de editar, rode: python3 tools/sinais/build_pages.py",
+  "interprete": "Bruna Garcia, TILS da LIBRAS.SE",
+  "publicado_em": "2026-10-06",
+  "sinais": [
+    {
+      "slug": "desculpa",
+      "palavra": "Desculpa",
+      "categoria": "Expressões",
+      "classe": "substantivo feminino · interjeição",
+      "pron": "/des-cul-pa/",
+      "busca": "desculpa desculpe perdão foi mal",
+      "resumo": "Sinal usado para pedir desculpas, reconhecer um erro ou demonstrar arrependimento em uma situação de comunicação.",
+      "definicoes": [
+        "Ato ou efeito de desculpar-se; manifestação de arrependimento ou pedido de tolerância por uma falta cometida. Expressão de reconhecimento de um erro, usada para reparar ou amenizar uma situação de conflito ou desconforto.",
+        "<em>Em Libras:</em> o sinal é acompanhado de expressão facial que demonstra arrependimento genuíno. A expressão facial é parte gramatical do sinal, não é decorativa."
+      ],
+      "exemplos": [
+        "Desculpa pelo atraso, não consegui chegar a tempo.",
+        "Eu peço desculpa; não foi minha intenção te magoar.",
+        "Desculpa, não entendi. Pode repetir mais devagar?"
+      ],
+      "contexto": [
+        "<strong>Variações regionais:</strong> como em toda língua, sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil.",
+        "<strong>Expressão facial:</strong> em Libras, a expressão facial não é complementar, ela faz parte da gramática do sinal. Sem a expressão adequada, o sinal pode perder sentido ou ser mal interpretado."
+      ],
+      "dados": {
+        "Contexto de uso": "Formal e informal",
+        "Expressão facial": "Obrigatória"
+      }
+    },
+    {
+      "slug": "obrigado",
+      "palavra": "Obrigado",
+      "categoria": "Expressões",
+      "classe": "interjeição · adjetivo",
+      "pron": "/o-bri-ga-do/",
+      "busca": "obrigado obrigada agradecer agradecimento valeu gratidão",
+      "resumo": "Sinal usado para agradecer a alguém por um favor, uma gentileza ou um serviço, em situações formais ou informais.",
+      "definicoes": [
+        "Palavra usada para expressar gratidão a alguém por um favor, uma gentileza ou um serviço prestado. No português, concorda com quem fala: obrigado ou obrigada.",
+        "<em>Em Libras:</em> o sinal de agradecimento não muda conforme o gênero de quem sinaliza, como acontece no português. A expressão facial acompanha a intenção, de um agradecimento simples a uma gratidão intensa."
+      ],
+      "exemplos": [
+        "Obrigado pela ajuda com a mudança.",
+        "Muito obrigada pelo convite, eu vou com certeza.",
+        "Obrigado por explicar de novo, agora eu entendi."
+      ],
+      "contexto": [
+        "<strong>Intensidade:</strong> em Libras, a força do agradecimento aparece no movimento e na expressão facial. Um agradecimento enfático costuma ter movimento mais marcado e expressão mais aberta.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Formal e informal",
+        "Expressão facial": "Acompanha a intenção"
+      }
+    },
+    {
+      "slug": "bom-dia",
+      "palavra": "Bom dia",
+      "categoria": "Saudações",
+      "classe": "locução interjetiva",
+      "pron": "/bom di-a/",
+      "busca": "bom dia cumprimento saudação manhã",
+      "resumo": "Cumprimento usado pela manhã para saudar alguém ao chegar, ao encontrar uma pessoa ou ao começar uma conversa.",
+      "definicoes": [
+        "Saudação usada no período da manhã, ao encontrar alguém ou ao iniciar uma conversa. Expressa cordialidade e abre a interação.",
+        "<em>Em Libras:</em> é formado pela combinação de dois sinais, BOM e DIA, executados em sequência. É um dos primeiros cumprimentos aprendidos por quem começa a estudar a língua."
+      ],
+      "exemplos": [
+        "Bom dia! Tudo bem com você?",
+        "Bom dia a todos, vamos começar a reunião.",
+        "Ela sempre deseja bom dia aos colegas ao chegar."
+      ],
+      "contexto": [
+        "<strong>Outros cumprimentos:</strong> boa tarde e boa noite costumam seguir a mesma lógica, combinando o sinal de BOM com o período do dia.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Formal e informal",
+        "Período": "Manhã"
+      }
+    },
+    {
+      "slug": "por-favor",
+      "palavra": "Por favor",
+      "categoria": "Expressões",
+      "classe": "locução adverbial",
+      "pron": "/por fa-vor/",
+      "busca": "por favor pedido educação cortesia",
+      "resumo": "Expressão usada para fazer pedidos com educação e respeito, em situações formais ou informais.",
+      "definicoes": [
+        "Expressão de cortesia usada para pedir algo de forma educada, suavizando um pedido ou uma ordem.",
+        "<em>Em Libras:</em> existe mais de uma forma de sinalizar POR FAVOR, e a escolha pode variar por região e contexto. O vídeo mostra uma delas, acompanhada da expressão facial de pedido."
+      ],
+      "exemplos": [
+        "Por favor, pode repetir mais devagar?",
+        "Me passa a água, por favor.",
+        "Por favor, aguarde um momento."
+      ],
+      "contexto": [
+        "<strong>Mais de uma forma:</strong> há variações para sinalizar por favor em Libras. Se na sua região o sinal for diferente, use o formulário abaixo para nos contar.",
+        "<strong>Expressão facial:</strong> o pedido educado aparece também no rosto. Sem a expressão adequada, o sinal pode soar como uma ordem."
+      ],
+      "dados": {
+        "Contexto de uso": "Formal e informal",
+        "Expressão facial": "Obrigatória"
+      }
+    },
+    {
+      "slug": "eu-te-amo",
+      "palavra": "Eu te amo",
+      "categoria": "Sentimentos",
+      "classe": "expressão",
+      "pron": "/eu te a-mo/",
+      "busca": "eu te amo te amo amor amar carinho afeto",
+      "resumo": "Expressão usada para declarar amor e afeto a alguém, entre casais, familiares e amigos próximos.",
+      "definicoes": [
+        "Declaração de amor, carinho ou afeto profundo dirigida a uma pessoa.",
+        "<em>Em Libras:</em> a declaração é feita com sinais próprios da língua, acompanhados de expressão facial afetuosa. O gesto com polegar, indicador e mínimo estendidos, muito visto em redes sociais, vem da Língua de Sinais Americana (ASL); o vídeo mostra a forma usada em Libras."
+      ],
+      "exemplos": [
+        "Eu te amo, mãe.",
+        "Ele disse eu te amo pela primeira vez em Libras.",
+        "Eu te amo e tenho orgulho de você."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> o afeto também aparece no rosto. Em Libras, a expressão facial faz parte do sentido da frase.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Afetivo e informal",
+        "Expressão facial": "Obrigatória"
+      }
+    },
+    {
+      "slug": "agua",
+      "palavra": "Água",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/á-gua/",
+      "busca": "agua beber sede líquido",
+      "resumo": "Sinal usado para falar de água, seja para beber, para a higiene ou como elemento da natureza.",
+      "definicoes": [
+        "Líquido transparente, sem cor e sem cheiro, essencial à vida, encontrado em rios, mares e chuvas e consumido para matar a sede.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Você pode me dar um copo de água?",
+        "Beba bastante água nos dias de calor.",
+        "A água do mar estava gelada."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "alegre",
+      "palavra": "Alegre",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/a-le-gre/",
+      "busca": "alegre alegria contente animado",
+      "resumo": "Sinal usado para descrever alguém contente, animado ou de bom humor, ou um ambiente cheio de alegria.",
+      "definicoes": [
+        "Que sente ou demonstra alegria; contente, animado. Também se diz de lugares, cores ou músicas que transmitem alegria.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Ela ficou alegre com a notícia.",
+        "A festa estava muito alegre.",
+        "Meu avô é uma pessoa alegre."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente alegria.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "amor",
+      "palavra": "Amor",
+      "categoria": "Sentimentos",
+      "classe": "substantivo masculino",
+      "pron": "/a-mor/",
+      "busca": "amor amar carinho afeto paixão",
+      "resumo": "Sinal usado para falar de amor, carinho e afeto entre pessoas, na família, na amizade ou no romance.",
+      "definicoes": [
+        "Sentimento de afeto profundo, carinho e cuidado por alguém ou por algo.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "O amor da minha família me dá força.",
+        "Eles se casaram por amor.",
+        "Ela faz o trabalho com amor."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente amor.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "banana",
+      "palavra": "Banana",
+      "categoria": "Alimentos",
+      "classe": "substantivo feminino",
+      "pron": "/ba-na-na/",
+      "busca": "banana fruta alimento comida",
+      "resumo": "Sinal usado para falar de banana, uma das frutas mais consumidas no Brasil.",
+      "definicoes": [
+        "Fruta alongada, de casca amarela quando madura e polpa macia e doce, muito comum na alimentação dos brasileiros.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Eu como uma banana no café da manhã.",
+        "Compre um cacho de banana no mercado.",
+        "A banana ainda está verde."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "banheiro",
+      "palavra": "Banheiro",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/ba-nhei-ro/",
+      "busca": "banheiro toalete sanitário wc",
+      "resumo": "Sinal usado para perguntar ou indicar onde fica o banheiro, um dos sinais mais úteis no dia a dia.",
+      "definicoes": [
+        "Cômodo da casa ou de um estabelecimento destinado ao banho e à higiene pessoal, com pia e vaso sanitário.",
+        "<em>Em Libras:</em> é um dos primeiros sinais aprendidos por quem convive com pessoas surdas, por ser essencial em escolas, eventos e locais públicos."
+      ],
+      "exemplos": [
+        "Onde fica o banheiro?",
+        "O banheiro está ocupado.",
+        "Vou ao banheiro e já volto."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "calmo",
+      "palavra": "Calmo",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/cal-mo/",
+      "busca": "calmo calma tranquilo sereno",
+      "resumo": "Sinal usado para descrever alguém tranquilo, sereno ou um ambiente sem agitação.",
+      "definicoes": [
+        "Que está em paz, sem nervosismo ou agitação; tranquilo, sereno. Também se diz do mar, do tempo ou de um lugar silencioso.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Fique calmo, vai dar tudo certo.",
+        "O mar está calmo hoje.",
+        "Ele é um professor muito calmo."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente calma.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "cama",
+      "palavra": "Cama",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/ca-ma/",
+      "busca": "cama dormir quarto deitar",
+      "resumo": "Sinal usado para falar de cama, o móvel onde se deita para dormir ou descansar.",
+      "definicoes": [
+        "Móvel com colchão usado para deitar, dormir e descansar.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Arrume a cama antes de sair.",
+        "A criança já está na cama.",
+        "Comprei uma cama nova para o quarto."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "carro",
+      "palavra": "Carro",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/car-ro/",
+      "busca": "carro automóvel dirigir veículo",
+      "resumo": "Sinal usado para falar de carro, o automóvel usado no transporte do dia a dia.",
+      "definicoes": [
+        "Veículo de quatro rodas, movido a motor, usado para transportar pessoas e objetos.",
+        "<em>Em Libras:</em> faz parte do vocabulário de transportes, ao lado de ônibus, bicicleta e avião. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Meu carro está na oficina.",
+        "Vamos de carro para a praia.",
+        "Ela aprendeu a dirigir carro aos dezoito anos."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Transporte"
+      }
+    },
+    {
+      "slug": "casa",
+      "palavra": "Casa",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/ca-sa/",
+      "busca": "casa lar moradia residência",
+      "resumo": "Sinal usado para falar de casa, o lugar onde se mora, e da ideia de lar.",
+      "definicoes": [
+        "Construção destinada à moradia; o lugar onde uma pessoa ou família vive.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Vou para casa depois da aula.",
+        "A casa da minha avó tem um quintal grande.",
+        "Seja bem-vindo à nossa casa."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "comer",
+      "palavra": "Comer",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/co-mer/",
+      "busca": "comer comida alimentar refeição almoço jantar",
+      "resumo": "Sinal usado para falar do ato de comer e das refeições do dia a dia.",
+      "definicoes": [
+        "Levar alimento à boca, mastigar e engolir; alimentar-se. Também é usado para falar das refeições em geral.",
+        "<em>Em Libras:</em> é um verbo muito frequente no cotidiano e serve de base para conversas sobre comida, horários e refeições. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Você já comeu hoje?",
+        "Vamos comer juntos no sábado.",
+        "As crianças gostam de comer frutas."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "dinheiro",
+      "palavra": "Dinheiro",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/di-nhei-ro/",
+      "busca": "dinheiro grana pagar preço comprar",
+      "resumo": "Sinal usado para falar de dinheiro, pagamentos, preços e compras.",
+      "definicoes": [
+        "Moeda ou cédula usada para comprar, vender e pagar por produtos e serviços; recursos financeiros.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Quanto dinheiro você precisa?",
+        "Ela está guardando dinheiro para viajar.",
+        "Aceita pagamento em dinheiro?"
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "familia",
+      "palavra": "Família",
+      "categoria": "Família",
+      "classe": "substantivo feminino",
+      "pron": "/fa-mí-li-a/",
+      "busca": "familia família parentes pais filhos",
+      "resumo": "Sinal usado para falar de família, o grupo de pessoas unidas por laços de parentesco ou afeto.",
+      "definicoes": [
+        "Conjunto de pessoas ligadas por parentesco, casamento, adoção ou afeto, que costumam viver juntas ou manter vínculo próximo.",
+        "<em>Em Libras:</em> é a base do vocabulário de parentesco, ao lado de mãe, pai, irmão e filho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Minha família mora em Florianópolis.",
+        "Passamos o Natal em família.",
+        "A família dele é muito grande."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "feliz",
+      "palavra": "Feliz",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/fe-liz/",
+      "busca": "feliz felicidade contente alegre",
+      "resumo": "Sinal usado para expressar felicidade, contentamento e satisfação.",
+      "definicoes": [
+        "Que sente felicidade; contente, satisfeito. Também se usa em votos, como feliz aniversário e feliz Natal.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Estou muito feliz por você.",
+        "Ela ficou feliz com o presente.",
+        "Feliz aniversário, meu amigo!"
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente felicidade.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "janela",
+      "palavra": "Janela",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/ja-ne-la/",
+      "busca": "janela abrir fechar casa",
+      "resumo": "Sinal usado para falar de janela, a abertura na parede que deixa entrar luz e ar.",
+      "definicoes": [
+        "Abertura na parede de uma construção, geralmente com vidro, que permite a entrada de luz e ventilação.",
+        "<em>Em Libras:</em> não confunda com a janela de Libras, termo usado para o espaço em que o intérprete aparece em vídeos e na televisão. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Abra a janela, por favor.",
+        "O gato gosta de ficar na janela.",
+        "Da janela dá para ver o mar."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "medo",
+      "palavra": "Medo",
+      "categoria": "Sentimentos",
+      "classe": "substantivo masculino",
+      "pron": "/me-do/",
+      "busca": "medo susto pavor receio",
+      "resumo": "Sinal usado para expressar medo, receio ou susto diante de uma situação.",
+      "definicoes": [
+        "Sentimento de insegurança ou ansiedade diante de um perigo, real ou imaginado.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Eu tenho medo de altura.",
+        "A criança ficou com medo do trovão.",
+        "Não tenha medo de perguntar."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente medo.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "onibus",
+      "palavra": "Ônibus",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/ô-ni-bus/",
+      "busca": "onibus ônibus transporte coletivo viagem",
+      "resumo": "Sinal usado para falar de ônibus, o transporte coletivo das cidades e das viagens.",
+      "definicoes": [
+        "Veículo grande, de transporte coletivo, que leva passageiros por linhas urbanas ou entre cidades.",
+        "<em>Em Libras:</em> faz parte do vocabulário de transportes, ao lado de carro, bicicleta e avião. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Eu vou para o trabalho de ônibus.",
+        "O ônibus está atrasado.",
+        "Pegamos o ônibus para São Paulo."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Transporte"
+      }
+    },
+    {
+      "slug": "porta",
+      "palavra": "Porta",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/por-ta/",
+      "busca": "porta abrir fechar entrada",
+      "resumo": "Sinal usado para falar de porta, a abertura que dá acesso a casas, salas e outros ambientes.",
+      "definicoes": [
+        "Peça que abre e fecha a entrada de uma casa, de um cômodo ou de um veículo.",
+        "<em>Em Libras:</em> existe mais de uma forma de sinalizar PORTA. O vídeo mostra uma delas. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Feche a porta, por favor.",
+        "Tem alguém batendo na porta.",
+        "A porta da sala está aberta."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "raiva",
+      "palavra": "Raiva",
+      "categoria": "Sentimentos",
+      "classe": "substantivo feminino",
+      "pron": "/rai-va/",
+      "busca": "raiva bravo irritado ódio nervoso",
+      "resumo": "Sinal usado para expressar raiva, irritação ou indignação.",
+      "definicoes": [
+        "Sentimento intenso de irritação ou indignação provocado por algo que desagrada ou ofende.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Ele ficou com raiva da injustiça.",
+        "Respire fundo quando sentir raiva.",
+        "Não guarde raiva das pessoas."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente raiva.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "roupa",
+      "palavra": "Roupa",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/rou-pa/",
+      "busca": "roupa vestir vestido camisa",
+      "resumo": "Sinal usado para falar de roupa, as peças que usamos para vestir o corpo.",
+      "definicoes": [
+        "Peça ou conjunto de peças de tecido usadas para cobrir e proteger o corpo.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Preciso lavar a roupa hoje.",
+        "Ela comprou roupa nova para a festa.",
+        "Coloque uma roupa quente, está frio."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "sapato",
+      "palavra": "Sapato",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/sa-pa-to/",
+      "busca": "sapato calçado tênis pé",
+      "resumo": "Sinal usado para falar de sapato e de calçados em geral.",
+      "definicoes": [
+        "Calçado que cobre e protege o pé, geralmente de couro ou material resistente.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Esse sapato está apertado.",
+        "Tire o sapato antes de entrar.",
+        "Comprei um sapato para o casamento."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "saudade",
+      "palavra": "Saudade",
+      "categoria": "Sentimentos",
+      "classe": "substantivo feminino",
+      "pron": "/sau-da-de/",
+      "busca": "saudade falta sentir falta lembrança",
+      "resumo": "Sinal usado para expressar saudade, a falta que se sente de alguém, de um lugar ou de um tempo.",
+      "definicoes": [
+        "Sentimento de falta e de carinho por alguém ou algo ausente, distante ou que ficou no passado. É uma palavra considerada muito característica da língua portuguesa.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Estou com saudade de você.",
+        "Ela sente saudade da cidade onde nasceu.",
+        "Que saudade das férias!"
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente saudade.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "sonhar",
+      "palavra": "Sonhar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/so-nhar/",
+      "busca": "sonhar sonho dormir desejo imaginar",
+      "resumo": "Sinal usado para falar de sonhar, tanto os sonhos durante o sono quanto os desejos e planos de vida.",
+      "definicoes": [
+        "Ter sonhos enquanto dorme. Também significa desejar muito algo, imaginar e fazer planos para o futuro.",
+        "<em>Em Libras:</em> o contexto e a expressão facial ajudam a diferenciar o sonho durante o sono do sonho como desejo. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Eu sonhei com você esta noite.",
+        "Ele sonha em ser professor.",
+        "Nunca pare de sonhar."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "surpresa",
+      "palavra": "Surpresa",
+      "categoria": "Sentimentos",
+      "classe": "substantivo feminino",
+      "pron": "/sur-pre-sa/",
+      "busca": "surpresa susto inesperado espanto",
+      "resumo": "Sinal usado para expressar surpresa diante de algo inesperado, bom ou ruim.",
+      "definicoes": [
+        "Reação diante de algo inesperado. Também é o nome de um presente ou acontecimento preparado sem que a pessoa saiba.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Que surpresa boa te ver aqui!",
+        "Fizemos uma festa surpresa para ela.",
+        "A notícia foi uma surpresa para todos."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente surpresa.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "telefone",
+      "palavra": "Telefone",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/te-le-fo-ne/",
+      "busca": "telefone celular ligar ligação",
+      "resumo": "Sinal usado para falar de telefone e de ligações.",
+      "definicoes": [
+        "Aparelho usado para fazer e receber chamadas de voz a distância. Hoje também se refere ao celular.",
+        "<em>Em Libras:</em> para a comunidade surda, a comunicação a distância acontece principalmente por chamadas de vídeo e mensagens. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Qual é o seu telefone?",
+        "O telefone está tocando.",
+        "Ela me passou o telefone da escola."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "trabalho",
+      "palavra": "Trabalho",
+      "categoria": "Cotidiano",
+      "classe": "substantivo masculino",
+      "pron": "/tra-ba-lho/",
+      "busca": "trabalho trabalhar emprego serviço profissão",
+      "resumo": "Sinal usado para falar de trabalho, emprego e atividades profissionais.",
+      "definicoes": [
+        "Atividade feita para produzir algo ou prestar um serviço, geralmente em troca de pagamento; emprego, ocupação.",
+        "<em>Em Libras:</em> o mesmo sinal costuma servir para trabalho e trabalhar, e o contexto da frase define o sentido. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Eu vou para o trabalho de manhã.",
+        "Ela encontrou um trabalho novo.",
+        "O trabalho em equipe deu certo."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "triste",
+      "palavra": "Triste",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/tris-te/",
+      "busca": "triste tristeza chateado desanimado",
+      "resumo": "Sinal usado para expressar tristeza, desânimo ou pesar.",
+      "definicoes": [
+        "Que sente ou demonstra tristeza; abatido, desanimado. Também se diz de uma notícia, de um filme ou de uma música que causa tristeza.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Ele ficou triste com a despedida.",
+        "Por que você está triste?",
+        "Foi um dia triste para todos."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente tristeza.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "vergonha",
+      "palavra": "Vergonha",
+      "categoria": "Sentimentos",
+      "classe": "substantivo feminino",
+      "pron": "/ver-go-nha/",
+      "busca": "vergonha timidez tímido constrangimento",
+      "resumo": "Sinal usado para expressar vergonha, timidez ou constrangimento.",
+      "definicoes": [
+        "Sentimento de desconforto ou timidez diante dos outros, por medo de errar ou de ser julgado. Também pode indicar constrangimento por algo feito.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Não tenha vergonha de perguntar.",
+        "Ela ficou com vergonha de falar em público.",
+        "Que vergonha, esqueci o nome dele!"
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente vergonha.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    }
+  ]
+}

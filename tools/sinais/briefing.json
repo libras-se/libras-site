@@ -1,0 +1,1382 @@
+[
+ {
+  "slug": "livro",
+  "palavra": "Livro",
+  "categoria": "Educação",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "escola",
+  "palavra": "Escola",
+  "categoria": "Educação",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "amigo",
+  "palavra": "Amigo",
+  "categoria": "Relações",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "familia",
+  "palavra": "Família",
+  "categoria": "Relações",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "comer",
+  "palavra": "Comer",
+  "categoria": "Cotidiano",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "feliz",
+  "palavra": "Feliz",
+  "categoria": "Sentimentos",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "trabalho",
+  "palavra": "Trabalho",
+  "categoria": "Cotidiano",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "obrigado",
+  "palavra": "Obrigado",
+  "categoria": "Expressões",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "musica",
+  "palavra": "Música",
+  "categoria": "Cultura",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "crianca",
+  "palavra": "Criança",
+  "categoria": "Família",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "sonhar",
+  "palavra": "Sonhar",
+  "categoria": "Sentimentos",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "janela",
+  "palavra": "Janela",
+  "categoria": "Cotidiano",
+  "bloco": "jogo"
+ },
+ {
+  "slug": "agua",
+  "palavra": "Água",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "casa",
+  "palavra": "Casa",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "porta",
+  "palavra": "Porta",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "mesa",
+  "palavra": "Mesa",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cama",
+  "palavra": "Cama",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "roupa",
+  "palavra": "Roupa",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "sapato",
+  "palavra": "Sapato",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "carro",
+  "palavra": "Carro",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "onibus",
+  "palavra": "Ônibus",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "telefone",
+  "palavra": "Telefone",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "banheiro",
+  "palavra": "Banheiro",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "dinheiro",
+  "palavra": "Dinheiro",
+  "categoria": "Cotidiano",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "amor",
+  "palavra": "Amor",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "raiva",
+  "palavra": "Raiva",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "medo",
+  "palavra": "Medo",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "triste",
+  "palavra": "Triste",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "alegre",
+  "palavra": "Alegre",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "calmo",
+  "palavra": "Calmo",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "orgulho",
+  "palavra": "Orgulho",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "saudade",
+  "palavra": "Saudade",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ansioso",
+  "palavra": "Ansioso",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cansado",
+  "palavra": "Cansado",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "surpresa",
+  "palavra": "Surpresa",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "vergonha",
+  "palavra": "Vergonha",
+  "categoria": "Sentimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "arroz",
+  "palavra": "Arroz",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "feijao",
+  "palavra": "Feijão",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "frango",
+  "palavra": "Frango",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "peixe",
+  "palavra": "Peixe",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "fruta",
+  "palavra": "Fruta",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "banana",
+  "palavra": "Banana",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "queijo",
+  "palavra": "Queijo",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "leite",
+  "palavra": "Leite",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cafe",
+  "palavra": "Café",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "sorvete",
+  "palavra": "Sorvete",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cerveja",
+  "palavra": "Cerveja",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "suco",
+  "palavra": "Suco",
+  "categoria": "Alimentos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "falar",
+  "palavra": "Falar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ouvir",
+  "palavra": "Ouvir",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "olhar",
+  "palavra": "Olhar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "gostar",
+  "palavra": "Gostar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ajudar",
+  "palavra": "Ajudar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "aprender",
+  "palavra": "Aprender",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ensinar",
+  "palavra": "Ensinar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "estudar",
+  "palavra": "Estudar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "correr",
+  "palavra": "Correr",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "dormir",
+  "palavra": "Dormir",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "viajar",
+  "palavra": "Viajar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "morar",
+  "palavra": "Morar",
+  "categoria": "Verbos",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "mae",
+  "palavra": "Mãe",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "pai",
+  "palavra": "Pai",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "irmao",
+  "palavra": "Irmão",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "irma",
+  "palavra": "Irmã",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "filho",
+  "palavra": "Filho",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "filha",
+  "palavra": "Filha",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "avo",
+  "palavra": "Avô",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "bebe",
+  "palavra": "Bebê",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "surdo",
+  "palavra": "Surdo",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ouvinte",
+  "palavra": "Ouvinte",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "professor",
+  "palavra": "Professor",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "medico",
+  "palavra": "Médico",
+  "categoria": "Família",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cachorro",
+  "palavra": "Cachorro",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "gato",
+  "palavra": "Gato",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "passaro",
+  "palavra": "Pássaro",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cavalo",
+  "palavra": "Cavalo",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "leao",
+  "palavra": "Leão",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "macaco",
+  "palavra": "Macaco",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cobra",
+  "palavra": "Cobra",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "elefante",
+  "palavra": "Elefante",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "abelha",
+  "palavra": "Abelha",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "tartaruga",
+  "palavra": "Tartaruga",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "borboleta",
+  "palavra": "Borboleta",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "pato",
+  "palavra": "Pato",
+  "categoria": "Animais",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "vermelho",
+  "palavra": "Vermelho",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "azul",
+  "palavra": "Azul",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "verde",
+  "palavra": "Verde",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "amarelo",
+  "palavra": "Amarelo",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "laranja",
+  "palavra": "Laranja",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "roxo",
+  "palavra": "Roxo",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "rosa",
+  "palavra": "Rosa",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "marrom",
+  "palavra": "Marrom",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "branco",
+  "palavra": "Branco",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "preto",
+  "palavra": "Preto",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cinza",
+  "palavra": "Cinza",
+  "categoria": "Cores",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "praia",
+  "palavra": "Praia",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "cidade",
+  "palavra": "Cidade",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "campo",
+  "palavra": "Campo",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "floresta",
+  "palavra": "Floresta",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "parque",
+  "palavra": "Parque",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "hospital",
+  "palavra": "Hospital",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "mercado",
+  "palavra": "Mercado",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "teatro",
+  "palavra": "Teatro",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "museu",
+  "palavra": "Museu",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "igreja",
+  "palavra": "Igreja",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "montanha",
+  "palavra": "Montanha",
+  "categoria": "Lugares",
+  "bloco": "desafios"
+ },
+ {
+  "slug": "ola",
+  "palavra": "Olá",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "bom-dia",
+  "palavra": "Bom dia",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "boa-tarde",
+  "palavra": "Boa tarde",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "boa-noite",
+  "palavra": "Boa noite",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "tchau",
+  "palavra": "Tchau",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "eu-te-amo",
+  "palavra": "Eu te amo",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "por-favor",
+  "palavra": "Por favor",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "desculpa",
+  "palavra": "Desculpa",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "sim",
+  "palavra": "Sim",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "nao",
+  "palavra": "Não",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "ajuda",
+  "palavra": "Ajuda",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "parabens",
+  "palavra": "Parabéns",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "feliz-natal",
+  "palavra": "Feliz Natal",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "feliz-ano-novo",
+  "palavra": "Feliz Ano Novo",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "feliz-aniversario",
+  "palavra": "Feliz aniversário",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "eu",
+  "palavra": "Eu",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "voce",
+  "palavra": "Você",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "ele-ela",
+  "palavra": "Ele/Ela",
+  "categoria": "Saudações",
+  "bloco": "saudacoes"
+ },
+ {
+  "slug": "letra-a",
+  "palavra": "A",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-b",
+  "palavra": "B",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-c",
+  "palavra": "C",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-d",
+  "palavra": "D",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-e",
+  "palavra": "E",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-f",
+  "palavra": "F",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-g",
+  "palavra": "G",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-h",
+  "palavra": "H",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-i",
+  "palavra": "I",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-j",
+  "palavra": "J",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-k",
+  "palavra": "K",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-l",
+  "palavra": "L",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-m",
+  "palavra": "M",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-n",
+  "palavra": "N",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-o",
+  "palavra": "O",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-p",
+  "palavra": "P",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-q",
+  "palavra": "Q",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-r",
+  "palavra": "R",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-s",
+  "palavra": "S",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-t",
+  "palavra": "T",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-u",
+  "palavra": "U",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-v",
+  "palavra": "V",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-w",
+  "palavra": "W",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-x",
+  "palavra": "X",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-y",
+  "palavra": "Y",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "letra-z",
+  "palavra": "Z",
+  "categoria": "Alfabeto",
+  "bloco": "alfabeto"
+ },
+ {
+  "slug": "numero-0",
+  "palavra": "0",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-1",
+  "palavra": "1",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-2",
+  "palavra": "2",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-3",
+  "palavra": "3",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-4",
+  "palavra": "4",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-5",
+  "palavra": "5",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-6",
+  "palavra": "6",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-7",
+  "palavra": "7",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-8",
+  "palavra": "8",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-9",
+  "palavra": "9",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-10",
+  "palavra": "10",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-11",
+  "palavra": "11",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-12",
+  "palavra": "12",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-13",
+  "palavra": "13",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-14",
+  "palavra": "14",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-15",
+  "palavra": "15",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-16",
+  "palavra": "16",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-17",
+  "palavra": "17",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-18",
+  "palavra": "18",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-19",
+  "palavra": "19",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "numero-20",
+  "palavra": "20",
+  "categoria": "Números",
+  "bloco": "numeros"
+ },
+ {
+  "slug": "acre",
+  "palavra": "Acre",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "alagoas",
+  "palavra": "Alagoas",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "amapa",
+  "palavra": "Amapá",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "amazonas",
+  "palavra": "Amazonas",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "bahia",
+  "palavra": "Bahia",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "ceara",
+  "palavra": "Ceará",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "distrito-federal",
+  "palavra": "Distrito Federal",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "espirito-santo",
+  "palavra": "Espírito Santo",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "goias",
+  "palavra": "Goiás",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "maranhao",
+  "palavra": "Maranhão",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "mato-grosso",
+  "palavra": "Mato Grosso",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "mato-grosso-do-sul",
+  "palavra": "Mato Grosso do Sul",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "minas-gerais",
+  "palavra": "Minas Gerais",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "para",
+  "palavra": "Pará",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "paraiba",
+  "palavra": "Paraíba",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "parana",
+  "palavra": "Paraná",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "pernambuco",
+  "palavra": "Pernambuco",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "piaui",
+  "palavra": "Piauí",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "rio-de-janeiro",
+  "palavra": "Rio de Janeiro",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "rio-grande-do-norte",
+  "palavra": "Rio Grande do Norte",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "rio-grande-do-sul",
+  "palavra": "Rio Grande do Sul",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "rondonia",
+  "palavra": "Rondônia",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "roraima",
+  "palavra": "Roraima",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "santa-catarina",
+  "palavra": "Santa Catarina",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "sao-paulo",
+  "palavra": "São Paulo",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "sergipe",
+  "palavra": "Sergipe",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "tocantins",
+  "palavra": "Tocantins",
+  "categoria": "Estados",
+  "bloco": "estados"
+ },
+ {
+  "slug": "lula",
+  "palavra": "Lula",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "dilma-rousseff",
+  "palavra": "Dilma Rousseff",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "getulio-vargas",
+  "palavra": "Getúlio Vargas",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "jk",
+  "palavra": "JK",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "fernando-henrique-cardoso",
+  "palavra": "Fernando Henrique Cardoso",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "fernando-collor",
+  "palavra": "Fernando Collor",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "michel-temer",
+  "palavra": "Michel Temer",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "jair-bolsonaro",
+  "palavra": "Jair Bolsonaro",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "joao-goulart",
+  "palavra": "João Goulart",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "jose-sarney",
+  "palavra": "José Sarney",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "itamar-franco",
+  "palavra": "Itamar Franco",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "deodoro-da-fonseca",
+  "palavra": "Deodoro da Fonseca",
+  "categoria": "Presidentes",
+  "bloco": "presidentes"
+ },
+ {
+  "slug": "flamengo",
+  "palavra": "Flamengo",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "fluminense",
+  "palavra": "Fluminense",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "botafogo",
+  "palavra": "Botafogo",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "vasco",
+  "palavra": "Vasco",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "corinthians",
+  "palavra": "Corinthians",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "palmeiras",
+  "palavra": "Palmeiras",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "sao-paulo-futebol-clube",
+  "palavra": "São Paulo FC",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "santos",
+  "palavra": "Santos",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "gremio",
+  "palavra": "Grêmio",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "internacional",
+  "palavra": "Internacional",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "athletico-paranaense",
+  "palavra": "Athletico Paranaense",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "avai",
+  "palavra": "Avaí",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "figueirense",
+  "palavra": "Figueirense",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "chapecoense",
+  "palavra": "Chapecoense",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "atletico-mineiro",
+  "palavra": "Atlético Mineiro",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "cruzeiro",
+  "palavra": "Cruzeiro",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "esporte-clube-bahia",
+  "palavra": "Bahia",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "fortaleza",
+  "palavra": "Fortaleza",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "sport-recife",
+  "palavra": "Sport Recife",
+  "categoria": "Times",
+  "bloco": "times"
+ },
+ {
+  "slug": "ceara-sporting-club",
+  "palavra": "Ceará SC",
+  "categoria": "Times",
+  "bloco": "times"
+ }
+]

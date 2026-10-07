@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZ7MN3KX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Página gerada por tools/sinais/build_pages.py a partir de sinal/sinais.json. Edite o JSON, não este arquivo. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{URL}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="{{URL}}">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+{{OG_MEDIA}}
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="LIBRAS.SE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@librasse">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+<link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4fd1c5">
+{{PRELOAD}}<script type="application/ld+json">
+{{JSONLD}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+{{FONTS_CSS}}
+{{VARS_CSS}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'M',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+{{HEADER_CSS}}
+/* Nav sempre sólida: o cabeçalho do verbete é escuro */
+#nav{background:rgba(240,250,250,.92);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05);padding:14px 0}
+{{UTILS_CSS}}
+.wn{max-width:880px;margin:0 auto;padding:0 40px;width:100%}
+/* Cabeçalho estilo verbete */
+.entry-header{background:var(--gc);padding:118px 0 52px;position:relative;overflow:hidden}
+.entry-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 50%,rgba(79,209,197,.12),transparent);pointer-events:none}
+.entry-header::after{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal);opacity:.55}
+.bc{font-size:.72rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:7px;margin-bottom:20px;flex-wrap:wrap}
+.bc a{color:rgba(255,255,255,.5);transition:color .2s}.bc a:hover{color:#fff}
+.bc svg{width:10px;height:10px;opacity:.4}
+.entry-cat{display:inline-flex;align-items:center;gap:6px;font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(79,209,197,.3);border-radius:var(--rpill);padding:5px 13px;margin-bottom:18px}
+.entry-word{font-family:'Playfair Display','Georgia',serif;font-size:clamp(3.2rem,8vw,6.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;margin-bottom:18px}
+.entry-word small{display:block;font-family:'M',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.02em;color:rgba(255,255,255,.55);margin-top:12px}
+.entry-meta-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.entry-pron{font-family:'EB Garamond','Georgia',serif;font-size:1.2rem;font-style:italic;color:rgba(255,255,255,.6)}
+.entry-class{font-family:'EB Garamond','Georgia',serif;font-size:1rem;font-style:italic;color:rgba(255,255,255,.45)}
+.entry-dot{color:rgba(255,255,255,.25)}
+.entry-def-preview{font-family:'EB Garamond','Georgia',serif;font-size:1.2rem;line-height:1.65;color:rgba(255,255,255,.75);max-width:620px;border-left:2px solid rgba(79,209,197,.4);padding-left:18px}
+/* Conteúdo */
+.content{padding:48px 0 80px}
+section+section{margin-top:52px}
+.sec-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--txm);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sec-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(127,172,173,.25),transparent)}
+/* Player */
+.player{display:flex;flex-direction:column;gap:20px;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px}
+.player-media{position:relative;aspect-ratio:16/9;border-radius:var(--rlg);overflow:hidden;background:#f0fafa}
+.player-grid{display:grid;grid-template-columns:1fr;gap:14px;align-items:center}
+.player-grid.com-ilustra{grid-template-columns:1.45fr 1fr}
+.ilustra{margin:0;display:flex;flex-direction:column;gap:6px}
+.ilustra img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;border-radius:var(--rlg);background:#f0fafa;display:block}
+.ilustra figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
+.player-vazio strong{color:#fff;font-size:1.05rem}
+.player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
+.player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
+.player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
+.player-desc{font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.65}
+.player-ctrls{display:flex;gap:8px;flex-wrap:wrap}
+.pbtn{display:inline-flex;align-items:center;gap:7px;font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p1);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.25);border-radius:var(--rpill);padding:9px 16px;cursor:pointer;transition:var(--tr)}
+.pbtn:hover{background:rgba(79,209,197,.16)}
+.pbtn[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.pbtn:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.pbtn svg{width:14px;height:14px}
+.player-credit{font-size:.75rem;color:var(--txm)}
+/* Definição */
+.def-card{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:32px 36px}
+.def-list{list-style:none;display:flex;flex-direction:column}
+.def-list li{display:grid;grid-template-columns:32px 1fr;gap:0 14px;padding:16px 0;align-items:start}
+.def-list li+li{border-top:1px dashed rgba(122,172,173,.2)}
+.def-num{font-family:'EB Garamond','Georgia',serif;font-size:1.4rem;font-weight:500;color:var(--teal-d);line-height:1.3}
+.def-text{font-family:'EB Garamond','Georgia',serif;font-size:1.15rem;line-height:1.65;color:var(--txt)}
+.def-text em{font-style:italic;color:var(--txs)}
+/* Dados do sinal */
+.dados-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dado-item{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;padding:18px 20px;box-shadow:var(--sh)}
+.dado-label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:6px}
+.dado-value{font-size:.9rem;font-weight:700;color:var(--p1)}
+/* Exemplos */
+.exemplos-list{display:flex;flex-direction:column;gap:10px}
+.exemplo-item{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:16px;padding:16px 22px;box-shadow:var(--sh);display:flex;align-items:baseline;gap:12px}
+.exemplo-n{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--teal-d);flex-shrink:0;line-height:1}
+.exemplo-text{font-family:'EB Garamond',serif;font-size:1.1rem;color:var(--txt);line-height:1.55}
+/* Atenção */
+.atencao-box{background:rgba(79,209,197,.06);border:1px solid rgba(79,209,197,.2);border-left:3px solid var(--teal-d);border-radius:16px;padding:20px 24px}
+.atencao-box p{font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.7}
+.atencao-box p+p{margin-top:8px}
+.atencao-box strong{font-weight:700;color:var(--p1)}
+/* Relacionados */
+.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rel-card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:var(--sh);transition:var(--tr);display:flex;flex-direction:column}
+.rel-card:hover{transform:translateY(-3px);box-shadow:var(--shm)}
+.rel-card img,.rel-card .rel-vazio{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f0fafa;display:block}
+.rel-card .rel-vazio{background:var(--gc)}
+.rel-card span{font-size:.85rem;font-weight:700;color:var(--p1);padding:10px 14px}
+.rel-all{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:.8rem;font-weight:700;color:var(--teal-d)}
+.rel-all:hover{color:var(--p1)}
+/* CTA */
+.cta-strip{background:var(--gc);border-radius:var(--rlg);padding:38px 42px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 100% 50%,rgba(79,209,197,.14),transparent);pointer-events:none}
+.cta-strip h2{font-size:1.15rem;font-weight:900;color:#fff;letter-spacing:-.02em;position:relative}
+.cta-strip p{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.6);margin-top:4px;position:relative}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap;position:relative}
+.bt{background:var(--teal-d);color:#fff}.bt:hover{background:var(--teal);transform:translateY(-2px)}
+.bo-d{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25)}.bo-d:hover{background:rgba(255,255,255,.08)}
+/* Reportar */
+.report-section{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:32px 36px}
+.report-section h2{font-size:1.05rem;font-weight:700;color:var(--p1);margin-bottom:6px}
+.report-section>p{font-size:.86rem;font-weight:300;color:var(--txs);margin-bottom:22px;line-height:1.6}
+.report-form{display:flex;flex-direction:column;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--txm)}
+.field select,.field textarea,.field input{font-family:'M',sans-serif;font-size:.88rem;color:var(--txt);background:#fff;border:1.5px solid rgba(14,53,56,.1);border-radius:14px;padding:12px 16px;outline:none;transition:border-color .2s;resize:none}
+.field select:focus,.field textarea:focus,.field input:focus{border-color:var(--teal-d)}
+.field textarea{min-height:96px;line-height:1.55}
+.report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
+.report-submit:hover{background:var(--teal-d)}
+.report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+{{FOOTER_CSS}}
+@media(max-width:860px){
+  .player{padding:12px}
+  .player-grid.com-ilustra{grid-template-columns:1fr}
+  .player-info{padding:0 4px 6px}
+  .dados-grid{grid-template-columns:repeat(2,1fr)}
+  .rel-grid{grid-template-columns:repeat(3,1fr)}
+  .form-row{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .wn{padding:0 22px}
+  .entry-header{padding:96px 0 40px}
+  .def-card,.report-section{padding:22px 20px}
+  .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+{{PROMO_CSS}}</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ7MN3KX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{{HEADER_HTML}}
+<main id="main-content">
+
+<header class="entry-header">
+  <div class="wn">
+    <nav class="bc" aria-label="Localização">
+      <a href="/">Início</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/sinal/">Sinais em Libras</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>{{PALAVRA}}</span>
+    </nav>
+    <span class="entry-cat">{{CATEGORIA}}</span>
+    <h1 class="entry-word">{{PALAVRA}}<small>em Libras</small></h1>
+    <div class="entry-meta-row">
+      <span class="entry-pron">{{PRON}}</span>
+      <span class="entry-dot">·</span>
+      <span class="entry-class">{{CLASSE}}</span>
+    </div>
+    <p class="entry-def-preview">{{RESUMO}}</p>
+  </div>
+</header>
+
+<div class="content">
+<div class="wn">
+
+  <section aria-labelledby="video-h">
+    <h2 class="sec-label" id="video-h">Veja o sinal</h2>
+{{PLAYER}}
+  </section>
+
+  <section aria-labelledby="def-h">
+    <h2 class="sec-label" id="def-h">Definição</h2>
+    <div class="def-card">
+      <ol class="def-list">
+{{DEFS}}
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="dados-h">
+    <h2 class="sec-label" id="dados-h">Dados do sinal</h2>
+    <div class="dados-grid">
+{{DADOS}}
+    </div>
+  </section>
+
+  <section aria-labelledby="ex-h">
+    <h2 class="sec-label" id="ex-h">Exemplos de uso</h2>
+    <div class="exemplos-list">
+{{EXEMPLOS}}
+    </div>
+  </section>
+
+  <section aria-labelledby="atencao-h">
+    <h2 class="sec-label" id="atencao-h">Atenção ao contexto</h2>
+    <div class="atencao-box">
+{{CONTEXTO}}
+    </div>
+  </section>
+
+  <section aria-labelledby="rel-h">
+    <h2 class="sec-label" id="rel-h">Outros sinais em Libras</h2>
+    <nav class="rel-grid" aria-label="Outros sinais">
+{{RELACIONADOS}}
+    </nav>
+    <a href="/sinal/" class="rel-all">Ver todos os sinais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+  </section>
+
+  <section aria-label="Tradução profissional em Libras">
+    <div class="cta-strip">
+      <div>
+        <h2>Quer usar Libras em um vídeo ou evento?</h2>
+        <p>Intérpretes humanos qualificados para vídeos, aulas, lives e conteúdos institucionais.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="https://huet.libras.se/" class="btn bt">Traduzir meu vídeo</a>
+        <a href="https://wa.me/5548996367511?text=Ol%C3%A1%2C+quero+traduzir+um+v%C3%ADdeo+para+Libras!" target="_blank" rel="noopener noreferrer" class="btn bo-d">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="report-h">
+    <div class="report-section">
+      <h2 id="report-h">Encontrou um problema neste sinal?</h2>
+      <p>Se você identificou uma imprecisão, uma variação regional não mencionada ou qualquer outro problema, nos conte. Sua contribuição melhora o conteúdo para toda a comunidade.</p>
+      <form class="report-form" id="reportForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="tipo">Tipo de problema</label>
+            <select id="tipo" name="tipo">
+              <option value="">Selecione…</option>
+              <option value="incorreto">Sinal incorreto ou impreciso</option>
+              <option value="regional">Variação regional não mencionada</option>
+              <option value="expressao">Problema com a expressão facial</option>
+              <option value="video">Problema no vídeo</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="email-report">E-mail (opcional)</label>
+            <input type="email" id="email-report" name="email" placeholder="seu@email.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="descricao">Descreva o problema</label>
+          <textarea id="descricao" name="descricao" placeholder="Explique o que observou sobre este sinal…"></textarea>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <button type="submit" class="report-submit">Enviar observação pelo WhatsApp</button>
+          <p class="report-ok" id="reportOk" role="status">Conclua o envio da mensagem na conversa do WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</div>
+</div>
+</main>
+
+{{FOOTER_HTML}}
+<script>
+{{BASE_JS}}
+/* Player do sinal: autoplay em loop (exceto com movimento reduzido), pausa e câmera lenta */
+(function () {
+  var v = document.getElementById('sinalVid');
+  if (!v) return;
+  var bPlay = document.getElementById('vPlay');
+  var bSlow = document.getElementById('vSlow');
+  var icoPause = bPlay.querySelector('svg').outerHTML;
+  var icoPlay = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>';
+  function sync() {
+    bPlay.innerHTML = (v.paused ? icoPlay : icoPause) + '<span>' + (v.paused ? 'Reproduzir' : 'Pausar') + '</span>';
+  }
+  v.addEventListener('play', sync);
+  v.addEventListener('pause', sync);
+  bPlay.addEventListener('click', function () { if (v.paused) { v.play().catch(function () {}); } else { v.pause(); } });
+  bSlow.addEventListener('click', function () {
+    var slow = v.playbackRate === 1;
+    v.playbackRate = slow ? 0.5 : 1;
+    bSlow.setAttribute('aria-pressed', String(slow));
+    if (v.paused) v.play().catch(function () {});
+  });
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) v.play().catch(sync);
+  sync();
+})();
+
+document.getElementById('reportForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var tipo = document.getElementById('tipo').value;
+  var desc = document.getElementById('descricao').value.trim();
+  if (!tipo && !desc) { document.getElementById('tipo').focus(); return; }
+  var message = 'Observação sobre {{URL}}\nTipo: ' + tipo + '\n' + desc;
+  window.open('https://wa.me/5548996367511?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+  document.getElementById('reportOk').style.display = 'block';
+});
+</script>
+{{PROMO_JS}}</body>
+</html>

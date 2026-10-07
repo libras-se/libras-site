@@ -1,0 +1,39 @@
+<script id="promo-js">
+(function(){
+  var b=document.getElementById('promo'),n=document.getElementById('nav'),x=document.getElementById('promo-x'),t=document.getElementById('promo-txt');
+  if(!b||!n)return;
+  var M=[
+    ['<strong>10% de desconto</strong> no nosso primeiro trabalho juntos. E que venham muitos!','<strong>10% de desconto</strong> no primeiro trabalho'],
+    ['Novo por aqui? Toma <strong>10% de desconto</strong> na primeira compra.','Novo por aqui? <strong>10% de desconto</strong>'],
+    ['Bora trabalhar juntos? Voc\u00ea j\u00e1 tem <strong>10% de desconto</strong>.','Bora? Voc\u00ea j\u00e1 tem <strong>10% de desconto</strong>'],
+    ['<strong>10% de desconto</strong> pra come\u00e7ar. Tudo pronto, vamos?','<strong>10% de desconto</strong> pra come\u00e7ar. Vamos?'],
+    ['Primeira vez no Libras.se? Sua compra sai com <strong>10% de desconto</strong>.','Primeira compra com <strong>10% de desconto</strong>'],
+    ['Seu primeiro v\u00eddeo em Libras com <strong>10% de desconto</strong>. Partiu?','Primeiro v\u00eddeo com <strong>10% de desconto</strong>']
+  ];
+  try{
+    var k=sessionStorage.getItem('lbPromoMsg');
+    var i=(k===null?Math.floor(Math.random()*M.length):parseInt(k,10))%M.length;
+    if(i<0||isNaN(i))i=0;
+    if(t)t.innerHTML='<span class="pm-l">'+M[i][0]+'</span><span class="pm-s">'+M[i][1]+'</span>';
+    sessionStorage.setItem('lbPromoMsg',String((i+1)%M.length));
+  }catch(e){}
+  var raf=false;
+  function place(){n.style.top=Math.max(0,b.offsetHeight-(window.scrollY||window.pageYOffset||0))+'px';raf=false}
+  window.addEventListener('scroll',function(){if(!raf){raf=true;requestAnimationFrame(place)}},{passive:true});
+  window.addEventListener('resize',place);
+  place();
+  if(document.documentElement.classList.contains('promo-first')){
+    setTimeout(function(){
+      b.classList.add('show');
+      try{sessionStorage.setItem('lbPromoSeen','1')}catch(e){}
+    },2000);
+  }
+  if(x)x.addEventListener('click',function(){
+    try{sessionStorage.setItem('lbPromoOff','1')}catch(e){}
+    n.style.transition='top .45s cubic-bezier(.4,0,.2,1)';
+    b.classList.add('gone');
+    n.style.top='0px';
+    setTimeout(function(){n.style.transition='';document.documentElement.classList.add('promo-off');place()},500);
+  });
+})();
+</script>

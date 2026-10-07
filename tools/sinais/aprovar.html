@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aprovação de sinais · LIBRAS.SE</title>
+<style>
+:root{--bg:#f0fafa;--card:#fff;--p1:#0e3538;--p3:#2a6069;--teal:#4fd1c5;--teal-d:#2eb8c0;--txt:#12393d;--txs:#3d6063;--txm:#7aacad;
+--ok:#16a34a;--warn:#d97706;--bad:#dc2626;--old:#7c3aed;--line:rgba(14,53,56,.1)}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);font-size:14px}
+button,select,input,textarea{font:inherit}
+header{position:sticky;top:0;z-index:10;background:var(--p1);color:#fff;padding:10px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{font-size:15px;margin:0;font-weight:800;letter-spacing:.02em}
+header h1 b{background:linear-gradient(130deg,#1aa8b0,#4fd1c5,#81e6d9);-webkit-background-clip:text;color:transparent}
+.prog{display:flex;gap:6px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;cursor:pointer}
+.pill.on{background:#fff;color:var(--p1)}
+.pill i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.bar{height:6px;flex:1 1 160px;min-width:120px;background:rgba(255,255,255,.12);border-radius:9px;overflow:hidden;display:flex}
+.bar span{display:block;height:100%}
+.filters{display:flex;gap:8px;align-items:center;margin-left:auto;flex-wrap:wrap}
+.filters select,.filters input{border-radius:8px;border:none;padding:6px 8px}
+.filters label{font-size:12px;display:flex;gap:4px;align-items:center}
+.btn{border:1.5px solid var(--line);background:#fff;color:var(--p1);border-radius:9px;padding:7px 12px;font-weight:700;cursor:pointer}
+.btn:hover{border-color:var(--teal-d)}
+.btn.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.btn.warn{background:var(--warn);border-color:var(--warn);color:#fff}
+.btn.bad{background:var(--bad);border-color:var(--bad);color:#fff}
+.btn.dark{background:var(--p1);border-color:var(--p1);color:#fff}
+.btn small{opacity:.7;font-weight:600;margin-left:4px}
+main{padding:18px}
+/* grade */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(10,34,37,.07);cursor:pointer;border:2px solid transparent}
+.card:hover{border-color:var(--teal)}
+.card .th{position:relative;aspect-ratio:16/9;background:#e3f2f1}
+.card .th img,.card .th video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .bd{padding:8px 10px}
+.card h3{margin:0 0 4px;font-size:14px}
+.st{display:inline-block;border-radius:99px;padding:2px 8px;font-size:11px;font-weight:800;color:#fff}
+.st.pendente{background:#94a3b8}.st.aprovado{background:var(--ok)}.st.ajustar{background:var(--warn)}.st.regravar{background:var(--bad)}.st.desatualizado{background:var(--old)}
+.al{display:inline-block;border-radius:6px;padding:1px 6px;font-size:10.5px;font-weight:700;background:#fef3c7;color:#92400e;margin:2px 2px 0 0}
+.al.info{background:#e0f2fe;color:#075985}
+.meta{font-size:11.5px;color:var(--txm)}
+/* foco */
+.foco{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;align-items:start}
+.nav{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.nav .pos{color:var(--txs);font-weight:600}
+.stage{position:relative;aspect-ratio:16/9;background:#e3f2f1;border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(10,34,37,.1)}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:transform .05s}
+.stage.lupa{cursor:zoom-out}.stage.lupa video{transform:scale(2.6)}
+.stage .vazio{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--txm);font-weight:700;text-align:center;padding:20px}
+.ctrls{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap;align-items:center}
+.ctrls .t{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--txs);font-size:12px}
+.takes{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+.take{width:200px;background:#fff;border-radius:10px;border:2px solid var(--line);padding:6px;cursor:pointer;font-size:12px}
+.take.sel{border-color:var(--p1);box-shadow:0 0 0 2px var(--teal)}
+.take img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;background:#e3f2f1;display:block}
+.take b{display:block;margin:4px 0 2px}
+.take .lk{font-size:11px;color:var(--teal-d);font-weight:700;background:none;border:none;padding:0;cursor:pointer;margin-top:4px}
+.side{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 12px rgba(10,34,37,.07);position:sticky;top:70px}
+.side h2{font-size:26px;margin:0 0 2px;letter-spacing:-.02em}
+.side .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.side .acts .btn{padding:10px}
+.side textarea{width:100%;min-height:70px;border-radius:9px;border:1.5px solid var(--line);padding:8px;resize:vertical}
+.side .help{font-size:11.5px;color:var(--txm);line-height:1.6;margin-top:12px}
+.side .help kbd{background:#eef6f6;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:11px}
+.ajuste{background:#fff;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(10,34,37,.07);margin-top:6px}
+.ajuste h3{margin:0 0 8px;font-size:14px}
+.ajuste .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.ajuste input[type=number]{width:96px;border-radius:8px;border:1.5px solid var(--line);padding:5px 6px;font-variant-numeric:tabular-nums}
+.ajuste video{width:100%;max-width:640px;border-radius:10px;background:#000;display:block}
+.ilu{background:#fff;border-radius:14px;padding:14px;box-shadow:0 2px 12px rgba(10,34,37,.07);margin:6px 0 14px}
+.ilu h3{margin:0 0 8px;font-size:14px;display:flex;gap:8px;align-items:center}
+.ilu .row{display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start}
+.ilu img{width:100%;border-radius:10px;background:#e3f2f1;display:block}
+.ilu .vers{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.ilu .vers button{padding:4px 10px}
+.ilu .vers button.sel{background:var(--p1);color:#fff;border-color:var(--p1)}
+.ilu textarea{width:100%;min-height:54px;border-radius:9px;border:1.5px solid var(--line);padding:8px;resize:vertical}
+.ilu .gerando{background:#ecfeff;border:1px solid #a5f3fc;border-radius:9px;padding:10px;font-weight:700;color:#0e7490}
+.dica{background:#fefce8;border:1px solid #fde68a;border-radius:9px;padding:8px 10px;font-size:12.5px;margin:6px 0}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--p1);color:#fff;border-radius:10px;padding:10px 16px;font-weight:700;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}.toast.erro{background:var(--bad)}
+.busy{position:fixed;inset:0;background:rgba(240,250,250,.6);display:none;align-items:center;justify-content:center;z-index:40;font-weight:800;color:var(--p1)}
+.busy.on{display:flex}
+@media(max-width:980px){.foco{grid-template-columns:1fr}.side{position:static}}
+</style>
+</head>
+<body>
+<header>
+  <h1><b>LIBRAS.SE</b> · Aprovação de sinais</h1>
+  <div class="prog" id="prog"></div>
+  <div class="bar" id="bar" title="Progresso da aprovação"></div>
+  <div class="filters">
+    <select id="fBloco" aria-label="Bloco"><option value="">Todos os blocos</option></select>
+    <label><input type="checkbox" id="fAlerta"> só com alerta</label>
+    <input id="fBusca" type="search" placeholder="Buscar palavra" aria-label="Buscar">
+    <button class="btn" id="bModo">Modo foco</button>
+  </div>
+</header>
+<main id="main"></main>
+<div class="toast" id="toast" role="status"></div>
+<div class="busy" id="busy">Renderizando o corte…</div>
+<script>
+const $ = s => document.querySelector(s);
+const FPS = 30000 / 1001;
+const COR = {pendente:'#94a3b8', aprovado:'#16a34a', ajustar:'#d97706', regravar:'#dc2626', desatualizado:'#7c3aed'};
+const ROTULO_AL = {variante:'variante "ou"', inferido:'sem fala (inferido)', tomada_sem_fala:'tomada sem fala', longo:'longo', borda_topo:'mão no topo do quadro',
+  chroma_suspeito:'recorte suspeito', nao_encontrado:'não encontrado', manual:'corte manual', extra:'criado na aprovação', sem_sinal:'sem sinal'};
+let S = {itens: [], arquivos: []}, F = {status: '', bloco: '', alerta: false, busca: ''}, modo = 'grade', idx = 0, lupa = false, slow = false, ajusteAberto = false;
+
+const statusDe = it => it.decisao.desatualizado ? 'desatualizado' : it.decisao.status;
+const takeSel = it => it.takes.find(t => t.n === it.decisao.tomada) || it.takes[it.takes.length - 1];
+const media = (it, t, ext) => t && t.meta ? `/media/rev/${it.slug}/t${t.n}.${ext}?v=${t.meta.assinatura}` : '';
+const alertas = it => {
+  const a = new Set(); it.takes.forEach(t => t.alertas.forEach(x => a.add(x)));
+  if (!it.takes.length) a.add('nao_encontrado');
+  if (it.takes.length > 1) a.add('tomadas:' + it.takes.length);
+  return [...a];
+};
+const alHtml = it => alertas(it).map(a => a.startsWith('tomadas:') ? `<span class="al info">${a.split(':')[1]} tomadas</span>` : `<span class="al">${ROTULO_AL[a] || a}</span>`).join('');
+const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+function filtrados() {
+  return S.itens.filter(it => (!F.status || statusDe(it) === F.status) && (!F.bloco || it.bloco === F.bloco)
+    && (!F.alerta || alertas(it).some(a => !a.startsWith('tomadas:') || it.variantes))
+    && (!F.busca || fold(it.palavra).includes(fold(F.busca))));
+}
+
+function toast(msg, erro) { const t = $('#toast'); t.textContent = msg; t.className = 'toast on' + (erro ? ' erro' : ''); clearTimeout(t._h); t._h = setTimeout(() => t.className = 'toast', 2200); }
+
+async function api(path, body) {
+  const r = await fetch(path, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)});
+  const j = await r.json();
+  if (!j.ok) { toast(j.erro || 'erro', true); throw new Error(j.erro); }
+  return j.res;
+}
+async function carregar() { S = await (await fetch('/api/estado')).json(); desenhar(); }
+
+function cabecalho() {
+  const cont = {pendente:0, aprovado:0, ajustar:0, regravar:0, desatualizado:0};
+  S.itens.forEach(it => cont[statusDe(it)]++);
+  const tot = S.itens.length;
+  $('#prog').innerHTML = `<span class="pill ${F.status === '' ? 'on' : ''}" data-st="">Todos ${tot}</span>` +
+    Object.entries(cont).filter(([k, v]) => v || k !== 'desatualizado').map(([k, v]) =>
+      `<span class="pill ${F.status === k ? 'on' : ''}" data-st="${k}"><i style="background:${COR[k]}"></i>${k} ${v}</span>`).join('');
+  $('#bar').innerHTML = Object.entries(cont).map(([k, v]) => `<span style="width:${100 * v / tot}%;background:${COR[k]}"></span>`).join('');
+  document.querySelectorAll('#prog .pill').forEach(p => p.onclick = () => { F.status = p.dataset.st; idx = 0; desenhar(); });
+  const sel = $('#fBloco');
+  if (sel.options.length === 1) [...new Set(S.itens.map(i => i.bloco))].forEach(b => sel.add(new Option(b, b)));
+  $('#bModo').textContent = modo === 'grade' ? 'Modo foco' : 'Ver grade';
+}
+
+function desenhar() {
+  cabecalho();
+  const lista = filtrados();
+  if (modo === 'grade') return grade(lista);
+  if (!lista.length) { $('#main').innerHTML = '<p>Nenhum item neste filtro.</p>'; return; }
+  idx = Math.max(0, Math.min(idx, lista.length - 1));
+  foco(lista[idx], lista);
+}
+
+function grade(lista) {
+  $('#main').innerHTML = `<div class="grid">${lista.map((it, i) => {
+    const t = takeSel(it), st = statusDe(it);
+    return `<div class="card" data-i="${i}"><div class="th">${t && t.meta ? `<img loading="lazy" src="${media(it, t, 'webp')}" alt="">` : ''}</div>
+      <div class="bd"><h3>${it.palavra} <span class="st ${st}">${st}</span></h3>
+      <div class="meta">${it.bloco} · ${it.categoria}${t && t.meta ? ` · ${t.meta.dur.toFixed(1)} s` : ''}</div>${alHtml(it)}
+      ${it.ilustracao.versoes.length || it.ilustracao.gerando ? `<span class="al info">ilustração: ${it.ilustracao.gerando ? 'gerando' : it.ilustracao.decisao.status}</span>` : ''}</div></div>`;
+  }).join('')}</div>`;
+  document.querySelectorAll('.card').forEach(c => {
+    const i = +c.dataset.i, it = lista[i], th = c.querySelector('.th');
+    c.onclick = () => { idx = i; modo = 'foco'; desenhar(); scrollTo(0, 0); };
+    c.onmouseenter = () => { const t = takeSel(it); if (!t || !t.meta || th.querySelector('video')) return;
+      const v = document.createElement('video'); v.src = media(it, t, 'mp4'); v.muted = v.loop = v.autoplay = true; v.playsInline = true; th.appendChild(v); };
+    c.onmouseleave = () => { const v = th.querySelector('video'); if (v) v.remove(); };
+  });
+}
+
+function fmt(x) { return (+x).toFixed(2); }
+
+function iluHtml(it) {
+  const I = it.ilustracao, d = I.decisao, aprovadoVideo = it.decisao.status === 'aprovado' && !it.decisao.desatualizado;
+  if (!aprovadoVideo && !I.versoes.length) return '';
+  const v = I.versoes.find(x => x.k === d.versao) || I.versoes[I.versoes.length - 1];
+  const st = v && v.desatualizada ? 'desatualizado' : d.status;
+  return `<div class="ilu" id="iluBox"><h3>Ilustração <span class="st ${st === 'refazer' ? 'ajustar' : st}">${st === 'refazer' ? 'refazer' : st}</span></h3>
+    ${I.gerando ? '<div class="gerando">Gerando no Codex… leva uns 2 minutos. A tela atualiza sozinha.</div>' : ''}
+    ${v ? `<div class="row"><img src="/media/ilu/${it.slug}/v${v.k}.png?t=${v.v}" alt="Ilustração v${v.k}">
+      <div><img src="/media/ilu/${it.slug}/v${v.k}-referencia.png?t=${v.v}" alt="Quadro de referência"><p class="meta">Quadro de referência enviado ao Codex${v.nota ? `<br>Nota usada: “${v.nota}”` : ''}</p>
+      ${v.desatualizada ? '<div class="dica">O corte do vídeo mudou depois desta ilustração. Gere de novo.</div>' : ''}</div></div>
+      <div class="vers">${I.versoes.map(x => `<button class="btn ${x.k === v.k ? 'sel' : ''}" data-ver="${x.k}">v${x.k}</button>`).join('')}</div>` :
+      (I.gerando ? '' : '<p class="meta">Ainda sem ilustração para este sinal.</p>')}
+    <div class="acts" style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+      ${v && !v.desatualizada ? '<button class="btn ok" id="iluOk">Aprovar ilustração <small>L</small></button>' : ''}
+      <button class="btn warn" id="iluGerar" ${I.gerando || !aprovadoVideo ? 'disabled' : ''}>${v ? 'Gerar de novo' : 'Gerar ilustração'} <small>G</small></button>
+    </div>
+    <label class="meta" for="iluNota">Nota para o Codex ao gerar de novo (ex.: “a mão final tem o dedo médio dobrado”, “o movimento é para frente e para trás”)</label>
+    <textarea id="iluNota">${d.nota || ''}</textarea></div>`;
+}
+
+function foco(it, lista) {
+  const t = takeSel(it), st = statusDe(it), d = it.decisao;
+  const dica = it.dica ? `<div class="dica">Sinal não encontrado automaticamente. Procure no bruto entre
+    <b>${it.dica.antes ? `${it.dica.antes.palavra} (${it.dica.antes.arquivo}, ${fmt(it.dica.antes.fim)} s)` : 'o início'}</b> e
+    <b>${it.dica.depois ? `${it.dica.depois.palavra} (${it.dica.depois.arquivo}, ${fmt(it.dica.depois.ini)} s)` : 'o fim'}</b>, marque início e fim e renderize.</div>` : '';
+  $('#main').innerHTML = `
+  <div class="nav"><button class="btn" id="bPrev">← Anterior</button><button class="btn" id="bNext">Próximo →</button>
+    <span class="pos">${idx + 1} de ${lista.length}</span><button class="btn" id="bProxPend">Próximo pendente ⇥</button></div>
+  <div class="foco"><div>
+    <div class="stage" id="stage">${t && t.meta ? `<video id="v" src="${media(it, t, 'mp4')}" poster="${media(it, t, 'webp')}" muted loop playsinline autoplay></video>`
+      : `<div class="vazio">${it.takes.length ? 'Tomada ainda não renderizada' : 'Sem tomada. Use “Ajustar corte” para marcar o trecho no bruto.'}</div>`}</div>
+    <div class="ctrls"><button class="btn" id="bPlay">❚❚ Pausar <small>espaço</small></button>
+      <button class="btn ${slow ? 'dark' : ''}" id="bSlow">0,5x <small>S</small></button>
+      <button class="btn" id="bFm">‹ quadro <small>,</small></button><button class="btn" id="bFp">quadro › <small>.</small></button>
+      <button class="btn ${lupa ? 'dark' : ''}" id="bLupa">Lupa no recorte <small>Z</small></button>
+      <span class="t" id="tempo"></span></div>
+    ${iluHtml(it)}
+    ${it.takes.length > 1 || it.takes.length === 1 ? `<div><b>Tomadas</b> <span class="meta">(clique ou tecle 1–9 para escolher qual publicar)</span></div>` : ''}
+    <div class="takes">${it.takes.map((tk, k) => `<div class="take ${tk === t ? 'sel' : ''}" data-n="${tk.n}">
+      ${tk.meta ? `<img src="${media(it, tk, 'webp')}" alt="">` : ''}<b>${k + 1}. Tomada ${tk.n}${tk.auto ? ' · sugerida' : ''}</b>
+      <span class="meta">ouvido: “${tk.ouvido || '—'}”${tk.meta ? ` · ${tk.meta.dur.toFixed(1)} s · ${tk.meta.arquivo} ${fmt(tk.meta.ini)}–${fmt(tk.meta.fim)}` : ''}</span><br>
+      ${tk.alertas.map(a => `<span class="al">${ROTULO_AL[a] || a}</span>`).join('')}${tk.ajustado ? '<span class="al info">corte ajustado</span>' : ''}
+      ${tk.meta ? `<button class="lk" data-extra="${tk.n}">Usar como outro sinal…</button>` : ''}</div>`).join('')}</div>
+    ${dica}
+    <div class="ajuste" id="ajuste" ${ajusteAberto || !it.takes.length ? '' : 'hidden'}>
+      <h3>Ajustar corte · tomada ${t ? t.n : 1}</h3>
+      <video id="px" controls preload="metadata"></video>
+      <div class="row"><label>Arquivo <select id="aArq">${S.arquivos.map(a => `<option ${t && t.meta && t.meta.arquivo === a ? 'selected' : ''}>${a}</option>`).join('')}</select></label>
+        <button class="btn" id="bTrecho">▶ Ver trecho com som</button></div>
+      <div class="row">Início <input type="number" step="0.01" id="aIni" value="${t && t.meta ? t.meta.ini : ''}">
+        <button class="btn" data-n="aIni:-0.1">−0,1</button><button class="btn" data-n="aIni:0.1">+0,1</button>
+        <button class="btn" id="bMarcaI">= agora <small>I</small></button></div>
+      <div class="row">Fim &nbsp;&nbsp;&nbsp;<input type="number" step="0.01" id="aFim" value="${t && t.meta ? t.meta.fim : ''}">
+        <button class="btn" data-n="aFim:-0.1">−0,1</button><button class="btn" data-n="aFim:0.1">+0,1</button>
+        <button class="btn" id="bMarcaO">= agora <small>O</small></button></div>
+      <div class="row"><button class="btn dark" id="bRender">Renderizar corte <small>Enter</small></button>
+        ${t && t.ajustado ? '<button class="btn" id="bDesfazer">Desfazer ajuste</button>' : ''}
+        <span class="meta">Depois de renderizar, o item volta a “pendente” para nova aprovação.</span></div>
+    </div>
+  </div>
+  <aside class="side">
+    <h2>${it.palavra}</h2><div class="meta">${it.bloco} · ${it.categoria} · <code>${it.slug}</code></div>
+    <div style="margin-top:8px"><span class="st ${st}">${st}</span> ${alHtml(it)}</div>
+    ${d.desatualizado ? '<div class="dica">O corte mudou depois da aprovação. Revise e aprove de novo.</div>' : ''}
+    <div class="acts">
+      <button class="btn ok" data-st="aprovado">Aprovar <small>A</small></button>
+      <button class="btn warn" data-st="ajustar">Ajustar <small>J</small></button>
+      <button class="btn bad" data-st="regravar">Regravar <small>R</small></button>
+      <button class="btn" data-st="pendente">Pendente <small>P</small></button>
+    </div>
+    <label class="meta" for="nota">Nota (o que ajustar, variante preferida…)</label>
+    <textarea id="nota">${d.nota || ''}</textarea>
+    <p class="meta">${d.aprovado ? `Aprovado em ${d.aprovado.em.replace('T', ' ').slice(0, 16)} (tomada ${d.aprovado.tomada})` : ''}</p>
+    <div class="help">Confira: <b>1.</b> é o sinal certo? <b>2.</b> começa e termina em repouso, sem cortar o sinal? <b>3.</b> o recorte do chroma está limpo (use a lupa nas mãos e no cabelo)?<br><br>
+      <kbd>A</kbd> aprovar e ir ao próximo pendente · <kbd>J</kbd> abrir ajuste · <kbd>R</kbd> regravar · <kbd>←</kbd><kbd>→</kbd> navegar · <kbd>1</kbd>–<kbd>9</kbd> tomada ·
+      <kbd>espaço</kbd> pausar · <kbd>S</kbd> 0,5x · <kbd>,</kbd><kbd>.</kbd> quadro a quadro · <kbd>Z</kbd> lupa · <kbd>I</kbd>/<kbd>O</kbd> marcar início/fim no bruto</div>
+  </aside></div>`;
+  ligarFoco(it, lista, t);
+}
+
+function ligarFoco(it, lista, t) {
+  const v = $('#v'), stage = $('#stage');
+  $('#bPrev').onclick = () => { idx = Math.max(0, idx - 1); desenhar(); };
+  $('#bNext').onclick = () => { idx = Math.min(lista.length - 1, idx + 1); desenhar(); };
+  $('#bProxPend').onclick = () => proxPendente(lista);
+  if (v) {
+    v.playbackRate = slow ? 0.5 : 1;
+    const upd = () => { if (!v.isConnected || !$('#bPlay')) return; $('#bPlay').innerHTML = (v.paused ? '▶ Tocar' : '❚❚ Pausar') + ' <small>espaço</small>';
+      $('#tempo').textContent = `${v.currentTime.toFixed(2)} / ${(v.duration || 0).toFixed(2)} s`; };
+    v.ontimeupdate = upd; v.onplay = upd; v.onpause = upd;
+    $('#bPlay').onclick = () => v.paused ? v.play() : v.pause();
+    $('#bFm').onclick = () => { v.pause(); v.currentTime = Math.max(0, v.currentTime - 1 / FPS); };
+    $('#bFp').onclick = () => { v.pause(); v.currentTime = Math.min(v.duration, v.currentTime + 1 / FPS); };
+    stage.classList.toggle('lupa', lupa);
+    stage.onmousemove = e => { if (!lupa) return; const r = stage.getBoundingClientRect();
+      v.style.transformOrigin = `${(e.clientX - r.left) / r.width * 100}% ${(e.clientY - r.top) / r.height * 100}%`; };
+  }
+  $('#bSlow').onclick = () => { slow = !slow; if (v) v.playbackRate = slow ? 0.5 : 1; $('#bSlow').classList.toggle('dark', slow); };
+  $('#bLupa').onclick = () => { lupa = !lupa; stage.classList.toggle('lupa', lupa); $('#bLupa').classList.toggle('dark', lupa); };
+  document.querySelectorAll('.take').forEach(el => el.onclick = e => {
+    if (e.target.dataset.extra) return;
+    escolher(it, +el.dataset.n);
+  });
+  document.querySelectorAll('[data-extra]').forEach(b => b.onclick = async e => {
+    e.stopPropagation();
+    const nome = prompt('Nome do novo sinal (ex.: Oi). A tomada vira um item próprio, com página e aprovação separadas.');
+    if (!nome) return;
+    busy(true);
+    try { const slug = await api('/api/extra', {origem: `${it.slug}#${b.dataset.extra}`, palavra: nome}); await carregar();
+      F.status = ''; F.busca = ''; $('#fBusca').value = ''; idx = filtrados().findIndex(x => x.slug === slug); desenhar(); toast(`Criado: ${nome}`); } finally { busy(false); }
+  });
+  document.querySelectorAll('.acts [data-st]').forEach(b => b.onclick = () => decidir(it, b.dataset.st, lista));
+  $('#nota').onchange = () => api('/api/decidir', {slug: it.slug, nota: $('#nota').value}).then(() => { it.decisao.nota = $('#nota').value; toast('Nota salva'); });
+  // ajuste
+  const px = $('#px'), arq = $('#aArq');
+  const abrirProxy = () => {
+    const a = arq.value; if (!a) return;
+    const alvo = +($('#aIni').value || (it.dica && it.dica.antes && it.dica.antes.fim) || 0);
+    if (!px.src.endsWith(encodeURIComponent(a) + '.mp4')) px.src = `/media/proxy/${encodeURIComponent(a)}.mp4`;
+    px.addEventListener('loadedmetadata', () => { px.currentTime = Math.max(0, alvo - 1.5); }, {once: true});
+    if (px.readyState >= 1) px.currentTime = Math.max(0, alvo - 1.5);
+  };
+  if (!t && it.dica) { const ref = it.dica.antes || it.dica.depois; if (ref) { arq.value = ref.arquivo; $('#aIni').value = ''; } }
+  if (!$('#ajuste').hidden) abrirProxy();
+  arq.onchange = abrirProxy;
+  document.querySelectorAll('[data-n]').forEach(b => { if (!b.dataset.n.includes(':')) return; b.onclick = () => {
+    const [id, dlt] = b.dataset.n.split(':'); const inp = $('#' + id); inp.value = (+inp.value + +dlt).toFixed(2); }; });
+  $('#bMarcaI').onclick = () => { $('#aIni').value = px.currentTime.toFixed(2); };
+  $('#bMarcaO').onclick = () => { $('#aFim').value = px.currentTime.toFixed(2); };
+  $('#bTrecho').onclick = () => { if (!px.src) abrirProxy(); const i = +$('#aIni').value, f = +$('#aFim').value;
+    px.currentTime = i - 0.3; px.play(); const stop = () => { if (px.currentTime >= f + 0.3) { px.pause(); px.removeEventListener('timeupdate', stop); } };
+    px.addEventListener('timeupdate', stop); };
+  $('#bRender').onclick = () => renderizar(it, t);
+  document.querySelectorAll('[data-ver]').forEach(b => b.onclick = async () => {
+    await api('/api/ilu/decidir', {slug: it.slug, versao: +b.dataset.ver, status: 'pendente'}); await carregar(); });
+  if ($('#iluOk')) $('#iluOk').onclick = async () => {
+    const v = it.ilustracao.decisao.versao || it.ilustracao.versoes[it.ilustracao.versoes.length - 1].k;
+    await api('/api/ilu/decidir', {slug: it.slug, versao: v, status: 'aprovado', nota: $('#iluNota').value}); toast('Ilustração aprovada'); await carregar(); };
+  if ($('#iluGerar')) $('#iluGerar').onclick = async () => {
+    await api('/api/ilu/gerar', {slug: it.slug, nota: $('#iluNota').value.trim()}); toast('Gerando no Codex…'); await carregar(); };
+  if ($('#bDesfazer')) $('#bDesfazer').onclick = async () => { busy(true);
+    try { await api('/api/desfazer', {slug: it.slug, tomada: t.n}); await carregar(); toast('Ajuste desfeito'); } finally { busy(false); } };
+}
+
+function busy(on) { $('#busy').classList.toggle('on', on); }
+async function escolher(it, n) { await api('/api/decidir', {slug: it.slug, tomada: n}); it.decisao.tomada = n; desenhar(); }
+async function decidir(it, st, lista) {
+  const t = takeSel(it);
+  if (st === 'aprovado' && !(t && t.meta)) return toast('Não há corte renderizado para aprovar', true);
+  if (st === 'ajustar') { ajusteAberto = true; }
+  await api('/api/decidir', {slug: it.slug, status: st, tomada: t ? t.n : null, nota: $('#nota').value});
+  toast({aprovado: 'Aprovado', ajustar: 'Marcado para ajuste', regravar: 'Marcado para regravar', pendente: 'Voltou a pendente'}[st]);
+  const slug = it.slug;
+  await carregar();
+  if (st === 'aprovado') { ajusteAberto = false; proxPendente(filtrados(), slug); }
+  else if (st === 'ajustar') { const l = filtrados(); idx = Math.max(0, l.findIndex(x => x.slug === slug)); desenhar(); $('#ajuste').hidden = false; }
+}
+function proxPendente(lista, desde) {
+  const from = desde ? lista.findIndex(x => x.slug === desde) : idx;
+  const n = lista.findIndex((x, i) => i > from && statusDe(x) === 'pendente');
+  if (n === -1) { toast('Não há mais pendentes depois deste'); idx = Math.max(0, Math.min(from, lista.length - 1)); }
+  else idx = n;
+  desenhar();
+}
+async function renderizar(it, t) {
+  const ini = +$('#aIni').value, fim = +$('#aFim').value;
+  if (!(fim > ini)) return toast('Fim precisa ser depois do início', true);
+  busy(true);
+  try { await api('/api/ajustar', {slug: it.slug, tomada: t ? t.n : 1, arquivo: $('#aArq').value, ini, fim}); ajusteAberto = true; await carregar(); toast('Corte renderizado. Confira e aprove.'); }
+  finally { busy(false); }
+}
+
+$('#bModo').onclick = () => { modo = modo === 'grade' ? 'foco' : 'grade'; desenhar(); };
+$('#fBloco').onchange = e => { F.bloco = e.target.value; idx = 0; desenhar(); };
+$('#fAlerta').onchange = e => { F.alerta = e.target.checked; idx = 0; desenhar(); };
+$('#fBusca').oninput = e => { F.busca = e.target.value; idx = 0; desenhar(); };
+
+document.addEventListener('keydown', e => {
+  if (modo !== 'foco' || e.metaKey || e.ctrlKey || e.altKey || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+    if (e.key === 'Enter' && document.activeElement.id && ['aIni', 'aFim'].includes(document.activeElement.id)) { e.preventDefault(); $('#bRender').click(); }
+    return;
+  }
+  const lista = filtrados(), it = lista[idx], k = e.key.toLowerCase(), v = $('#v');
+  const go = id => { const b = $(id); if (b) { e.preventDefault(); b.click(); } };
+  if (k === 'arrowright') go('#bNext'); else if (k === 'arrowleft') go('#bPrev');
+  else if (k === ' ') { e.preventDefault(); if (v) v.paused ? v.play() : v.pause(); }
+  else if (k === 'a') go('.acts [data-st="aprovado"]'); else if (k === 'j') go('.acts [data-st="ajustar"]');
+  else if (k === 'r') go('.acts [data-st="regravar"]'); else if (k === 'p') go('.acts [data-st="pendente"]');
+  else if (k === 's') go('#bSlow'); else if (k === 'z') go('#bLupa');
+  else if (k === 'l') go('#iluOk'); else if (k === 'g') { e.preventDefault(); const n = $('#iluNota'); if (n) n.focus(); }
+  else if (k === ',') go('#bFm'); else if (k === '.') go('#bFp');
+  else if (k === 'i') { $('#ajuste').hidden = false; go('#bMarcaI'); } else if (k === 'o') { $('#ajuste').hidden = false; go('#bMarcaO'); }
+  else if (k === 'enter' && !$('#ajuste').hidden) go('#bRender');
+  else if (/^[1-9]$/.test(k) && it && it.takes[+k - 1]) { e.preventDefault(); escolher(it, it.takes[+k - 1].n); }
+});
+carregar();
+// enquanto houver ilustração sendo gerada, atualiza o estado a cada 8 s (sem perder a posição)
+setInterval(async () => {
+  if (!S.itens.some(i => i.ilustracao.gerando)) return;
+  const novo = await (await fetch('/api/estado')).json();
+  const antes = S.itens.filter(i => i.ilustracao.gerando).map(i => i.slug).join();
+  const depois = novo.itens.filter(i => i.ilustracao.gerando).map(i => i.slug).join();
+  if (antes !== depois) { S = novo; desenhar(); }
+}, 8000);
+</script>
+</body>
+</html>

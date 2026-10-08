@@ -1,0 +1,244 @@
+<!--META
+{
+ "url": "/atividades/datilologia/",
+ "title": "Atividades de datilologia para imprimir, com gabarito",
+ "og_title": "Atividades de datilologia em Libras para imprimir",
+ "desc": "Gerador de atividades de datilologia para imprimir: descubra a palavra, caça-palavras com as mãos do alfabeto em Libras e ligue a mão à letra. Grátis.",
+ "og_image": "/assets/img/og/alfabeto-em-libras.webp",
+ "breadcrumb": [["Início", "/"], ["Atividades de Libras", "/atividades/"], ["Atividades de datilologia", "/atividades/datilologia/"]],
+ "jsonld": [
+  {
+   "@type": ["LearningResource", "WebApplication"],
+   "name": "Gerador de atividades de datilologia",
+   "url": "https://libras.se/atividades/datilologia/",
+   "description": "Ferramenta gratuita que gera fichas de datilologia (alfabeto manual da Libras) para imprimir, com gabarito: descubra a palavra, caça-palavras com mãos e ligue a mão à letra.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "learningResourceType": ["Exercício", "Atividade para imprimir"],
+   "educationalUse": "Prática do alfabeto manual",
+   "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"},
+   "applicationCategory": "EducationalApplication",
+   "operatingSystem": "Qualquer",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.tool{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:end}
+.cfg-grp{display:flex;flex-direction:column;gap:8px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:disabled{opacity:.35;cursor:not-allowed}
+.seg button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.hint{font-size:.8rem;color:var(--txm)}
+.preview{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.sheet{width:100%;max-width:760px;aspect-ratio:210/297;background:#fff;box-shadow:var(--shm);border-radius:6px;padding:5%;display:flex;flex-direction:column;gap:2.4%;color:#0e3538;font-family:'M',sans-serif;container-type:inline-size}
+.s-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.s-tit{font-weight:900;font-size:3.4cqw;letter-spacing:-.02em;line-height:1.1}
+.s-tit span{color:#1a9ca4}
+.s-sub{font-size:1.5cqw;color:#5d8487;margin-top:.5cqw}
+.s-nome{font-size:1.5cqw;color:#5d8487;border-bottom:1px solid #9cc;min-width:38%;padding-bottom:2px}
+.sheet-foot{margin-top:auto;display:flex;justify-content:space-between;gap:8px;font-size:1.25cqw;color:#5d8487;border-top:1px solid #d6eeec;padding-top:6px}
+.sheet-foot b{font-weight:900;color:#1a9ca4}
+/* Descubra a palavra */
+.desc{display:flex;flex-direction:column;justify-content:space-evenly;gap:1.6cqw;flex:1}
+.desc-l{display:flex;align-items:center;gap:2cqw;border-bottom:1px dashed #cde9e6;padding-bottom:1.6cqw}
+.desc-l .nr{font-weight:900;color:#1a9ca4;font-size:2cqw;width:3cqw}
+.desc-l .dat{font-size:9cqw;color:#0e3538;flex:1;letter-spacing:.06em}
+.desc-l .lin{width:32%;border-bottom:1.5px solid #9cc;height:5cqw;font-weight:900;font-size:2.6cqw;text-align:center;color:#1a9ca4}
+/* Caça-palavras com mãos */
+.cp{display:grid;border:2px solid #0e3538;border-radius:10px;overflow:hidden;align-self:center;width:92%;aspect-ratio:1}
+.cp>span{display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid #e1f2f0;border-bottom:1px solid #e1f2f0;line-height:1}
+.cp .dat{font-size:7cqw;color:#0e3538}
+.cp small{font-size:1.4cqw;font-weight:900;color:#1a9ca4;height:1.6cqw}
+.cp>span.on{background:#b2f5ea}
+.cp-pal{display:flex;flex-wrap:wrap;gap:1.2cqw;justify-content:center}
+.cp-pal span{font-size:1.9cqw;font-weight:900;border:1.5px solid #b8e3df;border-radius:999px;padding:.6cqw 2cqw}
+/* Ligue */
+.lig{display:grid;grid-template-columns:1fr 1fr;gap:6cqw;flex:1;align-content:start;margin-top:1cqw}
+.lig-col{display:grid;grid-template-columns:1fr 1fr;row-gap:4.4cqw;column-gap:14cqw;border:1.5px solid #b8e3df;border-radius:12px;padding:3cqw 3cqw}
+.lig-col .m{display:flex;align-items:center;justify-content:flex-end;gap:1.6cqw}
+.lig-col .m .dat{font-size:9cqw;color:#0e3538}
+.lig-col .l{display:flex;align-items:center;gap:1.6cqw;font-weight:900;font-size:4cqw}
+.lig-col i{width:1.6cqw;height:1.6cqw;border-radius:50%;background:#1a9ca4;display:inline-block;flex-shrink:0}
+.gab{display:flex;flex-wrap:wrap;gap:1.2cqw;justify-content:center}
+.gab span{font-size:1.9cqw;font-weight:700;background:#e8f6f5;border-radius:999px;padding:.6cqw 2cqw}
+.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tipos div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.tipos h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.tipos p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:900px){.tipos{grid-template-columns:1fr}}
+@media(max-width:520px){.panel{padding:18px 14px}}
+@media print{
+  @page{size:A4;margin:0}
+  .tool{padding:0}
+  .tool .w{padding:0;max-width:none}
+  .preview{margin:0;gap:0;display:block}
+  .sheet{width:210mm;height:297mm;max-width:none;aspect-ratio:auto;box-shadow:none;border-radius:0;padding:12mm;break-after:page;page-break-after:always}
+}
+</style>
+
+<section class="hero no-print" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Gerador grátis · com gabarito</span>
+    <h1 id="titulo">Atividades de <em>datilologia</em> para imprimir</h1>
+    <p class="hero-sub">Fichas com o alfabeto manual da Libras, montadas na hora: descubra a palavra soletrada, caça-palavras feito com as mãos e ligue a mão à letra. Escolha o tema, gere quantas versões quiser e imprima.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="tool" aria-labelledby="gerar">
+    <div class="w">
+      <div class="panel no-print">
+        <h2 id="gerar" class="cfg-lbl" style="margin-bottom:14px;font-size:.7rem">Monte a sua ficha</h2>
+        <div class="cfg">
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-tipo">Atividade</span><div class="seg" id="tipos" role="group" aria-labelledby="l-tipo">
+            <button type="button" data-t="descubra" aria-pressed="true">Descubra a palavra</button>
+            <button type="button" data-t="caca" aria-pressed="false">Caça-palavras com mãos</button>
+            <button type="button" data-t="ligue" aria-pressed="false">Ligue a mão à letra</button>
+          </div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-tema">Tema</span><div class="seg" id="temas" role="group" aria-labelledby="l-tema"></div></div>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn bp" id="gerarBtn">Gerar outra versão</button>
+          <button type="button" class="btn bw" id="imprimir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir ou salvar PDF
+          </button>
+          <span class="hint" id="resumo" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="preview" id="preview" aria-label="Prévia das folhas para impressão"></div>
+    </div>
+  </section>
+
+  <section class="sec no-print" aria-labelledby="t-tipos">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">As atividades</span>
+        <h2 id="t-tipos">Três jeitos de treinar o alfabeto manual</h2>
+        <p>Deixe o <a href="/aprender-libras/alfabeto-em-libras/" style="color:var(--teal-dd);font-weight:700">alfabeto em Libras</a> impresso ou projetado para consulta nas primeiras vezes.</p>
+      </div>
+      <div class="tipos">
+        <div><h3>Descubra a palavra</h3><p>Oito palavras soletradas com as mãos. O aluno lê a datilologia e escreve a palavra em português.</p></div>
+        <div><h3>Caça-palavras com mãos</h3><p>A grade é feita de mãos, não de letras. O aluno procura as palavras da lista na horizontal e na vertical.</p></div>
+        <div><h3>Ligue a mão à letra</h3><p>Dezesseis configurações de mão para ligar à letra certa. Ótima para a primeira semana com o alfabeto.</p></div>
+      </div>
+      <div class="note" style="margin-top:22px"><strong>Prefere tudo pronto?</strong> Baixe o <a href="/assets/materiais/caderno-de-atividades-de-datilologia.pdf" style="color:var(--teal-dd);font-weight:700" download>caderno de atividades de datilologia</a> em PDF, com várias atividades e o gabarito no fim.</div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:voce-sabe-o-que-e-datilologia,professora-aprende-libras-para-se-comunicar-com-estudante,papel-do-interprete-de-libras-na-escola-bilingue}}
+
+  <section class="sec no-print" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Mais atividades de Libras</h2>
+        <p>Bingo e caça-palavras com sinais ilustrados, flashcards e dinâmicas prontas para a sala de aula.</p>
+        <div class="cta-btns">
+          <a href="/atividades/" class="btn bt">Ver todas as atividades</a>
+          <a href="/jogos/desafio-da-datilologia/" class="btn bgh">Desafio da datilologia online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var DADOS = {{PALAVRAS_JSON}};
+  var ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ'.split('');
+  var $ = function(id){ return document.getElementById(id); };
+  var tipo = 'descubra', tema = 'animais';
+
+  function shuffle(a){ for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+  function soletra(p){ return p.toUpperCase().replace(/Ç/g, '\u0001').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\u0001/g, 'Ç').replace(/[^A-ZÇ]/g, ''); }
+  function rodape(){ return '<div class="sheet-foot"><span><b>LIBRAS.SE</b> · Atividades de datilologia · libras.se/atividades/datilologia</span><span>Material gratuito para uso educativo. Mantenha este crédito.</span></div>'; }
+  function cab(tit, sub, nome){ return '<div class="s-head"><div><div class="s-tit">' + tit + '</div><div class="s-sub">' + sub + '</div></div>' + (nome ? '<span class="s-nome">Nome:</span>' : '') + '</div>'; }
+
+  Object.keys(DADOS.temas).forEach(function(k){
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.k = k; b.textContent = DADOS.temas[k].rotulo;
+    b.setAttribute('aria-pressed', k === tema ? 'true' : 'false'); $('temas').appendChild(b);
+  });
+  function seg(id, fn){
+    $(id).addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b || b.disabled) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      fn(b); gerar();
+    });
+  }
+  seg('tipos', function(b){ tipo = b.dataset.t; });
+  seg('temas', function(b){ tema = b.dataset.k; });
+
+  function palavras(max){
+    return shuffle(DADOS.temas[tema].palavras.filter(function(p){ return soletra(p).length <= max; }).slice());
+  }
+
+  function descubra(){
+    var ps = palavras(9).slice(0, 8), rot = DADOS.temas[tema].rotulo.toLowerCase();
+    var linhas = ps.map(function(p, k){ return '<div class="desc-l"><span class="nr">' + (k + 1) + '</span><span class="dat">' + soletra(p) + '</span><span class="lin"></span></div>'; }).join('');
+    var gab = ps.map(function(p, k){ return '<div class="desc-l"><span class="nr">' + (k + 1) + '</span><span class="dat">' + soletra(p) + '</span><span class="lin">' + p + '</span></div>'; }).join('');
+    return '<div class="sheet">' + cab('Descubra a <span>palavra</span>', 'Leia a palavra soletrada no alfabeto manual e escreva em português. Tema: ' + rot + '.', true) + '<div class="desc">' + linhas + '</div>' + rodape() + '</div>' +
+      '<div class="sheet">' + cab('Gabarito', 'Descubra a palavra · tema: ' + rot) + '<div class="desc">' + gab + '</div>' + rodape() + '</div>';
+  }
+
+  function caca(){
+    var T = 9, g = [], pos = {}, ok = [];
+    for (var r = 0; r < T; r++) { g.push([]); for (var c = 0; c < T; c++) g[r].push(''); }
+    palavras(T).slice(0, 10).forEach(function(p){
+      if (ok.length >= 6) return;
+      var W = soletra(p);
+      for (var t = 0; t < 300; t++) {
+        var d = Math.random() < .5 ? [0, 1] : [1, 0], r0 = Math.floor(Math.random() * T), c0 = Math.floor(Math.random() * T);
+        if (r0 + d[0] * (W.length - 1) >= T || c0 + d[1] * (W.length - 1) >= T) continue;
+        var cabe = true;
+        for (var k = 0; k < W.length; k++) { var x = g[r0 + d[0] * k][c0 + d[1] * k]; if (x && x !== W[k]) { cabe = false; break; } }
+        if (!cabe) continue;
+        for (k = 0; k < W.length; k++) { g[r0 + d[0] * k][c0 + d[1] * k] = W[k]; pos[(r0 + d[0] * k) + ',' + (c0 + d[1] * k)] = 1; }
+        ok.push(p); return;
+      }
+    });
+    for (r = 0; r < T; r++) for (c = 0; c < T; c++) if (!g[r][c]) g[r][c] = ABC[Math.floor(Math.random() * 26)];
+    function grade(gab){
+      var h = '<div class="cp" style="grid-template-columns:repeat(' + T + ',1fr)">';
+      for (var r = 0; r < T; r++) for (var c = 0; c < T; c++) h += '<span class="' + (gab && pos[r + ',' + c] ? 'on' : '') + '"><span class="dat">' + g[r][c] + '</span><small>' + (gab ? g[r][c] : '') + '</small></span>';
+      return h + '</div>';
+    }
+    var lista = '<div class="cp-pal">' + ok.map(function(p){ return '<span>' + p + '</span>'; }).join('') + '</div>';
+    var rot = DADOS.temas[tema].rotulo.toLowerCase();
+    return '<div class="sheet">' + cab('Caça-palavras <span>com mãos</span>', 'Encontre as palavras escritas com o alfabeto manual, na horizontal e na vertical. Tema: ' + rot + '.', true) + lista + grade(false) + rodape() + '</div>' +
+      '<div class="sheet">' + cab('Gabarito', 'Caça-palavras com mãos · tema: ' + rot) + lista + grade(true) + rodape() + '</div>';
+  }
+
+  function ligue(){
+    var ls = shuffle(ABC.slice()).slice(0, 16), blocos = [ls.slice(0, 8), ls.slice(8)];
+    function bloco(b, gab){
+      var dir = gab ? b.slice() : shuffle(b.slice());
+      return '<div class="lig-col">' + b.map(function(l, k){
+        return '<span class="m"><span class="dat">' + l + '</span><i></i></span><span class="l"><i></i>' + dir[k] + '</span>';
+      }).join('') + '</div>';
+    }
+    return '<div class="sheet">' + cab('Ligue a mão <span>à letra</span>', 'Ligue cada configuração de mão à letra correspondente do alfabeto.', true) + '<div class="lig">' + bloco(blocos[0]) + bloco(blocos[1]) + '</div>' + rodape() + '</div>' +
+      '<div class="sheet">' + cab('Gabarito', 'Ligue a mão à letra: cada mão ao lado da sua letra.') + '<div class="lig">' + bloco(blocos[0], true) + bloco(blocos[1], true) + '</div>' + rodape() + '</div>';
+  }
+
+  function gerar(){
+    $('temas').querySelectorAll('button').forEach(function(b){ b.disabled = tipo === 'ligue'; });
+    $('preview').innerHTML = tipo === 'descubra' ? descubra() : tipo === 'caca' ? caca() : ligue();
+    $('resumo').textContent = 'Duas folhas A4: a atividade e o gabarito.' + (tipo === 'ligue' ? ' Esta atividade usa o alfabeto todo, sem tema.' : '');
+  }
+
+  $('gerarBtn').addEventListener('click', gerar);
+  $('imprimir').addEventListener('click', function(){ document.fonts.ready.then(function(){ window.print(); }); });
+  gerar();
+})();
+</script>

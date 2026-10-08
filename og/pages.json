@@ -165,6 +165,48 @@
       "eyebrow": "Transparência",
       "lead": "Políticas", "accent": "LIBRAS.SE", "tail": "",
       "badge": false
+    },
+    {
+      "slug": "aprender-libras", "page": "aprender-libras/index.html", "theme": "deep",
+      "eyebrow": "Grátis e sem cadastro",
+      "lead": "Aprender", "accent": "Libras", "tail": "do jeito certo",
+      "badge": "Vídeos, jogos, atividades e cultura surda"
+    },
+    {
+      "slug": "cultura-surda", "page": "cultura-surda/index.html", "theme": "deep",
+      "eyebrow": "Guia completo",
+      "lead": "O que é", "accent": "cultura surda", "tail": "",
+      "badge": "História, identidade, datas e pessoas"
+    },
+    {
+      "slug": "jogos", "page": "jogos/index.html", "theme": "light",
+      "eyebrow": "Aprenda brincando",
+      "lead": "Jogos de", "accent": "Libras", "tail": "com sinais em vídeo",
+      "badge": "Memória, quiz e sinal do dia"
+    },
+    {
+      "slug": "atividades", "page": "atividades/index.html", "theme": "light",
+      "eyebrow": "Para professores",
+      "lead": "Atividades de", "accent": "Libras", "tail": "para imprimir",
+      "badge": "Bingo, caça-palavras e dinâmicas"
+    },
+    {
+      "slug": "materiais", "page": "materiais/index.html", "theme": "light",
+      "eyebrow": "PDF grátis",
+      "lead": "Materiais de", "accent": "Libras", "tail": "para baixar",
+      "badge": "Flashcards, guias e calendário"
+    },
+    {
+      "slug": "alfabeto-em-libras", "page": "aprender-libras/alfabeto-em-libras/index.html", "theme": "light",
+      "eyebrow": "A a Z · PDF grátis",
+      "lead": "Alfabeto", "accent": "em Libras", "tail": "para aprender e imprimir",
+      "badge": "Escreva o seu nome em Libras"
+    },
+    {
+      "slug": "numeros-em-libras", "page": "aprender-libras/numeros-em-libras/index.html", "theme": "light",
+      "eyebrow": "0 a 9 · cartaz grátis",
+      "lead": "Números", "accent": "em Libras", "tail": "",
+      "badge": "Algarismos para telefone, datas e documentos"
     }
   ]
 }

@@ -184,6 +184,36 @@ Artigos publicados (74 paginas indexaveis):
 - https://libras.se/blog/libras-tem-sotaque-e-giria/ - Libras tambem tem variacoes regionais, usos informais e sinais que mudam conforme comunidade, contexto e regiao. Entenda por que isso nao e erro.
 - https://libras.se/blog/manifesto-por-libras-em-videos/ - O manifesto da LIBRAS.SE por videos acessiveis: por que incluir a janela de Libras e um passo essencial para trazer a comunidade surda para a sociedade.
 
+## Area educativa: Aprender Libras
+
+Conteudo gratuito, sem cadastro, feito com o vocabulario em video gravado por interpretes da LIBRAS.SE. Os sinais seguem a variante usada pela equipe em Santa Catarina; o site avisa que a Libras tem variacoes regionais. Use estas paginas quando a pessoa quiser aprender, praticar ou ensinar Libras, e o glossario quando a consulta for conceitual.
+
+- https://libras.se/aprender-libras/ - hub educativo: trilha em quatro passos (o que e Libras, primeiros sinais, pratica diaria, cultura surda) e mitos comuns.
+- https://libras.se/aprender-libras/sinais-basicos/ - 40 sinais essenciais em video por situacao (cortesia, pessoas, sentimentos, casa, mesa, verbos, comemoracoes) e primeiras frases em glosa, como EU GOSTAR CAFE.
+- https://libras.se/cultura-surda/ - guia de cultura surda: conceito, os 8 artefatos culturais de Karin Strobel, identidades surdas de Gladis Perlin, comunidade e povo surdo, linha do tempo (INES 1857, Flausino 1875, Milao 1880, FENEIS 1987, Lei 10.436/2002, Decreto 5.626/2005, Lei 12.319/2010, LBI 2015, ONU 2017, Lei 14.191/2021, Leis 14.704 e 14.768 de 2023), datas da comunidade, pessoas surdas de destaque, linguas de sinais pelo mundo, filmes e livros.
+- https://libras.se/jogos/ - hub de jogos: sinal do dia (/jogo/), jogo da memoria e quiz com videos, Jogo do Oi com camera, e jogos para imprimir.
+- https://libras.se/jogos/jogo-da-memoria-libras/ - jogo da memoria online que combina o sinal em video com a palavra, com temas e niveis.
+- https://libras.se/jogos/quiz-de-libras/ - quiz "que sinal e esse?": o video toca e o jogador escolhe a palavra entre quatro opcoes, com camera lenta.
+- https://libras.se/jogo/oi/ - jogo em que a pessoa faz o sinal de "oi" para a camera e a inteligencia artificial reconhece o gesto.
+- https://libras.se/atividades/ - atividades de Libras: geradores para imprimir, desafio de 7 dias, seis dinamicas para sala de aula e indicacao por etapa (educacao infantil a EJA e empresas).
+- https://libras.se/atividades/bingo-de-libras/ - gerador de cartelas de bingo com ilustracoes dos sinais e fichas de sorteio, em A4.
+- https://libras.se/atividades/caca-palavras-em-libras/ - gerador de caca-palavras com pistas em sinais ilustrados, tres niveis e gabarito.
+- https://libras.se/aprender-libras/alfabeto-em-libras/ - alfabeto manual da Libras (26 letras e o C cedilha; H, J, K, X, Z e C cedilha tem movimento), modo treino, gerador "meu nome em Libras" com plaquinha para imprimir. Desenhos feitos com a fonte Libras 2020, de uso autorizado pelo autor.
+- https://libras.se/aprender-libras/numeros-em-libras/ - algarismos de 0 a 9 em Libras e conversor; para quantidade, os numeros de 1 a 4 costumam ter outra forma.
+- https://libras.se/jogos/desafio-da-datilologia/ - jogo online: ler palavras soletradas no alfabeto manual e digitar a resposta (niveis facil, medio, dificil e numeros; palavra inteira ou uma letra por vez).
+- https://libras.se/atividades/datilologia/ - gerador de fichas de datilologia com gabarito: descubra a palavra, caca-palavras com maos e ligue a mao a letra.
+- https://libras.se/materiais/ - materiais em PDF gratuitos:
+  - https://libras.se/assets/materiais/alfabeto-em-libras-colorido.pdf - cartaz do alfabeto em Libras colorido.
+  - https://libras.se/assets/materiais/alfabeto-em-libras-para-colorir.pdf - alfabeto em Libras para colorir.
+  - https://libras.se/assets/materiais/alfabeto-em-libras-tira-de-mesa.pdf - tiras de mesa com o alfabeto.
+  - https://libras.se/assets/materiais/numeros-em-libras.pdf - cartaz dos numeros de 0 a 9.
+  - https://libras.se/assets/materiais/jogo-da-memoria-alfabeto-em-libras.pdf - jogo da memoria do alfabeto (54 cartas).
+  - https://libras.se/assets/materiais/caderno-de-atividades-de-datilologia.pdf - caderno com seis atividades de datilologia e gabarito.
+  - https://libras.se/assets/materiais/flashcards-de-libras.pdf - 47 flashcards com sinal ilustrado, palavra e endereco do video.
+  - https://libras.se/assets/materiais/guia-como-se-comunicar-com-pessoas-surdas.pdf - guia rapido de comunicacao com pessoas surdas e com interpretes.
+  - https://libras.se/assets/materiais/calendario-da-comunidade-surda.pdf - calendario anual das datas da comunidade surda.
+  - https://libras.se/assets/materiais/checklist-video-acessivel-em-libras.pdf - checklist para publicar videos com janela de Libras (inclui o tamanho minimo da ABNT NBR 15290).
+
 ## Glossario
 
 O glossario e uma area de referencia para termos de Libras, comunidade surda, acessibilidade audiovisual e legislacao. Deve ser priorizado quando a consulta for conceitual ou terminologica.

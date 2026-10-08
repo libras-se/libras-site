@@ -1,0 +1,300 @@
+<!--META
+{
+ "url": "/jogos/jogo-da-memoria-libras/",
+ "title": "Jogo da memória de Libras online, com sinais em vídeo",
+ "og_title": "Jogo da memória de Libras, com sinais em vídeo",
+ "desc": "Jogo da memória de Libras online e grátis: encontre o par entre o sinal em vídeo e a palavra. Escolha o tema, jogue no celular ou na sala de aula.",
+ "og_image": "/assets/img/og/jogo.webp",
+ "breadcrumb": [["Início", "/"], ["Jogos de Libras", "/jogos/"], ["Jogo da memória", "/jogos/jogo-da-memoria-libras/"]],
+ "jsonld": [
+  {
+   "@type": ["VideoGame", "LearningResource"],
+   "name": "Jogo da memória de Libras",
+   "url": "https://libras.se/jogos/jogo-da-memoria-libras/",
+   "description": "Jogo da memória online que combina sinais da Libras gravados em vídeo por intérprete profissional com as palavras correspondentes em português.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "genre": ["Jogo educativo", "Jogo da memória"],
+   "gamePlatform": "Navegador web",
+   "applicationCategory": "Game",
+   "operatingSystem": "Qualquer",
+   "educationalUse": "Prática de vocabulário",
+   "learningResourceType": "Jogo",
+   "teaches": "Vocabulário básico da Língua Brasileira de Sinais (Libras)",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.game-wrap{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:flex-end}
+.cfg-grp{display:flex;flex-direction:column;gap:8px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.hud{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 16px}
+.hud div{background:#fff;border:1px solid var(--border);border-radius:14px;padding:8px 16px;font-size:.72rem;color:var(--txm);font-weight:700;letter-spacing:.04em}
+.hud b{display:block;font-size:1.15rem;color:var(--p1);font-weight:900;letter-spacing:-.01em}
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.board.g16{grid-template-columns:repeat(4,1fr)}
+.board.g12{grid-template-columns:repeat(4,1fr)}
+.board.g20{grid-template-columns:repeat(5,1fr)}
+.card{position:relative;aspect-ratio:4/3;perspective:900px;border:none;background:none;padding:0;cursor:pointer;border-radius:18px;font-family:'M',sans-serif}
+.card:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.card .in{position:absolute;inset:0;transition:transform .45s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.card.up .in,.card.ok .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.back{background:var(--gc);box-shadow:var(--sh)}
+.back::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(79,209,197,.22),transparent 60%)}
+.back span{position:relative;font-weight:900;font-size:.82rem;letter-spacing:-.01em;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.9}
+.front{transform:rotateY(180deg);background:#fff;border:2px solid rgba(79,209,197,.25)}
+.front video,.front img{width:100%;height:100%;object-fit:cover;display:block;background:#f0fafa}
+.front .word{font-size:clamp(.9rem,2.2vw,1.35rem);font-weight:900;color:var(--p1);letter-spacing:-.02em;text-align:center;padding:8px;line-height:1.15}
+.front .kind{position:absolute;top:8px;left:8px;font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.7);border-radius:var(--rpill);padding:3px 8px}
+.front.txt .kind{background:rgba(79,209,197,.18);color:var(--teal-dd)}
+.card.ok .front{border-color:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+.card.no .front{border-color:#f87171;animation:shake .35s}
+@keyframes shake{0%,100%{transform:rotateY(180deg) translateX(0)}25%{transform:rotateY(180deg) translateX(-5px)}75%{transform:rotateY(180deg) translateX(5px)}}
+.game-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.end{display:none;margin-top:22px}
+.end:focus{outline:none}
+.end.show{display:block}
+.end h2{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;color:var(--p1);margin-bottom:6px}
+.end p{font-size:.92rem;color:var(--txs);font-weight:300;margin-bottom:16px}
+.rev{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.rev a{font-size:.78rem;font-weight:700;color:var(--teal-dd);background:rgba(79,209,197,.08);border:1px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:6px 13px}
+.rev a:hover{background:rgba(79,209,197,.16)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.how div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.how b{display:block;font-size:2rem;font-weight:900;color:var(--teal-d);line-height:1;margin-bottom:8px}
+.how h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.how p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:760px){.board.g20{grid-template-columns:repeat(4,1fr)}.how{grid-template-columns:1fr}}
+@media(max-width:520px){.board,.board.g12,.board.g16,.board.g20{grid-template-columns:repeat(3,1fr);gap:8px}.panel{padding:18px 14px}}
+</style>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Jogo grátis · sem cadastro</span>
+    <h1 id="titulo">Jogo da memória <em>de Libras</em></h1>
+    <p class="hero-sub">Vire as cartas e encontre o par: de um lado, o sinal em vídeo, feito por intérprete da LIBRAS.SE. Do outro, a palavra em português. Funciona no celular, no computador e no projetor da sala de aula.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="game-wrap" aria-label="Jogo">
+    <div class="w">
+      <div class="panel">
+        <div class="cfg">
+          <div class="cfg-grp">
+            <span class="cfg-lbl" id="lbl-tema">Tema</span>
+            <div class="seg" id="temas" role="group" aria-labelledby="lbl-tema"></div>
+          </div>
+          <div class="cfg-grp">
+            <span class="cfg-lbl" id="lbl-nivel">Nível</span>
+            <div class="seg" id="niveis" role="group" aria-labelledby="lbl-nivel">
+              <button type="button" data-n="6" aria-pressed="true">Fácil · 6 pares</button>
+              <button type="button" data-n="8" aria-pressed="false">Médio · 8 pares</button>
+              <button type="button" data-n="10" aria-pressed="false">Difícil · 10 pares</button>
+            </div>
+          </div>
+        </div>
+        <div class="hud" aria-label="Placar">
+          <div>Pares<b id="h-pares">0/6</b></div>
+          <div>Jogadas<b id="h-jog">0</b></div>
+          <div>Tempo<b id="h-tempo">0:00</b></div>
+          <div>Recorde<b id="h-rec">—</b></div>
+        </div>
+        <div class="board" id="board" aria-label="Cartas do jogo da memória"></div>
+        <div class="live" aria-live="polite" id="live"></div>
+        <div class="game-actions">
+          <button type="button" class="btn bp" id="novo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+            Nova partida
+          </button>
+        </div>
+        <div class="end" id="end" tabindex="-1">
+          <h2 id="end-t">Você conseguiu!</h2>
+          <p id="end-p"></p>
+          <span class="cfg-lbl">Reveja os sinais desta partida</span>
+          <div class="rev" id="rev"></div>
+          <div class="game-actions">
+            <button type="button" class="btn bp" id="denovo">Jogar de novo</button>
+            <a class="btn bw" id="share" href="#" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg>
+              Desafiar no WhatsApp
+            </a>
+            <a class="btn bo" href="/jogos/quiz-de-libras/">Tentar o quiz de sinais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="como">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Como jogar</span>
+        <h2 id="como">Três passos, nenhuma regra difícil</h2>
+      </div>
+      <div class="how">
+        <div><b>1</b><h3>Escolha o tema e o nível</h3><p>Sentimentos, comida, animais, rotina, verbos ou todos misturados. Comece com 6 pares e vá aumentando.</p></div>
+        <div><b>2</b><h3>Vire duas cartas</h3><p>Uma mostra o sinal em vídeo, a outra a palavra. Observe a configuração de mão, o movimento e a expressão facial.</p></div>
+        <div><b>3</b><h3>Forme todos os pares</h3><p>Quanto menos jogadas, melhor. No fim, reveja cada sinal no nosso vocabulário em vídeo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="sala">
+    <div class="wn">
+      <div class="sec-head">
+        <span class="lbl">Para professores</span>
+        <h2 id="sala">Na sala de aula</h2>
+      </div>
+      <div class="prose">
+        <p>Projete o jogo e divida a turma em duas equipes: cada equipe escolhe duas cartas por vez e, antes de virar a segunda, alguém da equipe precisa <strong>fazer o sinal</strong> que espera encontrar. Acertou o par e o sinal, ponto em dobro.</p>
+        <p>Quer levar para o papel? Em <a href="/atividades/">Atividades de Libras</a> você imprime as cartas do bingo e os flashcards com os mesmos sinais.</p>
+      </div>
+      <div class="note" style="margin-top:20px"><strong>Importante:</strong> os sinais deste jogo seguem a variante usada pela nossa equipe em Florianópolis (SC). A Libras tem variações regionais, então algumas palavras podem ter outro sinal na sua cidade. Isso não é erro, é <a href="/blog/libras-tem-sotaque-e-giria/" style="color:var(--teal-dd);font-weight:700">sotaque</a>.</div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:disney-lanca-jogos-que-ensinam-libras,librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar,como-sao-criados-sinais-de-pessoas-na-libras}}
+
+  <section class="sec" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Mais jogos e atividades de Libras</h2>
+        <p>Descubra o sinal do dia, teste seu vocabulário no quiz ou baixe materiais de estudo gratuitos.</p>
+        <div class="cta-btns">
+          <a href="/jogos/" class="btn bt">Ver todos os jogos</a>
+          <a href="/sinal/" class="btn bgh">Vocabulário em vídeo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var SINAIS = {{SINAIS_JSON}};
+  var VID = '/assets/videos/sinais/', ILU = '/assets/img/sinais/';
+  var TEMAS = [['', 'Todos'], ['Sentimentos', 'Sentimentos'], ['Alimentos', 'Comida'], ['Animais', 'Animais'], ['Cotidiano', 'Rotina e casa'], ['Verbos', 'Verbos'], ['Família e pessoas', 'Pessoas']];
+  var $ = function(id){ return document.getElementById(id); };
+  var board = $('board'), live = $('live');
+  var tema = '', pares = 6, deck = [], abertas = [], feitos = 0, jogadas = 0, t0 = 0, timer = null, travado = false;
+
+  function ls(k, v){ try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  function shuffle(a){ for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function fmt(s){ return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function chave(){ return 'lbse_memoria_' + (tema || 'todos') + '_' + pares; }
+  function recorde(){ var r = ls(chave()); $('h-rec').textContent = r ? r + ' jog.' : '—'; }
+
+  TEMAS.forEach(function(t, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = t[1]; b.dataset.t = t[0];
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    $('temas').appendChild(b);
+  });
+  function seg(id, fn){
+    $(id).addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      fn(b); novo();
+    });
+  }
+  seg('temas', function(b){ tema = b.dataset.t; });
+  seg('niveis', function(b){ pares = +b.dataset.n; });
+
+  function novo(){
+    clearInterval(timer); timer = null; t0 = 0; jogadas = 0; feitos = 0; abertas = []; travado = false;
+    $('end').classList.remove('show');
+    var pool = SINAIS.filter(function(s){ return !tema || s.c === tema; });
+    var n = Math.min(pares, pool.length);
+    var escolhidos = shuffle(pool.slice()).slice(0, n);
+    deck = [];
+    escolhidos.forEach(function(s){ deck.push({ s: s, tipo: 'v' }); deck.push({ s: s, tipo: 't' }); });
+    shuffle(deck);
+    board.className = 'board g' + deck.length;
+    board.innerHTML = '';
+    deck.forEach(function(c, i){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'card'; b.dataset.i = i;
+      b.setAttribute('aria-label', 'Carta ' + (i + 1) + ', virada para baixo');
+      var frente = c.tipo === 'v'
+        ? '<div class="face front"><span class="kind">Sinal</span><video muted loop playsinline preload="none" poster="' + VID + c.s.s + '.webp" src="' + VID + c.s.s + '.mp4"></video></div>'
+        : '<div class="face front txt"><span class="kind">Palavra</span><span class="word">' + c.s.p + '</span></div>';
+      b.innerHTML = '<div class="in"><div class="face back"><span>LIBRAS.SE</span></div>' + frente + '</div>';
+      board.appendChild(b);
+    });
+    $('h-pares').textContent = '0/' + n; $('h-jog').textContent = '0'; $('h-tempo').textContent = '0:00';
+    recorde();
+  }
+
+  function rotulo(b, c){
+    b.setAttribute('aria-label', 'Carta ' + (+b.dataset.i + 1) + ': ' + (c.tipo === 'v' ? 'sinal em vídeo' : 'palavra ' + c.s.p));
+  }
+
+  board.addEventListener('click', function(e){
+    var b = e.target.closest('.card');
+    if (!b || travado || b.classList.contains('up') || b.classList.contains('ok')) return;
+    if (!timer) { t0 = Date.now(); timer = setInterval(function(){ $('h-tempo').textContent = fmt(Math.round((Date.now() - t0) / 1000)); }, 1000); }
+    var c = deck[+b.dataset.i];
+    b.classList.add('up'); rotulo(b, c);
+    var v = b.querySelector('video'); if (v) { v.currentTime = 0; var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+    abertas.push(b);
+    if (abertas.length < 2) return;
+    jogadas++; $('h-jog').textContent = jogadas;
+    var a = abertas[0], z = abertas[1], ca = deck[+a.dataset.i], cz = deck[+z.dataset.i];
+    if (ca.s.s === cz.s.s && ca.tipo !== cz.tipo) {
+      [a, z].forEach(function(x){ x.classList.remove('up'); x.classList.add('ok'); x.setAttribute('aria-disabled', 'true'); });
+      feitos++; abertas = [];
+      setTimeout(function(){ [a, z].forEach(function(x){ var vv = x.querySelector('video'); if (vv) vv.pause(); }); }, 2600);
+      $('h-pares').textContent = feitos + '/' + (deck.length / 2);
+      live.textContent = 'Par encontrado: ' + ca.s.p + '.';
+      if (feitos === deck.length / 2) fim();
+    } else {
+      travado = true;
+      live.textContent = 'Não formam par.';
+      setTimeout(function(){ a.classList.add('no'); z.classList.add('no'); }, 700);
+      setTimeout(function(){
+        [a, z].forEach(function(x){
+          x.classList.remove('up', 'no');
+          x.setAttribute('aria-label', 'Carta ' + (+x.dataset.i + 1) + ', virada para baixo');
+          var vv = x.querySelector('video'); if (vv) vv.pause();
+        });
+        abertas = []; travado = false;
+      }, 1500);
+    }
+  });
+
+  function fim(){
+    clearInterval(timer); timer = null;
+    var seg = Math.round((Date.now() - t0) / 1000), n = deck.length / 2;
+    var r = +ls(chave()) || 0, novoRec = !r || jogadas < r;
+    if (novoRec) ls(chave(), String(jogadas));
+    recorde();
+    $('end-t').textContent = jogadas === n ? 'Memória perfeita!' : 'Você conseguiu!';
+    $('end-p').textContent = n + ' pares em ' + jogadas + ' jogadas e ' + fmt(seg) + (novoRec ? '. Novo recorde neste nível!' : '. Seu recorde aqui é ' + r + ' jogadas.');
+    var vistos = {}, rev = '';
+    deck.forEach(function(c){ if (!vistos[c.s.s]) { vistos[c.s.s] = 1; rev += '<a href="/sinal/' + c.s.s + '/">' + c.s.p + '</a>'; } });
+    $('rev').innerHTML = rev;
+    var txt = 'Fiz o jogo da memória de Libras em ' + jogadas + ' jogadas (' + n + ' pares). Consegue fazer melhor? https://libras.se/jogos/jogo-da-memoria-libras/';
+    $('share').href = 'https://wa.me/?text=' + encodeURIComponent(txt);
+    $('end').classList.add('show'); $('end').focus();
+    board.querySelectorAll('video').forEach(function(v){ v.pause(); });
+  }
+
+  $('novo').addEventListener('click', novo);
+  $('denovo').addEventListener('click', function(){ novo(); board.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+  novo();
+})();
+</script>

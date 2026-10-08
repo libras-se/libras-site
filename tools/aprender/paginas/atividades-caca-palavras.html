@@ -1,0 +1,237 @@
+<!--META
+{
+ "url": "/atividades/caca-palavras-em-libras/",
+ "title": "Caça-palavras de Libras para imprimir, com gabarito",
+ "og_title": "Caça-palavras de Libras para imprimir",
+ "desc": "Gerador de caça-palavras de Libras para imprimir: o aluno vê o sinal ilustrado e procura a palavra na grade. Três níveis, gabarito incluso, grátis.",
+ "og_image": "/assets/img/og/atividades.webp",
+ "breadcrumb": [["Início", "/"], ["Atividades de Libras", "/atividades/"], ["Caça-palavras de Libras", "/atividades/caca-palavras-em-libras/"]],
+ "jsonld": [
+  {
+   "@type": ["LearningResource", "WebApplication"],
+   "name": "Gerador de caça-palavras de Libras",
+   "url": "https://libras.se/atividades/caca-palavras-em-libras/",
+   "description": "Ferramenta gratuita que gera caça-palavras com pistas em sinais ilustrados da Libras e gabarito, prontos para imprimir.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "learningResourceType": ["Exercício", "Atividade para imprimir"],
+   "educationalUse": "Prática de vocabulário",
+   "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"},
+   "applicationCategory": "EducationalApplication",
+   "operatingSystem": "Qualquer",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.tool{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:end}
+.cfg-grp{display:flex;flex-direction:column;gap:8px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.hint{font-size:.8rem;color:var(--txm)}
+.preview{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.sheet{width:100%;max-width:760px;aspect-ratio:210/297;background:#fff;box-shadow:var(--shm);border-radius:6px;padding:5%;display:flex;flex-direction:column;gap:2.4%;color:#0e3538;font-family:'M',sans-serif}
+.s-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.s-tit{font-weight:900;font-size:clamp(13px,2.8vw,24px);letter-spacing:-.02em;line-height:1.1}
+.s-tit span{color:#1a9ca4}
+.s-sub{font-size:clamp(7px,1.3vw,11px);color:#5d8487;margin-top:3px}
+.s-nome{font-size:clamp(7px,1.3vw,11px);color:#5d8487;border-bottom:1px solid #9cc;min-width:38%;padding-bottom:2px}
+.grade{display:grid;border:2px solid #0e3538;border-radius:10px;overflow:hidden;align-self:center;width:78%;aspect-ratio:1}
+.grade span{display:flex;align-items:center;justify-content:center;font-weight:900;font-size:clamp(8px,1.9vw,16px);border-right:1px solid #e1f2f0;border-bottom:1px solid #e1f2f0;line-height:1}
+.grade span.on{background:#b2f5ea;color:#0e3538}
+.pistas{display:grid;grid-template-columns:repeat(5,1fr);gap:1.6%;flex:1;min-height:0;align-content:start}
+.pista{border:1.5px solid #b8e3df;border-radius:10px;display:flex;flex-direction:column;align-items:center;padding:3%;gap:4px;min-height:0}
+.pista img{width:100%;aspect-ratio:4/3;object-fit:contain}
+.pista .lin{width:90%;border-bottom:1px solid #9cc;height:clamp(9px,1.8vw,16px);font-size:clamp(6px,1.2vw,10px);font-weight:900;text-align:center;color:#0e3538}
+.pista b{font-size:clamp(7px,1.3vw,11px);font-weight:900}
+.gab-list{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.gab-list span{font-size:clamp(7px,1.3vw,11px);font-weight:700;background:#e8f6f5;border-radius:999px;padding:3px 10px}
+.sheet-foot{margin-top:auto;display:flex;justify-content:space-between;gap:8px;font-size:clamp(6px,1.1vw,9px);color:#5d8487;border-top:1px solid #d6eeec;padding-top:6px}
+.sheet-foot b{font-weight:900;color:#1a9ca4}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.steps div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.steps h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.steps p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:900px){.steps{grid-template-columns:1fr}}
+@media(max-width:520px){.panel{padding:18px 14px}}
+@media print{
+  @page{size:A4;margin:0}
+  .tool{padding:0}
+  .tool .w{padding:0;max-width:none}
+  .preview{margin:0;gap:0;display:block}
+  .sheet{width:210mm;height:297mm;max-width:none;aspect-ratio:auto;box-shadow:none;border-radius:0;padding:12mm;break-after:page;page-break-after:always}
+  .s-tit{font-size:20pt}.s-sub,.s-nome{font-size:9pt}.grade span{font-size:var(--fs-print,14pt)}.pista b,.gab-list span{font-size:9pt}.pista .lin{height:13pt;font-size:8pt}.sheet-foot{font-size:8pt}
+}
+</style>
+
+<section class="hero no-print" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Gerador grátis · com gabarito</span>
+    <h1 id="titulo">Caça-palavras <em>de Libras</em> para imprimir</h1>
+    <p class="hero-sub">Um caça-palavras diferente: em vez de uma lista de palavras, o aluno recebe os sinais ilustrados. Primeiro descobre qual é a palavra, depois procura na grade.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="tool" aria-labelledby="gerar">
+    <div class="w">
+      <div class="panel no-print">
+        <h2 id="gerar" class="cfg-lbl" style="margin-bottom:14px;font-size:.7rem">Monte o seu caça-palavras</h2>
+        <div class="cfg">
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-tema">Tema</span><div class="seg" id="temas" role="group" aria-labelledby="l-tema"></div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-niv">Nível</span><div class="seg" id="niveis" role="group" aria-labelledby="l-niv">
+            <button type="button" data-n="0" aria-pressed="true">Fácil</button><button type="button" data-n="1" aria-pressed="false">Médio</button><button type="button" data-n="2" aria-pressed="false">Difícil</button></div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-pis">Pistas</span><div class="seg" id="pistas" role="group" aria-labelledby="l-pis">
+            <button type="button" data-p="sinal" aria-pressed="true">Só o sinal</button><button type="button" data-p="ambos" aria-pressed="false">Sinal e palavra</button></div></div>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn bp" id="gerarBtn">Gerar outro</button>
+          <button type="button" class="btn bw" id="imprimir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir ou salvar PDF
+          </button>
+          <span class="hint" id="resumo" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="preview" id="preview" aria-label="Prévia das folhas para impressão"></div>
+    </div>
+  </section>
+
+  <section class="sec no-print" aria-labelledby="niveis-t">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Níveis</span>
+        <h2 id="niveis-t">Do primeiro contato ao desafio</h2>
+        <p>As palavras aparecem sem acento e sem espaço, como é costume em caça-palavras. "Eu te amo" vira EUTEAMO.</p>
+      </div>
+      <div class="steps">
+        <div><h3>Fácil</h3><p>Grade 10 × 10, seis palavras, só na horizontal e na vertical. Bom para os primeiros contatos com a Libras.</p></div>
+        <div><h3>Médio</h3><p>Grade 12 × 12, oito palavras, agora também na diagonal.</p></div>
+        <div><h3>Difícil</h3><p>Grade 14 × 14, dez palavras, em todas as direções, inclusive de trás para frente.</p></div>
+      </div>
+      <div class="note" style="margin-top:22px"><strong>Dica de aula:</strong> antes de entregar a folha, faça cada sinal das pistas para a turma, sem dizer a palavra. Depois que todos encontrarem as palavras, peça que cada aluno faça um dos sinais. Os vídeos de todos estão no nosso <a href="/sinal/" style="color:var(--teal-dd);font-weight:700">vocabulário de Libras</a>.</div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:tocantins-tem-libras-na-rede-estadual-de-ensino,librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar,o-que-e-libras}}
+
+  <section class="sec no-print" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Mais atividades de Libras</h2>
+        <p>Bingo com sinais, flashcards em PDF e dinâmicas prontas para a sala de aula.</p>
+        <div class="cta-btns">
+          <a href="/atividades/" class="btn bt">Ver todas as atividades</a>
+          <a href="/atividades/bingo-de-libras/" class="btn bgh">Bingo de Libras</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var FORA = ['cerveja', 'ele-ela'];
+  var SINAIS = {{SINAIS_JSON}}.filter(function(s){ return s.i && FORA.indexOf(s.s) < 0; });
+  var ILU = '/assets/img/sinais/';
+  var TEMAS = [
+    ['Todos os sinais', function(){ return true; }],
+    ['Sentimentos', function(s){ return s.c === 'Sentimentos'; }],
+    ['Rotina e casa', function(s){ return s.c === 'Cotidiano'; }],
+    ['Ações, comida e bichos', function(s){ return s.c === 'Verbos' || s.c === 'Alimentos' || s.c === 'Animais'; }]
+  ];
+  var NIVEIS = [
+    { t: 10, n: 6, dirs: [[0, 1], [1, 0]], nome: 'Fácil' },
+    { t: 12, n: 8, dirs: [[0, 1], [1, 0], [1, 1]], nome: 'Médio' },
+    { t: 14, n: 10, dirs: [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]], nome: 'Difícil' }
+  ];
+  var LETRAS = 'AAAAAEEEEEIIIOOOOUURRRSSSTTNNMMLLCCDDPPGBVFHQJZX';
+  var $ = function(id){ return document.getElementById(id); };
+  var tema = TEMAS[0], nivel = NIVEIS[0], pistas = 'sinal';
+
+  function shuffle(a){ for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+  function limpa(p){ return p.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z]/g, '').toUpperCase(); }
+
+  TEMAS.forEach(function(t, i){
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = t[0]; b.dataset.i = i;
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false'); $('temas').appendChild(b);
+  });
+  function seg(id, fn){
+    $(id).addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      fn(b); gerar();
+    });
+  }
+  seg('temas', function(b){ tema = TEMAS[+b.dataset.i]; });
+  seg('niveis', function(b){ nivel = NIVEIS[+b.dataset.n]; });
+  seg('pistas', function(b){ pistas = b.dataset.p; });
+
+  function montar(palavras, t, dirs){
+    var g = [], pos = {};
+    for (var r = 0; r < t; r++) { g.push([]); for (var c = 0; c < t; c++) g[r].push(''); }
+    var colocadas = [];
+    palavras.forEach(function(w){
+      var W = limpa(w.p);
+      for (var tent = 0; tent < 300; tent++) {
+        var d = dirs[Math.floor(Math.random() * dirs.length)];
+        var r0 = Math.floor(Math.random() * t), c0 = Math.floor(Math.random() * t);
+        var rf = r0 + d[0] * (W.length - 1), cf = c0 + d[1] * (W.length - 1);
+        if (rf < 0 || rf >= t || cf < 0 || cf >= t) continue;
+        var ok = true;
+        for (var i = 0; i < W.length; i++) { var x = g[r0 + d[0] * i][c0 + d[1] * i]; if (x && x !== W[i]) { ok = false; break; } }
+        if (!ok) continue;
+        for (i = 0; i < W.length; i++) { g[r0 + d[0] * i][c0 + d[1] * i] = W[i]; pos[(r0 + d[0] * i) + ',' + (c0 + d[1] * i)] = 1; }
+        colocadas.push(w); return;
+      }
+    });
+    for (r = 0; r < t; r++) for (c = 0; c < t; c++) if (!g[r][c]) g[r][c] = LETRAS[Math.floor(Math.random() * LETRAS.length)];
+    return { g: g, pos: pos, palavras: colocadas };
+  }
+
+  function grade(m, t, gabarito){
+    var h = '<div class="grade" style="grid-template-columns:repeat(' + t + ',1fr);--fs-print:' + (t > 12 ? 12 : 14) + 'pt">';
+    for (var r = 0; r < t; r++) for (var c = 0; c < t; c++) h += '<span class="' + (gabarito && m.pos[r + ',' + c] ? 'on' : '') + '">' + m.g[r][c] + '</span>';
+    return h + '</div>';
+  }
+  function rodape(){
+    return '<div class="sheet-foot"><span><b>LIBRAS.SE</b> · Caça-palavras de Libras · libras.se/atividades/caca-palavras-em-libras</span><span>Material gratuito para uso educativo. Mantenha este crédito.</span></div>';
+  }
+
+  function gerar(){
+    var t = nivel.t;
+    var pool = shuffle(SINAIS.filter(tema[1]).filter(function(s){ return limpa(s.p).length <= t; }));
+    var m = montar(pool.slice(0, nivel.n), t, nivel.dirs);
+    var ps = m.palavras.slice().sort(function(a, b){ return a.p.localeCompare(b.p, 'pt'); });
+    var pist = '<div class="pistas">' + shuffle(m.palavras.slice()).map(function(s){
+      return '<div class="pista"><img src="' + ILU + s.s + '.webp" alt="Sinal em Libras" loading="eager">' +
+        (pistas === 'ambos' ? '<b>' + s.p + '</b>' : '<span class="lin"></span>') + '</div>';
+    }).join('') + '</div>';
+    var instr = pistas === 'ambos' ? 'Encontre na grade as palavras dos sinais abaixo.' : 'Descubra a palavra de cada sinal, escreva embaixo e encontre na grade.';
+    var html = '<div class="sheet"><div class="s-head"><div><div class="s-tit">Caça-palavras de <span>Libras</span></div><div class="s-sub">' + instr + ' Nível ' + nivel.nome.toLowerCase() + ', ' + m.palavras.length + ' palavras.</div></div><span class="s-nome">Nome:</span></div>' +
+      grade(m, t, false) + pist + rodape() + '</div>';
+    html += '<div class="sheet"><div class="s-head"><div><div class="s-tit">Gabarito</div><div class="s-sub">Caça-palavras de Libras, nível ' + nivel.nome.toLowerCase() + '</div></div></div>' +
+      grade(m, t, true) + '<div class="gab-list">' + ps.map(function(s){ return '<span>' + s.p + '</span>'; }).join('') + '</div>' + rodape() + '</div>';
+    $('preview').innerHTML = html;
+    $('resumo').textContent = m.palavras.length + ' palavras numa grade ' + t + ' × ' + t + '. A segunda folha é o gabarito.';
+  }
+
+  $('gerarBtn').addEventListener('click', gerar);
+  $('imprimir').addEventListener('click', function(){
+    var imgs = Array.prototype.slice.call($('preview').querySelectorAll('img'));
+    Promise.all(imgs.map(function(i){ return i.complete ? 0 : new Promise(function(r){ i.onload = i.onerror = r; }); }))
+      .then(function(){ window.print(); });
+  });
+  gerar();
+})();
+</script>

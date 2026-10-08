@@ -1,0 +1,12 @@
+{
+  "_leia": "Palavras para os jogos e fichas de datilologia (alfabeto manual com a fonte Libras 2020). Acentos são ignorados na hora de soletrar; o Ç é mantido. Edite à vontade e rode python3 tools/aprender/build.py e pdf.py.",
+  "temas": {
+    "nomes": {"rotulo": "Nomes", "palavras": ["ANA", "BIA", "LEO", "DAVI", "LUNA", "CAIO", "THEO", "GAEL", "ALICE", "PEDRO", "LUCAS", "SOFIA", "LAURA", "JOÃO", "HELENA", "MIGUEL", "ARTHUR", "HEITOR", "CECÍLIA", "VALENTINA", "BERNARDO", "MARIANA", "GABRIEL", "ISABELA"]},
+    "animais": {"rotulo": "Animais", "palavras": ["GATO", "PATO", "SAPO", "VACA", "LEÃO", "URSO", "TATU", "ONÇA", "PEIXE", "COBRA", "ZEBRA", "ARARA", "CAVALO", "MACACO", "JACARÉ", "GIRAFA", "CORUJA", "BALEIA", "TUCANO", "COELHO", "TARTARUGA", "ELEFANTE", "CACHORRO", "BORBOLETA", "HIPOPÓTAMO", "PAPAGAIO"]},
+    "frutas": {"rotulo": "Frutas", "palavras": ["UVA", "KIWI", "CAJU", "MAÇÃ", "PERA", "FIGO", "MANGA", "AMORA", "BANANA", "MELÃO", "LIMÃO", "GOIABA", "CEREJA", "PITANGA", "LARANJA", "ABACAXI", "MORANGO", "ACEROLA", "MARACUJÁ", "MELANCIA", "JABUTICABA", "CARAMBOLA"]},
+    "escola": {"rotulo": "Escola", "palavras": ["AULA", "MESA", "LÁPIS", "LIVRO", "RÉGUA", "COLA", "CANETA", "QUADRO", "LANCHE", "ESCOLA", "CADERNO", "MOCHILA", "RECREIO", "TESOURA", "BORRACHA", "ESTOJO", "PROVA", "TAREFA", "DESENHO", "BIBLIOTECA"]},
+    "cores": {"rotulo": "Cores", "palavras": ["AZUL", "ROSA", "ROXO", "BEGE", "VERDE", "PRETO", "CINZA", "BRANCO", "MARROM", "LILÁS", "LARANJA", "AMARELO", "DOURADO", "PRATEADO", "VERMELHO", "TURQUESA"]},
+    "libras": {"rotulo": "Mundo da Libras", "palavras": ["SURDO", "SINAL", "MÃOS", "OLHAR", "LIBRAS", "OUVINTE", "GLOSA", "INES", "FENEIS", "LEGENDA", "JANELA", "CULTURA", "INTÉRPRETE", "COMUNIDADE", "DATILOLOGIA", "IDENTIDADE", "ACESSIBILIDADE", "BILINGUISMO"]}
+  },
+  "numeros": ["7", "12", "48", "190", "192", "1857", "2002", "2026", "2609", "2404", "1007", "3110", "500", "2512", "1500", "9090"]
+}

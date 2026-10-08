@@ -53,6 +53,15 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 - [Sinais em Libras](https://libras.se/sinal/): consulta de sinais por palavra, categoria ou contexto de uso.
 - [Desculpa em Libras](https://libras.se/sinal/desculpa/): pagina individual com video de referencia, definicao e exemplos.
 - [Jogo de Libras](https://libras.se/jogo/): experiencia interativa para descobrir e praticar sinais.
+- [Aprender Libras](https://libras.se/aprender-libras/): hub educativo gratuito, sem cadastro, que reune vocabulario em video, jogos, atividades, materiais em PDF e cultura surda.
+- [Sinais basicos em Libras](https://libras.se/aprender-libras/sinais-basicos/): 40 sinais essenciais em video organizados por situacao do dia a dia, com primeiras frases em glosa.
+- [Cultura surda](https://libras.se/cultura-surda/): guia sobre cultura surda, artefatos culturais (Karin Strobel), identidade surda (Gladis Perlin), linha do tempo da Libras, datas da comunidade, pessoas surdas de destaque, filmes e livros. Datas e leis conferidas em fontes oficiais.
+- [Jogos de Libras](https://libras.se/jogos/): sinal do dia, [jogo da memoria](https://libras.se/jogos/jogo-da-memoria-libras/) e [quiz](https://libras.se/jogos/quiz-de-libras/) com sinais em video, alem do [Jogo do Oi](https://libras.se/jogo/oi/) com reconhecimento por camera.
+- [Atividades de Libras](https://libras.se/atividades/): geradores de [bingo](https://libras.se/atividades/bingo-de-libras/) e [caca-palavras](https://libras.se/atividades/caca-palavras-em-libras/) para imprimir, desafio de 7 dias e dinamicas para sala de aula.
+- [Alfabeto em Libras](https://libras.se/aprender-libras/alfabeto-em-libras/): alfabeto manual de A a Z e o C cedilha, modo treino, gerador "meu nome em Libras" e PDFs (colorido, para colorir, tira de mesa).
+- [Numeros em Libras](https://libras.se/aprender-libras/numeros-em-libras/): algarismos de 0 a 9, conversor para treinar telefones e datas e cartaz em PDF; avisa que, para quantidade, os numeros de 1 a 4 costumam mudar.
+- [Desafio da datilologia](https://libras.se/jogos/desafio-da-datilologia/): jogo de leitura do alfabeto manual, com niveis e um modo de numeros. [Fichas de datilologia](https://libras.se/atividades/datilologia/) geram atividades para imprimir com gabarito.
+- [Materiais de Libras em PDF](https://libras.se/materiais/): flashcards de sinais, guia de comunicacao com pessoas surdas, calendario da comunidade surda e checklist de video acessivel, gratuitos e sem cadastro.
 
 ## Artigos do blog
 

@@ -387,6 +387,19 @@ Referência viva: `tradutor-de-libras-se-destaca-no-rock-in-rio/index.html`.
 
 ### CSS do artigo (`pa-*`)
 
+**Fonte sem pulo (obrigatório):**
+
+- Os `@font-face` da `'M'` usam `font-display:optional`, e não `swap`. As fontes já são pré-carregadas: se
+  a Museo chega a tempo, é usada; se não chega, a página fica com a fonte de espera até o fim, sem trocar
+  no meio da leitura. Na próxima página a Museo já vem do cache.
+- Logo depois deles entram as três regras `@font-face{font-family:'M-fb';src:local('Arial')…;size-adjust:…}`.
+  Copie de qualquer post de baixa complexidade.
+- Use `font-family:'M','M-fb',…` nos seletores. Nunca dentro do próprio `@font-face`, que só aceita um nome.
+
+Com `swap`, 27 dos 45 posts tinham CLS acima de 0,1 no celular: a linha de autor e datas quebrava diferente
+quando a Museo carregava. Vídeos no corpo do post também precisam de `width` e `height` com as medidas reais
+do arquivo, pelo mesmo motivo.
+
 ```css
 main{padding-top:80px}
 .pa-wrap{max-width:760px;margin:0 auto;padding:0 40px}

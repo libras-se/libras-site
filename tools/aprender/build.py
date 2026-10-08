@@ -10,6 +10,7 @@ Uso:  python3 tools/aprender/build.py          (gera tudo)
       python3 tools/aprender/build.py jogos     (só as fontes cujo nome começa com "jogos")
 """
 import html
+import importlib.util
 import json
 import re
 import sys
@@ -20,6 +21,9 @@ ROOT = HERE.parent.parent
 SITE = "https://libras.se"
 PARTIALS = {p.stem + "_" + p.suffix[1:]: p.read_text() for p in (ROOT / "tools/sinais/partials").iterdir() if p.is_file()}
 BASE_CSS = (HERE / "base.css").read_text()
+_spec = importlib.util.spec_from_file_location("home", ROOT / "tools/blog/home.py")
+home = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(home)  # miniaturas leves das capas do blog
 SKIP = '<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>'
 
 GTM = """<!-- Google Tag Manager -->
@@ -98,7 +102,8 @@ def leia_no_blog(slugs):
     cards = []
     for slug in slugs.split(","):
         p = post_blog(slug)
-        img = (f'<span class="lb-img"><img src="{p["img"]}" alt="" loading="lazy" decoding="async"></span>' if p["img"] else "")
+        img = (f'<span class="lb-img">{home.img({"slug": slug, "img": p["img"]}, (480, 960), "(max-width:640px) 92vw, 380px", alt="")}</span>'
+               if p["img"] else "")
         cards.append(f'<a class="lb-card" href="/blog/{slug}/">{img}<span class="lb-txt"><b>{esc(p["titulo"])}</b>'
                      f'<small>{esc(p["desc"][:120].rsplit(" ", 1)[0] + "…" if len(p["desc"]) > 120 else p["desc"])}</small></span></a>')
     return ('<section class="sec lb no-print" aria-labelledby="lb-t"><div class="w"><div class="sec-head"><span class="lbl">No blog</span>'

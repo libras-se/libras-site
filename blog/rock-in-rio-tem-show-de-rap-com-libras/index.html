@@ -94,10 +94,14 @@
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-700.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:swap}
-@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:swap}
-@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:swap}
-@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:swap}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:optional}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:optional}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:optional}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:1000;font-display:optional}
+/* M-fb: fonte de espera com as medidas da Museo (evita o texto pular quando a Museo carrega) */
+@font-face{font-family:'M-fb';src:local('Arial'),local('ArialMT'),local('Liberation Sans'),local('Arimo'),local('Helvetica');font-weight:300;size-adjust:98.4%;ascent-override:95.5%;descent-override:26.4%;line-gap-override:0%}
+@font-face{font-family:'M-fb';src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('Arimo Bold'),local('Helvetica Bold');font-weight:700;size-adjust:95.3%;ascent-override:98.6%;descent-override:27.3%;line-gap-override:0%}
+@font-face{font-family:'M-fb';src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('Arimo Bold'),local('Helvetica Bold');font-weight:900;size-adjust:97.6%;ascent-override:96.3%;descent-override:26.6%;line-gap-override:0%}
 :root{
   --bg:#f0fafa;--bg2:#e8f6f5;--bg3:#dff2f0;
   --p1:#0e3538;--p2:#154245;--p3:#2a6069;
@@ -119,13 +123,13 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'M',system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'M','M-fb',system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .skip-link{position:absolute;top:-100%;left:16px;background:var(--p1);color:#fff;padding:8px 16px;border-radius:0 0 var(--rmd) var(--rmd);font-size:.82rem;font-weight:700;z-index:9999;transition:top .2s}
 .skip-link:focus{top:0}
 .w{width:100%;max-width:1140px;margin:0 auto;padding:0 40px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:var(--rpill);font-family:'M',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;border:none;outline:none;transition:var(--tr);white-space:nowrap;position:relative;overflow:hidden}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:var(--rpill);font-family:'M','M-fb',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;border:none;outline:none;transition:var(--tr);white-space:nowrap;position:relative;overflow:hidden}
 .btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none}
 .btn:hover::after{transform:translateX(120%)}
 .btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
@@ -141,7 +145,7 @@ img{display:block;max-width:100%}
 @media(max-width:480px){.wppf span{display:none}.wppf{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center}}
 .mob{display:none;position:fixed;inset:0;background:rgba(5,20,24,.97);backdrop-filter:var(--blur-l);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px}
 .mob.open{display:flex}
-.mob a{font-family:'M',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
+.mob a{font-family:'M','M-fb',system-ui,sans-serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.78);transition:color .2s;text-decoration:none}
 .mob a:hover{color:var(--tl)}
 .mob-x{position:absolute;top:20px;right:24px;font-size:1.2rem;cursor:pointer;color:rgba(255,255,255,.45);background:none;border:none;padding:8px}
 .mob-x:focus-visible{outline:2px solid var(--teal);border-radius:4px}
@@ -149,10 +153,10 @@ img{display:block;max-width:100%}
 #nav.sc{padding:13px 0;background:rgba(240,250,250,.88);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);box-shadow:0 1px 0 rgba(79,209,197,.12),0 2px 20px rgba(10,34,37,.05)}
 .navi{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .nlogo{text-decoration:none;display:flex;align-items:center;gap:10px}
-.nlogo-txt{font-family:'M',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
-.nsub{font-family:'M',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.nlogo-txt{font-family:'M','M-fb',system-ui,sans-serif;font-weight:1000;font-size:1.5rem;background:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1}
+.nsub{font-family:'M','M-fb',system-ui,sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2a6069;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.2);border-radius:999px;padding:4px 10px;white-space:nowrap}
 .nlinks{display:flex;align-items:center;gap:22px;list-style:none}
-.nlinks a{font-family:'M',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
+.nlinks a{font-family:'M','M-fb',system-ui,sans-serif;font-size:.78rem;font-weight:700;color:#3d6063;transition:color .2s;position:relative;padding-bottom:2px;text-decoration:none}
 .nlinks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gb);border-radius:2px;transition:width .25s}
 .nlinks a:hover{color:var(--p1)}
 .nlinks a:hover::after{width:100%}
@@ -172,7 +176,7 @@ main{padding-top:80px}
 /* ── ARTICLE ── */
 .pa-wrap{max-width:760px;margin:0 auto;padding:0 40px}
 .pa-hero{padding:54px 0 30px}
-.pa-title{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.85rem,4.2vw,2.95rem);line-height:1.12;letter-spacing:-.025em;color:var(--p1);margin:18px 0 16px}
+.pa-title{font-family:'M','M-fb',sans-serif;font-weight:900;font-size:clamp(1.85rem,4.2vw,2.95rem);line-height:1.12;letter-spacing:-.025em;color:var(--p1);margin:18px 0 16px}
 .pa-sub{font-size:1.12rem;font-weight:300;color:var(--txs);line-height:1.6;margin-bottom:24px}
 .pa-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--txm)}
 .pa-meta strong{color:var(--txs);font-weight:700}
@@ -185,9 +189,9 @@ main{padding-top:80px}
 .pa-body strong{font-weight:700;color:var(--p1)}
 .pa-body a{color:var(--teal-dd);font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s}
 .pa-body a:hover{color:var(--p2)}
-.pa-body h2{font-family:'M',sans-serif;font-weight:900;font-size:1.5rem;color:var(--p1);margin:38px 0 14px;letter-spacing:-.02em}
-.pa-body h3{font-family:'M',sans-serif;font-weight:700;font-size:1.22rem;color:var(--p1);margin:30px 0 12px}
-.pa-body h4{font-family:'M',sans-serif;font-weight:700;font-size:1.05rem;color:var(--p2);margin:24px 0 10px}
+.pa-body h2{font-family:'M','M-fb',sans-serif;font-weight:900;font-size:1.5rem;color:var(--p1);margin:38px 0 14px;letter-spacing:-.02em}
+.pa-body h3{font-family:'M','M-fb',sans-serif;font-weight:700;font-size:1.22rem;color:var(--p1);margin:30px 0 12px}
+.pa-body h4{font-family:'M','M-fb',sans-serif;font-weight:700;font-size:1.05rem;color:var(--p2);margin:24px 0 10px}
 .pa-body blockquote{margin:28px 0;padding:18px 26px;border-left:4px solid var(--teal);background:var(--bg2);border-radius:0 var(--rmd) var(--rmd) 0;font-size:1.1rem;color:var(--p2);font-style:italic}
 .pa-body .pa-cap{font-size:.82rem;color:var(--txm);font-style:italic;margin:-12px 0 26px;line-height:1.5}
 .pa-web-comments{display:grid;gap:18px;justify-items:center;margin:0 0 28px}
@@ -201,7 +205,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-cta{margin:56px 0 0}
 .pa-cta__lead{background:var(--gc);border-radius:var(--rxl);padding:40px 38px;position:relative;overflow:hidden}
 .pa-cta__lead::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(79,209,197,.08);top:-120px;right:-80px;pointer-events:none}
-.pa-cta__lead h2{font-family:'M',sans-serif;font-weight:900;font-size:1.5rem;color:#fff;letter-spacing:-.02em;margin-bottom:10px;position:relative;z-index:1}
+.pa-cta__lead h2{font-family:'M','M-fb',sans-serif;font-weight:900;font-size:1.5rem;color:#fff;letter-spacing:-.02em;margin-bottom:10px;position:relative;z-index:1}
 .pa-cta__lead p{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:24px;max-width:460px;position:relative;z-index:1}
 .pa-cta__btns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
 .pa-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
@@ -213,7 +217,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-act__go{font-size:.78rem;font-weight:700;color:var(--teal-dd)}
 /* ── RELATED ── */
 .pa-related{margin:56px 0 8px}
-.pa-related h2{font-family:'M',sans-serif;font-weight:900;font-size:1.3rem;color:var(--p1);letter-spacing:-.02em;margin-bottom:20px}
+.pa-related h2{font-family:'M','M-fb',sans-serif;font-weight:900;font-size:1.3rem;color:var(--p1);letter-spacing:-.02em;margin-bottom:20px}
 .pa-rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pa-rel{background:#fff;border:1px solid var(--border);border-radius:var(--rlg);overflow:hidden;transition:var(--tr);display:flex;flex-direction:column}
 .pa-rel:hover{transform:translateY(-3px);box-shadow:var(--shm)}
@@ -231,7 +235,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
-.ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
+.ft-logo{font-family:'M','M-fb',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
 .ft-bp{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
 .ft-socs{display:flex;gap:7px}
 .ftsoc{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:var(--tr)}
@@ -370,7 +374,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <p class="pa-sub">Show de Papatinho e L7nnon contou com intérpretes de Libras no palco Sunset do Rock in Rio.</p>
       <div class="pa-meta">Por <a href="/autora/jessica-rodrigues/"><strong>Jéssica Rodrigues</strong></a><span class="dot"></span>Publicado em <time datetime="2022-09-04">4 de set. de 2022</time><span class="dot"></span>Atualizado em <time datetime="2026-06-04">4 de jun. de 2026</time><span class="dot"></span>1 min de leitura</div>
     </header>
-    <figure class="pa-fig"><video controls preload="metadata" poster="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.jpg" aria-label="Trecho do show de Papatinho e L7nnon no Rock in Rio com intérpretes de Libras"><source src="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.mp4" type="video/mp4"><picture><source srcset="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.webp" type="image/webp"><img src="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.jpg" alt="Rock in Rio tem show de rap com Libras" width="1920" height="1080" fetchpriority="high" decoding="async"></picture></video></figure>
+    <figure class="pa-fig"><video controls preload="metadata" poster="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.webp" aria-label="Trecho do show de Papatinho e L7nnon no Rock in Rio com intérpretes de Libras" width="1280" height="720"><source src="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.mp4" type="video/mp4"><picture><source srcset="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.webp" type="image/webp"><img src="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras.jpg" alt="Rock in Rio tem show de rap com Libras" width="1920" height="1080" fetchpriority="high" decoding="async"></picture></video></figure>
     <div class="pa-body">
 <p>O show de Papatinho e L7nnon fez história no Rock in Rio. Os rappers contaram com a preciosa presença de intérpretes de <a href="/glossario/libras/">Língua Brasileira de Sinais</a> (Libras) diretamente do Palco Sunset. Essa é a primeira vez que o festival de música no Brasil conta com esses profissionais. E é claro que foi um espetáculo à parte!</p>
 <p>Enquanto o público cantava e dançava ao som de sucessos como &quot;Amor de Fim de Noite&quot;, &quot;Lei do Retorno&quot; e &quot;Gratidão&quot;, os intérpretes mostravam um show inclusivo. Com isso, o público <a href="/glossario/surdo/">surdo</a> do festival conseguiu acompanhar de forma plena a apresentação - indo além da sensação da vibração dos sons.</p>

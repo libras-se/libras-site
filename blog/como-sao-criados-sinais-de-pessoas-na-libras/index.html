@@ -134,16 +134,19 @@
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,53,56,.28)}
   .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
   .ham span{display:block;width:21px;height:1.5px;background:#0e3538;border-radius:2px;transition:all .3s}
-  @media(max-width:768px){.nlinks,.nd .nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:999px;font-family:'M',system-ui,sans-serif;font-size:.8rem;font-weight:700;background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;text-decoration:none;white-space:nowrap;transition:all .3s}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
+  @media(max-width:768px){.nlinks,.nd .nav-cta{display:none}.ham{display:flex}#nav{padding:14px 22px}#nav.sc{padding:11px 22px}}
 
   .hero {
     min-height: 92vh; display: flex; flex-direction: column;
     justify-content: flex-end; position: relative; overflow: hidden; padding: 120px 0 0;
   }
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
-  .hero-bg picture, .hero-bg img {
+  .hero-bg picture, .hero-bg img, .hero-bg video {
     width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;
   }
+  .hero-bg img, .hero-bg video { position: absolute; inset: 0; }
+  .hero-bg video { height: calc(100% - 2px); opacity: 0; transition: opacity .6s; } /* um pouco menor que o quadro estático: o LCP continua sendo a imagem */
+  .hero-bg video.on { opacity: 1; }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(155deg,
@@ -461,10 +464,8 @@
 
 <section class="hero" aria-label="Cabeçalho do artigo">
   <div class="hero-bg">
-    <picture>
-      <source srcset="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif" type="image/avif">
-      <img src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif" alt="" aria-hidden="true" fetchpriority="high" width="1920" height="780">
-    </picture>
+    <img src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/librasgif-famosos-poster.webp" alt="" aria-hidden="true" fetchpriority="high" width="1280" height="520">
+    <video class="hero-bg-v" muted loop playsinline preload="none" aria-hidden="true" width="1280" height="520" data-src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.mp4"></video>
   </div>
   <div class="hero-noise"></div>
   <div class="hero-grid-overlay"></div>
@@ -523,7 +524,7 @@
 
   <div class="video-showcase reveal">
     <span class="video-tag">🤟 Exemplos de sinais pessoais</span>
-    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.avif">
+    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/librasgif-famosos-poster.webp" width="1280" height="520">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.mp4" type="video/mp4">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/LIBRASGIF-FAMOSOS.webm" type="video/webm">
     </video>
@@ -657,7 +658,7 @@
 
   <div class="video-showcase reveal">
     <span class="video-tag">🎵 Beyoncé em Libras</span>
-    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/beyonce - LIBRAS-SE_GIFS.avif">
+    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/beyonce-libras-se-gifs-poster.webp" width="1080" height="1080">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/beyonce - LIBRAS-SE_GIFS.mp4" type="video/mp4">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/beyonce - LIBRAS-SE_GIFS.webm" type="video/webm">
     </video>
@@ -670,7 +671,7 @@
 
   <div class="video-showcase reveal">
     <span class="video-tag">📺 Luciano Huck em Libras</span>
-    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/HUCK - LIBRAS-SE_GIFS.avif">
+    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/huck-libras-se-gifs-poster.webp" width="1080" height="1080">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/HUCK - LIBRAS-SE_GIFS.mp4" type="video/mp4">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/HUCK - LIBRAS-SE_GIFS.webm" type="video/webm">
     </video>
@@ -683,7 +684,7 @@
 
   <div class="video-showcase reveal">
     <span class="video-tag">✋ Joab, time LIBRAS.SE</span>
-    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.avif">
+    <video controls playsinline preload="metadata" poster="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/joab-libras-se-gifs-poster.webp" width="1080" height="1080">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.mp4" type="video/mp4">
       <source src="../../assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/JOAB - LIBRAS-SE_GIFS.webm" type="video/webm">
     </video>
@@ -851,6 +852,16 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach((el, i) => {
   el.style.transitionDelay = (i % 3 * 0.08) + 's';
   io.observe(el);
+});
+</script>
+<script>
+/* topo animado: o MP4 (leve) só carrega depois da página pronta, e não toca para quem prefere menos movimento */
+addEventListener('load', function () {
+  var v = document.querySelector('.hero-bg-v');
+  if (!v || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  v.addEventListener('playing', function () { v.classList.add('on'); }, { once: true });
+  v.src = v.dataset.src;
+  var p = v.play(); if (p && p.catch) p.catch(function () {});
 });
 </script>
 </body>

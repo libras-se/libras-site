@@ -43,3 +43,7 @@ CLIENTES/
 __pycache__/
 # carimbo local do publicar.py (origem da ilustração)
 assets/img/sinais/*.origem
+
+# relatório local da auditoria de SEO (gerado por tools/seo/auditoria.py)
+tools/seo/auditoria.json
+tools/seo/auditoria.csv

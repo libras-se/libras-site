@@ -1,0 +1,398 @@
+{
+ "_leia": "Estrutura de links internos e banners da LIBRAS.SE (tools/seo/links.py). 'banners': anúncios internos que vão no meio dos posts. 'banner_por_editoria': lista de banners de cada editoria (o post usa um deles, escolhido pelo slug). 'banner_por_post': exceções. 'solucoes': páginas comerciais ligadas a posts (aparecem no fim do post). 'do_blog': posts mostrados nas páginas comerciais e institucionais. 'pilares': posts que recebem prioridade como leitura relacionada dentro da editoria. 'so_icones': páginas que recebem só o bloco 'Aprenda e jogue'.",
+ "banners": {
+  "aprender": {
+   "rotulo": "LIBRAS.SE · grátis",
+   "titulo": "Aprenda Libras de graça",
+   "texto": "Sinais em vídeo com intérprete, alfabeto manual, jogos e materiais para baixar, tudo num lugar só.",
+   "cta": "Começar a aprender",
+   "href": "/aprender-libras/",
+   "visual": "video:obrigado"
+  },
+  "alfabeto": {
+   "rotulo": "LIBRAS.SE · grátis",
+   "titulo": "Escreva o seu nome em Libras",
+   "texto": "Digite e veja a mão de cada letra do alfabeto manual. Dá para imprimir uma plaquinha.",
+   "cta": "Ver o alfabeto",
+   "href": "/aprender-libras/alfabeto-em-libras/#nome",
+   "visual": "dat:LIBRAS"
+  },
+  "quiz": {
+   "rotulo": "Jogo da LIBRAS.SE",
+   "titulo": "Que sinal é esse?",
+   "texto": "Assista ao vídeo e escolha a palavra certa. Dez perguntas por rodada, com câmera lenta.",
+   "cta": "Jogar o quiz",
+   "href": "/jogos/quiz-de-libras/",
+   "visual": "video:surpresa"
+  },
+  "sinal_do_dia": {
+   "rotulo": "Jogo da LIBRAS.SE",
+   "titulo": "Descubra o sinal do dia",
+   "texto": "Um desafio novo por dia, com dicas de significado, exemplo de uso e datilologia.",
+   "cta": "Jogar agora",
+   "href": "/jogo/",
+   "visual": "video:sonhar"
+  },
+  "materiais": {
+   "rotulo": "LIBRAS.SE · PDF grátis",
+   "titulo": "Baixe o alfabeto em Libras e outros materiais",
+   "texto": "Cartazes, flashcards, jogo da memória e caderno de atividades para imprimir. Sem cadastro.",
+   "cta": "Ver os materiais",
+   "href": "/materiais/",
+   "visual": "capa:alfabeto-em-libras-colorido"
+  },
+  "atividades": {
+   "rotulo": "LIBRAS.SE · para professores",
+   "titulo": "Atividades de Libras para imprimir",
+   "texto": "Bingo, caça-palavras e fichas de datilologia montados na hora, com gabarito.",
+   "cta": "Gerar atividades",
+   "href": "/atividades/",
+   "visual": "capa:caderno-de-atividades-de-datilologia"
+  },
+  "cultura": {
+   "rotulo": "Guia LIBRAS.SE",
+   "titulo": "Cultura surda: história, datas e pessoas",
+   "texto": "Artefatos culturais, identidade surda, a linha do tempo da Libras e o calendário da comunidade.",
+   "cta": "Ler o guia",
+   "href": "/cultura-surda/",
+   "visual": "dat:SURDO"
+  },
+  "servico": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Seu vídeo em Libras em até 1 hora",
+   "texto": "Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.",
+   "cta": "Enviar meu vídeo",
+   "href": "https://huet.libras.se/",
+   "cta2": "Conhecer as soluções",
+   "href2": "/solucoes/",
+   "visual": "video:obrigado",
+   "escuro": true
+  },
+  "sejatils": {
+   "rotulo": "Trabalhe com a LIBRAS.SE",
+   "titulo": "É intérprete de Libras?",
+   "texto": "Grave traduções de onde estiver, com horário flexível, software próprio e pagamento semanal.",
+   "cta": "Seja TILS na LIBRAS.SE",
+   "href": "/sejatils/",
+   "visual": "video:trabalho",
+   "escuro": true
+  }
+ },
+ "banner_por_editoria": {
+  "lingua": [
+   "alfabeto",
+   "aprender",
+   "quiz"
+  ],
+  "educacao": [
+   "atividades",
+   "materiais",
+   "aprender"
+  ],
+  "direitos": [
+   "cultura",
+   "aprender",
+   "sinal_do_dia"
+  ],
+  "inclusao": [
+   "aprender",
+   "quiz",
+   "cultura"
+  ],
+  "cultura": [
+   "quiz",
+   "cultura",
+   "sinal_do_dia"
+  ],
+  "esporte": [
+   "quiz",
+   "sinal_do_dia"
+  ]
+ },
+ "banner_por_post": {
+  "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado": "servico",
+  "por-que-incluir-janela-de-libras-em-videos": "servico",
+  "4-erros-comuns-ao-inserir-libras-em-videos": "servico",
+  "4-marcas-que-investem-em-libras-nos-videos": "servico",
+  "garantir-libras-sem-improviso": "servico",
+  "acessibilidade-em-eventos-para-pessoas-surdas": "servico",
+  "manifesto-por-libras-em-videos": "servico",
+  "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade": "servico",
+  "responsavel-pelo-que-entendem": "servico",
+  "4-dicas-para-ser-mais-inclusivo-na-internet": "servico",
+  "videoaulas-acessiveis-com-libras": "servico",
+  "influenciadores-surdos-relatam-dificuldade-com-publis": "servico",
+  "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio": "servico",
+  "o-papel-do-interprete-de-libras-na-sociedade": "sejatils",
+  "papel-do-interprete-de-libras-na-escola-bilingue": "sejatils",
+  "interpretes-de-libras-traduzem-partos-para-pais-surdos": "sejatils",
+  "tradutor-de-libras-se-destaca-no-rock-in-rio": "sejatils",
+  "projeto-garante-interprete-de-libras-em-hospitais": "sejatils",
+  "voce-sabe-o-que-e-datilologia": "alfabeto",
+  "como-sao-criados-sinais-de-pessoas-na-libras": "alfabeto",
+  "o-que-e-libras": "aprender",
+  "dia-nacional-dos-surdos-conquistas-e-reflexoes": "cultura",
+  "dia-internacional-das-linguas-de-sinais": "cultura",
+  "libras-tem-sotaque-e-giria": "quiz",
+  "lingua-de-sinais-e-autismo": "materiais",
+  "disney-lanca-jogos-que-ensinam-libras": "quiz",
+  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades"
+ },
+ "pilares": {
+  "lingua": [
+   "o-que-e-libras",
+   "voce-sabe-o-que-e-datilologia",
+   "libras-tem-sotaque-e-giria"
+  ],
+  "educacao": [
+   "videoaulas-acessiveis-com-libras",
+   "papel-do-interprete-de-libras-na-escola-bilingue"
+  ],
+  "direitos": [
+   "libras-nao-e-segunda-lingua-oficial-do-brasil",
+   "20-anos-da-lei-de-libras-avancos-e-desafios"
+  ],
+  "inclusao": [
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
+   "por-que-incluir-janela-de-libras-em-videos",
+   "garantir-libras-sem-improviso"
+  ],
+  "cultura": [
+   "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+   "o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras"
+  ],
+  "esporte": [
+   "surdolimpiadas-as-olimpiadas-exclusivas-para-surdos"
+  ]
+ },
+ "solucoes": {
+  "video": {
+   "titulo": "Libras em vídeos e campanhas",
+   "links": [
+    [
+     "Libras para empresas",
+     "/libras-para-empresas/"
+    ],
+    [
+     "Libras para publicidade",
+     "/libras-para-publicidade/"
+    ],
+    [
+     "Todas as soluções",
+     "/solucoes/"
+    ]
+   ],
+   "posts": [
+    "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
+    "por-que-incluir-janela-de-libras-em-videos",
+    "4-erros-comuns-ao-inserir-libras-em-videos",
+    "4-marcas-que-investem-em-libras-nos-videos",
+    "manifesto-por-libras-em-videos",
+    "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade",
+    "responsavel-pelo-que-entendem",
+    "4-dicas-para-ser-mais-inclusivo-na-internet",
+    "influenciadores-surdos-relatam-dificuldade-com-publis"
+   ]
+  },
+  "eventos": {
+   "titulo": "Libras em eventos",
+   "links": [
+    [
+     "Intérpretes para eventos ao vivo",
+     "/eventos-ao-vivo/"
+    ],
+    [
+     "Libras ao vivo e lives",
+     "/libras-ao-vivo/"
+    ]
+   ],
+   "posts": [
+    "acessibilidade-em-eventos-para-pessoas-surdas",
+    "garantir-libras-sem-improviso",
+    "rock-in-rio-tem-show-de-rap-com-libras",
+    "tradutor-de-libras-se-destaca-no-rock-in-rio",
+    "conheca-a-primeira-dupla-musical-de-libras",
+    "com-libras-inclusao-marca-sao-joao-de-caruaru"
+   ]
+  },
+  "educacao": {
+   "titulo": "Libras na educação",
+   "links": [
+    [
+     "Libras para videoaulas e EAD",
+     "/libras-para-videoaulas/"
+    ],
+    [
+     "Atividades para a sala de aula",
+     "/atividades/"
+    ]
+   ],
+   "posts": [
+    "videoaulas-acessiveis-com-libras",
+    "papel-do-interprete-de-libras-na-escola-bilingue",
+    "tocantins-tem-libras-na-rede-estadual-de-ensino",
+    "libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte",
+    "libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh",
+    "professora-aprende-libras-para-se-comunicar-com-estudante",
+    "reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau"
+   ]
+  },
+  "politica": {
+   "titulo": "Libras em campanhas eleitorais",
+   "links": [
+    [
+     "Libras para campanhas políticas",
+     "/libras-para-campanhas-politicas/"
+    ]
+   ],
+   "posts": [
+    "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio",
+    "urnas-eletronicas-terao-video-com-libras"
+   ]
+  },
+  "audiovisual": {
+   "titulo": "Acessibilidade para cinema e cultura",
+   "links": [
+    [
+     "Longa-metragem",
+     "/acessibilidade-para-longa-metragem/"
+    ],
+    [
+     "Curta-metragem",
+     "/acessibilidade-para-curta-metragem/"
+    ],
+    [
+     "Séries e TV",
+     "/acessibilidade-para-serie/"
+    ],
+    [
+     "Documentário",
+     "/acessibilidade-para-documentario/"
+    ],
+    [
+     "Festivais de cinema",
+     "/acessibilidade-para-festival-de-cinema/"
+    ],
+    [
+     "Projetos culturais",
+     "/acessibilidade-para-projetos-culturais/"
+    ]
+   ],
+   "posts": [
+    "o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras",
+    "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+    "documentarios-sobre-surdez-gratis-youtube",
+    "vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian",
+    "quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar",
+    "makkari-a-super-heroina-surda",
+    "projeto-traduz-poesias-de-cruz-e-souza-para-libras",
+    "rosas-de-ouro-leva-libras-pro-carnaval-paulista",
+    "biblia-completamente-traduzida-para-libras",
+    "personagens-da-disney-adotam-lingua-de-sinais-com-o-publico"
+   ]
+  }
+ },
+ "do_blog": {
+  "/solucoes/": [
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
+   "por-que-incluir-janela-de-libras-em-videos",
+   "4-erros-comuns-ao-inserir-libras-em-videos"
+  ],
+  "/produtos/": [
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
+   "por-que-incluir-janela-de-libras-em-videos",
+   "4-erros-comuns-ao-inserir-libras-em-videos"
+  ],
+  "/libras-para-empresas/": [
+   "4-marcas-que-investem-em-libras-nos-videos",
+   "manifesto-por-libras-em-videos",
+   "responsavel-pelo-que-entendem"
+  ],
+  "/libras-para-publicidade/": [
+   "4-marcas-que-investem-em-libras-nos-videos",
+   "influenciadores-surdos-relatam-dificuldade-com-publis",
+   "4-erros-comuns-ao-inserir-libras-em-videos"
+  ],
+  "/libras-para-videoaulas/": [
+   "videoaulas-acessiveis-com-libras",
+   "papel-do-interprete-de-libras-na-escola-bilingue",
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
+  ],
+  "/libras-para-campanhas-politicas/": [
+   "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio",
+   "urnas-eletronicas-terao-video-com-libras",
+   "libras-nao-e-segunda-lingua-oficial-do-brasil"
+  ],
+  "/eventos-ao-vivo/": [
+   "acessibilidade-em-eventos-para-pessoas-surdas",
+   "garantir-libras-sem-improviso",
+   "tradutor-de-libras-se-destaca-no-rock-in-rio"
+  ],
+  "/libras-ao-vivo/": [
+   "garantir-libras-sem-improviso",
+   "acessibilidade-em-eventos-para-pessoas-surdas",
+   "o-papel-do-interprete-de-libras-na-sociedade"
+  ],
+  "/acessibilidade-para-longa-metragem/": [
+   "o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras",
+   "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
+  ],
+  "/acessibilidade-para-curta-metragem/": [
+   "por-que-incluir-janela-de-libras-em-videos",
+   "documentarios-sobre-surdez-gratis-youtube",
+   "4-erros-comuns-ao-inserir-libras-em-videos"
+  ],
+  "/acessibilidade-para-serie/": [
+   "vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian",
+   "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
+  ],
+  "/acessibilidade-para-documentario/": [
+   "documentarios-sobre-surdez-gratis-youtube",
+   "o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras",
+   "por-que-incluir-janela-de-libras-em-videos"
+  ],
+  "/acessibilidade-para-festival-de-cinema/": [
+   "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+   "quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar",
+   "acessibilidade-em-eventos-para-pessoas-surdas"
+  ],
+  "/acessibilidade-para-projetos-culturais/": [
+   "projeto-traduz-poesias-de-cruz-e-souza-para-libras",
+   "rosas-de-ouro-leva-libras-pro-carnaval-paulista",
+   "libras-pode-ser-reconhecida-como-referencia-cultural-brasileira"
+  ],
+  "/orcamento/": [
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
+   "4-erros-comuns-ao-inserir-libras-em-videos",
+   "por-que-incluir-janela-de-libras-em-videos"
+  ],
+  "/proposito/": [
+   "manifesto-por-libras-em-videos",
+   "o-papel-da-libras-na-inclusao-do-surdo",
+   "responsavel-pelo-que-entendem"
+  ],
+  "/tecnologia/": [
+   "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade",
+   "4-erros-comuns-ao-inserir-libras-em-videos",
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
+  ],
+  "/portfolio/": [
+   "4-marcas-que-investem-em-libras-nos-videos",
+   "influenciadores-surdos-relatam-dificuldade-com-publis",
+   "manifesto-por-libras-em-videos"
+  ],
+  "/sejatils/": [
+   "o-papel-do-interprete-de-libras-na-sociedade",
+   "papel-do-interprete-de-libras-na-escola-bilingue",
+   "garantir-libras-sem-improviso"
+  ]
+ },
+ "so_icones": [
+  "/blog/todos/",
+  "/blog/temas/",
+  "/autora/guilherme-cruz/",
+  "/autora/jessica-rodrigues/"
+ ]
+}

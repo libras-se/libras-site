@@ -73,10 +73,14 @@ def related(s, n=4):
 def page(s):
     url = f"{SITE}/sinal/{s['slug']}/"
     video, poster = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
-    desc = (f"Veja em vídeo o sinal de {s['palavra']} em Libras, com definição, exemplos de uso e dicas de contexto. {s['resumo']}"
-            if s["video"] else f"{s['palavra']} em Libras: definição, exemplos de uso e contexto. {s['resumo']}")
-    if len(desc) > 300:
-        desc = desc[:297].rsplit(" ", 1)[0] + "…"
+    # description com até 160 caracteres (o Google corta o resto no resultado de busca)
+    for ini in ((f"Sinal de {s['palavra']} em Libras em vídeo, com exemplos de uso. ", f"Sinal de {s['palavra']} em Libras em vídeo. ")
+                if s["video"] else (f"{s['palavra']} em Libras: definição, exemplos de uso e contexto. ", f"{s['palavra']} em Libras: ")):
+        desc = ini + s["resumo"]
+        if len(desc) <= 160:
+            break
+    if len(desc) > 160:
+        desc = desc[:157].rsplit(" ", 1)[0].rstrip(",;:") + "…"
     upload = data["publicado_em"] + "T00:00:00-03:00"
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [

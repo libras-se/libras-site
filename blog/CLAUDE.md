@@ -33,7 +33,7 @@ Se é um conteúdo que queremos ranquear e manter por anos, vá de **alta comple
 
 1. **Header e footer canônicos do site** (da raiz `CLAUDE.md`), com o badge `Blog`
    no logo e `aria-current="page"` no link do Blog, ver §4.
-2. **Footer da matéria com posts relacionados** ("Leia mais no blog"), ver §8.
+2. **Fechamento com CTA**, mais o banner interno e o "Continue lendo" gerados por `tools/seo/links.py`, ver §8.
 3. **Citação ao Glossário** sempre que um termo for mencionado, ver §6.
 4. **Imagens vindas do banco editorial** quando não houver foto própria, ver §7.
 5. **Botão flutuante de WhatsApp** (`.wppf`) e **skip-link**.
@@ -74,8 +74,8 @@ campos. Eles alimentam `<title>`, `<meta>`, OG/Twitter e o JSON-LD:
 
 ```yaml
 title:                  # H1 do post
-seo_title:              # <title>, título + " | Blog Libras.se"
-meta_description:        # ~155 caracteres, com a palavra-chave principal
+seo_title:              # <title>, até 60 caracteres: título + " | LIBRAS.SE" se couber, senão só o título
+meta_description:        # 120 a 160 caracteres, com a palavra-chave principal no começo
 slug:                   # kebab-case
 canonical_url:          # https://libras.se/blog/<slug>/
 category:               # Língua & Cultura | Acessibilidade | Instrucional | Direitos | Tecnologia | Educação
@@ -105,8 +105,8 @@ cta_type:               # vídeo | soluções | jogo | glossário
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');</script>
-<title>[Título] | Blog Libras.se</title>
-<meta name="description" content="[~155 caracteres]">
+<title>[Título] | LIBRAS.SE</title>
+<meta name="description" content="[120 a 160 caracteres]">
 <meta name="keywords" content="[palavras-chave]">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://libras.se/blog/[slug]/">
@@ -334,85 +334,47 @@ imagem tem um `.md` companheiro com a descrição completa.
 
 ---
 
-## 8. Fechamento "Com Barra", obrigatório em todos os posts
+## 8. Fechamento do post: CTA escrito à mão + módulos gerados
 
-Todo post termina com a sequência completa **"Com Barra"** antes do footer
-canônico do site. Ordem obrigatória:
+O fim de todo post tem duas partes. A primeira você escreve; a segunda é **gerada** por
+`tools/seo/links.py` e não deve ser editada à mão (ela é apagada e refeita a cada execução).
 
-1. `.pa-tags`, tags em `#` com barra divisória superior (`border-top`)
-2. `.pa-cta`, bloco escuro com CTA "Precisa do seu conteúdo em Libras?"
-3. `.pa-actions`, 3 cards de recursos com **ícones SVG** (sem emojis): Jogo / Vocabulário / Glossário
-4. `.pa-related`, 3 artigos variados ("Leia mais no blog") + botão lateral "Ver todos os posts"
-5. `<footer id="foot">`, footer canônico do site
+**Você escreve (dentro do `<article>`):**
 
-> **Posts relacionados variados:** escolha 3 artigos de temas **diferentes** entre si e diferentes do tema principal do post atual. Diversidade de categoria aumenta o tempo de permanência.
+1. `.pa-tags` (baixa complexidade) ou as tags do template editorial: tags em `#` com barra superior.
+2. `.pa-cta` / `.post-cta`: bloco escuro "Precisa do seu conteúdo em Libras?" com os botões
+   "Enviar vídeo agora" (huet) e "Conhecer soluções" (`/solucoes/`). **Sem preço.**
 
-```html
-<section class="pa-cta" aria-label="Soluções e recursos da Libras.se">
-  <div class="pa-cta__lead rv">
-    <h2>Precisa do seu conteúdo em Libras?</h2>
-    <p>A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar.</p>
-    <div class="pa-cta__btns">
-      <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Enviar vídeo agora</a>
-      <a href="https://libras.se/solucoes" class="btn bp">Conhecer soluções</a>
-    </div>
-  </div>
-  <div class="pa-actions">
-    <a href="/jogo/" class="pa-act rv">
-      <span class="pa-act__ic">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="11" x2="15" y2="11"/><line x1="18" y1="13" x2="18" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
-      </span>
-      <span class="pa-act__t">Joguinho de Libras</span>
-      <span class="pa-act__d">Descubra o sinal do dia e aprenda brincando.</span>
-      <span class="pa-act__go">Jogar agora →</span>
-    </a>
-    <a href="/sinal/" class="pa-act rv">
-      <span class="pa-act__ic">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-      </span>
-      <span class="pa-act__t">Vocabulário</span>
-      <span class="pa-act__d">Consulte sinais e amplie seu vocabulário em Libras.</span>
-      <span class="pa-act__go">Ver sinais →</span>
-    </a>
-    <a href="/glossario/" class="pa-act rv">
-      <span class="pa-act__ic">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-      </span>
-      <span class="pa-act__t">Glossário</span>
-      <span class="pa-act__d">Termos da área com definições claras e verificadas.</span>
-      <span class="pa-act__go">Consultar →</span>
-    </a>
-  </div>
-</section>
+**O gerador coloca (entre marcadores `<!-- LSE:... -->`):**
 
-<section class="pa-related" aria-label="Mais posts do blog">
-  <div class="pa-related__head">
-    <h2>Leia mais no blog</h2>
-    <a href="/blog/" class="btn bp" style="font-size:.78rem;padding:9px 18px">Ver todos os posts →</a>
-  </div>
-  <div class="pa-rel-grid">
-    <a class="pa-rel" href="/blog/[slug-1]/">
-      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-1]/[slug-1].webp" alt="[Título 1]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 1, tema diferente do post atual]</span></span>
-    </a>
-    <a class="pa-rel" href="/blog/[slug-2]/">
-      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-2]/[slug-2].webp" alt="[Título 2]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 2, tema diferente dos outros]</span></span>
-    </a>
-    <a class="pa-rel" href="/blog/[slug-3]/">
-      <span class="pa-rel__thumb"><img src="/assets/img/blog/[slug-3]/[slug-3].webp" alt="[Título 3]" loading="lazy" decoding="async" width="1200" height="675"></span>
-      <span class="pa-rel__b"><span class="pa-rel__t">[Título do post 3, tema diferente dos outros]</span></span>
-    </a>
-  </div>
-</section>
+- `LSE:BANNER`: um anúncio interno da LIBRAS.SE (house ad) no meio do texto, perto de 40% do corpo,
+  sempre entre dois parágrafos ou blocos. O banner é escolhido pela editoria (`banner_por_editoria`)
+  ou pelo post (`banner_por_post`) em `tools/seo/links.json`: Aprenda Libras, alfabeto, quiz, sinal do
+  dia, materiais, atividades, cultura surda, serviço ("Publicidade · LIBRAS.SE", sem preço) ou Seja TILS.
+- `LSE:MAIS`, logo antes do `<footer id="foot">`:
+  - "Continue lendo", com 4 matérias correlatas. A escolha pesa a mesma editoria, as palavras em
+    comum e os posts pilares, e equilibra os links para que todo post receba ao menos 2 de outros posts.
+  - A linha "Solução relacionada", que leva às páginas comerciais (só nos posts listados em `solucoes`).
+  - "Aprenda e jogue", com 6 ícones: Aprenda Libras, Sinais em vídeo, Alfabeto, Jogos, Materiais e Glossário.
+  - O link para `/proposito/`.
+- `LSE:CSS` no `<head>` (estilos autocontidos, funcionam nos dois templates).
+
+Os blocos antigos `.pa-actions` (Jogo/Vocabulário/Glossário), `.pa-related` ("Leia mais no blog"),
+`.blog-more`, `.post-actions` e `.pa-acts-alt` **não são mais usados**: o gerador os remove se aparecerem.
+
+```bash
+# depois de publicar ou editar um post (a ordem importa: links.py lê os cards da home)
+python3 tools/blog/home.py
+python3 tools/seo/links.py
+python3 tools/seo/auditoria.py     # confere órfãs, links de entrada, título e description
 ```
 
-CSS de apoio (Tier baixo / Museo Sans): ver `tradutor-de-libras-se-destaca-no-rock-in-rio`
-(`.pa-cta`, `.pa-actions`, `.pa-act`, `.pa-related`, `.pa-rel`). Em alta
-complexidade o bloco equivalente aparece como `.blog-more` antes do `#foot`.
+Post novo sem configuração extra já recebe banner e correlatas pela editoria. Para trocar o banner de
+um post, use `banner_por_post`; para um post virar referência da editoria nas correlatas, coloque-o em `pilares`.
+Regras completas, estratégia e backlog: `tools/seo/ESTRATEGIA.md`.
 
-Depois desse bloco, vem **o footer canônico do site** (`<footer id="foot">`,
-copiado da raiz `CLAUDE.md`), com os links do Blog apontando para `/blog/`.
+Depois do `LSE:MAIS` vem **o footer canônico do site** (`<footer id="foot">`, copiado da raiz
+`CLAUDE.md`), com os links do Blog apontando para `/blog/`.
 
 ---
 
@@ -509,7 +471,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <a class="pa-tag" href="/glossario/til-tils/">#tils</a>
     </div>
 
-    <!-- §8: fechamento "Com Barra", pa-tags → pa-cta → pa-related → footer canônico -->
+    <!-- §8: pa-tags → pa-cta (à mão); banner e LSE:MAIS gerados por tools/seo/links.py -->
   </article>
 </main>
 ```
@@ -790,16 +752,17 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 ## Checklist antes de publicar (os dois níveis)
 
 - [ ] Nível de complexidade escolhido conforme o tipo de conteúdo (§1)
-- [ ] `<title>` = título + ` | Blog Libras.se`; `<meta name="description">` preenchida (~155)
+- [ ] `<title>` com até 60 caracteres (título + ` | LIBRAS.SE` se couber); `<meta name="description">` com 120 a 160
 - [ ] OG/Twitter, canonical, `theme-color`, favicon e GA presentes
 - [ ] JSON-LD `BlogPosting` + `BreadcrumbList` (+ `FAQPage` se houver FAQ)
 - [ ] Header canônico com badge `Blog` e `aria-current="page"`; links do Blog → `/blog/`
 - [ ] **Todo termo da área linkado ao glossário** na 1ª ocorrência (§6, conferir `termos.csv`)
 - [ ] Imagem própria em `/assets/img/blog/<slug>/` **ou** do banco editorial (§7) com `alt` correto
 - [ ] Imagens com `.avif` + `.webp` + fallback, `width`/`height` e `loading` corretos
-- [ ] **Fechamento "Com Barra" completo** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" + 3 ícones SVG (jogo/vocabulário/glossário) + 3 posts variados ("Leia mais") + botão "Ver todos os posts" lateral
+- [ ] **Fechamento** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" escritos à mão; banner, "Continue lendo" e ícones gerados por `python3 tools/seo/links.py`
 - [ ] Footer canônico do site (`#foot`) ao final
-- [ ] Editoria do post em `tools/blog/home.json` e `python3 tools/blog/home.py` rodado (§5)
+- [ ] Editoria do post em `tools/blog/home.json`, depois `python3 tools/blog/home.py` e `python3 tools/seo/links.py` (§5, §8)
+- [ ] `python3 tools/seo/auditoria.py` sem novo problema no post
 - [ ] CTA aponta para páginas reais (huet/soluções/jogo/sinal/glossário)
 - [ ] WhatsApp flutuante e skip-link presentes
 - [ ] (Alta complexidade) progress bar, `.reveal` e IDs de `.stat-number` conferidos no JS

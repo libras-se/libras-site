@@ -650,12 +650,16 @@ a{text-decoration:none;color:inherit}
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .sinal-card{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--tr),box-shadow var(--tr)}
 .sinal-card:hover{transform:translateY(-4px);box-shadow:var(--shm)}
+.sinal-card{position:relative;cursor:pointer}
+.card-a{color:inherit;outline:none}
+.card-a::after{content:'';position:absolute;inset:0;z-index:3;border-radius:inherit}
+.sinal-card:focus-within{outline:3px solid var(--teal);outline-offset:3px}
+.sinal-card:hover .card-link{gap:9px;color:var(--p1)}
 .card-visual{display:block;aspect-ratio:4/3;background:#f0fafa;position:relative;overflow:hidden;flex-shrink:0}
 .card-visual.card-vazio{background:var(--gc)}
 .card-visual img,.card-visual video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .card-visual video{opacity:0;transition:opacity .2s}
 .card-visual.playing video{opacity:1}
-.card-visual:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
 .card-badge{position:absolute;bottom:12px;left:12px;z-index:2;display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.72);border-radius:var(--rpill);padding:5px 10px}
 .card-badge svg{width:9px;height:9px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -669,7 +673,6 @@ a{text-decoration:none;color:inherit}
 .card-nome{font-size:1.5rem;font-weight:900;letter-spacing:-.03em;color:var(--p1);line-height:1}
 .card-desc{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.6;flex:1}
 .card-link{display:inline-flex;align-items:center;gap:5px;font-size:.76rem;font-weight:700;color:var(--teal-d);margin-top:4px;transition:gap .2s,color .2s}
-.card-link:hover{gap:9px;color:var(--p1)}
 .card-link svg{width:13px;height:13px}
 .no-results{display:none;text-align:center;padding:48px 24px;color:var(--txm);font-size:.9rem;grid-column:1/-1}
 /* Editorial */
@@ -871,913 +874,913 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="section-sub rv d1"><!-- SINAIS:CONTAGEM -->74 sinais em vídeo, com página própria. Mais sinais em breve.<!-- /SINAIS:CONTAGEM --></p>
     <div class="cards-grid" id="cardsGrid"><!-- SINAIS:CARDS -->
       <article class="sinal-card" data-nome="agua agua beber sede liquido" data-cat="Cotidiano">
-        <a href="/sinal/agua/" class="card-visual" data-video="/assets/videos/sinais/agua.mp4" aria-label="Ver o sinal de Água em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/agua.mp4">
           <img src="/assets/img/sinais/agua.webp" alt="Ilustração do sinal de Água em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Água</h2>
+          <h2 class="card-nome"><a href="/sinal/agua/" class="card-a">Água</a></h2>
           <p class="card-desc">Sinal usado para falar de água, seja para beber, para a higiene ou como elemento da natureza.</p>
-          <a href="/sinal/agua/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="alegre alegre alegria contente animado" data-cat="Sentimentos">
-        <a href="/sinal/alegre/" class="card-visual" data-video="/assets/videos/sinais/alegre.mp4" aria-label="Ver o sinal de Alegre em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/alegre.mp4">
           <img src="/assets/img/sinais/alegre.webp" alt="Ilustração do sinal de Alegre em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Alegre</h2>
+          <h2 class="card-nome"><a href="/sinal/alegre/" class="card-a">Alegre</a></h2>
           <p class="card-desc">Sinal usado para descrever alguém contente, animado ou de bom humor, ou um ambiente cheio de alegria.</p>
-          <a href="/sinal/alegre/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="amigo amigo amiga amizade colega parceiro" data-cat="Família e pessoas">
-        <a href="/sinal/amigo/" class="card-visual" data-video="/assets/videos/sinais/amigo.mp4" aria-label="Ver o sinal de Amigo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/amigo.mp4">
           <img src="/assets/img/sinais/amigo.webp" alt="Ilustração do sinal de Amigo em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Amigo</h2>
+          <h2 class="card-nome"><a href="/sinal/amigo/" class="card-a">Amigo</a></h2>
           <p class="card-desc">Sinal usado para falar de amigo ou amiga, alguém com quem se tem amizade e confiança.</p>
-          <a href="/sinal/amigo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="amor amor amar carinho afeto paixao" data-cat="Sentimentos">
-        <a href="/sinal/amor/" class="card-visual" data-video="/assets/videos/sinais/amor.mp4" aria-label="Ver o sinal de Amor em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/amor.mp4">
           <img src="/assets/img/sinais/amor.webp" alt="Ilustração do sinal de Amor em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Amor</h2>
+          <h2 class="card-nome"><a href="/sinal/amor/" class="card-a">Amor</a></h2>
           <p class="card-desc">Sinal usado para falar de amor, carinho e afeto entre pessoas, na família, na amizade ou no romance.</p>
-          <a href="/sinal/amor/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="ansioso ansioso ansiedade nervoso preocupado inquieto" data-cat="Sentimentos">
-        <a href="/sinal/ansioso/" class="card-visual" data-video="/assets/videos/sinais/ansioso.mp4" aria-label="Ver o sinal de Ansioso em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/ansioso.mp4">
           <img src="/assets/img/sinais/ansioso.webp" alt="Ilustração do sinal de Ansioso em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Ansioso</h2>
+          <h2 class="card-nome"><a href="/sinal/ansioso/" class="card-a">Ansioso</a></h2>
           <p class="card-desc">Sinal usado para expressar ansiedade, nervosismo ou expectativa intensa.</p>
-          <a href="/sinal/ansioso/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="aprender aprender aprendizado estudar entender saber" data-cat="Verbos">
-        <a href="/sinal/aprender/" class="card-visual" data-video="/assets/videos/sinais/aprender.mp4" aria-label="Ver o sinal de Aprender em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/aprender.mp4">
           <img src="/assets/img/sinais/aprender.webp" alt="Ilustração do sinal de Aprender em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Aprender</h2>
+          <h2 class="card-nome"><a href="/sinal/aprender/" class="card-a">Aprender</a></h2>
           <p class="card-desc">Sinal usado para falar de aprender, adquirir conhecimento ou uma habilidade nova.</p>
-          <a href="/sinal/aprender/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="arroz arroz comida alimento almoco" data-cat="Alimentos">
-        <a href="/sinal/arroz/" class="card-visual" data-video="/assets/videos/sinais/arroz.mp4" aria-label="Ver o sinal de Arroz em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/arroz.mp4">
           <img src="/assets/img/sinais/arroz.webp" alt="Ilustração do sinal de Arroz em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Arroz</h2>
+          <h2 class="card-nome"><a href="/sinal/arroz/" class="card-a">Arroz</a></h2>
           <p class="card-desc">Sinal usado para falar de arroz, alimento presente no prato de quase todo brasileiro.</p>
-          <a href="/sinal/arroz/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="banana banana fruta alimento comida" data-cat="Alimentos">
-        <a href="/sinal/banana/" class="card-visual" data-video="/assets/videos/sinais/banana.mp4" aria-label="Ver o sinal de Banana em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/banana.mp4">
           <img src="/assets/img/sinais/banana.webp" alt="Ilustração do sinal de Banana em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Banana</h2>
+          <h2 class="card-nome"><a href="/sinal/banana/" class="card-a">Banana</a></h2>
           <p class="card-desc">Sinal usado para falar de banana, uma das frutas mais consumidas no Brasil.</p>
-          <a href="/sinal/banana/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="banheiro banheiro toalete sanitario wc" data-cat="Cotidiano">
-        <a href="/sinal/banheiro/" class="card-visual" data-video="/assets/videos/sinais/banheiro.mp4" aria-label="Ver o sinal de Banheiro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/banheiro.mp4">
           <img src="/assets/img/sinais/banheiro.webp" alt="Ilustração do sinal de Banheiro em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Banheiro</h2>
+          <h2 class="card-nome"><a href="/sinal/banheiro/" class="card-a">Banheiro</a></h2>
           <p class="card-desc">Sinal usado para perguntar ou indicar onde fica o banheiro, um dos sinais mais úteis no dia a dia.</p>
-          <a href="/sinal/banheiro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="borboleta borboleta inseto animal asas" data-cat="Animais">
-        <a href="/sinal/borboleta/" class="card-visual" data-video="/assets/videos/sinais/borboleta.mp4" aria-label="Ver o sinal de Borboleta em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/borboleta.mp4">
           <img src="/assets/img/sinais/borboleta.webp" alt="Ilustração do sinal de Borboleta em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Borboleta</h2>
+          <h2 class="card-nome"><a href="/sinal/borboleta/" class="card-a">Borboleta</a></h2>
           <p class="card-desc">Sinal usado para falar de borboleta, inseto de asas coloridas.</p>
-          <a href="/sinal/borboleta/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cachorro cachorro cao cadela animal pet" data-cat="Animais">
-        <a href="/sinal/cachorro/" class="card-visual" data-video="/assets/videos/sinais/cachorro.mp4" aria-label="Ver o sinal de Cachorro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cachorro.mp4">
           <img src="/assets/img/sinais/cachorro.webp" alt="Ilustração do sinal de Cachorro em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Cachorro</h2>
+          <h2 class="card-nome"><a href="/sinal/cachorro/" class="card-a">Cachorro</a></h2>
           <p class="card-desc">Sinal usado para falar de cachorro, o animal de estimação mais comum nas casas brasileiras.</p>
-          <a href="/sinal/cachorro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cafe cafe cafe bebida cafezinho manha" data-cat="Alimentos">
-        <a href="/sinal/cafe/" class="card-visual" data-video="/assets/videos/sinais/cafe.mp4" aria-label="Ver o sinal de Café em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cafe.mp4">
           <img src="/assets/img/sinais/cafe.webp" alt="Ilustração do sinal de Café em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Café</h2>
+          <h2 class="card-nome"><a href="/sinal/cafe/" class="card-a">Café</a></h2>
           <p class="card-desc">Sinal usado para falar de café, a bebida, e também do café da manhã.</p>
-          <a href="/sinal/cafe/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="calmo calmo calma tranquilo sereno" data-cat="Sentimentos">
-        <a href="/sinal/calmo/" class="card-visual" data-video="/assets/videos/sinais/calmo.mp4" aria-label="Ver o sinal de Calmo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/calmo.mp4">
           <img src="/assets/img/sinais/calmo.webp" alt="Ilustração do sinal de Calmo em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Calmo</h2>
+          <h2 class="card-nome"><a href="/sinal/calmo/" class="card-a">Calmo</a></h2>
           <p class="card-desc">Sinal usado para descrever alguém tranquilo, sereno ou um ambiente sem agitação.</p>
-          <a href="/sinal/calmo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cama cama dormir quarto deitar" data-cat="Cotidiano">
-        <a href="/sinal/cama/" class="card-visual" data-video="/assets/videos/sinais/cama.mp4" aria-label="Ver o sinal de Cama em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cama.mp4">
           <img src="/assets/img/sinais/cama.webp" alt="Ilustração do sinal de Cama em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Cama</h2>
+          <h2 class="card-nome"><a href="/sinal/cama/" class="card-a">Cama</a></h2>
           <p class="card-desc">Sinal usado para falar de cama, o móvel onde se deita para dormir ou descansar.</p>
-          <a href="/sinal/cama/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cansado cansado cansaco exausto sono" data-cat="Sentimentos">
-        <a href="/sinal/cansado/" class="card-visual" data-video="/assets/videos/sinais/cansado.mp4" aria-label="Ver o sinal de Cansado em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cansado.mp4">
           <img src="/assets/img/sinais/cansado.webp" alt="Ilustração do sinal de Cansado em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Cansado</h2>
+          <h2 class="card-nome"><a href="/sinal/cansado/" class="card-a">Cansado</a></h2>
           <p class="card-desc">Sinal usado para dizer que alguém está cansado, sem energia ou com sono.</p>
-          <a href="/sinal/cansado/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="carro carro automovel dirigir veiculo" data-cat="Cotidiano">
-        <a href="/sinal/carro/" class="card-visual" data-video="/assets/videos/sinais/carro.mp4" aria-label="Ver o sinal de Carro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/carro.mp4">
           <img src="/assets/img/sinais/carro.webp" alt="Ilustração do sinal de Carro em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Carro</h2>
+          <h2 class="card-nome"><a href="/sinal/carro/" class="card-a">Carro</a></h2>
           <p class="card-desc">Sinal usado para falar de carro, o automóvel usado no transporte do dia a dia.</p>
-          <a href="/sinal/carro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="casa casa lar moradia residencia" data-cat="Cotidiano">
-        <a href="/sinal/casa/" class="card-visual" data-video="/assets/videos/sinais/casa.mp4" aria-label="Ver o sinal de Casa em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/casa.mp4">
           <img src="/assets/img/sinais/casa.webp" alt="Ilustração do sinal de Casa em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Casa</h2>
+          <h2 class="card-nome"><a href="/sinal/casa/" class="card-a">Casa</a></h2>
           <p class="card-desc">Sinal usado para falar de casa, o lugar onde se mora, e da ideia de lar.</p>
-          <a href="/sinal/casa/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cerveja cerveja bebida bar chopp" data-cat="Alimentos">
-        <a href="/sinal/cerveja/" class="card-visual" data-video="/assets/videos/sinais/cerveja.mp4" aria-label="Ver o sinal de Cerveja em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cerveja.mp4">
           <img src="/assets/img/sinais/cerveja.webp" alt="Ilustração do sinal de Cerveja em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Cerveja</h2>
+          <h2 class="card-nome"><a href="/sinal/cerveja/" class="card-a">Cerveja</a></h2>
           <p class="card-desc">Sinal usado para falar de cerveja, bebida alcoólica comum em encontros e festas.</p>
-          <a href="/sinal/cerveja/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="cobra cobra serpente animal reptil" data-cat="Animais">
-        <a href="/sinal/cobra/" class="card-visual" data-video="/assets/videos/sinais/cobra.mp4" aria-label="Ver o sinal de Cobra em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/cobra.mp4">
           <img src="/assets/img/sinais/cobra.webp" alt="Ilustração do sinal de Cobra em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Cobra</h2>
+          <h2 class="card-nome"><a href="/sinal/cobra/" class="card-a">Cobra</a></h2>
           <p class="card-desc">Sinal usado para falar de cobra, réptil de corpo longo e sem patas.</p>
-          <a href="/sinal/cobra/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="comer comer comida alimentar refeicao almoco jantar" data-cat="Verbos">
-        <a href="/sinal/comer/" class="card-visual" data-video="/assets/videos/sinais/comer.mp4" aria-label="Ver o sinal de Comer em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/comer.mp4">
           <img src="/assets/img/sinais/comer.webp" alt="Ilustração do sinal de Comer em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Comer</h2>
+          <h2 class="card-nome"><a href="/sinal/comer/" class="card-a">Comer</a></h2>
           <p class="card-desc">Sinal usado para falar do ato de comer e das refeições do dia a dia.</p>
-          <a href="/sinal/comer/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="correr correr corrida pressa rapido" data-cat="Verbos">
-        <a href="/sinal/correr/" class="card-visual" data-video="/assets/videos/sinais/correr.mp4" aria-label="Ver o sinal de Correr em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/correr.mp4">
           <img src="/assets/img/sinais/correr.webp" alt="Ilustração do sinal de Correr em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Correr</h2>
+          <h2 class="card-nome"><a href="/sinal/correr/" class="card-a">Correr</a></h2>
           <p class="card-desc">Sinal usado para falar de correr, seja como exercício, seja por pressa.</p>
-          <a href="/sinal/correr/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="crianca crianca crianca filho menino menina infancia" data-cat="Família e pessoas">
-        <a href="/sinal/crianca/" class="card-visual" data-video="/assets/videos/sinais/crianca.mp4" aria-label="Ver o sinal de Criança em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/crianca.mp4">
           <img src="/assets/img/sinais/crianca.webp" alt="Ilustração do sinal de Criança em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Criança</h2>
+          <h2 class="card-nome"><a href="/sinal/crianca/" class="card-a">Criança</a></h2>
           <p class="card-desc">Sinal usado para falar de criança, menino ou menina na infância.</p>
-          <a href="/sinal/crianca/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="desculpa desculpa desculpe perdao foi mal" data-cat="Expressões">
-        <a href="/sinal/desculpa/" class="card-visual" data-video="/assets/videos/sinais/desculpa.mp4" aria-label="Ver o sinal de Desculpa em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/desculpa.mp4">
           <img src="/assets/img/sinais/desculpa.webp" alt="Ilustração do sinal de Desculpa em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Expressões</span>
-          <h2 class="card-nome">Desculpa</h2>
+          <h2 class="card-nome"><a href="/sinal/desculpa/" class="card-a">Desculpa</a></h2>
           <p class="card-desc">Sinal usado para pedir desculpas, reconhecer um erro ou demonstrar arrependimento em uma situação de comunicação.</p>
-          <a href="/sinal/desculpa/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="dinheiro dinheiro grana pagar preco comprar" data-cat="Cotidiano">
-        <a href="/sinal/dinheiro/" class="card-visual" data-video="/assets/videos/sinais/dinheiro.mp4" aria-label="Ver o sinal de Dinheiro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/dinheiro.mp4">
           <img src="/assets/img/sinais/dinheiro.webp" alt="Ilustração do sinal de Dinheiro em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Dinheiro</h2>
+          <h2 class="card-nome"><a href="/sinal/dinheiro/" class="card-a">Dinheiro</a></h2>
           <p class="card-desc">Sinal usado para falar de dinheiro, pagamentos, preços e compras.</p>
-          <a href="/sinal/dinheiro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="ele / ela ele ela pronome pessoa terceira" data-cat="Pronomes">
-        <a href="/sinal/ele-ela/" class="card-visual" data-video="/assets/videos/sinais/ele-ela.mp4" aria-label="Ver o sinal de Ele / Ela em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/ele-ela.mp4">
           <img src="/assets/img/sinais/ele-ela.webp" alt="Ilustração do sinal de Ele / Ela em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Pronomes</span>
-          <h2 class="card-nome">Ele / Ela</h2>
+          <h2 class="card-nome"><a href="/sinal/ele-ela/" class="card-a">Ele / Ela</a></h2>
           <p class="card-desc">Sinal usado para se referir a outra pessoa, de quem se fala: ele ou ela.</p>
-          <a href="/sinal/ele-ela/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="ensinar ensinar ensino professor aula educar" data-cat="Verbos">
-        <a href="/sinal/ensinar/" class="card-visual" data-video="/assets/videos/sinais/ensinar.mp4" aria-label="Ver o sinal de Ensinar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/ensinar.mp4">
           <img src="/assets/img/sinais/ensinar.webp" alt="Ilustração do sinal de Ensinar em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Ensinar</h2>
+          <h2 class="card-nome"><a href="/sinal/ensinar/" class="card-a">Ensinar</a></h2>
           <p class="card-desc">Sinal usado para falar de ensinar, transmitir conhecimento a alguém.</p>
-          <a href="/sinal/ensinar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="escola escola colegio colegio aula estudar" data-cat="Educação">
-        <a href="/sinal/escola/" class="card-visual" data-video="/assets/videos/sinais/escola.mp4" aria-label="Ver o sinal de Escola em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/escola.mp4">
           <img src="/assets/img/sinais/escola.webp" alt="Ilustração do sinal de Escola em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Educação</span>
-          <h2 class="card-nome">Escola</h2>
+          <h2 class="card-nome"><a href="/sinal/escola/" class="card-a">Escola</a></h2>
           <p class="card-desc">Sinal usado para falar de escola, o lugar onde se estuda.</p>
-          <a href="/sinal/escola/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="estudar estudar estudo aprender prova livro" data-cat="Verbos">
-        <a href="/sinal/estudar/" class="card-visual" data-video="/assets/videos/sinais/estudar.mp4" aria-label="Ver o sinal de Estudar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/estudar.mp4">
           <img src="/assets/videos/sinais/estudar.webp" alt="Intérprete fazendo o sinal de Estudar em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Estudar</h2>
+          <h2 class="card-nome"><a href="/sinal/estudar/" class="card-a">Estudar</a></h2>
           <p class="card-desc">Sinal usado para falar de estudar, dedicar-se a aprender um conteúdo.</p>
-          <a href="/sinal/estudar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="eu eu mim pronome primeira pessoa" data-cat="Pronomes">
-        <a href="/sinal/eu/" class="card-visual" data-video="/assets/videos/sinais/eu.mp4" aria-label="Ver o sinal de Eu em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/eu.mp4">
           <img src="/assets/img/sinais/eu.webp" alt="Ilustração do sinal de Eu em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Pronomes</span>
-          <h2 class="card-nome">Eu</h2>
+          <h2 class="card-nome"><a href="/sinal/eu/" class="card-a">Eu</a></h2>
           <p class="card-desc">Sinal usado para se referir a si mesmo: eu.</p>
-          <a href="/sinal/eu/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="eu te amo eu te amo te amo amor amar carinho afeto" data-cat="Sentimentos">
-        <a href="/sinal/eu-te-amo/" class="card-visual" data-video="/assets/videos/sinais/eu-te-amo.mp4" aria-label="Ver o sinal de Eu te amo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/eu-te-amo.mp4">
           <img src="/assets/img/sinais/eu-te-amo.webp" alt="Ilustração do sinal de Eu te amo em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Eu te amo</h2>
+          <h2 class="card-nome"><a href="/sinal/eu-te-amo/" class="card-a">Eu te amo</a></h2>
           <p class="card-desc">Expressão usada para declarar amor e afeto a alguém, entre casais, familiares e amigos próximos.</p>
-          <a href="/sinal/eu-te-amo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="falar falar fala conversar dizer comunicar" data-cat="Verbos">
-        <a href="/sinal/falar/" class="card-visual" data-video="/assets/videos/sinais/falar.mp4" aria-label="Ver o sinal de Falar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/falar.mp4">
           <img src="/assets/img/sinais/falar.webp" alt="Ilustração do sinal de Falar em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Falar</h2>
+          <h2 class="card-nome"><a href="/sinal/falar/" class="card-a">Falar</a></h2>
           <p class="card-desc">Sinal usado para falar do ato de falar, dizer algo com a voz.</p>
-          <a href="/sinal/falar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="familia familia familia parentes pais filhos" data-cat="Família e pessoas">
-        <a href="/sinal/familia/" class="card-visual" data-video="/assets/videos/sinais/familia.mp4" aria-label="Ver o sinal de Família em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/familia.mp4">
           <img src="/assets/img/sinais/familia.webp" alt="Ilustração do sinal de Família em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Família</h2>
+          <h2 class="card-nome"><a href="/sinal/familia/" class="card-a">Família</a></h2>
           <p class="card-desc">Sinal usado para falar de família, o grupo de pessoas unidas por laços de parentesco ou afeto.</p>
-          <a href="/sinal/familia/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="feijao feijao feijao comida almoco feijoada" data-cat="Alimentos">
-        <a href="/sinal/feijao/" class="card-visual" data-video="/assets/videos/sinais/feijao.mp4" aria-label="Ver o sinal de Feijão em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/feijao.mp4">
           <img src="/assets/img/sinais/feijao.webp" alt="Ilustração do sinal de Feijão em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Feijão</h2>
+          <h2 class="card-nome"><a href="/sinal/feijao/" class="card-a">Feijão</a></h2>
           <p class="card-desc">Sinal usado para falar de feijão, alimento básico da mesa brasileira.</p>
-          <a href="/sinal/feijao/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="feliz feliz felicidade contente alegre" data-cat="Sentimentos">
-        <a href="/sinal/feliz/" class="card-visual" data-video="/assets/videos/sinais/feliz.mp4" aria-label="Ver o sinal de Feliz em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/feliz.mp4">
           <img src="/assets/img/sinais/feliz.webp" alt="Ilustração do sinal de Feliz em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Feliz</h2>
+          <h2 class="card-nome"><a href="/sinal/feliz/" class="card-a">Feliz</a></h2>
           <p class="card-desc">Sinal usado para expressar felicidade, contentamento e satisfação.</p>
-          <a href="/sinal/feliz/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="feliz aniversario feliz aniversario aniversario parabens parabens festa" data-cat="Saudações">
-        <a href="/sinal/feliz-aniversario/" class="card-visual" data-video="/assets/videos/sinais/feliz-aniversario.mp4" aria-label="Ver o sinal de Feliz aniversário em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/feliz-aniversario.mp4">
           <img src="/assets/videos/sinais/feliz-aniversario.webp" alt="Intérprete fazendo o sinal de Feliz aniversário em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Saudações</span>
-          <h2 class="card-nome">Feliz aniversário</h2>
+          <h2 class="card-nome"><a href="/sinal/feliz-aniversario/" class="card-a">Feliz aniversário</a></h2>
           <p class="card-desc">Expressão usada para cumprimentar alguém pelo aniversário.</p>
-          <a href="/sinal/feliz-aniversario/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="frango frango galinha carne comida" data-cat="Alimentos">
-        <a href="/sinal/frango/" class="card-visual" data-video="/assets/videos/sinais/frango.mp4" aria-label="Ver o sinal de Frango em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/frango.mp4">
           <img src="/assets/videos/sinais/frango.webp" alt="Intérprete fazendo o sinal de Frango em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Frango</h2>
+          <h2 class="card-nome"><a href="/sinal/frango/" class="card-a">Frango</a></h2>
           <p class="card-desc">Sinal usado para falar de frango, a ave e a carne muito usada na culinária.</p>
-          <a href="/sinal/frango/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="fruta fruta frutas alimento saudavel" data-cat="Alimentos">
-        <a href="/sinal/fruta/" class="card-visual" data-video="/assets/videos/sinais/fruta.mp4" aria-label="Ver o sinal de Fruta em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/fruta.mp4">
           <img src="/assets/videos/sinais/fruta.webp" alt="Intérprete fazendo o sinal de Fruta em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Fruta</h2>
+          <h2 class="card-nome"><a href="/sinal/fruta/" class="card-a">Fruta</a></h2>
           <p class="card-desc">Sinal usado para falar de fruta e de frutas em geral.</p>
-          <a href="/sinal/fruta/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="gato gato gata felino animal pet" data-cat="Animais">
-        <a href="/sinal/gato/" class="card-visual" data-video="/assets/videos/sinais/gato.mp4" aria-label="Ver o sinal de Gato em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/gato.mp4">
           <img src="/assets/videos/sinais/gato.webp" alt="Intérprete fazendo o sinal de Gato em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Gato</h2>
+          <h2 class="card-nome"><a href="/sinal/gato/" class="card-a">Gato</a></h2>
           <p class="card-desc">Sinal usado para falar de gato, animal de estimação muito popular.</p>
-          <a href="/sinal/gato/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="gostar gostar gosto curtir preferir amar" data-cat="Verbos">
-        <a href="/sinal/gostar/" class="card-visual" data-video="/assets/videos/sinais/gostar.mp4" aria-label="Ver o sinal de Gostar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/gostar.mp4">
           <img src="/assets/videos/sinais/gostar.webp" alt="Intérprete fazendo o sinal de Gostar em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Gostar</h2>
+          <h2 class="card-nome"><a href="/sinal/gostar/" class="card-a">Gostar</a></h2>
           <p class="card-desc">Sinal usado para dizer que se gosta de algo ou de alguém.</p>
-          <a href="/sinal/gostar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="janela janela abrir fechar casa" data-cat="Cotidiano">
-        <a href="/sinal/janela/" class="card-visual" data-video="/assets/videos/sinais/janela.mp4" aria-label="Ver o sinal de Janela em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/janela.mp4">
           <img src="/assets/img/sinais/janela.webp" alt="Ilustração do sinal de Janela em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Janela</h2>
+          <h2 class="card-nome"><a href="/sinal/janela/" class="card-a">Janela</a></h2>
           <p class="card-desc">Sinal usado para falar de janela, a abertura na parede que deixa entrar luz e ar.</p>
-          <a href="/sinal/janela/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="leite leite bebida cafe com leite vaca" data-cat="Alimentos">
-        <a href="/sinal/leite/" class="card-visual" data-video="/assets/videos/sinais/leite.mp4" aria-label="Ver o sinal de Leite em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/leite.mp4">
           <img src="/assets/videos/sinais/leite.webp" alt="Intérprete fazendo o sinal de Leite em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Leite</h2>
+          <h2 class="card-nome"><a href="/sinal/leite/" class="card-a">Leite</a></h2>
           <p class="card-desc">Sinal usado para falar de leite, bebida presente no café da manhã.</p>
-          <a href="/sinal/leite/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="livro livro leitura ler biblioteca" data-cat="Educação">
-        <a href="/sinal/livro/" class="card-visual" data-video="/assets/videos/sinais/livro.mp4" aria-label="Ver o sinal de Livro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/livro.mp4">
           <img src="/assets/videos/sinais/livro.webp" alt="Intérprete fazendo o sinal de Livro em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Educação</span>
-          <h2 class="card-nome">Livro</h2>
+          <h2 class="card-nome"><a href="/sinal/livro/" class="card-a">Livro</a></h2>
           <p class="card-desc">Sinal usado para falar de livro, objeto de leitura e estudo.</p>
-          <a href="/sinal/livro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="macaco macaco macaca animal primata" data-cat="Animais">
-        <a href="/sinal/macaco/" class="card-visual" data-video="/assets/videos/sinais/macaco.mp4" aria-label="Ver o sinal de Macaco em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/macaco.mp4">
           <img src="/assets/videos/sinais/macaco.webp" alt="Intérprete fazendo o sinal de Macaco em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Macaco</h2>
+          <h2 class="card-nome"><a href="/sinal/macaco/" class="card-a">Macaco</a></h2>
           <p class="card-desc">Sinal usado para falar de macaco, animal primata.</p>
-          <a href="/sinal/macaco/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="medico medico medico doutor saude consulta hospital" data-cat="Família e pessoas">
-        <a href="/sinal/medico/" class="card-visual" data-video="/assets/videos/sinais/medico.mp4" aria-label="Ver o sinal de Médico em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/medico.mp4">
           <img src="/assets/videos/sinais/medico.webp" alt="Intérprete fazendo o sinal de Médico em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Médico</h2>
+          <h2 class="card-nome"><a href="/sinal/medico/" class="card-a">Médico</a></h2>
           <p class="card-desc">Sinal usado para falar de médico ou médica, profissional da saúde.</p>
-          <a href="/sinal/medico/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="medo medo susto pavor receio" data-cat="Sentimentos">
-        <a href="/sinal/medo/" class="card-visual" data-video="/assets/videos/sinais/medo.mp4" aria-label="Ver o sinal de Medo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/medo.mp4">
           <img src="/assets/img/sinais/medo.webp" alt="Ilustração do sinal de Medo em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Medo</h2>
+          <h2 class="card-nome"><a href="/sinal/medo/" class="card-a">Medo</a></h2>
           <p class="card-desc">Sinal usado para expressar medo, receio ou susto diante de uma situação.</p>
-          <a href="/sinal/medo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="morar morar morada casa viver endereco" data-cat="Verbos">
-        <a href="/sinal/morar/" class="card-visual" data-video="/assets/videos/sinais/morar.mp4" aria-label="Ver o sinal de Morar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/morar.mp4">
           <img src="/assets/videos/sinais/morar.webp" alt="Intérprete fazendo o sinal de Morar em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Morar</h2>
+          <h2 class="card-nome"><a href="/sinal/morar/" class="card-a">Morar</a></h2>
           <p class="card-desc">Sinal usado para falar de morar, o lugar onde se vive.</p>
-          <a href="/sinal/morar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="musica musica musica cancao som ritmo" data-cat="Cultura">
-        <a href="/sinal/musica/" class="card-visual" data-video="/assets/videos/sinais/musica.mp4" aria-label="Ver o sinal de Música em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/musica.mp4">
           <img src="/assets/videos/sinais/musica.webp" alt="Intérprete fazendo o sinal de Música em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cultura</span>
-          <h2 class="card-nome">Música</h2>
+          <h2 class="card-nome"><a href="/sinal/musica/" class="card-a">Música</a></h2>
           <p class="card-desc">Sinal usado para falar de música, canção e ritmo.</p>
-          <a href="/sinal/musica/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="nao nao nao negar negacao nunca" data-cat="Expressões">
-        <a href="/sinal/nao/" class="card-visual" data-video="/assets/videos/sinais/nao.mp4" aria-label="Ver o sinal de Não em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/nao.mp4">
           <img src="/assets/videos/sinais/nao.webp" alt="Intérprete fazendo o sinal de Não em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Expressões</span>
-          <h2 class="card-nome">Não</h2>
+          <h2 class="card-nome"><a href="/sinal/nao/" class="card-a">Não</a></h2>
           <p class="card-desc">Sinal usado para negar, recusar ou discordar.</p>
-          <a href="/sinal/nao/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="obrigado obrigado obrigada agradecer agradecimento valeu gratidao" data-cat="Expressões">
-        <a href="/sinal/obrigado/" class="card-visual" data-video="/assets/videos/sinais/obrigado.mp4" aria-label="Ver o sinal de Obrigado em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/obrigado.mp4">
           <img src="/assets/img/sinais/obrigado.webp" alt="Ilustração do sinal de Obrigado em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Expressões</span>
-          <h2 class="card-nome">Obrigado</h2>
+          <h2 class="card-nome"><a href="/sinal/obrigado/" class="card-a">Obrigado</a></h2>
           <p class="card-desc">Sinal usado para agradecer a alguém por um favor, uma gentileza ou um serviço, em situações formais ou informais.</p>
-          <a href="/sinal/obrigado/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="olhar olhar ver observar enxergar" data-cat="Verbos">
-        <a href="/sinal/olhar/" class="card-visual" data-video="/assets/videos/sinais/olhar.mp4" aria-label="Ver o sinal de Olhar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/olhar.mp4">
           <img src="/assets/videos/sinais/olhar.webp" alt="Intérprete fazendo o sinal de Olhar em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Olhar</h2>
+          <h2 class="card-nome"><a href="/sinal/olhar/" class="card-a">Olhar</a></h2>
           <p class="card-desc">Sinal usado para falar de olhar, dirigir a visão para algo ou alguém.</p>
-          <a href="/sinal/olhar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="onibus onibus onibus transporte coletivo viagem" data-cat="Cotidiano">
-        <a href="/sinal/onibus/" class="card-visual" data-video="/assets/videos/sinais/onibus.mp4" aria-label="Ver o sinal de Ônibus em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/onibus.mp4">
           <img src="/assets/img/sinais/onibus.webp" alt="Ilustração do sinal de Ônibus em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Ônibus</h2>
+          <h2 class="card-nome"><a href="/sinal/onibus/" class="card-a">Ônibus</a></h2>
           <p class="card-desc">Sinal usado para falar de ônibus, o transporte coletivo das cidades e das viagens.</p>
-          <a href="/sinal/onibus/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="ouvinte ouvinte pessoa ouvinte escutar audicao" data-cat="Família e pessoas">
-        <a href="/sinal/ouvinte/" class="card-visual" data-video="/assets/videos/sinais/ouvinte.mp4" aria-label="Ver o sinal de Ouvinte em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/ouvinte.mp4">
           <img src="/assets/videos/sinais/ouvinte.webp" alt="Intérprete fazendo o sinal de Ouvinte em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Ouvinte</h2>
+          <h2 class="card-nome"><a href="/sinal/ouvinte/" class="card-a">Ouvinte</a></h2>
           <p class="card-desc">Sinal usado para falar de ouvinte, pessoa que escuta, termo usado pela comunidade surda.</p>
-          <a href="/sinal/ouvinte/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="passaro passaro passaro ave passarinho voar" data-cat="Animais">
-        <a href="/sinal/passaro/" class="card-visual" data-video="/assets/videos/sinais/passaro.mp4" aria-label="Ver o sinal de Pássaro em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/passaro.mp4">
           <img src="/assets/videos/sinais/passaro.webp" alt="Intérprete fazendo o sinal de Pássaro em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Animais</span>
-          <h2 class="card-nome">Pássaro</h2>
+          <h2 class="card-nome"><a href="/sinal/passaro/" class="card-a">Pássaro</a></h2>
           <p class="card-desc">Sinal usado para falar de pássaro, ave pequena que voa.</p>
-          <a href="/sinal/passaro/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="peixe peixe pescado animal comida mar" data-cat="Alimentos">
-        <a href="/sinal/peixe/" class="card-visual" data-video="/assets/videos/sinais/peixe.mp4" aria-label="Ver o sinal de Peixe em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/peixe.mp4">
           <img src="/assets/videos/sinais/peixe.webp" alt="Intérprete fazendo o sinal de Peixe em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Peixe</h2>
+          <h2 class="card-nome"><a href="/sinal/peixe/" class="card-a">Peixe</a></h2>
           <p class="card-desc">Sinal usado para falar de peixe, o animal e o alimento.</p>
-          <a href="/sinal/peixe/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="porta porta abrir fechar entrada" data-cat="Cotidiano">
-        <a href="/sinal/porta/" class="card-visual" data-video="/assets/videos/sinais/porta.mp4" aria-label="Ver o sinal de Porta em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/porta.mp4">
           <img src="/assets/img/sinais/porta.webp" alt="Ilustração do sinal de Porta em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Porta</h2>
+          <h2 class="card-nome"><a href="/sinal/porta/" class="card-a">Porta</a></h2>
           <p class="card-desc">Sinal usado para falar de porta, a abertura que dá acesso a casas, salas e outros ambientes.</p>
-          <a href="/sinal/porta/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="professor professor professora aula escola ensinar" data-cat="Família e pessoas">
-        <a href="/sinal/professor/" class="card-visual" data-video="/assets/videos/sinais/professor.mp4" aria-label="Ver o sinal de Professor em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/professor.mp4">
           <img src="/assets/videos/sinais/professor.webp" alt="Intérprete fazendo o sinal de Professor em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Professor</h2>
+          <h2 class="card-nome"><a href="/sinal/professor/" class="card-a">Professor</a></h2>
           <p class="card-desc">Sinal usado para falar de professor ou professora.</p>
-          <a href="/sinal/professor/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="queijo queijo laticinio pao de queijo" data-cat="Alimentos">
-        <a href="/sinal/queijo/" class="card-visual" data-video="/assets/videos/sinais/queijo.mp4" aria-label="Ver o sinal de Queijo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/queijo.mp4">
           <img src="/assets/videos/sinais/queijo.webp" alt="Intérprete fazendo o sinal de Queijo em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Queijo</h2>
+          <h2 class="card-nome"><a href="/sinal/queijo/" class="card-a">Queijo</a></h2>
           <p class="card-desc">Sinal usado para falar de queijo.</p>
-          <a href="/sinal/queijo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="raiva raiva bravo irritado odio nervoso" data-cat="Sentimentos">
-        <a href="/sinal/raiva/" class="card-visual" data-video="/assets/videos/sinais/raiva.mp4" aria-label="Ver o sinal de Raiva em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/raiva.mp4">
           <img src="/assets/img/sinais/raiva.webp" alt="Ilustração do sinal de Raiva em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Raiva</h2>
+          <h2 class="card-nome"><a href="/sinal/raiva/" class="card-a">Raiva</a></h2>
           <p class="card-desc">Sinal usado para expressar raiva, irritação ou indignação.</p>
-          <a href="/sinal/raiva/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="roupa roupa vestir vestido camisa" data-cat="Cotidiano">
-        <a href="/sinal/roupa/" class="card-visual" data-video="/assets/videos/sinais/roupa.mp4" aria-label="Ver o sinal de Roupa em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/roupa.mp4">
           <img src="/assets/img/sinais/roupa.webp" alt="Ilustração do sinal de Roupa em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Roupa</h2>
+          <h2 class="card-nome"><a href="/sinal/roupa/" class="card-a">Roupa</a></h2>
           <p class="card-desc">Sinal usado para falar de roupa, as peças que usamos para vestir o corpo.</p>
-          <a href="/sinal/roupa/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="sapato sapato calcado tenis pe" data-cat="Cotidiano">
-        <a href="/sinal/sapato/" class="card-visual" data-video="/assets/videos/sinais/sapato.mp4" aria-label="Ver o sinal de Sapato em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/sapato.mp4">
           <img src="/assets/img/sinais/sapato.webp" alt="Ilustração do sinal de Sapato em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Sapato</h2>
+          <h2 class="card-nome"><a href="/sinal/sapato/" class="card-a">Sapato</a></h2>
           <p class="card-desc">Sinal usado para falar de sapato e de calçados em geral.</p>
-          <a href="/sinal/sapato/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="saudade saudade falta sentir falta lembranca" data-cat="Sentimentos">
-        <a href="/sinal/saudade/" class="card-visual" data-video="/assets/videos/sinais/saudade.mp4" aria-label="Ver o sinal de Saudade em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/saudade.mp4">
           <img src="/assets/img/sinais/saudade.webp" alt="Ilustração do sinal de Saudade em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Saudade</h2>
+          <h2 class="card-nome"><a href="/sinal/saudade/" class="card-a">Saudade</a></h2>
           <p class="card-desc">Sinal usado para expressar saudade, a falta que se sente de alguém, de um lugar ou de um tempo.</p>
-          <a href="/sinal/saudade/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="sim sim afirmar concordar ok certo" data-cat="Expressões">
-        <a href="/sinal/sim/" class="card-visual" data-video="/assets/videos/sinais/sim.mp4" aria-label="Ver o sinal de Sim em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/sim.mp4">
           <img src="/assets/videos/sinais/sim.webp" alt="Intérprete fazendo o sinal de Sim em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Expressões</span>
-          <h2 class="card-nome">Sim</h2>
+          <h2 class="card-nome"><a href="/sinal/sim/" class="card-a">Sim</a></h2>
           <p class="card-desc">Sinal usado para afirmar, aceitar ou concordar.</p>
-          <a href="/sinal/sim/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="sonhar sonhar sonho dormir desejo imaginar" data-cat="Verbos">
-        <a href="/sinal/sonhar/" class="card-visual" data-video="/assets/videos/sinais/sonhar.mp4" aria-label="Ver o sinal de Sonhar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/sonhar.mp4">
           <img src="/assets/img/sinais/sonhar.webp" alt="Ilustração do sinal de Sonhar em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Sonhar</h2>
+          <h2 class="card-nome"><a href="/sinal/sonhar/" class="card-a">Sonhar</a></h2>
           <p class="card-desc">Sinal usado para falar de sonhar, tanto os sonhos durante o sono quanto os desejos e planos de vida.</p>
-          <a href="/sinal/sonhar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="sorvete sorvete sobremesa gelado doce picole" data-cat="Alimentos">
-        <a href="/sinal/sorvete/" class="card-visual" data-video="/assets/videos/sinais/sorvete.mp4" aria-label="Ver o sinal de Sorvete em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/sorvete.mp4">
           <img src="/assets/videos/sinais/sorvete.webp" alt="Intérprete fazendo o sinal de Sorvete em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Sorvete</h2>
+          <h2 class="card-nome"><a href="/sinal/sorvete/" class="card-a">Sorvete</a></h2>
           <p class="card-desc">Sinal usado para falar de sorvete, sobremesa gelada.</p>
-          <a href="/sinal/sorvete/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="suco suco bebida fruta laranja" data-cat="Alimentos">
-        <a href="/sinal/suco/" class="card-visual" data-video="/assets/videos/sinais/suco.mp4" aria-label="Ver o sinal de Suco em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/suco.mp4">
           <img src="/assets/videos/sinais/suco.webp" alt="Intérprete fazendo o sinal de Suco em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Alimentos</span>
-          <h2 class="card-nome">Suco</h2>
+          <h2 class="card-nome"><a href="/sinal/suco/" class="card-a">Suco</a></h2>
           <p class="card-desc">Sinal usado para falar de suco, bebida feita de frutas.</p>
-          <a href="/sinal/suco/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="surdo surdo surda surdez comunidade surda deficiente auditivo" data-cat="Família e pessoas">
-        <a href="/sinal/surdo/" class="card-visual" data-video="/assets/videos/sinais/surdo.mp4" aria-label="Ver o sinal de Surdo em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/surdo.mp4">
           <img src="/assets/videos/sinais/surdo.webp" alt="Intérprete fazendo o sinal de Surdo em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Família e pessoas</span>
-          <h2 class="card-nome">Surdo</h2>
+          <h2 class="card-nome"><a href="/sinal/surdo/" class="card-a">Surdo</a></h2>
           <p class="card-desc">Sinal usado para falar de pessoa surda, termo de identidade da comunidade surda.</p>
-          <a href="/sinal/surdo/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="surpresa surpresa susto inesperado espanto" data-cat="Sentimentos">
-        <a href="/sinal/surpresa/" class="card-visual" data-video="/assets/videos/sinais/surpresa.mp4" aria-label="Ver o sinal de Surpresa em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/surpresa.mp4">
           <img src="/assets/img/sinais/surpresa.webp" alt="Ilustração do sinal de Surpresa em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Surpresa</h2>
+          <h2 class="card-nome"><a href="/sinal/surpresa/" class="card-a">Surpresa</a></h2>
           <p class="card-desc">Sinal usado para expressar surpresa diante de algo inesperado, bom ou ruim.</p>
-          <a href="/sinal/surpresa/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="tchau tchau adeus ate logo despedida" data-cat="Saudações">
-        <a href="/sinal/tchau/" class="card-visual" data-video="/assets/videos/sinais/tchau.mp4" aria-label="Ver o sinal de Tchau em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/tchau.mp4">
           <img src="/assets/videos/sinais/tchau.webp" alt="Intérprete fazendo o sinal de Tchau em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Saudações</span>
-          <h2 class="card-nome">Tchau</h2>
+          <h2 class="card-nome"><a href="/sinal/tchau/" class="card-a">Tchau</a></h2>
           <p class="card-desc">Sinal usado para se despedir de alguém.</p>
-          <a href="/sinal/tchau/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="telefone telefone celular ligar ligacao" data-cat="Cotidiano">
-        <a href="/sinal/telefone/" class="card-visual" data-video="/assets/videos/sinais/telefone.mp4" aria-label="Ver o sinal de Telefone em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/telefone.mp4">
           <img src="/assets/img/sinais/telefone.webp" alt="Ilustração do sinal de Telefone em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Telefone</h2>
+          <h2 class="card-nome"><a href="/sinal/telefone/" class="card-a">Telefone</a></h2>
           <p class="card-desc">Sinal usado para falar de telefone e de ligações.</p>
-          <a href="/sinal/telefone/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="trabalho trabalho trabalhar emprego servico profissao" data-cat="Cotidiano">
-        <a href="/sinal/trabalho/" class="card-visual" data-video="/assets/videos/sinais/trabalho.mp4" aria-label="Ver o sinal de Trabalho em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/trabalho.mp4">
           <img src="/assets/img/sinais/trabalho.webp" alt="Ilustração do sinal de Trabalho em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Cotidiano</span>
-          <h2 class="card-nome">Trabalho</h2>
+          <h2 class="card-nome"><a href="/sinal/trabalho/" class="card-a">Trabalho</a></h2>
           <p class="card-desc">Sinal usado para falar de trabalho, emprego e atividades profissionais.</p>
-          <a href="/sinal/trabalho/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="triste triste tristeza chateado desanimado" data-cat="Sentimentos">
-        <a href="/sinal/triste/" class="card-visual" data-video="/assets/videos/sinais/triste.mp4" aria-label="Ver o sinal de Triste em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/triste.mp4">
           <img src="/assets/img/sinais/triste.webp" alt="Ilustração do sinal de Triste em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Triste</h2>
+          <h2 class="card-nome"><a href="/sinal/triste/" class="card-a">Triste</a></h2>
           <p class="card-desc">Sinal usado para expressar tristeza, desânimo ou pesar.</p>
-          <a href="/sinal/triste/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="vergonha vergonha timidez timido constrangimento" data-cat="Sentimentos">
-        <a href="/sinal/vergonha/" class="card-visual" data-video="/assets/videos/sinais/vergonha.mp4" aria-label="Ver o sinal de Vergonha em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/vergonha.mp4">
           <img src="/assets/img/sinais/vergonha.webp" alt="Ilustração do sinal de Vergonha em Libras" width="960" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Sentimentos</span>
-          <h2 class="card-nome">Vergonha</h2>
+          <h2 class="card-nome"><a href="/sinal/vergonha/" class="card-a">Vergonha</a></h2>
           <p class="card-desc">Sinal usado para expressar vergonha, timidez ou constrangimento.</p>
-          <a href="/sinal/vergonha/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="viajar viajar viagem ferias turismo" data-cat="Verbos">
-        <a href="/sinal/viajar/" class="card-visual" data-video="/assets/videos/sinais/viajar.mp4" aria-label="Ver o sinal de Viajar em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/viajar.mp4">
           <img src="/assets/videos/sinais/viajar.webp" alt="Intérprete fazendo o sinal de Viajar em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Verbos</span>
-          <h2 class="card-nome">Viajar</h2>
+          <h2 class="card-nome"><a href="/sinal/viajar/" class="card-a">Viajar</a></h2>
           <p class="card-desc">Sinal usado para falar de viajar, ir de um lugar a outro.</p>
-          <a href="/sinal/viajar/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="voce voce voce tu pronome segunda pessoa" data-cat="Pronomes">
-        <a href="/sinal/voce/" class="card-visual" data-video="/assets/videos/sinais/voce.mp4" aria-label="Ver o sinal de Você em Libras">
+        <div class="card-visual" data-video="/assets/videos/sinais/voce.mp4">
           <img src="/assets/videos/sinais/voce.webp" alt="Intérprete fazendo o sinal de Você em Libras" width="1280" height="720" loading="lazy" decoding="async">
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Pronomes</span>
-          <h2 class="card-nome">Você</h2>
+          <h2 class="card-nome"><a href="/sinal/voce/" class="card-a">Você</a></h2>
           <p class="card-desc">Sinal usado para se dirigir à pessoa com quem se conversa: você.</p>
-          <a href="/sinal/voce/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="bom dia bom dia cumprimento saudacao manha" data-cat="Saudações">
-        <a href="/sinal/bom-dia/" class="card-visual card-vazio" aria-label="Ver o sinal de Bom dia em Libras">
+        <div class="card-visual card-vazio">
           <span class="card-badge">Vídeo em breve</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Saudações</span>
-          <h2 class="card-nome">Bom dia</h2>
+          <h2 class="card-nome"><a href="/sinal/bom-dia/" class="card-a">Bom dia</a></h2>
           <p class="card-desc">Cumprimento usado pela manhã para saudar alguém ao chegar, ao encontrar uma pessoa ou ao começar uma conversa.</p>
-          <a href="/sinal/bom-dia/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <article class="sinal-card" data-nome="por favor por favor pedido educacao cortesia" data-cat="Expressões">
-        <a href="/sinal/por-favor/" class="card-visual card-vazio" aria-label="Ver o sinal de Por favor em Libras">
+        <div class="card-visual card-vazio">
           <span class="card-badge">Vídeo em breve</span>
-        </a>
+        </div>
         <div class="card-body">
           <span class="card-cat">Expressões</span>
-          <h2 class="card-nome">Por favor</h2>
+          <h2 class="card-nome"><a href="/sinal/por-favor/" class="card-a">Por favor</a></h2>
           <p class="card-desc">Expressão usada para fazer pedidos com educação e respeito, em situações formais ou informais.</p>
-          <a href="/sinal/por-favor/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
       <!-- /SINAIS:CARDS -->
@@ -2016,7 +2019,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* Prévia do vídeo ao passar o mouse ou focar o card (só em telas com hover e sem movimento reduzido) */
 (function () {
   if (!window.matchMedia('(hover: hover)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  document.querySelectorAll('.card-visual[data-video]').forEach(function (a) {
+  document.querySelectorAll('#cardsGrid .sinal-card').forEach(function (card) {
+    var a = card.querySelector('.card-visual[data-video]'), link = card.querySelector('.card-a');
+    if (!a) return;
     var v;
     function start() {
       if (!v) {
@@ -2030,10 +2035,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       v.play().catch(function () {});
     }
     function stop() { if (v) { v.pause(); a.classList.remove('playing'); } }
-    a.addEventListener('mouseenter', start);
-    a.addEventListener('focus', start);
-    a.addEventListener('mouseleave', stop);
-    a.addEventListener('blur', stop);
+    card.addEventListener('mouseenter', start);
+    card.addEventListener('mouseleave', stop);
+    link.addEventListener('focus', start);
+    link.addEventListener('blur', stop);
   });
 })();
 

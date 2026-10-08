@@ -1,0 +1,19 @@
+# Build do GitHub Pages (Jekyll). O site é HTML estático; este arquivo só tira do site publicado
+# o que é ferramenta, rascunho ou documento interno. Sem ele, o GitHub Pages converte cada .md em
+# página pública (ex.: /blog/CLAUDE.html, /tools/aprender/PESQUISA.html) e publica os geradores.
+exclude:
+  - "*.md"
+  - tools/
+  - scripts/
+  - og/
+  - Dockerfile
+  - nginx.conf
+  - package.json
+  - package-lock.json
+  - skills-lock.json
+  - "*.code-workspace"
+  # padrões do Jekyll (a lista acima substitui a lista padrão)
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

@@ -366,6 +366,7 @@ Os blocos antigos `.pa-actions` (Jogo/Vocabulário/Glossário), `.pa-related` ("
 # depois de publicar ou editar um post (a ordem importa: links.py lê os cards da home)
 python3 tools/blog/home.py
 python3 tools/seo/links.py
+python3 tools/seo/llms.py          # inventário do blog no llms-full.txt
 python3 tools/seo/auditoria.py     # confere órfãs, links de entrada, título e description
 ```
 

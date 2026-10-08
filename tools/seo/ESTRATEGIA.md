@@ -187,7 +187,8 @@ Pauta sazonal é **atualizada na mesma URL** todo ano, não publicada de novo.
 python3 tools/blog/home.py         # 1) home do blog, /blog/todos/, /blog/temas/ (fonte dos cards)
 python3 tools/seo/links.py         # 2) banners, Continue lendo, ícones, blog nas comerciais e no glossário
 python3 tools/sinais/build_pages.py   # (só quando mexer em sinais)
-python3 tools/seo/auditoria.py --csv  # 3) relatório: tools/seo/auditoria.json e .csv
+python3 tools/seo/llms.py         # 3) lista de artigos do llms-full.txt e contagens do llms.txt
+python3 tools/seo/auditoria.py --csv  # 4) relatório: tools/seo/auditoria.json e .csv
 ```
 
 - **A ordem importa:** `links.py` lê os cards gerados pelo `home.py`.

@@ -200,22 +200,22 @@ def index():
         nome = esc(fold(s["palavra"] + " " + s.get("busca", "")))
         v, img = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
         if s["video"]:
-            visual = f'''<a href="/sinal/{s['slug']}/" class="card-visual" data-video="{v}" aria-label="Ver o sinal de {esc(s['palavra'])} em Libras">
+            visual = f'''<div class="card-visual" data-video="{v}">
           {f'<img src="{ILU_DIR}/{s["slug"]}.webp" alt="Ilustração do sinal de {esc(s["palavra"])} em Libras" width="960" height="720" loading="lazy" decoding="async">' if s["ilustracao"] else f'<img src="{img}" alt="Intérprete fazendo o sinal de {esc(s["palavra"])} em Libras" width="1280" height="720" loading="lazy" decoding="async">'}
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
-        </a>'''
+        </div>'''
         else:
-            visual = f'''<a href="/sinal/{s['slug']}/" class="card-visual card-vazio" aria-label="Ver o sinal de {esc(s['palavra'])} em Libras">
+            visual = '''<div class="card-visual card-vazio">
           <span class="card-badge">Vídeo em breve</span>
-        </a>'''
+        </div>'''
         cards += f'''
       <article class="sinal-card" data-nome="{nome}" data-cat="{esc(s['categoria'])}">
         {visual}
         <div class="card-body">
           <span class="card-cat">{esc(s['categoria'])}</span>
-          <h2 class="card-nome">{esc(s['palavra'])}</h2>
+          <h2 class="card-nome"><a href="/sinal/{s['slug']}/" class="card-a">{esc(s['palavra'])}</a></h2>
           <p class="card-desc">{esc(s['resumo'])}</p>
-          <a href="/sinal/{s['slug']}/" class="card-link">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>'''
     cards += "\n      "

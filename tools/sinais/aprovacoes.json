@@ -648,6 +648,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:46:51-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -660,9 +666,10 @@
    },
    "atualizado_em": "2026-10-08T09:47:04-03:00",
    "ilustracao": {
-    "nota": "Fundo liso #f0fafa igual à referência de estilo, sem transparência.",
-    "status": "refazer",
-    "versao": 1
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência. Fundo aplicado localmente.",
+    "status": "aprovado",
+    "versao": 2
    },
    "nota": "",
    "status": "aprovado",
@@ -675,6 +682,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:50:31-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -686,6 +699,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:47:27-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -718,6 +737,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:47:15-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -729,6 +754,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:39:23-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -740,6 +771,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:44:11-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -751,6 +788,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:43:38-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -785,6 +828,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:41:59-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -796,6 +845,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:39:31-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -807,6 +862,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:51:31-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -835,6 +896,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:47:25-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -869,6 +936,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:43:17-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -886,6 +959,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:50:40-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -897,6 +976,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:46:53-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -925,6 +1010,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:50:18-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -936,6 +1027,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:47:10-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1015,6 +1112,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:51:20-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1043,6 +1146,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:35:43-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1054,6 +1163,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:36:06-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1065,6 +1180,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:43:09-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1093,6 +1214,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:52:15-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1
@@ -1172,6 +1299,12 @@
     "tomada": 2
    },
    "atualizado_em": "2026-10-08T09:49:28-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:06-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 2
@@ -1183,6 +1316,12 @@
     "tomada": 1
    },
    "atualizado_em": "2026-10-08T09:39:07-03:00",
+   "ilustracao": {
+    "aprovado_em": "2026-10-08T15:35:07-03:00",
+    "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
+    "status": "aprovado",
+    "versao": 1
+   },
    "nota": "",
    "status": "aprovado",
    "tomada": 1

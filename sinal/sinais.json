@@ -411,7 +411,7 @@
     {
       "slug": "familia",
       "palavra": "Família",
-      "categoria": "Família",
+      "categoria": "Família e pessoas",
       "classe": "substantivo feminino",
       "pron": "/fa-mí-li-a/",
       "busca": "familia família parentes pais filhos",
@@ -806,6 +806,1106 @@
       ],
       "dados": {
         "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "amigo",
+      "palavra": "Amigo",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo masculino",
+      "pron": "/a-mi-go/",
+      "busca": "amigo amiga amizade colega parceiro",
+      "resumo": "Sinal usado para falar de amigo ou amiga, alguém com quem se tem amizade e confiança.",
+      "definicoes": [
+        "Pessoa ligada a outra por afeto, confiança e convivência, sem laço de parentesco.",
+        "<em>Em Libras:</em> o mesmo sinal serve para amigo e amiga, sem marcação de gênero como no português. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Ele é meu melhor amigo.",
+        "Vou ao cinema com uma amiga.",
+        "Fiz muitos amigos na escola."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "ansioso",
+      "palavra": "Ansioso",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/an-si-o-so/",
+      "busca": "ansioso ansiedade nervoso preocupado inquieto",
+      "resumo": "Sinal usado para expressar ansiedade, nervosismo ou expectativa intensa.",
+      "definicoes": [
+        "Que sente ansiedade; inquieto, nervoso ou cheio de expectativa diante de algo que vai acontecer.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Estou ansioso para a viagem.",
+        "Ela ficou ansiosa antes da prova.",
+        "Não fique ansioso, vai dar tudo certo."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente ansiedade.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "aprender",
+      "palavra": "Aprender",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/a-pren-der/",
+      "busca": "aprender aprendizado estudar entender saber",
+      "resumo": "Sinal usado para falar de aprender, adquirir conhecimento ou uma habilidade nova.",
+      "definicoes": [
+        "Passar a saber algo por meio do estudo, da prática ou da experiência.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Quero aprender Libras.",
+        "As crianças aprendem brincando.",
+        "Aprendi a cozinhar com a minha avó."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "arroz",
+      "palavra": "Arroz",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/ar-roz/",
+      "busca": "arroz comida alimento almoço",
+      "resumo": "Sinal usado para falar de arroz, alimento presente no prato de quase todo brasileiro.",
+      "definicoes": [
+        "Grão de cereal muito consumido no Brasil, geralmente servido cozido, junto com o feijão.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "O almoço de hoje é arroz com feijão.",
+        "Você quer mais arroz?",
+        "Ela aprendeu a fazer arroz soltinho."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "borboleta",
+      "palavra": "Borboleta",
+      "categoria": "Animais",
+      "classe": "substantivo feminino",
+      "pron": "/bor-bo-le-ta/",
+      "busca": "borboleta inseto animal asas",
+      "resumo": "Sinal usado para falar de borboleta, inseto de asas coloridas.",
+      "definicoes": [
+        "Inseto de asas grandes e coloridas, que passa pela fase de lagarta antes de voar.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Uma borboleta pousou na flor.",
+        "As crianças desenharam borboletas.",
+        "Vimos muitas borboletas no parque."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Natureza"
+      }
+    },
+    {
+      "slug": "cachorro",
+      "palavra": "Cachorro",
+      "categoria": "Animais",
+      "classe": "substantivo masculino",
+      "pron": "/ca-chor-ro/",
+      "busca": "cachorro cão cadela animal pet",
+      "resumo": "Sinal usado para falar de cachorro, o animal de estimação mais comum nas casas brasileiras.",
+      "definicoes": [
+        "Mamífero doméstico, companheiro do ser humano, criado como animal de estimação ou de guarda.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Meu cachorro adora passear.",
+        "O cachorro do vizinho latiu a noite toda.",
+        "Vamos adotar um cachorro."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "cafe",
+      "palavra": "Café",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/ca-fé/",
+      "busca": "cafe café bebida cafezinho manhã",
+      "resumo": "Sinal usado para falar de café, a bebida, e também do café da manhã.",
+      "definicoes": [
+        "Bebida feita com os grãos torrados e moídos do cafeeiro, muito consumida no Brasil. Também nomeia a primeira refeição do dia.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Aceita um café?",
+        "Eu tomo café sem açúcar.",
+        "O café da manhã está na mesa."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "cansado",
+      "palavra": "Cansado",
+      "categoria": "Sentimentos",
+      "classe": "adjetivo",
+      "pron": "/can-sa-do/",
+      "busca": "cansado cansaço exausto sono",
+      "resumo": "Sinal usado para dizer que alguém está cansado, sem energia ou com sono.",
+      "definicoes": [
+        "Que sente cansaço depois de esforço físico ou mental; sem energia.",
+        "<em>Em Libras:</em> como nos demais sinais de sentimento, a expressão facial faz parte do sinal e precisa combinar com a emoção. Sem ela, o sinal perde força ou pode ser mal interpretado."
+      ],
+      "exemplos": [
+        "Estou cansado depois do trabalho.",
+        "Ela chegou cansada da viagem.",
+        "Vamos parar um pouco, todos estão cansados."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> em sinais de sentimento, o rosto carrega parte do significado. A intensidade da expressão e do movimento mostra o quanto a pessoa sente cansaço.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Expressão facial": "Essencial"
+      }
+    },
+    {
+      "slug": "cerveja",
+      "palavra": "Cerveja",
+      "categoria": "Alimentos",
+      "classe": "substantivo feminino",
+      "pron": "/cer-ve-ja/",
+      "busca": "cerveja bebida bar chopp",
+      "resumo": "Sinal usado para falar de cerveja, bebida alcoólica comum em encontros e festas.",
+      "definicoes": [
+        "Bebida alcoólica fermentada, feita principalmente de cevada, servida gelada.",
+        "<em>Em Libras:</em> faz parte do vocabulário de bebidas e de situações sociais. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Vamos tomar uma cerveja depois do trabalho?",
+        "Ele não bebe cerveja.",
+        "A cerveja está gelada."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Social"
+      }
+    },
+    {
+      "slug": "cobra",
+      "palavra": "Cobra",
+      "categoria": "Animais",
+      "classe": "substantivo feminino",
+      "pron": "/co-bra/",
+      "busca": "cobra serpente animal réptil",
+      "resumo": "Sinal usado para falar de cobra, réptil de corpo longo e sem patas.",
+      "definicoes": [
+        "Réptil de corpo alongado, sem patas, que se desloca rastejando. Algumas espécies são venenosas.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Cuidado, tem uma cobra no caminho!",
+        "A cobra trocou de pele.",
+        "Vimos uma cobra no zoológico."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Natureza"
+      }
+    },
+    {
+      "slug": "correr",
+      "palavra": "Correr",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/cor-rer/",
+      "busca": "correr corrida pressa rápido",
+      "resumo": "Sinal usado para falar de correr, seja como exercício, seja por pressa.",
+      "definicoes": [
+        "Mover-se rapidamente com passos largos; também pode significar fazer algo com pressa.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Eu corro no parque toda manhã.",
+        "Ele correu para pegar o ônibus.",
+        "Não corra na beira da piscina."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "crianca",
+      "palavra": "Criança",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo feminino",
+      "pron": "/cri-an-ça/",
+      "busca": "crianca criança filho menino menina infância",
+      "resumo": "Sinal usado para falar de criança, menino ou menina na infância.",
+      "definicoes": [
+        "Pessoa na fase da infância, do nascimento até o começo da adolescência.",
+        "<em>Em Libras:</em> o sinal pode indicar a altura da criança, e essa altura ajuda a sugerir a idade. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "As crianças estão brincando no quintal.",
+        "Quando eu era criança, morava no interior.",
+        "A escola tem atividades para crianças surdas."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "ele-ela",
+      "palavra": "Ele / Ela",
+      "categoria": "Pronomes",
+      "classe": "pronome pessoal",
+      "pron": "/e-le, e-la/",
+      "busca": "ele ela pronome pessoa terceira",
+      "resumo": "Sinal usado para se referir a outra pessoa, de quem se fala: ele ou ela.",
+      "definicoes": [
+        "Pronome pessoal da terceira pessoa, usado para falar de alguém que não participa da conversa.",
+        "<em>Em Libras:</em> os pronomes pessoais costumam ser feitos apontando: para si (eu), para quem está na conversa (você) ou para a pessoa, ou o ponto do espaço associado a ela (ele, ela)."
+      ],
+      "exemplos": [
+        "Ele é meu irmão.",
+        "Ela trabalha comigo.",
+        "Você conhece ele?"
+      ],
+      "contexto": [
+        "<strong>Sem gênero:</strong> em Libras, o mesmo sinal apontado serve para ele e para ela. Quando é preciso, a pessoa é identificada pelo nome ou pelo sinal-nome.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "ensinar",
+      "palavra": "Ensinar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/en-si-nar/",
+      "busca": "ensinar ensino professor aula educar",
+      "resumo": "Sinal usado para falar de ensinar, transmitir conhecimento a alguém.",
+      "definicoes": [
+        "Transmitir conhecimento, habilidade ou experiência a outra pessoa.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Ela ensina Libras para crianças.",
+        "Você pode me ensinar a usar o aplicativo?",
+        "Meu pai me ensinou a andar de bicicleta."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "escola",
+      "palavra": "Escola",
+      "categoria": "Educação",
+      "classe": "substantivo feminino",
+      "pron": "/es-co-la/",
+      "busca": "escola colegio colégio aula estudar",
+      "resumo": "Sinal usado para falar de escola, o lugar onde se estuda.",
+      "definicoes": [
+        "Instituição de ensino onde alunos aprendem com professores; também o prédio onde funciona.",
+        "<em>Em Libras:</em> é um dos sinais mais usados por famílias e estudantes surdos. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Meu filho começou na escola nova.",
+        "A escola fica perto de casa.",
+        "Hoje não tem aula na escola."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "estudar",
+      "palavra": "Estudar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/es-tu-dar/",
+      "busca": "estudar estudo aprender prova livro",
+      "resumo": "Sinal usado para falar de estudar, dedicar-se a aprender um conteúdo.",
+      "definicoes": [
+        "Dedicar tempo e atenção para aprender algo, lendo, praticando ou fazendo exercícios.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Preciso estudar para a prova.",
+        "Ela estuda Libras há dois anos.",
+        "Vamos estudar juntos na biblioteca."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "eu",
+      "palavra": "Eu",
+      "categoria": "Pronomes",
+      "classe": "pronome pessoal",
+      "pron": "/eu/",
+      "busca": "eu mim pronome primeira pessoa",
+      "resumo": "Sinal usado para se referir a si mesmo: eu.",
+      "definicoes": [
+        "Pronome pessoal da primeira pessoa do singular, usado por quem fala para se referir a si.",
+        "<em>Em Libras:</em> os pronomes pessoais costumam ser feitos apontando: para si (eu), para quem está na conversa (você) ou para a pessoa, ou o ponto do espaço associado a ela (ele, ela)."
+      ],
+      "exemplos": [
+        "Eu moro em Florianópolis.",
+        "Eu também quero ir.",
+        "Fui eu que liguei."
+      ],
+      "contexto": [
+        "<strong>Apontação:</strong> apontar para pessoas e lugares faz parte da gramática da Libras e não é falta de educação, como às vezes se pensa no português.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "falar",
+      "palavra": "Falar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/fa-lar/",
+      "busca": "falar fala conversar dizer comunicar",
+      "resumo": "Sinal usado para falar do ato de falar, dizer algo com a voz.",
+      "definicoes": [
+        "Expressar-se por meio de palavras faladas; dizer, conversar.",
+        "<em>Em Libras:</em> para a comunidade surda, a comunicação acontece em Libras, e o sinal de falar costuma se referir à fala oral. Conversar em Libras tem sinal próprio, ligado a sinalizar."
+      ],
+      "exemplos": [
+        "Ele fala muito rápido.",
+        "Preciso falar com você.",
+        "Ela fala português e Libras."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "feijao",
+      "palavra": "Feijão",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/fei-jão/",
+      "busca": "feijao feijão comida almoço feijoada",
+      "resumo": "Sinal usado para falar de feijão, alimento básico da mesa brasileira.",
+      "definicoes": [
+        "Grão de leguminosa muito consumido no Brasil, geralmente cozido e servido com arroz.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Arroz e feijão não podem faltar.",
+        "Hoje tem feijoada no almoço.",
+        "O feijão está no fogo."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "feliz-aniversario",
+      "palavra": "Feliz aniversário",
+      "categoria": "Saudações",
+      "classe": "expressão",
+      "pron": "/fe-liz a-ni-ver-sá-ri-o/",
+      "busca": "feliz aniversario aniversário parabens parabéns festa",
+      "resumo": "Expressão usada para cumprimentar alguém pelo aniversário.",
+      "definicoes": [
+        "Cumprimento dirigido a uma pessoa no dia do seu aniversário, desejando felicidades.",
+        "<em>Em Libras:</em> a expressão combina os sinais de FELIZ e ANIVERSÁRIO, com expressão facial alegre. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Feliz aniversário, mãe!",
+        "Mandei uma mensagem de feliz aniversário.",
+        "Todos cantaram feliz aniversário."
+      ],
+      "contexto": [
+        "<strong>Expressão facial:</strong> o cumprimento ganha sentido com um rosto alegre e acolhedor.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Datas especiais"
+      }
+    },
+    {
+      "slug": "frango",
+      "palavra": "Frango",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/fran-go/",
+      "busca": "frango galinha carne comida",
+      "resumo": "Sinal usado para falar de frango, a ave e a carne muito usada na culinária.",
+      "definicoes": [
+        "Filhote de galinha ou a carne dessa ave, muito consumida assada, grelhada ou cozida.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Hoje o almoço é frango assado.",
+        "Ela não come frango.",
+        "Comprei frango no mercado."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "fruta",
+      "palavra": "Fruta",
+      "categoria": "Alimentos",
+      "classe": "substantivo feminino",
+      "pron": "/fru-ta/",
+      "busca": "fruta frutas alimento saudável",
+      "resumo": "Sinal usado para falar de fruta e de frutas em geral.",
+      "definicoes": [
+        "Parte comestível de algumas plantas, geralmente doce e consumida fresca, como banana, maçã e laranja.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Coma uma fruta no lanche.",
+        "Qual é a sua fruta preferida?",
+        "A feira tem muitas frutas da estação."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "gato",
+      "palavra": "Gato",
+      "categoria": "Animais",
+      "classe": "substantivo masculino",
+      "pron": "/ga-to/",
+      "busca": "gato gata felino animal pet",
+      "resumo": "Sinal usado para falar de gato, animal de estimação muito popular.",
+      "definicoes": [
+        "Mamífero felino doméstico, de corpo ágil e bigodes, criado como animal de estimação.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "O gato dormiu no sofá.",
+        "Minha gata teve filhotes.",
+        "Você prefere gato ou cachorro?"
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "gostar",
+      "palavra": "Gostar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/gos-tar/",
+      "busca": "gostar gosto curtir preferir amar",
+      "resumo": "Sinal usado para dizer que se gosta de algo ou de alguém.",
+      "definicoes": [
+        "Sentir prazer, simpatia ou afeto por algo ou por alguém; achar bom.",
+        "<em>Em Libras:</em> a expressão facial ajuda a mostrar o quanto se gosta, e a negação pode ser feita com sinal próprio ou com movimento de cabeça."
+      ],
+      "exemplos": [
+        "Eu gosto de música.",
+        "Você gostou do filme?",
+        "Ela não gosta de acordar cedo."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "leite",
+      "palavra": "Leite",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/lei-te/",
+      "busca": "leite bebida café com leite vaca",
+      "resumo": "Sinal usado para falar de leite, bebida presente no café da manhã.",
+      "definicoes": [
+        "Líquido branco e nutritivo produzido por fêmeas de mamíferos, como a vaca, muito usado como alimento.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Quer café com leite?",
+        "Acabou o leite da geladeira.",
+        "O bebê tomou leite e dormiu."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "livro",
+      "palavra": "Livro",
+      "categoria": "Educação",
+      "classe": "substantivo masculino",
+      "pron": "/li-vro/",
+      "busca": "livro leitura ler biblioteca",
+      "resumo": "Sinal usado para falar de livro, objeto de leitura e estudo.",
+      "definicoes": [
+        "Conjunto de folhas impressas e encadernadas com um texto, usado para leitura e aprendizado.",
+        "<em>Em Libras:</em> faz parte do vocabulário de educação e leitura. Hoje já existem livros traduzidos para Libras em vídeo. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Eu gosto de ler um bom livro antes de dormir.",
+        "Peguei esse livro na biblioteca.",
+        "O livro tem versão em Libras."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "macaco",
+      "palavra": "Macaco",
+      "categoria": "Animais",
+      "classe": "substantivo masculino",
+      "pron": "/ma-ca-co/",
+      "busca": "macaco macaca animal primata",
+      "resumo": "Sinal usado para falar de macaco, animal primata.",
+      "definicoes": [
+        "Mamífero primata, ágil e inteligente, que vive em árvores e em grupos.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "O macaco pulou de galho em galho.",
+        "As crianças riram do macaco no zoológico.",
+        "Tem muitos macacos na mata."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Natureza"
+      }
+    },
+    {
+      "slug": "medico",
+      "palavra": "Médico",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo masculino",
+      "pron": "/mé-di-co/",
+      "busca": "medico médico doutor saúde consulta hospital",
+      "resumo": "Sinal usado para falar de médico ou médica, profissional da saúde.",
+      "definicoes": [
+        "Profissional formado em medicina, que diagnostica e trata doenças.",
+        "<em>Em Libras:</em> faz parte do vocabulário sobre pessoas e profissões, usado para apresentar alguém ou dizer o que a pessoa faz. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Tenho consulta com o médico amanhã.",
+        "Ela é médica no hospital da cidade.",
+        "O médico pediu exames."
+      ],
+      "contexto": [
+        "<strong>Acessibilidade na saúde:</strong> pessoas surdas têm direito a atendimento em Libras. Conhecer sinais de saúde ajuda, mas não substitui um intérprete em consultas.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Saúde"
+      }
+    },
+    {
+      "slug": "morar",
+      "palavra": "Morar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/mo-rar/",
+      "busca": "morar morada casa viver endereço",
+      "resumo": "Sinal usado para falar de morar, o lugar onde se vive.",
+      "definicoes": [
+        "Ter residência em algum lugar; viver em uma casa, cidade ou país.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Onde você mora?",
+        "Eu moro perto da praia.",
+        "Eles moram juntos há cinco anos."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "musica",
+      "palavra": "Música",
+      "categoria": "Cultura",
+      "classe": "substantivo feminino",
+      "pron": "/mú-si-ca/",
+      "busca": "musica música canção som ritmo",
+      "resumo": "Sinal usado para falar de música, canção e ritmo.",
+      "definicoes": [
+        "Arte de combinar sons, ritmo e melodia; também nomeia uma canção.",
+        "<em>Em Libras:</em> pessoas surdas também vivem a música, pela vibração, pelo ritmo e pela interpretação de canções em Libras, que tem artistas e festivais próprios."
+      ],
+      "exemplos": [
+        "Qual música você está ouvindo?",
+        "Ela gosta de dançar música brasileira.",
+        "O show teve interpretação de música em Libras."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cultura"
+      }
+    },
+    {
+      "slug": "nao",
+      "palavra": "Não",
+      "categoria": "Expressões",
+      "classe": "advérbio",
+      "pron": "/não/",
+      "busca": "nao não negar negação nunca",
+      "resumo": "Sinal usado para negar, recusar ou discordar.",
+      "definicoes": [
+        "Palavra usada para negar, recusar ou responder de forma negativa.",
+        "<em>Em Libras:</em> a negação pode ser feita com o sinal manual, com o movimento de balançar a cabeça ou com os dois juntos, acompanhados de expressão facial."
+      ],
+      "exemplos": [
+        "Não, obrigado.",
+        "Eu não entendi.",
+        "Hoje não vai chover."
+      ],
+      "contexto": [
+        "<strong>Expressão facial e cabeça:</strong> em Libras, o movimento de cabeça e o rosto também marcam a negação na frase.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "olhar",
+      "palavra": "Olhar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/o-lhar/",
+      "busca": "olhar ver observar enxergar",
+      "resumo": "Sinal usado para falar de olhar, dirigir a visão para algo ou alguém.",
+      "definicoes": [
+        "Dirigir os olhos para algo ou alguém; observar.",
+        "<em>Em Libras:</em> a direção do sinal costuma acompanhar para onde se olha, e o olhar de quem sinaliza também faz parte da comunicação."
+      ],
+      "exemplos": [
+        "Olhe para mim, por favor.",
+        "Ela olhou pela janela.",
+        "Vamos olhar as fotos da viagem."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "ouvinte",
+      "palavra": "Ouvinte",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo e adjetivo",
+      "pron": "/ou-vin-te/",
+      "busca": "ouvinte pessoa ouvinte escutar audição",
+      "resumo": "Sinal usado para falar de ouvinte, pessoa que escuta, termo usado pela comunidade surda.",
+      "definicoes": [
+        "Pessoa que ouve. Na comunidade surda, é o termo usado para quem não é surdo.",
+        "<em>Em Libras:</em> o sinal faz parte do vocabulário de identidade da comunidade surda, ao lado de SURDO. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Ele é ouvinte e aprendeu Libras com amigos surdos.",
+        "A família dela é toda ouvinte.",
+        "Muitos ouvintes querem aprender Libras."
+      ],
+      "contexto": [
+        "<strong>Identidade:</strong> surdo e ouvinte são termos usados pela própria comunidade surda para falar de identidade e cultura, não de doença.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Comunidade surda"
+      }
+    },
+    {
+      "slug": "passaro",
+      "palavra": "Pássaro",
+      "categoria": "Animais",
+      "classe": "substantivo masculino",
+      "pron": "/pás-sa-ro/",
+      "busca": "passaro pássaro ave passarinho voar",
+      "resumo": "Sinal usado para falar de pássaro, ave pequena que voa.",
+      "definicoes": [
+        "Ave, geralmente pequena, de penas e bico, capaz de voar.",
+        "<em>Em Libras:</em> faz parte do vocabulário de animais, muito usado com crianças e em atividades escolares. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Um pássaro fez ninho na árvore.",
+        "Ouvi o canto dos pássaros.",
+        "O pássaro voou para longe."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Natureza"
+      }
+    },
+    {
+      "slug": "peixe",
+      "palavra": "Peixe",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/pei-xe/",
+      "busca": "peixe pescado animal comida mar",
+      "resumo": "Sinal usado para falar de peixe, o animal e o alimento.",
+      "definicoes": [
+        "Animal que vive na água e respira por guelras; também a carne desse animal usada na alimentação.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Hoje tem peixe no almoço.",
+        "Vimos muitos peixes no mar.",
+        "Ele gosta de pescar peixe no rio."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "professor",
+      "palavra": "Professor",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo masculino",
+      "pron": "/pro-fes-sor/",
+      "busca": "professor professora aula escola ensinar",
+      "resumo": "Sinal usado para falar de professor ou professora.",
+      "definicoes": [
+        "Pessoa que ensina, geralmente em escolas, faculdades ou cursos.",
+        "<em>Em Libras:</em> faz parte do vocabulário sobre pessoas e profissões, usado para apresentar alguém ou dizer o que a pessoa faz. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "A professora explicou de novo.",
+        "Meu professor de Libras é surdo.",
+        "Ela quer ser professora."
+      ],
+      "contexto": [
+        "<strong>Educação bilíngue:</strong> professores surdos e bilíngues são referência no ensino de Libras e na educação de crianças surdas.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Educação"
+      }
+    },
+    {
+      "slug": "queijo",
+      "palavra": "Queijo",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/quei-jo/",
+      "busca": "queijo laticínio pão de queijo",
+      "resumo": "Sinal usado para falar de queijo.",
+      "definicoes": [
+        "Alimento feito do leite coalhado, com muitas variedades de sabor e textura.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Quero um pão com queijo.",
+        "Minas Gerais é famosa pelo queijo.",
+        "Esse queijo é muito bom."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "sim",
+      "palavra": "Sim",
+      "categoria": "Expressões",
+      "classe": "advérbio",
+      "pron": "/sim/",
+      "busca": "sim afirmar concordar ok certo",
+      "resumo": "Sinal usado para afirmar, aceitar ou concordar.",
+      "definicoes": [
+        "Palavra usada para afirmar, concordar ou responder de forma positiva.",
+        "<em>Em Libras:</em> a afirmação pode ser feita com o sinal manual, com o movimento de balançar a cabeça para cima e para baixo ou com os dois juntos."
+      ],
+      "exemplos": [
+        "Sim, eu aceito.",
+        "Você vem amanhã? Sim.",
+        "Ela disse sim ao convite."
+      ],
+      "contexto": [
+        "<strong>Cabeça e rosto:</strong> em Libras, o movimento de cabeça e a expressão facial também marcam a afirmação na frase.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "sorvete",
+      "palavra": "Sorvete",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/sor-ve-te/",
+      "busca": "sorvete sobremesa gelado doce picolé",
+      "resumo": "Sinal usado para falar de sorvete, sobremesa gelada.",
+      "definicoes": [
+        "Doce gelado, cremoso, feito com leite ou frutas, em vários sabores.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Vamos tomar sorvete na praia?",
+        "Meu sabor preferido de sorvete é chocolate.",
+        "As crianças ganharam sorvete."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "suco",
+      "palavra": "Suco",
+      "categoria": "Alimentos",
+      "classe": "substantivo masculino",
+      "pron": "/su-co/",
+      "busca": "suco bebida fruta laranja",
+      "resumo": "Sinal usado para falar de suco, bebida feita de frutas.",
+      "definicoes": [
+        "Bebida feita com o líquido extraído de frutas ou vegetais.",
+        "<em>Em Libras:</em> faz parte do vocabulário de alimentos, muito usado em contextos de casa, escola, restaurante e mercado. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Quero um suco de laranja.",
+        "O suco está sem açúcar.",
+        "Ela levou suco para o piquenique."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Alimentação"
+      }
+    },
+    {
+      "slug": "surdo",
+      "palavra": "Surdo",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo e adjetivo",
+      "pron": "/sur-do/",
+      "busca": "surdo surda surdez comunidade surda deficiente auditivo",
+      "resumo": "Sinal usado para falar de pessoa surda, termo de identidade da comunidade surda.",
+      "definicoes": [
+        "Pessoa que não ouve ou ouve pouco. Para a comunidade surda, ser surdo é uma identidade ligada à Libras e à cultura surda.",
+        "<em>Em Libras:</em> é um dos sinais mais importantes da língua, usado para se apresentar e falar da própria identidade."
+      ],
+      "exemplos": [
+        "Eu sou surdo e me comunico em Libras.",
+        "A escola tem alunos surdos e ouvintes.",
+        "Ela é surda desde que nasceu."
+      ],
+      "contexto": [
+        "<strong>Termo correto:</strong> prefira surdo. A expressão surdo-mudo está errada, porque a maioria das pessoas surdas não é muda e se comunica plenamente em Libras.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Comunidade surda"
+      }
+    },
+    {
+      "slug": "tchau",
+      "palavra": "Tchau",
+      "categoria": "Saudações",
+      "classe": "interjeição",
+      "pron": "/tchau/",
+      "busca": "tchau adeus até logo despedida",
+      "resumo": "Sinal usado para se despedir de alguém.",
+      "definicoes": [
+        "Despedida informal usada ao sair ou terminar uma conversa.",
+        "<em>Em Libras:</em> é uma das despedidas mais usadas no dia a dia. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Tchau, até amanhã!",
+        "Ela deu tchau e foi embora.",
+        "Diga tchau para a vovó."
+      ],
+      "contexto": [
+        "<strong>Despedidas:</strong> em encontros da comunidade surda, a despedida costuma ser calorosa e pode demorar, com conversa até o último momento.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "viajar",
+      "palavra": "Viajar",
+      "categoria": "Verbos",
+      "classe": "verbo",
+      "pron": "/vi-a-jar/",
+      "busca": "viajar viagem férias turismo",
+      "resumo": "Sinal usado para falar de viajar, ir de um lugar a outro.",
+      "definicoes": [
+        "Deslocar-se para outro lugar, geralmente distante, a passeio ou a trabalho.",
+        "<em>Em Libras:</em> é um verbo frequente no dia a dia. O contexto, a direção do movimento e a expressão facial ajudam a mostrar quem faz a ação e como ela acontece."
+      ],
+      "exemplos": [
+        "Vamos viajar nas férias.",
+        "Ela viajou para o Nordeste.",
+        "Gosto de viajar de carro."
+      ],
+      "contexto": [
+        "<strong>Verbos em Libras:</strong> muitos verbos mudam de direção, ritmo ou intensidade conforme quem faz a ação, para quem e de que jeito. O vídeo mostra a forma básica do sinal.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      }
+    },
+    {
+      "slug": "voce",
+      "palavra": "Você",
+      "categoria": "Pronomes",
+      "classe": "pronome pessoal",
+      "pron": "/vo-cê/",
+      "busca": "voce você tu pronome segunda pessoa",
+      "resumo": "Sinal usado para se dirigir à pessoa com quem se conversa: você.",
+      "definicoes": [
+        "Pronome usado para se dirigir diretamente à pessoa com quem se fala.",
+        "<em>Em Libras:</em> os pronomes pessoais costumam ser feitos apontando: para si (eu), para quem está na conversa (você) ou para a pessoa, ou o ponto do espaço associado a ela (ele, ela)."
+      ],
+      "exemplos": [
+        "Você quer café?",
+        "Eu gosto de você.",
+        "Você mora aqui perto?"
+      ],
+      "contexto": [
+        "<strong>Contato visual:</strong> em Libras, olhar para a pessoa durante a conversa é essencial, e o sinal de você é dirigido a ela.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
       }
     }
   ]

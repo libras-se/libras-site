@@ -1,0 +1,279 @@
+<!--META
+{
+ "url": "/jogos/desafio-da-datilologia/",
+ "title": "Desafio da datilologia: jogo do alfabeto em Libras online",
+ "og_title": "Desafio da datilologia, jogo do alfabeto em Libras",
+ "desc": "Jogo online e grátis do alfabeto em Libras: leia a palavra soletrada com as mãos e digite a resposta. Nomes, animais, frutas, números e três níveis.",
+ "og_image": "/assets/img/og/alfabeto-em-libras.webp",
+ "breadcrumb": [["Início", "/"], ["Jogos de Libras", "/jogos/"], ["Desafio da datilologia", "/jogos/desafio-da-datilologia/"]],
+ "jsonld": [
+  {
+   "@type": ["VideoGame", "LearningResource"],
+   "name": "Desafio da datilologia",
+   "url": "https://libras.se/jogos/desafio-da-datilologia/",
+   "description": "Jogo online em que o jogador lê palavras soletradas no alfabeto manual da Libras e digita a resposta em português.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "genre": ["Jogo educativo", "Soletração"],
+   "gamePlatform": "Navegador web",
+   "applicationCategory": "Game",
+   "operatingSystem": "Qualquer",
+   "educationalUse": "Prática de leitura de datilologia",
+   "learningResourceType": "Jogo",
+   "teaches": "Alfabeto manual da Língua Brasileira de Sinais (datilologia)",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.game-wrap{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:flex-end}
+.cfg-grp{display:flex;flex-direction:column;gap:8px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.prog{display:flex;justify-content:space-between;gap:10px;margin:20px 0 10px;font-size:.74rem;font-weight:700;color:var(--txm)}
+.prog b{color:var(--p1)}
+.bar{height:6px;border-radius:6px;background:rgba(79,209,197,.14);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gb);transition:width .4s}
+.palco{margin-top:20px;background:#fff;border:1.5px solid rgba(46,184,192,.2);border-radius:24px;min-height:190px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 10px;padding:22px}
+.palco .dat{font-size:clamp(3.2rem,9vw,6rem);color:var(--p1)}
+.palco .dat.pisca{animation:pisca .25s ease}
+@keyframes pisca{from{opacity:.2;transform:scale(.94)}to{opacity:1;transform:none}}
+.palco .dica-l{display:flex;flex-direction:column;align-items:center}
+.palco .dica-l b{font-size:.9rem;font-weight:900;color:var(--teal-dd);min-height:1.2em}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ctl button{font-family:'M',sans-serif;font-size:.74rem;font-weight:700;color:var(--p3);background:#fff;border:1.5px solid rgba(46,184,192,.25);border-radius:var(--rpill);padding:7px 14px;cursor:pointer}
+.ctl button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.resp{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.resp input{flex:1;min-width:200px;font-family:'M',sans-serif;font-size:1.15rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--p1);border:2px solid rgba(46,184,192,.3);border-radius:var(--rpill);padding:12px 22px;outline:none;background:#fff}
+.resp input:focus{border-color:var(--teal-d)}
+.resp input.certo{border-color:var(--green);background:rgba(34,197,94,.06)}
+.resp input.errado{border-color:#f87171;background:rgba(248,113,113,.06)}
+.fb{min-height:46px;margin-top:12px;font-size:.92rem;color:var(--txs)}
+.fb strong{color:var(--p1)}
+.end{display:none}
+.end.show{display:block}
+.end:focus{outline:none}
+.score{font-size:3.2rem;font-weight:900;color:var(--p1);letter-spacing:-.04em;line-height:1}
+.score small{font-size:1.1rem;color:var(--txm)}
+.end h2{font-size:1.35rem;font-weight:900;color:var(--p1);margin:10px 0 6px}
+.end p{font-size:.92rem;color:var(--txs);font-weight:300;margin-bottom:16px}
+.rev{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.rev span{font-size:.8rem;font-weight:700;border-radius:var(--rpill);padding:5px 12px;background:rgba(34,197,94,.1);color:#15803d}
+.rev span.x{background:rgba(248,113,113,.1);color:#b91c1c}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.how div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.how h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.how p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:820px){.how{grid-template-columns:1fr}}
+@media(max-width:520px){.panel{padding:18px 14px}}
+</style>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Jogo grátis · 10 rodadas</span>
+    <h1 id="titulo">Desafio da <em>datilologia</em></h1>
+    <p class="hero-sub">A palavra aparece soletrada no alfabeto manual da Libras. Leia as mãos, digite a resposta e veja quantas você acerta. Nomes, animais, frutas, cores, escola e até números.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="game-wrap" aria-label="Jogo">
+    <div class="w">
+      <div class="panel">
+        <div class="cfg">
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-niv">Nível</span><div class="seg" id="niveis" role="group" aria-labelledby="l-niv">
+            <button type="button" data-n="facil" aria-pressed="true">Fácil</button>
+            <button type="button" data-n="medio" aria-pressed="false">Médio</button>
+            <button type="button" data-n="dificil" aria-pressed="false">Difícil</button>
+            <button type="button" data-n="numeros" aria-pressed="false">Números</button>
+          </div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-modo">Como mostrar</span><div class="seg" id="modos" role="group" aria-labelledby="l-modo">
+            <button type="button" data-m="inteira" aria-pressed="true">Palavra inteira</button>
+            <button type="button" data-m="sequencia" aria-pressed="false">Uma letra por vez</button>
+          </div></div>
+        </div>
+
+        <div id="jogo">
+          <div class="prog"><span>Rodada <b id="n">1</b> de <b>10</b></span><span>Tema: <b id="tema">-</b></span><span>Acertos <b id="pts">0</b></span></div>
+          <div class="bar"><i id="bar"></i></div>
+          <div class="palco" id="palco" aria-live="off" aria-label="Palavra soletrada no alfabeto manual"></div>
+          <div class="ctl">
+            <button type="button" id="rever">Ver de novo</button>
+            <button type="button" id="dica">Revelar uma letra</button>
+            <button type="button" id="pular">Pular</button>
+          </div>
+          <form class="resp" id="form" autocomplete="off">
+            <label for="resp-in" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Sua resposta</label>
+            <input id="resp-in" type="text" maxlength="20" placeholder="Digite a palavra" autocapitalize="characters" spellcheck="false">
+            <button type="submit" class="btn bp">Responder</button>
+          </form>
+          <div class="fb" id="fb" aria-live="polite"></div>
+        </div>
+
+        <div class="end" id="end" tabindex="-1">
+          <div class="score"><span id="sc">0</span><small>/10</small></div>
+          <h2 id="end-t"></h2>
+          <p id="end-p"></p>
+          <div class="rev" id="rev"></div>
+          <div class="acts">
+            <button type="button" class="btn bp" id="denovo">Jogar de novo</button>
+            <a class="btn bw" id="share" href="#" target="_blank" rel="noopener noreferrer">Desafiar no WhatsApp</a>
+            <a class="btn bo" href="/aprender-libras/alfabeto-em-libras/">Rever o alfabeto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-como">
+    <div class="w">
+      <div class="sec-head"><span class="lbl">Como jogar</span><h2 id="t-como">Ler datilologia é um treino de olhar</h2></div>
+      <div class="how">
+        <div><h3>Comece pela palavra inteira</h3><p>Com todas as mãos na tela fica mais fácil. Se travar, use "revelar uma letra", mas cada dica tira o ponto da rodada.</p></div>
+        <div><h3>Depois, uma letra por vez</h3><p>Na conversa, as letras passam rápido, uma depois da outra. O modo sequência treina exatamente isso.</p></div>
+        <div><h3>Não sabe uma mão?</h3><p>Abra o <a href="/aprender-libras/alfabeto-em-libras/" style="color:var(--teal-dd);font-weight:700">alfabeto em Libras</a> em outra aba e consulte. Em poucas rodadas você para de precisar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:voce-sabe-o-que-e-datilologia,disney-lanca-jogos-que-ensinam-libras,librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar}}
+
+  <section class="sec" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Do alfabeto para os sinais</h2>
+        <p>Soletrar é útil para nomes e siglas, mas a conversa acontece em sinais. Treine os sinais em vídeo no quiz e no jogo da memória.</p>
+        <div class="cta-btns">
+          <a href="/jogos/quiz-de-libras/" class="btn bt">Quiz de sinais</a>
+          <a href="/jogos/" class="btn bgh">Todos os jogos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var DADOS = {{PALAVRAS_JSON}};
+  var TOTAL = 10;
+  var $ = function(id){ return document.getElementById(id); };
+  var nivel = 'facil', modo = 'inteira', rodada = [], i = 0, pts = 0, res = [], dicas = 0, timer = null, travado = false;
+
+  function ls(k, v){ try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  function shuffle(a){ for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+  // Soletração: acentos somem, o Ç fica
+  function soletra(p){ return p.toUpperCase().replace(/Ç/g, '\u0001').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\u0001/g, 'Ç').replace(/[^A-ZÇ0-9]/g, ''); }
+  function compara(p){ return soletra(p).replace(/Ç/g, 'C'); }
+
+  function pool(){
+    if (nivel === 'numeros') {
+      var extra = []; for (var k = 0; k < 10; k++) extra.push(String(Math.floor(Math.random() * 9000) + 100));
+      return DADOS.numeros.map(function(n){ return { p: n, t: 'Números' }; }).concat(extra.map(function(n){ return { p: n, t: 'Números' }; }));
+    }
+    var out = [];
+    Object.keys(DADOS.temas).forEach(function(k){
+      DADOS.temas[k].palavras.forEach(function(p){
+        var n = soletra(p).length;
+        if ((nivel === 'facil' && n <= 4) || (nivel === 'medio' && n >= 5 && n <= 7) || (nivel === 'dificil' && n >= 8)) out.push({ p: p, t: DADOS.temas[k].rotulo });
+      });
+    });
+    return out;
+  }
+
+  function seg(id, fn){
+    $(id).addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      fn(b); novo();
+    });
+  }
+  seg('niveis', function(b){ nivel = b.dataset.n; });
+  seg('modos', function(b){ modo = b.dataset.m; });
+
+  function novo(){
+    rodada = shuffle(pool()).slice(0, TOTAL);
+    i = 0; pts = 0; res = [];
+    $('pts').textContent = '0'; $('end').classList.remove('show'); $('jogo').hidden = false;
+    rodadaAtual();
+  }
+
+  function mostrar(){
+    clearInterval(timer);
+    var s = soletra(rodada[i].p), palco = $('palco');
+    if (modo === 'inteira') {
+      palco.innerHTML = s.split('').map(function(c, k){ return '<span class="dica-l"><span class="dat" aria-hidden="true">' + c + '</span><b>' + (k < dicas ? c : '') + '</b></span>'; }).join('');
+      return;
+    }
+    var k = 0, vel = nivel === 'facil' ? 900 : nivel === 'medio' ? 700 : 550;
+    palco.innerHTML = '<span class="dica-l"><span class="dat pisca" aria-hidden="true"></span><b></b></span>';
+    var el = palco.querySelector('.dat'), lb = palco.querySelector('b');
+    function passo(){
+      if (k >= s.length) { clearInterval(timer); el.textContent = ''; lb.textContent = ''; el.parentNode.insertAdjacentHTML('afterend', '<span style="font-size:.85rem;color:var(--txm)">Terminou. Toque em "ver de novo" para repetir.</span>'); return; }
+      el.classList.remove('pisca'); void el.offsetWidth; el.classList.add('pisca');
+      el.textContent = s[k]; lb.textContent = k < dicas ? s[k] : ''; k++;
+    }
+    passo(); timer = setInterval(passo, vel);
+  }
+
+  function rodadaAtual(){
+    dicas = 0; travado = false;
+    $('n').textContent = i + 1; $('tema').textContent = rodada[i].t;
+    $('bar').style.width = (i / TOTAL * 100) + '%';
+    var inp = $('resp-in'); inp.value = ''; inp.className = ''; inp.disabled = false;
+    $('fb').textContent = '';
+    mostrar();
+    inp.focus({ preventScroll: true });
+  }
+
+  function fecha(ok, pulou){
+    travado = true; clearInterval(timer);
+    var s = soletra(rodada[i].p);
+    if (ok && !dicas) pts++;
+    $('pts').textContent = pts;
+    res.push({ p: rodada[i].p, ok: ok && !dicas });
+    $('resp-in').className = ok ? 'certo' : 'errado'; $('resp-in').disabled = true;
+    $('fb').innerHTML = ok ? (dicas ? '<strong>Acertou com dica.</strong> Era ' + rodada[i].p + '.' : '<strong>Isso!</strong> ' + rodada[i].p + '.') :
+      (pulou ? 'Pulou. Era <strong>' + rodada[i].p + '</strong>.' : 'Quase. Era <strong>' + rodada[i].p + '</strong>.');
+    dicas = s.length; if (modo === 'inteira') mostrar();
+    setTimeout(function(){ i++; if (i < rodada.length) rodadaAtual(); else fim(); }, ok ? 1300 : 2300);
+  }
+
+  $('form').addEventListener('submit', function(e){
+    e.preventDefault(); if (travado) return;
+    var v = $('resp-in').value.trim(); if (!v) return;
+    fecha(compara(v) === compara(rodada[i].p), false);
+  });
+  $('pular').addEventListener('click', function(){ if (!travado) fecha(false, true); });
+  $('rever').addEventListener('click', function(){ if (!travado) mostrar(); });
+  $('dica').addEventListener('click', function(){
+    if (travado) return;
+    var s = soletra(rodada[i].p);
+    if (dicas < s.length - 1) { dicas++; if (modo === 'inteira') mostrar(); else { $('fb').innerHTML = 'Começa com <strong>' + s.slice(0, dicas) + '</strong>…'; } }
+  });
+
+  function fim(){
+    $('bar').style.width = '100%';
+    var k = 'lbse_datilologia_' + nivel, rec = +ls(k) || 0;
+    if (pts > rec) ls(k, String(pts));
+    $('sc').textContent = pts;
+    $('end-t').textContent = pts === 10 ? 'Leitura perfeita!' : pts >= 7 ? 'Mandou bem!' : pts >= 4 ? 'Bom começo!' : 'Bora treinar mais um pouco?';
+    $('end-p').textContent = (pts > rec && rec ? 'Novo recorde neste nível (antes: ' + rec + '). ' : rec && pts <= rec ? 'Seu recorde neste nível é ' + rec + '. ' : '') + 'Acertos com dica não contam ponto.';
+    $('rev').innerHTML = res.map(function(r){ return '<span class="' + (r.ok ? '' : 'x') + '">' + r.p + '</span>'; }).join('');
+    $('share').href = 'https://wa.me/?text=' + encodeURIComponent('Li ' + pts + ' de 10 palavras soletradas em Libras no Desafio da datilologia da LIBRAS.SE. Tenta aí: https://libras.se/jogos/desafio-da-datilologia/');
+    $('jogo').hidden = true; $('end').classList.add('show'); $('end').focus();
+  }
+
+  $('denovo').addEventListener('click', novo);
+  novo();
+})();
+</script>

@@ -323,6 +323,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 | Jogo             | `/jogo/index.html`            |
 | Vocabulário      | `/sinal/index.html`           |
 | Glossário        | `/glossario/index.html`       |
+| Aprender Libras  | `/aprender-libras/index.html` (gerada por `tools/aprender/build.py`, ver `tools/aprender/README.md`) |
+| Sinais básicos   | `/aprender-libras/sinais-basicos/index.html` (gerada) |
+| Cultura surda    | `/cultura-surda/index.html` (gerada) |
+| Jogos            | `/jogos/index.html` + `jogo-da-memoria-libras/` + `quiz-de-libras/` (geradas) |
+| Atividades       | `/atividades/index.html` + `bingo-de-libras/` + `caca-palavras-em-libras/` (geradas) |
+| Materiais (PDF)  | `/materiais/index.html` (gerada) e `assets/materiais/*.pdf` (`tools/aprender/pdf.py`) |
 | Portfólio        | `/portfolio/index.html`       |
 | Soluções         | `/solucoes/index.html`        |
 | Tecnologia       | `/tecnologia/index.html`      |

@@ -1,0 +1,308 @@
+<!--META
+{
+ "url": "/aprender-libras/alfabeto-em-libras/",
+ "title": "Alfabeto em Libras: letras de A a Z e PDF para imprimir",
+ "og_title": "Alfabeto em Libras de A a Z, com PDF grátis",
+ "desc": "Aprenda o alfabeto manual da Libras de A a Z, escreva seu nome em Libras e baixe grátis o alfabeto para imprimir em PDF, colorido ou para colorir.",
+ "og_image": "/assets/img/og/alfabeto-em-libras.webp",
+ "breadcrumb": [["Início", "/"], ["Aprender Libras", "/aprender-libras/"], ["Alfabeto em Libras", "/aprender-libras/alfabeto-em-libras/"]],
+ "jsonld": [
+  {
+   "@type": ["Article", "LearningResource"],
+   "headline": "Alfabeto em Libras: letras de A a Z e PDF para imprimir",
+   "url": "https://libras.se/aprender-libras/alfabeto-em-libras/",
+   "mainEntityOfPage": "https://libras.se/aprender-libras/alfabeto-em-libras/",
+   "inLanguage": ["pt-BR", "bzs"],
+   "learningResourceType": ["Referência", "Atividade para imprimir"],
+   "educationalLevel": "Iniciante",
+   "teaches": "Alfabeto manual da Língua Brasileira de Sinais (datilologia)",
+   "isAccessibleForFree": true,
+   "datePublished": "2026-10-08",
+   "dateModified": "2026-10-08",
+   "image": "https://libras.se/assets/img/og/alfabeto-em-libras.webp",
+   "author": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/", "logo": {"@type": "ImageObject", "url": "https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-32x32.png"}},
+   "hasPart": [
+    {"@type": "DigitalDocument", "name": "Alfabeto em Libras colorido (PDF)", "url": "https://libras.se/assets/materiais/alfabeto-em-libras-colorido.pdf", "encodingFormat": "application/pdf"},
+    {"@type": "DigitalDocument", "name": "Alfabeto em Libras para colorir (PDF)", "url": "https://libras.se/assets/materiais/alfabeto-em-libras-para-colorir.pdf", "encodingFormat": "application/pdf"},
+    {"@type": "DigitalDocument", "name": "Alfabeto em Libras, tira de mesa (PDF)", "url": "https://libras.se/assets/materiais/alfabeto-em-libras-tira-de-mesa.pdf", "encodingFormat": "application/pdf"}
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {"@type": "Question", "name": "Quantas letras tem o alfabeto em Libras?", "acceptedAnswer": {"@type": "Answer", "text": "O alfabeto manual da Libras representa as 26 letras do alfabeto, de A a Z, e também o Ç. Algumas letras têm movimento, como H, J, K, X, Z e Ç."}},
+    {"@type": "Question", "name": "Datilologia é a mesma coisa que Libras?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A datilologia é o uso do alfabeto manual para soletrar palavras letra por letra. Ela é um recurso da Libras, usado em nomes próprios, siglas e palavras sem sinal, mas a conversa em Libras acontece em sinais."}},
+    {"@type": "Question", "name": "Como escrever meu nome em Libras?", "acceptedAnswer": {"@type": "Answer", "text": "Você pode soletrar o seu nome com o alfabeto manual, letra por letra. Pessoas que convivem com a comunidade surda também costumam receber um sinal pessoal, que é dado por pessoas surdas."}}
+   ]
+  }
+ ]
+}
+META-->
+<style>
+.abc-wrap{padding:36px 0 0}
+.abc-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.abc-bar p{font-size:.9rem;color:var(--txs);font-weight:300;max-width:620px}
+.toggle{display:inline-flex;align-items:center;gap:10px;font-family:'M',sans-serif;font-size:.8rem;font-weight:700;color:var(--p3);background:#fff;border:1.5px solid rgba(46,184,192,.3);border-radius:var(--rpill);padding:8px 16px;cursor:pointer}
+.toggle[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.toggle:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.abc{display:grid;grid-template-columns:repeat(9,1fr);gap:10px}
+.letra{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:18px;box-shadow:var(--sh);padding:10px 6px 10px;text-align:center;position:relative;font-family:'M',sans-serif;cursor:pointer;transition:transform var(--tr),box-shadow var(--tr)}
+.letra:hover{transform:translateY(-3px);box-shadow:var(--shm)}
+.letra:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.letra .dat{display:block;font-size:clamp(2.6rem,6vw,4.2rem);color:var(--p1);padding:6px 0 4px}
+.letra b{display:block;font-size:1.1rem;font-weight:900;color:var(--teal-dd);transition:opacity .2s}
+.letra .mov{position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:var(--teal-d)}
+.treino .letra b{opacity:0}
+.treino .letra.ver b{opacity:1}
+.legenda{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.78rem;color:var(--txm)}
+.legenda span{display:inline-flex;align-items:center;gap:6px}
+.legenda i{width:8px;height:8px;border-radius:50%;background:var(--teal-d);display:inline-block}
+.nome-box{background:var(--gc);border-radius:var(--rx);padding:30px 32px;color:#fff;position:relative;overflow:hidden}
+.nome-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 90% 20%,rgba(79,209,197,.18),transparent 65%);pointer-events:none}
+.nome-box>*{position:relative}
+.nome-box h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:900;letter-spacing:-.03em;margin-bottom:6px}
+.nome-box>p{font-size:.92rem;color:rgba(255,255,255,.65);font-weight:300;margin-bottom:18px}
+.nome-in{display:flex;gap:10px;flex-wrap:wrap}
+.nome-in input{flex:1;min-width:220px;font-family:'M',sans-serif;font-size:1.1rem;font-weight:700;color:var(--p1);border:none;border-radius:var(--rpill);padding:13px 22px;outline:none}
+.nome-in input:focus-visible{box-shadow:0 0 0 3px var(--teal)}
+.nome-out{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;min-height:120px;align-items:flex-end}
+.nome-out .lt{background:#fff;border-radius:16px;padding:8px 8px 6px;text-align:center;min-width:72px}
+.nome-out .lt .dat{display:block;font-size:3.6rem;color:var(--p1)}
+.nome-out .lt b{font-size:.9rem;color:var(--teal-dd);font-weight:900}
+.nome-out .esp{width:26px}
+.nome-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.dicas{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dicas div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:20px;box-shadow:var(--sh);padding:18px}
+.dicas h3{font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.dicas p{font-size:.82rem;color:var(--txs);font-weight:300;line-height:1.55}
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dl a{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:20px;box-shadow:var(--sh);padding:16px;display:flex;gap:14px;align-items:center;transition:transform var(--tr),box-shadow var(--tr)}
+.dl a:hover{transform:translateY(-3px);box-shadow:var(--shm)}
+.dl a:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.dl img{width:74px;border-radius:8px;box-shadow:0 4px 14px rgba(10,34,37,.14);flex-shrink:0}
+.dl b{display:block;font-size:.92rem;font-weight:900;color:var(--p1);line-height:1.25}
+.dl small{font-size:.74rem;color:var(--txm)}
+.usos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.usos div{border-left:3px solid var(--teal);background:var(--card);border-radius:0 16px 16px 0;padding:14px 16px;box-shadow:var(--sh)}
+.usos b{display:block;font-size:.9rem;color:var(--p1);font-weight:900;margin-bottom:4px}
+.usos span{font-size:.8rem;color:var(--txs);font-weight:300}
+.plaquinha{display:none}
+@media(max-width:1000px){.abc{grid-template-columns:repeat(6,1fr)}.dicas,.usos{grid-template-columns:1fr 1fr}.dl{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.abc{grid-template-columns:repeat(4,1fr);gap:8px}.dicas,.usos,.dl{grid-template-columns:1fr}.nome-box{padding:24px 18px}.nome-out .lt{min-width:56px}.nome-out .lt .dat{font-size:2.8rem}}
+@media print{
+  @page{size:A4 landscape;margin:12mm}
+  body.imprimindo main>*:not(.plaquinha-sec),body.imprimindo .hero,body.imprimindo .areas-strip{display:none!important}
+  body.imprimindo .plaquinha-sec{display:block!important;padding:0}
+  .plaquinha{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:8mm;height:180mm;border:1.5mm solid #0e3538;border-radius:8mm;font-family:'M',sans-serif;color:#0e3538}
+  .plaquinha .pl-top{font-size:13pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#1a9ca4}
+  .plaquinha .pl-maos{display:flex;flex-wrap:wrap;justify-content:center;gap:3mm;max-width:250mm}
+  .plaquinha .pl-maos span{display:flex;flex-direction:column;align-items:center}
+  .plaquinha .pl-maos .dat{font-size:var(--pl-fs,68pt)}
+  .plaquinha .pl-maos b{font-size:14pt;font-weight:900}
+  .plaquinha .pl-nome{font-size:30pt;font-weight:900;letter-spacing:-.01em}
+  .plaquinha .pl-foot{font-size:9pt;color:#5d8487}
+}
+</style>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">26 letras + Ç · PDF grátis</span>
+    <h1 id="titulo">Alfabeto <em>em Libras</em> de A a Z</h1>
+    <p class="hero-sub">O alfabeto manual da Libras, letra por letra, para aprender, treinar e imprimir. Escreva o seu nome em Libras e baixe o alfabeto em PDF, colorido ou para colorir.</p>
+    <div class="hero-btns">
+      <a href="#nome" class="btn bt">Escrever meu nome em Libras</a>
+      <a href="#baixar" class="btn bgh">Baixar o alfabeto em PDF</a>
+    </div>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="abc-wrap" aria-labelledby="t-abc">
+    <div class="w">
+      <div class="abc-bar">
+        <div>
+          <h2 id="t-abc" class="sec-head" style="margin:0"><span class="lbl">O alfabeto manual</span></h2>
+          <p style="margin-top:10px">Cada letra tem uma configuração de mão própria. As setas mostram as letras que têm movimento. Ative o modo treino, esconda as letras e tente adivinhar.</p>
+        </div>
+        <button type="button" class="toggle" id="treino" aria-pressed="false">Modo treino: esconder letras</button>
+      </div>
+      <div class="abc" id="abc" aria-label="Alfabeto manual da Libras"></div>
+      <div class="legenda"><span><i></i> letra com movimento</span><span>No modo treino, toque numa mão para revelar a letra.</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="nome" aria-labelledby="t-nome">
+    <div class="w">
+      <div class="nome-box">
+        <h2 id="t-nome">Escreva o seu nome em Libras</h2>
+        <p>Digite um nome ou uma palavra e veja como ela fica soletrada no alfabeto manual. Depois, imprima uma plaquinha para a mesa, a porta do quarto ou o crachá.</p>
+        <div class="nome-in">
+          <label for="nome-campo" class="live" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Nome ou palavra</label>
+          <input id="nome-campo" type="text" maxlength="24" placeholder="Digite um nome" autocomplete="off" value="LIBRAS">
+        </div>
+        <div class="nome-out" id="nome-out" aria-live="polite"></div>
+        <div class="nome-acts">
+          <button type="button" class="btn bt" id="imprimir-nome">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir plaquinha
+          </button>
+          <a href="/jogos/desafio-da-datilologia/" class="btn bgh">Treinar no jogo</a>
+        </div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:14px">Letras com acento aparecem sem o acento. O nome digitado fica só no seu navegador.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plaquinha-sec" style="display:none" aria-hidden="true">
+    <div class="plaquinha" id="plaquinha"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-dicas">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Como soletrar</span>
+        <h2 id="t-dicas">Quatro dicas para soletrar com clareza</h2>
+        <p>Soletrar em Libras se chama <a href="/glossario/datilologia/" style="color:var(--teal-dd);font-weight:700">datilologia</a>. O objetivo não é fazer letra bonita, é ser entendido.</p>
+      </div>
+      <div class="dicas">
+        <div class="rv"><h3>Use uma mão só</h3><p>Soletre sempre com a mão dominante, a mesma que você usa para escrever, e mantenha a outra relaxada.</p></div>
+        <div class="rv d1"><h3>Na frente do corpo</h3><p>Deixe a mão perto do ombro, com a palma voltada para quem está vendo, sem cobrir o rosto.</p></div>
+        <div class="rv d2"><h3>Ritmo constante</h3><p>Uma letra depois da outra, sem pressa e sem pausas no meio da palavra. Entre uma palavra e outra, faça uma pausa curta.</p></div>
+        <div class="rv d3"><h3>Não soletre o que tem sinal</h3><p>Se a palavra tem sinal, use o sinal. Procure no nosso <a href="/sinal/" style="color:var(--teal-dd);font-weight:700">vocabulário em vídeo</a> antes de soletrar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-usos">
+    <div class="wn">
+      <span class="lbl">Quando usar</span>
+      <h2 id="t-usos" style="font-size:clamp(1.45rem,3vw,2rem);font-weight:900;letter-spacing:-.03em;color:var(--p1);margin:12px 0 10px">Datilologia é recurso, não é a língua inteira</h2>
+      <div class="prose">
+        <p>Imagine conversar soletrando cada palavra: seria lento e cansativo. Em Libras, a maior parte da comunicação acontece em sinais, e o alfabeto manual entra em situações específicas. Explicamos tudo, inclusive como algumas palavras soletradas viram sinais, no post <a href="/blog/voce-sabe-o-que-e-datilologia/">Datilologia: o alfabeto manual da Libras explicado</a>.</p>
+      </div>
+    </div>
+    <div class="w">
+      <div class="usos">
+        <div><b>Nomes próprios</b><span>Pessoas, marcas e lugares que ainda não têm sinal.</span></div>
+        <div><b>Palavras sem sinal</b><span>Termos técnicos e palavras novas na língua.</span></div>
+        <div><b>Siglas</b><span>CPF, SUS, ONU e outras abreviações.</span></div>
+        <div><b>Português escrito</b><span>Para mostrar como uma palavra se escreve.</span></div>
+      </div>
+      <div class="note" style="margin-top:18px">E o seu nome? Na comunidade surda, as pessoas costumam ganhar um <strong>sinal pessoal</strong>, dado por pessoas surdas, para não precisar soletrar o nome toda vez. Entenda em <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" style="color:var(--teal-dd);font-weight:700">como são criados os sinais de pessoas na Libras</a>.</div>
+    </div>
+  </section>
+
+  <section class="sec" id="baixar" aria-labelledby="t-baixar">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">PDF grátis</span>
+        <h2 id="t-baixar">Alfabeto em Libras para imprimir</h2>
+        <p>Sem cadastro. Imprima para a sala de aula, para a parede do quarto ou para estudar.</p>
+      </div>
+      <div class="dl">
+        <a href="/assets/materiais/alfabeto-em-libras-colorido.pdf" download><img src="/assets/materiais/capas/alfabeto-em-libras-colorido.webp" alt="" width="480" height="679" loading="lazy"><span><b>Alfabeto colorido</b><small>Cartaz A4 · 1 página</small></span></a>
+        <a href="/assets/materiais/alfabeto-em-libras-para-colorir.pdf" download><img src="/assets/materiais/capas/alfabeto-em-libras-para-colorir.webp" alt="" width="480" height="679" loading="lazy"><span><b>Alfabeto para colorir</b><small>A4 · 2 páginas</small></span></a>
+        <a href="/assets/materiais/alfabeto-em-libras-tira-de-mesa.pdf" download><img src="/assets/materiais/capas/alfabeto-em-libras-tira-de-mesa.webp" alt="" width="480" height="679" loading="lazy"><span><b>Tira de mesa</b><small>A4 · 4 tiras para recortar</small></span></a>
+        <a href="/assets/materiais/jogo-da-memoria-alfabeto-em-libras.pdf" download><img src="/assets/materiais/capas/jogo-da-memoria-alfabeto-em-libras.webp" alt="" width="480" height="679" loading="lazy"><span><b>Jogo da memória do alfabeto</b><small>A4 · cartas para recortar</small></span></a>
+        <a href="/assets/materiais/caderno-de-atividades-de-datilologia.pdf" download><img src="/assets/materiais/capas/caderno-de-atividades-de-datilologia.webp" alt="" width="480" height="679" loading="lazy"><span><b>Caderno de datilologia</b><small>Atividades com gabarito</small></span></a>
+        <a href="/aprender-libras/numeros-em-libras/"><img src="/assets/materiais/capas/numeros-em-libras.webp" alt="" width="480" height="679" loading="lazy"><span><b>Números em Libras</b><small>Página e cartaz de 0 a 9</small></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-pratique">
+    <div class="w">
+      <div class="sec-head"><span class="lbl">Pratique</span><h2 id="t-pratique">Treine o alfabeto brincando</h2></div>
+      <div class="hub-grid">
+        <article class="hub-card rv"><span class="hub-tag novo">Jogo online</span><h3><a href="/jogos/desafio-da-datilologia/" class="hub-a">Desafio da datilologia</a></h3><p>Leia a palavra soletrada em Libras e digite a resposta. Dez rodadas, três níveis.</p><span class="hub-go" aria-hidden="true">Jogar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></article>
+        <article class="hub-card rv d1"><span class="hub-tag">Gerador · A4</span><h3><a href="/atividades/datilologia/" class="hub-a">Fichas de datilologia</a></h3><p>Descubra a palavra, caça-palavras com mãos e complete a letra. Uma folha nova a cada clique.</p><span class="hub-go" aria-hidden="true">Gerar fichas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></article>
+        <article class="hub-card dark rv d2"><span class="hub-tag" style="color:var(--teal);border-color:rgba(79,209,197,.3)">Diário</span><h3><a href="/jogo/" class="hub-a">Sinal do dia</a></h3><p>A palavra do dia aparece em datilologia como dica. Será que você consegue ler?</p><span class="hub-go" aria-hidden="true">Jogar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="faq">
+    <div class="wn">
+      <div class="sec-head"><span class="lbl">Dúvidas</span><h2 id="faq">Perguntas frequentes</h2></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Quantas letras tem o alfabeto em Libras?</summary><p>O alfabeto manual da Libras representa as 26 letras do alfabeto, de A a Z, e também o Ç. Algumas letras têm movimento, como H, J, K, X, Z e Ç.</p></details>
+        <details class="faq-item"><summary>Datilologia é a mesma coisa que Libras?</summary><p>Não. A datilologia é o uso do alfabeto manual para soletrar palavras letra por letra. Ela é um recurso da Libras, usado em nomes próprios, siglas e palavras sem sinal, mas a conversa em Libras acontece em sinais.</p></details>
+        <details class="faq-item"><summary>Como escrever meu nome em Libras?</summary><p>Você pode soletrar o seu nome com o alfabeto manual, letra por letra, como no gerador desta página. Pessoas que convivem com a comunidade surda também costumam receber um sinal pessoal, que é dado por pessoas surdas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:voce-sabe-o-que-e-datilologia,como-sao-criados-sinais-de-pessoas-na-libras,passatempo-tera-biscoitos-com-libras}}
+
+  <section class="sec" aria-labelledby="cta">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="cta">Aprendeu o alfabeto? Agora vá para os sinais</h2>
+        <p>O alfabeto é a porta de entrada. A conversa de verdade acontece em sinais: comece pelos 40 sinais básicos, todos em vídeo.</p>
+        <div class="cta-btns">
+          <a href="/aprender-libras/sinais-basicos/" class="btn bt">Sinais básicos em Libras</a>
+          <a href="/aprender-libras/" class="btn bgh">Mais formas de aprender</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var LETRAS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ'.split('');
+  var MOV = { H: 1, J: 1, K: 1, X: 1, Z: 1, 'Ç': 1 };
+  var abc = document.getElementById('abc');
+  abc.innerHTML = LETRAS.map(function(l){
+    return '<button type="button" class="letra" aria-label="Letra ' + l + (MOV[l] ? ', com movimento' : '') + '">' +
+      (MOV[l] ? '<span class="mov" aria-hidden="true"></span>' : '') +
+      '<span class="dat" aria-hidden="true">' + l + '</span><b>' + l + '</b></button>';
+  }).join('');
+  var treino = document.getElementById('treino');
+  treino.addEventListener('click', function(){
+    var on = treino.getAttribute('aria-pressed') !== 'true';
+    treino.setAttribute('aria-pressed', on ? 'true' : 'false');
+    treino.textContent = on ? 'Mostrar as letras' : 'Modo treino: esconder letras';
+    abc.classList.toggle('treino', on);
+    abc.querySelectorAll('.letra').forEach(function(b){ b.classList.remove('ver'); });
+  });
+  abc.addEventListener('click', function(e){
+    var b = e.target.closest('.letra');
+    if (b && abc.classList.contains('treino')) b.classList.toggle('ver');
+  });
+
+  // Nome em Libras: só A-Z, Ç e espaço; acentos viram a letra base
+  var campo = document.getElementById('nome-campo'), out = document.getElementById('nome-out');
+  function limpa(s){
+    return s.toUpperCase().replace(/Ç/g, '\u0001').normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/\u0001/g, 'Ç').replace(/[^A-ZÇ ]/g, '').replace(/\s+/g, ' ').trim();
+  }
+  function letras(s){
+    return s.split('').map(function(c){
+      return c === ' ' ? '<span class="esp"></span>' : '<span class="lt"><span class="dat" aria-hidden="true">' + c + '</span><b>' + c + '</b></span>';
+    }).join('');
+  }
+  function render(){
+    var s = limpa(campo.value);
+    out.innerHTML = s ? letras(s) : '<span style="color:rgba(255,255,255,.5);font-size:.9rem">Digite um nome para ver as mãos.</span>';
+    out.setAttribute('aria-label', s ? 'Soletração de ' + s : '');
+  }
+  campo.addEventListener('input', render);
+  render();
+
+  document.getElementById('imprimir-nome').addEventListener('click', function(){
+    var s = limpa(campo.value) || 'LIBRAS';
+    var n = s.replace(/ /g, '').length;
+    var pl = document.getElementById('plaquinha');
+    pl.style.setProperty('--pl-fs', n > 14 ? '44pt' : n > 9 ? '56pt' : '72pt');
+    pl.innerHTML = '<span class="pl-top">Meu nome em Libras</span><span class="pl-maos">' +
+      s.split('').map(function(c){ return c === ' ' ? '<span style="width:10mm"></span>' : '<span><span class="dat">' + c + '</span><b>' + c + '</b></span>'; }).join('') +
+      '</span><span class="pl-nome">' + s + '</span><span class="pl-foot">LIBRAS.SE · libras.se/aprender-libras/alfabeto-em-libras</span>';
+    document.body.classList.add('imprimindo');
+    document.fonts.ready.then(function(){ window.print(); });
+  });
+  window.addEventListener('afterprint', function(){ document.body.classList.remove('imprimindo'); });
+})();
+</script>

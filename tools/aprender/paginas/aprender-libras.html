@@ -1,0 +1,196 @@
+<!--META
+{
+ "url": "/aprender-libras/",
+ "title": "Aprender Libras grátis: por onde começar, com vídeos",
+ "og_title": "Aprender Libras grátis, do jeito certo",
+ "desc": "Comece a aprender Libras grátis: sinais em vídeo com intérpretes, jogos, atividades para imprimir, materiais em PDF e um guia de cultura surda. Sem cadastro.",
+ "og_image": "/assets/img/og/aprender-libras.webp",
+ "breadcrumb": [["Início", "/"], ["Aprender Libras", "/aprender-libras/"]],
+ "jsonld": [
+  {
+   "@type": "CollectionPage",
+   "name": "Aprender Libras",
+   "url": "https://libras.se/aprender-libras/",
+   "inLanguage": "pt-BR",
+   "description": "Área educativa da LIBRAS.SE com vocabulário de Libras em vídeo, jogos, atividades, materiais em PDF e conteúdo sobre cultura surda.",
+   "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+     {"@type": "ListItem", "position": 1, "name": "Vocabulário de Libras em vídeo", "url": "https://libras.se/sinal/"},
+     {"@type": "ListItem", "position": 2, "name": "Sinais básicos em Libras", "url": "https://libras.se/aprender-libras/sinais-basicos/"},
+     {"@type": "ListItem", "position": 3, "name": "Alfabeto em Libras", "url": "https://libras.se/aprender-libras/alfabeto-em-libras/"},
+     {"@type": "ListItem", "position": 4, "name": "Números em Libras", "url": "https://libras.se/aprender-libras/numeros-em-libras/"},
+     {"@type": "ListItem", "position": 5, "name": "Jogos de Libras", "url": "https://libras.se/jogos/"},
+     {"@type": "ListItem", "position": 6, "name": "Atividades de Libras", "url": "https://libras.se/atividades/"},
+     {"@type": "ListItem", "position": 7, "name": "Materiais de Libras em PDF", "url": "https://libras.se/materiais/"},
+     {"@type": "ListItem", "position": 8, "name": "Cultura surda", "url": "https://libras.se/cultura-surda/"},
+     {"@type": "ListItem", "position": 9, "name": "Glossário de Libras", "url": "https://libras.se/glossario/"}
+    ]
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {"@type": "Question", "name": "Dá para aprender Libras de graça?", "acceptedAnswer": {"@type": "Answer", "text": "Dá para começar de graça, com vocabulário em vídeo, jogos e materiais como os da LIBRAS.SE. Para chegar à fluência, procure um curso com professores surdos. Universidades públicas, institutos federais e associações de surdos costumam oferecer cursos, alguns gratuitos."}},
+    {"@type": "Question", "name": "Libras é difícil de aprender?", "acceptedAnswer": {"@type": "Answer", "text": "Libras é uma língua completa, com gramática própria, então exige tempo como qualquer idioma. A diferença é que ela é visual: você aprende a pensar com as mãos, o rosto e o espaço. Praticar com pessoas surdas é o que mais acelera o aprendizado."}},
+    {"@type": "Question", "name": "A Libras é igual em todo o Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Não totalmente. A Libras tem variações regionais, como sotaques e gírias, e alguns sinais mudam de uma cidade para outra. Os sinais da LIBRAS.SE seguem a variante usada pela nossa equipe em Santa Catarina."}}
+   ]
+  }
+ ]
+}
+META-->
+<style>
+.trilha{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:t}
+.passo{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:24px;box-shadow:var(--sh);padding:22px;position:relative;display:flex;flex-direction:column;gap:8px}
+.passo::before{counter-increment:t;content:counter(t);font-size:2.2rem;font-weight:900;color:var(--teal-d);line-height:1}
+.passo h3{font-size:1.02rem;font-weight:900;color:var(--p1);letter-spacing:-.01em}
+.passo p{font-size:.84rem;color:var(--txs);font-weight:300;line-height:1.6;flex:1}
+.passo a.go{font-size:.78rem;font-weight:700;color:var(--teal-dd)}
+.passo a.go:hover{color:var(--p1)}
+.mitos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mito{border-radius:22px;padding:22px;background:var(--gc);color:#fff;position:relative;overflow:hidden}
+.mito::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(79,209,197,.22),transparent 60%);pointer-events:none}
+.mito s{display:block;font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:8px}
+.mito h3{font-size:1rem;font-weight:900;margin-bottom:6px;position:relative}
+.mito p{font-size:.8rem;color:rgba(255,255,255,.68);font-weight:300;line-height:1.55;position:relative}
+.mito a{color:var(--teal);font-weight:700;position:relative}
+@media(max-width:1000px){.trilha,.mitos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.trilha,.mitos{grid-template-columns:1fr}}
+</style>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Grátis · sem cadastro · feito por quem trabalha com Libras</span>
+    <h1 id="titulo">Aprender Libras <em>do jeito certo</em></h1>
+    <p class="hero-sub">Sinais em vídeo gravados por intérpretes de verdade, jogos para praticar, atividades para a sala de aula, materiais para baixar e a cultura que dá sentido à língua. Tudo gratuito, tudo num lugar só.</p>
+    <div class="hero-btns">
+      <a href="/aprender-libras/sinais-basicos/" class="btn bt">Começar pelos sinais básicos</a>
+      <a href="/jogos/" class="btn bgh">Ir direto para os jogos</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>74</strong>sinais gravados em vídeo</div>
+      <div><strong>8</strong>jogos online e para imprimir</div>
+      <div><strong>10</strong>materiais em PDF</div>
+      <div><strong>26</strong>termos no glossário</div>
+    </div>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="sec" aria-labelledby="t-trilha">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Por onde começar</span>
+        <h2 id="t-trilha">Uma trilha em quatro passos</h2>
+        <p>Se é a sua primeira vez com a Libras, siga nesta ordem. Se já sabe alguns sinais, pule para onde quiser.</p>
+      </div>
+      <div class="trilha">
+        <div class="passo rv"><h3>Entenda o que é Libras</h3><p>Uma língua completa, com gramática própria, reconhecida por lei e usada pela comunidade surda brasileira.</p><a class="go" href="/blog/o-que-e-libras/">Ler o guia sobre Libras</a></div>
+        <div class="passo rv d1"><h3>Aprenda os primeiros sinais</h3><p>Quarenta sinais essenciais em vídeo, organizados pelas situações do dia a dia. E o <a href="/aprender-libras/alfabeto-em-libras/" style="color:var(--teal-dd);font-weight:700">alfabeto</a>, para soletrar o seu nome.</p><a class="go" href="/aprender-libras/sinais-basicos/">Ver os sinais básicos</a></div>
+        <div class="passo rv d2"><h3>Pratique todo dia</h3><p>O desafio de 7 dias, o sinal do dia, o quiz e o jogo da memória fixam o vocabulário sem cansar.</p><a class="go" href="/atividades/#desafio">Começar o desafio</a></div>
+        <div class="passo rv d3"><h3>Conheça quem usa a língua</h3><p>Libras sem cultura surda é só vocabulário. Entenda a história, a identidade e as lutas da comunidade.</p><a class="go" href="/cultura-surda/">Ler sobre cultura surda</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-areas">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Tudo o que você encontra aqui</span>
+        <h2 id="t-areas">Escolha como quer aprender</h2>
+      </div>
+      <div class="hub-grid g4">
+        <article class="hub-card rv">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div>
+          <h3><a href="/sinal/" class="hub-a">Vocabulário em vídeo</a></h3>
+          <p>Cada sinal com vídeo, ilustração, definição, exemplos de uso e dicas de contexto. Novos sinais entram toda semana.</p>
+          <span class="hub-go" aria-hidden="true">Ver sinais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d1">
+          <div class="hub-ico"><span class="dat" aria-hidden="true" style="font-size:1.6rem">A</span></div>
+          <h3><a href="/aprender-libras/alfabeto-em-libras/" class="hub-a">Alfabeto em Libras</a></h3>
+          <p>As 26 letras e o Ç, modo treino, gerador do seu nome em Libras e PDFs para imprimir e colorir.</p>
+          <span class="hub-go" aria-hidden="true">Ver o alfabeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d2">
+          <div class="hub-ico"><span class="dat" aria-hidden="true" style="font-size:1.6rem">7</span></div>
+          <h3><a href="/aprender-libras/numeros-em-libras/" class="hub-a">Números em Libras</a></h3>
+          <p>Os algarismos de 0 a 9, um conversor para treinar telefones e datas e um cartaz para imprimir.</p>
+          <span class="hub-go" aria-hidden="true">Ver os números <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d3">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg></div>
+          <h3><a href="/jogos/" class="hub-a">Jogos de Libras</a></h3>
+          <p>Sinal do dia, memória e quiz com vídeos, desafio do alfabeto e até um jogo com câmera. Sozinho, em família ou na sala.</p>
+          <span class="hub-go" aria-hidden="true">Jogar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d2">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+          <h3><a href="/atividades/" class="hub-a">Atividades</a></h3>
+          <p>Bingo, caça-palavras e fichas de datilologia para imprimir, desafio de 7 dias e dinâmicas prontas.</p>
+          <span class="hub-go" aria-hidden="true">Ver atividades <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg></div>
+          <h3><a href="/materiais/" class="hub-a">Materiais em PDF</a></h3>
+          <p>Alfabeto e números, jogo da memória, caderno de datilologia, flashcards, guias e calendário.</p>
+          <span class="hub-go" aria-hidden="true">Baixar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d1">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 1.3-4.5 3-5 2 .3 4 2.2 4 5"/></svg></div>
+          <h3><a href="/cultura-surda/" class="hub-a">Cultura surda</a></h3>
+          <p>Artefatos culturais, identidade surda, linha do tempo da Libras, datas, pessoas, filmes e livros.</p>
+          <span class="hub-go" aria-hidden="true">Ler o guia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+        <article class="hub-card rv d2">
+          <div class="hub-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+          <h3><a href="/glossario/" class="hub-a">Glossário</a></h3>
+          <p>Datilologia, configuração de mão, glosa, janela de Libras: os termos da área explicados sem complicação.</p>
+          <span class="hub-go" aria-hidden="true">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-mitos">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Antes de começar</span>
+        <h2 id="t-mitos">Quatro ideias erradas sobre a Libras</h2>
+      </div>
+      <div class="mitos">
+        <div class="mito rv"><s>"Libras é mímica."</s><h3>É uma língua</h3><p>Com gramática, vocabulário e regras próprias. Mímica todo mundo entende; Libras precisa ser aprendida.</p></div>
+        <div class="mito rv d1"><s>"É igual no mundo todo."</s><h3>Cada país tem a sua</h3><p>Nem Brasil e Portugal usam a mesma língua de sinais. E dentro do Brasil há <a href="/blog/libras-tem-sotaque-e-giria/">sotaques</a>.</p></div>
+        <div class="mito rv d2"><s>"É português com as mãos."</s><h3>Tem estrutura própria</h3><p>A ordem dos sinais, o uso do espaço e a expressão facial seguem a gramática da Libras. <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/">Entenda</a>.</p></div>
+        <div class="mito rv d3"><s>"É a segunda língua oficial."</s><h3>É meio legal de comunicação</h3><p>A Lei 10.436/2002 reconhece a Libras dessa forma. <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/">Por que isso importa</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="faq">
+    <div class="wn">
+      <div class="sec-head"><span class="lbl">Dúvidas</span><h2 id="faq">Perguntas frequentes</h2></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Dá para aprender Libras de graça?</summary><p>Dá para começar de graça, com vocabulário em vídeo, jogos e materiais como os da LIBRAS.SE. Para chegar à fluência, procure um curso com professores surdos. Universidades públicas, institutos federais e associações de surdos costumam oferecer cursos, alguns gratuitos.</p></details>
+        <details class="faq-item"><summary>Libras é difícil de aprender?</summary><p>Libras é uma língua completa, com gramática própria, então exige tempo como qualquer idioma. A diferença é que ela é visual: você aprende a pensar com as mãos, o rosto e o espaço. Praticar com pessoas surdas é o que mais acelera o aprendizado.</p></details>
+        <details class="faq-item"><summary>A Libras é igual em todo o Brasil?</summary><p>Não totalmente. A Libras tem variações regionais, como sotaques e gírias, e alguns sinais mudam de uma cidade para outra. Os sinais da LIBRAS.SE seguem a variante usada pela nossa equipe em Santa Catarina.</p></details>
+      </div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:o-que-e-libras,libras-nao-e-segunda-lingua-oficial-do-brasil,entrevista-libras-nao-e-portugues-com-as-maos}}
+
+  <section class="sec" aria-labelledby="cta">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="cta">Quem aprende Libras entende por que ela precisa estar nos vídeos</h2>
+        <p>A LIBRAS.SE coloca intérpretes de verdade nos vídeos de empresas, escolas e criadores de conteúdo, com entrega em até 1 hora.</p>
+        <div class="cta-btns">
+          <a href="https://huet.libras.se/" class="btn bt">Enviar meu vídeo</a>
+          <a href="/solucoes/" class="btn bgh">Conhecer as soluções</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,280 @@
+<!--META
+{
+ "url": "/jogos/quiz-de-libras/",
+ "title": "Quiz de Libras: que sinal é esse? Teste com vídeos",
+ "og_title": "Quiz de Libras: que sinal é esse?",
+ "desc": "Quiz de Libras online e grátis: assista ao sinal em vídeo e escolha a palavra certa. 10 perguntas por rodada, câmera lenta e temas do dia a dia.",
+ "og_image": "/assets/img/og/jogo.webp",
+ "breadcrumb": [["Início", "/"], ["Jogos de Libras", "/jogos/"], ["Quiz: que sinal é esse?", "/jogos/quiz-de-libras/"]],
+ "jsonld": [
+  {
+   "@type": ["VideoGame", "LearningResource"],
+   "name": "Quiz de Libras: que sinal é esse?",
+   "url": "https://libras.se/jogos/quiz-de-libras/",
+   "description": "Quiz online em que o jogador assiste a um sinal da Libras em vídeo, gravado por intérprete profissional, e escolhe a palavra correspondente em português.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "genre": ["Jogo educativo", "Quiz"],
+   "gamePlatform": "Navegador web",
+   "applicationCategory": "Game",
+   "operatingSystem": "Qualquer",
+   "educationalUse": "Avaliação formativa de vocabulário",
+   "learningResourceType": "Quiz",
+   "teaches": "Reconhecimento de sinais da Língua Brasileira de Sinais (Libras)",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.game-wrap{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm);display:block;margin-bottom:8px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.qz{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;margin-top:22px;align-items:start}
+.stage{position:relative;border-radius:22px;overflow:hidden;background:#f0fafa;aspect-ratio:16/9;box-shadow:var(--sh);border:1px solid var(--border)}
+.stage video{width:100%;height:100%;object-fit:cover;display:block}
+.stage .tag{position:absolute;top:12px;left:12px;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.72);border-radius:var(--rpill);padding:4px 10px}
+.vctl{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.vctl button{font-family:'M',sans-serif;font-size:.74rem;font-weight:700;color:var(--p3);background:#fff;border:1.5px solid rgba(46,184,192,.25);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.vctl button[aria-pressed="true"]{background:rgba(79,209,197,.14);border-color:var(--teal-d)}
+.vctl button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.vctl svg{width:14px;height:14px}
+.prog{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.prog span{font-size:.72rem;font-weight:700;color:var(--txm);letter-spacing:.04em}
+.prog b{color:var(--p1)}
+.bar{height:6px;border-radius:6px;background:rgba(79,209,197,.14);overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;width:0;background:var(--gb);transition:width .4s}
+.q{font-size:1.25rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);margin-bottom:14px}
+.opts{display:grid;gap:10px}
+.opt{font-family:'M',sans-serif;text-align:left;font-size:1rem;font-weight:700;color:var(--p1);background:#fff;border:2px solid rgba(46,184,192,.2);border-radius:16px;padding:14px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .2s,background .2s,transform .15s}
+.opt:hover:not(:disabled){border-color:var(--teal-d);transform:translateY(-1px)}
+.opt:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.opt kbd{font-family:'M',sans-serif;font-size:.68rem;font-weight:700;color:var(--txm);border:1px solid var(--border);border-radius:7px;padding:2px 7px;background:var(--bg)}
+.opt.certa{border-color:var(--green);background:rgba(34,197,94,.08)}
+.opt.errada{border-color:#f87171;background:rgba(248,113,113,.08)}
+.opt:disabled{cursor:default}
+.fb{min-height:52px;margin-top:14px;font-size:.9rem;color:var(--txs)}
+.fb strong{color:var(--p1)}
+.fb a{color:var(--teal-dd);font-weight:700;border-bottom:1.5px solid rgba(46,184,192,.3)}
+.next{margin-top:6px}
+.end{display:none}
+.end.show{display:block}
+.end:focus{outline:none}
+.score{font-size:3.4rem;font-weight:900;letter-spacing:-.04em;color:var(--p1);line-height:1}
+.score small{font-size:1.2rem;color:var(--txm)}
+.end h2{font-size:1.4rem;font-weight:900;color:var(--p1);margin:10px 0 6px;letter-spacing:-.02em}
+.end p{font-size:.92rem;color:var(--txs);font-weight:300;margin-bottom:16px}
+.rev{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:8px 0 20px}
+.rev a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.84rem;font-weight:700;color:var(--p1);background:#fff;border:1.5px solid rgba(46,184,192,.2);border-radius:12px;padding:9px 13px}
+.rev a.x{border-color:rgba(248,113,113,.5)}
+.rev a span{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.rev a.x span{color:#ef4444}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tips div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.tips h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.tips p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:860px){.qz{grid-template-columns:1fr}.tips{grid-template-columns:1fr}}
+@media(max-width:520px){.panel{padding:18px 14px}.rev{grid-template-columns:1fr}}
+</style>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Quiz grátis · 10 perguntas</span>
+    <h1 id="titulo">Quiz de Libras: <em>que sinal é esse?</em></h1>
+    <p class="hero-sub">Assista ao sinal, observe as mãos, o movimento e o rosto, e escolha a palavra certa. Todos os vídeos foram gravados por intérprete da LIBRAS.SE.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="game-wrap" aria-label="Quiz">
+    <div class="w">
+      <div class="panel">
+        <span class="cfg-lbl" id="lbl-tema">Tema</span>
+        <div class="seg" id="temas" role="group" aria-labelledby="lbl-tema"></div>
+
+        <div id="jogo">
+          <div class="qz">
+            <div>
+              <div class="stage">
+                <span class="tag">Sinal em Libras</span>
+                <video id="vid" muted loop playsinline autoplay preload="auto" aria-label="Vídeo do sinal que você precisa reconhecer"></video>
+              </div>
+              <div class="vctl">
+                <button type="button" id="replay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Ver de novo</button>
+                <button type="button" id="lento" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Câmera lenta</button>
+              </div>
+            </div>
+            <div>
+              <div class="prog"><span>Pergunta <b id="n">1</b> de <b id="tot">10</b></span><span>Acertos <b id="pts">0</b></span></div>
+              <div class="bar"><i id="bar"></i></div>
+              <p class="q">Que palavra este sinal representa?</p>
+              <div class="opts" id="opts"></div>
+              <div class="fb" id="fb" aria-live="polite"></div>
+              <button type="button" class="btn bp next" id="next" hidden>Próxima pergunta</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="end" id="end" tabindex="-1">
+          <div class="score"><span id="sc">0</span><small>/10</small></div>
+          <h2 id="end-t"></h2>
+          <p id="end-p"></p>
+          <span class="cfg-lbl">Revise os sinais da rodada</span>
+          <div class="rev" id="rev"></div>
+          <div class="acts">
+            <button type="button" class="btn bp" id="denovo">Nova rodada</button>
+            <a class="btn bw" id="share" href="#" target="_blank" rel="noopener noreferrer">Desafiar no WhatsApp</a>
+            <a class="btn bo" href="/jogos/jogo-da-memoria-libras/">Jogo da memória</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="dicas">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Dicas</span>
+        <h2 id="dicas">Como reconhecer um sinal mais rápido</h2>
+        <p>Todo sinal da Libras combina alguns elementos. Treinar o olhar para eles ajuda mais do que decorar.</p>
+      </div>
+      <div class="tips">
+        <div><h3>Olhe primeiro para as mãos</h3><p>Qual é o formato da mão? Ele se chama <a href="/glossario/configuracao-de-mao/" style="color:var(--teal-dd);font-weight:700">configuração de mão</a> e muda completamente o sentido do sinal.</p></div>
+        <div><h3>Depois, onde e como se move</h3><p>Perto do rosto, no peito ou no espaço à frente? O <a href="/glossario/ponto-de-articulacao/" style="color:var(--teal-dd);font-weight:700">ponto de articulação</a> e o <a href="/glossario/movimento/" style="color:var(--teal-dd);font-weight:700">movimento</a> completam a forma.</p></div>
+        <div><h3>Não esqueça o rosto</h3><p>Em sentimentos como medo, raiva ou saudade, a <a href="/glossario/expressao-nao-manual/" style="color:var(--teal-dd);font-weight:700">expressão facial</a> faz parte do sinal, não é enfeite.</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:o-que-e-libras,libras-tem-sotaque-e-giria,lingua-de-sinais-e-autismo}}
+
+  <section class="sec" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Errou algum? Ótimo, é assim que se aprende.</h2>
+        <p>Cada sinal tem página própria no nosso vocabulário, com vídeo, definição e exemplos de uso.</p>
+        <div class="cta-btns">
+          <a href="/sinal/" class="btn bt">Vocabulário em vídeo</a>
+          <a href="/jogos/" class="btn bgh">Outros jogos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var SINAIS = {{SINAIS_JSON}};
+  var VID = '/assets/videos/sinais/';
+  var TEMAS = [['', 'Todos'], ['Sentimentos', 'Sentimentos'], ['Alimentos', 'Comida'], ['Animais', 'Animais'], ['Cotidiano', 'Rotina e casa'], ['Verbos', 'Verbos'], ['Família e pessoas', 'Pessoas']];
+  var TOTAL = 10;
+  var $ = function(id){ return document.getElementById(id); };
+  var vid = $('vid'), tema = '', rodada = [], i = 0, pts = 0, resp = [], lento = false;
+
+  function ls(k, v){ try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  function shuffle(a){ for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+
+  TEMAS.forEach(function(t, n){
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = t[1]; b.dataset.t = t[0];
+    b.setAttribute('aria-pressed', n === 0 ? 'true' : 'false');
+    $('temas').appendChild(b);
+  });
+  $('temas').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    tema = b.dataset.t; novo();
+  });
+
+  function opcoes(certo){
+    var mesmos = shuffle(SINAIS.filter(function(s){ return s.s !== certo.s && s.c === certo.c; }));
+    var outros = shuffle(SINAIS.filter(function(s){ return s.s !== certo.s && s.c !== certo.c; }));
+    return shuffle([certo].concat(mesmos.concat(outros).slice(0, 3)));
+  }
+
+  function novo(){
+    var pool = SINAIS.filter(function(s){ return !tema || s.c === tema; });
+    rodada = shuffle(pool.slice()).slice(0, Math.min(TOTAL, pool.length));
+    i = 0; pts = 0; resp = [];
+    $('tot').textContent = rodada.length; $('pts').textContent = '0';
+    $('end').classList.remove('show'); $('jogo').hidden = false;
+    pergunta();
+  }
+
+  function pergunta(){
+    var s = rodada[i];
+    $('n').textContent = i + 1;
+    $('bar').style.width = (i / rodada.length * 100) + '%';
+    vid.poster = VID + s.s + '.webp'; vid.src = VID + s.s + '.mp4';
+    vid.playbackRate = lento ? .5 : 1;
+    var p = vid.play(); if (p && p.catch) p.catch(function(){});
+    var html = '';
+    opcoes(s).forEach(function(o, n){ html += '<button type="button" class="opt" data-s="' + o.s + '"><kbd>' + (n + 1) + '</kbd>' + o.p + '</button>'; });
+    $('opts').innerHTML = html;
+    $('fb').textContent = ''; $('next').hidden = true;
+  }
+
+  function responder(b){
+    if (!b || b.disabled) return;
+    var s = rodada[i], ok = b.dataset.s === s.s;
+    $('opts').querySelectorAll('.opt').forEach(function(x){
+      x.disabled = true;
+      if (x.dataset.s === s.s) x.classList.add('certa');
+    });
+    if (!ok) b.classList.add('errada');
+    if (ok) { pts++; $('pts').textContent = pts; }
+    resp.push({ s: s, ok: ok });
+    $('fb').innerHTML = (ok ? '<strong>Isso!</strong> ' : '<strong>Quase.</strong> Este é o sinal de <strong>' + s.p + '</strong>. ') +
+      '<a href="/sinal/' + s.s + '/" target="_blank" rel="noopener">Ver o sinal de ' + s.p + ' no vocabulário</a>';
+    var nx = $('next'); nx.hidden = false;
+    nx.textContent = i + 1 < rodada.length ? 'Próxima pergunta' : 'Ver resultado';
+    nx.focus({ preventScroll: true });
+  }
+
+  $('opts').addEventListener('click', function(e){ responder(e.target.closest('.opt')); });
+  document.addEventListener('keydown', function(e){
+    if ($('jogo').hidden || /INPUT|TEXTAREA/.test(document.activeElement.tagName)) return;
+    var n = parseInt(e.key, 10);
+    if (n >= 1 && n <= 4) { var b = $('opts').children[n - 1]; if (b && !b.disabled) responder(b); }
+  });
+  $('next').addEventListener('click', function(){
+    i++;
+    if (i < rodada.length) pergunta(); else fim();
+  });
+  $('replay').addEventListener('click', function(){ vid.currentTime = 0; var p = vid.play(); if (p && p.catch) p.catch(function(){}); });
+  $('lento').addEventListener('click', function(){
+    lento = !lento; this.setAttribute('aria-pressed', lento ? 'true' : 'false');
+    vid.playbackRate = lento ? .5 : 1;
+  });
+
+  function fim(){
+    vid.pause();
+    $('bar').style.width = '100%';
+    var n = rodada.length, k = 'lbse_quiz_' + (tema || 'todos'), rec = +ls(k) || 0;
+    if (pts > rec) ls(k, String(pts));
+    $('sc').textContent = pts; $('sc').nextElementSibling.textContent = '/' + n;
+    var r = pts / n;
+    $('end-t').textContent = r === 1 ? 'Gabaritou!' : r >= .7 ? 'Mandou bem!' : r >= .4 ? 'Bom começo!' : 'Hora de praticar!';
+    $('end-p').textContent = (pts > rec && rec ? 'Novo recorde neste tema (antes: ' + rec + '). ' : rec && pts <= rec ? 'Seu recorde neste tema é ' + rec + '. ' : '') +
+      'Clique em um sinal abaixo para rever o vídeo, a definição e exemplos de uso.';
+    $('rev').innerHTML = resp.map(function(x){
+      return '<a href="/sinal/' + x.s.s + '/" class="' + (x.ok ? '' : 'x') + '">' + x.s.p + '<span>' + (x.ok ? 'acertou' : 'revisar') + '</span></a>';
+    }).join('');
+    $('share').href = 'https://wa.me/?text=' + encodeURIComponent('Acertei ' + pts + ' de ' + n + ' no quiz de Libras da LIBRAS.SE. Que sinal é esse? Tenta aí: https://libras.se/jogos/quiz-de-libras/');
+    $('jogo').hidden = true;
+    $('end').classList.add('show'); $('end').focus();
+  }
+
+  $('denovo').addEventListener('click', novo);
+  novo();
+})();
+</script>

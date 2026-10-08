@@ -1,0 +1,238 @@
+<!--META
+{
+ "url": "/atividades/bingo-de-libras/",
+ "title": "Bingo de Libras para imprimir: gerador de cartelas grátis",
+ "og_title": "Bingo de Libras para imprimir",
+ "desc": "Gere cartelas de bingo de Libras para imprimir, com ilustrações dos sinais e fichas de sorteio. Grátis, sem cadastro, uma cartela diferente para cada aluno.",
+ "og_image": "/assets/img/og/atividades.webp",
+ "breadcrumb": [["Início", "/"], ["Atividades de Libras", "/atividades/"], ["Bingo de Libras", "/atividades/bingo-de-libras/"]],
+ "jsonld": [
+  {
+   "@type": ["LearningResource", "WebApplication"],
+   "name": "Gerador de bingo de Libras",
+   "url": "https://libras.se/atividades/bingo-de-libras/",
+   "description": "Ferramenta gratuita que gera cartelas de bingo com ilustrações de sinais da Libras e fichas de sorteio para imprimir.",
+   "inLanguage": ["pt-BR", "bzs"],
+   "learningResourceType": ["Jogo", "Atividade para imprimir"],
+   "educationalUse": "Atividade em grupo",
+   "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"},
+   "applicationCategory": "EducationalApplication",
+   "operatingSystem": "Qualquer",
+   "isAccessibleForFree": true,
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+  }
+ ]
+}
+META-->
+<style>
+.tool{padding:36px 0 0}
+.panel{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:var(--rx);box-shadow:var(--shm);padding:24px 26px}
+.cfg{display:grid;grid-template-columns:repeat(4,auto);gap:18px 28px;align-items:end;justify-content:start}
+.cfg-grp{display:flex;flex-direction:column;gap:8px}
+.cfg-lbl{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txm)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:'M',sans-serif;font-size:.76rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
+.seg button:hover{background:rgba(79,209,197,.16)}
+.seg button[aria-pressed="true"]{background:var(--p1);border-color:var(--p1);color:#fff}
+.seg button:disabled{opacity:.4;cursor:not-allowed}
+.seg button:focus-visible,.num:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.num{font-family:'M',sans-serif;font-size:.9rem;font-weight:700;color:var(--p1);border:1.5px solid rgba(46,184,192,.3);border-radius:12px;padding:7px 12px;width:92px;background:#fff}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.hint{font-size:.8rem;color:var(--txm)}
+.preview{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:22px}
+/* Folha A4 */
+.sheet{width:100%;max-width:760px;aspect-ratio:210/297;background:#fff;box-shadow:var(--shm);border-radius:6px;padding:4.5%;display:flex;flex-direction:column;gap:3%;color:#0e3538;font-family:'M',sans-serif}
+.sheet-foot{margin-top:auto;display:flex;justify-content:space-between;gap:8px;font-size:clamp(6px,1.1vw,9px);color:#5d8487;border-top:1px solid #d6eeec;padding-top:6px}
+.sheet-foot b{font-weight:900;color:#1a9ca4}
+.cartela{border:2px solid #0e3538;border-radius:14px;padding:2.5%;display:flex;flex-direction:column;gap:2.5%;flex:1;min-height:0}
+.c-head{display:flex;justify-content:space-between;align-items:center}
+.c-tit{font-weight:900;font-size:clamp(11px,2.4vw,20px);letter-spacing:-.02em}
+.c-tit span{color:#1a9ca4}
+.c-nome{font-size:clamp(7px,1.3vw,11px);color:#5d8487;border-bottom:1px solid #9cc;min-width:40%;padding-bottom:2px}
+.c-grid{display:grid;gap:1.5%;flex:1;min-height:0}
+.c-grid.n3{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}
+.c-grid.n4{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr)}
+.cel{border:1.5px solid #b8e3df;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;min-height:0;position:relative}
+.cel img{width:100%;height:100%;object-fit:contain;display:block}
+.cel .cw{font-weight:900;font-size:clamp(9px,2vw,18px);text-align:center;padding:4px;line-height:1.1}
+.fichas{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(5,1fr);gap:1.5%;flex:1;min-height:0}
+.ficha{border:1.5px dashed #9cc;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3%;padding:3%;min-height:0;overflow:hidden}
+.ficha img{width:100%;flex:1;min-height:0;object-fit:contain}
+.ficha b{font-size:clamp(7px,1.4vw,12px);font-weight:900}
+.f-tit{font-weight:900;font-size:clamp(10px,2vw,16px)}
+.f-tit small{font-weight:300;color:#5d8487;font-size:.75em;margin-left:6px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.steps div{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--sh);padding:22px}
+.steps b{display:block;font-size:2rem;font-weight:900;color:var(--teal-d);line-height:1;margin-bottom:8px}
+.steps h3{font-size:.98rem;font-weight:900;color:var(--p1);margin-bottom:6px}
+.steps p{font-size:.85rem;color:var(--txs);font-weight:300;line-height:1.6}
+@media(max-width:900px){.cfg{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:520px){.cfg{grid-template-columns:1fr}.panel{padding:18px 14px}}
+@media print{
+  @page{size:A4;margin:0}
+  .tool{padding:0}
+  .tool .w{padding:0;max-width:none}
+  .preview{margin:0;gap:0;display:block}
+  .sheet{width:210mm;height:297mm;max-width:none;aspect-ratio:auto;box-shadow:none;border-radius:0;padding:10mm;break-after:page;page-break-after:always}
+  .sheet-foot{font-size:8pt}
+  .c-tit{font-size:15pt}.c-nome{font-size:9pt}.cel .cw{font-size:15pt}.ficha b{font-size:9pt}.f-tit{font-size:13pt}
+}
+</style>
+
+<section class="hero no-print" aria-labelledby="titulo">
+  <div class="w">
+    {{BREADCRUMB}}
+    <span class="hlbl">Gerador grátis · imprime em A4</span>
+    <h1 id="titulo">Bingo de Libras <em>para imprimir</em></h1>
+    <p class="hero-sub">Monte cartelas diferentes para cada aluno, com ilustrações dos sinais da Libras, e as fichas de sorteio. Escolha o tema, gere e imprima. Ou salve em PDF.</p>
+  </div>
+</section>
+
+<main id="main-content">
+  <section class="tool" aria-labelledby="gerar">
+    <div class="w">
+      <div class="panel no-print">
+        <h2 id="gerar" class="cfg-lbl" style="margin-bottom:14px;font-size:.7rem">Monte o seu bingo</h2>
+        <div class="cfg">
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-tema">Tema</span><div class="seg" id="temas" role="group" aria-labelledby="l-tema"></div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-tam">Cartela</span><div class="seg" id="tam" role="group" aria-labelledby="l-tam">
+            <button type="button" data-n="3" aria-pressed="true">3 × 3</button><button type="button" data-n="4" aria-pressed="false">4 × 4</button></div></div>
+          <div class="cfg-grp"><span class="cfg-lbl" id="l-modo">Na cartela vai</span><div class="seg" id="modo" role="group" aria-labelledby="l-modo">
+            <button type="button" data-m="img" aria-pressed="true">O sinal</button><button type="button" data-m="txt" aria-pressed="false">A palavra</button></div></div>
+          <div class="cfg-grp"><label class="cfg-lbl" for="qtd">Quantas cartelas</label><input class="num" id="qtd" type="number" min="1" max="40" value="10"></div>
+        </div>
+        <div class="acts">
+          <button type="button" class="btn bp" id="gerarBtn">Gerar novas cartelas</button>
+          <button type="button" class="btn bw" id="imprimir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir ou salvar PDF
+          </button>
+          <span class="hint" id="resumo" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="preview" id="preview" aria-label="Prévia das folhas para impressão"></div>
+    </div>
+  </section>
+
+  <section class="sec no-print" aria-labelledby="como">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Como jogar</span>
+        <h2 id="como">Bingo de Libras em três passos</h2>
+        <p>Funciona em duas versões. Na mais visual, a cartela traz o sinal e quem sorteia mostra a palavra. Na mais desafiadora, a cartela traz a palavra e quem sorteia <strong>faz o sinal</strong>.</p>
+      </div>
+      <div class="steps">
+        <div><b>1</b><h3>Imprima e recorte</h3><p>Uma cartela para cada aluno ou dupla. Recorte as fichas de sorteio da última folha e coloque num saquinho.</p></div>
+        <div><b>2</b><h3>Sorteie e sinalize</h3><p>Tire uma ficha e faça o sinal para a turma, sem falar a palavra. Quem precisar, pode rever o sinal em vídeo no <a href="/sinal/" style="color:var(--teal-dd);font-weight:700">vocabulário</a>.</p></div>
+        <div><b>3</b><h3>Bingo!</h3><p>Quem completar a cartela primeiro precisa fazer todos os sinais marcados para validar a vitória. Assim todo mundo revisa.</p></div>
+      </div>
+      <div class="note" style="margin-top:22px"><strong>Uso livre em sala de aula.</strong> As ilustrações foram feitas pela LIBRAS.SE a partir de vídeos gravados pela nossa intérprete. Imprima à vontade, só mantenha o crédito no rodapé. Os sinais seguem a variante usada pela nossa equipe em Santa Catarina e podem variar em outras regiões.</div>
+    </div>
+  </section>
+
+  {{LEIA_NO_BLOG:librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar,professora-aprende-libras-para-se-comunicar-com-estudante,videoaulas-acessiveis-com-libras}}
+
+  <section class="sec no-print" aria-labelledby="mais">
+    <div class="w">
+      <div class="cta-box">
+        <h2 id="mais">Mais atividades de Libras</h2>
+        <p>Caça-palavras com sinais, flashcards em PDF e dinâmicas prontas para a sala de aula.</p>
+        <div class="cta-btns">
+          <a href="/atividades/" class="btn bt">Ver todas as atividades</a>
+          <a href="/atividades/caca-palavras-em-libras/" class="btn bgh">Caça-palavras de Libras</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var FORA = ['cerveja'];
+  var SINAIS = {{SINAIS_JSON}}.filter(function(s){ return s.i && FORA.indexOf(s.s) < 0; });
+  var ILU = '/assets/img/sinais/';
+  var TEMAS = [
+    ['todos', 'Todos os sinais', function(){ return true; }],
+    ['sent', 'Sentimentos', function(s){ return s.c === 'Sentimentos'; }],
+    ['rot', 'Rotina e casa', function(s){ return s.c === 'Cotidiano'; }],
+    ['acao', 'Ações, comida e bichos', function(s){ return s.c === 'Verbos' || s.c === 'Alimentos' || s.c === 'Animais'; }]
+  ];
+  var $ = function(id){ return document.getElementById(id); };
+  var tema = TEMAS[0], n = 3, modo = 'img';
+
+  function shuffle(a){ for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+  function pool(){ return SINAIS.filter(tema[2]); }
+
+  TEMAS.forEach(function(t, i){
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = t[1]; b.dataset.i = i;
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false'); $('temas').appendChild(b);
+  });
+  function seg(id, fn){
+    $(id).addEventListener('click', function(e){
+      var b = e.target.closest('button'); if (!b || b.disabled) return;
+      Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      fn(b); travas(); gerar();
+    });
+  }
+  seg('temas', function(b){ tema = TEMAS[+b.dataset.i]; });
+  seg('tam', function(b){ n = +b.dataset.n; });
+  seg('modo', function(b){ modo = b.dataset.m; });
+
+  // 4x4 precisa de pelo menos 20 sinais no tema para as cartelas variarem
+  function travas(){
+    var b4 = $('tam').querySelector('[data-n="4"]'), ok = pool().length >= 20;
+    b4.disabled = !ok; b4.title = ok ? '' : 'Este tema tem poucos sinais para cartelas 4 × 4';
+    if (!ok && n === 4) { n = 3; $('tam').children[0].setAttribute('aria-pressed', 'true'); b4.setAttribute('aria-pressed', 'false'); }
+  }
+
+  function rodape(){
+    return '<div class="sheet-foot"><span><b>LIBRAS.SE</b> · Bingo de Libras · libras.se/atividades/bingo-de-libras</span><span>Material gratuito para uso educativo. Mantenha este crédito.</span></div>';
+  }
+  function celula(s){
+    return modo === 'img'
+      ? '<div class="cel"><img src="' + ILU + s.s + '.webp" alt="Sinal de ' + s.p + ' em Libras" loading="eager"></div>'
+      : '<div class="cel"><span class="cw">' + s.p + '</span></div>';
+  }
+  function cartela(itens, num){
+    return '<div class="cartela"><div class="c-head"><span class="c-tit">Bingo de <span>Libras</span> · ' + String(num).padStart(2, '0') + '</span><span class="c-nome">Nome:</span></div>' +
+      '<div class="c-grid n' + n + '">' + itens.map(celula).join('') + '</div></div>';
+  }
+
+  function gerar(){
+    var p = pool(), qtd = Math.max(1, Math.min(40, parseInt($('qtd').value, 10) || 1)), cel = n * n;
+    $('qtd').value = qtd;
+    var vistas = {}, cartelas = [], tentativas = 0;
+    while (cartelas.length < qtd && tentativas < 2000) {
+      tentativas++;
+      var c = shuffle(p.slice()).slice(0, cel), k = c.map(function(s){ return s.s; }).sort().join();
+      if (vistas[k] && tentativas < 1500) continue;
+      vistas[k] = 1; cartelas.push(c);
+    }
+    var porFolha = n === 3 ? 2 : 1, html = '';
+    for (var i = 0; i < cartelas.length; i += porFolha) {
+      html += '<div class="sheet">' + cartelas.slice(i, i + porFolha).map(function(c, j){ return cartela(c, i + j + 1); }).join('') + rodape() + '</div>';
+    }
+    var usados = {};
+    cartelas.forEach(function(c){ c.forEach(function(s){ usados[s.s] = s; }); });
+    var fichas = Object.keys(usados).map(function(k){ return usados[k]; }).sort(function(a, b){ return a.p.localeCompare(b.p, 'pt'); });
+    for (var f = 0; f < fichas.length; f += 20) {
+      html += '<div class="sheet"><div class="f-tit">Fichas de sorteio<small>recorte e sorteie</small></div><div class="fichas">' +
+        fichas.slice(f, f + 20).map(function(s){ return '<div class="ficha"><img src="' + ILU + s.s + '.webp" alt="" loading="eager"><b>' + s.p + '</b></div>'; }).join('') +
+        '</div>' + rodape() + '</div>';
+    }
+    $('preview').innerHTML = html;
+    var folhas = $('preview').children.length;
+    $('resumo').textContent = cartelas.length + ' cartelas, ' + fichas.length + ' fichas, ' + folhas + (folhas === 1 ? ' folha' : ' folhas') + ' A4.';
+  }
+
+  $('gerarBtn').addEventListener('click', gerar);
+  $('qtd').addEventListener('change', gerar);
+  $('imprimir').addEventListener('click', function(){
+    var imgs = Array.prototype.slice.call($('preview').querySelectorAll('img'));
+    Promise.all(imgs.map(function(i){ return i.complete ? 0 : new Promise(function(r){ i.onload = i.onerror = r; }); }))
+      .then(function(){ window.print(); });
+  });
+  travas(); gerar();
+})();
+</script>

@@ -16,7 +16,7 @@ O blog é a porta de entrada; a estrutura de links é o que leva o leitor (e o G
 
 ## 1. O que já foi feito (auditoria de 08/10/2026)
 
-Medido com `python3 tools/seo/auditoria.py` em 220 páginas indexáveis (74 posts, 77 sinais, 28 verbetes,
+Medido com `python3 tools/seo/auditoria.py` em 220 páginas indexáveis (73 posts depois da fusão de Mandalorian, 77 sinais, 28 verbetes,
 14 comerciais, 10 de aprender, 6 de jogos).
 
 | Indicador | Antes | Depois |
@@ -99,7 +99,7 @@ Todo conteúdo novo precisa ligar para pelo menos um desses hubs.
    dois posts, o antigo vira redirecionamento (`meta refresh` + canonical, padrão já usado em `/post/*`)
    e sai do sitemap.
 
-## 4. Revisão das matérias publicadas (74 posts)
+## 4. Revisão das matérias publicadas (74 posts, 73 depois da fusão)
 
 Retrato:
 
@@ -112,24 +112,23 @@ links. O ganho está em três frentes.
 
 ### 4.1 Canibalização (dois posts disputando a mesma busca)
 
-| Posts | Recomendação |
+| Posts | O que foi feito em 08/10/2026 |
 |---|---|
-| `libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh` (2022) × `libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte` (2026) | Manter os dois. No de 2022, colocar uma caixa "Atualização: a lei foi aprovada", com link para o de 2026 logo no início. O de 2026 é o que deve ranquear. |
-| `mandalorian-fez-sua-propria-lingua-de-sinais` (2021) × `vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian` (2022) | **Fundir** em um só post sobre Mandalorian e língua de sinais (o de 2022, mais completo, recebe o trecho do de 2021). O de 2021 vira redirecionamento. |
-| `dia-nacional-da-libras-inclusao-da-comunidade-surda` (2025) × `20-anos-da-lei-de-libras-avancos-e-desafios` (2022) | O Dia Nacional da Libras (24/4) vira **página anual permanente**: atualizada todo abril, na mesma URL e com `dateModified`. A de 20 anos fica como notícia histórica, com link para ela. |
+| `libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh` (2022) × `libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte` (2026) | Nada a mudar: o de 2022 já abre com a caixa "Atualização" e linka o de 2026, que é o que deve ranquear. |
+| `mandalorian-fez-sua-propria-lingua-de-sinais` (2021) × `vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian` (2022) | **Fundidos.** O de 2022 recebeu o trecho que só existia no de 2021. O de 2021 virou redirecionamento (noindex + canonical) e saiu da home, do sitemap, do llms-full e da página da autora. |
+| `dia-nacional-da-libras-inclusao-da-comunidade-surda` (2025) × `20-anos-da-lei-de-libras-avancos-e-desafios` (2022) | O Dia Nacional da Libras virou **página permanente de todo 24 de abril**: novo title, seção "Como celebrar" (alfabeto, sinais, atividades, materiais e jogos) e dado de população corrigido (IBGE, Censo 2022). **Atualize todo março**, na mesma URL. O post dos 20 anos linka a página do dia. |
 | `o-papel-do-interprete-de-libras-na-sociedade` × `papel-do-interprete-de-libras-na-escola-bilingue` | Intenções diferentes (geral × escola). Manter, e um deve linkar o outro no corpo. |
 
-### 4.2 Correções de conteúdo (confiança também é ranqueamento)
+### 4.2 Correções de conteúdo (feitas em 08/10/2026)
 
-- `dia-nacional-dos-surdos-conquistas-e-reflexoes` afirma que a fita azul vem das faixas que os nazistas
-  usavam. **Não há registro documental disso.** Segundo a WFD, a fita foi lançada em 1999 e o azul vem das
-  cores da entidade. Reescrever o trecho (fontes em `tools/aprender/PESQUISA.md`).
-- O fundador do INES aparece como "Ernest Huet" em 2 posts (`o-que-e-libras` e `20-anos-da-lei-de-libras-...`,
-  e nos cards do blog) e como "Edouard Huet" em 3 verbetes (datilologia, libras e ines). As fontes divergem;
-  padronizar como **E. Huet**.
-- Frases como "Libras é a língua oficial" contradizem o nosso próprio pilar `libras-nao-e-segunda-lingua-oficial-do-brasil`.
-  O correto é "reconhecida como meio legal de comunicação e expressão (Lei 10.436/2002)". A description do
-  verbete Libras já foi corrigida; falta revisar o texto dos posts e o FAQ da home.
+- **Fita azul:** o post `dia-nacional-dos-surdos-conquistas-e-reflexoes` deixou de afirmar que ela vem das braçadeiras nazistas, versão que não tem
+  registro documental. Agora o texto diz que a fita foi apresentada no congresso da WFD de 1999, em Brisbane, e o post linka o Dia
+  Internacional das Línguas de Sinais.
+- **Huet:** o site passou a usar **E. Huet** em todos os lugares. No verbete INES ficou registrado que as fontes divergem sobre o prenome
+  (Eduard, Édouard ou Ernest). O "a convite de Dom Pedro II" virou "com o apoio de Dom Pedro II", em linha com o post `o-que-e-libras`.
+- **"Língua oficial":** o FAQ da home, dois verbetes do glossário e `o-papel-da-libras-na-inclusao-do-surdo` agora dizem que a Lei 10.436/2002
+  reconhece a Libras como **meio legal de comunicação e expressão**. Regra para textos novos: Libras não é "língua oficial" (ver o pilar
+  `libras-nao-e-segunda-lingua-oficial-do-brasil`).
 
 ### 4.3 Atualizar e aprofundar (os que têm busca e estão rasos)
 
@@ -223,11 +222,7 @@ Rotina:
 
 ## 9. Pendências técnicas conhecidas
 
-- A home tem `<link rel="api-catalog">` e `<link rel="describedby">` apontando para `/.well-known/...`,
-  pasta que não existe no repositório (dão 404). Há duas saídas:
-  - criar a pasta e um `_config.yml` com `include: [".well-known"]`, porque o Jekyll do GitHub Pages ignora
-    pastas que começam com ponto;
-  - remover as duas tags.
+- Os links `api-catalog` e `describedby` da home apontavam para `/.well-known/`, que não existe; foram removidos em 08/10/2026.
 - `/produtos/` tem canonical para `/solucoes/`, de propósito, e fica fora do sitemap.
 - As páginas de sinal não linkam o blog. Se for desejado, isso entra no gerador `tools/sinais/build_pages.py`,
   e não no `links.py`, porque o gerador de sinais recria a página inteira.

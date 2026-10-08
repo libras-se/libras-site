@@ -38,7 +38,7 @@ Se é um conteúdo que queremos ranquear e manter por anos, vá de **alta comple
 4. **Imagens vindas do banco editorial** quando não houver foto própria, ver §7.
 5. **Botão flutuante de WhatsApp** (`.wppf`) e **skip-link**.
 6. `<html lang="pt-BR">`, `<meta>` SEO completos, OG/Twitter, canonical, JSON-LD.
-7. Cada post é citado na **home do blog** com seu card e `data-cat`, ver §5.
+7. Cada post entra na **home do blog** rodando `python3 tools/blog/home.py`, ver §5.
 
 ---
 
@@ -193,124 +193,70 @@ No menu mobile (`.mob`) e nos links da nav, o link do Blog aponta para `/blog/`
 
 ---
 
-## 5. A página inicial do blog (`/blog/index.html`)
+## 5. A página inicial do blog (`/blog/index.html`), gerada
 
-A home é o índice navegável de todos os posts. **Sempre que um post novo é
-publicado, ele precisa ser adicionado aqui** (card + entrada no JSON-LD `ItemList`).
+A home é um **portal de notícias e de Libras** gerado por `tools/blog/home.py`
+(template `tools/blog/home.html`, configuração `tools/blog/home.json`).
+**Não edite `blog/index.html` à mão**: rode o gerador.
+
+### Ao publicar um post
+
+1. Crie o post em `blog/<slug>/index.html` com o JSON-LD `BlogPosting` completo (§3).
+2. Diga a editoria do post em `tools/blog/home.json` → `classificacao` (`"<slug>": "<editoria>"`).
+   Editorias: `lingua` (Língua & Cultura Surda), `educacao`, `direitos`, `inclusao`
+   (Inclusão & Acessibilidade), `cultura` (Cultura & Entretenimento), `esporte`.
+   Sem entrada, o post cai em `inclusao` e o gerador avisa.
+3. Rode `python3 tools/blog/home.py`. Ele:
+   - cria o card do post (`<article class="bl-card" data-post ...>`) a partir do JSON-LD,
+     da imagem e do tempo de leitura do post, e o põe no topo do arquivo cronológico;
+   - atualiza carrossel, "Últimas", editorias, contador `#bl-post-count` e o `ItemList`;
+   - regenera `/blog/todos/` e `/blog/temas/` e acrescenta o post ao `sitemap.xml`;
+   - gera miniaturas leves em `assets/img/blog/thumbs/`.
+4. Quer ajustar o card (rótulo, `data-search`, `data-cat`, imagem)? Edite o card
+   dentro de `blog/index.html` e rode o gerador de novo: os cards existentes são
+   preservados verbatim e servem de fonte da verdade, como o `audit/sync_blog.py` espera.
+
+### Curadoria em `tools/blog/home.json`
+
+- `mais_lidas`: lista manual da coluna "Mais lidas" (ordem = ranking).
+- `destaques`: slugs do carrossel. Vazio = os 5 posts mais recentes fora das mais lidas e com capa sem texto.
+- `capas_com_texto`: posts cuja capa tem texto escrito (não entram no carrossel). Post novo com capa assim deve entrar nessa lista.
+- `materiais_destaque`: PDFs de `assets/materiais/` mostrados na faixa de materiais grátis.
+- `temas`: rótulo, rótulo curto, descrição e cor de cada editoria.
+- `classificacao`: editoria de cada post.
 
 ### Anatomia da home
 
 ```
-<head>  → schema @graph com Blog + BreadcrumbList + ItemList (TODOS os posts)
-<nav>   → header canônico com badge Blog + aria-current
-<main>
-  <header class="bl-hero">      → título, tagline, busca, 3 feat-cards (Jogo/Sinais/Glossário)
-  <section class="bl-featured">
-    <div class="bl-sec-head">    → "Artigos publicados" + contador (#bl-post-count)
-    <div class="bl-theme-bar">   → pílulas de filtro por tema (marcação de conteúdo)
-    <div class="bl-featured__grid">
-      <article class="bl-card bl-card--lg"> → POST DESTAQUE (mais recente)
-      <div class="bl-featured__side">       → 2 cards médios
-      ... <article class="bl-card bl-card--sm"> → demais posts (grade)
-    <div id="bl-no-results">
-<footer id="foot">              → footer canônico
+<nav>  header canônico (tools/sinais/partials) com badge Blog e aria-current
+<main class="portal">
+  .mast        data, H1 e busca (#bl-search-input)
+  .edit-wrap   barra de editorias fixa no topo ao rolar
+  .top         carrossel de destaques (só capas sem texto) + miniaturas
+               + atalhos Aprenda/Sinais/Alfabeto/Jogos/Atividades/Cultura | "Mais lidas"
+  .learn       Aprenda Libras: busca de sinais, botão para /aprender-libras/,
+               sinal do dia em formato "que sinal é esse?" (a palavra só aparece
+               depois da resposta), seu nome em Libras e agenda da comunidade surda
+  .mats-sec    materiais grátis em PDF (home.json → materiais_destaque)
+  .ad          anúncio compacto do serviço (sem preços): Libras em até 1 hora,
+               prazos e pacotes
+  .eds-sec     6 blocos por editoria (manchete + 3 títulos)
+  .arq#posts   arquivo: filtros por editoria, ano e ordem, feed paginado com os
+               <article data-post> de todos os posts + barra lateral
 ```
 
-### Marcação de conteúdo (categorias + busca)
+Regras editoriais da home: **sem preços** (os valores ficam na home do site e no
+Huet) e **capas com texto escrito não entram no carrossel** (`capas_com_texto`
+no `home.json`), porque o título ficaria sobreposto ao texto da imagem.
 
-Cada card carrega os atributos que alimentam o filtro e a busca:
+Filtros podem ser linkados: `/blog/?tema=educacao`, `/blog/?ano=2022`, `/blog/?q=libras`.
 
-```html
-<article class="bl-card bl-card--sm rv"
-  data-post
-  data-search="palavras chave do título e tema para a busca textual"
-  data-cat="acessibilidade instrucional língua"
-  itemscope itemtype="https://schema.org/BlogPosting">
-  <a href="/blog/[slug]/" class="bl-card__link-cover" aria-label="Ler artigo: [Título]"></a>
-  <a href="/blog/[slug]/" class="bl-card__thumb" aria-label="[Título]">
-    <picture>
-      <source srcset="/assets/img/blog/[slug]/[slug].avif" type="image/avif">
-      <source srcset="/assets/img/blog/[slug]/[slug].webp" type="image/webp">
-      <img src="/assets/img/blog/[slug]/[slug].png" alt="[alt]" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-    </picture>
-    <span class="bl-card__badge">[Categoria visível]</span>
-  </a>
-  <div class="bl-card__body">
-    <div class="bl-card__meta"><time datetime="AAAA-MM-DD" itemprop="datePublished">DD mmm AAAA</time><span class="bl-card__dot"></span><span>N min de leitura</span></div>
-    <h3 class="bl-card__title" itemprop="headline"><a href="/blog/[slug]/">[Título]</a></h3>
-    <p class="bl-card__excerpt" itemprop="description">[Resumo]</p>
-    <a href="/blog/[slug]/" class="bl-card__read">Ler artigo →</a>
-  </div>
-</article>
-```
+### Contrato com o `audit/sync_blog.py`
 
-- **`data-cat`** recebe uma ou mais categorias-chave que batem com as pílulas de
-  filtro. Categorias usadas hoje: `língua` (Língua & Cultura), `acessibilidade`,
-  `instrucional`. Um post pode ter várias (`data-cat="acessibilidade instrucional língua"`).
-- **`data-search`** repete título + termos para tornar o post localizável na busca.
-- **`bl-card__badge`** é o rótulo visível (ex.: `Língua & Cultura`, `Direitos`,
-  `Educação`, `Acessibilidade audiovisual`).
-- O **post mais recente** ocupa o card grande (`bl-card--lg`) e os dois seguintes
-  os cards laterais (`bl-featured__side`).
-
-### Barra de filtros (pílulas)
-
-```html
-<div class="bl-theme-bar rv d1" role="group" aria-label="Filtrar por tema">
-  <button class="bl-theme-pill active" data-filter="todos" type="button">Todos</button>
-  <button class="bl-theme-pill" data-filter="língua" type="button">Língua &amp; Cultura</button>
-  <button class="bl-theme-pill" data-filter="acessibilidade" type="button">Acessibilidade</button>
-  <button class="bl-theme-pill" data-filter="instrucional" type="button">Instrucional</button>
-</div>
-```
-
-### JS de busca + filtro (já presente na home, manter)
-
-```javascript
-const searchInput = document.getElementById('bl-search-input');
-const allPosts    = document.querySelectorAll('[data-post]');
-const pills       = document.querySelectorAll('.bl-theme-pill');
-const noResults   = document.getElementById('bl-no-results');
-const countEl     = document.getElementById('bl-post-count');
-const sideEl      = document.getElementById('bl-featured-side');
-let activeFilter  = 'todos';
-let scrolled      = false;
-
-function filterPosts() {
-  const q = searchInput.value.toLowerCase().trim();
-  let visible = 0;
-  allPosts.forEach(post => {
-    const text = ((post.dataset.search || '') + ' ' + (post.querySelector('.bl-card__title')?.textContent || '')).toLowerCase();
-    const cat  = (post.dataset.cat || '').toLowerCase();
-    const show = (!q || text.includes(q)) && (activeFilter === 'todos' || cat.includes(activeFilter));
-    post.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-  if (sideEl) {
-    const sideVisible = [...sideEl.querySelectorAll('[data-post]')].some(p => p.style.display !== 'none');
-    sideEl.style.display = sideVisible ? '' : 'none';
-  }
-  noResults.classList.toggle('show', visible === 0);
-  countEl.textContent = visible + (visible === 1 ? ' publicação' : ' publicações');
-  if (q.length >= 1 && !scrolled) { scrolled = true; document.getElementById('posts').scrollIntoView({behavior:'smooth',block:'start'}); }
-  if (!q) scrolled = false;
-}
-searchInput.addEventListener('input', filterPosts);
-pills.forEach(pill => pill.addEventListener('click', () => {
-  pills.forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  activeFilter = pill.dataset.filter;
-  filterPosts();
-}));
-```
-
-### Ao publicar um post, atualizar na home:
-
-1. Adicionar o `<article class="bl-card ...">` na posição correta (o mais novo
-   assume o card grande; rebaixe os anteriores).
-2. Atualizar o contador estático `#bl-post-count` ("N publicações").
-3. Adicionar uma entrada no JSON-LD `ItemList` (campo `position`, `headline`,
-   `description`, `url`, `datePublished`).
+- Um `<article ... data-post>` por post publicado, só no feed (nenhuma outra
+  seção usa `data-post`).
+- `<time datetime>` no fuso de São Paulo, `#bl-post-count` e `ItemList` no formato do sync.
+- `sync_blog.py --check` não deve apontar `blog/index.html`, `blog/todos/` nem `blog/temas/`.
 
 ---
 
@@ -853,7 +799,7 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 - [ ] Imagens com `.avif` + `.webp` + fallback, `width`/`height` e `loading` corretos
 - [ ] **Fechamento "Com Barra" completo** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" + 3 ícones SVG (jogo/vocabulário/glossário) + 3 posts variados ("Leia mais") + botão "Ver todos os posts" lateral
 - [ ] Footer canônico do site (`#foot`) ao final
-- [ ] Post adicionado à **home do blog**: card com `data-cat`/`data-search`, contador e `ItemList` atualizados (§5)
+- [ ] Editoria do post em `tools/blog/home.json` e `python3 tools/blog/home.py` rodado (§5)
 - [ ] CTA aponta para páginas reais (huet/soluções/jogo/sinal/glossário)
 - [ ] WhatsApp flutuante e skip-link presentes
 - [ ] (Alta complexidade) progress bar, `.reveal` e IDs de `.stat-number` conferidos no JS

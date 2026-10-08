@@ -1,0 +1,53 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Blog",
+   "@id": "https://libras.se/blog/",
+   "url": "https://libras.se/blog/",
+   "name": "Blog LIBRAS.SE",
+   "description": "Artigos sobre Libras, acessibilidade audiovisual, interpretação e inclusão da comunidade surda.",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://libras.se/assets/img/favicon/FAVICONpng.png"
+    },
+    "telephone": "+55-48-99636-7511",
+    "email": "contato@libras.se",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Florianópolis",
+     "addressRegion": "SC",
+     "addressCountry": "BR"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://libras.se/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://libras.se/blog/"
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "name": "Artigos do Blog LIBRAS.SE",
+   "itemListElement": []
+  }
+ ]
+}

@@ -51,6 +51,28 @@ O que dá para fazer no app:
 As decisões ficam em `tools/sinais/aprovacoes.json`, junto com a **assinatura** do corte aprovado.
 Se o corte mudar depois, a aprovação perde a validade sozinha.
 
+## 2b. Aprovação online (aprovacao.libras.se)
+
+O mesmo app roda na VPS (Dokploy, imagem `tools/sinais/Dockerfile`), com login por pessoa: cada decisão registra
+quem aprovou. Lá a revisora aprova, escolhe tomada ou variante, refaz cortes (os brutos ficam no servidor) e
+pede ilustração nova com uma nota. O Codex não roda no servidor: o pedido fica na fila e é gerado no Mac.
+
+```bash
+python3 tools/sinais/sincronizar.py semear            # 1ª vez: decisões locais -> servidor
+python3 tools/sinais/sincronizar.py enviar --brutos   # 1ª vez: brutos, cortes, proxies e ilustrações
+# rotina antes de publicar:
+python3 tools/sinais/sincronizar.py baixar            # decisões + cortes refeitos online -> Mac
+uv run --python 3.12 --with numpy tools/sinais/ilustrar.py --pendentes   # gera as ilustrações pedidas
+python3 tools/sinais/sincronizar.py enviar            # sobe as ilustrações novas para aprovação
+```
+
+- **Decisões:** depois de semeado, o servidor é a fonte das decisões. O `baixar` sobrescreve o
+  `aprovacoes.json` local; não use mais o app local para decidir.
+- **Arquivos:** para os demais arquivos, vale o mais novo de cada lado. Uploads vão em partes de 16 MB e
+  retomam se a conexão cair.
+- **Credencial de admin:** fica em `~/.config/libras-sinais/admin` (fora do git).
+- **Usuários:** são definidos na variável `SINAIS_USUARIOS` do Dokploy.
+
 ## 3. Publicar
 
 ```bash

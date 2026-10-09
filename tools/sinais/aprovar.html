@@ -90,7 +90,7 @@ main{padding:18px}
 </head>
 <body>
 <header>
-  <h1><b>LIBRAS.SE</b> · Aprovação de sinais</h1>
+  <h1><b>LIBRAS.SE</b> · Aprovação de sinais <span id="quem" style="font-weight:600;opacity:.6;font-size:12px"></span></h1>
   <div class="prog" id="prog"></div>
   <div class="bar" id="bar" title="Progresso da aprovação"></div>
   <div class="filters">
@@ -140,6 +140,7 @@ async function api(path, body) {
 async function carregar() { S = await (await fetch('/api/estado')).json(); desenhar(); }
 
 function cabecalho() {
+  $('#quem').textContent = S.usuario && S.usuario !== 'local' ? `· ${S.usuario}` : '';
   const cont = {pendente:0, aprovado:0, ajustar:0, regravar:0, desatualizado:0};
   S.itens.forEach(it => cont[statusDe(it)]++);
   const tot = S.itens.length;
@@ -195,8 +196,9 @@ function iluHtml(it) {
       (I.gerando ? '' : '<p class="meta">Ainda sem ilustração para este sinal.</p>')}
     <div class="acts" style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
       ${v && !v.desatualizada ? '<button class="btn ok" id="iluOk">Aprovar ilustração <small>L</small></button>' : ''}
-      <button class="btn warn" id="iluGerar" ${I.gerando || !aprovadoVideo ? 'disabled' : ''}>${v ? 'Gerar de novo' : 'Gerar ilustração'} <small>G</small></button>
+      <button class="btn warn" id="iluGerar" ${I.gerando || !aprovadoVideo ? 'disabled' : ''}>${S.ilustracao_local ? (v ? 'Gerar de novo' : 'Gerar ilustração') : (v ? 'Pedir nova ilustração' : 'Pedir ilustração')} <small>G</small></button>
     </div>
+    ${!S.ilustracao_local && d.status === 'refazer' ? `<div class="dica">Nova ilustração pedida${d.pedido_por ? ' por ' + d.pedido_por : ''}. Ela é gerada no Mac do Luis e aparece aqui na próxima sincronização.</div>` : ''}
     <label class="meta" for="iluNota">Nota para o Codex ao gerar de novo (ex.: “a mão final tem o dedo médio dobrado”, “o movimento é para frente e para trás”)</label>
     <textarea id="iluNota">${d.nota || ''}</textarea></div>`;
 }
@@ -253,7 +255,7 @@ function foco(it, lista) {
     </div>
     <label class="meta" for="nota">Nota (o que ajustar, variante preferida…)</label>
     <textarea id="nota">${d.nota || ''}</textarea>
-    <p class="meta">${d.aprovado ? `Aprovado em ${d.aprovado.em.replace('T', ' ').slice(0, 16)} (tomada ${d.aprovado.tomada})` : ''}</p>
+    <p class="meta">${d.aprovado ? `Aprovado em ${d.aprovado.em.replace('T', ' ').slice(0, 16)}${d.aprovado.por ? ' por ' + d.aprovado.por : ''} (tomada ${d.aprovado.tomada})` : (d.por && d.status !== 'pendente' ? `Marcado por ${d.por}` : '')}</p>
     <div class="help">Confira: <b>1.</b> é o sinal certo? <b>2.</b> começa e termina em repouso, sem cortar o sinal? <b>3.</b> o recorte do chroma está limpo (use a lupa nas mãos e no cabelo)?<br><br>
       <kbd>A</kbd> aprovar e ir ao próximo pendente · <kbd>J</kbd> abrir ajuste · <kbd>R</kbd> regravar · <kbd>←</kbd><kbd>→</kbd> navegar · <kbd>1</kbd>–<kbd>9</kbd> tomada ·
       <kbd>espaço</kbd> pausar · <kbd>S</kbd> 0,5x · <kbd>,</kbd><kbd>.</kbd> quadro a quadro · <kbd>Z</kbd> lupa · <kbd>I</kbd>/<kbd>O</kbd> marcar início/fim no bruto</div>
@@ -320,7 +322,8 @@ function ligarFoco(it, lista, t) {
     const v = it.ilustracao.decisao.versao || it.ilustracao.versoes[it.ilustracao.versoes.length - 1].k;
     await api('/api/ilu/decidir', {slug: it.slug, versao: v, status: 'aprovado', nota: $('#iluNota').value}); toast('Ilustração aprovada'); await carregar(); };
   if ($('#iluGerar')) $('#iluGerar').onclick = async () => {
-    await api('/api/ilu/gerar', {slug: it.slug, nota: $('#iluNota').value.trim()}); toast('Gerando no Codex…'); await carregar(); };
+    const r = await api('/api/ilu/gerar', {slug: it.slug, nota: $('#iluNota').value.trim()});
+    toast(r && r.fila ? 'Pedido registrado. A ilustração nova chega na próxima sincronização.' : 'Gerando no Codex…'); await carregar(); };
   if ($('#bDesfazer')) $('#bDesfazer').onclick = async () => { busy(true);
     try { await api('/api/desfazer', {slug: it.slug, tomada: t.n}); await carregar(); toast('Ajuste desfeito'); } finally { busy(false); } };
 }

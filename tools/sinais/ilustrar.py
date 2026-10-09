@@ -1,7 +1,9 @@
 """Gera a ilustração de dicionário de cada sinal com o Codex (geração de imagem da conta ChatGPT).
 
-Uso: uv run --python 3.12 --with numpy tools/sinais/ilustrar.py [slug ...] [--aprovados] [--nota "texto"] [--jobs 3]
+Uso: uv run --python 3.12 --with numpy tools/sinais/ilustrar.py [slug ...] [--aprovados|--pendentes] [--nota "texto"] [--jobs 3]
      --aprovados  gera para todos os sinais com vídeo aprovado que ainda não têm ilustração
+     --pendentes  idem + as pedidas de novo no app ("refazer", com a nota da revisora) + as desatualizadas
+                  (o corte do vídeo mudou). Rode depois de `sincronizar.py baixar`.
 
 Para cada sinal, a partir da tomada aprovada (revisao/<slug>/t<n>.mp4):
 1. Acha o trecho ativo do sinal pela curva de movimento (motion/<arquivo>.npz) e extrai o quadro-chave (meio)
@@ -92,16 +94,34 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("slugs", nargs="*")
     p.add_argument("--aprovados", action="store_true")
+    p.add_argument("--pendentes", action="store_true")
     p.add_argument("--nota", default="")
     p.add_argument("--jobs", type=int, default=3)
     args = p.parse_args()
     slugs = list(args.slugs)
+    notas = {}
+    if args.pendentes:
+        ap = json.loads((HERE / "aprovacoes.json").read_text())
+        for s, d in ap["itens"].items():
+            if d.get("status") != "aprovado":
+                continue
+            il = d.get("ilustracao", {})
+            versoes = sorted((json.loads(f.read_text()) for f in (WORK / "ilustracoes" / s).glob("v*.json")
+                              if f.stem[1:].isdigit()), key=lambda m: m["versao"])
+            pedido = il.get("pedido_em")
+            novas = [m for m in versoes if not pedido or
+                     datetime.datetime.fromisoformat(m.get("gerado_em")) > datetime.datetime.fromisoformat(pedido)]
+            atual = [m for m in versoes if m["assinatura_video"] == d["aprovado"]["assinatura"]]
+            if not versoes or not atual or (il.get("status") == "refazer" and not novas):
+                slugs.append(s)
+                notas[s] = il.get("nota", "") if il.get("status") == "refazer" else ""
+        print("pendentes:", ", ".join(slugs) or "nenhuma", flush=True)
     if args.aprovados:
         ap = json.loads((HERE / "aprovacoes.json").read_text())
         slugs += [s for s, d in ap["itens"].items() if d.get("status") == "aprovado"
                   and not any((WORK / "ilustracoes" / s).glob("v[0-9]*.png"))]
     with ThreadPoolExecutor(args.jobs) as ex:
-        futs = [ex.submit(gerar, s, args.nota) for s in dict.fromkeys(slugs)]
+        futs = [ex.submit(gerar, s, notas.get(s) or args.nota) for s in dict.fromkeys(slugs)]
         for f in futs:
             try:
                 slug, k = f.result()

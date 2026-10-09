@@ -461,6 +461,9 @@ class H(BaseHTTPRequestHandler):
                                            "parte": parte.stat().st_size if parte.exists() else 0})
                 if path == "/admin/aprovacoes":
                     return self.send_json(load_ap())
+                if path == "/admin/espaco":  # espaço em disco do volume de dados (antes de subir os brutos)
+                    tot, usado, livre = shutil.disk_usage(WORK)
+                    return self.send_json({"ok": True, "total": tot, "usado": usado, "livre": livre})
             except (ValueError, KeyError) as e:
                 return self.send_json({"ok": False, "erro": str(e)}, 400)
         self.send_json({"ok": False, "erro": "não encontrado"}, 404)

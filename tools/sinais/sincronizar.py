@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -25,6 +26,10 @@ WORK = Path(os.environ.get("SINAIS_WORK", "/Volumes/Extreme Pro/LIBRAS.SE/TRABAL
 RAW = Path(os.environ.get("SINAIS_RAW", str(WORK.parent)))
 URL = os.environ.get("SINAIS_URL", "https://aprovacao.libras.se").rstrip("/")
 PARTE = 16 << 20
+if os.environ.get("SINAIS_IP"):  # DNS ainda propagando: conecta direto no IP, mantendo o nome (SNI/certificado)
+    import socket
+    _gai, _host, _ip = socket.getaddrinfo, urllib.parse.urlparse(URL).hostname, os.environ["SINAIS_IP"]
+    socket.getaddrinfo = lambda h, *a, **k: _gai(_ip if h == _host else h, *a, **k)
 ENVIAR = ["manifest.csv", "extent.json", "revisao", "proxy", "ilustracoes"]
 
 
@@ -36,13 +41,21 @@ def credencial():
 AUTH = None
 
 
-def req(metodo, caminho, dados=None, ok=(200, 206)):
-    r = urllib.request.Request(URL + caminho, data=dados, method=metodo, headers={"Authorization": AUTH})
-    try:
-        with urllib.request.urlopen(r, timeout=300) as resp:
-            return resp.status, resp.read()
-    except urllib.error.HTTPError as e:
-        return e.code, e.read()
+def req(metodo, caminho, dados=None, tentativas=6):
+    """Requisição com novas tentativas para quedas de rede (o upload em partes retoma sem duplicar)."""
+    for t in range(tentativas):
+        r = urllib.request.Request(URL + caminho, data=dados, method=metodo, headers={"Authorization": AUTH})
+        try:
+            with urllib.request.urlopen(r, timeout=180) as resp:
+                return resp.status, resp.read()
+        except urllib.error.HTTPError as e:
+            return e.code, e.read()
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            if t == tentativas - 1:
+                raise
+            espera = min(60, 5 * 2 ** t)
+            print(f"\n  rede instável ({e.__class__.__name__}), nova tentativa em {espera}s…", flush=True)
+            time.sleep(espera)
 
 
 def jget(caminho):

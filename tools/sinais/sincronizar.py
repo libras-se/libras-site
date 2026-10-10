@@ -126,7 +126,14 @@ def baixar_arquivo(rel, destino, mtime):
     os.utime(destino, (mtime, mtime))
 
 
+def exigir_pastas(*pastas):
+    for d in pastas:
+        if not d.is_dir():
+            sys.exit(f"pasta não encontrada: {d}\nO SSD está conectado e montado? (confira em /Volumes)")
+
+
 def cmd_enviar(args):
+    exigir_pastas(WORK, *([RAW] if args.brutos else []))
     alvos = [("processamento", WORK, ENVIAR)]
     if args.brutos:
         alvos.append(("brutos", RAW, [f.name for f in sorted(RAW.glob("[!.]*.MOV"))]))
@@ -143,6 +150,7 @@ def cmd_enviar(args):
 
 
 def cmd_baixar(args):
+    exigir_pastas(WORK)
     ap = jget("/admin/aprovacoes")
     (HERE / "aprovacoes.json").write_text(json.dumps(ap, ensure_ascii=False, indent=1, sort_keys=True))
     print(f"decisões baixadas: {sum(1 for d in ap['itens'].values() if d.get('status') == 'aprovado')} sinais aprovados")

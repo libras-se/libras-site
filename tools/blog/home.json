@@ -1,5 +1,5 @@
 {
- "_leia": "Configuração da home do blog (tools/blog/home.py). 'classificacao' define a editoria de cada post; post novo sem entrada cai em 'inclusao' e o gerador avisa. 'mais_lidas' é curadoria manual. 'destaques' vazio = os posts mais recentes fora de mais_lidas e de capas_com_texto. 'capas_com_texto': posts cuja imagem de capa tem texto escrito, que não entram no carrossel (o título ficaria sobreposto). 'materiais_destaque': PDFs de assets/materiais/ mostrados na faixa de materiais grátis.",
+ "_leia": "Configuração da home do blog (tools/blog/home.py). 'classificacao' define a editoria de cada post; post novo sem entrada cai em 'inclusao' e o gerador avisa. 'mais_lidas' é curadoria manual. 'destaques': curadoria do carrossel (vazio = os posts mais recentes fora de mais_lidas e de capas_com_texto). 'capas_destaque': foto sem texto escrito usada no carrossel no lugar da capa do post (img) e o ponto de foco (pos, como no object-position) usado no recorte 16:9 e no 4:5 do celular; permite destacar posts de capas_com_texto. 'capas_com_texto': posts cuja imagem de capa tem texto escrito, que não entram no carrossel (o título ficaria sobreposto). 'materiais_destaque': PDFs de assets/materiais/ mostrados na faixa de materiais grátis.",
  "temas": {
   "lingua": {
    "rotulo": "Língua & Cultura Surda",
@@ -47,7 +47,27 @@
   "libras-nao-e-segunda-lingua-oficial-do-brasil",
   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
  ],
- "destaques": [],
+ "destaques": [
+  "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
+  "o-que-e-libras",
+  "interpretes-de-libras-traduzem-partos-para-pais-surdos",
+  "manifesto-por-libras-em-videos",
+  "libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte"
+ ],
+ "capas_destaque": {
+  "oscar-coda-melhor-filme-do-mundo-sobre-surdez": {
+   "img": "/assets/img/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/oscar-coda-melhor-filme-do-mundo-sobre-surdez-3.jpg",
+   "pos": "40% 30%"
+  },
+  "interpretes-de-libras-traduzem-partos-para-pais-surdos": {
+   "img": "/assets/img/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/interpretes-de-libras-traduzem-partos-para-pais-surdos-2.jpg",
+   "pos": "55% 30%"
+  },
+  "manifesto-por-libras-em-videos": {
+   "img": "/assets/img/banco-editorial/LIBRAS.SE_9.webp",
+   "pos": "20% 10%"
+  }
+ },
  "classificacao": {
   "20-anos-da-lei-de-libras-avancos-e-desafios": "direitos",
   "4-dicas-para-ser-mais-inclusivo-na-internet": "inclusao",

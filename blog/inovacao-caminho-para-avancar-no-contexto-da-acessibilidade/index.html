@@ -269,10 +269,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 @font-face{font-family:'LseDat';src:url('/assets/fonts/Libras2020-Regular.woff2') format('woff2');font-display:block}
 .lse-ad,.lse-mais{font-family:'LseM',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .lse-ad{position:relative;display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:18px;align-items:center;margin:34px 0;padding:16px 20px 16px 16px;border-radius:20px;background:#e8f6f5;border:1px solid rgba(46,184,192,.25);color:#0e3538;text-align:left}
-.lse-ad--escuro{background:linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff}
-.lse-ad-l{position:absolute;top:7px;right:14px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.5}
+.lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
+.lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
+.lse-ad--escuro .lse-ad-l{color:#4fd1c5}
 .lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.lse-ad-v video{object-position:20% 50%}
+.lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
 .lse-ad-v img.lse-capa{object-fit:contain;padding:6px;background:#f0fafa}
 .lse-ad-v .lse-dat{font-family:'LseDat',monospace;font-size:30px;line-height:1;color:#0e3538;letter-spacing:1px}
 .lse-ad-t b{display:block;font-size:19px;font-weight:900;letter-spacing:-.02em;line-height:1.15}
@@ -321,10 +324,10 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 @media(max-width:960px){.lse-rel{grid-template-columns:repeat(2,1fr)}.lse-ic{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){
   .lse-w{padding:0 18px}
-  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:26px 14px 14px}
+  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
+  .lse-ad-v .lse-dat{font-size:21px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
-  .lse-ad-l{left:14px;right:auto}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}
   .lse-ci{grid-column:2;grid-row:1/3;aspect-ratio:1}
@@ -390,7 +393,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 
 <p>Segundo a Organização Mundial da Saúde (OMS), cerca de 15% da população mundial tem alguma deficiência, proporção que vem subindo com o envelhecimento e o aumento das condições crônicas de saúde. Só no Brasil, 8,4% da população tem algum tipo de deficiência, o equivalente a 17,3 milhões de pessoas; quase metade (49,4%) é de idosos.</p>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->
-<aside class="lse-ad lse-ad--escuro" aria-label="Publicidade · LIBRAS.SE"><span class="lse-ad-l">Publicidade · LIBRAS.SE</span><a class="lse-ad-v" href="https://huet.libras.se/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/obrigado.webp" data-src="/assets/videos/sinais/obrigado.mp4"></video></a><div class="lse-ad-t"><b>Seu vídeo em Libras em até 1 hora</b><p>Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.</p></div><div class="lse-ad-b"><a class="lse-btn" href="https://huet.libras.se/">Enviar meu vídeo</a><a class="lse-btn2" href="/solucoes/">Conhecer as soluções</a></div></aside>
+<aside class="lse-ad lse-ad--escuro" aria-label="Publicidade · LIBRAS.SE"><a class="lse-ad-v" href="https://huet.libras.se/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/obrigado.webp" data-src="/assets/videos/sinais/obrigado.mp4"></video></a><div class="lse-ad-t"><span class="lse-ad-l">Publicidade · LIBRAS.SE</span><b>Seu vídeo em Libras em até 1 hora</b><p>Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.</p></div><div class="lse-ad-b"><a class="lse-btn" href="https://huet.libras.se/">Enviar meu vídeo</a><a class="lse-btn2" href="/solucoes/">Conhecer as soluções</a></div></aside>
 <!-- /LSE:BANNER -->
 
 

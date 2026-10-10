@@ -279,10 +279,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 @font-face{font-family:'LseDat';src:url('/assets/fonts/Libras2020-Regular.woff2') format('woff2');font-display:block}
 .lse-ad,.lse-mais{font-family:'LseM',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .lse-ad{position:relative;display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:18px;align-items:center;margin:34px 0;padding:16px 20px 16px 16px;border-radius:20px;background:#e8f6f5;border:1px solid rgba(46,184,192,.25);color:#0e3538;text-align:left}
-.lse-ad--escuro{background:linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff}
-.lse-ad-l{position:absolute;top:7px;right:14px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.5}
+.lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
+.lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
+.lse-ad--escuro .lse-ad-l{color:#4fd1c5}
 .lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.lse-ad-v video{object-position:20% 50%}
+.lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
 .lse-ad-v img.lse-capa{object-fit:contain;padding:6px;background:#f0fafa}
 .lse-ad-v .lse-dat{font-family:'LseDat',monospace;font-size:30px;line-height:1;color:#0e3538;letter-spacing:1px}
 .lse-ad-t b{display:block;font-size:19px;font-weight:900;letter-spacing:-.02em;line-height:1.15}
@@ -331,10 +334,10 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 @media(max-width:960px){.lse-rel{grid-template-columns:repeat(2,1fr)}.lse-ic{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){
   .lse-w{padding:0 18px}
-  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:26px 14px 14px}
+  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
+  .lse-ad-v .lse-dat{font-size:21px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
-  .lse-ad-l{left:14px;right:auto}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}
   .lse-ci{grid-column:2;grid-row:1/3;aspect-ratio:1}
@@ -412,7 +415,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 <h2 id="origem">A origem da data</h2>
 <p class="body-text">A data foi oficializada em 2008 e é uma homenagem à fundação da primeira escola para surdos no país, em 1857. Essa escola ainda existe e hoje é o <a href="/glossario/ines/">Instituto Nacional de Educação de Surdos (INES)</a>, fundamental na formação de crianças, jovens e adultos surdos.</p>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->
-<aside class="lse-ad" aria-label="Guia LIBRAS.SE"><span class="lse-ad-l">Guia LIBRAS.SE</span><a class="lse-ad-v" href="/cultura-surda/" tabindex="-1" aria-hidden="true"><span class="lse-dat" aria-hidden="true">SURDO</span></a><div class="lse-ad-t"><b>Cultura surda: história, datas e pessoas</b><p>Artefatos culturais, identidade surda, a linha do tempo da Libras e o calendário da comunidade.</p></div><div class="lse-ad-b"><a class="lse-btn" href="/cultura-surda/">Ler o guia</a></div></aside>
+<aside class="lse-ad" aria-label="Guia LIBRAS.SE"><a class="lse-ad-v" href="/cultura-surda/" tabindex="-1" aria-hidden="true"><span class="lse-dat" aria-hidden="true">SURDO</span></a><div class="lse-ad-t"><span class="lse-ad-l">Guia LIBRAS.SE</span><b>Cultura surda: história, datas e pessoas</b><p>Artefatos culturais, identidade surda, a linha do tempo da Libras e o calendário da comunidade.</p></div><div class="lse-ad-b"><a class="lse-btn" href="/cultura-surda/">Ler o guia</a></div></aside>
 <!-- /LSE:BANNER -->
 
 

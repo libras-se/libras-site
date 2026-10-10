@@ -151,10 +151,11 @@ def dados(slug, card, art, tema):
 
 
 def miniatura(p, largura):
-    """assets/img/blog/thumbs/<slug>-<largura>.webp, gerada uma vez a partir da imagem do cartão."""
+    """assets/img/blog/thumbs/<slug>-<largura>.webp, gerada uma vez a partir da imagem do cartão.
+    Capas próprias do carrossel (capas_destaque) usam o nome do arquivo de origem no lugar do slug."""
     from PIL import Image
     THUMBS.mkdir(parents=True, exist_ok=True)
-    dest = THUMBS / f"{p['slug']}-{largura}.webp"
+    dest = THUMBS / f"{p.get('thumb', p['slug'])}-{largura}.webp"
     if not dest.exists():
         src = ROOT / p["img"].lstrip("/")
         if not src.exists():
@@ -170,16 +171,34 @@ def miniatura(p, largura):
         alvo = (largura, round(largura * 9 / 16))
         r = max(alvo[0] / im.width, alvo[1] / im.height)
         im = im.resize((max(alvo[0], round(im.width * r)), max(alvo[1], round(im.height * r))), Image.LANCZOS)
-        x, y = (im.width - alvo[0]) // 2, (im.height - alvo[1]) // 2
+        fx, fy = p.get("foco", (.5, .5))
+        x, y = round((im.width - alvo[0]) * fx), round((im.height - alvo[1]) * fy)
         im.crop((x, y, x + alvo[0], y + alvo[1])).save(dest, "WEBP", quality=78, method=6)
     return f"/assets/img/blog/thumbs/{dest.name}"
 
 
-def img(p, larguras=(480, 960), sizes="(max-width:700px) 100vw, 600px", eager=False, alt=None):
+def img(p, larguras=(480, 960), sizes="(max-width:700px) 100vw, 600px", eager=False, alt=None, pos=None):
     srcset = ", ".join(f"{miniatura(p, w)} {w}w" for w in larguras)
     return (f'<img src="{miniatura(p, larguras[0])}" srcset="{srcset}" sizes="{sizes}" alt="{esc(alt if alt is not None else p["titulo"])}" '
             f'width="{larguras[0]}" height="{round(larguras[0] * 9 / 16)}" decoding="async"'
+            + (f' style="object-position:{pos}"' if pos else "")
             + (' fetchpriority="high"' if eager else ' loading="lazy"') + ">")
+
+
+def capa_destaque(p):
+    """Post do carrossel com a capa própria de capas_destaque (foto sem texto escrito), se houver.
+    O ponto de foco (pos) vale para o recorte 16:9 da miniatura e para o object-position do 4:5
+    do celular. Larguras limitadas à da imagem de origem, para não ampliar."""
+    c = CFG.get("capas_destaque", {}).get(p["slug"])
+    if not c:
+        return p, (960, 1600), None
+    from PIL import Image
+    with Image.open(ROOT / c["img"].lstrip("/")) as im:
+        w = im.width
+    pos = c.get("pos", "50% 50%")
+    foco = tuple(float(v.rstrip("%")) / 100 for v in pos.split())
+    capa = {**p, "img": c["img"], "thumb": Path(c["img"]).stem, "foco": foco}
+    return capa, tuple(sorted({min(960, w), min(1600, w)})), pos
 
 
 def tema_tag(t, curto=True):
@@ -225,9 +244,10 @@ def render(posts, cards_feed, total, jsonld):
     # Carrossel
     slides, thumbs = [], []
     for i, p in enumerate(destaques):
+        capa, larguras, pos = capa_destaque(p)
         slides.append(f'''<article class="slide{' on' if i == 0 else ''}" data-i="{i}" aria-roledescription="slide" aria-label="{i + 1} de {len(destaques)}"{'' if i == 0 else ' aria-hidden="true"'}>
           <a href="/blog/{p['slug']}/" class="slide-a" tabindex="{0 if i == 0 else -1}">
-            <span class="slide-img">{img(p, (960, 1600), "(max-width:1100px) 100vw, 860px", eager=i == 0, alt="")}</span>
+            <span class="slide-img">{img(capa, larguras, "(max-width:1100px) 100vw, 860px", eager=i == 0, alt="", pos=pos)}</span>
             <span class="slide-txt">
               {tema_tag(p['tema'])}
               <span class="slide-t">{esc(p['titulo'])}</span>

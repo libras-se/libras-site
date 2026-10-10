@@ -219,7 +219,13 @@ A home é um **portal de notícias e de Libras** gerado por `tools/blog/home.py`
 ### Curadoria em `tools/blog/home.json`
 
 - `mais_lidas`: lista manual da coluna "Mais lidas" (ordem = ranking).
-- `destaques`: slugs do carrossel. Vazio = os 5 posts mais recentes fora das mais lidas e com capa sem texto.
+- `destaques`: slugs do carrossel, na ordem. Vazio = os 5 posts mais recentes fora das mais lidas e com capa sem texto.
+  Critério da curadoria: assunto forte e foto bonita, editorias variadas e nada repetido das mais lidas.
+- `capas_destaque`: foto sem texto escrito que o carrossel usa no lugar da capa do post
+  (`"<slug>": {"img": "/assets/...", "pos": "40% 30%"}`). Serve para destacar um post de
+  `capas_com_texto` usando uma foto do corpo do post ou do banco editorial. `pos` é o ponto de foco
+  (como no `object-position`): vale para o recorte 16:9 e para o 4:5 do celular, que mostra só o miolo da foto.
+  Ao trocar a foto de um post já configurado, apague as miniaturas antigas em `assets/img/blog/thumbs/`.
 - `capas_com_texto`: posts cuja capa tem texto escrito (não entram no carrossel). Post novo com capa assim deve entrar nessa lista.
 - `materiais_destaque`: PDFs de `assets/materiais/` mostrados na faixa de materiais grátis.
 - `temas`: rótulo, rótulo curto, descrição e cor de cada editoria.
@@ -232,7 +238,7 @@ A home é um **portal de notícias e de Libras** gerado por `tools/blog/home.py`
 <main class="portal">
   .mast        data, H1 e busca (#bl-search-input)
   .edit-wrap   barra de editorias fixa no topo ao rolar
-  .top         carrossel de destaques (só capas sem texto) + miniaturas
+  .top         carrossel de destaques (capas sem texto ou capas_destaque) + miniaturas
                + atalhos Aprenda/Sinais/Alfabeto/Jogos/Atividades/Cultura | "Mais lidas"
   .learn       Aprenda Libras: busca de sinais, botão para /aprender-libras/,
                sinal do dia em formato "que sinal é esse?" (a palavra só aparece
@@ -247,7 +253,8 @@ A home é um **portal de notícias e de Libras** gerado por `tools/blog/home.py`
 
 Regras editoriais da home: **sem preços** (os valores ficam na home do site e no
 Huet) e **capas com texto escrito não entram no carrossel** (`capas_com_texto`
-no `home.json`), porque o título ficaria sobreposto ao texto da imagem.
+no `home.json`), porque o título ficaria sobreposto ao texto da imagem. Para destacar
+um post assim, dê a ele uma foto limpa em `capas_destaque`.
 
 Filtros podem ser linkados: `/blog/?tema=educacao`, `/blog/?ano=2022`, `/blog/?q=libras`.
 

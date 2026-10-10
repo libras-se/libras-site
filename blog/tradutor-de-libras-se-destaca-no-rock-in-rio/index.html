@@ -256,10 +256,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 @font-face{font-family:'LseDat';src:url('/assets/fonts/Libras2020-Regular.woff2') format('woff2');font-display:block}
 .lse-ad,.lse-mais{font-family:'LseM',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .lse-ad{position:relative;display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:18px;align-items:center;margin:34px 0;padding:16px 20px 16px 16px;border-radius:20px;background:#e8f6f5;border:1px solid rgba(46,184,192,.25);color:#0e3538;text-align:left}
-.lse-ad--escuro{background:linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff}
-.lse-ad-l{position:absolute;top:7px;right:14px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.5}
+.lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
+.lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
+.lse-ad--escuro .lse-ad-l{color:#4fd1c5}
 .lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.lse-ad-v video{object-position:20% 50%}
+.lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
 .lse-ad-v img.lse-capa{object-fit:contain;padding:6px;background:#f0fafa}
 .lse-ad-v .lse-dat{font-family:'LseDat',monospace;font-size:30px;line-height:1;color:#0e3538;letter-spacing:1px}
 .lse-ad-t b{display:block;font-size:19px;font-weight:900;letter-spacing:-.02em;line-height:1.15}
@@ -308,10 +311,10 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 @media(max-width:960px){.lse-rel{grid-template-columns:repeat(2,1fr)}.lse-ic{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){
   .lse-w{padding:0 18px}
-  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:26px 14px 14px}
+  .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
+  .lse-ad-v .lse-dat{font-size:21px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
-  .lse-ad-l{left:14px;right:auto}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}
   .lse-ci{grid-column:2;grid-row:1/3;aspect-ratio:1}
@@ -375,7 +378,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>O Palco Sunset do Rock in Rio recebeu vários rappers. Mas quem conseguia despregar o olho do centro do palco durante as apresentações pode ter reparado em uma figura à esquerda, perto das caixas de som, que ajudava a transmitir o show a quem não podia ouvir as músicas. O intérprete Leo Castilho, de 34 anos, traduzia as canções para a <a href="/glossario/libras/">Língua Brasileira de Sinais</a> (Libras). Com isso, pôde levar á população surda a profundidade as apresentações musicais ao vivo.</p>
 <p>&quot;Pra trabalhar com essa pegada artística e visual, a gente precisa pensar muito a questão do corpo, porque é uma comunicação visual, também. Então a gente precisa entender o ritmo, a variação de notas musicais, e tentar fazer uma espécie de brincadeira. Não dá pra acompanhar sinal por sinal, porque fica até feio, né? É essa mistura de poesia e arte que a gente tenta fazer&quot;, disse o intérprete após o show de Criolo.</p>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->
-<aside class="lse-ad lse-ad--escuro" aria-label="Trabalhe com a LIBRAS.SE"><span class="lse-ad-l">Trabalhe com a LIBRAS.SE</span><a class="lse-ad-v" href="/sejatils/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/trabalho.webp" data-src="/assets/videos/sinais/trabalho.mp4"></video></a><div class="lse-ad-t"><b>É intérprete de Libras?</b><p>Grave traduções de onde estiver, com horário flexível, software próprio e pagamento semanal.</p></div><div class="lse-ad-b"><a class="lse-btn" href="/sejatils/">Seja TILS na LIBRAS.SE</a></div></aside>
+<aside class="lse-ad lse-ad--escuro" aria-label="Trabalhe com a LIBRAS.SE"><a class="lse-ad-v" href="/sejatils/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/trabalho.webp" data-src="/assets/videos/sinais/trabalho.mp4"></video></a><div class="lse-ad-t"><span class="lse-ad-l">Trabalhe com a LIBRAS.SE</span><b>É intérprete de Libras?</b><p>Grave traduções de onde estiver, com horário flexível, software próprio e pagamento semanal.</p></div><div class="lse-ad-b"><a class="lse-btn" href="/sejatils/">Seja TILS na LIBRAS.SE</a></div></aside>
 <!-- /LSE:BANNER -->
 
 <p>Leo, que é surdo, conversou com a equipe do GLOBO por meio de seu parceiro de trabalho, Rafael da Mata. Segundo o intérprete, a colaboração com dos dois é vital. &quot;Ele ouve, passa os sinais, e eu não copio tudo que ele está dizendo, mas eu coloco ali uma questão cultural, da maneira como eu sinto já que ser surdo está na minha veia. É uma perspectiva minha que eu coloco na minha interpretação.&quot;</p>

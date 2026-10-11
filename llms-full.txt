@@ -105,7 +105,7 @@ URLs de navegacao editorial:
 - https://libras.se/blog/todos/ - acervo navegavel de posts.
 - https://libras.se/blog/temas/ - posts agrupados por tema.
 
-Artigos publicados (74 paginas indexaveis; os pilares de cada tema vem primeiro):
+Artigos publicados (91 paginas indexaveis; os pilares de cada tema vem primeiro):
 
 - https://libras.se/blog/o-que-e-libras/ - Libras e a Lingua Brasileira de Sinais: uma lingua visual, completa e com gramatica propria. Entenda o que e, sua historia, reconhecimento legal e importancia para a comunidade surda.
 - https://libras.se/blog/voce-sabe-o-que-e-datilologia/ - Do abecedario da Xuxa as palavras que nascem dos sinais soletrados, entenda o que e datilologia e seu papel na Lingua Brasileira de Sinais.
@@ -120,6 +120,23 @@ Artigos publicados (74 paginas indexaveis; os pilares de cada tema vem primeiro)
 - https://libras.se/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/ - CODA, No Ritmo do Coracao levou tres Oscars em 2022, incluindo Melhor Filme. Entenda por que o filme sobre uma familia surda e um marco de representatividade.
 - https://libras.se/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/ - "O Som do Silencio" (Sound of Metal) ganhou o Oscar e ensina muito sobre Libras e identidade surda. Entenda como o filme retrata a comunidade surda e a lingua de sinais.
 - https://libras.se/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/ - As Surdolimpiadas sao os jogos mundiais exclusivos para surdoatletas. Conheca a competicao que o Brasil sediou, suas regras, adaptacoes e o papel dos interpretes.
+- https://libras.se/blog/bastidores-da-libras-no-rock-in-rio-2026/ - Libras no Rock in Rio 2026: interpretes num conteiner com chroma key, troca a cada 10 minutos e traducao do ingles em tempo real. Veja os bastidores.
+- https://libras.se/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/ - Benedita Case Zerbini, surda desde a infancia, protagoniza "90 Decibeis", drama dos Estudios Globo sobre perda auditiva progressiva levado a Tela Quente.
+- https://libras.se/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/ - Casal surdo se casa em cerimonia toda em Libras em Pitanga (PR). Desta vez, o portugues virou a traducao, com interpretes para os convidados ouvintes.
+- https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/ - Chatbots nao entendem bem a escrita de pessoas surdas, mostra estudo da UFLA. Entenda a Glosa, o portugues como segunda lingua e o que muda para empresas.
+- https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/ - Eleitor surdo nas Eleicoes 2026: veja como a janela de Libras da urna explica branco, nulo e legenda e como usar as centrais de Libras por videochamada.
+- https://libras.se/blog/enem-2026-em-libras-videoprovas-para-treinar/ - Enem 2026 em Libras: a plataforma do Inep reune as videoprovas de 2017 a 2025, cadernos, gabaritos e a cartilha de redacao. Veja como funciona e treine.
+- https://libras.se/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/ - Filme com protagonista surda, "Nem Toda Historia de Amor Acaba em Morte" estreou com Libras e legendas dentro da imagem. Veja a diferenca para a janela.
+- https://libras.se/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/ - Grupo de K-pop surdo, o Big Ocean lancou "Love Sign", com refrao em varias linguas de sinais. Entenda por que a lingua de sinais nao e universal.
+- https://libras.se/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/ - Interprete de Libras pode ter prova pratica para ser contratado: o PL 3.878/2024 passou no Senado em agosto e agora tramita na Camara. Entenda o que muda.
+- https://libras.se/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/ - Demissao de surdo sem interprete de Libras e anulada pelo TRT-MG, que fixou R$ 30 mil por danos morais. Entenda o caso e o recado para o RH das empresas.
+- https://libras.se/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/ - Lucinda Ferreira, pioneira dos estudos sobre Libras, ganhou homenagem da Abralin. Veja a trajetoria dela, o livro de 1995 e os surdos que pesquisaram junto.
+- https://libras.se/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/ - Namorada sinaliza show inteiro para o namorado surdo na Australia, num evento sem interprete. O video feito por uma fa passou de 29 milhoes de visualizacoes.
+- https://libras.se/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/ - Linguas indigenas de sinais: conheca as LIS de povos como Terena, Pataxo e Ka'apor, por que nao sao dialetos da Libras e a especializacao gratis do IFBA.
+- https://libras.se/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/ - Oculos inteligentes com legenda ao vivo e interprete de lingua de sinais estao em teste nos EUA, em teatros e museus. Veja como funcionam e o que muda.
+- https://libras.se/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/ - Oktoberfest de Blumenau 2026 tem app gratuito e totens com mapa 3D, traducao em Libras e audiodescricao. Veja como funciona o Oktober Mais Perto.
+- https://libras.se/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/ - Tecnicos de futebol americano de uma escola do Tennessee aprendem lingua de sinais para falar direto com o quarterback surdo Tanner Collins, sem intermediarios.
+- https://libras.se/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/ - Libras nas audiencias do Papa: o Vatican News publica a Audiencia Geral e o Angelus com interprete numa playlist no YouTube, com o Orionita Sinalizando.
 - https://libras.se/blog/margem-da-janela-de-libras-no-video/ - A medida da ABNT de 2005 caiu em desuso. Veja o que campanhas, Senado e publicidade usam hoje e baixe gratis os PNGs de margem para a sua edicao.
 - https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/ - Belo Horizonte reconheceu oficialmente a Libras como lingua de instrucao e meio de comunicacao da comunidade surda por meio da Lei no 11.463/2023.
 - https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/ - Conheca 4 erros comuns ao inserir Libras em videos, profissional, tamanho da janela, ambiente e contexto, e aprenda como evita-los para um conteudo acessivel.

@@ -52,7 +52,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Conteudo editorial e educativo
 
-- [Blog](https://libras.se/blog/): 74 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
+- [Blog](https://libras.se/blog/): 91 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
 - [Glossario](https://libras.se/glossario/): definicoes de termos de Libras e acessibilidade com exemplos praticos e fontes verificadas.
 - [Sinais em Libras](https://libras.se/sinal/): mais de 70 sinais em video gravados por interpretes da LIBRAS.SE, com ilustracao, definicao e exemplos de uso; consulta por palavra ou categoria.
 - [Desculpa em Libras](https://libras.se/sinal/desculpa/): pagina individual com video de referencia, definicao e exemplos.
@@ -69,7 +69,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Artigos do blog
 
-O blog tem 74 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
+O blog tem 91 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
 
 - [O que e Libras? Entenda a Lingua Brasileira de Sinais](https://libras.se/blog/o-que-e-libras/)
 - [Libras e reconhecida como lingua de instrucao em Belo Horizonte](https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/)

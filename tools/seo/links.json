@@ -1,5 +1,5 @@
 {
- "_leia": "Estrutura de links internos e banners da LIBRAS.SE (tools/seo/links.py). 'banners': anúncios internos que vão no meio dos posts. 'banner_por_editoria': lista de banners de cada editoria (o post usa um deles, escolhido pelo slug). 'banner_por_post': exceções. 'solucoes': páginas comerciais ligadas a posts (aparecem no fim do post). 'do_blog': posts mostrados nas páginas comerciais e institucionais. 'pilares': posts que recebem prioridade como leitura relacionada dentro da editoria. 'so_icones': páginas que recebem só o bloco 'Aprenda e jogue'.",
+ "_leia": "Estrutura de links internos e banners da LIBRAS.SE (tools/seo/links.py). 'banners': anúncios internos dos posts. 'banner_fixo': banner que vai no meio de todos os posts (o anúncio do serviço, com a Bruna sinalizando OBRIGADO). 'banner_por_editoria' e 'banner_por_post': o segundo banner, mais abaixo, só em posts com pelo menos 'distancia_minima' blocos depois do primeiro; nunca repete o banner fixo nem o vídeo dele. 'solucoes': páginas comerciais ligadas a posts (aparecem no fim do post). 'do_blog': posts mostrados nas páginas comerciais e institucionais. 'pilares': posts que recebem prioridade como leitura relacionada dentro da editoria. 'so_icones': páginas que recebem só o bloco 'Aprenda e jogue'.",
  "banners": {
   "aprender": {
    "rotulo": "LIBRAS.SE · grátis",
@@ -78,6 +78,8 @@
    "escuro": true
   }
  },
+ "banner_fixo": "servico",
+ "distancia_minima": 4,
  "banner_por_editoria": {
   "lingua": [
    "alfabeto",

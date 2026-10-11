@@ -41,7 +41,7 @@ published_at: 2026-10-10
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada", "description": "Eleitor surdo nas Eleições 2026: veja como a janela de Libras da urna explica branco, nulo e legenda e como usar as centrais de Libras por videochamada.", "image": {"@type": "ImageObject", "url": "https://libras.se/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.webp", "width": 1200, "height": 675}, "author": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se"}, "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se", "logo": {"@type": "ImageObject", "url": "https://libras.se/assets/img/blog/logo/blog.png", "width": 600, "height": 60}}, "datePublished": "2026-10-10T12:00:00.000Z", "dateModified": "2026-10-10T12:00:00.000Z", "inLanguage": "pt-BR", "keywords": "eleições 2026, eleitor surdo, janela de Libras, urna eletrônica, central de Libras, voto em branco, voto nulo, voto de legenda", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/"}}
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada", "description": "Eleitor surdo nas Eleições 2026: veja como a janela de Libras da urna explica branco, nulo e legenda e como usar as centrais de Libras por videochamada.", "image": {"@type": "ImageObject", "url": "https://libras.se/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.webp", "width": 1200, "height": 675}, "author": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se"}, "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se", "logo": {"@type": "ImageObject", "url": "https://libras.se/assets/img/blog/logo/blog.png", "width": 600, "height": 60}}, "datePublished": "2026-10-10T12:00:00.000Z", "dateModified": "2026-10-11T12:00:00.000Z", "inLanguage": "pt-BR", "keywords": "eleições 2026, eleitor surdo, janela de Libras, urna eletrônica, central de Libras, voto em branco, voto nulo, voto de legenda", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/"}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libras.se/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://libras.se/blog/"}, {"@type": "ListItem", "position": 3, "name": "Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada", "item": "https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/"}]}
@@ -397,7 +397,9 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
 .lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
 .lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
 .lse-ad--escuro .lse-ad-l{color:#4fd1c5}
-.lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-v{position:relative;display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-w{position:absolute;left:50%;bottom:5px;transform:translateX(-50%);background:#0e3538;color:#fff;border-radius:5px;padding:2px 7px;font-size:9.5px;font-weight:900;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+.lse-ad--escuro .lse-ad-w{background:#2eb8c0}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .lse-ad-v video{object-position:20% 50%}
 .lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
@@ -452,6 +454,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
   .lse-ad-v .lse-dat{font-size:21px}
+  .lse-ad-w{font-size:8.5px;padding:2px 6px;bottom:4px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}
@@ -522,7 +525,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
       <span class="meta-badge">10 de outubro de 2026</span>
       <span class="meta-badge">8 min de leitura</span>
     </div>
-    <p class="hero-credit">Ilustração de capa criada com IA</p>
+    <p class="hero-credit">Imagem de capa: reprodução de vídeo da Justiça Eleitoral (TSE)</p>
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
@@ -571,7 +574,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   <figcaption class="video-caption">Reportagem da Justiça Eleitoral sobre a nova urna: a fonte, a barra de progresso e a área maior para a interpretação em Libras. Vídeo: canal <a href="https://www.youtube.com/@justicaeleitoral" target="_blank" rel="noopener noreferrer">Justiça Eleitoral</a> (TSE), agosto de 2026.</figcaption>
 </figure>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->
-<aside class="lse-ad lse-ad--escuro" aria-label="Publicidade · LIBRAS.SE"><a class="lse-ad-v" href="https://huet.libras.se/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/obrigado.webp" data-src="/assets/videos/sinais/obrigado.mp4"></video></a><div class="lse-ad-t"><span class="lse-ad-l">Publicidade · LIBRAS.SE</span><b>Seu vídeo em Libras em até 1 hora</b><p>Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.</p></div><div class="lse-ad-b"><a class="lse-btn" href="https://huet.libras.se/">Enviar meu vídeo</a><a class="lse-btn2" href="/solucoes/">Conhecer as soluções</a></div></aside>
+<aside class="lse-ad lse-ad--escuro" aria-label="Publicidade · LIBRAS.SE"><a class="lse-ad-v" href="https://huet.libras.se/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/obrigado.webp" data-src="/assets/videos/sinais/obrigado.mp4"></video><span class="lse-ad-w">Obrigado</span></a><div class="lse-ad-t"><span class="lse-ad-l">Publicidade · LIBRAS.SE</span><b>Seu vídeo em Libras em até 1 hora</b><p>Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.</p></div><div class="lse-ad-b"><a class="lse-btn" href="https://huet.libras.se/">Enviar meu vídeo</a><a class="lse-btn2" href="/solucoes/">Conhecer as soluções</a></div></aside>
 <!-- /LSE:BANNER -->
 
 
@@ -603,6 +606,8 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   </ol>
   <a class="tse-cta-btn" href="https://www.tse.jus.br/eleicoes/simulador-de-votacao/" target="_blank" rel="noopener noreferrer">Abrir o simulador do TSE <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
 </div>
+
+<figure class="fig reveal"><picture><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.avif" type="image/avif"><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.webp" type="image/webp"><img src="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.jpg" alt="Ilustração de uma eleitora com o celular em videochamada com um intérprete de Libras, ao lado da cabine de votação" width="1200" height="675" loading="lazy" decoding="async"></picture><figcaption>Antes da cabine, a eleitora tira dúvidas com um intérprete por videochamada. | Ilustração criada com IA</figcaption></figure>
 
 <h2 id="tipos">Branco, nulo e legenda, segundo o TSE</h2>
 
@@ -679,6 +684,10 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   <iframe src="https://www.youtube.com/embed/1KcuSmuRH5E" title="TRE-PE fará atendimento em Libras por videochamada nas Eleições 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <figcaption class="video-caption">O TRE-PE apresenta a Central de Libras por videochamada. Vídeo: canal <a href="https://www.youtube.com/@tre_pernambuco" target="_blank" rel="noopener noreferrer">Tribunal Regional Eleitoral de Pernambuco</a>, setembro de 2026.</figcaption>
 </figure>
+<!-- LSE:BANNER (gerado por tools/seo/links.py) -->
+<aside class="lse-ad" aria-label="Jogo da LIBRAS.SE"><a class="lse-ad-v" href="/jogo/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/sonhar.webp" data-src="/assets/videos/sinais/sonhar.mp4"></video><span class="lse-ad-w">Sonhar</span></a><div class="lse-ad-t"><span class="lse-ad-l">Jogo da LIBRAS.SE</span><b>Descubra o sinal do dia</b><p>Um desafio novo por dia, com dicas de significado, exemplo de uso e datilologia.</p></div><div class="lse-ad-b"><a class="lse-btn" href="/jogo/">Jogar agora</a></div></aside>
+<!-- /LSE:BANNER -->
+
 
 <h2 id="segundo-turno">No 2º turno</h2>
 
@@ -719,7 +728,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
     <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/simulador-da-urna-eletronica-supera-205-mil-acessos-e-recebe-melhorias" target="_blank" rel="noopener noreferrer">Simulador da urna eletrônica supera 205 mil acessos e recebe melhorias</a>. 22 de setembro de 2026.</li>
     <li>TRE-PR. <a href="https://www.tre-pr.jus.br/comunicacao/noticias/2026/Agosto/simulador-tira-duvida-de-eleitores-sobre-a-votacao" target="_blank" rel="noopener noreferrer">Simulador tira dúvida de eleitores sobre a votação</a>. 19 de agosto de 2026. Fonte da janela de Libras no simulador.</li>
     <li>Vídeo: TRE São Paulo, canal no YouTube. <a href="https://www.youtube.com/watch?v=Lou5YFegRXc" target="_blank" rel="noopener noreferrer">Como votar na urna eletrônica? Veja o passo a passo!</a> 28 de setembro de 2026.</li>
-    <li>Imagens: ilustração de capa criada com IA para a LIBRAS.SE. Telas da urna: reprodução do <a href="https://www.tse.jus.br/eleicoes/simulador-de-votacao/" target="_blank" rel="noopener noreferrer">simulador de votação do TSE</a>, capturadas em 11 de outubro de 2026.</li>
+    <li>Imagens: capa, reprodução do vídeo “Veja o que mudou na urna eletrônica para as Eleições 2026”, do canal Justiça Eleitoral (TSE) no YouTube. Ilustração no corpo do texto criada com IA para a LIBRAS.SE. Telas da urna: reprodução do <a href="https://www.tse.jus.br/eleicoes/simulador-de-votacao/" target="_blank" rel="noopener noreferrer">simulador de votação do TSE</a>, capturadas em 11 de outubro de 2026.</li>
   </ol>
 </div>
 

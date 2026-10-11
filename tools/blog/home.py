@@ -393,8 +393,15 @@ def sitemap(arts):
         d = dia(a["a"].get("dateModified") or a["a"]["datePublished"]).isoformat()
         novos += f"  <url>\n    <loc>{html.escape(u)}</loc>\n    <lastmod>{d}</lastmod>\n  </url>\n"
         print(f"  + sitemap: {u}")
-    if novos:
-        p.write_text(t.replace("</urlset>", novos + "</urlset>"))
+    t = t.replace("</urlset>", novos + "</urlset>")
+    # A home do blog, /todos/ e /temas/ mudam a cada post novo: o lastmod delas acompanha o post
+    # mais recente (só avança, para não desfazer uma data posta à mão por outra mudança).
+    ultimo = max(dia(a["a"]["datePublished"]) for a in arts.values()).isoformat()
+    for u in (f"{SITE}/blog/", f"{SITE}/blog/todos/", f"{SITE}/blog/temas/"):
+        t = re.sub(rf"(<loc>{re.escape(u)}</loc>\s*<lastmod>)([^<]*)(</lastmod>)",
+                   lambda m: m[1] + max(m[2], ultimo) + m[3], t)
+    if t != p.read_text():
+        p.write_text(t)
 
 
 def main():

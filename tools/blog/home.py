@@ -152,7 +152,7 @@ def dados(slug, card, art, tema):
 
 def miniatura(p, largura):
     """assets/img/blog/thumbs/<slug>-<largura>.webp, gerada uma vez a partir da imagem do cartão.
-    Capas próprias do carrossel (capas_destaque) usam o nome do arquivo de origem no lugar do slug."""
+    Capas próprias do carrossel (capas_destaque com img) usam o nome do arquivo de origem no lugar do slug."""
     from PIL import Image
     THUMBS.mkdir(parents=True, exist_ok=True)
     dest = THUMBS / f"{p.get('thumb', p['slug'])}-{largura}.webp"
@@ -192,10 +192,12 @@ def capa_destaque(p):
     c = CFG.get("capas_destaque", {}).get(p["slug"])
     if not c:
         return p, (960, 1600), None
+    pos = c.get("pos", "50% 50%")
+    if "img" not in c:
+        return p, (960, 1600), pos
     from PIL import Image
     with Image.open(ROOT / c["img"].lstrip("/")) as im:
         w = im.width
-    pos = c.get("pos", "50% 50%")
     foco = tuple(float(v.rstrip("%")) / 100 for v in pos.split())
     capa = {**p, "img": c["img"], "thumb": Path(c["img"]).stem, "foco": foco}
     return capa, tuple(sorted({min(960, w), min(1600, w)})), pos

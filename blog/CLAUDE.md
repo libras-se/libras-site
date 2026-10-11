@@ -339,6 +339,15 @@ imagem tem um `.md` companheiro com a descrição completa.
 > Fotos jornalísticas de notícias (Tier baixo) costumam ter imagem própria em
 > `/assets/img/blog/<slug>/`. O banco editorial é o fallback institucional.
 
+**Capa: imagem real primeiro, ilustração de IA no corpo.** A capa deve ser uma imagem de verdade:
+um frame do vídeo oficial embutido no post (ex.: canal do TSE, Inep, trailer, videoclipe), uma foto de
+divulgação ou de agência pública (Agência Senado, Agência Brasil, prefeituras, organizadores) ou o banco
+editorial, sempre com crédito na legenda e na lista "Créditos e referências" ("Imagem: reprodução do
+vídeo X, canal Y" / "Foto: Nome/Agência"). Frames com legenda queimada ou tarja de TV: recortar acima
+dela. A ilustração de IA não sai do post: fica no corpo do texto como `<slug>-ia.{jpg,webp,avif}`, com
+a legenda terminando em "| Ilustração criada com IA". Só use IA na capa quando não houver imagem real
+utilizável. Não use foto de veículo de imprensa (g1, jornais) sem licença.
+
 ---
 
 ## 8. Fechamento do post: CTA escrito à mão + módulos gerados
@@ -354,10 +363,12 @@ O fim de todo post tem duas partes. A primeira você escreve; a segunda é **ger
 
 **O gerador coloca (entre marcadores `<!-- LSE:... -->`):**
 
-- `LSE:BANNER`: um anúncio interno da LIBRAS.SE (house ad) no meio do texto, perto de 40% do corpo,
-  sempre entre dois parágrafos ou blocos. O banner é escolhido pela editoria (`banner_por_editoria`)
-  ou pelo post (`banner_por_post`) em `tools/seo/links.json`: Aprenda Libras, alfabeto, quiz, sinal do
-  dia, materiais, atividades, cultura surda, serviço ("Publicidade · LIBRAS.SE", sem preço) ou Seja TILS.
+- `LSE:BANNER`: **todo post tem o banner do serviço da LIBRAS.SE** ("Publicidade · LIBRAS.SE", sem preço,
+  com a Bruna sinalizando OBRIGADO), perto de 40% do corpo, sempre entre dois parágrafos ou blocos
+  (`banner_fixo` em `tools/seo/links.json`). Posts longos ganham um segundo banner, perto de 78% do corpo,
+  escolhido pelo post (`banner_por_post`) ou pela editoria (`banner_por_editoria`): alfabeto, quiz, sinal
+  do dia, materiais, atividades, cultura surda ou Seja TILS. O segundo nunca repete o vídeo do primeiro.
+  Todo banner com vídeo de sinal mostra embaixo a palavra sinalizada, em maiúsculas (OBRIGADO, SURPRESA...).
 - `LSE:MAIS`, logo antes do `<footer id="foot">`:
   - "Continue lendo", com 4 matérias correlatas. A escolha pesa a mesma editoria, as palavras em
     comum e os posts pilares, e equilibra os links para que todo post receba ao menos 2 de outros posts.
@@ -377,8 +388,8 @@ python3 tools/seo/llms.py          # inventário do blog no llms-full.txt
 python3 tools/seo/auditoria.py     # confere órfãs, links de entrada, título e description
 ```
 
-Post novo sem configuração extra já recebe banner e correlatas pela editoria. Para trocar o banner de
-um post, use `banner_por_post`; para um post virar referência da editoria nas correlatas, coloque-o em `pilares`.
+Post novo sem configuração extra já recebe os banners e as correlatas pela editoria. Para trocar o segundo
+banner de um post, use `banner_por_post`; para um post virar referência da editoria nas correlatas, coloque-o em `pilares`.
 Regras completas, estratégia e backlog: `tools/seo/ESTRATEGIA.md`.
 
 Depois do `LSE:MAIS` vem **o footer canônico do site** (`<footer id="foot">`, copiado da raiz

@@ -2,8 +2,9 @@
 """Estrutura de links internos da LIBRAS.SE (SEO): matérias correlatas, ícones e banners.
 
 Em cada post do blog:
-  - um banner interno (house ad) no meio do texto, escolhido pelo assunto do post
-    (Aprenda Libras, alfabeto, jogos, materiais, cultura surda, serviço, Seja TILS);
+  - o banner do serviço da LIBRAS.SE (banner_fixo) no meio do texto, em todos os posts, e,
+    quando o post é longo, um segundo banner mais abaixo escolhido pelo assunto
+    (Aprenda Libras, alfabeto, jogos, materiais, cultura surda, Seja TILS);
   - no fim, "Continue lendo" com 4 matérias correlatas (mesma editoria, palavras em comum,
     posts pilares e equilíbrio de links para nenhum post ficar sem link de entrada),
     a solução comercial relacionada (quando houver) e os ícones de Aprenda e jogue.
@@ -32,6 +33,7 @@ home = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(home)
 L = json.loads((HERE / "links.json").read_text())
 TEMAS = home.CFG["temas"]
+SINAIS = {s["slug"]: s["palavra"] for s in json.loads((ROOT / "sinal/sinais.json").read_text())["sinais"]}
 ANTIGOS = ("pa-actions", "pa-related", "pa-acts-alt", "blog-more", "post-actions")
 PARADAS = set("para com como sobre entre mais pela pelo pelas pelos uma umas uns que dos das nos nas aos por sua seu suas seus ele ela eles elas isso esta este essa esse libras".split())
 
@@ -161,7 +163,9 @@ CSS = """<!-- LSE:CSS (gerado por tools/seo/links.py) -->
 .lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
 .lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
 .lse-ad--escuro .lse-ad-l{color:#4fd1c5}
-.lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-v{position:relative;display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-w{position:absolute;left:50%;bottom:5px;transform:translateX(-50%);background:#0e3538;color:#fff;border-radius:5px;padding:2px 7px;font-size:9.5px;font-weight:900;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+.lse-ad--escuro .lse-ad-w{background:#2eb8c0}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .lse-ad-v video{object-position:20% 50%}
 .lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
@@ -216,6 +220,7 @@ CSS = """<!-- LSE:CSS (gerado por tools/seo/links.py) -->
   .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
   .lse-ad-v .lse-dat{font-size:21px}
+  .lse-ad-w{font-size:8.5px;padding:2px 6px;bottom:4px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}
@@ -243,7 +248,7 @@ def visual(v):
     tipo, val = v.split(":", 1)
     if tipo == "video":
         return (f'<video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/{val}.webp" '
-                f'data-src="/assets/videos/sinais/{val}.mp4"></video>')
+                f'data-src="/assets/videos/sinais/{val}.mp4"></video><span class="lse-ad-w">{esc(SINAIS.get(val, val))}</span>')
     if tipo == "capa":
         return f'<img class="lse-capa" src="/assets/materiais/capas/{val}.webp" alt="" loading="lazy" decoding="async">'
     return f'<span class="lse-dat" aria-hidden="true">{esc(val)}</span>'
@@ -380,11 +385,11 @@ def filhos(t, ini):
     return out
 
 
-def ponto_banner(t):
-    """Fronteira entre blocos do corpo do artigo, por volta de 40% do texto."""
+def pontos_banner(t):
+    """Fronteiras entre blocos do corpo do artigo: [(índice do bloco, posição)] e o total de blocos."""
     m = re.search(r'<div class="pa-body">', t) or re.search(r'<main\b[^>]*class="article-wrapper[^"]*"[^>]*>', t)
     if not m:
-        return None
+        return [], 0
     ks = [k for k in filhos(t, m.start()) if not re.search(r"tags|cta|acts|actions|faq|references|post-", k[3])]
     cand = []
     for i in range(1, len(ks)):
@@ -393,10 +398,15 @@ def ponto_banner(t):
             if prox[2] == "p" and ant[2] != "p":
                 continue
             cand.append((i, ant[1]))
-    if not cand:
-        return None
-    alvo = max(2, round(len(ks) * 0.4))
-    return min(cand, key=lambda c: abs(c[0] - alvo))[1]
+    return cand, len(ks)
+
+
+def segundo_banner(slug, posts):
+    """Banner do assunto (banner_por_post ou rodízio da editoria) que não repete o banner fixo nem o vídeo dele."""
+    fixo = L["banner_fixo"]
+    op = L["banner_por_editoria"][posts[slug]["tema"]]
+    ordem = [L["banner_por_post"].get(slug)] + [op[(h(slug) + i) % len(op)] for i in range(len(op))]
+    return next((b for b in ordem if b and b != fixo and L["banners"][b]["visual"] != L["banners"][fixo]["visual"]), None)
 
 
 def injeta_css(t):
@@ -411,16 +421,23 @@ def processa_post(slug, rel, posts):
     t = tira(tira(t, "BANNER"), "MAIS")
     for c in ANTIGOS:
         t = remove_por_classe(t, c)
-    bid = L["banner_por_post"].get(slug) or (lambda op: op[h(slug) % len(op)])(L["banner_por_editoria"][posts[slug]["tema"]])
-    pos = ponto_banner(t)
-    if pos:
-        t = t[:pos] + "\n" + banner(bid) + "\n" + t[pos:]
+    cand, n = pontos_banner(t)
+    usados = []
+    if cand:
+        i1, p1 = min(cand, key=lambda c: abs(c[0] - max(2, round(n * 0.4))))
+        usados.append((p1, L["banner_fixo"]))
+        seg = segundo_banner(slug, posts)
+        longe = [c for c in cand if c[0] - i1 >= L["distancia_minima"]]
+        if seg and longe:
+            usados.append((min(longe, key=lambda c: abs(c[0] - round(n * 0.78)))[1], seg))
+    for p, bid in sorted(usados, reverse=True):
+        t = t[:p] + "\n" + banner(bid) + "\n" + t[p:]
     alvo = t.find('<footer id="foot"')
     t = t[:alvo] + "\n" + modulo_post(slug, rel, posts) + "\n" + t[alvo:]
     t = injeta_css(t)
     if t != original:
         f.write_text(t)
-    return bid if pos else None
+    return [b for _, b in sorted(usados)]
 
 
 def processa_pagina(url, slugs, posts, **kw):
@@ -451,13 +468,14 @@ def main():
     posts = carregar()
     rel, entrada = relacionados(posts)
     banners = defaultdict(int)
-    sem_banner = []
+    sem_banner, so_fixo = [], 0
     for s in sorted(posts):
-        b = processa_post(s, rel[s], posts)
-        if b:
+        bs = processa_post(s, rel[s], posts)
+        for b in bs:
             banners[b] += 1
-        else:
+        if not bs:
             sem_banner.append(s)
+        so_fixo += len(bs) == 1
     for url, slugs in L["do_blog"].items():
         processa_pagina(url, slugs, posts)
     for url in L.get("so_icones", []):
@@ -468,7 +486,7 @@ def main():
     print(f"ok  {len(posts)} posts com 'Continue lendo' e ícones; {len(L['do_blog'])} páginas com 'Conteúdo relacionado no blog'")
     sem_cit = sorted(u for u, (_, c) in glos.items() if c == 0)
     print(f"    {len(glos)} verbetes do glossário com 'Este termo no blog'; sem post que cite o termo: {sem_cit}")
-    print(f"    banners no texto: {dict(banners)}; sem lugar para banner: {sem_banner}")
+    print(f"    banners no texto: {dict(banners)}; só o banner fixo (post curto): {so_fixo}; sem lugar para banner: {sem_banner}")
     print(f"    links de entrada por post (só 'Continue lendo'): mínimo {min(entrada.values())}, máximo {max(entrada.values())}")
 
 

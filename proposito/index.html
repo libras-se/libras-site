@@ -547,7 +547,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .lse-ad--escuro{background:radial-gradient(ellipse 45% 110% at 88% 50%,rgba(79,209,197,.22),transparent 70%),linear-gradient(135deg,#0e3538,#2a6069);border-color:transparent;color:#fff;box-shadow:0 8px 32px rgba(10,34,37,.16)}
 .lse-ad-l{display:block;margin-bottom:6px;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;color:#1a9ca4}
 .lse-ad--escuro .lse-ad-l{color:#4fd1c5}
-.lse-ad-v{display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-v{position:relative;display:flex;align-items:center;justify-content:center;width:118px;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none}
+.lse-ad-w{position:absolute;left:50%;bottom:5px;transform:translateX(-50%);background:#0e3538;color:#fff;border-radius:5px;padding:2px 7px;font-size:9.5px;font-weight:900;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+.lse-ad--escuro .lse-ad-w{background:#2eb8c0}
 .lse-ad-v video,.lse-ad-v img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .lse-ad-v video{object-position:20% 50%}
 .lse-ad--escuro .lse-ad-v{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
@@ -602,6 +604,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
   .lse-ad{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:14px}
   .lse-ad-v{width:84px}
   .lse-ad-v .lse-dat{font-size:21px}
+  .lse-ad-w{font-size:8.5px;padding:2px 6px;bottom:4px}
   .lse-ad-b{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
   .lse-rel,.lse-rel3{grid-template-columns:1fr}
   .lse-c{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:auto 1fr;column-gap:12px;padding:10px}

@@ -137,7 +137,12 @@
   "libras-tem-sotaque-e-giria": "quiz",
   "lingua-de-sinais-e-autismo": "materiais",
   "disney-lanca-jogos-que-ensinam-libras": "quiz",
-  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades"
+  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades",
+  "eleicoes-2026-como-o-eleitor-surdo-vota-com-libras": "servico",
+  "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa": "servico",
+  "bastidores-da-libras-no-rock-in-rio-2026": "servico",
+  "justica-anula-demissao-de-surdo-sem-interprete-de-libras": "servico",
+  "chatbots-nao-entendem-como-pessoas-surdas-escrevem": "servico"
  },
  "pilares": {
   "lingua": [
@@ -193,7 +198,9 @@
     "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade",
     "responsavel-pelo-que-entendem",
     "4-dicas-para-ser-mais-inclusivo-na-internet",
-    "influenciadores-surdos-relatam-dificuldade-com-publis"
+    "influenciadores-surdos-relatam-dificuldade-com-publis",
+    "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa",
+    "chatbots-nao-entendem-como-pessoas-surdas-escrevem"
    ]
   },
   "eventos": {
@@ -214,7 +221,10 @@
     "rock-in-rio-tem-show-de-rap-com-libras",
     "tradutor-de-libras-se-destaca-no-rock-in-rio",
     "conheca-a-primeira-dupla-musical-de-libras",
-    "com-libras-inclusao-marca-sao-joao-de-caruaru"
+    "com-libras-inclusao-marca-sao-joao-de-caruaru",
+    "bastidores-da-libras-no-rock-in-rio-2026",
+    "namorada-sinaliza-show-inteiro-para-namorado-surdo",
+    "oktoberfest-de-blumenau-tem-aplicativo-com-libras"
    ]
   },
   "educacao": {
@@ -236,7 +246,8 @@
     "libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte",
     "libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh",
     "professora-aprende-libras-para-se-comunicar-com-estudante",
-    "reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau"
+    "reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau",
+    "enem-2026-em-libras-videoprovas-para-treinar"
    ]
   },
   "politica": {
@@ -249,7 +260,8 @@
    ],
    "posts": [
     "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio",
-    "urnas-eletronicas-terao-video-com-libras"
+    "urnas-eletronicas-terao-video-com-libras",
+    "eleicoes-2026-como-o-eleitor-surdo-vota-com-libras"
    ]
   },
   "audiovisual": {
@@ -290,7 +302,9 @@
     "projeto-traduz-poesias-de-cruz-e-souza-para-libras",
     "rosas-de-ouro-leva-libras-pro-carnaval-paulista",
     "biblia-completamente-traduzida-para-libras",
-    "personagens-da-disney-adotam-lingua-de-sinais-com-o-publico"
+    "personagens-da-disney-adotam-lingua-de-sinais-com-o-publico",
+    "filme-com-protagonista-surda-tem-libras-dentro-da-cena",
+    "benedita-case-protagoniza-90-decibeis-filme-sobre-surdez"
    ]
   }
  },

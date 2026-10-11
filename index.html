@@ -281,6 +281,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .bo-dark:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-1px)}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .rv.on{opacity:1;transform:none}
+/* Título do topo: mesma entrada do .rv, só que em CSS, para aparecer sem esperar o JS (LCP) */
+.rvh{animation:rvh .8s ease both}
+@keyframes rvh{from{opacity:0;transform:translateY(28px)}}
 .rv.rl{transform:translateX(-28px)}.rv.rl.on{transform:none}
 .rv.rr{transform:translateX(28px)}.rv.rr.on{transform:none}
 .rv.rs{transform:scale(.96);opacity:0}.rv.rs.on{transform:scale(1);opacity:1}
@@ -882,7 +885,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
           ENTREGA EXPRESSA EM 1 HORA
         </div>
-        <h1 id="hero-title" class="hero-hl rv">
+        <h1 id="hero-title" class="hero-hl rvh">
           <span class="line">Tradução em Libras para</span>
           <span class="line refract">vídeos e filmes</span>
           <span class="line">com entrega em 1 hora</span>

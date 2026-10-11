@@ -52,7 +52,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Conteudo editorial e educativo
 
-- [Blog](https://libras.se/blog/): 73 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
+- [Blog](https://libras.se/blog/): 74 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
 - [Glossario](https://libras.se/glossario/): definicoes de termos de Libras e acessibilidade com exemplos praticos e fontes verificadas.
 - [Sinais em Libras](https://libras.se/sinal/): mais de 70 sinais em video gravados por interpretes da LIBRAS.SE, com ilustracao, definicao e exemplos de uso; consulta por palavra ou categoria.
 - [Desculpa em Libras](https://libras.se/sinal/desculpa/): pagina individual com video de referencia, definicao e exemplos.
@@ -69,7 +69,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Artigos do blog
 
-O blog tem 73 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
+O blog tem 74 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
 
 - [O que e Libras? Entenda a Lingua Brasileira de Sinais](https://libras.se/blog/o-que-e-libras/)
 - [Libras e reconhecida como lingua de instrucao em Belo Horizonte](https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/)
@@ -78,6 +78,7 @@ O blog tem 73 posts indexaveis. Para descoberta ampla, use tambem [todos os post
 - [Acessibilidade em eventos: como garantir interpretacao em Libras sem improviso](https://libras.se/blog/garantir-libras-sem-improviso/)
 - [Videoaulas acessiveis com Libras: como ampliar o acesso ao aprendizado](https://libras.se/blog/videoaulas-acessiveis-com-libras/)
 - [4 erros comuns ao inserir Libras em videos e como evita-los](https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/)
+- [Margem da janela de Libras: o que se usa de verdade e que area deixar livre](https://libras.se/blog/margem-da-janela-de-libras-no-video/)
 - [Dia Nacional da Libras, 24 de abril: historia, conquistas e como celebrar](https://libras.se/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/)
 - [Libras nao e a segunda lingua oficial do Brasil: entenda a lei](https://libras.se/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/)
 - [Datilologia: o alfabeto manual da Libras explicado](https://libras.se/blog/voce-sabe-o-que-e-datilologia/)

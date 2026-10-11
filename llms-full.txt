@@ -105,7 +105,7 @@ URLs de navegacao editorial:
 - https://libras.se/blog/todos/ - acervo navegavel de posts.
 - https://libras.se/blog/temas/ - posts agrupados por tema.
 
-Artigos publicados (73 paginas indexaveis; os pilares de cada tema vem primeiro):
+Artigos publicados (74 paginas indexaveis; os pilares de cada tema vem primeiro):
 
 - https://libras.se/blog/o-que-e-libras/ - Libras e a Lingua Brasileira de Sinais: uma lingua visual, completa e com gramatica propria. Entenda o que e, sua historia, reconhecimento legal e importancia para a comunidade surda.
 - https://libras.se/blog/voce-sabe-o-que-e-datilologia/ - Do abecedario da Xuxa as palavras que nascem dos sinais soletrados, entenda o que e datilologia e seu papel na Lingua Brasileira de Sinais.
@@ -120,6 +120,7 @@ Artigos publicados (73 paginas indexaveis; os pilares de cada tema vem primeiro)
 - https://libras.se/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/ - CODA, No Ritmo do Coracao levou tres Oscars em 2022, incluindo Melhor Filme. Entenda por que o filme sobre uma familia surda e um marco de representatividade.
 - https://libras.se/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/ - "O Som do Silencio" (Sound of Metal) ganhou o Oscar e ensina muito sobre Libras e identidade surda. Entenda como o filme retrata a comunidade surda e a lingua de sinais.
 - https://libras.se/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/ - As Surdolimpiadas sao os jogos mundiais exclusivos para surdoatletas. Conheca a competicao que o Brasil sediou, suas regras, adaptacoes e o papel dos interpretes.
+- https://libras.se/blog/margem-da-janela-de-libras-no-video/ - A medida da ABNT de 2005 caiu em desuso. Veja o que campanhas, Senado e publicidade usam hoje e baixe gratis os PNGs de margem para a sua edicao.
 - https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/ - Belo Horizonte reconheceu oficialmente a Libras como lingua de instrucao e meio de comunicacao da comunidade surda por meio da Lei no 11.463/2023.
 - https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/ - Conheca 4 erros comuns ao inserir Libras em videos, profissional, tamanho da janela, ambiente e contexto, e aprenda como evita-los para um conteudo acessivel.
 - https://libras.se/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/ - No Dia Nacional da Libras, refletimos sobre conquistas e desafios da inclusao da comunidade surda. Entenda por que a regulamentacao precisa sair do papel.

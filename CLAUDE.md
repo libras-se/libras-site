@@ -125,7 +125,7 @@ Cole este bloco logo após `<body>`, antes do `<main>`:
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
+      <a href="/" class="nlogo" aria-label="LIBRAS.SE, Página inicial">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
       </a>
       <ul class="nlinks" role="list">

@@ -316,7 +316,7 @@ main{padding-top:80px}
 .bl-theme-pill.active{background:var(--teal);color:var(--p1);border-color:var(--teal);box-shadow:0 4px 16px rgba(79,209,197,.28)}
 
 /* no results */
-.bl-no-results{text-align:center;padding:48px 24px;color:var(--txm);font-size:.9rem;display:none}
+.bl-no-results{text-align:center;padding:48px 24px;color:var(--txs);font-size:.9rem;display:none}
 .bl-no-results.show{display:block}
 
 /* ── FEATURED SECTION ── */
@@ -342,7 +342,7 @@ main{padding-top:80px}
 .bl-card__body{padding:22px;display:flex;flex-direction:column;flex:1}
 .bl-card--lg{height:auto}
 .bl-card--lg .bl-card__body{padding:26px 28px}
-.bl-card__meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--bk-s);opacity:.65;margin-bottom:10px}
+.bl-card__meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:#587373;margin-bottom:10px}
 .bl-card__dot{width:3px;height:3px;border-radius:50%;background:currentColor}
 .bl-card__title{font-size:1rem;font-weight:700;color:var(--bk);line-height:1.35;margin-bottom:10px;letter-spacing:-.015em}
 .bl-card--lg .bl-card__title{font-size:1.28rem;margin-bottom:12px}
@@ -502,6 +502,7 @@ main{padding-top:80px}
 .bl-card--sm .bl-card__thumb{aspect-ratio:16/9}
 .bl-theme-group h2 a{color:inherit;text-decoration:none}.bl-theme-group h2 a:hover{color:var(--teal-dd)}
 .bl-theme-more{margin:22px 0 0;text-align:right}.bl-theme-more a{font-weight:700;font-size:.9rem;color:#12737a}
+.bl-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <link rel="alternate" type="application/atom+xml" title="Blog LIBRAS.SE" href="https://libras.se/blog/feed.xml">
 
@@ -630,7 +631,7 @@ main{padding-top:80px}
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="LIBRAS.SE, Página inicial">
+      <a href="/" class="nlogo" aria-label="LIBRAS.SE Conteúdos, página inicial do site">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
         <span class="nsub" aria-hidden="true">Conteúdos</span>
       </a>
@@ -657,7 +658,8 @@ main{padding-top:80px}
   </header>
   <div class="bl-page-wrap">
     <nav class="bl-theme-bar rv" aria-label="Editorias do blog" style="justify-content:center;margin-bottom:36px"><a class="bl-theme-pill" href="/blog/tema/lingua/">Língua &amp; Cultura</a><a class="bl-theme-pill" href="/blog/tema/educacao/">Educação</a><a class="bl-theme-pill" href="/blog/tema/direitos/" aria-current="page">Direitos</a><a class="bl-theme-pill" href="/blog/tema/inclusao/">Acessibilidade</a><a class="bl-theme-pill" href="/blog/tema/cultura/">Cultura</a><a class="bl-theme-pill" href="/blog/tema/esporte/">Esporte</a></nav>
-    <section class="bl-theme-group" aria-label="13 publicações em Direitos &amp; Cidadania">
+    <section class="bl-theme-group" aria-labelledby="bl-tema-t">
+      <h2 class="bl-sr" id="bl-tema-t">13 publicações em Direitos &amp; Cidadania</h2>
       <div class="bl-grid">
 <article class="bl-card bl-card--sm rv"
           data-post
@@ -666,8 +668,8 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada"></a>
-          <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__thumb" aria-label="Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada">
-            <picture><img src="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp" srcset="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp 480w, /assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.jpg"></picture>
+          <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp" srcset="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp 480w, /assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" fetchpriority="high" itemprop="image" data-capa="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
           <div class="bl-card__body">
@@ -692,8 +694,8 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras"></a>
-          <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__thumb" aria-label="Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras">
-            <picture><img src="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp" srcset="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp 480w, /assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.jpg"></picture>
+          <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp" srcset="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp 480w, /assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" itemprop="image" data-capa="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
           <div class="bl-card__body">
@@ -718,8 +720,8 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__link-cover" aria-label="Ler artigo: Intérprete de Libras pode ter que passar por prova prática para ser contratado"></a>
-          <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__thumb" aria-label="Intérprete de Libras pode ter que passar por prova prática para ser contratado">
-            <picture><img src="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp" srcset="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp 480w, /assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado.jpg"></picture>
+          <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp" srcset="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp 480w, /assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" itemprop="image" data-capa="/assets/img/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
           <div class="bl-card__body">
@@ -744,7 +746,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Nacional da Libras: a lei de 2002, os avanços e o que ainda falta"></a>
-          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" aria-label="Dia Nacional da Libras: a lei de 2002, os avanços e o que ainda falta">
+          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-480.webp" srcset="/assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-480.webp 480w, /assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -770,7 +772,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Recenseadora entrevista mulher surda em Libras"></a>
-          <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__thumb" aria-label="Recenseadora entrevista mulher surda em Libras">
+          <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-480.webp" srcset="/assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-480.webp 480w, /assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/recenseadora-entrevista-mulher-surda-em-libras/recenseadora-entrevista-mulher-surda-em-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -796,7 +798,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: DF tem instrutor e examinador de trânsito surdo"></a>
-          <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__thumb" aria-label="DF tem instrutor e examinador de trânsito surdo">
+          <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-480.webp" srcset="/assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-480.webp 480w, /assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/df-tem-instrutor-e-examinador-de-transito-surdo/df-tem-instrutor-e-examinador-de-transito-surdo.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -822,7 +824,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__link-cover" aria-label="Ler artigo: Projeto garante intérprete de Libras em hospitais"></a>
-          <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__thumb" aria-label="Projeto garante intérprete de Libras em hospitais">
+          <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-480.webp" srcset="/assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-480.webp 480w, /assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/projeto-garante-interprete-de-libras-em-hospitais/projeto-garante-interprete-de-libras-em-hospitais.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -848,7 +850,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__link-cover" aria-label="Ler artigo: Uso de Libras em propaganda eleitoral é obrigatório"></a>
-          <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__thumb" aria-label="Uso de Libras em propaganda eleitoral é obrigatório">
+          <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-480.webp" srcset="/assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-480.webp 480w, /assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -874,7 +876,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__link-cover" aria-label="Ler artigo: Libras pode ser reconhecida como Referência Cultural"></a>
-          <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__thumb" aria-label="Libras pode ser reconhecida como Referência Cultural">
+          <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-480.webp" srcset="/assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-480.webp 480w, /assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -900,7 +902,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Urnas eletrônicas terão vídeo com Libras"></a>
-          <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__thumb" aria-label="Urnas eletrônicas terão vídeo com Libras">
+          <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-480.webp" srcset="/assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-480.webp 480w, /assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/urnas-eletronicas-terao-video-com-libras/urnas-eletronicas-terao-video-com-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -926,7 +928,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__link-cover" aria-label="Ler artigo: Libras não é a segunda língua oficial do Brasil: entenda a lei"></a>
-          <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__thumb" aria-label="Libras não é a segunda língua oficial do Brasil: entenda a lei">
+          <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-480.webp" srcset="/assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-480.webp 480w, /assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/libras-nao-e-segunda-lingua-oficial-do-brasil.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -952,7 +954,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__link-cover" aria-label="Ler artigo: Intérpretes de Libras traduzem partos para pais surdos"></a>
-          <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__thumb" aria-label="Intérpretes de Libras traduzem partos para pais surdos">
+          <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-480.webp" srcset="/assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-480.webp 480w, /assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/interpretes-de-libras-traduzem-partos-para-pais-surdos.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -978,7 +980,7 @@ main{padding-top:80px}
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__link-cover" aria-label="Ler artigo: “Surdos são estrangeiros na própria pátria”"></a>
-          <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__thumb" aria-label="“Surdos são estrangeiros na própria pátria”">
+          <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-480.webp" srcset="/assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-480.webp 480w, /assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/surdos-estrangeiros-na-propria-patria/surdos-estrangeiros-na-propria-patria.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>

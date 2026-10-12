@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WZ7MN3KX');</script>
 <!-- End Google Tag Manager -->"""
 
-GTM_NOSCRIPT = ('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ7MN3KX" '
+GTM_NOSCRIPT = ('<noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-WZ7MN3KX" '
                 'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>')
 
 

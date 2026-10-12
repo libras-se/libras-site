@@ -1593,7 +1593,7 @@
   --rmd:16px;--rlg:24px;--rxl:32px;--rx2:44px;--rpill:999px;
 }
 
-:root{--pw:1240px;--line:rgba(10,34,37,.08);--ink:#0e3538;--muted:#5d8487;--paper:#ffffff}
+:root{--pw:1240px;--line:rgba(10,34,37,.08);--ink:#0e3538;--muted:#4d7477;--teal-txt:#12737a;--paper:#ffffff}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'M',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -1659,7 +1659,7 @@ img{max-width:100%}
 .glass:hover::before{left:140%}
 .glass:hover{box-shadow:0 20px 72px rgba(10,34,37,.14),inset 0 1px 0 rgba(255,255,255,.95);transform:translateY(-4px)}
 
-.k-lingua{color:#1a9ca4}.d-lingua{background:#1a9ca4}.feed .bl-card[data-tema="lingua"] .bl-card__meta::before{content:"Língua & Cultura";color:#1a9ca4}.k-educacao{color:#2f6fde}.d-educacao{background:#2f6fde}.feed .bl-card[data-tema="educacao"] .bl-card__meta::before{content:"Educação";color:#2f6fde}.k-direitos{color:#7c5cd6}.d-direitos{background:#7c5cd6}.feed .bl-card[data-tema="direitos"] .bl-card__meta::before{content:"Direitos";color:#7c5cd6}.k-inclusao{color:#16a34a}.d-inclusao{background:#16a34a}.feed .bl-card[data-tema="inclusao"] .bl-card__meta::before{content:"Acessibilidade";color:#16a34a}.k-cultura{color:#e08a0b}.d-cultura{background:#e08a0b}.feed .bl-card[data-tema="cultura"] .bl-card__meta::before{content:"Cultura";color:#e08a0b}.k-esporte{color:#e5484d}.d-esporte{background:#e5484d}.feed .bl-card[data-tema="esporte"] .bl-card__meta::before{content:"Esporte";color:#e5484d}
+.k-lingua{color:#16797f}.d-lingua{background:#1a9ca4}.feed .bl-card[data-tema="lingua"] .bl-card__meta::before{content:"Língua & Cultura";color:#16797f}.k-educacao{color:#2c6ad1}.d-educacao{background:#2f6fde}.feed .bl-card[data-tema="educacao"] .bl-card__meta::before{content:"Educação";color:#2c6ad1}.k-direitos{color:#755acd}.d-direitos{background:#7c5cd6}.feed .bl-card[data-tema="direitos"] .bl-card__meta::before{content:"Direitos";color:#755acd}.k-inclusao{color:#137e44}.d-inclusao{background:#16a34a}.feed .bl-card[data-tema="inclusao"] .bl-card__meta::before{content:"Acessibilidade";color:#137e44}.k-cultura{color:#8c681d}.d-cultura{background:#e08a0b}.feed .bl-card[data-tema="cultura"] .bl-card__meta::before{content:"Cultura";color:#8c681d}.k-esporte{color:#ba4449}.d-esporte{background:#e5484d}.feed .bl-card[data-tema="esporte"] .bl-card__meta::before{content:"Esporte";color:#ba4449}
 .dat{font-family:'Libras2020',monospace;font-weight:normal;line-height:1}
 .pw{max-width:var(--pw);margin:0 auto;padding:0 32px;width:100%}
 .portal{padding-top:64px}
@@ -1668,9 +1668,9 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
 .sec-h h2{font-size:clamp(1.3rem,2.4vw,1.75rem);font-weight:900;letter-spacing:-.03em;color:var(--ink);line-height:1.1;display:flex;align-items:center;gap:10px}
 .sec-h h2::before{content:'';width:6px;height:1.1em;border-radius:3px;background:var(--gb)}
-.sec-h>a{font-size:.8rem;font-weight:700;color:var(--teal-dd)}
+.sec-h>a{font-size:.8rem;font-weight:700;color:var(--teal-txt)}
 .sec-h>a:hover{color:var(--ink)}
-.sec-k{display:block;font-size:.66rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dd);margin-bottom:6px}
+.sec-k{display:block;font-size:.66rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-txt);margin-bottom:6px}
 
 /* ===== Masthead ===== */
 .mast{background:var(--paper);border-bottom:1px solid var(--line)}
@@ -1690,7 +1690,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .edit a,.edit button{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--txs);padding:9px 12px;border-radius:10px;border:none;background:none;cursor:pointer;transition:background .2s,color .2s}
 .edit a:hover,.edit button:hover{background:var(--bg2);color:var(--ink)}
 .edit .sep{width:1px;height:20px;background:var(--line);margin:0 6px;flex-shrink:0}
-.edit .ap{color:var(--teal-dd)}
+.edit .ap{color:var(--teal-txt)}
 .edit a:focus-visible,.edit button:focus-visible{outline:3px solid var(--teal);outline-offset:-2px}
 
 /* ===== Manchetes ===== */
@@ -1740,7 +1740,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .mais .n{font-size:2.1rem;font-weight:900;line-height:.9;letter-spacing:-.05em;background:var(--gb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .mais .mt{display:flex;flex-direction:column;gap:4px}
 .mais b{font-size:.92rem;font-weight:700;line-height:1.3;color:var(--ink);transition:color .2s}
-.mais a:hover b{color:var(--teal-dd)}
+.mais a:hover b{color:var(--teal-txt)}
 .mais-ver{display:none}
 
 .bt{background:var(--teal-d);color:#fff}
@@ -1753,9 +1753,9 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .at{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:12px 10px;display:flex;flex-direction:column;align-items:flex-start;gap:5px;transition:transform var(--tr),box-shadow var(--tr),border-color var(--tr)}
 .at:hover{transform:translateY(-3px);box-shadow:var(--shm);border-color:rgba(46,184,192,.35)}
 .at:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.at-i{width:34px;height:34px;border-radius:10px;background:rgba(79,209,197,.14);color:var(--teal-dd);display:flex;align-items:center;justify-content:center}
+.at-i{width:34px;height:34px;border-radius:10px;background:rgba(79,209,197,.14);color:var(--teal-txt);display:flex;align-items:center;justify-content:center}
 .at-i svg{width:18px;height:18px}
-.at-i .dat{font-size:1.3rem;color:var(--teal-dd)}
+.at-i .dat{font-size:1.3rem;color:var(--teal-txt)}
 .at:first-child{background:var(--gc);border-color:transparent}
 .at:first-child .at-i{background:rgba(79,209,197,.2);color:var(--teal)}
 .at:first-child b{color:#fff}.at:first-child small{color:rgba(255,255,255,.6)}
@@ -1775,7 +1775,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .mat-t{display:flex;flex-direction:column;gap:4px;flex:1}
 .mat-t small{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .mat-t b{font-size:.92rem;font-weight:900;line-height:1.2;color:var(--ink);flex:1}
-.mat-b{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;color:var(--teal-dd);margin-top:4px}
+.mat-b{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;color:var(--teal-txt);margin-top:4px}
 .mat-b::before{content:'';width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6'%3E%3Cpath d='M12 4v12M6 11l6 6 6-6M5 20h14'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6'%3E%3Cpath d='M12 4v12M6 11l6 6 6-6M5 20h14'/%3E%3C/svg%3E") center/contain no-repeat}
 
 /* ===== Publicidade do serviço ===== */
@@ -1806,12 +1806,12 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .ed-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .ed-lead:hover img{transform:scale(1.05)}
 .ed-lead b{font-size:1.02rem;font-weight:900;line-height:1.25;color:var(--ink);letter-spacing:-.01em}
-.ed-lead:hover b{color:var(--teal-dd)}
+.ed-lead:hover b{color:var(--teal-txt)}
 .ed-lead time{font-size:.7rem;color:var(--muted)}
 .ed ul{list-style:none;margin:10px 0 6px;flex:1}
 .ed li a{display:block;font-size:.86rem;font-weight:700;line-height:1.35;color:var(--txs);padding:9px 0;border-top:1px solid var(--line)}
 .ed li a:hover{color:var(--ink)}
-.ed-mais{font-size:.76rem;font-weight:700;color:var(--teal-dd);padding-top:8px}
+.ed-mais{font-size:.76rem;font-weight:700;color:var(--teal-txt);padding-top:8px}
 
 /* ===== Aprender ===== */
 .learn{margin-top:40px;padding:44px 0 48px;background:linear-gradient(180deg,#e3f6f4 0%,var(--bg) 100%);position:relative;overflow:hidden}
@@ -1837,7 +1837,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .sb-res .vazio{padding:10px;font-size:.84rem;color:var(--muted)}
 .learn-grid{display:grid;grid-template-columns:1fr 1.15fr .9fr;gap:18px}
 .lcard{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh);padding:18px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
-.lcard .lk{font-size:.62rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dd)}
+.lcard .lk{font-size:.62rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-txt)}
 .sdd-v{border-radius:16px;overflow:hidden;background:#f0fafa;aspect-ratio:4/3;position:relative}
 .sdd-v video{width:100%;height:100%;object-fit:cover;display:block}
 .sdd-v .vtag{position:absolute;left:10px;top:10px;font-size:.58rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.75);border-radius:6px;padding:4px 8px}
@@ -1849,7 +1849,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .sdd-q button.errada{border-color:#f87171;background:rgba(248,113,113,.08)}
 .sdd-q button:disabled{cursor:default}
 .sdd-fb{min-height:1.3em;font-size:.84rem;color:var(--txs)}
-.sdd-fb a{color:var(--teal-dd);font-weight:700}
+.sdd-fb a{color:var(--teal-txt);font-weight:700}
 .lbtns{display:flex;gap:8px;flex-wrap:wrap}
 .lbtns a{font-size:.76rem;font-weight:700;border-radius:var(--rpill);padding:8px 14px;border:1.5px solid rgba(46,184,192,.3);color:var(--p3);transition:var(--tr)}
 .lbtns a:first-child{background:var(--p1);border-color:var(--p1);color:#fff}
@@ -1865,7 +1865,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .nome-out .lt{background:#fff;border-radius:12px;padding:6px 6px 4px;text-align:center;min-width:52px;animation:entra .35s cubic-bezier(.2,.9,.3,1.2) both}
 @keyframes entra{from{opacity:0;transform:translateY(10px) scale(.8)}to{opacity:1;transform:none}}
 .nome-out .lt .dat{display:block;font-size:2.7rem;color:var(--ink)}
-.nome-out .lt b{font-size:.78rem;font-weight:900;color:var(--teal-dd)}
+.nome-out .lt b{font-size:.78rem;font-weight:900;color:var(--teal-txt)}
 .nome-out .esp{width:16px}
 .nome a.mais-l{font-size:.78rem;font-weight:700;color:var(--teal)}
 .px-l{list-style:none;display:flex;flex-direction:column;gap:12px;flex:1}
@@ -1876,7 +1876,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .px-l li:first-child .cal{box-shadow:0 0 0 3px rgba(79,209,197,.35)}
 .px-l h3{font-size:.86rem;font-weight:900;color:var(--ink);line-height:1.25}
 .px-l p{font-size:.72rem;color:var(--muted);margin-top:2px}
-.prox>a{font-size:.76rem;font-weight:700;color:var(--teal-dd)}
+.prox>a{font-size:.76rem;font-weight:700;color:var(--teal-txt)}
 
 /* ===== Arquivo ===== */
 .arq{padding:52px 0 64px}
@@ -1906,7 +1906,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .feed .bl-card__dot{width:3px;height:3px;border-radius:50%;background:currentColor}
 .feed .bl-card__title{font-size:1.18rem;font-weight:900;letter-spacing:-.02em;line-height:1.22;color:var(--ink)}
 .feed .bl-card__title a{position:relative;z-index:2}
-.feed .bl-card:hover .bl-card__title a{color:var(--teal-dd)}
+.feed .bl-card:hover .bl-card__title a{color:var(--teal-txt)}
 .feed .bl-card__excerpt{font-size:.88rem;font-weight:300;color:var(--txs);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .feed .bl-card__read{display:none}
 .feed .bl-card.novo{animation:sobe .5s cubic-bezier(.2,.7,.2,1) both}
@@ -1923,10 +1923,10 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 .sv .btn{margin-top:14px;width:100%}
 .sv small{display:block;text-align:center;font-size:.7rem;color:rgba(255,255,255,.5);margin-top:8px}
 .sbox{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--sh)}
-.sbox h3{font-size:.66rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dd);margin-bottom:10px}
+.sbox h3{font-size:.66rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-txt);margin-bottom:10px}
 .gl b{display:block;font-size:1.1rem;font-weight:900;color:var(--ink);margin-bottom:6px}
 .gl p{font-size:.82rem;color:var(--txs);line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.gl a{display:inline-block;margin-top:8px;font-size:.76rem;font-weight:700;color:var(--teal-dd)}
+.gl a{display:inline-block;margin-top:8px;font-size:.76rem;font-weight:700;color:var(--teal-txt)}
 .redes{display:flex;gap:8px;flex-wrap:wrap}
 .redes a{font-size:.76rem;font-weight:700;color:var(--p3);background:var(--bg);border-radius:var(--rpill);padding:7px 12px}
 .redes a:hover{background:var(--bg2)}
@@ -1983,7 +1983,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
   .mais ol{display:block}
   .mais li.extra{display:none}
   .mais.aberta li.extra{display:list-item}
-  .mais-ver{display:block;width:100%;font-family:'M',sans-serif;font-size:.8rem;font-weight:700;color:var(--teal-dd);background:none;border:none;border-top:1px solid var(--line);padding:12px 0;cursor:pointer}
+  .mais-ver{display:block;width:100%;font-family:'M',sans-serif;font-size:.8rem;font-weight:700;color:var(--teal-txt);background:none;border:none;border-top:1px solid var(--line);padding:12px 0;cursor:pointer}
   .eds-sec{padding-top:34px}
   .eds{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:2px 16px 10px;scrollbar-width:none}
   .eds::-webkit-scrollbar{display:none}
@@ -2065,7 +2065,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="Libras.se, Página inicial">
+      <a href="/" class="nlogo" aria-label="LIBRAS.SE Blog, página inicial do site">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
         <span class="nsub" aria-hidden="true">Blog</span>
       </a>
@@ -2236,7 +2236,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
       <div class="learn-grid">
         <article class="lcard sdd rv">
           <span class="lk">Sinal do dia · <span id="sdd-data"></span></span>
-          <div class="sdd-v"><video id="sdd-v" role="img" muted loop playsinline preload="none" aria-label="Vídeo do sinal do dia"></video><span class="vtag">Que sinal é esse?</span></div>
+          <div class="sdd-v"><video id="sdd-v" muted loop playsinline preload="none" aria-label="Vídeo do sinal do dia"></video><span class="vtag">Que sinal é esse?</span></div>
           <div class="sdd-q" id="sdd-q" role="group" aria-label="Escolha a palavra"></div>
           <p class="sdd-fb" id="sdd-fb" aria-live="polite"></p>
           <div class="lbtns"><a href="/jogo/">Jogar o sinal do dia</a><a href="/jogos/quiz-de-libras/">Mais sinais no quiz</a></div>
@@ -2356,7 +2356,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
   <section class="arq" id="posts" aria-labelledby="arq-t">
     <div class="pw arq-in">
       <div>
-        <div class="sec-h"><h2 id="arq-t">Todas as matérias</h2><span class="cnt"><span id="bl-post-count">86 publicações</span> · <a href="/blog/todos/" style="color:var(--teal-dd);font-weight:700">arquivo completo</a> · <a href="/blog/temas/" style="color:var(--teal-dd);font-weight:700">por tema</a></span></div>
+        <div class="sec-h"><h2 id="arq-t">Todas as matérias</h2><span class="cnt"><span id="bl-post-count">86 publicações</span> · <a href="/blog/todos/" style="color:var(--teal-txt);font-weight:700">arquivo completo</a> · <a href="/blog/temas/" style="color:var(--teal-txt);font-weight:700">por tema</a></span></div>
         <div class="filtros">
           <div class="f-row" role="group" aria-label="Filtrar por editoria"><button type="button" class="chip on" data-f="tema" data-v="" aria-pressed="true">Todas <span>86</span></button><button type="button" class="chip" data-f="tema" data-v="lingua" aria-pressed="false"><i class="d-lingua"></i>Língua &amp; Cultura <span>13</span></button><button type="button" class="chip" data-f="tema" data-v="educacao" aria-pressed="false"><i class="d-educacao"></i>Educação <span>11</span></button><button type="button" class="chip" data-f="tema" data-v="direitos" aria-pressed="false"><i class="d-direitos"></i>Direitos <span>13</span></button><button type="button" class="chip" data-f="tema" data-v="inclusao" aria-pressed="false"><i class="d-inclusao"></i>Acessibilidade <span>23</span></button><button type="button" class="chip" data-f="tema" data-v="cultura" aria-pressed="false"><i class="d-cultura"></i>Cultura <span>22</span></button><button type="button" class="chip" data-f="tema" data-v="esporte" aria-pressed="false"><i class="d-esporte"></i>Esporte <span>4</span></button></div>
           <div class="f-row" role="group" aria-label="Filtrar por ano"><button type="button" class="chip on" data-f="ano" data-v="" aria-pressed="true">Todos os anos</button><button type="button" class="chip" data-f="ano" data-v="2026" aria-pressed="false">2026 <span>20</span></button><button type="button" class="chip" data-f="ano" data-v="2025" aria-pressed="false">2025 <span>7</span></button><button type="button" class="chip" data-f="ano" data-v="2022" aria-pressed="false">2022 <span>47</span></button><button type="button" class="chip" data-f="ano" data-v="2021" aria-pressed="false">2021 <span>12</span></button><label class="ord">Ordem <select id="ordem"><option value="desc">Mais recentes</option><option value="asc">Mais antigas</option></select></label></div>
@@ -2369,7 +2369,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Oktoberfest de Blumenau estreia aplicativo e totens com tradução em Libras"></a>
-          <a href="/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/" class="bl-card__thumb" aria-label="Oktoberfest de Blumenau estreia aplicativo e totens com tradução em Libras">
+          <a href="/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/oktoberfest-de-blumenau-tem-aplicativo-com-libras-480.webp" srcset="/assets/img/blog/thumbs/oktoberfest-de-blumenau-tem-aplicativo-com-libras-480.webp 480w, /assets/img/blog/thumbs/oktoberfest-de-blumenau-tem-aplicativo-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/oktoberfest-de-blumenau-tem-aplicativo-com-libras.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2396,7 +2396,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/enem-2026-em-libras-videoprovas-para-treinar/" class="bl-card__link-cover" aria-label="Ler artigo: Enem 2026 em Libras: plataforma reúne todas as videoprovas desde 2017 para o candidato treinar"></a>
-          <a href="/blog/enem-2026-em-libras-videoprovas-para-treinar/" class="bl-card__thumb" aria-label="Enem 2026 em Libras: plataforma reúne todas as videoprovas desde 2017 para o candidato treinar">
+          <a href="/blog/enem-2026-em-libras-videoprovas-para-treinar/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/enem-2026-em-libras-videoprovas-para-treinar-480.webp" srcset="/assets/img/blog/thumbs/enem-2026-em-libras-videoprovas-para-treinar-480.webp 480w, /assets/img/blog/thumbs/enem-2026-em-libras-videoprovas-para-treinar-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/enem-2026-em-libras-videoprovas-para-treinar/enem-2026-em-libras-videoprovas-para-treinar.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -2423,7 +2423,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Quem ajudou a construir os estudos sobre Libras? A homenagem a Lucinda Ferreira"></a>
-          <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__thumb" aria-label="Quem ajudou a construir os estudos sobre Libras? A homenagem a Lucinda Ferreira">
+          <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp" srcset="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp 480w, /assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -2450,7 +2450,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__link-cover" aria-label="Ler artigo: O Brasil tem outras línguas de sinais além da Libras"></a>
-          <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__thumb" aria-label="O Brasil tem outras línguas de sinais além da Libras">
+          <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp" srcset="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp 480w, /assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -2477,7 +2477,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="esporte" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: Técnicos de futebol americano aprendem língua de sinais para treinar quarterback surdo"></a>
-          <a href="/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/" class="bl-card__thumb" aria-label="Técnicos de futebol americano aprendem língua de sinais para treinar quarterback surdo">
+          <a href="/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo-480.webp" srcset="/assets/img/blog/thumbs/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo-480.webp 480w, /assets/img/blog/thumbs/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo.jpg"></picture>
             <span class="bl-card__badge">Esporte</span>
           </a>
@@ -2504,7 +2504,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/" class="bl-card__link-cover" aria-label="Ler artigo: Óculos inteligentes colocam legenda e intérprete de língua de sinais na frente dos olhos"></a>
-          <a href="/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/" class="bl-card__thumb" aria-label="Óculos inteligentes colocam legenda e intérprete de língua de sinais na frente dos olhos">
+          <a href="/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais-480.webp" srcset="/assets/img/blog/thumbs/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais-480.webp 480w, /assets/img/blog/thumbs/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2531,7 +2531,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/margem-da-janela-de-libras-no-video/" class="bl-card__link-cover" aria-label="Ler artigo: Margem da janela de Libras: o que se usa de verdade e que área deixar livre"></a>
-          <a href="/blog/margem-da-janela-de-libras-no-video/" class="bl-card__thumb" aria-label="Margem da janela de Libras: o que se usa de verdade e que área deixar livre">
+          <a href="/blog/margem-da-janela-de-libras-no-video/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/margem-da-janela-de-libras-no-video-480.webp" srcset="/assets/img/blog/thumbs/margem-da-janela-de-libras-no-video-480.webp 480w, /assets/img/blog/thumbs/margem-da-janela-de-libras-no-video-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/margem-da-janela-de-libras-no-video/margem-da-janela-de-libras-no-video-og.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2558,7 +2558,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/" class="bl-card__link-cover" aria-label="Ler artigo: Benedita Casé protagoniza “90 Decibéis”, filme sobre surdez que chegou à TV aberta"></a>
-          <a href="/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/" class="bl-card__thumb" aria-label="Benedita Casé protagoniza “90 Decibéis”, filme sobre surdez que chegou à TV aberta">
+          <a href="/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez-480.webp" srcset="/assets/img/blog/thumbs/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez-480.webp 480w, /assets/img/blog/thumbs/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -2585,7 +2585,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada"></a>
-          <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__thumb" aria-label="Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada">
+          <a href="/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp" srcset="/assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-480.webp 480w, /assets/img/blog/thumbs/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -2612,7 +2612,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/" class="bl-card__link-cover" aria-label="Ler artigo: Grupo de K-pop surdo lança música com refrão em várias línguas de sinais"></a>
-          <a href="/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/" class="bl-card__thumb" aria-label="Grupo de K-pop surdo lança música com refrão em várias línguas de sinais">
+          <a href="/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais-480.webp" srcset="/assets/img/blog/thumbs/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais-480.webp 480w, /assets/img/blog/thumbs/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -2639,7 +2639,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/" class="bl-card__link-cover" aria-label="Ler artigo: Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA"></a>
-          <a href="/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/" class="bl-card__thumb" aria-label="Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA">
+          <a href="/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/chatbots-nao-entendem-como-pessoas-surdas-escrevem-480.webp" srcset="/assets/img/blog/thumbs/chatbots-nao-entendem-como-pessoas-surdas-escrevem-480.webp 480w, /assets/img/blog/thumbs/chatbots-nao-entendem-como-pessoas-surdas-escrevem-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/chatbots-nao-entendem-como-pessoas-surdas-escrevem.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2666,7 +2666,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras"></a>
-          <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__thumb" aria-label="Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras">
+          <a href="/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp" srcset="/assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-480.webp 480w, /assets/img/blog/thumbs/justica-anula-demissao-de-surdo-sem-interprete-de-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -2693,7 +2693,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/" class="bl-card__link-cover" aria-label="Ler artigo: Filme com protagonista surda chega aos cinemas com a Libras dentro da cena"></a>
-          <a href="/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/" class="bl-card__thumb" aria-label="Filme com protagonista surda chega aos cinemas com a Libras dentro da cena">
+          <a href="/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/filme-com-protagonista-surda-tem-libras-dentro-da-cena-480.webp" srcset="/assets/img/blog/thumbs/filme-com-protagonista-surda-tem-libras-dentro-da-cena-480.webp 480w, /assets/img/blog/thumbs/filme-com-protagonista-surda-tem-libras-dentro-da-cena-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/filme-com-protagonista-surda-tem-libras-dentro-da-cena.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -2720,7 +2720,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/" class="bl-card__link-cover" aria-label="Ler artigo: Vaticano passa a ter interpretação em Libras das audiências do Papa"></a>
-          <a href="/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/" class="bl-card__thumb" aria-label="Vaticano passa a ter interpretação em Libras das audiências do Papa">
+          <a href="/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa-480.webp" srcset="/assets/img/blog/thumbs/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa-480.webp 480w, /assets/img/blog/thumbs/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2747,7 +2747,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Casal surdo se casa em cerimônia toda em Libras no Paraná"></a>
-          <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__thumb" aria-label="Casal surdo se casa em cerimônia toda em Libras no Paraná">
+          <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp" srcset="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp 480w, /assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -2774,7 +2774,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: Namorada sinaliza o show inteiro para o namorado surdo e vídeo passa de 29 milhões de visualizações"></a>
-          <a href="/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/" class="bl-card__thumb" aria-label="Namorada sinaliza o show inteiro para o namorado surdo e vídeo passa de 29 milhões de visualizações">
+          <a href="/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/namorada-sinaliza-show-inteiro-para-namorado-surdo-480.webp" srcset="/assets/img/blog/thumbs/namorada-sinaliza-show-inteiro-para-namorado-surdo-480.webp 480w, /assets/img/blog/thumbs/namorada-sinaliza-show-inteiro-para-namorado-surdo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/namorada-sinaliza-show-inteiro-para-namorado-surdo.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -2801,7 +2801,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/bastidores-da-libras-no-rock-in-rio-2026/" class="bl-card__link-cover" aria-label="Ler artigo: Bastidores da Libras no Rock in Rio 2026: chroma key, revezamento a cada 10 minutos e tradução do inglês em tempo real"></a>
-          <a href="/blog/bastidores-da-libras-no-rock-in-rio-2026/" class="bl-card__thumb" aria-label="Bastidores da Libras no Rock in Rio 2026: chroma key, revezamento a cada 10 minutos e tradução do inglês em tempo real">
+          <a href="/blog/bastidores-da-libras-no-rock-in-rio-2026/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/bastidores-da-libras-no-rock-in-rio-2026-480.webp" srcset="/assets/img/blog/thumbs/bastidores-da-libras-no-rock-in-rio-2026-480.webp 480w, /assets/img/blog/thumbs/bastidores-da-libras-no-rock-in-rio-2026-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/bastidores-da-libras-no-rock-in-rio-2026/bastidores-da-libras-no-rock-in-rio-2026.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2828,7 +2828,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__link-cover" aria-label="Ler artigo: Intérprete de Libras pode ter que passar por prova prática para ser contratado"></a>
-          <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__thumb" aria-label="Intérprete de Libras pode ter que passar por prova prática para ser contratado">
+          <a href="/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp" srcset="/assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-480.webp 480w, /assets/img/blog/thumbs/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -2855,7 +2855,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__link-cover" aria-label="Ler artigo: Libras é reconhecida como língua de instrução em Belo Horizonte"></a>
-          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__thumb" aria-label="Libras é reconhecida como língua de instrução em Belo Horizonte">
+          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte-480.webp" srcset="/assets/img/blog/thumbs/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte-480.webp 480w, /assets/img/blog/thumbs/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -2882,7 +2882,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-que-e-libras/" class="bl-card__link-cover" aria-label="Ler artigo: O que é Libras? Entenda a Língua Brasileira de Sinais"></a>
-          <a href="/blog/o-que-e-libras/" class="bl-card__thumb" aria-label="O que é Libras? Entenda a Língua Brasileira de Sinais">
+          <a href="/blog/o-que-e-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-que-e-libras-480.webp" srcset="/assets/img/blog/thumbs/o-que-e-libras-480.webp 480w, /assets/img/blog/thumbs/o-que-e-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-que-e-libras/o-que-e-libras-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -2909,7 +2909,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__link-cover" aria-label="Ler artigo: Acessibilidade em eventos: como garantir interpretação em Libras sem improviso"></a>
-          <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__thumb" aria-label="Acessibilidade em eventos: como garantir interpretação em Libras sem improviso">
+          <a href="/blog/garantir-libras-sem-improviso/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/garantir-libras-sem-improviso-480.webp" srcset="/assets/img/blog/thumbs/garantir-libras-sem-improviso-480.webp 480w, /assets/img/blog/thumbs/garantir-libras-sem-improviso-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/garantir-libras-sem-improviso/garantir-libras-sem-improviso-og.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2936,7 +2936,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bl-card__link-cover" aria-label="Ler artigo: Libras ou legendas? Quando usar cada recurso de acessibilidade"></a>
-          <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bl-card__thumb" aria-label="Libras ou legendas? Quando usar cada recurso de acessibilidade">
+          <a href="/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado-480.webp" srcset="/assets/img/blog/thumbs/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado-480.webp 480w, /assets/img/blog/thumbs/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado-og.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -2963,7 +2963,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/videoaulas-acessiveis-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado"></a>
-          <a href="/blog/videoaulas-acessiveis-com-libras/" class="bl-card__thumb" aria-label="Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado">
+          <a href="/blog/videoaulas-acessiveis-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/videoaulas-acessiveis-com-libras-480.webp" srcset="/assets/img/blog/thumbs/videoaulas-acessiveis-com-libras-480.webp 480w, /assets/img/blog/thumbs/videoaulas-acessiveis-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras-og.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -2990,7 +2990,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Nacional da Libras: a lei de 2002, os avanços e o que ainda falta"></a>
-          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" aria-label="Dia Nacional da Libras: a lei de 2002, os avanços e o que ainda falta">
+          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-480.webp" srcset="/assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-480.webp 480w, /assets/img/blog/thumbs/dia-nacional-da-libras-inclusao-da-comunidade-surda-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3017,7 +3017,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/acessibilidade-em-eventos-para-pessoas-surdas/" class="bl-card__link-cover" aria-label="Ler artigo: Acessibilidade em eventos: por que a inclusão de surdos é essencial"></a>
-          <a href="/blog/acessibilidade-em-eventos-para-pessoas-surdas/" class="bl-card__thumb" aria-label="Acessibilidade em eventos: por que a inclusão de surdos é essencial">
+          <a href="/blog/acessibilidade-em-eventos-para-pessoas-surdas/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/acessibilidade-em-eventos-para-pessoas-surdas-480.webp" srcset="/assets/img/blog/thumbs/acessibilidade-em-eventos-para-pessoas-surdas-480.webp 480w, /assets/img/blog/thumbs/acessibilidade-em-eventos-para-pessoas-surdas-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/acessibilidade-em-eventos-para-pessoas-surdas/acessibilidade-em-eventos-para-pessoas-surdas.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3044,7 +3044,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/lingua-de-sinais-e-autismo/" class="bl-card__link-cover" aria-label="Ler artigo: Língua de sinais e autismo: como a Libras tem ajudado crianças com TEA"></a>
-          <a href="/blog/lingua-de-sinais-e-autismo/" class="bl-card__thumb" aria-label="Língua de sinais e autismo: como a Libras tem ajudado crianças com TEA">
+          <a href="/blog/lingua-de-sinais-e-autismo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/lingua-de-sinais-e-autismo-480.webp" srcset="/assets/img/blog/thumbs/lingua-de-sinais-e-autismo-480.webp 480w, /assets/img/blog/thumbs/lingua-de-sinais-e-autismo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/lingua-de-sinais-e-autismo/lingua-de-sinais-e-autismo.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3071,7 +3071,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__link-cover" aria-label="Ler artigo: Gestuante entra para a língua portuguesa: entenda o significado e o uso"></a>
-          <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__thumb" aria-label="Gestuante entra para a língua portuguesa: entenda o significado e o uso">
+          <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-480.webp" srcset="/assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-480.webp 480w, /assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/gestuante-entra-para-a-lingua-portuguesa/gestuante-entra-para-a-lingua-portuguesa-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -3098,7 +3098,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/" class="bl-card__link-cover" aria-label="Ler artigo: Curso de Papai Noel ensina Libras para o Natal de 2022"></a>
-          <a href="/blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/" class="bl-card__thumb" aria-label="Curso de Papai Noel ensina Libras para o Natal de 2022">
+          <a href="/blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022-480.webp" srcset="/assets/img/blog/thumbs/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022-480.webp 480w, /assets/img/blog/thumbs/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022/curso-de-papai-noel-ensina-libras-para-o-natal-de-2022.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3125,7 +3125,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Recenseadora entrevista mulher surda em Libras"></a>
-          <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__thumb" aria-label="Recenseadora entrevista mulher surda em Libras">
+          <a href="/blog/recenseadora-entrevista-mulher-surda-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-480.webp" srcset="/assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-480.webp 480w, /assets/img/blog/thumbs/recenseadora-entrevista-mulher-surda-em-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/recenseadora-entrevista-mulher-surda-em-libras/recenseadora-entrevista-mulher-surda-em-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3152,7 +3152,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/" class="bl-card__link-cover" aria-label="Ler artigo: Quadrinhos sobre língua de sinais indígena disputam &quot;Oscar&quot;"></a>
-          <a href="/blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/" class="bl-card__thumb" aria-label="Quadrinhos sobre língua de sinais indígena disputam &quot;Oscar&quot;">
+          <a href="/blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar-480.webp" srcset="/assets/img/blog/thumbs/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar-480.webp 480w, /assets/img/blog/thumbs/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar/quadrinhos-sobre-lingua-de-sinais-indigena-disputam-oscar.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3179,7 +3179,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: DF tem instrutor e examinador de trânsito surdo"></a>
-          <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__thumb" aria-label="DF tem instrutor e examinador de trânsito surdo">
+          <a href="/blog/df-tem-instrutor-e-examinador-de-transito-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-480.webp" srcset="/assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-480.webp 480w, /assets/img/blog/thumbs/df-tem-instrutor-e-examinador-de-transito-surdo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/df-tem-instrutor-e-examinador-de-transito-surdo/df-tem-instrutor-e-examinador-de-transito-surdo.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3206,7 +3206,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Projeto traduz poesias de Cruz e Souza para Libras"></a>
-          <a href="/blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/" class="bl-card__thumb" aria-label="Projeto traduz poesias de Cruz e Souza para Libras">
+          <a href="/blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/projeto-traduz-poesias-de-cruz-e-souza-para-libras-480.webp" srcset="/assets/img/blog/thumbs/projeto-traduz-poesias-de-cruz-e-souza-para-libras-480.webp 480w, /assets/img/blog/thumbs/projeto-traduz-poesias-de-cruz-e-souza-para-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/projeto-traduz-poesias-de-cruz-e-souza-para-libras/projeto-traduz-poesias-de-cruz-e-souza-para-libras.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3233,7 +3233,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/biblia-completamente-traduzida-para-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Bíblia é completamente traduzida para Libras"></a>
-          <a href="/blog/biblia-completamente-traduzida-para-libras/" class="bl-card__thumb" aria-label="Bíblia é completamente traduzida para Libras">
+          <a href="/blog/biblia-completamente-traduzida-para-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/biblia-completamente-traduzida-para-libras-480.webp" srcset="/assets/img/blog/thumbs/biblia-completamente-traduzida-para-libras-480.webp 480w, /assets/img/blog/thumbs/biblia-completamente-traduzida-para-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/biblia-completamente-traduzida-para-libras/biblia-completamente-traduzida-para-libras.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3260,7 +3260,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Nacional dos Surdos: conquistas e reflexões"></a>
-          <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__thumb" aria-label="Dia Nacional dos Surdos: conquistas e reflexões">
+          <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-480.webp" srcset="/assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-480.webp 480w, /assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/dia-nacional-dos-surdos-conquistas-e-reflexoes.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -3287,7 +3287,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__link-cover" aria-label="Ler artigo: Entrevista: &quot;Libras não é português com as mãos&quot;"></a>
-          <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__thumb" aria-label="Entrevista: &quot;Libras não é português com as mãos&quot;">
+          <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-480.webp" srcset="/assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-480.webp 480w, /assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/entrevista-libras-nao-e-portugues-com-as-maos/entrevista-libras-nao-e-portugues-com-as-maos.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -3314,7 +3314,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: O papel da Libras na inclusão do surdo"></a>
-          <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__thumb" aria-label="O papel da Libras na inclusão do surdo">
+          <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-480.webp" srcset="/assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-480.webp 480w, /assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-papel-da-libras-na-inclusao-do-surdo/o-papel-da-libras-na-inclusao-do-surdo.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -3341,7 +3341,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/" class="bl-card__link-cover" aria-label="Ler artigo: Tradutor de Libras se destaca no Rock in Rio"></a>
-          <a href="/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/" class="bl-card__thumb" aria-label="Tradutor de Libras se destaca no Rock in Rio">
+          <a href="/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/tradutor-de-libras-se-destaca-no-rock-in-rio-480.webp" srcset="/assets/img/blog/thumbs/tradutor-de-libras-se-destaca-no-rock-in-rio-480.webp 480w, /assets/img/blog/thumbs/tradutor-de-libras-se-destaca-no-rock-in-rio-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/tradutor-de-libras-se-destaca-no-rock-in-rio.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3368,7 +3368,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/" class="bl-card__link-cover" aria-label="Ler artigo: Reitor faz primeiro discurso em Libras em colação de grau"></a>
-          <a href="/blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/" class="bl-card__thumb" aria-label="Reitor faz primeiro discurso em Libras em colação de grau">
+          <a href="/blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau-480.webp" srcset="/assets/img/blog/thumbs/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau-480.webp 480w, /assets/img/blog/thumbs/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau/reitor-faz-primeiro-discurso-em-libras-em-colacao-de-grau.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3395,7 +3395,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/rock-in-rio-tem-show-de-rap-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Rock in Rio tem show de rap com Libras"></a>
-          <a href="/blog/rock-in-rio-tem-show-de-rap-com-libras/" class="bl-card__thumb" aria-label="Rock in Rio tem show de rap com Libras">
+          <a href="/blog/rock-in-rio-tem-show-de-rap-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/rock-in-rio-tem-show-de-rap-com-libras-480.webp" srcset="/assets/img/blog/thumbs/rock-in-rio-tem-show-de-rap-com-libras-480.webp 480w, /assets/img/blog/thumbs/rock-in-rio-tem-show-de-rap-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/rock-in-rio-tem-show-de-rap-com-libras/rock-in-rio-tem-show-de-rap-com-libras-og.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3422,7 +3422,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/tocantins-tem-libras-na-rede-estadual-de-ensino/" class="bl-card__link-cover" aria-label="Ler artigo: Tocantins tem Libras na rede estadual de ensino"></a>
-          <a href="/blog/tocantins-tem-libras-na-rede-estadual-de-ensino/" class="bl-card__thumb" aria-label="Tocantins tem Libras na rede estadual de ensino">
+          <a href="/blog/tocantins-tem-libras-na-rede-estadual-de-ensino/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/tocantins-tem-libras-na-rede-estadual-de-ensino-480.webp" srcset="/assets/img/blog/thumbs/tocantins-tem-libras-na-rede-estadual-de-ensino-480.webp 480w, /assets/img/blog/thumbs/tocantins-tem-libras-na-rede-estadual-de-ensino-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/tocantins-tem-libras-na-rede-estadual-de-ensino/tocantins-tem-libras-na-rede-estadual-de-ensino.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3449,7 +3449,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__link-cover" aria-label="Ler artigo: Disney e língua de sinais: personagens nos parques e jogos com Libras"></a>
-          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__thumb" aria-label="Disney e língua de sinais: personagens nos parques e jogos com Libras">
+          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico-480.webp" srcset="/assets/img/blog/thumbs/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico-480.webp 480w, /assets/img/blog/thumbs/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3476,7 +3476,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__link-cover" aria-label="Ler artigo: Projeto garante intérprete de Libras em hospitais"></a>
-          <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__thumb" aria-label="Projeto garante intérprete de Libras em hospitais">
+          <a href="/blog/projeto-garante-interprete-de-libras-em-hospitais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-480.webp" srcset="/assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-480.webp 480w, /assets/img/blog/thumbs/projeto-garante-interprete-de-libras-em-hospitais-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/projeto-garante-interprete-de-libras-em-hospitais/projeto-garante-interprete-de-libras-em-hospitais.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3503,7 +3503,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/professora-aprende-libras-para-se-comunicar-com-estudante/" class="bl-card__link-cover" aria-label="Ler artigo: Professora aprende Libras para se comunicar com estudante"></a>
-          <a href="/blog/professora-aprende-libras-para-se-comunicar-com-estudante/" class="bl-card__thumb" aria-label="Professora aprende Libras para se comunicar com estudante">
+          <a href="/blog/professora-aprende-libras-para-se-comunicar-com-estudante/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/professora-aprende-libras-para-se-comunicar-com-estudante-480.webp" srcset="/assets/img/blog/thumbs/professora-aprende-libras-para-se-comunicar-com-estudante-480.webp 480w, /assets/img/blog/thumbs/professora-aprende-libras-para-se-comunicar-com-estudante-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/professora-aprende-libras-para-se-comunicar-com-estudante/professora-aprende-libras-para-se-comunicar-com-estudante.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3530,7 +3530,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/crianca-surda-batizada-em-libras-em-caruaru/" class="bl-card__link-cover" aria-label="Ler artigo: Criança surda é batizada em Libras em Caruaru"></a>
-          <a href="/blog/crianca-surda-batizada-em-libras-em-caruaru/" class="bl-card__thumb" aria-label="Criança surda é batizada em Libras em Caruaru">
+          <a href="/blog/crianca-surda-batizada-em-libras-em-caruaru/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/crianca-surda-batizada-em-libras-em-caruaru-480.webp" srcset="/assets/img/blog/thumbs/crianca-surda-batizada-em-libras-em-caruaru-480.webp 480w, /assets/img/blog/thumbs/crianca-surda-batizada-em-libras-em-caruaru-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/crianca-surda-batizada-em-libras-em-caruaru/crianca-surda-batizada-em-libras-em-caruaru.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3557,7 +3557,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="esporte" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/atacante-do-flamengo-comemora-gol-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Atacante do Flamengo comemora gol em Libras"></a>
-          <a href="/blog/atacante-do-flamengo-comemora-gol-em-libras/" class="bl-card__thumb" aria-label="Atacante do Flamengo comemora gol em Libras">
+          <a href="/blog/atacante-do-flamengo-comemora-gol-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/atacante-do-flamengo-comemora-gol-em-libras-480.webp" srcset="/assets/img/blog/thumbs/atacante-do-flamengo-comemora-gol-em-libras-480.webp 480w, /assets/img/blog/thumbs/atacante-do-flamengo-comemora-gol-em-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/atacante-do-flamengo-comemora-gol-em-libras/atacante-do-flamengo-comemora-gol-em-libras.jpg"></picture>
             <span class="bl-card__badge">Esporte</span>
           </a>
@@ -3584,7 +3584,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/passatempo-tera-biscoitos-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Passatempo terá biscoitos com Libras"></a>
-          <a href="/blog/passatempo-tera-biscoitos-com-libras/" class="bl-card__thumb" aria-label="Passatempo terá biscoitos com Libras">
+          <a href="/blog/passatempo-tera-biscoitos-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/passatempo-tera-biscoitos-com-libras-480.webp" srcset="/assets/img/blog/thumbs/passatempo-tera-biscoitos-com-libras-480.webp 480w, /assets/img/blog/thumbs/passatempo-tera-biscoitos-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/passatempo-tera-biscoitos-com-libras/passatempo-tera-biscoitos-com-libras.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3611,7 +3611,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/influenciadores-surdos-relatam-dificuldade-com-publis/" class="bl-card__link-cover" aria-label="Ler artigo: Influenciadores surdos relatam dificuldade com publis"></a>
-          <a href="/blog/influenciadores-surdos-relatam-dificuldade-com-publis/" class="bl-card__thumb" aria-label="Influenciadores surdos relatam dificuldade com publis">
+          <a href="/blog/influenciadores-surdos-relatam-dificuldade-com-publis/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/influenciadores-surdos-relatam-dificuldade-com-publis-480.webp" srcset="/assets/img/blog/thumbs/influenciadores-surdos-relatam-dificuldade-com-publis-480.webp 480w, /assets/img/blog/thumbs/influenciadores-surdos-relatam-dificuldade-com-publis-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/influenciadores-surdos-relatam-dificuldade-com-publis/influenciadores-surdos-relatam-dificuldade-com-publis.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3638,7 +3638,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/" class="bl-card__link-cover" aria-label="Ler artigo: ‘Librando’: jogo propõe inclusão e aprendizado ao brincar"></a>
-          <a href="/blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/" class="bl-card__thumb" aria-label="‘Librando’: jogo propõe inclusão e aprendizado ao brincar">
+          <a href="/blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar-480.webp" srcset="/assets/img/blog/thumbs/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar-480.webp 480w, /assets/img/blog/thumbs/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar/librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3665,7 +3665,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__link-cover" aria-label="Ler artigo: Uso de Libras em propaganda eleitoral é obrigatório"></a>
-          <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__thumb" aria-label="Uso de Libras em propaganda eleitoral é obrigatório">
+          <a href="/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-480.webp" srcset="/assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-480.webp 480w, /assets/img/blog/thumbs/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio/uso-de-libras-em-propaganda-eleitoral-e-obrigatorio.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3692,7 +3692,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/" class="bl-card__link-cover" aria-label="Ler artigo: Libras na quebrada: como a língua de sinais chega na periferia"></a>
-          <a href="/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/" class="bl-card__thumb" aria-label="Libras na quebrada: como a língua de sinais chega na periferia">
+          <a href="/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia-480.webp" srcset="/assets/img/blog/thumbs/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia-480.webp 480w, /assets/img/blog/thumbs/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3719,7 +3719,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/papel-do-interprete-de-libras-na-escola-bilingue/" class="bl-card__link-cover" aria-label="Ler artigo: Papel do intérprete de Libras na escola bilíngue"></a>
-          <a href="/blog/papel-do-interprete-de-libras-na-escola-bilingue/" class="bl-card__thumb" aria-label="Papel do intérprete de Libras na escola bilíngue">
+          <a href="/blog/papel-do-interprete-de-libras-na-escola-bilingue/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/papel-do-interprete-de-libras-na-escola-bilingue-480.webp" srcset="/assets/img/blog/thumbs/papel-do-interprete-de-libras-na-escola-bilingue-480.webp 480w, /assets/img/blog/thumbs/papel-do-interprete-de-libras-na-escola-bilingue-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/papel-do-interprete-de-libras-na-escola-bilingue/papel-do-interprete-de-libras-na-escola-bilingue.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3746,7 +3746,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: Deficiente auditivo adota cão abandonado por ser surdo"></a>
-          <a href="/blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/" class="bl-card__thumb" aria-label="Deficiente auditivo adota cão abandonado por ser surdo">
+          <a href="/blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo-480.webp" srcset="/assets/img/blog/thumbs/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo-480.webp 480w, /assets/img/blog/thumbs/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo/deficiente-auditivo-adota-cao-abandonado-por-ser-surdo.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3773,7 +3773,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__link-cover" aria-label="Ler artigo: Libras pode ser reconhecida como Referência Cultural"></a>
-          <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__thumb" aria-label="Libras pode ser reconhecida como Referência Cultural">
+          <a href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-480.webp" srcset="/assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-480.webp 480w, /assets/img/blog/thumbs/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3800,7 +3800,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Urnas eletrônicas terão vídeo com Libras"></a>
-          <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__thumb" aria-label="Urnas eletrônicas terão vídeo com Libras">
+          <a href="/blog/urnas-eletronicas-terao-video-com-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-480.webp" srcset="/assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-480.webp 480w, /assets/img/blog/thumbs/urnas-eletronicas-terao-video-com-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/urnas-eletronicas-terao-video-com-libras/urnas-eletronicas-terao-video-com-libras.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3827,7 +3827,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/com-libras-inclusao-marca-sao-joao-de-caruaru/" class="bl-card__link-cover" aria-label="Ler artigo: Com Libras, inclusão marca São João de Caruaru"></a>
-          <a href="/blog/com-libras-inclusao-marca-sao-joao-de-caruaru/" class="bl-card__thumb" aria-label="Com Libras, inclusão marca São João de Caruaru">
+          <a href="/blog/com-libras-inclusao-marca-sao-joao-de-caruaru/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/com-libras-inclusao-marca-sao-joao-de-caruaru-480.webp" srcset="/assets/img/blog/thumbs/com-libras-inclusao-marca-sao-joao-de-caruaru-480.webp 480w, /assets/img/blog/thumbs/com-libras-inclusao-marca-sao-joao-de-caruaru-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/com-libras-inclusao-marca-sao-joao-de-caruaru/com-libras-inclusao-marca-sao-joao-de-caruaru.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3854,7 +3854,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/idoso-estuda-lingua-de-sinais-por-sobrinha/" class="bl-card__link-cover" aria-label="Ler artigo: Idoso estuda língua de sinais por causa de sobrinha"></a>
-          <a href="/blog/idoso-estuda-lingua-de-sinais-por-sobrinha/" class="bl-card__thumb" aria-label="Idoso estuda língua de sinais por causa de sobrinha">
+          <a href="/blog/idoso-estuda-lingua-de-sinais-por-sobrinha/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/idoso-estuda-lingua-de-sinais-por-sobrinha-480.webp" srcset="/assets/img/blog/thumbs/idoso-estuda-lingua-de-sinais-por-sobrinha-480.webp 480w, /assets/img/blog/thumbs/idoso-estuda-lingua-de-sinais-por-sobrinha-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/idoso-estuda-lingua-de-sinais-por-sobrinha/idoso-estuda-lingua-de-sinais-por-sobrinha.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -3881,7 +3881,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/" class="bl-card__link-cover" aria-label="Ler artigo: Inovação: o caminho para avançar em acessibilidade"></a>
-          <a href="/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/" class="bl-card__thumb" aria-label="Inovação: o caminho para avançar em acessibilidade">
+          <a href="/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade-480.webp" srcset="/assets/img/blog/thumbs/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade-480.webp 480w, /assets/img/blog/thumbs/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3908,7 +3908,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__link-cover" aria-label="Ler artigo: Libras não é a segunda língua oficial do Brasil: entenda a lei"></a>
-          <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__thumb" aria-label="Libras não é a segunda língua oficial do Brasil: entenda a lei">
+          <a href="/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-480.webp" srcset="/assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-480.webp 480w, /assets/img/blog/thumbs/libras-nao-e-segunda-lingua-oficial-do-brasil-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-nao-e-segunda-lingua-oficial-do-brasil/libras-nao-e-segunda-lingua-oficial-do-brasil.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -3935,7 +3935,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/" class="bl-card__link-cover" aria-label="Ler artigo: Surdos: você precisa saber se comunicar com eles"></a>
-          <a href="/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/" class="bl-card__thumb" aria-label="Surdos: você precisa saber se comunicar com eles">
+          <a href="/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/surdos-voce-precisa-saber-se-comunicar-com-eles-480.webp" srcset="/assets/img/blog/thumbs/surdos-voce-precisa-saber-se-comunicar-com-eles-480.webp 480w, /assets/img/blog/thumbs/surdos-voce-precisa-saber-se-comunicar-com-eles-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/surdos-voce-precisa-saber-se-comunicar-com-eles/surdos-voce-precisa-saber-se-comunicar-com-eles.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -3962,7 +3962,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/" class="bl-card__link-cover" aria-label="Ler artigo: Com Libras, quadrilha junina vence concurso no Maranhão"></a>
-          <a href="/blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/" class="bl-card__thumb" aria-label="Com Libras, quadrilha junina vence concurso no Maranhão">
+          <a href="/blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/com-libras-quadrilha-junina-vence-concurso-no-maranhao-480.webp" srcset="/assets/img/blog/thumbs/com-libras-quadrilha-junina-vence-concurso-no-maranhao-480.webp 480w, /assets/img/blog/thumbs/com-libras-quadrilha-junina-vence-concurso-no-maranhao-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/com-libras-quadrilha-junina-vence-concurso-no-maranhao/com-libras-quadrilha-junina-vence-concurso-no-maranhao.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -3989,7 +3989,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__link-cover" aria-label="Ler artigo: Intérpretes de Libras traduzem partos para pais surdos"></a>
-          <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__thumb" aria-label="Intérpretes de Libras traduzem partos para pais surdos">
+          <a href="/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-480.webp" srcset="/assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-480.webp 480w, /assets/img/blog/thumbs/interpretes-de-libras-traduzem-partos-para-pais-surdos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/interpretes-de-libras-traduzem-partos-para-pais-surdos/interpretes-de-libras-traduzem-partos-para-pais-surdos.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -4016,7 +4016,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/" class="bl-card__link-cover" aria-label="Ler artigo: Sueli: a primeira personagem surda da Turma da Mônica"></a>
-          <a href="/blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/" class="bl-card__thumb" aria-label="Sueli: a primeira personagem surda da Turma da Mônica">
+          <a href="/blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/sueli-a-primeira-personagem-surda-da-turma-da-monica-480.webp" srcset="/assets/img/blog/thumbs/sueli-a-primeira-personagem-surda-da-turma-da-monica-480.webp 480w, /assets/img/blog/thumbs/sueli-a-primeira-personagem-surda-da-turma-da-monica-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/sueli-a-primeira-personagem-surda-da-turma-da-monica/sueli-a-primeira-personagem-surda-da-turma-da-monica.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4043,7 +4043,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="esporte" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__link-cover" aria-label="Ler artigo: Surdolimpíadas: os jogos dos surdos e por que eles não estão nas Paralimpíadas"></a>
-          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__thumb" aria-label="Surdolimpíadas: os jogos dos surdos e por que eles não estão nas Paralimpíadas">
+          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos-480.webp" srcset="/assets/img/blog/thumbs/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos-480.webp 480w, /assets/img/blog/thumbs/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos.jpg"></picture>
             <span class="bl-card__badge">Esporte</span>
           </a>
@@ -4070,7 +4070,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="educacao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/doutora-surda-defendeu-tese-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Doutora surda defendeu tese em Libras"></a>
-          <a href="/blog/doutora-surda-defendeu-tese-em-libras/" class="bl-card__thumb" aria-label="Doutora surda defendeu tese em Libras">
+          <a href="/blog/doutora-surda-defendeu-tese-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/doutora-surda-defendeu-tese-em-libras-480.webp" srcset="/assets/img/blog/thumbs/doutora-surda-defendeu-tese-em-libras-480.webp 480w, /assets/img/blog/thumbs/doutora-surda-defendeu-tese-em-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/doutora-surda-defendeu-tese-em-libras/doutora-surda-defendeu-tese-em-libras.jpg"></picture>
             <span class="bl-card__badge">Educação</span>
           </a>
@@ -4097,7 +4097,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/" class="bl-card__link-cover" aria-label="Ler artigo: Rosas de Ouro leva Libras pro carnaval paulista"></a>
-          <a href="/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/" class="bl-card__thumb" aria-label="Rosas de Ouro leva Libras pro carnaval paulista">
+          <a href="/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/rosas-de-ouro-leva-libras-pro-carnaval-paulista-480.webp" srcset="/assets/img/blog/thumbs/rosas-de-ouro-leva-libras-pro-carnaval-paulista-480.webp 480w, /assets/img/blog/thumbs/rosas-de-ouro-leva-libras-pro-carnaval-paulista-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/rosas-de-ouro-leva-libras-pro-carnaval-paulista.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4124,7 +4124,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="direitos" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__link-cover" aria-label="Ler artigo: “Surdos são estrangeiros na própria pátria”"></a>
-          <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__thumb" aria-label="“Surdos são estrangeiros na própria pátria”">
+          <a href="/blog/surdos-estrangeiros-na-propria-patria/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-480.webp" srcset="/assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-480.webp 480w, /assets/img/blog/thumbs/surdos-estrangeiros-na-propria-patria-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/surdos-estrangeiros-na-propria-patria/surdos-estrangeiros-na-propria-patria.jpg"></picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -4151,7 +4151,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/conheca-a-primeira-dupla-musical-de-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Conheça a primeira dupla musical de Libras"></a>
-          <a href="/blog/conheca-a-primeira-dupla-musical-de-libras/" class="bl-card__thumb" aria-label="Conheça a primeira dupla musical de Libras">
+          <a href="/blog/conheca-a-primeira-dupla-musical-de-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/conheca-a-primeira-dupla-musical-de-libras-480.webp" srcset="/assets/img/blog/thumbs/conheca-a-primeira-dupla-musical-de-libras-480.webp 480w, /assets/img/blog/thumbs/conheca-a-primeira-dupla-musical-de-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/conheca-a-primeira-dupla-musical-de-libras/conheca-a-primeira-dupla-musical-de-libras.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4178,7 +4178,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="esporte" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/futebol-paixao-nacional-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Futebol, uma paixão nacional também em Libras"></a>
-          <a href="/blog/futebol-paixao-nacional-libras/" class="bl-card__thumb" aria-label="Futebol, uma paixão nacional também em Libras">
+          <a href="/blog/futebol-paixao-nacional-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/futebol-paixao-nacional-libras-480.webp" srcset="/assets/img/blog/thumbs/futebol-paixao-nacional-libras-480.webp 480w, /assets/img/blog/thumbs/futebol-paixao-nacional-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/futebol-paixao-nacional-libras/futebol-paixao-nacional-libras.jpg"></picture>
             <span class="bl-card__badge">Esporte</span>
           </a>
@@ -4205,7 +4205,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/" class="bl-card__link-cover" aria-label="Ler artigo: Vencedor do Oscar ajudou a criar sinais de “Mandalorian”"></a>
-          <a href="/blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/" class="bl-card__thumb" aria-label="Vencedor do Oscar ajudou a criar sinais de “Mandalorian”">
+          <a href="/blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian-480.webp" srcset="/assets/img/blog/thumbs/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian-480.webp 480w, /assets/img/blog/thumbs/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian/vencedor-do-oscar-ajudou-a-criar-sinais-de-the-mandalorian.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4232,7 +4232,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/" class="bl-card__link-cover" aria-label="Ler artigo: Drag surda faz sucesso com Libras no YouTube"></a>
-          <a href="/blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/" class="bl-card__thumb" aria-label="Drag surda faz sucesso com Libras no YouTube">
+          <a href="/blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/drag-queen-surda-faz-sucesso-com-libras-no-youtube-480.webp" srcset="/assets/img/blog/thumbs/drag-queen-surda-faz-sucesso-com-libras-no-youtube-480.webp 480w, /assets/img/blog/thumbs/drag-queen-surda-faz-sucesso-com-libras-no-youtube-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/drag-queen-surda-faz-sucesso-com-libras-no-youtube/drag-queen-surda-faz-sucesso-com-libras-no-youtube.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4259,7 +4259,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/" class="bl-card__link-cover" aria-label="Ler artigo: Oscar: o melhor filme do mundo é sobre surdez"></a>
-          <a href="/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/" class="bl-card__thumb" aria-label="Oscar: o melhor filme do mundo é sobre surdez">
+          <a href="/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/oscar-coda-melhor-filme-do-mundo-sobre-surdez-480.webp" srcset="/assets/img/blog/thumbs/oscar-coda-melhor-filme-do-mundo-sobre-surdez-480.webp 480w, /assets/img/blog/thumbs/oscar-coda-melhor-filme-do-mundo-sobre-surdez-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/oscar-coda-melhor-filme-do-mundo-sobre-surdez.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4286,7 +4286,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-papel-do-interprete-de-libras-na-sociedade/" class="bl-card__link-cover" aria-label="Ler artigo: O papel do intérprete de Libras na sociedade"></a>
-          <a href="/blog/o-papel-do-interprete-de-libras-na-sociedade/" class="bl-card__thumb" aria-label="O papel do intérprete de Libras na sociedade">
+          <a href="/blog/o-papel-do-interprete-de-libras-na-sociedade/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-papel-do-interprete-de-libras-na-sociedade-480.webp" srcset="/assets/img/blog/thumbs/o-papel-do-interprete-de-libras-na-sociedade-480.webp 480w, /assets/img/blog/thumbs/o-papel-do-interprete-de-libras-na-sociedade-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-papel-do-interprete-de-libras-na-sociedade/o-papel-do-interprete-de-libras-na-sociedade.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4313,7 +4313,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-que-e-capacitismo/" class="bl-card__link-cover" aria-label="Ler artigo: Você sabe o que é capacitismo?"></a>
-          <a href="/blog/o-que-e-capacitismo/" class="bl-card__thumb" aria-label="Você sabe o que é capacitismo?">
+          <a href="/blog/o-que-e-capacitismo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-que-e-capacitismo-480.webp" srcset="/assets/img/blog/thumbs/o-que-e-capacitismo-480.webp 480w, /assets/img/blog/thumbs/o-que-e-capacitismo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-que-e-capacitismo/o-que-e-capacitismo.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4340,7 +4340,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/makkari-a-super-heroina-surda/" class="bl-card__link-cover" aria-label="Ler artigo: Makkari: a super-heroína surda"></a>
-          <a href="/blog/makkari-a-super-heroina-surda/" class="bl-card__thumb" aria-label="Makkari: a super-heroína surda">
+          <a href="/blog/makkari-a-super-heroina-surda/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/makkari-a-super-heroina-surda-480.webp" srcset="/assets/img/blog/thumbs/makkari-a-super-heroina-surda-480.webp 480w, /assets/img/blog/thumbs/makkari-a-super-heroina-surda-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/makkari-a-super-heroina-surda/makkari-a-super-heroina-surda.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4367,7 +4367,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Internacional das Línguas de Sinais"></a>
-          <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__thumb" aria-label="Dia Internacional das Línguas de Sinais">
+          <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-480.webp" srcset="/assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-480.webp 480w, /assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-internacional-das-linguas-de-sinais/dia-internacional-das-linguas-de-sinais.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -4394,7 +4394,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Como são criados os sinais de pessoas na Libras?"></a>
-          <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__thumb" aria-label="Como são criados os sinais de pessoas na Libras?">
+          <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-480.webp" srcset="/assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-480.webp 480w, /assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/como-sao-criados-sinais-de-pessoas-na-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -4421,7 +4421,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__link-cover" aria-label="Ler artigo: Datilologia: o alfabeto manual da Libras explicado"></a>
-          <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" aria-label="Datilologia: o alfabeto manual da Libras explicado">
+          <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-480.webp" srcset="/assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-480.webp 480w, /assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -4448,7 +4448,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__link-cover" aria-label="Ler artigo: Janela de Libras em vídeos: por que incluir e 4 erros a evitar"></a>
-          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__thumb" aria-label="Janela de Libras em vídeos: por que incluir e 4 erros a evitar">
+          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/por-que-incluir-janela-de-libras-em-videos-480.webp" srcset="/assets/img/blog/thumbs/por-que-incluir-janela-de-libras-em-videos-480.webp 480w, /assets/img/blog/thumbs/por-que-incluir-janela-de-libras-em-videos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4475,7 +4475,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__link-cover" aria-label="Ler artigo: Entenda por que é errado o termo surdo-mudo"></a>
-          <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__thumb" aria-label="Entenda por que é errado o termo surdo-mudo">
+          <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-480.webp" srcset="/assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-480.webp 480w, /assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/entenda-porque-e-errado-o-termo-surdo-mudo/entenda-porque-e-errado-o-termo-surdo-mudo.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -4502,7 +4502,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/documentarios-sobre-surdez-gratis-youtube/" class="bl-card__link-cover" aria-label="Ler artigo: Três documentários sobre surdez grátis no YouTube"></a>
-          <a href="/blog/documentarios-sobre-surdez-gratis-youtube/" class="bl-card__thumb" aria-label="Três documentários sobre surdez grátis no YouTube">
+          <a href="/blog/documentarios-sobre-surdez-gratis-youtube/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/documentarios-sobre-surdez-gratis-youtube-480.webp" srcset="/assets/img/blog/thumbs/documentarios-sobre-surdez-gratis-youtube-480.webp 480w, /assets/img/blog/thumbs/documentarios-sobre-surdez-gratis-youtube-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/documentarios-sobre-surdez-gratis-youtube/documentarios-sobre-surdez-gratis-youtube.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4529,7 +4529,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="cultura" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/" class="bl-card__link-cover" aria-label="Ler artigo: O que o filme ganhador do Oscar ensina sobre Libras"></a>
-          <a href="/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/" class="bl-card__thumb" aria-label="O que o filme ganhador do Oscar ensina sobre Libras">
+          <a href="/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras-480.webp" srcset="/assets/img/blog/thumbs/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras-480.webp 480w, /assets/img/blog/thumbs/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras.jpg"></picture>
             <span class="bl-card__badge">Cultura</span>
           </a>
@@ -4556,7 +4556,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/responsavel-pelo-que-entendem/" class="bl-card__link-cover" aria-label="Ler artigo: Você é responsável pelo que entendem"></a>
-          <a href="/blog/responsavel-pelo-que-entendem/" class="bl-card__thumb" aria-label="Você é responsável pelo que entendem">
+          <a href="/blog/responsavel-pelo-que-entendem/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/responsavel-pelo-que-entendem-480.webp" srcset="/assets/img/blog/thumbs/responsavel-pelo-que-entendem-480.webp 480w, /assets/img/blog/thumbs/responsavel-pelo-que-entendem-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/responsavel-pelo-que-entendem/responsavel-pelo-que-entendem.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4583,7 +4583,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/4-marcas-que-investem-em-libras-nos-videos/" class="bl-card__link-cover" aria-label="Ler artigo: 4 marcas que investem em Libras nos vídeos"></a>
-          <a href="/blog/4-marcas-que-investem-em-libras-nos-videos/" class="bl-card__thumb" aria-label="4 marcas que investem em Libras nos vídeos">
+          <a href="/blog/4-marcas-que-investem-em-libras-nos-videos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/4-marcas-que-investem-em-libras-nos-videos-480.webp" srcset="/assets/img/blog/thumbs/4-marcas-que-investem-em-libras-nos-videos-480.webp 480w, /assets/img/blog/thumbs/4-marcas-que-investem-em-libras-nos-videos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/4-marcas-que-investem-em-libras-nos-videos/4-marcas-que-investem-em-libras-nos-videos.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4610,7 +4610,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/4-dicas-para-ser-mais-inclusivo-na-internet/" class="bl-card__link-cover" aria-label="Ler artigo: 4 dicas para ser mais inclusivo na internet"></a>
-          <a href="/blog/4-dicas-para-ser-mais-inclusivo-na-internet/" class="bl-card__thumb" aria-label="4 dicas para ser mais inclusivo na internet">
+          <a href="/blog/4-dicas-para-ser-mais-inclusivo-na-internet/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/4-dicas-para-ser-mais-inclusivo-na-internet-480.webp" srcset="/assets/img/blog/thumbs/4-dicas-para-ser-mais-inclusivo-na-internet-480.webp 480w, /assets/img/blog/thumbs/4-dicas-para-ser-mais-inclusivo-na-internet-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/4-dicas-para-ser-mais-inclusivo-na-internet/4-dicas-para-ser-mais-inclusivo-na-internet.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4637,7 +4637,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__link-cover" aria-label="Ler artigo: Libras tem sotaque e gíria? Entenda as variações regionais"></a>
-          <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__thumb" aria-label="Libras tem sotaque e gíria? Entenda as variações regionais">
+          <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-tem-sotaque-e-giria-480.webp" srcset="/assets/img/blog/thumbs/libras-tem-sotaque-e-giria-480.webp 480w, /assets/img/blog/thumbs/libras-tem-sotaque-e-giria-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-tem-sotaque-e-giria/libras-tem-sotaque-e-giria.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -4664,7 +4664,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/manifesto-por-libras-em-videos/" class="bl-card__link-cover" aria-label="Ler artigo: Manifesto por Libras em vídeos"></a>
-          <a href="/blog/manifesto-por-libras-em-videos/" class="bl-card__thumb" aria-label="Manifesto por Libras em vídeos">
+          <a href="/blog/manifesto-por-libras-em-videos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/manifesto-por-libras-em-videos-480.webp" srcset="/assets/img/blog/thumbs/manifesto-por-libras-em-videos-480.webp 480w, /assets/img/blog/thumbs/manifesto-por-libras-em-videos-960.webp 960w" sizes="(max-width:700px) 92vw, 250px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/manifesto-por-libras-em-videos/manifesto-por-libras-em-videos.jpg"></picture>
             <span class="bl-card__badge">Acessibilidade</span>
           </a>
@@ -4943,7 +4943,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (!q) { sbRes.classList.remove('show'); sbIn.setAttribute('aria-expanded', 'false'); return; }
     var r = SINAIS.filter(function(s){ return semAcento(s.p).indexOf(q) >= 0 || semAcento(s.c).indexOf(q) >= 0; }).slice(0, 8);
     sbRes.innerHTML = r.length ? r.map(function(s, i){ return '<a role="option" id="sbo' + i + '" href="/sinal/' + s.s + '/"><img src="' + VID + s.s + '.webp" alt="" loading="lazy"><span>' + s.p + '<small>' + s.c + '</small></span></a>'; }).join('')
-      : '<p class="vazio">Ainda não temos esse sinal em vídeo. Veja o <a href="/sinal/" style="color:var(--teal-dd);font-weight:700">vocabulário completo</a> ou soletre com o <a href="/aprender-libras/alfabeto-em-libras/" style="color:var(--teal-dd);font-weight:700">alfabeto</a>.</p>';
+      : '<p class="vazio">Ainda não temos esse sinal em vídeo. Veja o <a href="/sinal/" style="color:var(--teal-txt);font-weight:700">vocabulário completo</a> ou soletre com o <a href="/aprender-libras/alfabeto-em-libras/" style="color:var(--teal-txt);font-weight:700">alfabeto</a>.</p>';
     sbRes.classList.add('show'); sbIn.setAttribute('aria-expanded', 'true'); foco = -1;
   }
   sbIn.addEventListener('input', sbRender);

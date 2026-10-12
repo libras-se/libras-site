@@ -118,7 +118,7 @@ def cartao(slug, art, tema, antigo=None):
           data-cat="{attrs.get("data-cat", "acessibilidade")}"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/{slug}/" class="bl-card__link-cover" aria-label="Ler artigo: {esc(titulo)}"></a>
-          <a href="/blog/{slug}/" class="bl-card__thumb" aria-label="{esc(titulo)}">
+          <a href="/blog/{slug}/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             {miniatura_html(slug, capa_do_post(art))}
             <span class="bl-card__badge">{esc(CFG["temas"][tema]["curto"])}</span>
           </a>
@@ -215,6 +215,25 @@ def capa_destaque(p):
     foco = tuple(float(v.rstrip("%")) / 100 for v in pos.split())
     capa = {**p, "img": c["img"], "thumb": Path(c["img"]).stem, "foco": foco}
     return capa, tuple(sorted({min(960, w), min(1600, w)})), pos
+
+
+def cor_texto(cor, fundos=("#ffffff", "#f0fafa", "#e8f6f5")):
+    """A cor da editoria escurecida (rumo a #0e3538) até passar de 4,5:1 nos fundos do blog: o rótulo em texto
+    precisa de contraste; a bolinha e as barras seguem com a cor original."""
+    def lum(c):
+        r, g, b = (int(c[i:i + 2], 16) / 255 for i in (1, 3, 5))
+        f = lambda v: v / 12.92 if v <= .03928 else ((v + .055) / 1.055) ** 2.4
+        return .2126 * f(r) + .7152 * f(g) + .0722 * f(b)
+
+    def razao(a, b):
+        la, lb = sorted((lum(a), lum(b)), reverse=True)
+        return (la + .05) / (lb + .05)
+    for passo in range(51):
+        t = passo / 50
+        c = "#" + "".join(f"{round(int(cor[i:i + 2], 16) * (1 - t) + int('0e3538'[i - 1:i + 1], 16) * t):02x}" for i in (1, 3, 5))
+        if min(razao(c, f) for f in fundos) >= 4.6:
+            return c
+    return "#0e3538"
 
 
 def tema_tag(t, curto=True):
@@ -315,8 +334,8 @@ def render(posts, cards_feed, total, jsonld):
         f'<button type="button" class="chip" data-f="ano" data-v="{a}" aria-pressed="false">{a} <span>{sum(1 for p in posts if p["data"].year == a)}</span></button>' for a in anos)
 
     c = contagens()
-    tema_css = "".join(f".k-{k}{{color:{i['cor']}}}.d-{k}{{background:{i['cor']}}}"
-                       f".feed .bl-card[data-tema=\"{k}\"] .bl-card__meta::before{{content:\"{i['curto']}\";color:{i['cor']}}}"
+    tema_css = "".join(f".k-{k}{{color:{cor_texto(i['cor'])}}}.d-{k}{{background:{i['cor']}}}"
+                       f".feed .bl-card[data-tema=\"{k}\"] .bl-card__meta::before{{content:\"{i['curto']}\";color:{cor_texto(i['cor'])}}}"
                        for k, i in CFG["temas"].items())
     rep = {
         "TEMA_CSS": tema_css,
@@ -342,6 +361,7 @@ def render(posts, cards_feed, total, jsonld):
 def cabecalho():
     h = PARTIALS["header_html"]
     h = h.replace("estava+no+site+do+Libras.se", "estava+no+blog+do+Libras.se")
+    h = re.sub(r'(<a href="/" class="nlogo" aria-label=")[^"]*"', r'\1LIBRAS.SE Blog, página inicial do site"', h, count=1)
     h = h.replace('<span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>',
                   '<span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>\n        <span class="nsub" aria-hidden="true">Blog</span>')
     h = h.replace('<li><a href="https://libras.se/blog">Blog</a></li>', '<li><a href="/blog/" aria-current="page">Blog</a></li>')
@@ -363,6 +383,17 @@ def itemlist_ld(cards_ordem, arts):
     return '<script type="application/ld+json">\n' + json.dumps(graph, ensure_ascii=False, indent=2) + "\n</script>"
 
 
+def acima_da_dobra(cards, n=3):
+    """Os primeiros cartões de uma grade aparecem sem rolar: carregam já, e o primeiro com prioridade
+    (é o LCP de /todos/ e das editorias; com loading=lazy o LCP chegava a 6 s no celular)."""
+    out = []
+    for i, c in enumerate(cards):
+        if i < n:
+            c = c.replace('loading="lazy"', 'loading="eager"' + (' fetchpriority="high"' if i == 0 else ""), 1)
+        out.append(c)
+    return out
+
+
 def compacto(card):
     card = re.sub(r'class="bl-card[^"]*"', 'class="bl-card bl-card--sm rv"', card, count=1)
     return card.replace('loading="eager"', 'loading="lazy"').replace(' fetchpriority="high"', "").replace(SIZES_FEED, SIZES_GRADE)
@@ -374,8 +405,10 @@ def derivadas(cards, ordem, temas_de):
     p = ROOT / "blog/todos/index.html"
     t = p.read_text()
     t = re.sub(r'(<div class="bl-grid" id="bl-all-grid">)[\s\S]*?(</div>\s*<p class="bl-no-results")',
-               lambda m: m[1] + "\n" + "\n".join(comp[s] for s in ordem) + "\n    " + m[2], t, count=1)
+               lambda m: m[1] + "\n" + "\n".join(acima_da_dobra([comp[s] for s in ordem])) + "\n    " + m[2], t, count=1)
     t = re.sub(r'(<p id="bl-post-count"[^>]*>)[^<]*(</p>)', lambda m: m[1] + f"{len(cards)} publicações" + m[2], t)
+    if 'id="bl-todos-t"' not in t:
+        t = t.replace('<div class="bl-grid" id="bl-all-grid">', '<h2 class="bl-sr" id="bl-todos-t">Todas as publicações</h2>\n    <div class="bl-grid" id="bl-all-grid">', 1)
     p.write_text(com_css(t))
 
     p = ROOT / "blog/temas/index.html"
@@ -385,10 +418,10 @@ def derivadas(cards, ordem, temas_de):
         sel = [s for s in ordem if temas_de[s] == k]
         mais = (f'\n      <p class="bl-theme-more"><a href="/blog/tema/{k}/">Ver {"os " + str(len(sel)) + " posts" if len(sel) > 1 else "o post"} de {html.escape(info["rotulo"], quote=False)} →</a></p>')
         grupos.append(f'''    <section class="bl-theme-group" id="{k}">
-      <h2><a href="/blog/tema/{k}/">{html.escape(info["rotulo"], quote=False)}</a> <span style="color:var(--txm);font-weight:700;font-size:.9rem">· {len(sel)}</span></h2>
+      <h2><a href="/blog/tema/{k}/">{html.escape(info["rotulo"], quote=False)}</a> <span style="color:var(--txs);font-weight:700;font-size:.9rem">· {len(sel)}</span></h2>
       <p style="color:var(--txs);font-size:.92rem;margin:-12px 0 22px">{esc(info["desc"])}</p>
       <div class="bl-grid">
-''' + "\n".join(comp[s] for s in sel[:POR_TEMA]) + "\n      </div>" + mais + "\n    </section>")
+''' + "\n".join((acima_da_dobra if not grupos else list)([comp[s] for s in sel[:POR_TEMA]])) + "\n      </div>" + mais + "\n    </section>")
     ini = t.index('    <section class="bl-theme-group"')
     fim = t.rindex("</section>", 0, t.index("</main>")) + len("</section>")
     while t[ini:fim].count('<section class="bl-theme-group"') < t[ini:fim].count("</section>"):
@@ -407,7 +440,8 @@ BL_CSS = ("/* LSE:BL (tools/blog/home.py): pílulas legíveis no fundo claro, mi
           ".bl-page-wrap .bl-theme-pill.active,.bl-page-wrap .bl-theme-pill[aria-current]{background:var(--teal);color:var(--p1);border-color:var(--teal)}\n"
           ".bl-card--sm .bl-card__thumb{aspect-ratio:16/9}\n"
           ".bl-theme-group h2 a{color:inherit;text-decoration:none}.bl-theme-group h2 a:hover{color:var(--teal-dd)}\n"
-          ".bl-theme-more{margin:22px 0 0;text-align:right}.bl-theme-more a{font-weight:700;font-size:.9rem;color:#12737a}")
+          ".bl-theme-more{margin:22px 0 0;text-align:right}.bl-theme-more a{font-weight:700;font-size:.9rem;color:#12737a}\n"
+          ".bl-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}")
 BL_CSS_RE = re.compile(r"/\* (?:LSE:BL|páginas de editoria) \(tools/blog/home\.py\)[^*]*\*/\n(?:[^\n<]*\n)*?(?=</style>)")
 
 
@@ -458,8 +492,9 @@ def paginas_tema(base, comp, ordem, temas_de):
         while t[ini:fim].count('<section class="bl-theme-group"') < t[ini:fim].count("</section>"):
             fim = t.rindex("</section>", 0, fim - 1) + len("</section>")
         corpo = (f'<nav class="bl-theme-bar rv" aria-label="Editorias do blog" style="justify-content:center;margin-bottom:36px">{pilulas(k)}</nav>\n'
-                 f'    <section class="bl-theme-group" aria-label="{len(sel)} {"publicações" if len(sel) != 1 else "publicação"} em {esc(info["rotulo"])}">\n'
-                 '      <div class="bl-grid">\n' + "\n".join(comp[s] for s in sel) + "\n      </div>\n"
+                 f'    <section class="bl-theme-group" aria-labelledby="bl-tema-t">\n'
+                 f'      <h2 class="bl-sr" id="bl-tema-t">{len(sel)} {"publicações" if len(sel) != 1 else "publicação"} em {esc(info["rotulo"])}</h2>\n'
+                 '      <div class="bl-grid">\n' + "\n".join(acima_da_dobra([comp[s] for s in sel])) + "\n      </div>\n"
                  '      <p class="bl-theme-more"><a href="/blog/temas/">← Todas as editorias</a></p>\n    </section>')
         t = t[:ini] + corpo + t[fim:]
         dest = ROOT / f"blog/tema/{k}/index.html"

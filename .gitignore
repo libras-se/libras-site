@@ -47,3 +47,4 @@ assets/img/sinais/*.origem
 # relatório local da auditoria de SEO (gerado por tools/seo/auditoria.py)
 tools/seo/auditoria.json
 tools/seo/auditoria.csv
+tools/seo/checagem_blog.json

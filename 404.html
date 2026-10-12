@@ -45,7 +45,9 @@
         "/nossa-te": "/tecnologia/"
       };
 
-      const rawPath = window.location.pathname.replace(/\/index\.html$/, "/");
+      let rawPath = window.location.pathname;
+      try { rawPath = decodeURIComponent(rawPath).normalize("NFC"); } catch (e) {}
+      rawPath = rawPath.replace(/\/index\.html$/, "/");
       const path = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") : rawPath;
       const destination = redirects[rawPath] || redirects[path];
 

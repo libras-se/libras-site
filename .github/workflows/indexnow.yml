@@ -1,0 +1,26 @@
+# Avisa o IndexNow (Bing e outros buscadores) das páginas que mudaram a cada push na main.
+# Espera o deploy do GitHub Pages (cerca de 1 a 2 minutos) antes de avisar.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Páginas alteradas
+        run: python3 tools/seo/indexnow.py "${{ github.event.before }}" "${{ github.sha }}"
+      - name: Espera o deploy do GitHub Pages
+        run: sleep 180
+      - name: Avisa o IndexNow
+        run: python3 tools/seo/indexnow.py "${{ github.event.before }}" "${{ github.sha }}" --enviar

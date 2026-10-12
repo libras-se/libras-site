@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const exportPath = path.resolve('blog/old-libras-se-blog-export.json');
+const exportPath = path.resolve('tools/migracao/old-libras-se-blog-export.json');
 
 const currentPosts = new Map([
   ['como-sao-criados-sinais-de-pessoas-na-libras', 'blog/como-sao-criados-sinais-de-pessoas-na-libras/'],

@@ -3,7 +3,7 @@ import path from 'node:path';
 import puppeteer from 'puppeteer-core';
 
 const SITEMAP_URL = 'https://old.libras.se/blog-posts-sitemap.xml';
-const DEFAULT_OUT = 'blog/old-libras-se-blog-export.json';
+const DEFAULT_OUT = 'tools/migracao/old-libras-se-blog-export.json';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 const args = new Map();

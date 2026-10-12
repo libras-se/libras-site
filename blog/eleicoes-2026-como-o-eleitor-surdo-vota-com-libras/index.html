@@ -365,104 +365,25 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
 .icard .ic-n{font-size:.8rem;letter-spacing:.02em}
 .stat-desc{display:block}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-/* simulador */
-.sim{margin:30px 0 30px;background:linear-gradient(160deg,#0e3538 0%,#154245 55%,#1e6e6e 100%);border-radius:var(--radius-lg);padding:26px 26px 20px;color:#fff;box-shadow:0 20px 60px rgba(30,110,110,.2);scroll-margin-top:90px}
-.sim-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
-.article-wrapper .sim-title{font-family:var(--bf);font-weight:800;font-size:1.22rem;letter-spacing:-.01em;color:#fff;margin:0;line-height:1.25;scroll-margin-top:90px}
-.sim-reset{display:inline-flex;align-items:center;gap:7px;font-family:var(--bf);font-size:.8rem;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(168,230,223,.35);border-radius:999px;padding:8px 14px;cursor:pointer;transition:background .2s}
-.sim-reset:hover{background:rgba(255,255,255,.16)}
-.sim-reset svg{width:15px;height:15px;stroke:currentColor;fill:none}
-.sim button:focus-visible{outline:3px solid #81e6d9;outline-offset:2px}
-.sim-warn{display:flex;gap:10px;align-items:flex-start;background:#fff8e6;color:#5a3200;border:1px solid #f3d48a;border-radius:12px;padding:10px 14px;font-family:var(--bf);font-size:.84rem;font-weight:700;line-height:1.45;margin:0 0 16px}
-.sim-warn svg{width:18px;height:18px;stroke:#a86f00;fill:none;flex-shrink:0;margin-top:1px}
-.sim-sc{border:0;margin:0 0 14px;padding:0;min-width:0}
-.sim-sc legend{font-family:var(--bf);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-pale);margin-bottom:9px;padding:0}
-.sim-opts{display:flex;flex-wrap:wrap;gap:8px}
-.sim-opt{position:relative;display:inline-flex}
-.sim-opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.sim-opt label{display:inline-flex;align-items:center;font-family:var(--bf);font-size:.84rem;font-weight:700;padding:9px 15px;border-radius:999px;border:1.5px solid rgba(168,230,223,.38);color:#fff;cursor:pointer;transition:background .2s,border-color .2s,color .2s;line-height:1.2}
-.sim-opt label:hover{border-color:#a8e6df}
-.sim-opt input:checked+label{background:#fff;color:#0e3538;border-color:#fff}
-.sim-opt input:focus-visible+label{outline:3px solid #81e6d9;outline-offset:2px}
-.sim-goal{font-family:var(--bf);font-size:.92rem;color:rgba(255,255,255,.85);margin:0 0 16px;line-height:1.5}
-.sim-goal strong{color:#fff;font-weight:800;white-space:nowrap}
-.sim-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-areas:"screen lib" "keys lib";gap:14px;align-items:start}
-/* tela */
-.u-screen{grid-area:screen;background:#f3f6f5;color:#122b2d;border-radius:14px;border:7px solid #1b2a2c;padding:10px 14px 10px;min-height:248px;display:flex;flex-direction:column;font-family:var(--bf)}
-.u-prog{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
-.u-prog span{height:7px;border-radius:4px;background:#d3dedd}
-.u-prog span.on{background:#2a9090}
-.u-prog span.ok{background:#22a35a}
-.u-step{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#5d7d7f;margin:6px 0 4px}
-.u-main{flex:1}
-.u-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4d6b6d;margin:0}
-.u-cargo{font-size:1.25rem;font-weight:800;color:#0e3538;margin:0 0 10px;letter-spacing:-.01em}
-.u-numrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.u-numlab{font-size:.85rem;font-weight:600;color:#2d4f4f}
-.u-digits{display:flex;gap:5px}
-.u-d{width:30px;height:38px;border:2px solid #9fb6b5;border-radius:6px;display:grid;place-items:center;font-size:1.3rem;font-weight:800;color:#0e3538;background:#fff}
-.u-d.cur{border-color:#2a9090;box-shadow:0 0 0 2px rgba(42,144,144,.25)}
-.u-info{min-height:64px;font-size:.88rem;line-height:1.45;color:#1f3c3e}
-.u-info .u-cand{display:flex;gap:12px;align-items:center}
-.u-info .u-photo{width:52px;height:62px;border-radius:6px;background:#dfe9e8;border:1px solid #c3d4d3;display:grid;place-items:center;flex-shrink:0}
-.u-info .u-photo svg{width:34px;height:34px;stroke:#7a9a9b;fill:none}
-.u-info b{font-weight:800;color:#0e3538}
-.u-big{display:block;font-size:1.25rem;font-weight:800;letter-spacing:.02em;color:#0e3538;margin-top:2px}
-.u-big.warn{color:#b04a00}
-.u-big.okc{color:#16813f}
-.u-foot{border-top:1px solid #d3dedd;margin:8px 0 0;padding-top:7px;font-size:.76rem;font-weight:600;color:#3f5f61;line-height:1.4}
-.u-screen.done .u-digits{opacity:.45}
-/* janela de Libras */
-.lib{grid-area:lib;background:rgba(255,255,255,.06);border:1px solid rgba(168,230,223,.25);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:12px}
-.lib-win{position:relative;border-radius:12px;overflow:hidden;border:3px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.25);aspect-ratio:4/5;background:#e8f6f5}
-.lib-tag{position:absolute;top:8px;left:8px;z-index:2;display:inline-flex;align-items:center;gap:6px;font-family:var(--bf);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.82);border-radius:999px;padding:4px 9px}
-.lib-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#4fd1c5}
-.lib-svg{display:block;width:100%;height:100%}
-.lib-svg .hand{transform-origin:0 0;transition:transform .55s cubic-bezier(.4,0,.2,1)}
-.lib-win[data-pose="idle"] .hand-l{transform:translate(58px,150px) rotate(-14deg)}
-.lib-win[data-pose="idle"] .hand-r{transform:translate(102px,150px) rotate(14deg)}
-.lib-win[data-pose="cargo"] .hand-l{transform:translate(60px,132px) rotate(-26deg)}
-.lib-win[data-pose="cargo"] .hand-r{transform:translate(100px,140px) rotate(20deg)}
-.lib-win[data-pose="dados"] .hand-l{transform:translate(56px,146px) rotate(-12deg)}
-.lib-win[data-pose="dados"] .hand-r{transform:translate(106px,118px) rotate(36deg)}
-.lib-win[data-pose="legenda"] .hand-l{transform:translate(52px,118px) rotate(-40deg)}
-.lib-win[data-pose="legenda"] .hand-r{transform:translate(100px,146px) rotate(12deg)}
-.lib-win[data-pose="branco"] .hand-l{transform:translate(40px,132px) rotate(-52deg)}
-.lib-win[data-pose="branco"] .hand-r{transform:translate(120px,132px) rotate(52deg)}
-.lib-win[data-pose="nulo"] .hand-l{transform:translate(70px,128px) rotate(30deg)}
-.lib-win[data-pose="nulo"] .hand-r{transform:translate(90px,128px) rotate(-30deg)}
-.lib-win[data-pose="ok"] .hand-l{transform:translate(62px,112px) rotate(-8deg)}
-.lib-win[data-pose="ok"] .hand-r{transform:translate(100px,146px) rotate(16deg)}
-.lib-win.talk .lib-fig{animation:libTalk 1.1s ease-in-out}
-@keyframes libTalk{0%,100%{transform:translateY(0)}30%{transform:translateY(-3px)}60%{transform:translateY(1px)}}
-.lib-k{font-family:var(--bf);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-pale);margin:0 0 5px}
-.lib-t{font-family:var(--lf);font-size:.95rem;line-height:1.6;color:#fff;margin:0}
-/* teclado */
-.u-keys{grid-area:keys;background:#1b2a2c;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
-.u-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.k{font-family:var(--bf);font-size:1.15rem;font-weight:800;color:#fff;background:#2f4144;border:0;border-bottom:3px solid #0f1b1c;border-radius:9px;padding:9px 0;cursor:pointer;transition:transform .1s,background .2s;touch-action:manipulation}
-.k:hover{background:#3a4f52}
-.k:active,.ka:active{transform:translateY(2px)}
-.k0{grid-column:2}
-.u-act{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:7px}
-.ka{font-family:var(--bf);font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:0;border-bottom:3px solid rgba(0,0,0,.28);border-radius:9px;padding:12px 4px;cursor:pointer;transition:transform .1s,filter .2s;touch-action:manipulation}
-.ka:hover{filter:brightness(1.06)}
-.ka-b{background:#fff;color:#0e3538}
-.ka-c{background:#f4892a;color:#2b1400}
-.ka-ok{background:#22c55e;color:#06351a}
-.k:disabled,.ka:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.sim-help{font-family:var(--bf);font-size:.76rem;color:rgba(255,255,255,.62);margin:12px 0 0;line-height:1.5}
-@media(max-width:700px){
-  .sim{padding:20px 14px 16px}
-  .sim-body{grid-template-columns:1fr;grid-template-areas:"screen" "lib" "keys";gap:10px}
-  .u-screen{min-height:0}
-  .lib{flex-direction:row;align-items:center;gap:12px;padding:10px}
-  .lib-win{width:92px;flex-shrink:0;border-width:2px}
-  .lib-tag{display:none}
-  .lib-t{font-size:.88rem;line-height:1.5}
-  .sim-opt label{font-size:.8rem;padding:8px 12px}
-}
-@media(prefers-reduced-motion:reduce){.lib-svg .hand{transition:none}.lib-win.talk .lib-fig{animation:none}}
+/* voto com a janela de Libras: vídeo vertical, telas do simulador do TSE e chamada */
+.video-vert{max-width:340px;margin:34px auto 40px}
+.video-block.video-vert iframe{aspect-ratio:9/16}
+.urna-figs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:34px 0 0}
+.urna-figs figure{margin:0;background:var(--white);border:1px solid var(--grey-light);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 32px rgba(30,110,110,.1)}
+.urna-figs img{display:block;width:100%;height:auto}
+.urna-figs figcaption{font-family:var(--bf);font-size:.8rem;line-height:1.5;color:var(--ink-soft);padding:12px 16px}
+.urna-credit{font-family:var(--bf);font-size:.74rem;color:var(--ink-soft);opacity:.8;margin:10px 0 36px}
+.tse-cta{margin:0 0 44px;padding:30px 32px;border-radius:var(--radius-lg);background:linear-gradient(150deg,#0e3538 0%,#1e6e6e 100%);color:#fff;box-shadow:0 20px 60px rgba(30,110,110,.18)}
+.tse-cta p.tse-cta-k{font-family:var(--bf);font-size:.7rem;line-height:1.4;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-pale);margin:0 0 8px}
+.article-wrapper .tse-cta h3{font-family:var(--bf);font-weight:800;font-size:1.3rem;color:#fff;margin:0 0 10px;letter-spacing:-.01em}
+.tse-cta p{font-family:var(--lf);font-size:.98rem;line-height:1.7;color:rgba(255,255,255,.82);margin:0 0 18px}
+.tse-cta ol{font-family:var(--lf);font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.82);margin:0 0 22px;padding-left:20px}
+.tse-cta li{margin-bottom:4px}
+.tse-cta-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0e3538;font-family:var(--bf);font-weight:700;font-size:.9rem;padding:13px 24px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+.tse-cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.tse-cta-btn:focus-visible{outline:3px solid #81e6d9;outline-offset:3px}
+.tse-cta-btn svg{width:16px;height:16px;stroke:currentColor;fill:none}
+@media(max-width:700px){.urna-figs{grid-template-columns:1fr}.tse-cta{padding:24px 20px}}
 </style>
 
 <!-- LSE:CSS (gerado por tools/seo/links.py) -->
@@ -596,9 +517,9 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
     <nav class="crumb" aria-label="Trilha de navegação">
       <a href="/">Início</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Eleições 2026 em Libras
     </nav>
-    <div class="hero-kicker">Direitos · Eleições 2026 · Simulador interativo</div>
+    <div class="hero-kicker">Direitos · Eleições 2026 · Guia</div>
     <h1 class="hero-title">Eleições 2026: como o eleitor surdo vota com <em>Libras na urna</em> e por videochamada</h1>
-    <p class="hero-subtitle">A janela de Libras da urna passou a explicar o voto em branco, o nulo e o de legenda. Antes da cabine, centrais estaduais ligam o eleitor a um intérprete pelo celular. Teste tudo no simulador.</p>
+    <p class="hero-subtitle">A janela de Libras da urna passou a explicar o voto em branco, o nulo e o de legenda. Antes da cabine, centrais estaduais ligam o eleitor a um intérprete pelo celular. Veja como a urna mostra a Libras e treine no simulador oficial do TSE.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por LIBRAS.SE</span>
       <span class="meta-badge">10 de outubro de 2026</span>
@@ -613,7 +534,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   <p class="takeaways-h">O que você vai encontrar neste artigo</p>
   <ul>
     <li>O que mudou na janela de Libras da urna em 2026</li>
-    <li>Um simulador para treinar o voto em candidato, legenda, branco e nulo</li>
+    <li>Vídeo e telas reais da urna com a janela de Libras</li>
     <li>O que o TSE diz sobre cada tipo de voto</li>
     <li>Como funcionam as centrais de Libras de SP, RN, PE e PB</li>
     <li>O que vale para o 2º turno, em 25 de outubro</li>
@@ -624,7 +545,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
   <p class="toc-h">Neste guia</p>
   <ol>
     <li><a href="#urna">O que mudou na urna</a></li>
-    <li><a href="#simulador">Simulador: treine o voto</a></li>
+    <li><a href="#voto-libras">Como fica o voto com Libras</a></li>
     <li><a href="#tipos">Branco, nulo e legenda</a></li>
     <li><a href="#centrais">Centrais de Libras por videochamada</a></li>
     <li><a href="#segundo-turno">No 2º turno</a></li>
@@ -634,7 +555,7 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
 
 <p class="body-text drop-cap">No 1º turno das Eleições 2026, em 4 de outubro, a urna eletrônica estreou uma <a href="/glossario/janela-de-libras/">janela de Libras</a> mais completa. Além de indicar o cargo em votação, ela passou a orientar o eleitor sobre o voto em branco, o nulo e o de legenda. Antes da cabine, eleitores <a href="/glossario/surdo/">surdos</a> de vários estados também puderam tirar dúvidas com um <a href="/glossario/til-tils/">intérprete de Libras</a> por videochamada.</p>
 
-<p class="body-text">O 2º turno acontece em 25 de outubro, onde houver nova disputa para governador ou presidente. Este guia reúne o que mudou, o que cada tipo de voto significa segundo o TSE e como usar as centrais de <a href="/glossario/libras/">Libras</a>. No meio do caminho, há um simulador para treinar.</p>
+<p class="body-text">O 2º turno acontece em 25 de outubro, onde houver nova disputa para governador ou presidente. Este guia reúne o que mudou, o que cada tipo de voto significa segundo o TSE e como usar as centrais de <a href="/glossario/libras/">Libras</a>. No meio do caminho, mostramos a urna com a janela de Libras e o simulador oficial do TSE para treinar.</p>
 
 <div class="stat-row reveal">
   <div class="stat-card"><span class="stat-number">220 mil+</span><span class="stat-desc">seções eleitorais com acessibilidade em 2026, contra 156 mil em 2022, segundo a Agência Brasil</span></div>
@@ -657,85 +578,34 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
 <!-- /LSE:BANNER -->
 
 
-<h2 id="simulador">Simulador: treine o voto com a janela de Libras</h2>
+<h2 id="voto-libras">Como fica o voto com a janela de Libras</h2>
 
-<p class="body-text">Escolha um cenário e use o teclado. A cada passo, o painel ao lado resume o que a janela de Libras faz na urna real. O candidato 7788 e o partido 77 são inventados, e a simulação mostra só o primeiro cargo, deputado federal.</p>
+<p class="body-text">Na cabine, a <a href="/glossario/janela-de-libras/">janela de Libras</a> fica no canto da tela da urna. Uma intérprete gravada pela Justiça Eleitoral sinaliza o cargo em votação e acompanha cada etapa, sem que o eleitor precise ativar nada. O passo a passo publicado pelo TRE-SP mostra como fica na prática: a intérprete aparece na tela enquanto o eleitor digita o número e aperta CONFIRMA.</p>
 
-<section class="sim reveal" id="sim" aria-labelledby="sim-t">
-  <div class="sim-head">
-    <h3 class="sim-title" id="sim-t">Simulador da urna com janela de Libras</h3>
-    <button type="button" class="sim-reset" id="sim-reset"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Recomeçar</button>
-  </div>
-  <p class="sim-warn"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.3 3.9-8.2 14A2 2 0 0 0 3.8 21h16.4a2 2 0 0 0 1.7-3.1l-8.2-14a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Simulação educativa com números fictícios. Não é a urna oficial.</span></p>
-  <fieldset class="sim-sc">
-    <legend>Escolha o cenário</legend>
-    <div class="sim-opts">
-      <span class="sim-opt"><input type="radio" name="sim-sc" id="sc-cand" value="cand" checked><label for="sc-cand">Votar em um candidato</label></span>
-      <span class="sim-opt"><input type="radio" name="sim-sc" id="sc-leg" value="leg"><label for="sc-leg">Voto de legenda</label></span>
-      <span class="sim-opt"><input type="radio" name="sim-sc" id="sc-bra" value="bra"><label for="sc-bra">Voto em branco</label></span>
-      <span class="sim-opt"><input type="radio" name="sim-sc" id="sc-nul" value="nul"><label for="sc-nul">Voto nulo</label></span>
-    </div>
-  </fieldset>
-  <p class="sim-goal" id="sim-goal">Digite <strong>7 7 8 8</strong> e aperte <strong>CONFIRMA</strong>.</p>
+<figure class="video-block video-vert reveal">
+  <iframe src="https://www.youtube.com/embed/Lou5YFegRXc" title="Como votar na urna eletrônica? Veja o passo a passo, vídeo do TRE-SP" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption class="video-caption">O voto na urna de 2026, com a intérprete de Libras na tela. Vídeo: canal <a href="https://www.youtube.com/watch?v=Lou5YFegRXc" target="_blank" rel="noopener noreferrer">TRE São Paulo</a>, 28 de setembro de 2026.</figcaption>
+</figure>
 
-  <div class="sim-body">
-    <div class="u-screen" id="u-screen">
-      <div class="u-prog" role="img" aria-label="Etapa 1 de 6: deputado federal">
-        <span class="on" title="Deputado federal"></span><span title="Deputado estadual"></span><span title="Senador, 1ª vaga"></span><span title="Senador, 2ª vaga"></span><span title="Governador"></span><span title="Presidente"></span>
-      </div>
-      <p class="u-step" id="u-step">Etapa 1 de 6</p>
-      <div class="u-main" id="u-main">
-        <p class="u-label">Seu voto para</p>
-        <p class="u-cargo">Deputado federal</p>
-        <div class="u-numrow"><span class="u-numlab">Número:</span><span class="u-digits" id="u-digits"><span class="u-d"></span><span class="u-d"></span><span class="u-d"></span><span class="u-d"></span></span></div>
-        <div class="u-info" id="u-info"></div>
-      </div>
-      <p class="u-foot" id="u-foot">Digite o número do candidato ou aperte BRANCO.</p>
-    </div>
+<p class="body-text">As telas abaixo são do simulador de votação do TSE, no cenário de 2º turno. Ele usa a mesma janela de Libras da urna e candidatos fictícios. Primeiro, a intérprete indica o cargo em votação. Quando o eleitor aperta BRANCO, a tela mostra "VOTO EM BRANCO" e a intérprete sinaliza a situação antes da confirmação.</p>
 
-    <div class="lib" id="lib">
-      <div class="lib-win" id="lib-win" data-pose="idle">
-        <span class="lib-tag">Janela de Libras</span>
-        <svg class="lib-svg" viewBox="0 0 160 200" role="img" aria-label="Ilustração de intérprete de Libras numa janela de vídeo">
-          <defs><linearGradient id="libbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f6f5"/><stop offset="1" stop-color="#cdeeea"/></linearGradient></defs>
-          <rect width="160" height="200" fill="url(#libbg)"/>
-          <g class="lib-fig">
-            <path d="M14 200c0-60 28-92 66-92s66 32 66 92z" fill="#0e3538"/>
-            <rect x="72" y="84" width="16" height="28" rx="7" fill="#1e6e6e"/>
-            <ellipse cx="80" cy="60" rx="24" ry="22" fill="#0e3538"/>
-            <circle cx="80" cy="68" r="21" fill="#2a9090"/>
-            <path d="M59 66c0-15 9-25 21-25s21 10 21 25c-5-8-12-12-21-12s-16 4-21 12z" fill="#0e3538"/>
-            <g class="hand hand-l"><rect x="-7" y="6" width="14" height="46" rx="7" fill="#1d4f53"/><rect x="-9" y="-14" width="18" height="24" rx="8" fill="#81e6d9"/><rect x="5" y="-6" width="7" height="14" rx="3.5" fill="#81e6d9" transform="rotate(32)"/></g>
-            <g class="hand hand-r"><rect x="-7" y="6" width="14" height="46" rx="7" fill="#1d4f53"/><rect x="-9" y="-14" width="18" height="24" rx="8" fill="#81e6d9"/><rect x="-12" y="-6" width="7" height="14" rx="3.5" fill="#81e6d9" transform="rotate(-32)"/></g>
-          </g>
-        </svg>
-      </div>
-      <div class="lib-txt">
-        <p class="lib-k">Na urna real, a janela de Libras</p>
-        <p class="lib-t" id="lib-t">indica o cargo em votação: deputado federal. Ela acompanha cada etapa, sem precisar ativar nada.</p>
-      </div>
-    </div>
+<div class="urna-figs reveal">
+  <figure><picture><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-2.avif" type="image/avif"><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-2.webp" type="image/webp"><img src="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-2.jpg" alt="Tela do simulador de votação do TSE no voto para governador, com a intérprete de Libras no canto direito da tela" width="900" height="951" loading="lazy" decoding="async"></picture><figcaption>Início do voto para governador: a intérprete indica o cargo em votação.</figcaption></figure>
+  <figure><picture><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-3.avif" type="image/avif"><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-3.webp" type="image/webp"><img src="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-3.jpg" alt="Tela do simulador de votação do TSE com a mensagem VOTO EM BRANCO e a intérprete de Libras sinalizando ao lado" width="900" height="951" loading="lazy" decoding="async"></picture><figcaption>Depois de apertar BRANCO: a mensagem na tela e a intérprete sinalizando.</figcaption></figure>
+</div>
+<p class="urna-credit">Telas do simulador de votação da Justiça Eleitoral, cenário de 2º turno com candidatos fictícios. Reprodução: TSE.</p>
 
-    <div class="u-keys" role="group" aria-label="Teclado da urna simulada">
-      <div class="u-pad">
-        <button type="button" class="k" data-k="1">1</button><button type="button" class="k" data-k="2">2</button><button type="button" class="k" data-k="3">3</button>
-        <button type="button" class="k" data-k="4">4</button><button type="button" class="k" data-k="5">5</button><button type="button" class="k" data-k="6">6</button>
-        <button type="button" class="k" data-k="7">7</button><button type="button" class="k" data-k="8">8</button><button type="button" class="k" data-k="9">9</button>
-        <button type="button" class="k k0" data-k="0">0</button>
-      </div>
-      <div class="u-act">
-        <button type="button" class="ka ka-b" data-a="branco">Branco</button>
-        <button type="button" class="ka ka-c" data-a="corrige">Corrige</button>
-        <button type="button" class="ka ka-ok" data-a="confirma">Confirma</button>
-      </div>
-    </div>
-  </div>
-  <p class="sim-help">No computador, você também pode usar os números do teclado, a letra B para branco, Backspace para corrigir e Enter para confirmar.</p>
-  <p class="sr-only" id="sim-live" aria-live="polite"></p>
-  <noscript><p class="sim-help">O simulador precisa de JavaScript para funcionar.</p></noscript>
-</section>
-
-<p class="body-text">O simulador não reproduz a interpretação da urna palavra por palavra. Ele resume a função de cada orientação, como descrita pelo TSE e pelos TREs, e a urna real pode mostrar as mensagens de outro jeito.</p>
+<div class="tse-cta reveal">
+  <p class="tse-cta-k">Para treinar antes do 2º turno</p>
+  <h3>Use o simulador oficial do TSE</h3>
+  <p>O simulador reproduz a urna eletrônica, inclusive com a janela de Libras, e pode ser usado quantas vezes você quiser. Segundo o TSE, ele passou de 205 mil acessos em setembro.</p>
+  <ol>
+    <li>Escolha "Eleições Gerais - 2º turno".</li>
+    <li>Monte a sua colinha ou use "Gerar exemplo" para sortear os candidatos fictícios.</li>
+    <li>Diga se precisa ouvir a voz da urna e comece a votar. Teste as teclas BRANCO, CORRIGE e CONFIRMA.</li>
+  </ol>
+  <a class="tse-cta-btn" href="https://www.tse.jus.br/eleicoes/simulador-de-votacao/" target="_blank" rel="noopener noreferrer">Abrir o simulador do TSE <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+</div>
 
 <figure class="fig reveal"><picture><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.avif" type="image/avif"><source srcset="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.webp" type="image/webp"><img src="/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras-ia.jpg" alt="Ilustração de uma eleitora com o celular em videochamada com um intérprete de Libras, ao lado da cabine de votação" width="1200" height="675" loading="lazy" decoding="async"></picture><figcaption>Antes da cabine, a eleitora tira dúvidas com um intérprete por videochamada. | Ilustração criada com IA</figcaption></figure>
 
@@ -840,11 +710,11 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
 
 <div class="references reveal">
   <h4>Créditos e referências</h4>
-  <p class="ref-lead">Texto: Equipe LIBRAS.SE, com informações do TSE, do TRE-SP, do TRE-PE, do TRE-PB, do Poder360 (Agência SP), do Click Guarulhos, do TechTudo, do Diário do RN e da Agência Brasil.</p>
+  <p class="ref-lead">Texto: Equipe LIBRAS.SE, com informações do TSE, do TRE-SP, do TRE-PE, do TRE-PB, do TRE-PR, do Poder360 (Agência SP), do Click Guarulhos, do TechTudo, do Diário do RN e da Agência Brasil.</p>
   <ol>
     <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Agosto/urna-eletronica-ganha-nova-interface-para-tornar-votacao-mais-acessivel-e-intuitiva" target="_blank" rel="noopener noreferrer">Urna eletrônica ganha nova interface para tornar votação mais acessível e intuitiva</a>. 8 de agosto de 2026.</li>
     <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2024/Fevereiro/eleicoes-2024-entenda-diferenca-entre-votos-em-branco-e-nulos" target="_blank" rel="noopener noreferrer">Eleições 2024: entenda diferença entre votos em branco e nulos</a>. 5 de fevereiro de 2024, atualizada em 8 de julho de 2026. </li>
-    <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2021/Setembro/votos-brancos-e-nulos-nao-anulam-eleicao-e-sao-considerados-apenas-para-fins-estatisticos" target="_blank" rel="noopener noreferrer">Votos brancos e nulos não anulam eleição e são considerados apenas para fins estatísticos</a>. 17 de setembro de 2021, atualizada em 8 de julho de 2026. Com a referência anterior, é a fonte das definições de voto em branco, nulo e de legenda usadas no simulador.</li>
+    <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2021/Setembro/votos-brancos-e-nulos-nao-anulam-eleicao-e-sao-considerados-apenas-para-fins-estatisticos" target="_blank" rel="noopener noreferrer">Votos brancos e nulos não anulam eleição e são considerados apenas para fins estatísticos</a>. 17 de setembro de 2021, atualizada em 8 de julho de 2026. Com a referência anterior, é a fonte das definições de voto em branco, nulo e de legenda.</li>
     <li>TRE-SP. <a href="https://www.tre-sp.jus.br/comunicacao/noticias/2026/Setembro/eleicoes-2026-novidades-na-urna-eletronica-tornam-a-votacao-mais-intuitiva-e-acessivel" target="_blank" rel="noopener noreferrer">Eleições 2026: novidades na urna eletrônica tornam a votação mais intuitiva e acessível</a>. 30 de setembro de 2026.</li>
     <li>TechTudo. <a href="https://www.techtudo.com.br/noticias/2026/10/urna-eletronica-mudou-em-2026-veja-o-que-esta-diferente-na-tela-edinfoeletro.ghtml" target="_blank" rel="noopener noreferrer">Urna eletrônica mudou em 2026: veja o que está diferente na tela</a>. Rafael Costa, 4 de outubro de 2026.</li>
     <li>Poder360. <a href="https://www.poder360.com.br/poder-eleicoes-2026/eleitores-surdos-terao-atendimento-em-libras-na-votacao-em-sp/" target="_blank" rel="noopener noreferrer">Eleitores surdos terão atendimento em Libras na votação em SP</a>. 3 de outubro de 2026, com texto da Agência SP de 29 de setembro.</li>
@@ -855,7 +725,10 @@ code.px{font-family:var(--bf);font-size:.92em;font-weight:700;color:var(--teal-d
     <li>Agência Brasil, Radioagência Nacional. <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/justica/audio/2026-10/eleicoes-2026-mais-de-220-mil-secoes-contaram-com-acessibilidade" target="_blank" rel="noopener noreferrer">Mais de 220 mil seções contaram com acessibilidade nas eleições</a>. Gabriel Corrêa, 5 de outubro de 2026.</li>
     <li>Vídeo: Justiça Eleitoral, canal <a href="https://www.youtube.com/watch?v=RcPLo_xQBAw" target="_blank" rel="noopener noreferrer">@justicaeleitoral</a> no YouTube. Veja o que mudou na urna eletrônica para as Eleições 2026. 12 de agosto de 2026.</li>
     <li>Vídeo: Tribunal Regional Eleitoral de Pernambuco, canal <a href="https://www.youtube.com/watch?v=1KcuSmuRH5E" target="_blank" rel="noopener noreferrer">@tre_pernambuco</a> no YouTube. TRE-PE fará atendimento em Libras por videochamada nas Eleições 2026. 28 de setembro de 2026.</li>
-    <li>Imagens: capa, reprodução do vídeo “Veja o que mudou na urna eletrônica para as Eleições 2026”, do canal Justiça Eleitoral (TSE) no YouTube. Ilustração no corpo do texto criada com IA para a LIBRAS.SE. Simulador e ilustração da janela de Libras: LIBRAS.SE.</li>
+    <li>TSE. <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/simulador-da-urna-eletronica-supera-205-mil-acessos-e-recebe-melhorias" target="_blank" rel="noopener noreferrer">Simulador da urna eletrônica supera 205 mil acessos e recebe melhorias</a>. 22 de setembro de 2026.</li>
+    <li>TRE-PR. <a href="https://www.tre-pr.jus.br/comunicacao/noticias/2026/Agosto/simulador-tira-duvida-de-eleitores-sobre-a-votacao" target="_blank" rel="noopener noreferrer">Simulador tira dúvida de eleitores sobre a votação</a>. 19 de agosto de 2026. Fonte da janela de Libras no simulador.</li>
+    <li>Vídeo: TRE São Paulo, canal no YouTube. <a href="https://www.youtube.com/watch?v=Lou5YFegRXc" target="_blank" rel="noopener noreferrer">Como votar na urna eletrônica? Veja o passo a passo!</a> 28 de setembro de 2026.</li>
+    <li>Imagens: capa, reprodução do vídeo “Veja o que mudou na urna eletrônica para as Eleições 2026”, do canal Justiça Eleitoral (TSE) no YouTube. Ilustração no corpo do texto criada com IA para a LIBRAS.SE. Telas da urna: reprodução do <a href="https://www.tse.jus.br/eleicoes/simulador-de-votacao/" target="_blank" rel="noopener noreferrer">simulador de votação do TSE</a>, capturadas em 11 de outubro de 2026.</li>
   </ol>
 </div>
 
@@ -930,144 +803,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mob.classList.conta
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.06)+'s';io.observe(el);});
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}}));
-
-// Simulador educativo da urna (números fictícios)
-(function(){
-  var sim=document.getElementById('sim'); if(!sim) return;
-  var CAND='7788', PARTY='77';
-  var $=function(id){return document.getElementById(id);};
-  var goal=$('sim-goal'), digitsEl=$('u-digits'), info=$('u-info'), foot=$('u-foot'), step=$('u-step'),
-      screen=$('u-screen'), win=$('lib-win'), libT=$('lib-t'), live=$('sim-live'), reset=$('sim-reset');
-  var prog=sim.querySelector('.u-prog'), progSpans=prog.querySelectorAll('span');
-  var keys=sim.querySelectorAll('.k,.ka');
-  var GOALS={
-    cand:'Digite <strong>7 7 8 8</strong> e aperte <strong>CONFIRMA</strong>.',
-    leg:'Digite só <strong>7 7</strong>, o número do partido, e aperte <strong>CONFIRMA</strong>.',
-    bra:'Aperte <strong>BRANCO</strong> e depois <strong>CONFIRMA</strong>.',
-    nul:'Digite um número que não existe na simulação, como <strong>0 0 0 0</strong>, e aperte <strong>CONFIRMA</strong>.'
-  };
-  var GOAL_TYPE={cand:'candidato',leg:'legenda',bra:'branco',nul:'nulo'};
-  var TYPE_NAME={candidato:'voto no candidato',legenda:'voto de legenda',branco:'voto em branco',nulo:'voto nulo'};
-  var LIB={
-    idle:['idle','indica o cargo em votação: deputado federal. Ela acompanha cada etapa, sem precisar ativar nada.'],
-    typing:['cargo','segue na tela enquanto você digita, acompanhando a etapa de deputado federal.'],
-    party:['legenda','orienta sobre o voto de legenda: confirmando só os dois números do partido, o voto vai para o partido, e não para um candidato específico.'],
-    party3:['cargo','segue acompanhando a etapa. Complete o número para chegar ao candidato.'],
-    cand:['dados','segue acompanhando a etapa enquanto a tela mostra nome, foto e partido. Confira tudo antes de confirmar.'],
-    branco:['branco','orienta sobre o voto em branco: ele não vai para nenhum candidato nem partido.'],
-    nulo:['nulo','orienta sobre o voto nulo: o número digitado não corresponde a nenhum candidato ou partido, e o voto não vai para ninguém.'],
-    simonly:['cargo','segue acompanhando a etapa. Nesta simulação, só existem o candidato 7788 e o partido 77.'],
-    done:['ok','passa para o próximo cargo, deputado estadual, assim que o voto é registrado. A barra de progresso também avança.']
-  };
-  var st={sc:'cand',d:'',branco:false,done:null,hint:''};
-  var lastLib='';
-  var person='<svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>';
-
-  function kind(){
-    if(st.done) return 'done';
-    if(st.branco) return 'branco';
-    var n=st.d.length;
-    if(n===0) return 'idle';
-    if(n===2 && st.d===PARTY) return 'party';
-    if(n===3 && st.d.slice(0,2)===PARTY) return 'party3';
-    if(n<4) return 'typing';
-    if(st.d===CAND) return 'cand';
-    if(st.d.slice(0,2)===PARTY) return 'simonly';
-    return 'nulo';
-  }
-
-  function render(announce){
-    var k=kind(), ds=digitsEl.children, i;
-    for(i=0;i<4;i++){ds[i].textContent=st.d[i]||'';ds[i].classList.toggle('cur',!st.done&&!st.branco&&i===st.d.length);}
-    screen.classList.toggle('done',!!st.done);
-    var html='', ft='', sr='';
-    if(k==='idle'){ft='Digite o número do candidato ou aperte BRANCO.';sr='Tela pronta para o voto de deputado federal.';}
-    else if(k==='typing'){ft='Continue digitando. CORRIGE apaga os números.';sr='Número digitado: '+st.d.split('').join(' ')+'.';}
-    else if(k==='party'){html='Partido: <b>Partido Exemplo (PEX)</b><span class="u-big">Voto de legenda</span>';ft='CONFIRMA vota só no partido. Para votar no candidato, continue digitando.';sr='Número 7 7: Partido Exemplo. Se confirmar agora, é voto de legenda.';}
-    else if(k==='party3'){html='Partido: <b>Partido Exemplo (PEX)</b>';ft='Complete o número do candidato.';sr='Número digitado: '+st.d.split('').join(' ')+'.';}
-    else if(k==='cand'){html='<div class="u-cand"><span class="u-photo">'+person+'</span><span>Nome: <b>Candidata Exemplo</b><br>Partido: <b>PEX</b><br>Cargo: deputado federal</span></div>';ft='Aperte CONFIRMA para confirmar ou CORRIGE para apagar.';sr='Número 7 7 8 8: Candidata Exemplo, do Partido Exemplo. Aperte confirma ou corrige.';}
-    else if(k==='simonly'){html='<span class="u-big warn">Número fora da simulação</span>';ft='Aperte CORRIGE e digite 7788 ou só 77.';sr='Número '+st.d.split('').join(' ')+' não existe nesta simulação. Aperte corrige.';}
-    else if(k==='nulo'){html='<span class="u-big warn">Número inexistente</span>Se confirmar, o voto será <b>nulo</b>.';ft='Aperte CONFIRMA para votar nulo ou CORRIGE para apagar.';sr='Número '+st.d.split('').join(' ')+': não corresponde a nenhum candidato ou partido. Se confirmar, o voto será nulo.';}
-    else if(k==='branco'){html='<span class="u-big">Voto em branco</span>';ft='Aperte CONFIRMA para confirmar ou CORRIGE para voltar.';sr='Voto em branco. Aperte confirma ou corrige.';}
-    else if(k==='done'){
-      var ok=st.done===GOAL_TYPE[st.sc];
-      html='<span class="u-big okc">Voto registrado</span>Simulação: '+TYPE_NAME[st.done]+'.'+(ok?'':' O cenário escolhido era '+TYPE_NAME[GOAL_TYPE[st.sc]]+'. Aperte Recomeçar para tentar de novo.');
-      ft='Na urna real, a votação seguiria para deputado estadual.';
-      sr='Voto registrado na simulação: '+TYPE_NAME[st.done]+'.'+(ok?'':' O cenário escolhido era '+TYPE_NAME[GOAL_TYPE[st.sc]]+'.');
-    }
-    if(st.hint){ft=st.hint;sr=st.hint;}
-    info.innerHTML=html; foot.textContent=ft;
-    progSpans[0].className=st.done?'ok':'on';
-    progSpans[1].className=st.done?'on':'';
-    step.textContent=st.done?'Etapa 2 de 6: deputado estadual':'Etapa 1 de 6: deputado federal';
-    prog.setAttribute('aria-label',step.textContent);
-    var lib=LIB[k];
-    if(win.getAttribute('data-pose')!==lib[0]){
-      win.setAttribute('data-pose',lib[0]);
-      win.classList.remove('talk'); void win.offsetWidth; win.classList.add('talk');
-    }
-    libT.textContent=lib[1];
-    for(i=0;i<keys.length;i++){keys[i].disabled=!!st.done;}
-    if(announce){
-      var msg=sr;
-      if(lib[1]!==lastLib) msg+=' Janela de Libras: '+lib[1];
-      live.textContent=msg;
-    }
-    lastLib=lib[1];
-  }
-
-  function press(k){
-    if(st.done) return;
-    st.hint='';
-    if(st.branco){st.hint='Voto em branco na tela. Aperte CONFIRMA ou CORRIGE.';render(true);return;}
-    if(st.d.length<4) st.d+=k; else st.hint='O número já está completo. Aperte CONFIRMA ou CORRIGE.';
-    render(true);
-  }
-  function act(a){
-    if(st.done) return;
-    st.hint='';
-    var k=kind();
-    if(a==='corrige'){st.d='';st.branco=false;}
-    else if(a==='branco'){
-      if(st.d.length){st.hint='Para votar em branco, apague os números com CORRIGE primeiro.';}
-      else st.branco=true;
-    }else if(a==='confirma'){
-      if(k==='cand') st.done='candidato';
-      else if(k==='party') st.done='legenda';
-      else if(k==='branco') st.done='branco';
-      else if(k==='nulo') st.done='nulo';
-      else if(k==='simonly') st.hint='Nesta simulação, use 7788 para o candidato ou só 77 para a legenda. Aperte CORRIGE.';
-      else if(k==='party3') st.hint='Complete o número do candidato ou apague com CORRIGE.';
-      else st.hint='Digite o número completo ou aperte BRANCO antes de confirmar.';
-    }
-    render(true);
-    if(st.done) reset.focus();
-  }
-  function restart(focusFirst){
-    st.d='';st.branco=false;st.done=null;st.hint='';
-    goal.innerHTML=GOALS[st.sc];
-    render(false);
-    live.textContent='Simulação reiniciada. '+goal.textContent;
-    if(focusFirst) sim.querySelector('.k').focus();
-  }
-  sim.addEventListener('click',function(e){
-    var b=e.target.closest('button'); if(!b||!sim.contains(b)) return;
-    if(b.dataset.k!==undefined) press(b.dataset.k);
-    else if(b.dataset.a) act(b.dataset.a);
-  });
-  reset.addEventListener('click',function(e){e.stopPropagation();restart(true);});
-  var radios=sim.querySelectorAll('input[name="sim-sc"]');
-  for(var r=0;r<radios.length;r++){radios[r].addEventListener('change',function(){st.sc=this.value;restart(false);});}
-  sim.addEventListener('keydown',function(e){
-    if(e.altKey||e.ctrlKey||e.metaKey) return;
-    var t=e.target, isBtn=t.tagName==='BUTTON', isRadio=t.tagName==='INPUT';
-    if(/^[0-9]$/.test(e.key)){e.preventDefault();press(e.key);}
-    else if(e.key==='Backspace'||e.key==='Delete'){e.preventDefault();act('corrige');}
-    else if((e.key==='b'||e.key==='B')&&!isRadio){e.preventDefault();act('branco');}
-    else if(e.key==='Enter'&&!isBtn&&!isRadio){e.preventDefault();act('confirma');}
-  });
-  render(false);
-})();
 </script>
 </body>
 </html>

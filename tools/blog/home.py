@@ -386,6 +386,22 @@ def derivadas(cards, ordem, temas_de):
 def sitemap(arts):
     p = ROOT / "sitemap.xml"
     t = p.read_text()
+    # Post que virou redirecionamento (fusão, troca de endereço) sai do sitemap.
+    vivos = {f"{SITE}/blog/{s}/" for s in arts}
+
+    def poda(m):
+        loc = html.unescape(m.group(1))
+        e_post = loc.startswith(f"{SITE}/blog/") and loc.count("/") == 5
+        if e_post and loc not in vivos and loc not in (f"{SITE}/blog/todos/", f"{SITE}/blog/temas/"):
+            print(f"  - sitemap: {loc} (não é mais um post)")
+            return ""
+        return m.group(0)
+    t = re.sub(r"  <url>\s*<loc>([^<]*)</loc>[\s\S]*?</url>\n", poda, t)
+    # O lastmod de cada post segue o dateModified do JSON-LD (que só muda quando o conteúdo muda).
+    for s, a in arts.items():
+        d = dia(a["a"].get("dateModified") or a["a"]["datePublished"]).isoformat()
+        u = re.escape(html.escape(f"{SITE}/blog/{s}/"))
+        t = re.sub(rf"(<loc>{u}</loc>\s*<lastmod>)[^<]*(</lastmod>)", lambda m, d=d: m[1] + d + m[2], t)
     tem = set(re.findall(r"<loc>(.*?)</loc>", t))
     novos = ""
     for s, a in arts.items():

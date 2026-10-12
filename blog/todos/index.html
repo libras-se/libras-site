@@ -476,6 +476,22 @@ main{padding-top:80px}
   .lse-c b{grid-column:1;grid-row:2}
   .lse-ic{grid-template-columns:repeat(2,1fr)}
 }
+/* nota de contexto no topo e bloco "Créditos e referências" no fim dos posts (os dois templates) */
+.pa-update{margin:0 0 28px;padding:18px 20px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-left:4px solid #4fd1c5;border-radius:16px}
+.pa-update p{margin:0!important;font-size:.98rem!important;line-height:1.65!important;color:#154245!important}
+.pa-update strong{color:#0e3538}
+.pa-update a{color:#12737a;font-weight:700}
+.pa-refs{margin:44px 0 0;padding:26px 28px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-radius:20px}
+.pa-refs h2{font-size:1.1rem!important;font-weight:800!important;color:#0e3538!important;letter-spacing:-.01em;line-height:1.3!important;margin:0 0 10px!important;padding:0!important;border:0!important}
+.pa-refs h2::before,.pa-refs h2::after{content:none!important;display:none!important}
+.pa-refs__by{font-size:.88rem!important;color:#3d6063!important;line-height:1.6!important;margin:0 0 12px!important}
+.pa-refs ol,.pa-refs ul{padding-left:20px;margin:0;display:flex;flex-direction:column;gap:8px}
+.pa-refs li{font-size:.86rem;color:#3d6063;line-height:1.6;margin:0}
+.pa-refs li strong{font-weight:700;color:#154245}
+.pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
+@media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
+.body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
 <!-- /LSE:CSS -->
 </head>
@@ -536,7 +552,7 @@ main{padding-top:80px}
       <input type="search" id="bl-search-input" class="bl-search__input" placeholder="Buscar no acervo…" aria-label="Buscar" autocomplete="off">
       <button class="bl-search__btn" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
     </div>
-    <p id="bl-post-count" style="text-align:center;color:var(--txm);font-size:.82rem;margin-bottom:26px">91 publicações</p>
+    <p id="bl-post-count" style="text-align:center;color:var(--txm);font-size:.82rem;margin-bottom:26px">86 publicações</p>
     <div class="bl-grid" id="bl-all-grid">
 <article class="bl-card bl-card--sm rv"
           data-post
@@ -1062,31 +1078,23 @@ main{padding-top:80px}
         </article>
 <article class="bl-card bl-card--sm rv"
           data-post
-          data-search="libras reconhecida lingua instrucao belo horizonte lei 11463 2023 comunidade surda acessibilidade educacao bilingue"
-          data-cat="língua acessibilidade instrucional"
+          data-search="libras pode ser reconhecida como lingua de instrucao em bh libras pode ser reconhecida como lingua de instrucao em bh"
+          data-cat="instrucional"
           data-tema="educacao" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__link-cover" aria-label="Ler artigo: Libras é reconhecida como língua de instrução em Belo Horizonte"></a>
-          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__thumb" aria-label="Libras é reconhecida como língua de instrução em Belo Horizonte">
+          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__link-cover" aria-label="Ler artigo: Libras pode ser reconhecida como língua de instrução em BH"></a>
+          <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__thumb" aria-label="Libras pode ser reconhecida como língua de instrução em BH">
             <picture>
-              <source srcset="/assets/img/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte.webp" type="image/webp">
-              <img src="/assets/img/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte.jpg" alt="Ilustração de uma professora conversando em Libras com duas crianças surdas na orla da Lagoa da Pampulha, com a Igreja da Pampulha, um ipê-amarelo e a Serra do Curral ao fundo" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
+              <source srcset="/assets/img/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh.webp" type="image/webp">
+              <img src="/assets/img/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh.jpg" alt="Libras pode ser reconhecida como língua de instrução em BH" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
             </picture>
-            <span class="bl-card__badge">Direitos linguísticos</span>
+            <span class="bl-card__badge">Educação</span>
           </a>
           <div class="bl-card__body">
-            <div class="bl-card__meta">
-              <time datetime="2026-06-04" itemprop="datePublished">4 jun 2026</time>
-              <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
-            </div>
-            <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/">Libras é reconhecida como língua de instrução em Belo Horizonte</a>
-            </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Lei nº 11.463/2023 reconhece a Libras como língua de instrução e meio de comunicação da comunidade surda em Belo Horizonte.
-            </p>
-            <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__read" aria-label="Ler artigo: Libras é reconhecida em Belo Horizonte">Ler artigo →</a>
+            <div class="bl-card__meta"><time datetime="2026-06-04" itemprop="datePublished">4 jun 2026</time><span class="bl-card__dot" aria-hidden="true"></span><span>1 min de leitura</span></div>
+            <h3 class="bl-card__title" itemprop="headline"><a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/">Libras pode ser reconhecida como língua de instrução em BH</a></h3>
+            <p class="bl-card__excerpt" itemprop="description">Vereadores de Belo Horizonte aprovaram projeto em primeiro turno. Ideia garantir a implementação de políticas públicas para a comunidade.</p>
+            <a href="/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/" class="bl-card__read" aria-label="Ler artigo: Libras pode ser reconhecida como língua de instrução em BH">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -1211,46 +1219,16 @@ main{padding-top:80px}
         </article>
 <article class="bl-card bl-card--sm rv"
           data-post
-          data-search="4 erros comuns ao inserir libras em videos janela de libras interprete de libras acessibilidade audiovisual traducao em libras video acessivel guia"
-          data-cat="acessibilidade"
-          data-tema="inclusao" data-ano="2025"
-          itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/" class="bl-card__link-cover" aria-label="Ler artigo: 4 erros comuns ao inserir Libras em vídeos e como evitá-los"></a>
-          <a href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/" class="bl-card__thumb" aria-label="4 erros comuns ao inserir Libras em vídeos e como evitá-los">
-            <picture>
-              <source srcset="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.avif" type="image/avif">
-              <source srcset="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.webp" type="image/webp">
-              <img src="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.jpg" alt="4 erros comuns ao inserir Libras em vídeos e como evitá-los" loading="lazy" decoding="async" itemprop="image" width="925" height="520">
-            </picture>
-            <span class="bl-card__badge">Acessibilidade audiovisual</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta">
-              <time datetime="2025-04-30" itemprop="datePublished">30 abr 2025</time>
-              <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
-            </div>
-            <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/">4 erros comuns ao inserir Libras em vídeos e como evitá-los</a>
-            </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Incluir Libras em vídeos é essencial, mas alguns erros comprometem a tradução. Saiba o que observar para acertar.
-            </p>
-            <a href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/" class="bl-card__read" aria-label="Ler artigo: 4 erros comuns ao inserir Libras em vídeos e como evitá-los">Ler artigo →</a>
-          </div>
-        </article>
-<article class="bl-card bl-card--sm rv"
-          data-post
-          data-search="dia nacional da libras desafios e conquistas inclusao da comunidade surda lei 10436 decreto 5626 acessibilidade direitos dos surdos"
+          data-search="20 anos da lei de libras avancos e desafios lei 10436 2002 lingua brasileira de sinais comunidade surda huet acessibilidade direitos dos surdos legislacao"
           data-cat="acessibilidade língua"
           data-tema="direitos" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda"></a>
-          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" aria-label="Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda">
+          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__link-cover" aria-label="Ler artigo: 20 anos da Lei de Libras: avanços e desafios"></a>
+          <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__thumb" aria-label="20 anos da Lei de Libras: avanços e desafios">
             <picture>
-              <source srcset="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.avif" type="image/avif">
-              <source srcset="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.webp" type="image/webp">
-              <img src="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.jpg" alt="Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
+              <source srcset="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.avif" type="image/avif">
+              <source srcset="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.webp" type="image/webp">
+              <img src="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.jpg" alt="20 anos da Lei de Libras: avanços e desafios" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
             </picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
@@ -1261,12 +1239,12 @@ main{padding-top:80px}
               <span>3 min de leitura</span>
             </div>
             <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/">Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda</a>
+              <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/">20 anos da Lei de Libras: avanços e desafios</a>
             </h3>
             <p class="bl-card__excerpt" itemprop="description">
-              A Libras é lei há mais de 20 anos. Mas, se é lei, por que ainda estamos tão distantes da inclusão plena?
+              Em 24 de abril de 2002 a Libras foi reconhecida por lei. Duas décadas depois, muito avançou, mas parte segue no papel.
             </p>
-            <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__read" aria-label="Ler artigo: Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda">Ler artigo →</a>
+            <a href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/" class="bl-card__read" aria-label="Ler artigo: 20 anos da Lei de Libras: avanços e desafios">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -1466,27 +1444,6 @@ main{padding-top:80px}
         </article>
 <article class="bl-card bl-card--sm rv"
           data-post
-          data-search="disney lanca jogos que ensinam libras disney lanca jogos que ensinam libras acessibilidade libras lingua brasileira de sinais inclusao dia das criancas disney"
-          data-cat="acessibilidade língua"
-          data-tema="cultura" data-ano="2022"
-          itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/disney-lanca-jogos-que-ensinam-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Disney lança jogos que ensinam Libras"></a>
-          <a href="/blog/disney-lanca-jogos-que-ensinam-libras/" class="bl-card__thumb" aria-label="Disney lança jogos que ensinam Libras">
-            <picture>
-              <source srcset="/assets/img/blog/disney-lanca-jogos-que-ensinam-libras/disney-lanca-jogos-que-ensinam-libras.webp" type="image/webp">
-              <img src="/assets/img/blog/disney-lanca-jogos-que-ensinam-libras/disney-lanca-jogos-que-ensinam-libras.jpg" alt="Disney lança jogos que ensinam Libras" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-            </picture>
-            <span class="bl-card__badge">Direitos</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta"><time datetime="2022-09-30" itemprop="datePublished">30 set 2022</time><span class="bl-card__dot" aria-hidden="true"></span><span>1 min de leitura</span></div>
-            <h3 class="bl-card__title" itemprop="headline"><a href="/blog/disney-lanca-jogos-que-ensinam-libras/">Disney lança jogos que ensinam Libras</a></h3>
-            <p class="bl-card__excerpt" itemprop="description">A ação faz parte da campanha de Dia das Crianças. Os games gratuitos são inspirados nos universos Marvel, Pixar, Mickey e das Princesas.</p>
-            <a href="/blog/disney-lanca-jogos-que-ensinam-libras/" class="bl-card__read" aria-label="Ler artigo: Disney lança jogos que ensinam Libras">Ler artigo →</a>
-          </div>
-        </article>
-<article class="bl-card bl-card--sm rv"
-          data-post
           data-search="biblia completamente traduzida para libras biblia em libras testemunhas de jeova surdos acessibilidade lingua de sinais"
           data-cat="língua acessibilidade"
           data-tema="cultura" data-ano="2022"
@@ -1573,27 +1530,6 @@ main{padding-top:80px}
               A intérprete e doutoranda Carine Gurunga explica por que a Libras é uma língua autônoma, e desfaz um mito comum.
             </p>
             <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__read" aria-label="Ler artigo: Entrevista: 'Libras não é português com as mãos'">Ler artigo →</a>
-          </div>
-        </article>
-<article class="bl-card bl-card--sm rv"
-          data-post
-          data-search="libras pode ser reconhecida como lingua de instrucao em bh libras pode ser reconhecida como lingua de instrucao em bh"
-          data-cat="instrucional"
-          data-tema="educacao" data-ano="2022"
-          itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/" class="bl-card__link-cover" aria-label="Ler artigo: Libras pode ser reconhecida como língua de instrução em BH"></a>
-          <a href="/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/" class="bl-card__thumb" aria-label="Libras pode ser reconhecida como língua de instrução em BH">
-            <picture>
-              <source srcset="/assets/img/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh.webp" type="image/webp">
-              <img src="/assets/img/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh.jpg" alt="Libras pode ser reconhecida como língua de instrução em BH" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-            </picture>
-            <span class="bl-card__badge">Educação</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta"><time datetime="2022-09-16" itemprop="datePublished">16 set 2022</time><span class="bl-card__dot" aria-hidden="true"></span><span>1 min de leitura</span></div>
-            <h3 class="bl-card__title" itemprop="headline"><a href="/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/">Libras pode ser reconhecida como língua de instrução em BH</a></h3>
-            <p class="bl-card__excerpt" itemprop="description">Vereadores de Belo Horizonte aprovaram projeto em primeiro turno. Ideia garantir a implementação de políticas públicas para a comunidade.</p>
-            <a href="/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/" class="bl-card__read" aria-label="Ler artigo: Libras pode ser reconhecida como língua de instrução em BH">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -1716,19 +1652,19 @@ main{padding-top:80px}
           data-cat="acessibilidade língua"
           data-tema="cultura" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__link-cover" aria-label="Ler artigo: Personagens da Disney adotam língua de sinais com o público"></a>
-          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__thumb" aria-label="Personagens da Disney adotam língua de sinais com o público">
+          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__link-cover" aria-label="Ler artigo: Disney e a língua de sinais: personagens nos parques e jogos que ensinavam Libras"></a>
+          <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__thumb" aria-label="Disney e a língua de sinais: personagens nos parques e jogos que ensinavam Libras">
             <picture>
               <source srcset="/assets/img/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico.webp" type="image/webp">
-              <img src="/assets/img/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico.jpg" alt="Personagens da Disney adotam língua de sinais com o público" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
+              <img src="/assets/img/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico.jpg" alt="Disney e a língua de sinais: personagens nos parques e jogos que ensinavam Libras" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
             </picture>
             <span class="bl-card__badge">Direitos</span>
           </a>
           <div class="bl-card__body">
-            <div class="bl-card__meta"><time datetime="2022-08-30" itemprop="datePublished">30 ago 2022</time><span class="bl-card__dot" aria-hidden="true"></span><span>1 min de leitura</span></div>
-            <h3 class="bl-card__title" itemprop="headline"><a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/">Personagens da Disney adotam língua de sinais com o público</a></h3>
-            <p class="bl-card__excerpt" itemprop="description">Vídeos mostram Pato Donald, Mickey e princesa Anna conversando com as crianças usando língua de sinais.</p>
-            <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__read" aria-label="Ler artigo: Personagens da Disney adotam língua de sinais com o público">Ler artigo →</a>
+            <div class="bl-card__meta"><time datetime="2022-08-30" itemprop="datePublished">30 ago 2022</time><span class="bl-card__dot" aria-hidden="true"></span><span>2 min de leitura</span></div>
+            <h3 class="bl-card__title" itemprop="headline"><a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/">Disney e a língua de sinais: personagens nos parques e jogos que ensinavam Libras</a></h3>
+            <p class="bl-card__excerpt" itemprop="description">Pato Donald e a princesa Anna conversaram em língua de sinais com crianças surdas, e a Disney Brasil lançou jogos que ensinavam Libras.</p>
+            <a href="/blog/personagens-da-disney-adotam-lingua-de-sinais-com-o-publico/" class="bl-card__read" aria-label="Ler artigo: Disney e a língua de sinais: personagens nos parques e jogos que ensinavam Libras">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -2227,16 +2163,16 @@ main{padding-top:80px}
         </article>
 <article class="bl-card bl-card--sm rv"
           data-post
-          data-search="surdolimpiadas as olimpiadas exclusivas para surdos deaflympics surdoatletas esporte surdo brasil cbds interprete de libras comunidade surda esporte"
+          data-search="por que nao ha surdos nas paralimpiadas surdolimpiadas deaflympics surdoatletas esporte surdo icsd comunidade surda esporte e surdez"
           data-cat="língua acessibilidade"
           data-tema="esporte" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__link-cover" aria-label="Ler artigo: Surdolimpíadas: as Olimpíadas exclusivas para surdos"></a>
-          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__thumb" aria-label="Surdolimpíadas: as Olimpíadas exclusivas para surdos">
+          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__link-cover" aria-label="Ler artigo: Por que não há surdos nas Paralimpíadas?"></a>
+          <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__thumb" aria-label="Por que não há surdos nas Paralimpíadas?">
             <picture>
-              <source srcset="/assets/img/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos.avif" type="image/avif">
-              <source srcset="/assets/img/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos.webp" type="image/webp">
-              <img src="/assets/img/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos.jpg" alt="Surdolimpíadas: as Olimpíadas exclusivas para surdos" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
+              <source srcset="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.avif" type="image/avif">
+              <source srcset="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.webp" type="image/webp">
+              <img src="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.jpg" alt="Por que não há surdos nas Paralimpíadas?" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
             </picture>
             <span class="bl-card__badge">Esporte</span>
           </a>
@@ -2244,15 +2180,15 @@ main{padding-top:80px}
             <div class="bl-card__meta">
               <time datetime="2022-05-01" itemprop="datePublished">1 mai 2022</time>
               <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>4 min de leitura</span>
+              <span>3 min de leitura</span>
             </div>
             <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/">Surdolimpíadas: as Olimpíadas exclusivas para surdos</a>
+              <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/">Por que não há surdos nas Paralimpíadas?</a>
             </h3>
             <p class="bl-card__excerpt" itemprop="description">
-              Pela primeira vez na América Latina, o Brasil sediou a maior competição esportiva da comunidade surda.
+              Surdoatletas não competem nas Paralimpíadas, eles têm sua própria competição mundial, registrada desde 1924.
             </p>
-            <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__read" aria-label="Ler artigo: Surdolimpíadas: as Olimpíadas exclusivas para surdos">Ler artigo →</a>
+            <a href="/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/" class="bl-card__read" aria-label="Ler artigo: Por que não há surdos nas Paralimpíadas?">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -2295,36 +2231,6 @@ main{padding-top:80px}
             <h3 class="bl-card__title" itemprop="headline"><a href="/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/">Rosas de Ouro leva Libras pro carnaval paulista</a></h3>
             <p class="bl-card__excerpt" itemprop="description">A escola levou pro sambódromo um intérprete de Libras que passou todo o desfile interpretando o samba-enredo para a língua de sinais.</p>
             <a href="/blog/rosas-de-ouro-leva-libras-pro-carnaval-paulista/" class="bl-card__read" aria-label="Ler artigo: Rosas de Ouro leva Libras pro carnaval paulista">Ler artigo →</a>
-          </div>
-        </article>
-<article class="bl-card bl-card--sm rv"
-          data-post
-          data-search="20 anos da lei de libras avancos e desafios lei 10436 2002 lingua brasileira de sinais comunidade surda huet acessibilidade direitos dos surdos legislacao"
-          data-cat="acessibilidade língua"
-          data-tema="direitos" data-ano="2022"
-          itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/" class="bl-card__link-cover" aria-label="Ler artigo: 20 anos da Lei de Libras: avanços e desafios"></a>
-          <a href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/" class="bl-card__thumb" aria-label="20 anos da Lei de Libras: avanços e desafios">
-            <picture>
-              <source srcset="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.avif" type="image/avif">
-              <source srcset="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.webp" type="image/webp">
-              <img src="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.jpg" alt="20 anos da Lei de Libras: avanços e desafios" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-            </picture>
-            <span class="bl-card__badge">Direitos</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta">
-              <time datetime="2022-04-24" itemprop="datePublished">24 abr 2022</time>
-              <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
-            </div>
-            <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/">20 anos da Lei de Libras: avanços e desafios</a>
-            </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Em 24 de abril de 2002 a Libras foi reconhecida por lei. Duas décadas depois, muito avançou, mas parte segue no papel.
-            </p>
-            <a href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/" class="bl-card__read" aria-label="Ler artigo: 20 anos da Lei de Libras: avanços e desafios">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"
@@ -2593,36 +2499,6 @@ main{padding-top:80px}
         </article>
 <article class="bl-card bl-card--sm rv"
           data-post
-          data-search="por que nao ha surdos nas paralimpiadas surdolimpiadas deaflympics surdoatletas esporte surdo icsd comunidade surda esporte e surdez"
-          data-cat="língua acessibilidade"
-          data-tema="esporte" data-ano="2021"
-          itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/por-que-nao-ha-surdos-nas-paralimpiadas/" class="bl-card__link-cover" aria-label="Ler artigo: Por que não há surdos nas Paralimpíadas?"></a>
-          <a href="/blog/por-que-nao-ha-surdos-nas-paralimpiadas/" class="bl-card__thumb" aria-label="Por que não há surdos nas Paralimpíadas?">
-            <picture>
-              <source srcset="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.avif" type="image/avif">
-              <source srcset="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.webp" type="image/webp">
-              <img src="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.jpg" alt="Por que não há surdos nas Paralimpíadas?" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-            </picture>
-            <span class="bl-card__badge">Esporte</span>
-          </a>
-          <div class="bl-card__body">
-            <div class="bl-card__meta">
-              <time datetime="2021-08-26" itemprop="datePublished">26 ago 2021</time>
-              <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
-            </div>
-            <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/por-que-nao-ha-surdos-nas-paralimpiadas/">Por que não há surdos nas Paralimpíadas?</a>
-            </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Surdoatletas não competem nas Paralimpíadas, eles têm sua própria competição mundial, registrada desde 1924.
-            </p>
-            <a href="/blog/por-que-nao-ha-surdos-nas-paralimpiadas/" class="bl-card__read" aria-label="Ler artigo: Por que não há surdos nas Paralimpíadas?">Ler artigo →</a>
-          </div>
-        </article>
-<article class="bl-card bl-card--sm rv"
-          data-post
           data-search="como sao criados sinais de pessoas na libras sinal pessoal sinal de nome nomes em libras famosos cultura surda identidade comunidade surda"
           data-cat="língua"
           data-tema="lingua" data-ano="2021"
@@ -2686,12 +2562,12 @@ main{padding-top:80px}
           data-cat="acessibilidade"
           data-tema="inclusao" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
-          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__link-cover" aria-label="Ler artigo: Por que incluir janela de Libras em vídeos?"></a>
-          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__thumb" aria-label="Por que incluir janela de Libras em vídeos?">
+          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__link-cover" aria-label="Ler artigo: Janela de Libras em vídeos: por que incluir e 4 erros a evitar"></a>
+          <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__thumb" aria-label="Janela de Libras em vídeos: por que incluir e 4 erros a evitar">
             <picture>
               <source srcset="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.avif" type="image/avif">
               <source srcset="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.webp" type="image/webp">
-              <img src="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.jpg" alt="Por que incluir janela de Libras em vídeos?" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
+              <img src="/assets/img/blog/por-que-incluir-janela-de-libras-em-videos/por-que-incluir-janela-de-libras-em-videos.jpg" alt="Janela de Libras em vídeos: por que incluir e 4 erros a evitar" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
             </picture>
             <span class="bl-card__badge">Acessibilidade audiovisual</span>
           </a>
@@ -2699,15 +2575,13 @@ main{padding-top:80px}
             <div class="bl-card__meta">
               <time datetime="2021-05-13" itemprop="datePublished">13 mai 2021</time>
               <span class="bl-card__dot" aria-hidden="true"></span>
-              <span>3 min de leitura</span>
+              <span>5 min de leitura</span>
             </div>
             <h3 class="bl-card__title" itemprop="headline">
-              <a href="/blog/por-que-incluir-janela-de-libras-em-videos/">Por que incluir janela de Libras em vídeos?</a>
+              <a href="/blog/por-que-incluir-janela-de-libras-em-videos/">Janela de Libras em vídeos: por que incluir e 4 erros a evitar</a>
             </h3>
-            <p class="bl-card__excerpt" itemprop="description">
-              Legenda não basta para incluir todos os surdos. Entenda por que a janela de Libras é essencial e o que diz a norma.
-            </p>
-            <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__read" aria-label="Ler artigo: Por que incluir janela de Libras em vídeos?">Ler artigo →</a>
+            <p class="bl-card__excerpt" itemprop="description">Por que a legenda não basta, o que diz a norma sobre o tamanho da janela e os 4 erros mais comuns ao gravar a tradução.</p>
+            <a href="/blog/por-que-incluir-janela-de-libras-em-videos/" class="bl-card__read" aria-label="Ler artigo: Janela de Libras em vídeos: por que incluir e 4 erros a evitar">Ler artigo →</a>
           </div>
         </article>
 <article class="bl-card bl-card--sm rv"

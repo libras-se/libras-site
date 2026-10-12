@@ -57,7 +57,7 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ItemList","name":"Artigos de Guilherme Cruz no Blog LIBRAS.SE","itemListElement":[
-  {"@type":"ListItem","position":1,"url":"https://libras.se/blog/4-erros-comuns-ao-inserir-libras-em-videos/"},
+  {"@type":"ListItem","position":1,"url":"https://libras.se/blog/por-que-incluir-janela-de-libras-em-videos/"},
   {"@type":"ListItem","position":2,"url":"https://libras.se/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/"},
   {"@type":"ListItem","position":3,"url":"https://libras.se/blog/acessibilidade-em-eventos-para-pessoas-surdas/"},
   {"@type":"ListItem","position":4,"url":"https://libras.se/blog/lingua-de-sinais-e-autismo/"},
@@ -212,6 +212,22 @@ a{text-decoration:none;color:inherit}
   .lse-c b{grid-column:1;grid-row:2}
   .lse-ic{grid-template-columns:repeat(2,1fr)}
 }
+/* nota de contexto no topo e bloco "Créditos e referências" no fim dos posts (os dois templates) */
+.pa-update{margin:0 0 28px;padding:18px 20px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-left:4px solid #4fd1c5;border-radius:16px}
+.pa-update p{margin:0!important;font-size:.98rem!important;line-height:1.65!important;color:#154245!important}
+.pa-update strong{color:#0e3538}
+.pa-update a{color:#12737a;font-weight:700}
+.pa-refs{margin:44px 0 0;padding:26px 28px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-radius:20px}
+.pa-refs h2{font-size:1.1rem!important;font-weight:800!important;color:#0e3538!important;letter-spacing:-.01em;line-height:1.3!important;margin:0 0 10px!important;padding:0!important;border:0!important}
+.pa-refs h2::before,.pa-refs h2::after{content:none!important;display:none!important}
+.pa-refs__by{font-size:.88rem!important;color:#3d6063!important;line-height:1.6!important;margin:0 0 12px!important}
+.pa-refs ol,.pa-refs ul{padding-left:20px;margin:0;display:flex;flex-direction:column;gap:8px}
+.pa-refs li{font-size:.86rem;color:#3d6063;line-height:1.6;margin:0}
+.pa-refs li strong{font-weight:700;color:#154245}
+.pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
+@media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
+.body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
 <!-- /LSE:CSS -->
 </head>
@@ -247,7 +263,7 @@ a{text-decoration:none;color:inherit}
           <h1 class="au-name">Guilherme Cruz</h1>
           <p class="au-bio">Autor do Blog LIBRAS.SE, com artigos sobre Libras, acessibilidade audiovisual, inclusão em eventos, educação e cultura surda.</p>
           <div class="au-stats">
-            <div class="au-stat"><strong>5</strong><span>artigos</span></div>
+            <div class="au-stat"><strong>20</strong><span>artigos</span></div>
             <div class="au-stat"><strong>2025</strong><span>publicações</span></div>
           </div>
         </div>
@@ -262,10 +278,6 @@ a{text-decoration:none;color:inherit}
         <a href="/blog/" class="btn bp">Ver todos os posts</a>
       </div>
       <div class="au-grid">
-        <a class="au-card rv d1" href="/blog/4-erros-comuns-ao-inserir-libras-em-videos/">
-          <span class="au-card__thumb"><img src="/assets/img/blog/4-erros-comuns-ao-inserir-libras-em-videos/4-erros-comuns-ao-inserir-libras-em-videos.webp" alt="4 erros comuns ao inserir Libras em vídeos e como evitá-los" loading="lazy" decoding="async" width="925" height="520"/></span>
-          <div class="au-card__body"><span class="au-card__title">4 erros comuns ao inserir Libras em vídeos e como evitá-los</span><span class="au-card__read">Ler artigo</span></div>
-        </a>
         <a class="au-card rv d2" href="/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/">
           <span class="au-card__thumb"><img src="/assets/img/blog/dia-nacional-da-libras-inclusao-da-comunidade-surda/dia-nacional-da-libras-inclusao-da-comunidade-surda.webp" alt="Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda" loading="lazy" decoding="async" width="1200" height="675"/></span>
           <div class="au-card__body"><span class="au-card__title">Dia Nacional da Libras: desafios e conquistas na inclusão da comunidade surda</span><span class="au-card__read">Ler artigo</span></div>

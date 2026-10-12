@@ -1,5 +1,5 @@
 {
- "_leia": "Estrutura de links internos e banners da LIBRAS.SE (tools/seo/links.py). 'banners': anúncios internos dos posts. 'banner_fixo': banner que vai no meio de todos os posts (o anúncio do serviço, com a Bruna sinalizando OBRIGADO). 'banner_por_editoria' e 'banner_por_post': o segundo banner, mais abaixo, só em posts com pelo menos 'distancia_minima' blocos depois do primeiro; nunca repete o banner fixo nem o vídeo dele. 'solucoes': páginas comerciais ligadas a posts (aparecem no fim do post). 'do_blog': posts mostrados nas páginas comerciais e institucionais. 'pilares': posts que recebem prioridade como leitura relacionada dentro da editoria. 'so_icones': páginas que recebem só o bloco 'Aprenda e jogue'.",
+ "_leia": "Estrutura de links internos e banners da LIBRAS.SE (tools/seo/links.py). 'banners': anúncios internos dos posts. 'banner_fixo': banner que vai no meio de todos os posts (o anúncio do serviço, com a Bruna sinalizando OBRIGADO). 'banner_por_editoria' e 'banner_por_post': o segundo banner, mais abaixo, só em posts com pelo menos 'distancia_minima' blocos depois do primeiro; nunca repete o banner fixo nem o vídeo dele. 'solucoes': páginas comerciais ligadas a posts (aparecem no fim do post). 'do_blog': posts mostrados nas páginas comerciais e institucionais. 'pilares': posts que recebem prioridade como leitura relacionada dentro da editoria. 'so_icones': páginas que recebem só o bloco 'Aprenda e jogue'. 'banner_fixo_por_editoria': o banner do serviço (meio do texto) de cada editoria; 'banner_fixo_por_post' fixa o banner do serviço de um post (vence a editoria). Banner sem uso fica disponível para trocar ('empresas', por exemplo, para depois das eleições). Links para huet.libras.se levam UTM (utm_source=blog, utm_medium=banner, utm_campaign=<banner>, utm_content=<post>).",
  "banners": {
   "aprender": {
    "rotulo": "LIBRAS.SE · grátis",
@@ -76,6 +76,61 @@
    "href": "/sejatils/",
    "visual": "video:trabalho",
    "escuro": true
+  },
+  "videoaulas": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Videoaulas com Libras",
+   "texto": "Libras, legendas e audiodescrição para EAD, universidades e edtechs, com entrega por lote e arquivos prontos para o LMS.",
+   "cta": "Ver como funciona",
+   "href": "/libras-para-videoaulas/",
+   "cta2": "Enviar meu vídeo",
+   "href2": "https://huet.libras.se/",
+   "visual": "video:obrigado",
+   "escuro": true
+  },
+  "campanha": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Campanha com Libras",
+   "texto": "Janela de Libras para propaganda na TV e nas redes, com entrega em até 1 hora e o mesmo padrão em todas as peças.",
+   "cta": "Ver como funciona",
+   "href": "/libras-para-campanhas-politicas/",
+   "cta2": "Enviar meu vídeo",
+   "href2": "https://huet.libras.se/",
+   "visual": "video:obrigado",
+   "escuro": true
+  },
+  "eventos": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Intérprete de Libras no seu evento",
+   "texto": "Reserve intérpretes para eventos ao vivo, com agendamento online, transmissão via Zoom e estúdios em todo o Brasil.",
+   "cta": "Reservar intérpretes",
+   "href": "/eventos-ao-vivo/",
+   "cta2": "Ver as soluções",
+   "href2": "/solucoes/",
+   "visual": "video:obrigado",
+   "escuro": true
+  },
+  "filme": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Seu filme com Libras",
+   "texto": "Libras, legendas e audiodescrição para curtas, com pacotes por minutagem para editais, festivais e projetos independentes.",
+   "cta": "Ver como funciona",
+   "href": "/acessibilidade-para-curta-metragem/",
+   "cta2": "Enviar meu vídeo",
+   "href2": "https://huet.libras.se/",
+   "visual": "video:obrigado",
+   "escuro": true
+  },
+  "empresas": {
+   "rotulo": "Publicidade · LIBRAS.SE",
+   "titulo": "Libras na comunicação da sua empresa",
+   "texto": "Libras, legendas e audiodescrição para vídeos corporativos, treinamentos e comunicação interna, e intérprete ao vivo em reuniões.",
+   "cta": "Ver como funciona",
+   "href": "/libras-para-empresas/",
+   "cta2": "Enviar meu vídeo",
+   "href2": "https://huet.libras.se/",
+   "visual": "video:obrigado",
+   "escuro": true
   }
  },
  "banner_fixo": "servico",
@@ -111,20 +166,27 @@
    "sinal_do_dia"
   ]
  },
- "banner_por_post": {
+ "banner_fixo_por_editoria": {
+  "educacao": "videoaulas",
+  "direitos": "campanha",
+  "inclusao": "eventos",
+  "cultura": "filme"
+ },
+ "banner_fixo_por_post": {
   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado": "servico",
   "por-que-incluir-janela-de-libras-em-videos": "servico",
   "margem-da-janela-de-libras-no-video": "servico",
   "4-marcas-que-investem-em-libras-nos-videos": "servico",
-  "garantir-libras-sem-improviso": "servico",
-  "acessibilidade-em-eventos-para-pessoas-surdas": "servico",
   "manifesto-por-libras-em-videos": "servico",
   "inovacao-caminho-para-avancar-no-contexto-da-acessibilidade": "servico",
   "responsavel-pelo-que-entendem": "servico",
   "4-dicas-para-ser-mais-inclusivo-na-internet": "servico",
-  "videoaulas-acessiveis-com-libras": "servico",
   "influenciadores-surdos-relatam-dificuldade-com-publis": "servico",
-  "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio": "servico",
+  "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa": "servico",
+  "justica-anula-demissao-de-surdo-sem-interprete-de-libras": "servico",
+  "chatbots-nao-entendem-como-pessoas-surdas-escrevem": "servico"
+ },
+ "banner_por_post": {
   "o-papel-do-interprete-de-libras-na-sociedade": "sejatils",
   "papel-do-interprete-de-libras-na-escola-bilingue": "sejatils",
   "interpretes-de-libras-traduzem-partos-para-pais-surdos": "sejatils",
@@ -137,12 +199,7 @@
   "dia-internacional-das-linguas-de-sinais": "cultura",
   "libras-tem-sotaque-e-giria": "quiz",
   "lingua-de-sinais-e-autismo": "materiais",
-  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades",
-  "eleicoes-2026-como-o-eleitor-surdo-vota-com-libras": "servico",
-  "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa": "servico",
-  "bastidores-da-libras-no-rock-in-rio-2026": "servico",
-  "justica-anula-demissao-de-surdo-sem-interprete-de-libras": "servico",
-  "chatbots-nao-entendem-como-pessoas-surdas-escrevem": "servico"
+  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades"
  },
  "pilares": {
   "lingua": [

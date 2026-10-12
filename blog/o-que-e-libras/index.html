@@ -47,7 +47,7 @@
       "name": "O que é Libras?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Libras é a Língua Brasileira de Sinais, uma língua visual-espacial com gramática própria, usada principalmente pela comunidade surda no Brasil. Ela foi reconhecida oficialmente pela Lei nº 10.436/2002 como meio legal de comunicação e expressão."
+        "text": "Libras é a Língua Brasileira de Sinais: uma língua visual-espacial com gramática própria, usada principalmente pela comunidade surda no Brasil. Ela foi reconhecida oficialmente pela Lei nº 10.436/2002 como meio legal de comunicação e expressão."
       }
     },
     {
@@ -55,7 +55,7 @@
       "name": "Libras é universal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. Cada país tem sua própria língua de sinais. Nos Estados Unidos existe a ASL (American Sign Language); na França, a LSF (Langue des Signes Française); em Portugal, a Língua Gestual Portuguesa. A Libras é exclusivamente brasileira e diferente de todas elas."
+        "text": "Não. Cada país tem sua própria língua de sinais, desenvolvida naturalmente por sua comunidade surda local. A ASL (American Sign Language) é diferente da Libras, assim como a Língua Gestual Portuguesa, a LSF francesa e centenas de outras línguas de sinais ao redor do mundo."
       }
     },
     {
@@ -63,7 +63,7 @@
       "name": "Libras é o mesmo que linguagem de sinais?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. O termo correto é Língua Brasileira de Sinais, não linguagem de sinais. Libras é uma língua completa com gramática, estrutura e status linguístico pleno, assim como o português. O uso de linguagem é tecnicamente impreciso."
+        "text": "Não. O termo correto é Língua Brasileira de Sinais, e não \"linguagem de sinais\". Libras é uma língua natural, com gramática, fonologia e capacidade plena de expressão humana, assim como o português. \"Linguagem\" é um conceito mais amplo, usado para qualquer sistema de comunicação. Usar \"língua\" é reconhecer o status linguístico completo da Libras."
       }
     },
     {
@@ -71,7 +71,15 @@
       "name": "Qual lei reconhece a Libras no Brasil?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Lei nº 10.436, de 24 de abril de 2002, reconhece a Libras como meio legal de comunicação e expressão. O Decreto nº 5.626/2005 regulamentou essa lei com detalhes sobre formação de professores, intérpretes e acesso a serviços. Em 2021, a Lei nº 14.191 inseriu a educação bilíngue de surdos na LDB."
+        "text": "A Lei nº 10.436, de 24 de abril de 2002, reconhece a Libras como meio legal de comunicação e expressão. O Decreto nº 5.626/2005 regulamentou essa lei, com regras para a formação de professores e intérpretes e para o acesso de pessoas surdas a serviços. Em 2021, a Lei nº 14.191 incluiu a educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional (LDB)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Toda pessoa surda usa Libras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem toda pessoa surda usa Libras. Existem surdos oralizados, que se comunicam predominantemente pela fala e leitura labial, e há também pessoas com diferentes graus de perda auditiva. A Libras é a língua central para grande parte da comunidade surda brasileira sinalizante, mas não é a única forma de comunicação das pessoas surdas."
       }
     }
   ]
@@ -342,6 +350,11 @@
   /* Ícones em SVG (no lugar de emojis) */
   .info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
   .card-icon svg{width:22px;height:22px;color:var(--teal-dark)}
+  /* RESPOSTA CURTA */
+  .resposta-curta{margin:0 0 44px;padding:22px 26px;background:var(--teal-bg);border:1px solid var(--teal-pale);border-left:4px solid var(--teal-mid);border-radius:0 var(--radius) var(--radius) 0;font-family:'Lora',Georgia,serif;font-size:1.04rem;line-height:1.75;color:var(--ink)}
+  .resposta-curta strong:first-child{display:block;margin-bottom:6px;font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;color:var(--teal-dark)}
+  .resposta-curta a{color:var(--teal-dark);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  @media(max-width:700px){.resposta-curta{padding:18px 20px;font-size:1rem}}
 </style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
 
@@ -538,6 +551,8 @@
 <!-- ARTICLE -->
 <main class="article-wrapper" id="main-content">
 
+  <p class="resposta-curta"><strong>O que é Libras?</strong> Libras é a <a href="/glossario/libras/">Língua Brasileira de Sinais</a>, uma língua visual-espacial: é produzida com as mãos, o rosto e o corpo, é percebida pela visão e tem gramática própria, independente do português. A <a href="/glossario/lei-10436/">Lei nº 10.436/2002</a> reconhece a Libras como meio legal de comunicação e expressão das comunidades surdas do Brasil.</p>
+
   <!-- ABERTURA -->
   <div class="reveal">
     <h2 class="section-label">A língua que você talvez não conheça ainda</h2>
@@ -658,7 +673,7 @@
 
   <!-- IMAGEM EDITORIAL -->
   <figure class="article-figure reveal">
-    <img src="/assets/img/banco-editorial/LIBRAS.SE_4.webp" alt="Intérprete de Libras sorrindo e sinalizando em estúdio com fundo verde e luzes de gravação" width="1200" height="675" loading="lazy" decoding="async">
+    <img src="/assets/img/banco-editorial/LIBRAS.SE_4.webp" alt="Intérprete de Libras sorrindo e sinalizando em estúdio com fundo verde e luzes de gravação" width="1200" height="675" decoding="async">
     <figcaption>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
       Intérprete de Libras durante gravação profissional, Equipe LIBRAS.SE
@@ -681,15 +696,15 @@
     <div class="step">
       <div class="step-num">1855</div>
       <div class="step-body">
-        <h4>E. Huet chega ao Brasil</h4>
-        <p>O professor surdo francês E. Huet desembarcou no Rio de Janeiro trazendo a Língua de Sinais Francesa. Com o apoio do imperador Dom Pedro II, iniciou os trabalhos para criar uma escola dedicada à educação de <a href="/glossario/surdo/">surdos</a>.</p>
+        <h4>E. Huet propõe uma escola para surdos</h4>
+        <p>O professor surdo francês E. Huet envia ao imperador Dom Pedro II um relatório propondo a criação de um colégio para <a href="/glossario/surdo/">surdos</a> no Rio de Janeiro. Em 1856, com apoio do Império, começa a funcionar sob sua direção o Collégio Nacional para Surdos-Mudos.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">1857</div>
       <div class="step-body">
         <h4>Fundação da primeira escola de surdos no Brasil</h4>
-        <p>O Imperial Instituto de Surdos-Mudos foi fundado no Rio de Janeiro, hoje conhecido como <a href="/glossario/ines/">Instituto Nacional de Educação de Surdos (INES)</a>. A escola se tornou o principal espaço de desenvolvimento e transmissão da língua de sinais no país.</p>
+        <p>Em 26 de setembro de 1857, a Lei nº 939 cria oficialmente no Rio de Janeiro o Imperial Instituto de Surdos-Mudos, hoje <a href="/glossario/ines/">Instituto Nacional de Educação de Surdos (INES)</a>. A escola se tornou o principal espaço de desenvolvimento e transmissão da língua de sinais no país.</p>
       </div>
     </div>
     <div class="step">
@@ -766,7 +781,7 @@
     </div>
     <div class="stat-card">
       <span class="stat-number" id="stat3">300+</span>
-      <span class="stat-desc">Línguas de sinais distintas ao redor do mundo, cada uma com gramática e cultura próprias</span>
+      <span class="stat-desc">Línguas de sinais usadas no mundo, cada uma com gramática e cultura próprias, segundo a ONU</span>
     </div>
   </div>
 
@@ -863,44 +878,6 @@
 
   <div class="divider reveal"></div>
 
-  <!-- FAQ -->
-  <div class="faq-section reveal">
-    <h2>Perguntas frequentes sobre Libras</h2>
-    <p>As dúvidas mais comuns sobre a Língua Brasileira de Sinais, respondidas de forma direta.</p>
-
-    <div class="info-callout">
-      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
-      <div class="info-content">
-        <h4>O que é Libras, exatamente?</h4>
-        <p>Libras é a Língua Brasileira de Sinais: uma língua visual-espacial com gramática própria, usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Ela foi reconhecida oficialmente pela <a href="/glossario/lei-10436/">Lei nº 10.436/2002</a> como meio legal de comunicação e expressão.</p>
-      </div>
-    </div>
-
-    <div class="info-callout">
-      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
-      <div class="info-content">
-        <h4>Libras é universal?</h4>
-        <p>Não. Cada país tem sua própria língua de sinais, desenvolvida naturalmente por sua comunidade surda local. A ASL (American Sign Language) é diferente da Libras, assim como a Língua Gestual Portuguesa, a LSF francesa e centenas de outras línguas de sinais ao redor do mundo.</p>
-      </div>
-    </div>
-
-    <div class="info-callout">
-      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
-      <div class="info-content">
-        <h4>"Linguagem de sinais" é correto?</h4>
-        <p>Tecnicamente, não. O termo correto é <strong>Língua Brasileira de Sinais</strong>. Libras é uma língua natural, com gramática, fonologia e capacidade plena de expressão humana. "Linguagem" é um conceito mais amplo, usado para qualquer sistema de comunicação. Usar "língua" é reconhecer o status linguístico completo da Libras.</p>
-      </div>
-    </div>
-
-    <div class="info-callout">
-      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div class="info-content">
-        <h4>Toda pessoa surda usa Libras?</h4>
-        <p>Nem toda pessoa surda usa Libras. Existem surdos oralizados, que se comunicam predominantemente pela fala e leitura labial, e há também pessoas com diferentes graus de perda auditiva. A Libras é a língua central para grande parte da <a href="/glossario/comunidade-surda/">comunidade surda</a> brasileira sinalizante, mas não é a única forma de comunicação das pessoas surdas.</p>
-      </div>
-    </div>
-  </div>
-
   <!-- ENCERRAMENTO -->
   <blockquote class="pull-quote reveal">
     <p>
@@ -917,17 +894,67 @@
     </p>
   </div>
 
-  <!-- REFERENCES -->
-  <div class="references reveal">
-    <h4>Referências</h4>
-    <ol>
-      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais. Brasília: Presidência da República, 2002. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>.</li>
-      <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei nº 10.436/2002. Brasília: Presidência da República, 2005. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>.</li>
-      <li>BRASIL. <em>Lei nº 14.191, de 3 de agosto de 2021.</em> Altera a Lei de Diretrizes e Bases da Educação Nacional para dispor sobre a modalidade de educação bilíngue de surdos. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a>.</li>
-      <li>QUADROS, Ronice Muller de; KARNOPP, Lodenir Becker. <em>Língua de sinais brasileira: estudos linguísticos.</em> Porto Alegre: Artmed, 2004.</li>
-      <li>IBGE. <em>Censo Demográfico 2010, Características gerais da população.</em> Rio de Janeiro: IBGE, 2010. Disponível em: <a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer">ibge.gov.br</a>.</li>
-      <li>INES, Instituto Nacional de Educação de Surdos. <em>Histórico.</em> Rio de Janeiro: INES/MEC. Disponível em: <a href="https://www.ines.gov.br" target="_blank" rel="noopener noreferrer">ines.gov.br</a>.</li>
-    </ol>
+  <section class="pa-refs" aria-labelledby="pa-refs-t">
+  <h2 id="pa-refs-t">Créditos e referências</h2>
+  <p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações da legislação federal, do Instituto Nacional de Educação de Surdos (INES), da ONU e do Instituto Locomotiva.</p>
+  <ul>
+    <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener noreferrer">Lei nº 10.436, de 24 de abril de 2002</a> (reconhece a Libras como meio legal de comunicação e expressão).</li>
+    <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener noreferrer">Decreto nº 5.626, de 22 de dezembro de 2005</a> (regulamenta a Lei de Libras).</li>
+    <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm" target="_blank" rel="noopener noreferrer">Lei nº 14.191, de 3 de agosto de 2021</a> (inclui a educação bilíngue de surdos na LDB).</li>
+    <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015</a> (Lei Brasileira de Inclusão).</li>
+    <li>Instituto Nacional de Educação de Surdos. <a href="https://www.gov.br/ines/pt-br/acesso-a-informacao-1/institucional/competencias-e-base-juridica" target="_blank" rel="noopener noreferrer">Competências e base jurídica</a> (criação do instituto pela Lei nº 939, de 26 de setembro de 1857). Consultado em outubro de 2026.</li>
+    <li>Revista Espaço (INES). Solange Maria da Rocha. <a href="https://seer.ines.gov.br/index.php/revista-espaco/article/view/1406" target="_blank" rel="noopener noreferrer">Dados recentes sobre o fundador do instituto, E. Huet</a>. N. 31, janeiro a junho de 2009.</li>
+    <li>Revista Diálogos (UFMT). Fábio Vieira de Souza Júnior e Vinícius Carvalho Pereira. <a href="https://periodicoscientificos.ufmt.br/ojs/index.php/revdia/article/view/17030" target="_blank" rel="noopener noreferrer">Panorama das principais estruturas formacionais da Língua Brasileira de Sinais</a> (os parâmetros da Libras). 2024.</li>
+    <li>Nações Unidas. <a href="https://www.un.org/en/observances/sign-languages-day" target="_blank" rel="noopener noreferrer">International Day of Sign Languages</a> (mais de 300 línguas de sinais no mundo). Consultado em outubro de 2026.</li>
+    <li>Brasil 61. <a href="https://brasil61.com/noticias/brasil-tem-10-7-milhoes-de-pessoas-com-deficiencia-auditiva-bras214025" target="_blank" rel="noopener noreferrer">Brasil tem 10,7 milhões de pessoas com deficiência auditiva</a> (pesquisa do Instituto Locomotiva com a Semana da Acessibilidade Surda). Março de 2021.</li>
+    <li>Imagem: banco de imagens da LIBRAS.SE.</li>
+  </ul>
+  </section>
+
+  <!-- FAQ -->
+  <div class="faq-section reveal">
+    <h2>Perguntas frequentes sobre Libras</h2>
+    <p>As dúvidas mais comuns sobre a Língua Brasileira de Sinais, respondidas de forma direta.</p>
+
+    <div class="info-callout">
+      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+      <div class="info-content">
+        <h4>O que é Libras?</h4>
+        <p>Libras é a Língua Brasileira de Sinais: uma língua visual-espacial com gramática própria, usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Ela foi reconhecida oficialmente pela <a href="/glossario/lei-10436/">Lei nº 10.436/2002</a> como meio legal de comunicação e expressão.</p>
+      </div>
+    </div>
+
+    <div class="info-callout">
+      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+      <div class="info-content">
+        <h4>Libras é universal?</h4>
+        <p>Não. Cada país tem sua própria língua de sinais, desenvolvida naturalmente por sua comunidade surda local. A ASL (American Sign Language) é diferente da Libras, assim como a Língua Gestual Portuguesa, a LSF francesa e centenas de outras línguas de sinais ao redor do mundo.</p>
+      </div>
+    </div>
+
+    <div class="info-callout">
+      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
+      <div class="info-content">
+        <h4>Libras é o mesmo que linguagem de sinais?</h4>
+        <p>Não. O termo correto é <strong>Língua Brasileira de Sinais</strong>, e não "linguagem de sinais". Libras é uma língua natural, com gramática, fonologia e capacidade plena de expressão humana, assim como o português. "Linguagem" é um conceito mais amplo, usado para qualquer sistema de comunicação. Usar "língua" é reconhecer o status linguístico completo da Libras.</p>
+      </div>
+    </div>
+
+    <div class="info-callout">
+      <div class="info-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
+      <div class="info-content">
+        <h4>Qual lei reconhece a Libras no Brasil?</h4>
+        <p>A <a href="/glossario/lei-10436/">Lei nº 10.436, de 24 de abril de 2002</a>, reconhece a Libras como meio legal de comunicação e expressão. O <a href="/glossario/decreto-5626/">Decreto nº 5.626/2005</a> regulamentou essa lei, com regras para a formação de professores e intérpretes e para o acesso de pessoas surdas a serviços. Em 2021, a Lei nº 14.191 incluiu a educação bilíngue de surdos na Lei de Diretrizes e Bases da Educação Nacional (LDB).</p>
+      </div>
+    </div>
+
+    <div class="info-callout">
+      <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="info-content">
+        <h4>Toda pessoa surda usa Libras?</h4>
+        <p>Nem toda pessoa surda usa Libras. Existem surdos oralizados, que se comunicam predominantemente pela fala e leitura labial, e há também pessoas com diferentes graus de perda auditiva. A Libras é a língua central para grande parte da <a href="/glossario/comunidade-surda/">comunidade surda</a> brasileira sinalizante, mas não é a única forma de comunicação das pessoas surdas.</p>
+      </div>
+    </div>
   </div>
 
   <!-- CTA -->

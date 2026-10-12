@@ -125,7 +125,8 @@ cta_type:               # vídeo | soluções | jogo | glossário
 <meta name="twitter:description" content="[Descrição]">
 <meta name="twitter:image" content="https://libras.se/assets/img/blog/[slug]/[slug].webp">
 <meta name="theme-color" content="#4fd1c5">
-<link rel="icon" href="https://libras.se/assets/img/favicon/FAVICONpng.png">
+<link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 ```
 
 ### JSON-LD obrigatório (os dois níveis)
@@ -497,7 +498,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <p>Fonte: Equipe LIBRAS.SE, com <a href="[url]" target="_blank" rel="noopener noreferrer">[Veículo]</a></p>
     </div>
 
-    <div class="pa-tags" aria-label="Tags">
+    <div class="pa-tags" role="group" aria-label="Tags">
       <span class="pa-tag">#acessibilidade</span>
       <a class="pa-tag" href="/glossario/libras/">#libras</a>
       <a class="pa-tag" href="/glossario/til-tils/">#tils</a>

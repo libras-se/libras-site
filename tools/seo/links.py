@@ -335,6 +335,14 @@ def modulo_icones():
 
 # ------------------------------------------------------------------ edição dos arquivos
 
+def antes_do_rodape(t, bloco, f):
+    """Insere o bloco logo antes do rodapé canônico (<footer id="foot">)."""
+    alvo = t.find('<footer id="foot"')
+    if alvo < 0:
+        raise SystemExit(f'{f}: sem <footer id="foot">; não sei onde pôr o bloco gerado')
+    return t[:alvo] + "\n" + bloco + "\n" + t[alvo:]
+
+
 def tira(t, nome):
     """Remove o bloco gerado junto com as quebras de linha que a inserção acrescentou."""
     t = re.sub(rf"\n<!-- LSE:{nome} [^>]*-->[\s\S]*?<!-- /LSE:{nome} -->\n", "", t)
@@ -432,8 +440,7 @@ def processa_post(slug, rel, posts):
             usados.append((min(longe, key=lambda c: abs(c[0] - round(n * 0.78)))[1], seg))
     for p, bid in sorted(usados, reverse=True):
         t = t[:p] + "\n" + banner(bid) + "\n" + t[p:]
-    alvo = t.find('<footer id="foot"')
-    t = t[:alvo] + "\n" + modulo_post(slug, rel, posts) + "\n" + t[alvo:]
+    t = antes_do_rodape(t, modulo_post(slug, rel, posts), f)
     t = injeta_css(t)
     if t != original:
         f.write_text(t)
@@ -445,8 +452,7 @@ def processa_pagina(url, slugs, posts, **kw):
     t = f.read_text()
     original = t
     t = tira(t, "DOBLOG")
-    alvo = t.find('<footer id="foot"')
-    t = t[:alvo] + "\n" + modulo_pagina(slugs, posts, **kw) + "\n" + t[alvo:]
+    t = antes_do_rodape(t, modulo_pagina(slugs, posts, **kw), f)
     t = injeta_css(t)
     if t != original:
         f.write_text(t)
@@ -457,8 +463,7 @@ def processa_icones(url):
     t = f.read_text()
     original = t
     t = tira(t, "APRENDA")
-    alvo = t.find('<footer id="foot"')
-    t = t[:alvo] + "\n" + modulo_icones() + "\n" + t[alvo:]
+    t = antes_do_rodape(t, modulo_icones(), f)
     t = injeta_css(t)
     if t != original:
         f.write_text(t)

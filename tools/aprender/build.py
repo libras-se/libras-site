@@ -184,6 +184,7 @@ def build(src):
 <meta name="twitter:site" content="@librasse">
 <meta name="twitter:image" content="{og_image}">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#4fd1c5">
 <link rel="preload" href="/assets/fonts/museo-sans-rounded-300.woff2" as="font" type="font/woff2" crossorigin>

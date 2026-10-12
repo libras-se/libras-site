@@ -162,14 +162,14 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 #foot{background:var(--p1);padding:56px 0 28px}
 .ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:20px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.5rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:10px}
-.ft-bp{font-size:.79rem;color:rgba(255,255,255,.38);line-height:1.68;margin-bottom:14px}
+.ft-bp{font-size:.79rem;color:rgba(255,255,255,.66);line-height:1.68;margin-bottom:14px}
 .ft-socs{display:flex;gap:7px}
 .ftsoc{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;font-size:.72rem;color:rgba(255,255,255,.5);transition:var(--tr)}.ftsoc:hover{background:rgba(255,255,255,.12);color:#fff}
-.ft-col h4{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:12px}
+.ft-col .ft-h{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:0 0 12px}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-.ft-col ul a{font-size:.79rem;color:rgba(255,255,255,.46);transition:color .2s}.ft-col ul a:hover{color:#fff}
+.ft-col ul a{font-size:.79rem;color:rgba(255,255,255,.72);transition:color .2s}.ft-col ul a:hover{color:#fff}
 .ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.ft-bot p{font-size:.7rem;color:rgba(255,255,255,.22)}
+.ft-bot p{font-size:.7rem;color:rgba(255,255,255,.6)}
 @media(max-width:900px){#tcontent{grid-template-columns:1fr;gap:32px}.tsidebar{position:static;flex-direction:row;flex-wrap:wrap}.sb-box{flex:1;min-width:200px}}
 @media(max-width:768px){.w{padding:0 22px}.faq-inner,.sources-inner{padding:0 22px}#tcontent{padding:40px 22px}.ft-top{grid-template-columns:1fr 1fr}.nlinks,.nd{display:none}.ham{display:flex}}
 @media(max-width:500px){.ft-top{grid-template-columns:1fr}.gcta-inner{padding:36px 22px}}
@@ -307,9 +307,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 <a href="https://wa.me/5548996367511?text=Oi%2C%20quero%20saber%20mais%20sobre%20tradu%C3%A7%C3%A3o%20em%20Libras" class="wppf" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><span>WhatsApp</span></a>
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu">
   <button class="mob-x" id="mobx" aria-label="Fechar menu">&#10005;</button>
-  <a href="https://libras.se/solucoes">Solu&ccedil;&otilde;es</a>
+  <a href="https://libras.se/solucoes/">Solu&ccedil;&otilde;es</a>
   <a href="https://libras.se/glossario/">Gloss&aacute;rio</a>
-  <a href="https://libras.se/blog">Blog</a>
+  <a href="https://libras.se/blog/">Blog</a>
   <a href="https://huet.libras.se/" class="btn bp">Enviar seu v&iacute;deo</a>
 </div>
 <nav id="nav" aria-label="Navega&ccedil;&atilde;o principal">
@@ -319,9 +319,9 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
       <span class="nsub">Gloss&aacute;rio</span>
     </a>
     <ul class="nlinks" role="list">
-      <li><a href="https://libras.se/solucoes">Solu&ccedil;&otilde;es</a></li>
+      <li><a href="https://libras.se/solucoes/">Solu&ccedil;&otilde;es</a></li>
       <li><a href="https://libras.se/glossario/">Gloss&aacute;rio</a></li>
-      <li><a href="https://libras.se/blog">Blog</a></li>
+      <li><a href="https://libras.se/blog/">Blog</a></li>
     </ul>
     <a href="https://huet.libras.se/" class="btn bp nd" style="font-size:.78rem;padding:10px 20px">Enviar v&iacute;deo</a>
     <button class="ham" id="hamb" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobm"><span></span><span></span><span></span></button>
@@ -558,7 +558,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
         </div>
       </div>
       <div class="ft-col">
-        <h4>Gloss&aacute;rio</h4>
+        <p class="ft-h">Gloss&aacute;rio</p>
         <ul>
           <li><a href="/glossario/libras/">Libras</a></li>
           <li><a href="/glossario/til-tils/">TIL / TILS</a></li>
@@ -568,16 +568,16 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Empresa</h4>
+        <p class="ft-h">Empresa</p>
         <ul>
-          <li><a href="https://libras.se/proposito">Prop&oacute;sito</a></li>
-          <li><a href="https://libras.se/solucoes">Solu&ccedil;&otilde;es</a></li>
-          <li><a href="https://libras.se/portfolio">Portf&oacute;lio</a></li>
-          <li><a href="https://libras.se/blog">Blog</a></li>
+          <li><a href="https://libras.se/proposito/">Prop&oacute;sito</a></li>
+          <li><a href="https://libras.se/solucoes/">Solu&ccedil;&otilde;es</a></li>
+          <li><a href="https://libras.se/portfolio/">Portf&oacute;lio</a></li>
+          <li><a href="https://libras.se/blog/">Blog</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Contato</h4>
+        <p class="ft-h">Contato</p>
         <ul>
           <li><a href="https://huet.libras.se/">Or&ccedil;amento</a></li>
           <li><a href="https://wa.me/5548996367511">WhatsApp</a></li>

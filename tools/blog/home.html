@@ -31,7 +31,8 @@
 <meta name="twitter:image:alt" content="LIBRAS.SE, Blog LIBRAS.SE: Conteúdo sobre Libras e inclusão">
 <meta name="geo.region" content="BR-SC">
 <meta name="geo.placename" content="Florianópolis, SC">
-<link rel="icon" href="https://libras.se/assets/img/favicon/FAVICONpng.png">
+<link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#4fd1c5">
 <link rel="dns-prefetch" href="//wa.me">
@@ -418,6 +419,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
 }
 {{FOOTER_CSS}}
 </style>
+<script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
 </head>
 <body>
 {{HEADER_HTML}}
@@ -437,6 +439,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
           <label for="bl-search-input" class="sr">Buscar no blog</label>
           <input type="search" id="bl-search-input" placeholder="Buscar notícias, temas e termos…" autocomplete="off" spellcheck="false">
           <kbd>/</kbd>
+              <button type="submit" class="sr">Buscar</button>
         </form>
       </div>
     </div>
@@ -507,6 +510,7 @@ i[class^="d-"]{display:inline-block;width:8px;height:8px;border-radius:50%;flex-
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-3a2 2 0 0 0-4 0"/></svg>
               <label for="sb-in" class="sr">Procurar um sinal</label>
               <input id="sb-in" type="search" placeholder="Procure um sinal: casa, obrigado…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sb-res" aria-autocomplete="list">
+              <button type="submit" class="sr">Buscar</button>
             </form>
             <div class="sb-res" id="sb-res" role="listbox"></div>
           </div>

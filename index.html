@@ -210,7 +210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <link rel="icon" href="assets/img/favicon/cropped-FAVICONpng-1-32x32.png" type="image/png" sizes="32x32"/>
 <link rel="icon" href="assets/img/favicon/cropped-FAVICONpng-1-192x192.png" type="image/png" sizes="192x192"/>
-<link rel="apple-touch-icon" href="assets/img/favicon/cropped-FAVICONpng-1-180x180.png"/>
+<link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#4fd1c5"/>
 <meta name="author" content="LIBRAS.SE"/>
@@ -635,18 +635,18 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
-.ft-bp{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
+.ft-bp{font-size:.8rem;color:rgba(255,255,255,.66);line-height:1.7;margin-bottom:16px}
 .ft-socs{display:flex;gap:7px}
 .ftsoc{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:var(--tr)}
 .ftsoc:hover{background:rgba(255,255,255,.12);color:#fff;transform:translateY(-2px)}
 .ftsoc:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .ftsoc svg{width:15px;height:15px;fill:currentColor}
-.ft-col h4{font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
+.ft-col .ft-h{font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:0 0 14px}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.ft-col ul a{font-size:.8rem;color:rgba(255,255,255,.46);transition:color .2s}
+.ft-col ul a{font-size:.8rem;color:rgba(255,255,255,.72);transition:color .2s}
 .ft-col ul a:hover{color:#fff}
 .ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.ft-bot p{font-size:.7rem;color:rgba(255,255,255,.22)}
+.ft-bot p{font-size:.7rem;color:rgba(255,255,255,.6)}
 @media(max-width:1024px){
   .pr-cards{grid-template-columns:1fr 1fr}
   .pr-cards .prc:nth-child(3){grid-column:1/-1;max-width:400px;margin:0 auto}
@@ -773,7 +773,7 @@ details.faq-item summary:focus-visible{outline:2px solid var(--teal);outline-off
 </style>
 <link rel="service-doc" href="https://libras.se/"/>
 <script>
-(function(){if(typeof navigator==='undefined'||!navigator.modelContext)return;navigator.modelContext.provideContext({tools:[{name:'solicitar_orcamento',description:'Solicita orçamento de tradução em Libras para vídeo, evento, aula ou live',inputSchema:{type:'object',properties:{tipo:{type:'string',description:'Tipo de conteúdo: video, evento, aula ou live'},duracao_minutos:{type:'number',description:'Duração em minutos'}},required:['tipo']},execute:async function(i){window.location.href='https://libras.se/orcamento?tipo='+encodeURIComponent(i.tipo);return{success:true}}},{name:'contato_libras_se',description:'Retorna dados de contato da LIBRAS.SE: WhatsApp, e-mail e site',inputSchema:{type:'object',properties:{}},execute:async function(){return{whatsapp:'+55-48-99636-7511',email:'contato@libras.se',site:'https://libras.se'}}}]});})();
+(function(){if(typeof navigator==='undefined'||!navigator.modelContext)return;navigator.modelContext.provideContext({tools:[{name:'solicitar_orcamento',description:'Solicita orçamento de tradução em Libras para vídeo, evento, aula ou live',inputSchema:{type:'object',properties:{tipo:{type:'string',description:'Tipo de conteúdo: video, evento, aula ou live'},duracao_minutos:{type:'number',description:'Duração em minutos'}},required:['tipo']},execute:async function(i){window.location.href='https://libras.se/orcamento/?tipo='+encodeURIComponent(i.tipo);return{success:true}}},{name:'contato_libras_se',description:'Retorna dados de contato da LIBRAS.SE: WhatsApp, e-mail e site',inputSchema:{type:'object',properties:{}},execute:async function(){return{whatsapp:'+55-48-99636-7511',email:'contato@libras.se',site:'https://libras.se'}}}]});})();
 </script>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -846,11 +846,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── Mobile menu ── -->
 <div class="mob" id="mobm" role="dialog" aria-modal="true" aria-label="Menu de navegação">
   <button class="mob-x" id="mobx" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:1.2rem;height:1.2rem;display:block"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  <a href="https://libras.se/proposito" onclick="cm()">Propósito</a>
-  <a href="https://libras.se/tecnologia" onclick="cm()">Nossa tecnologia</a>
-  <a href="https://libras.se/solucoes" onclick="cm()">Soluções</a>
-  <a href="https://libras.se/portfolio" onclick="cm()">Portfólio</a>
-  <a href="https://libras.se/blog" onclick="cm()">Blog</a>
+  <a href="https://libras.se/proposito/" onclick="cm()">Propósito</a>
+  <a href="https://libras.se/tecnologia/" onclick="cm()">Nossa tecnologia</a>
+  <a href="https://libras.se/solucoes/" onclick="cm()">Soluções</a>
+  <a href="https://libras.se/portfolio/" onclick="cm()">Portfólio</a>
+  <a href="https://libras.se/blog/" onclick="cm()">Blog</a>
   <a href="https://huet.libras.se/" class="btn bw" onclick="cm()">Enviar seu vídeo</a>
 </div>
 
@@ -860,11 +860,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="navi">
       <a href="/" class="nlogo" aria-label="LIBRAS.SE, Página inicial"><span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span></a>
       <ul class="nlinks" role="list">
-        <li><a href="https://libras.se/proposito">Propósito</a></li>
-        <li><a href="https://libras.se/tecnologia">Nossa tecnologia</a></li>
-        <li><a href="https://libras.se/solucoes">Soluções</a></li>
-        <li><a href="https://libras.se/portfolio">Portfólio</a></li>
-        <li><a href="https://libras.se/blog">Blog</a></li>
+        <li><a href="https://libras.se/proposito/">Propósito</a></li>
+        <li><a href="https://libras.se/tecnologia/">Nossa tecnologia</a></li>
+        <li><a href="https://libras.se/solucoes/">Soluções</a></li>
+        <li><a href="https://libras.se/portfolio/">Portfólio</a></li>
+        <li><a href="https://libras.se/blog/">Blog</a></li>
       </ul>
       <a href="https://huet.libras.se/" class="btn bp nd" style="font-size:.8rem;padding:10px 20px">Enviar seu vídeo</a>
       <button class="ham" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobm">
@@ -1020,7 +1020,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 id="how-title">Simples, rápido e <span class="gt2">fácil</span></h2>
       <p>Três passos. Sem complicação.</p>
       <div style="margin-top:12px">
-        <a href="https://libras.se/tecnologia" class="how-tech-link" aria-label="Conheça nossa tecnologia">
+        <a href="https://libras.se/tecnologia/" class="how-tech-link" aria-label="Conheça nossa tecnologia">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
           Conheça nossa tecnologia →
         </a>
@@ -1171,7 +1171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 id="works-title">Veja nossos trabalhos.</h2>
       <p>Campanhas reais. Intérpretes reais. Resultados reais.</p>
       <div class="wc-btns">
-        <a href="https://libras.se/portfolio" class="btn bo-dark" target="_blank" rel="noopener noreferrer">Ver portfólio</a>
+        <a href="https://libras.se/portfolio/" class="btn bo-dark" target="_blank" rel="noopener noreferrer">Ver portfólio</a>
         <a href="https://huet.libras.se/" class="btn bw" target="_blank" rel="noopener noreferrer">Fazer igual</a>
       </div>
     </div>
@@ -1203,7 +1203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
     <div class="press-award rv d5">
-      <a href="https://libras.se/blog" class="press-award-badge" aria-label="Ler sobre o prêmio Startup SEBRAE 2026">
+      <a href="https://libras.se/blog/" class="press-award-badge" aria-label="Ler sobre o prêmio Startup SEBRAE 2026">
         <div class="press-award-ico" aria-hidden="true"><svg class="svg-ico svg-ico-trophy" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4"/><path d="M16 6h4a3 3 0 0 1-3 4"/><path d="M12 12v5"/><path d="M8 21h8"/><path d="M9 17h6"/></svg></div>
         <div class="press-award-txt">
           <strong>Startup Premiada SEBRAE 2026</strong>
@@ -1411,7 +1411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/libras-para-empresas/" class="av-link" role="listitem">Empresas</a>
         </div>
       </div>
-      <a href="https://libras.se/solucoes" class="btn bo-dark" style="padding:14px 32px;font-size:.92rem">Ver todas as soluções →</a>
+      <a href="https://libras.se/solucoes/" class="btn bo-dark" style="padding:14px 32px;font-size:.92rem">Ver todas as soluções →</a>
     </div>
   </div>
 </section>
@@ -1456,7 +1456,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p style="font-size:.93rem;font-weight:300;color:rgba(255,255,255,.62);margin-top:10px">Aprenda, jogue e explore o mundo das Libras.</p>
     </div>
     <div class="explore-grid">
-      <a href="https://libras.se/blog" target="_blank" rel="noopener noreferrer" class="explore-card glass rv d1" aria-label="Ir para o Blog do LIBRAS.SE">
+      <a href="https://libras.se/blog/" target="_blank" rel="noopener noreferrer" class="explore-card glass rv d1" aria-label="Ir para o Blog do LIBRAS.SE">
         <span class="explore-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span>
         <div class="explore-card-title">Blog</div>
         <div class="explore-card-desc">Conteúdo sobre Libras, acessibilidade e inclusão para o seu dia a dia.</div>
@@ -1492,7 +1492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <a href="/" class="ft-logo" aria-label="LIBRAS.SE, Voltar ao topo">LIBRAS.SE</a>
         <p class="ft-bp">A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.</p>
-        <div class="ft-socs" aria-label="Redes sociais">
+        <div class="ft-socs" role="group" aria-label="Redes sociais">
           <a href="https://instagram.com/libras.se" class="ftsoc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LIBRAS.SE">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
@@ -1511,34 +1511,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="ft-col">
-        <h4>Serviços</h4>
+        <p class="ft-h">Serviços</p>
         <ul>
-          <li><a href="https://libras.se/solucoes">Tradução de Vídeo</a></li>
-          <li><a href="https://libras.se/solucoes">Video Aulas</a></li>
-          <li><a href="https://libras.se/solucoes">Ao Vivo</a></li>
-          <li><a href="https://libras.se/solucoes">Pacotes</a></li>
+          <li><a href="https://libras.se/solucoes/">Tradução de Vídeo</a></li>
+          <li><a href="https://libras.se/solucoes/">Video Aulas</a></li>
+          <li><a href="https://libras.se/solucoes/">Ao Vivo</a></li>
+          <li><a href="https://libras.se/solucoes/">Pacotes</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Empresa</h4>
+        <p class="ft-h">Empresa</p>
         <ul>
-          <li><a href="https://libras.se/tecnologia">Nossa Tecnologia</a></li>
+          <li><a href="https://libras.se/tecnologia/">Nossa Tecnologia</a></li>
           <li><a href="/sejatils/">Seja TILs no LIBRAS.SE</a></li>
-          <li><a href="https://libras.se/politica">Nossa Política</a></li>
-          <li><a href="https://libras.se/blog">Blog</a></li>
+          <li><a href="https://libras.se/politica/">Nossa Política</a></li>
+          <li><a href="https://libras.se/blog/">Blog</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Explorar</h4>
+        <p class="ft-h">Explorar</p>
         <ul>
-          <li><a href="https://libras.se/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><a href="https://libras.se/blog/" target="_blank" rel="noopener noreferrer">Blog</a></li>
           <li><a href="/jogo/">Jogo de Libras</a></li>
           <li><a href="/sinal/">Vocabulário</a></li>
           <li><a href="/glossario/">Glossário</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Contato</h4>
+        <p class="ft-h">Contato</p>
         <ul>
           <li><a href="#wppform">WhatsApp</a></li>
           <li><a href="mailto:contato@libras.se">contato@libras.se</a></li>

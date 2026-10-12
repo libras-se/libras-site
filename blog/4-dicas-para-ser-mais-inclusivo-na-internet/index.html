@@ -362,6 +362,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -420,7 +427,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     </nav>
     <div class="hero-kicker">Acessibilidade · Guia</div>
     <h1 class="hero-title">4 dicas para ser <em>mais inclusivo</em> na internet</h1>
-    <p class="hero-subtitle">Cerca de 20% da população brasileira tem algum tipo de deficiência. Navegar deveria ser para todos, e quatro práticas simples já tornam seu conteúdo muito mais acessível.</p>
+    <p class="hero-subtitle">São 14,4 milhões de brasileiros com deficiência, segundo o Censo 2022. Navegar deveria ser para todos, e quatro práticas simples já tornam seu conteúdo muito mais acessível.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por <a href="/autora/jessica-rodrigues/">Jéssica Rodrigues</a></span>
       <span class="meta-badge">14 de abril de 2021</span>
@@ -429,7 +436,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
-<p class="body-text drop-cap">Para milhões de brasileiros, o simples ato de navegar na internet é um desafio. Segundo o IBGE, cerca de <strong>20% da população</strong> tem algum tipo de deficiência, visual, motora, auditiva ou intelectual. Usar ferramentas de acessibilidade é uma questão de cidadania: como sociedade, devemos promover a inclusão em vez de excluir um grupo por suas características.</p>
+<p class="body-text drop-cap">Para milhões de brasileiros, o simples ato de navegar na internet é um desafio. No Censo 2022, o IBGE contou <strong>14,4 milhões de pessoas com deficiência</strong>, 7,3% da população, com deficiência visual, motora, auditiva ou intelectual. Usar ferramentas de acessibilidade é uma questão de cidadania: como sociedade, devemos promover a inclusão em vez de excluir um grupo por suas características.</p>
 
 <p class="body-text">Separamos quatro práticas que ajudam a levar o seu conteúdo a todas as pessoas.</p>
 

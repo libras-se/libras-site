@@ -385,6 +385,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -468,7 +475,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 
 
 <h2>Um público grande no Brasil</h2>
-<p>A matéria do Vatican News lembra dados do IBGE. Segundo o Censo 2022, cerca de 2,6 milhões de brasileiros têm dificuldade para ouvir mesmo usando aparelho auditivo. O texto cita ainda o Censo 2010: naquele ano, 89,5% da população com 5 anos ou mais era alfabetizada, índice que caía para 75,5% entre as pessoas com deficiência auditiva.</p>
+<p>A matéria do Vatican News lembra dados do IBGE. Segundo o Censo 2022, cerca de 2,6 milhões de brasileiros têm muita dificuldade para ouvir ou não ouvem, mesmo usando aparelho auditivo. O texto cita ainda o Censo 2010: naquele ano, 89,5% da população com 5 anos ou mais era alfabetizada, índice que caía para 75,5% entre as pessoas com deficiência auditiva.</p>
 <p>Levar a fé para a Libras não é novidade para a <a href="/glossario/comunidade-surda/">comunidade surda</a> brasileira. Aqui no blog, contamos como a <a href="/blog/biblia-completamente-traduzida-para-libras/">Bíblia foi completamente traduzida para Libras</a> depois de 16 anos de trabalho voluntário. A novidade agora é o alcance: a Audiência Geral e o Angelus são acompanhados por fiéis do mundo inteiro e passam a ter um lugar fixo para quem se comunica em sinais.</p>
 <div class="pa-box">
   <span class="pa-box__ic"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="14" rx="3"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg></span>

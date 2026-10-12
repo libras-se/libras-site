@@ -483,6 +483,13 @@
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -621,7 +628,7 @@
   <div class="law-callout reveal">
     <div class="law-icon">⚖️</div>
     <div class="law-content">
-      <h4>Lei nº 10.436/2002, Libras é língua oficial</h4>
+      <h4>Lei nº 10.436/2002, Libras como meio legal de comunicação</h4>
       <p>A lei reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora, com estrutura gramatical própria. Libras em videoaulas não é adorno visual, é acesso linguístico garantido por lei.</p>
     </div>
   </div>
@@ -793,7 +800,7 @@
     <div class="use-card">
       <div class="card-icon">📷</div>
       <h3>Janela estável e bem enquadrada</h3>
-      <p>O intérprete deve aparecer dos ombros para cima, bem iluminado, sem fundo com muito movimento e sem cortes nas mãos.</p>
+      <p>O intérprete deve aparecer da cabeça até abaixo da cintura, com espaço lateral para os sinais, bem iluminado, sem fundo com muito movimento e sem cortes nas mãos.</p>
     </div>
     <div class="use-card">
       <div class="card-icon">🤝</div>

@@ -364,6 +364,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -422,17 +429,17 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
     <div class="pa-body">
 <p>Celebrado toda terceira quinta-feira de maio, o Dia Global de Conscientização sobre Acessibilidade foi criado para focar a atenção da sociedade nesse tema tão importante. E ele segue urgente.</p>
 
-<p>Segundo a Organização Mundial da Saúde (OMS), cerca de 15% da população mundial tem alguma deficiência, proporção que vem subindo com o envelhecimento e o aumento das condições crônicas de saúde. Só no Brasil, 8,4% da população tem algum tipo de deficiência, o equivalente a 17,3 milhões de pessoas; quase metade (49,4%) é de idosos.</p>
+<p>Segundo a Organização Mundial da Saúde (OMS), cerca de 16% da população mundial, 1,3 bilhão de pessoas, tem alguma deficiência, proporção que vem subindo com o envelhecimento e o aumento das condições crônicas de saúde. No Brasil, a Pesquisa Nacional de Saúde de 2019, do IBGE, apontou 17,3 milhões de pessoas com deficiência, 8,4% da população; quase metade (49,4%) era de idosos.</p>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->
 <aside class="lse-ad lse-ad--escuro" aria-label="Publicidade · LIBRAS.SE"><a class="lse-ad-v" href="https://huet.libras.se/" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" aria-hidden="true" poster="/assets/videos/sinais/obrigado.webp" data-src="/assets/videos/sinais/obrigado.mp4"></video><span class="lse-ad-w">Obrigado</span></a><div class="lse-ad-t"><span class="lse-ad-l">Publicidade · LIBRAS.SE</span><b>Seu vídeo em Libras em até 1 hora</b><p>Intérpretes humanos, entrega em 1h, 24h ou 7 dias e pacotes de minutos com bônus.</p></div><div class="lse-ad-b"><a class="lse-btn" href="https://huet.libras.se/">Enviar meu vídeo</a><a class="lse-btn2" href="/solucoes/">Conhecer as soluções</a></div></aside>
 <!-- /LSE:BANNER -->
 
 
-<p>Para Luis Gustavo Debiasi, CEO e fundador da LIBRAS.SE, esse público tem grande força de mercado, mas ainda é pouco explorado pelas empresas brasileiras. Sua startup trabalha especificamente com a <a href="/glossario/surdo/">pessoa com deficiência auditiva</a>, cerca de 5% da população, o equivalente a 10 milhões de pessoas, segundo o IBGE.</p>
+<p>Para Luis Gustavo Debiasi, CEO e fundador da LIBRAS.SE, esse público tem grande força de mercado, mas ainda é pouco explorado pelas empresas brasileiras. Sua startup trabalha especificamente com a <a href="/glossario/surdo/">pessoa com deficiência auditiva</a>, um público de até 10,7 milhões de pessoas no país, segundo o Instituto Locomotiva (2019).</p>
 
 <div class="pa-note rv">
   <span class="pa-note__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
-  <p class="pa-note__b">"É importante incluir todo mundo na conversa", diz o CEO. A LIBRAS.SE traduz vídeos para <a href="/glossario/libras/">Libras</a> em 24h por meio de uma plataforma digital.</p>
+  <p class="pa-note__b">"É importante incluir todo mundo na conversa", diz o CEO. Em 2022, a LIBRAS.SE traduzia vídeos para <a href="/glossario/libras/">Libras</a> em 24 horas por meio de uma plataforma digital; hoje, a entrega pode sair em até 1 hora.</p>
 </div>
 
 <p>Na prática, os clientes, em sua maioria produtoras de vídeos institucionais, enviam o conteúdo pelo site, que chega aos tradutores parceiros. Eles filmam a tradução <a href="/glossario/interpretacao-remota/">remotamente</a> e o trabalho volta já enquadrado no vídeo original, pronto para veiculação.</p>

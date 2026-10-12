@@ -1024,6 +1024,13 @@
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -1144,15 +1151,15 @@
   <div class="stat-row reveal">
     <div class="stat-card">
       <span class="stat-number">10,7M</span>
-      <span class="stat-desc">brasileiros são surdos, segundo IBGE 2020</span>
+      <span class="stat-desc">pessoas com algum grau de deficiência auditiva no Brasil (Instituto Locomotiva, 2019)</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">5%</span>
-      <span class="stat-desc">das agências de publicidade incluem acessibilidade de forma recorrente</span>
+      <span class="stat-number">2,6M</span>
+      <span class="stat-desc">pessoas que não ouvem ou ouvem com muita dificuldade (IBGE, Censo 2022)</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">12%</span>
-      <span class="stat-desc">das campanhas nacionais em 2023 tinham tradução em Libras</span>
+      <span class="stat-number">2015</span>
+      <span class="stat-desc">ano da Lei Brasileira de Inclusão, que garante acessibilidade na comunicação</span>
     </div>
   </div>
 

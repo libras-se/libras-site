@@ -362,6 +362,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -453,7 +460,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <li><strong>Apoio a políticas públicas:</strong> pode contribuir para estruturar e aprimorar políticas de acessibilidade no Brasil.</li>
 </ul>
 
-<p class="body-text">No Brasil, cerca de 5% da população é surda. A adoção de "gestuante" deve impactar positivamente o reconhecimento da língua e a adaptação às transformações sociais e culturais.</p>
+<p class="body-text">No Brasil, o Censo 2022 contou 2,6 milhões de pessoas com deficiência auditiva. A adoção de "gestuante" deve impactar positivamente o reconhecimento da língua e a adaptação às transformações sociais e culturais.</p>
 
 <h2 id="uso">Como usar corretamente</h2>
 <div class="highlight-box reveal">
@@ -461,7 +468,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <p>"Gestuante" se aplica a quem se comunica por sinais. Exemplo de uso acadêmico: <em>"os classificadores são utilizados pela comunidade linguística gestuante como catalisadores de narrativas"</em>. Aplicar o termo corretamente é uma das formas de comunicar de maneira inclusiva.</p>
 </div>
 
-<div class="references reveal"><h4>Fonte</h4><ul><li>Equipe LIBRAS.SE, com <a href="https://www.academia.org.br/nossa-lingua/nova-palavra/gestuante" target="_blank" rel="noopener noreferrer">Academia Brasileira de Letras</a>, Folhapress e Diário do Rio.</li></ul></div>
+<div class="references reveal"><h4>Fonte</h4><ul><li>Equipe LIBRAS.SE, com <a href="https://www.academia.org.br/nossa-lingua/nova-palavra/gestuante" target="_blank" rel="noopener noreferrer">Academia Brasileira de Letras</a>.</li></ul></div>
 <section class="faq-section" aria-label="Perguntas frequentes">
   <h2 id="faq">Perguntas frequentes</h2>
   <details class="faq-item reveal"><summary>O que significa gestuante?</summary><div class="faq-a">É o adjetivo que descreve a pessoa que se comunica por meio da língua gestual ou de sinais, oficializado pela ABL no Vocabulário Ortográfico da Língua Portuguesa.</div></details>

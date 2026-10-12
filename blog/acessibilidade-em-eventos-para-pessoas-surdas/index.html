@@ -37,7 +37,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://libras.se/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://libras.se/blog/"},{"@type":"ListItem","position":3,"name":"Acessibilidade em eventos: por que a inclusão de surdos é essencial","item":"https://libras.se/blog/acessibilidade-em-eventos-para-pessoas-surdas/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Por que incluir pessoas surdas em eventos?","acceptedAnswer":{"@type":"Answer","text":"Por respeito e cidadania, e também por estratégia: trata-se de um público de mais de 10 milhões de pessoas frequentemente ignorado pelo mercado de entretenimento."}},{"@type":"Question","name":"Quais recursos tornam um evento acessível para surdos?","acceptedAnswer":{"@type":"Answer","text":"Principalmente intérpretes de Libras nos palcos e palestras e legendas ao vivo nas apresentações e transmissões."}},{"@type":"Question","name":"A lei obriga acessibilidade em eventos?","acceptedAnswer":{"@type":"Answer","text":"A Lei Brasileira de Inclusão (13.146/2015) e o Decreto 5.626/2005 reforçam o dever de oferecer recursos de acessibilidade, incluindo a Libras."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Por que incluir pessoas surdas em eventos?","acceptedAnswer":{"@type":"Answer","text":"Por respeito e cidadania, e também por estratégia: trata-se de um público de até 10,7 milhões de pessoas com deficiência auditiva, frequentemente ignorado pelo mercado de entretenimento."}},{"@type":"Question","name":"Quais recursos tornam um evento acessível para surdos?","acceptedAnswer":{"@type":"Answer","text":"Principalmente intérpretes de Libras nos palcos e palestras e legendas ao vivo nas apresentações e transmissões."}},{"@type":"Question","name":"A lei obriga acessibilidade em eventos?","acceptedAnswer":{"@type":"Answer","text":"A Lei Brasileira de Inclusão (13.146/2015) e o Decreto 5.626/2005 reforçam o dever de oferecer recursos de acessibilidade, incluindo a Libras."}}]}
 </script>
 <style>
 
@@ -362,6 +362,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -434,7 +441,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 <h2 id="publico">Um público ignorado</h2>
 <div class="highlight-box reveal">
   <span class="hl-label">O dado</span>
-  <p>Sem estratégias específicas para atender essa comunidade, o mercado de entretenimento segue ignorando o potencial de consumo de <strong>mais de 10 milhões de pessoas</strong>.</p>
+  <p>Sem estratégias específicas para atender essa comunidade, o mercado de entretenimento segue ignorando o potencial de consumo de <strong>até 10,7 milhões de pessoas com deficiência auditiva</strong> (Instituto Locomotiva, 2019).</p>
 </div>
 <p class="body-text">A justificativa mais comum é a de que a presença de pessoas surdas exige estruturas mais complexas. Esse argumento, além de reforçar uma narrativa de dificuldade, alimenta o desinteresse de muitas produtoras em investir em acessibilidade.</p>
 <!-- LSE:BANNER (gerado por tools/seo/links.py) -->

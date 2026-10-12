@@ -1,0 +1,4 @@
+{
+ "_leia": "Ajustes da OG por post (tools/seo/og.py): fonte = imagem de origem; foco = [x, y] de 0 a 1 para o recorte 16:9.",
+ "o-que-e-libras": {"foco": [0.5, 0.35]}
+}

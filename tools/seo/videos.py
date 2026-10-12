@@ -131,12 +131,15 @@ def main():
             if info["w"]:
                 v["width"], v["height"] = info["w"], info["h"]
             videos.append(v)
-        novo = BLOCO.sub("", t)
         if videos:
             grafo = {"@context": "https://schema.org", "@graph": videos}
             bloco = f'<script type="application/ld+json" data-lse="videos">{json.dumps(grafo, ensure_ascii=False, separators=(",", ":"))}</script>'
-            novo = novo.replace("</head>", bloco + "\n</head>", 1)
+            # atualiza no lugar (não muda a ordem do <head>); se não houver, entra antes do </head>
+            novo = BLOCO.sub(lambda m: ("\n" if m[0].startswith("\n") else "") + bloco, t, count=1) if BLOCO.search(t) \
+                else t.replace("</head>", bloco + "\n</head>", 1)
             total += len(videos)
+        else:
+            novo = BLOCO.sub("", t)
         if novo != t:
             f.write_text(novo)
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + "\n")

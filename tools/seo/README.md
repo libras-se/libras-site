@@ -10,12 +10,15 @@ em [`ESTRATEGIA.md`](ESTRATEGIA.md).
 | `llms.py` | Refaz a lista de artigos do `llms-full.txt` (pilares primeiro, depois do mais novo ao mais antigo) e as contagens de posts no `llms.txt`. Rode depois de publicar ou despublicar um post. |
 | `checagem_blog.py` | Checagem dos posts do blog: datas (schema, meta, data visível e `lastmod` iguais), OG (peso e dimensões), FAQ visível, imagens e vídeos quebrados, arquivos com espaço, links `http://` e sem barra, emojis, grafia da marca, créditos, favicon pesado, `<body>` duplicado, banners e mídia órfã. Grava `checagem_blog.json`. Com `--base tools/seo/checagem_blog.base.json`, falha se alguma categoria piorou. |
 | `redirects.py` + `redirects.json` | Fonte única dos redirecionamentos. Gera uma página com meta refresh e canonical para cada origem (URLs antigas do Wix, páginas que mudaram de endereço, posts fundidos), resolve cadeias, recusa sobrescrever página de verdade e gera o mapa 301 do `old.libras.se` em `tools/redirects/old-libras-se/`. `--check` só confere. |
+| `videos.py` | Escreve o schema `VideoObject` de cada post (vídeos do YouTube em fachada e vídeos próprios) num bloco `data-lse="videos"` no `<head>`. Metadados do YouTube via yt-dlp, guardados em `videos.json`; `--offline` usa só o cache. |
 | `indexnow.py` | Lista as páginas publicadas que mudaram entre dois commits e avisa o IndexNow (Bing e outros). Roda no workflow `.github/workflows/indexnow.yml` a cada push na `main`. A chave é o arquivo `<32 hex>.txt` da raiz. |
 | `auditoria.py` | Lê todas as páginas publicadas e mede title, description, canonical, H1, OG, JSON-LD, links de contexto de entrada e saída, links para as áreas de engajamento, links quebrados e imagens sem alt. Grava `auditoria.json` (e `auditoria.csv` com `--csv`). |
 
 ```bash
 python3 tools/seo/redirects.py        # se mudou tools/seo/redirects.json (antes do home.py: stubs saem da home)
 python3 tools/blog/home.py            # antes: links.py lê os cards da home do blog
+python3 tools/blog/autores.py         # páginas de autor (/autor/, /autora/) a partir do author dos posts
+python3 tools/seo/videos.py           # VideoObject dos vídeos dos posts
 python3 tools/seo/links.py
 python3 tools/seo/llms.py
 python3 tools/seo/auditoria.py --csv

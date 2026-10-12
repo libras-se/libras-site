@@ -89,6 +89,7 @@ def post_blog(slug):
     f = ROOT / "blog" / slug / "index.html"
     assert f.exists(), f"post inexistente no blog: {slug}"
     t = f.read_text()
+    assert 'http-equiv="refresh"' not in t, f"{slug} virou redirecionamento: troque pelo post de destino em tools/aprender/paginas/"
     def meta(attr, nome):
         m = re.search(rf'<meta {attr}="{nome}" content="([^"]*)"', t)
         return html.unescape(m.group(1)) if m else ""

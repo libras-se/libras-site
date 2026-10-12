@@ -269,6 +269,22 @@ a{text-decoration:none;color:inherit}
   .lse-c b{grid-column:1;grid-row:2}
   .lse-ic{grid-template-columns:repeat(2,1fr)}
 }
+/* nota de contexto no topo e bloco "Créditos e referências" no fim dos posts (os dois templates) */
+.pa-update{margin:0 0 28px;padding:18px 20px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-left:4px solid #4fd1c5;border-radius:16px}
+.pa-update p{margin:0!important;font-size:.98rem!important;line-height:1.65!important;color:#154245!important}
+.pa-update strong{color:#0e3538}
+.pa-update a{color:#12737a;font-weight:700}
+.pa-refs{margin:44px 0 0;padding:26px 28px;background:#f6fcfb;border:1px solid rgba(79,209,197,.25);border-radius:20px}
+.pa-refs h2{font-size:1.1rem!important;font-weight:800!important;color:#0e3538!important;letter-spacing:-.01em;line-height:1.3!important;margin:0 0 10px!important;padding:0!important;border:0!important}
+.pa-refs h2::before,.pa-refs h2::after{content:none!important;display:none!important}
+.pa-refs__by{font-size:.88rem!important;color:#3d6063!important;line-height:1.6!important;margin:0 0 12px!important}
+.pa-refs ol,.pa-refs ul{padding-left:20px;margin:0;display:flex;flex-direction:column;gap:8px}
+.pa-refs li{font-size:.86rem;color:#3d6063;line-height:1.6;margin:0}
+.pa-refs li strong{font-weight:700;color:#154245}
+.pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
+@media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
+.body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
 <!-- /LSE:CSS -->
 </head>
@@ -327,7 +343,7 @@ a{text-decoration:none;color:inherit}
           <h1 class="au-name">Jéssica Rodrigues</h1>
           <p class="au-bio">Redatora especializada em acessibilidade, cultura surda e Libras. Escreve sobre inclusão, legislação, tecnologia assistiva e as histórias da comunidade surda brasileira.</p>
           <div class="au-stats">
-            <div class="au-stat"><strong>52</strong><span>artigos</span></div>
+            <div class="au-stat"><strong>51</strong><span>artigos</span></div>
             <div class="au-stat"><strong>+5</strong><span>anos de blog</span></div>
           </div>
         </div>
@@ -373,11 +389,6 @@ a{text-decoration:none;color:inherit}
           <div class="au-card__body"><span class="au-card__title">Surdolimpíadas: as Olimpíadas exclusivas para surdos</span><span class="au-card__read">Ler artigo →</span></div>
         </a>
 
-        <a class="au-card rv" href="/blog/20-anos-da-lei-de-libras-avancos-e-desafios/">
-          <span class="au-card__thumb"><img src="/assets/img/blog/20-anos-da-lei-de-libras-avancos-e-desafios/20-anos-da-lei-de-libras-avancos-e-desafios.webp" alt="20 anos da Lei de Libras: avanços e desafios" loading="lazy" decoding="async" width="1200" height="675"/></span>
-          <div class="au-card__body"><span class="au-card__title">20 anos da Lei de Libras: avanços e desafios</span><span class="au-card__read">Ler artigo →</span></div>
-        </a>
-
         <a class="au-card rv" href="/blog/o-papel-do-interprete-de-libras-na-sociedade/">
           <span class="au-card__thumb"><img src="/assets/img/blog/o-papel-do-interprete-de-libras-na-sociedade/o-papel-do-interprete-de-libras-na-sociedade.webp" alt="O papel do intérprete de Libras na sociedade" loading="lazy" decoding="async" width="1200" height="675"/></span>
           <div class="au-card__body"><span class="au-card__title">O papel do intérprete de Libras na sociedade</span><span class="au-card__read">Ler artigo →</span></div>
@@ -391,11 +402,6 @@ a{text-decoration:none;color:inherit}
         <a class="au-card rv" href="/blog/dia-internacional-das-linguas-de-sinais/">
           <span class="au-card__thumb"><img src="/assets/img/blog/dia-internacional-das-linguas-de-sinais/dia-internacional-das-linguas-de-sinais.webp" alt="Dia Internacional das Línguas de Sinais" loading="lazy" decoding="async" width="1200" height="675"/></span>
           <div class="au-card__body"><span class="au-card__title">Dia Internacional das Línguas de Sinais</span><span class="au-card__read">Ler artigo →</span></div>
-        </a>
-
-        <a class="au-card rv" href="/blog/por-que-nao-ha-surdos-nas-paralimpiadas/">
-          <span class="au-card__thumb"><img src="/assets/img/blog/por-que-nao-ha-surdos-nas-paralimpiadas/por-que-nao-ha-surdos-nas-paralimpiadas.webp" alt="Por que não há surdos nas Paralimpíadas?" loading="lazy" decoding="async" width="1200" height="675"/></span>
-          <div class="au-card__body"><span class="au-card__title">Por que não há surdos nas Paralimpíadas?</span><span class="au-card__read">Ler artigo →</span></div>
         </a>
 
         <a class="au-card rv" href="/blog/por-que-incluir-janela-de-libras-em-videos/">
@@ -463,11 +469,6 @@ a{text-decoration:none;color:inherit}
           <div class="au-card__body"><span class="au-card__title">DF tem instrutor e examinador de trânsito surdo</span><span class="au-card__read">Ler artigo →</span></div>
         </a>
 
-        <a class="au-card rv" href="/blog/disney-lanca-jogos-que-ensinam-libras/">
-          <span class="au-card__thumb"><img src="/assets/img/blog/disney-lanca-jogos-que-ensinam-libras/disney-lanca-jogos-que-ensinam-libras.webp" alt="Disney lança jogos que ensinam Libras" loading="lazy" decoding="async" width="1200" height="675"/></span>
-          <div class="au-card__body"><span class="au-card__title">Disney lança jogos que ensinam Libras</span><span class="au-card__read">Ler artigo →</span></div>
-        </a>
-
         <a class="au-card rv" href="/blog/documentarios-sobre-surdez-gratis-youtube/">
           <span class="au-card__thumb"><img src="/assets/img/blog/documentarios-sobre-surdez-gratis-youtube/documentarios-sobre-surdez-gratis-youtube.webp" alt="3 documentários sobre surdez grátis no YouTube" loading="lazy" decoding="async" width="1200" height="675"/></span>
           <div class="au-card__body"><span class="au-card__title">3 documentários sobre surdez grátis no YouTube para assistir</span><span class="au-card__read">Ler artigo →</span></div>
@@ -516,11 +517,6 @@ a{text-decoration:none;color:inherit}
         <a class="au-card rv" href="/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/">
           <span class="au-card__thumb"><img src="/assets/img/blog/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia/libras-na-quebrada-como-a-lingua-de-sinais-chega-na-periferia.webp" alt="Libras na quebrada e na periferia" loading="lazy" decoding="async" width="1200" height="675"/></span>
           <div class="au-card__body"><span class="au-card__title">Libras na quebrada: como a língua de sinais chega na periferia</span><span class="au-card__read">Ler artigo →</span></div>
-        </a>
-
-        <a class="au-card rv" href="/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/">
-          <span class="au-card__thumb"><img src="/assets/img/blog/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh/libras-pode-ser-reconhecida-como-lingua-de-instrucao-em-bh.webp" alt="Libras pode ser reconhecida como língua de instrução em BH" loading="lazy" decoding="async" width="1200" height="675"/></span>
-          <div class="au-card__body"><span class="au-card__title">Libras pode ser reconhecida como língua de instrução em BH</span><span class="au-card__read">Ler artigo →</span></div>
         </a>
 
         <a class="au-card rv" href="/blog/libras-pode-ser-reconhecida-como-referencia-cultural-brasileira/">

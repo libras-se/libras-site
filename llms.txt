@@ -49,6 +49,10 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 - [Acessibilidade para Documentario](https://libras.se/acessibilidade-para-documentario/): acessibilidade para documentarios com cuidado narrativo, tecnico e cultural.
 - [Acessibilidade para Serie e TV](https://libras.se/acessibilidade-para-serie/): Libras, LSE e audiodescricao para series, programas de TV e streaming, com entrega por lote e padrao recorrente.
 - [Acessibilidade para Festival de Cinema](https://libras.se/acessibilidade-para-festival-de-cinema/): acessibilidade em escala para mostras e festivais, com entregas por lote e interprete ao vivo para cerimonias.
+- [Acessibilidade para Projetos Culturais](https://libras.se/acessibilidade-para-projetos-culturais/): Libras, audiodescricao e LSE para shows, eventos e mostras, com interpretes em todo o Brasil e documentacao para prestacao de contas de editais como Paulo Gustavo, Aldir Blanc e PNAB.
+- [Libras para Campanhas Politicas](https://libras.se/libras-para-campanhas-politicas/): Libras e LSE para pecas de campanha na TV e nas redes, com entrega em ate 1 hora pela plataforma Huet e o mesmo padrao visual em todas as janelas.
+- [Interpretes para Eventos ao Vivo](https://libras.se/eventos-ao-vivo/): reserva online de interpretes de Libras para eventos ao vivo, do congresso online ao palco com telao, com transmissao via Zoom, estudios em todo o Brasil e chroma key com baixa latencia.
+- [Libras ao Vivo Remoto](https://libras.se/libras-ao-vivo/): interpretacao em Libras ao vivo e remota para TV, lives, eventos e webinars, com chroma key padronizado, integracao com Zoom e baixa latencia.
 
 ## Conteudo editorial e educativo
 

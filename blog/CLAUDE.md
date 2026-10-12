@@ -371,11 +371,15 @@ O fim de todo post tem duas partes. A primeira você escreve; a segunda é **ger
 **O gerador coloca (entre marcadores `<!-- LSE:... -->`):**
 
 - `LSE:BANNER`: **todo post tem o banner do serviço da LIBRAS.SE** ("Publicidade · LIBRAS.SE", sem preço,
-  com a Bruna sinalizando OBRIGADO), perto de 40% do corpo, sempre entre dois parágrafos ou blocos
-  (`banner_fixo` em `tools/seo/links.json`). Posts longos ganham um segundo banner, perto de 78% do corpo,
+  com a Bruna sinalizando OBRIGADO), perto de 40% do corpo, sempre entre dois parágrafos ou blocos.
+  O serviço anunciado depende da editoria (`banner_fixo_por_editoria`: educação → videoaulas, direitos →
+  campanhas, inclusão → eventos ao vivo, cultura → filmes; as demais usam `banner_fixo`, "Seu vídeo em
+  Libras em até 1 hora") e pode ser fixado por post (`banner_fixo_por_post`). Posts longos ganham um segundo banner, perto de 78% do corpo,
   escolhido pelo post (`banner_por_post`) ou pela editoria (`banner_por_editoria`): alfabeto, quiz, sinal
   do dia, materiais, atividades, cultura surda ou Seja TILS. O segundo nunca repete o vídeo do primeiro.
   Todo banner com vídeo de sinal mostra embaixo a palavra sinalizada, em maiúsculas (OBRIGADO, SURPRESA...).
+  Os banners são medidos no GA4 (`view_promotion` e `select_promotion`, com o banner, a posição e o post) e
+  os links para huet.libras.se levam UTM; nada disso se escreve à mão.
 - `LSE:MAIS`, logo antes do `<footer id="foot">`:
   - "Continue lendo", com 4 matérias correlatas. A escolha pesa a mesma editoria, as palavras em
     comum e os posts pilares, e equilibra os links para que todo post receba ao menos 2 de outros posts.

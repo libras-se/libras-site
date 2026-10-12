@@ -45,7 +45,9 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Equipe LIBRAS.SE"
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se/"
   },
   "publisher": {
     "@type": "Organization",
@@ -370,6 +372,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -421,7 +430,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">Blog LIBRAS.SE</span>
       <h1 class="pa-title">Oktoberfest de Blumenau estreia aplicativo e totens com tradução em Libras</h1>
       <p class="pa-sub">O Oktober Mais Perto, gratuito para Android e iPhone, e sete totens interativos ajudam o público a se localizar na Vila Germânica. A festa segue até 25 de outubro.</p>
-      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span><time datetime="2026-10-10">10 de outubro de 2026</time><span class="dot"></span>2 min de leitura</div>
+      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span>Publicado em <time datetime="2026-10-10">10 de out. de 2026</time><span class="dot"></span>2 min de leitura</div>
     </header>
     <figure class="pa-fig"><picture><source srcset="/assets/img/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/oktoberfest-de-blumenau-tem-aplicativo-com-libras.avif" type="image/avif"><source srcset="/assets/img/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/oktoberfest-de-blumenau-tem-aplicativo-com-libras.webp" type="image/webp"><img src="/assets/img/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/oktoberfest-de-blumenau-tem-aplicativo-com-libras.jpg" alt="Visitante de chapéu verde usa o totem do aplicativo da Oktoberfest, com o mapa da festa e a janela de Libras na tela" width="1200" height="675" fetchpriority="high" decoding="async"></picture><figcaption>Totem do aplicativo, com mapa e janela de Libras, na Oktoberfest 2026. Foto: Eraldo Schnaider/Oktoberfest Blumenau.</figcaption></figure>
     <div class="pa-body">
@@ -454,7 +463,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
     </div>
     <section class="pa-refs" aria-labelledby="pa-refs-t">
       <h2 id="pa-refs-t">Créditos e referências</h2>
-      <p>Texto: Equipe LIBRAS.SE, com informações do site oficial da Oktoberfest Blumenau, do portal Libras Online e da página do aplicativo na App Store.</p>
+      <p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do site oficial da Oktoberfest Blumenau, do portal Libras Online e da página do aplicativo na App Store.</p>
       <ol>
         <li>Oktoberfest Blumenau. “<a href="https://oktoberfestblumenau.com.br/2026/10/08/oktoberfest-2026-estreia-aplicativo-gratuito-com-mapa-3d-e-libras/" target="_blank" rel="noopener noreferrer">Oktoberfest 2026 estreia aplicativo gratuito com mapa 3D e Libras</a>”. 8 de outubro de 2026.</li>
         <li>Oktoberfest Blumenau. “<a href="https://oktoberfestblumenau.com.br/acoes-esg/acessibilidade/" target="_blank" rel="noopener noreferrer">Acessibilidade</a>”, página do site oficial da festa. Consultada em 10 de outubro de 2026.</li>

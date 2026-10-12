@@ -41,7 +41,7 @@ published_at: 2026-10-02
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA","description":"Chatbots não entendem bem a escrita de pessoas surdas, mostra estudo da UFLA. Entenda a Glosa, o português como segunda língua e o que muda para empresas.","image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/chatbots-nao-entendem-como-pessoas-surdas-escrevem.webp","width":1200,"height":675},"author":{"@type":"Organization","name":"LIBRAS.SE","url":"https://libras.se"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"datePublished":"2026-10-02T13:00:00.000Z","dateModified":"2026-10-02T13:00:00.000Z","inLanguage":"pt-BR","keywords":"chatbot pessoas surdas, inteligência artificial e Libras, Glosa, português como segunda língua, estudo UFLA, acessibilidade digital, atendimento acessível","mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA","description":"Chatbots não entendem bem a escrita de pessoas surdas, mostra estudo da UFLA. Entenda a Glosa, o português como segunda língua e o que muda para empresas.","image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/chatbots-nao-entendem-como-pessoas-surdas-escrevem.webp","width":1200,"height":675},"author":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"datePublished":"2026-10-02T13:00:00.000Z","dateModified":"2026-10-02T13:00:00.000Z","inLanguage":"pt-BR","keywords":"chatbot pessoas surdas, inteligência artificial e Libras, Glosa, português como segunda língua, estudo UFLA, acessibilidade digital, atendimento acessível","mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/"}}</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libras.se/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://libras.se/blog/"}, {"@type": "ListItem", "position": 3, "name": "Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA", "item": "https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/"}]}
 </script>
@@ -374,6 +374,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -435,7 +442,7 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     <p class="hero-subtitle">Uma pesquisa da Universidade Federal de Lavras testou chatbots de bancos e seis modelos de IA com o português escrito na estrutura da Libras. Entenda o resultado, o que é Glosa e o que muda para quem atende por chat.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por LIBRAS.SE</span>
-      <span class="meta-badge"><time datetime="2026-10-02">2 de outubro de 2026</time></span>
+      <span class="meta-badge">Publicado em <time datetime="2026-10-02">2 de out. de 2026</time></span>
       <span class="meta-badge">7 min de leitura</span>
     </div>
     <p class="hero-credit">Ilustração de capa criada com IA</p>
@@ -546,23 +553,21 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 
 <p class="body-text">É um bom resumo do momento: a IA pode ampliar o acesso, mas a tradução entre Libras e português ainda depende de gente que conhece as duas línguas e a <a href="/glossario/comunidade-surda/">comunidade surda</a>. O <a href="/blog/o-papel-do-interprete-de-libras-na-sociedade/">papel do intérprete de Libras</a> segue central, e a inovação funciona melhor quando soma, como discutimos em <a href="/blog/inovacao-caminho-para-avancar-no-contexto-da-acessibilidade/">Inovação: o caminho para avançar em acessibilidade</a>.</p>
 
-<div class="references reveal">
-  <h4>Créditos e referências</h4>
-  <p class="ref-lead">Texto: Equipe LIBRAS.SE, com informações do g1 Sul de Minas, da UFLA (via Diário PcD), do Inep e do ABCdoABC.</p>
-  <ul>
-    <li>g1 Sul de Minas. Lorena Lemos. <a href="https://g1.globo.com/mg/sul-de-minas/noticia/2026/10/01/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas-aponta-estudo-da-ufla.ghtml" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas, aponta estudo da UFLA</a>. 1º out. 2026.</li>
-    <li>4 Poder. <a href="https://www.4poder.net/noticia/19406/sul-de-minas/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas-aponta-estudo-da-ufla.html" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas, aponta estudo da UFLA</a> (reprodução da reportagem do g1). 1º out. 2026.</li>
-    <li>Libras Online. <a href="https://www.librasol.com.br/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas/" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas</a> (fonte: g1). 1º out. 2026.</li>
-    <li>Diário PcD, com informações da Comunicação UFLA. <a href="https://diariopcd.com.br/pesquisa-avalia-a-eficacia-de-chatbots-na-comunicacao-com-pessoas-surdas-que-usam-portugues-como-segunda-lingua/" target="_blank" rel="noopener noreferrer">Pesquisa avalia a eficácia de chatbots na comunicação com pessoas surdas que usam português como segunda língua</a>. 12 ago. 2026.</li>
-    <li>GONÇALVES, Anna Paula Figueiredo. <a href="https://repositorio.ufla.br/handle/1/60475" target="_blank" rel="noopener noreferrer"><em>Avaliação de modelos de linguagem para criação de chatbots para a comunicação com pessoas surdas que usam o português como segunda língua</em></a>. Dissertação (Mestrado em Ciência da Computação), UFLA, 2025. Orientação de Denilson Alves Pereira e coorientação de André Pimenta Freire.</li>
-    <li>Inep. <a href="https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026_da.pdf" target="_blank" rel="noopener noreferrer">A redação do Enem 2026: cartilha do(a) participante surdo(a) ou com deficiência auditiva</a>. 2026.</li>
-    <li>ABCdoABC. Gabriel de Jesus. <a href="https://www.abcdoabc.com.br/rafa-zimbaldi-propoe-ia-para-traduzir-libras/" target="_blank" rel="noopener noreferrer">Rafa Zimbaldi propõe IA para traduzir Libras em SP</a>. 11 set. 2026.</li>
-  </ul>
-  <h5>Imagem</h5>
-  <ul>
-    <li>Capa: ilustração criada com IA para a LIBRAS.SE. A pessoa retratada é um personagem fictício.</li>
-  </ul>
-</div>
+
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do g1 Sul de Minas, da UFLA (via Diário PcD), do Inep e do ABCdoABC.</p>
+<ul>
+  <li>g1 Sul de Minas, Lorena Lemos. <a href="https://g1.globo.com/mg/sul-de-minas/noticia/2026/10/01/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas-aponta-estudo-da-ufla.ghtml" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas, aponta estudo da UFLA</a>. 1º de outubro de 2026.</li>
+  <li>4 Poder. <a href="https://www.4poder.net/noticia/19406/sul-de-minas/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas-aponta-estudo-da-ufla.html" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas, aponta estudo da UFLA</a>. 1º de outubro de 2026. Reprodução da reportagem do g1.</li>
+  <li>Libras Online. <a href="https://www.librasol.com.br/ia-que-deveria-facilitar-comunicacao-ainda-cria-barreiras-para-pessoas-surdas/" target="_blank" rel="noopener noreferrer">IA que deveria facilitar comunicação ainda cria barreiras para pessoas surdas</a>. 1º de outubro de 2026. Com base na reportagem do g1.</li>
+  <li>Diário PcD, com informações da Comunicação UFLA. <a href="https://diariopcd.com.br/pesquisa-avalia-a-eficacia-de-chatbots-na-comunicacao-com-pessoas-surdas-que-usam-portugues-como-segunda-lingua/" target="_blank" rel="noopener noreferrer">Pesquisa avalia a eficácia de chatbots na comunicação com pessoas surdas que usam português como segunda língua</a>. 12 de agosto de 2026.</li>
+  <li>UFLA, Repositório Institucional. GONÇALVES, Anna Paula Figueiredo. <a href="https://repositorio.ufla.br/handle/1/60475" target="_blank" rel="noopener noreferrer">Avaliação de modelos de linguagem para criação de chatbots para a comunicação com pessoas surdas que usam o português como segunda língua</a>. Dissertação (Mestrado em Ciência da Computação), 2025. Orientação de Denilson Alves Pereira e coorientação de André Pimenta Freire.</li>
+  <li>Inep. <a href="https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026_da.pdf" target="_blank" rel="noopener noreferrer">A redação do Enem 2026: cartilha do(a) participante surdo(a) ou com deficiência auditiva</a>. 2026.</li>
+  <li>ABCdoABC, Gabriel de Jesus. <a href="https://www.abcdoabc.com.br/rafa-zimbaldi-propoe-ia-para-traduzir-libras/" target="_blank" rel="noopener noreferrer">Rafa Zimbaldi propõe IA para traduzir Libras em SP</a>. 11 de setembro de 2026.</li>
+  <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE. A pessoa retratada é um personagem fictício.</li>
+</ul>
+</section>
 
 <div class="pa-tags-alt reveal" role="group" aria-label="Tags">
   <a href="/glossario/glosa/">#glosa</a>

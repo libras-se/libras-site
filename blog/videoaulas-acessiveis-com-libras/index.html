@@ -21,13 +21,13 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta property="article:published_time" content="2025-05-13T18:00:15.489Z">
-<meta property="article:modified_time" content="2026-03-28T20:15:00.000Z">
+<meta property="article:modified_time" content="2026-10-12T15:00:00.000Z">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
 <meta name="twitter:title" content="Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado | LIBRAS.SE">
 <meta name="twitter:description" content="Entenda como criar videoaulas acessíveis com Libras, legendas, transcrição e recursos visuais bem planejados para ampliar o acesso ao aprendizado.">
 <meta name="twitter:image" content="https://libras.se/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado","description":"Entenda como criar videoaulas acessíveis com Libras, legendas, transcrição e recursos visuais bem planejados para ampliar o acesso ao aprendizado.","url":"https://libras.se/blog/videoaulas-acessiveis-com-libras/","datePublished":"2025-05-13T18:00:15.489Z","dateModified":"2026-03-28T20:15:00.000Z","author":{"@type":"Organization","name":"LIBRAS.SE","url":"https://libras.se"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.png","width":1200,"height":630},"mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/videoaulas-acessiveis-com-libras/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Videoaulas acessíveis com Libras: como ampliar o acesso ao aprendizado","description":"Entenda como criar videoaulas acessíveis com Libras, legendas, transcrição e recursos visuais bem planejados para ampliar o acesso ao aprendizado.","url":"https://libras.se/blog/videoaulas-acessiveis-com-libras/","datePublished":"2025-05-13T18:00:15.489Z","dateModified":"2026-10-12T15:00:00.000Z","author":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/videoaulas-acessiveis-com-libras/videoaulas-acessiveis-com-libras.png","width":1200,"height":630},"mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/videoaulas-acessiveis-com-libras/"}}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -305,7 +305,7 @@
     border-radius: 16px; border: 4px solid var(--white); box-shadow: 0 10px 30px rgba(15,42,42,0.18);
     display: flex; align-items: flex-end; justify-content: center; overflow: hidden;
   }
-  .libras-window::after { content: '🤟'; font-size: 2rem; padding-bottom: 12px; opacity: 0.85; }
+  .libras-window::after { content: 'LIBRAS'; font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.14em; color: var(--teal-dark); padding-bottom: 12px; opacity: 0.85; }
   .caption-bar {
     position: absolute; left: 36px; right: 36px; bottom: 28px; min-height: 34px;
     border-radius: 10px; background: rgba(15,42,42,0.9); display: flex; align-items: center;
@@ -389,6 +389,10 @@
     .libras-window { width: 30%; right: 18px; bottom: 70px; }
     .caption-bar { left: 18px; right: 18px; bottom: 18px; font-size: 0.68rem; }
   }
+
+  /* Ícones em SVG (no lugar de emojis) */
+  .info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+  .card-icon svg{width:22px;height:22px;color:var(--teal-dark)}
 </style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
 
@@ -483,6 +487,13 @@
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -552,14 +563,8 @@
       Uma videoaula só é realmente inclusiva quando o conteúdo, a imagem, a legenda e a janela de Libras são pensados para quem aprende por caminhos diferentes.
     </p>
     <div class="hero-meta">
-      <span class="meta-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Publicado em <time datetime="2025-05-13">13 de mai. de 2025</time>
-      </span>
-      <span class="meta-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
-        Atualizado em <time datetime="2026-06-04">4 de jun. de 2026</time>
-      </span>
+      <span class="meta-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Publicado em <time datetime="2025-05-13">13 de mai. de 2025</time></span>
+      <span class="meta-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Atualizado em <time datetime="2026-10-12">12 de out. de 2026</time></span>
       <span class="meta-badge">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         7 min de leitura
@@ -619,15 +624,15 @@
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">⚖️</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
     <div class="law-content">
-      <h4>Lei nº 10.436/2002, Libras é língua oficial</h4>
+      <h4>Lei nº 10.436/2002, Libras como meio legal de comunicação</h4>
       <p>A lei reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora, com estrutura gramatical própria. Libras em videoaulas não é adorno visual, é acesso linguístico garantido por lei.</p>
     </div>
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">📋</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
     <div class="law-content">
       <h4>Decreto nº 5.626/2005, Experiência visual e educação bilíngue</h4>
       <p>O decreto reconhece a pessoa surda como aquela que compreende e interage com o mundo por experiências visuais, manifestando sua cultura principalmente pelo uso da Libras. Em videoaulas, isso significa que o planejamento visual, posição da janela, iluminação, enquadramento, é parte da acessibilidade, não detalhe de produção.</p>
@@ -643,7 +648,7 @@
   </div>
 
   <div class="lesson-mockup reveal">
-    <div class="lesson-screen" aria-label="Exemplo visual de videoaula com slide, janela de Libras e legenda">
+    <div class="lesson-screen" role="img" aria-label="Exemplo visual de videoaula com slide, janela de Libras e legenda">
       <div class="slide-area" aria-hidden="true">
         <span class="slide-line"></span>
         <span class="slide-line" style="width:65%"></span>
@@ -672,39 +677,39 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🤟</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
       <h3>Libras</h3>
       <p>Interpretação integrada ao vídeo, com tamanho, enquadramento, iluminação e sincronização adequados. Essencial para estudantes surdos sinalizantes.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📝</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
       <h3>Legenda revisada</h3>
       <p>Conferida por pessoa humana, com pontuação, termos técnicos e sincronização corretos. Fundamental para surdos oralizados, ensurdecidos e ouvintes em ambientes sem som.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📄</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
       <h3>Transcrição</h3>
       <p>Versão textual completa do conteúdo. Permite buscar trechos, revisar conceitos fora do vídeo e usar tecnologias assistivas.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📂</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <h3>Material de apoio acessível</h3>
       <p>Slides em formato acessível, PDFs com texto selecionável e documentos que não dependem exclusivamente do áudio da aula.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🖥️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
       <h3>Slides legíveis</h3>
       <p>Fonte adequada, bom contraste, pouco texto por slide e espaço reservado para a janela de Libras sem cobrir o conteúdo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">▶️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
       <h3>Player acessível</h3>
       <p>Controles de pausa, velocidade, ativação de legenda e navegação por teclado funcionando corretamente em qualquer dispositivo.</p>
     </div>
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">🛡️</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
     <div class="law-content">
       <h4>LBI, Lei nº 13.146/2015</h4>
       <p>A Lei Brasileira de Inclusão reconhece comunicação em modo amplo, incluindo Libras, visualização de textos, dispositivos multimídia e tecnologias da informação. Acessibilidade é definida como condição para acesso com segurança e autonomia, o que sustenta a combinação de Libras, legendas, transcrição e recursos digitais em videoaulas.</p>
@@ -771,32 +776,32 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🗣️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <h3>Ritmo de fala moderado</h3>
       <p>Falar rápido demais compromete tanto a interpretação em Libras quanto a qualidade da legenda. Pausas entre blocos de conteúdo ajudam.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🔤</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
       <h3>Slides com pouco texto</h3>
       <p>Fonte legível, bom contraste e espaço suficiente para a janela de Libras. Evitar texto incorporado em imagem, tecnologias assistivas não conseguem ler.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🖼️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
       <h3>Exemplos visuais descritos</h3>
       <p>Quando mostrar algo na tela, descrever oralmente o que está sendo exibido, não deixar que a imagem fale por si só.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">✂️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
       <h3>Cortes sem quebrar a interpretação</h3>
       <p>Cortes no meio de uma frase podem inviabilizar a interpretação em Libras. Cortar em pausas naturais do discurso.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📷</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg></div>
       <h3>Janela estável e bem enquadrada</h3>
-      <p>O intérprete deve aparecer dos ombros para cima, bem iluminado, sem fundo com muito movimento e sem cortes nas mãos.</p>
+      <p>O intérprete deve aparecer da cabeça até abaixo da cintura, com espaço lateral para os sinais, bem iluminado, sem fundo com muito movimento e sem cortes nas mãos.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🤝</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <h3>Alinhamento prévio com intérpretes</h3>
       <p>Compartilhar roteiro, termos técnicos e contexto antes da gravação garante uma interpretação mais precisa e fluida.</p>
     </div>
@@ -839,29 +844,29 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🎓</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <h3>Cursos livres e profissionalizantes</h3>
       <p>Onde estudantes surdos buscam qualificação profissional e precisam de acesso completo ao conteúdo técnico para avançar na carreira.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🏢</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
       <h3>Treinamentos corporativos</h3>
       <p>Especialmente em empresas com colaboradores surdos ou que precisam cumprir requisitos de acessibilidade em onboarding e capacitação.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🏛️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
       <h3>EAD, faculdades e pós-graduação</h3>
       <p>Ambientes que concentram grande diversidade de estudantes e onde a obrigatoriedade legal de acessibilidade se aplica com mais rigor.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🌐</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
       <h3>Conteúdos públicos de saúde e direitos</h3>
       <p>Campanhas, orientações e informações de cidadania e segurança que precisam chegar a toda a população, independentemente de como ela se comunica.</p>
     </div>
   </div>
 
   <div class="info-callout reveal">
-    <div class="info-icon">📐</div>
+    <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
     <div class="info-content">
       <h4>WCAG 2.2, Acessibilidade audiovisual em camadas</h4>
       <p>As diretrizes internacionais de acessibilidade para conteúdo web estabelecem requisitos para conteúdo audiovisual: legendas para vídeo pré-gravado (critério 1.2.2, nível A), alternativas de mídia (1.2.3, nível A), audiodescrição (1.2.5, nível AA) e interpretação em língua de sinais para vídeo pré-gravado (1.2.6, nível AAA). Acessibilidade audiovisual tem camadas, cada uma atende uma necessidade diferente.</p>
@@ -884,32 +889,32 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🔍</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Janela de Libras pequena demais</h3>
       <p>Uma janela muito pequena inviabiliza a leitura da interpretação, especialmente em dispositivos móveis ou para quem tem baixa visão.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">✋</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Intérprete mal enquadrado</h3>
       <p>Mãos cortadas, expressões faciais fora do frame ou fundo com excesso de movimento dificultam ou impossibilitam a leitura da interpretação.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🤖</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Legenda automática sem revisão</h3>
       <p>Erros frequentes com termos técnicos e nomes próprios distorcem o sentido do conteúdo, especialmente em áreas especializadas.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📊</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Slide disputando espaço com Libras</h3>
       <p>Slides com muito texto ou gráficos que ocupam a tela inteira não deixam espaço para a janela de Libras sem cobrir o conteúdo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📁</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Sem transcrição ou material de apoio</h3>
       <p>O conteúdo fica preso no vídeo, sem alternativa para quem não consegue ou não quer assistir ao arquivo completo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📱</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Player sem controles acessíveis no mobile</h3>
       <p>Botões de legenda, velocidade e pausa inacessíveis ou muito pequenos em dispositivos móveis prejudicam a experiência de todos.</p>
     </div>
@@ -965,19 +970,19 @@
     </p>
   </div>
 
-  <!-- REFERÊNCIAS -->
-  <div class="references reveal">
-    <h4>Referências</h4>
-    <ol>
-      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais – Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei nº 10.436/2002. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Decreto/D5626.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>BRASIL. <em>Lei nº 13.146, de 6 de julho de 2015.</em> Lei Brasileira de Inclusão da Pessoa com Deficiência. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2.</em> Disponível em: <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">w3.org</a></li>
-      <li>MEC. <em>Atendimento Educacional Especializado: Pessoa com Surdez.</em> Disponível em: <a href="https://portal.mec.gov.br/seesp/arquivos/pdf/dificuldade6.pdf" target="_blank" rel="noopener">portal.mec.gov.br</a></li>
-      <li>IBGE. <em>Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência.</em> Agência de Notícias IBGE, 2025. Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
-      <li>IBGE. <em>PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-adeficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
-    </ol>
-  </div>
+  <section class="pa-refs" aria-labelledby="pa-refs-t">
+  <h2 id="pa-refs-t">Créditos e referências</h2>
+  <p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações da Lei de Libras e do decreto que a regulamenta, da Lei Brasileira de Inclusão, das diretrizes WCAG 2.2 do W3C, do MEC e do IBGE.</p>
+  <ul>
+    <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener noreferrer">Lei nº 10.436, de 24 de abril de 2002</a> (reconhece a Libras como meio legal de comunicação e expressão).</li>
+    <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener noreferrer">Decreto nº 5.626, de 22 de dezembro de 2005</a> (regulamenta a Lei de Libras).</li>
+    <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015</a> (Lei Brasileira de Inclusão da Pessoa com Deficiência).</li>
+    <li>W3C. <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a>.</li>
+    <li>MEC, Secretaria de Educação Especial. <a href="https://www.gov.br/mec/pt-br/media/publicacoes/semesp/alunossurdos.pdf" target="_blank" rel="noopener noreferrer">Saberes e práticas da inclusão: desenvolvendo competências para o atendimento às necessidades educacionais especiais de alunos surdos</a>. 2006 (PDF).</li>
+    <li>IBGE. <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener noreferrer">Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência</a>. Agência de Notícias IBGE, maio de 2025.</li>
+    <li>IBGE. <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-algum-tipo-de-deficiencia" target="_blank" rel="noopener noreferrer">PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência</a>. Agência de Notícias IBGE, agosto de 2021.</li>
+  </ul>
+  </section>
 
   <!-- CTA -->
   <div class="cta-block reveal">

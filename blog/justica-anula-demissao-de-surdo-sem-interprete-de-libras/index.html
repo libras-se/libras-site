@@ -45,7 +45,9 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Equipe LIBRAS.SE"
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se/"
   },
   "publisher": {
     "@type": "Organization",
@@ -370,6 +372,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -421,7 +430,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">Blog LIBRAS.SE</span>
       <h1 class="pa-title">Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras</h1>
       <p class="pa-sub">O TRT-MG entendeu que a empresa não provou que o pedido de demissão de um trabalhador com surdez profunda foi uma decisão livre e consciente. A indenização foi fixada em R$ 30 mil.</p>
-      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span><time datetime="2026-09-28">28 de setembro de 2026</time><span class="dot"></span>3 min de leitura</div>
+      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span>Publicado em <time datetime="2026-09-28">28 de set. de 2026</time><span class="dot"></span>3 min de leitura</div>
     </header>
     <figure class="pa-fig"><picture><source srcset="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.avif" type="image/avif"><source srcset="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.webp" type="image/webp"><img src="/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.jpg" alt="Ilustração de uma reunião de RH em que uma intérprete sinaliza em Libras para um trabalhador surdo de uniforme, ao lado de uma profissional de recursos humanos" width="1200" height="675" fetchpriority="high" decoding="async"></picture><figcaption>Intérprete de Libras traduz uma conversa entre o RH e um trabalhador surdo. | Ilustração criada com IA</figcaption></figure>
     <div class="pa-body">
@@ -455,17 +464,17 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 </ul>
 <p>Cada situação tem particularidades, e dúvidas concretas devem ir a um profissional do direito do trabalho. Para saber mais, leia sobre <a href="/blog/o-papel-do-interprete-de-libras-na-sociedade/">o papel do intérprete de Libras na sociedade</a> e veja, no post <a href="/blog/garantir-libras-sem-improviso/">Libras em eventos sem improviso</a>, por que a acessibilidade começa no planejamento.</p>
     </div>
-    <section class="pa-refs" aria-labelledby="pa-refs-t">
-      <h2 id="pa-refs-t">Créditos e referências</h2>
-      <p>Texto: Equipe LIBRAS.SE, com informações do TRT-MG, da Tribuna de Minas e do Migalhas.</p>
-      <ol>
-        <li>TRT-MG. “<a href="https://portal.trt3.jus.br/internet/conheca-o-trt/comunicacao/noticias-juridicas/empresa-e-condenada-a-pagar-r-30-mil-por-dispensar-empregado-surdo-sem-interprete-de-libras" target="_blank" rel="noopener noreferrer">Empresa é condenada a pagar R$ 30 mil por dispensar empregado surdo sem intérprete de Libras</a>”. 25 de setembro de 2026.</li>
-        <li>Tribuna de Minas. “<a href="https://tribunademinas.com.br/noticias/minas/25-09-2026/empresa-e-condenada-a-pagar-r-30-mil-por-dispensar-empregado-surdo-sem-interprete-de-libras.html" target="_blank" rel="noopener noreferrer">Empresa é condenada a pagar R$ 30 mil por dispensar empregado surdo sem intérprete de Libras</a>”. 25 de setembro de 2026.</li>
-        <li>Migalhas. “<a href="https://www.migalhas.com.br/quentes/465301/empresa-pagara-r-30-mil-por-dispensar-surdo-sem-interprete-de-libras" target="_blank" rel="noopener noreferrer">Empresa pagará R$ 30 mil por dispensar surdo sem intérprete de Libras</a>”. 25 de setembro de 2026.</li>
-        <li>Presidência da República. “<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira de Inclusão)</a>”. Consultada em 28 de setembro de 2026.</li>
-        <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE.</li>
-      </ol>
-    </section>
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do TRT-MG, da Tribuna de Minas e do Migalhas.</p>
+<ul>
+  <li>TRT-MG. <a href="https://portal.trt3.jus.br/internet/conheca-o-trt/comunicacao/noticias-juridicas/empresa-e-condenada-a-pagar-r-30-mil-por-dispensar-empregado-surdo-sem-interprete-de-libras" target="_blank" rel="noopener noreferrer">Empresa é condenada a pagar R$ 30 mil por dispensar empregado surdo sem intérprete de Libras</a>. 25 de setembro de 2026.</li>
+  <li>Tribuna de Minas. <a href="https://tribunademinas.com.br/noticias/minas/25-09-2026/empresa-e-condenada-a-pagar-r-30-mil-por-dispensar-empregado-surdo-sem-interprete-de-libras.html" target="_blank" rel="noopener noreferrer">Empresa é condenada a pagar R$ 30 mil por dispensar empregado surdo sem intérprete de Libras</a>. 25 de setembro de 2026.</li>
+  <li>Migalhas. <a href="https://www.migalhas.com.br/quentes/465301/empresa-pagara-r-30-mil-por-dispensar-surdo-sem-interprete-de-libras" target="_blank" rel="noopener noreferrer">Empresa pagará R$ 30 mil por dispensar surdo sem intérprete de Libras</a>. 25 de setembro de 2026.</li>
+  <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira de Inclusão)</a>. Consultada em 28 de setembro de 2026.</li>
+  <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE.</li>
+</ul>
+</section>
     <div class="pa-tags" role="group" aria-label="Tags"><a class="pa-tag" href="/glossario/libras/">#libras</a><a class="pa-tag" href="/glossario/surdo/">#surdo</a><a class="pa-tag" href="/glossario/lbi/">#lbi</a><a class="pa-tag" href="/glossario/til-tils/">#tils</a><span class="pa-tag">#inclusão no trabalho</span><span class="pa-tag">#direitos</span></div>
 
     <section class="pa-cta" aria-label="Soluções e recursos da LIBRAS.SE">

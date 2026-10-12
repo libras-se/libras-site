@@ -1,0 +1,53 @@
+{
+ "_leia": "Páginas de autor do blog (tools/blog/autores.py). Cada autor ganha /<pasta>/<slug>/ a partir de tools/blog/autor.html, com os posts cujo JSON-LD BlogPosting tem esse autor (casado pelo nome). Autor novo: acrescente aqui, rode o script e use a url dele no author do post. sameAs: perfis públicos da pessoa (LinkedIn, Instagram...).",
+ "autores": [
+  {
+   "slug": "jessica-rodrigues",
+   "pasta": "autora",
+   "nome": "Jéssica Rodrigues",
+   "iniciais": "JR",
+   "rotulo": "Autora, Blog LIBRAS.SE",
+   "rotulo_curto": "Autora",
+   "perfil": "Perfil da autora",
+   "cargo": "Redatora",
+   "bio": "Redatora especializada em acessibilidade, cultura surda e Libras. Escreve sobre inclusão, legislação, tecnologia assistiva e as histórias da comunidade surda brasileira.",
+   "sameAs": []
+  },
+  {
+   "slug": "guilherme-cruz",
+   "pasta": "autor",
+   "nome": "Guilherme Cruz",
+   "iniciais": "GC",
+   "rotulo": "Autor, Blog LIBRAS.SE",
+   "rotulo_curto": "Autor",
+   "perfil": "Perfil do autor",
+   "cargo": "Redator",
+   "bio": "Autor do Blog LIBRAS.SE, com artigos sobre Libras, acessibilidade audiovisual, inclusão em eventos, educação e cultura surda.",
+   "sameAs": []
+  },
+  {
+   "slug": "luis-debiasi",
+   "pasta": "autor",
+   "nome": "Luis Debiasi",
+   "iniciais": "LD",
+   "rotulo": "Autor, Blog LIBRAS.SE",
+   "rotulo_curto": "Autor",
+   "perfil": "Perfil do autor",
+   "cargo": "Fundador e CEO da LIBRAS.SE",
+   "bio": "Fundador e CEO da LIBRAS.SE, a plataforma de tradução de vídeos para Libras com intérpretes humanos, com sede em Florianópolis (SC). Escreve sobre acessibilidade audiovisual, mercado e cinema.",
+   "sameAs": []
+  },
+  {
+   "slug": "joab-mariano",
+   "pasta": "autor",
+   "nome": "Joab Mariano",
+   "iniciais": "JM",
+   "rotulo": "Autor, Blog LIBRAS.SE",
+   "rotulo_curto": "Autor",
+   "perfil": "Perfil do autor",
+   "cargo": "Tradutor e intérprete de Libras",
+   "bio": "Tradutor e intérprete de Libras do time da LIBRAS.SE. É ele quem sinaliza em vários vídeos e figurinhas do blog.",
+   "sameAs": []
+  }
+ ]
+}

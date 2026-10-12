@@ -45,7 +45,9 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Equipe LIBRAS.SE"
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se/"
   },
   "publisher": {
     "@type": "Organization",
@@ -370,6 +372,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -421,7 +430,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">Blog LIBRAS.SE</span>
       <h1 class="pa-title">Bastidores da Libras no Rock in Rio 2026: chroma key, revezamento a cada 10 minutos e tradução do inglês em tempo real</h1>
       <p class="pa-sub">Reportagens mostram como funcionou a tradução dos shows para a Língua Brasileira de Sinais nos telões do festival, numa operação muito parecida com a produção de Libras em vídeo.</p>
-      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span><time datetime="2026-09-15">15 de setembro de 2026</time><span class="dot"></span>3 min de leitura</div>
+      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span>Publicado em <time datetime="2026-09-15">15 de set. de 2026</time><span class="dot"></span>3 min de leitura</div>
     </header>
     <figure class="pa-fig"><picture><source srcset="/assets/img/blog/bastidores-da-libras-no-rock-in-rio-2026/bastidores-da-libras-no-rock-in-rio-2026.avif" type="image/avif"><source srcset="/assets/img/blog/bastidores-da-libras-no-rock-in-rio-2026/bastidores-da-libras-no-rock-in-rio-2026.webp" type="image/webp"><img src="/assets/img/blog/bastidores-da-libras-no-rock-in-rio-2026/bastidores-da-libras-no-rock-in-rio-2026.jpg" alt="Ilustração de uma intérprete sinalizando em Libras diante de um fundo verde e de uma câmera, com outra intérprete de fones aguardando a vez e um telão de festival ao fundo" width="1200" height="675" fetchpriority="high" decoding="async"></picture><figcaption>Intérprete sinaliza diante do chroma key enquanto a colega aguarda o revezamento. | Ilustração criada com IA</figcaption></figure>
     <div class="pa-body">
@@ -452,18 +461,18 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>Fundo verde, câmera, retorno de áudio e troca programada de profissionais: o bastidor do festival lembra muito a gravação de uma <a href="/glossario/janela-de-libras/">janela de Libras</a> para vídeos. A diferença é que, no palco, tudo acontece em <a href="/glossario/interpretacao-simultanea/">interpretação simultânea</a>, sem chance de regravar, o que torna o preparo e o revezamento dos <a href="/glossario/til-tils/">tradutores e intérpretes de Libras</a> ainda mais importantes.</p>
 <p>O festival já tem história com a Libras. Em 2022, o blog contou como o <a href="/blog/rock-in-rio-tem-show-de-rap-com-libras/">show de rap de Papatinho e L7nnon teve intérpretes no Palco Sunset</a> e como o intérprete surdo <a href="/blog/tradutor-de-libras-se-destaca-no-rock-in-rio/">Leo Castilho se destacou no festival</a>.</p>
     </div>
-    <section class="pa-refs" aria-labelledby="pa-refs-t">
-      <h2 id="pa-refs-t">Créditos e referências</h2>
-      <p>Texto: Equipe LIBRAS.SE, com informações do Brasil em Folhas, do Portal Democrata, do site oficial do Rock in Rio, do Jornal do Brasil e da Billboard Brasil.</p>
-      <ol>
-        <li>Brasil em Folhas. “<a href="https://www.brasilemfolhas.com.br/2026/09/equipe-de-libras-traduz-shows-do-rock-in-rio-em-tempo-real/" target="_blank" rel="noopener noreferrer">Equipe de Libras traduz shows do Rock in Rio em tempo real</a>”. 11 de setembro de 2026.</li>
-        <li>Portal Democrata. “<a href="https://portaldemocrata.com.br/2026/09/06/rock-in-rio-2026-acessibilidade-para-cegos-e-surdos/" target="_blank" rel="noopener noreferrer">Rock in Rio 2026: Acessibilidade para cegos e surdos</a>”. 6 de setembro de 2026.</li>
-        <li>Rock in Rio. “<a href="https://rockinrio.com/rio/pt-br/acessibilidade/" target="_blank" rel="noopener noreferrer">Acessibilidade</a>”, página do site oficial do festival. Consultada em 15 de setembro de 2026.</li>
-        <li>Jornal do Brasil. “<a href="https://www.jb.com.br/caderno-b/2026/09/1060807-rock-in-rio-2026-comeca-com-palco-de-led-e-grandes-atracoes.html" target="_blank" rel="noopener noreferrer">Rock in Rio 2026 estreia com palco gigante de LED e grandes nomes da música</a>”. 4 de setembro de 2026.</li>
-        <li>Billboard Brasil. “<a href="https://billboard.com.br/rock-in-rio-apresenta-novo-formato-do-palco-mundo/" target="_blank" rel="noopener noreferrer">Rock in Rio apresenta novo formato do Palco Mundo</a>”. 25 de novembro de 2025.</li>
-        <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE.</li>
-      </ol>
-    </section>
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do Brasil em Folhas, do Portal Democrata, do site oficial do Rock in Rio, do Jornal do Brasil e da Billboard Brasil.</p>
+<ul>
+  <li>Brasil em Folhas. <a href="https://www.brasilemfolhas.com.br/2026/09/equipe-de-libras-traduz-shows-do-rock-in-rio-em-tempo-real/" target="_blank" rel="noopener noreferrer">Equipe de Libras traduz shows do Rock in Rio em tempo real</a>. 11 de setembro de 2026.</li>
+  <li>Portal Democrata. <a href="https://portaldemocrata.com.br/2026/09/06/rock-in-rio-2026-acessibilidade-para-cegos-e-surdos/" target="_blank" rel="noopener noreferrer">Rock in Rio 2026: Acessibilidade para cegos e surdos</a>. 6 de setembro de 2026.</li>
+  <li>Rock in Rio. <a href="https://rockinrio.com/rio/pt-br/acessibilidade/" target="_blank" rel="noopener noreferrer">Acessibilidade</a>, página do site oficial do festival. Consultada em 15 de setembro de 2026.</li>
+  <li>Jornal do Brasil. <a href="https://www.jb.com.br/caderno-b/2026/09/1060807-rock-in-rio-2026-comeca-com-palco-de-led-e-grandes-atracoes.html" target="_blank" rel="noopener noreferrer">Rock in Rio 2026 estreia com palco gigante de LED e grandes nomes da música</a>. 4 de setembro de 2026.</li>
+  <li>Billboard Brasil. <a href="https://billboard.com.br/rock-in-rio-apresenta-novo-formato-do-palco-mundo/" target="_blank" rel="noopener noreferrer">Rock in Rio apresenta novo formato do Palco Mundo</a>. 25 de novembro de 2025.</li>
+  <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE.</li>
+</ul>
+</section>
     <div class="pa-tags" role="group" aria-label="Tags"><span class="pa-tag">#rock in rio</span><a class="pa-tag" href="/glossario/libras/">#libras</a><a class="pa-tag" href="/glossario/interpretacao-simultanea/">#interpretação simultânea</a><a class="pa-tag" href="/glossario/janela-de-libras/">#janela de libras</a><a class="pa-tag" href="/glossario/til-tils/">#tils</a><span class="pa-tag">#acessibilidade em eventos</span></div>
 
     <section class="pa-cta" aria-label="Soluções e recursos da LIBRAS.SE">

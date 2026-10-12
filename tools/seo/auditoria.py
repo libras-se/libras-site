@@ -39,7 +39,7 @@ def tipo(url):
                    ("/aprender-libras/", "aprender"), ("/atividades/", "aprender"), ("/materiais/", "aprender"),
                    ("/cultura-surda/", "aprender"), ("/libras-para-", "comercial"), ("/acessibilidade-para-", "comercial"),
                    ("/solucoes/", "comercial"), ("/produtos/", "comercial"), ("/orcamento/", "comercial"),
-                   ("/eventos-ao-vivo/", "comercial"), ("/libras-ao-vivo/", "comercial"), ("/autora/", "autor")):
+                   ("/eventos-ao-vivo/", "comercial"), ("/libras-ao-vivo/", "comercial"), ("/autora/", "autor"), ("/autor/", "autor")):
         if url.startswith(pre):
             return t
     return "institucional" if url != "/" else "home"

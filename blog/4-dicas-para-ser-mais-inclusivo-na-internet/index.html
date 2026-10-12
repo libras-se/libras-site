@@ -20,7 +20,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta property="article:published_time" content="2021-04-14T12:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-05T15:15:00.000Z">
+<meta property="article:modified_time" content="2026-10-12T15:00:00.000Z">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
 <meta name="twitter:title" content="4 dicas para ser mais inclusivo na internet">
@@ -32,7 +32,7 @@
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"4 dicas para ser mais inclusivo na internet","description":"Quer um conteúdo mais acessível? Veja 4 dicas para ser mais inclusivo na internet: audiodescrição, texto alternativo, legendas e janela de Libras em vídeos.","image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/4-dicas-para-ser-mais-inclusivo-na-internet/4-dicas-para-ser-mais-inclusivo-na-internet.webp","width":1200,"height":675},"author":{"@type":"Person","name":"Jéssica Rodrigues","url":"https://libras.se/autora/jessica-rodrigues/"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"datePublished":"2021-04-14T12:00:00.000Z","dateModified":"2026-04-05T15:15:00.000Z","inLanguage":"pt-BR","mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/4-dicas-para-ser-mais-inclusivo-na-internet/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"4 dicas para ser mais inclusivo na internet","description":"Quer um conteúdo mais acessível? Veja 4 dicas para ser mais inclusivo na internet: audiodescrição, texto alternativo, legendas e janela de Libras em vídeos.","image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/4-dicas-para-ser-mais-inclusivo-na-internet/4-dicas-para-ser-mais-inclusivo-na-internet.webp","width":1200,"height":675},"author":{"@type":"Person","@id":"https://libras.se/autora/jessica-rodrigues/#person","name":"Jéssica Rodrigues","url":"https://libras.se/autora/jessica-rodrigues/"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"datePublished":"2021-04-14T12:00:00.000Z","dateModified":"2026-10-12T15:00:00.000Z","inLanguage":"pt-BR","mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/4-dicas-para-ser-mais-inclusivo-na-internet/"}}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://libras.se/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://libras.se/blog/"},{"@type":"ListItem","position":3,"name":"4 dicas para ser mais inclusivo na internet","item":"https://libras.se/blog/4-dicas-para-ser-mais-inclusivo-na-internet/"}]}
 </script>
@@ -362,6 +362,13 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -420,16 +427,17 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
     </nav>
     <div class="hero-kicker">Acessibilidade · Guia</div>
     <h1 class="hero-title">4 dicas para ser <em>mais inclusivo</em> na internet</h1>
-    <p class="hero-subtitle">Cerca de 20% da população brasileira tem algum tipo de deficiência. Navegar deveria ser para todos, e quatro práticas simples já tornam seu conteúdo muito mais acessível.</p>
+    <p class="hero-subtitle">São 14,4 milhões de brasileiros com deficiência, segundo o Censo 2022. Navegar deveria ser para todos, e quatro práticas simples já tornam seu conteúdo muito mais acessível.</p>
     <div class="hero-meta">
       <span class="meta-badge">Por <a href="/autora/jessica-rodrigues/">Jéssica Rodrigues</a></span>
-      <span class="meta-badge">14 de abril de 2021</span>
+      <span class="meta-badge">Publicado em <time datetime="2021-04-14">14 de abr. de 2021</time></span>
+      <span class="meta-badge">Atualizado em <time datetime="2026-10-12">12 de out. de 2026</time></span>
       <span class="meta-badge">3 min de leitura</span>
     </div>
   </div>
 </section>
 <main class="article-wrapper" id="main-content">
-<p class="body-text drop-cap">Para milhões de brasileiros, o simples ato de navegar na internet é um desafio. Segundo o IBGE, cerca de <strong>20% da população</strong> tem algum tipo de deficiência, visual, motora, auditiva ou intelectual. Usar ferramentas de acessibilidade é uma questão de cidadania: como sociedade, devemos promover a inclusão em vez de excluir um grupo por suas características.</p>
+<p class="body-text drop-cap">Para milhões de brasileiros, o simples ato de navegar na internet é um desafio. No Censo 2022, o IBGE contou <strong>14,4 milhões de pessoas com deficiência</strong>, 7,3% da população, com deficiência visual, motora, auditiva ou intelectual. Usar ferramentas de acessibilidade é uma questão de cidadania: como sociedade, devemos promover a inclusão em vez de excluir um grupo por suas características.</p>
 
 <p class="body-text">Separamos quatro práticas que ajudam a levar o seu conteúdo a todas as pessoas.</p>
 
@@ -461,6 +469,15 @@ mark{background:linear-gradient(120deg,rgba(72,191,178,.28),rgba(72,191,178,.1))
   <span class="hl-label">Na prática</span>
   <p>Audiodescrição, texto alternativo, legenda e janela de Libras se complementam: juntos, cobrem diferentes públicos e tornam seu conteúdo <strong>acessível de verdade</strong>.</p>
 </div>
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Jéssica Rodrigues, com informações do IBGE (via CNN Brasil) e da Lei Brasileira de Inclusão.</p>
+<ul>
+  <li>CNN Brasil, Gabriela Maraccini. <a href="https://www.cnnbrasil.com.br/saude/brasil-tem-144-milhoes-de-pessoas-com-deficiencia-diz-ibge/" target="_blank" rel="noopener noreferrer">Brasil tem 14,4 milhões de pessoas com deficiência, diz IBGE</a>. 23 de maio de 2025. Dados do Censo 2022 do IBGE.</li>
+  <li>Presidência da República. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira de Inclusão)</a> (o art. 67 prevê legenda oculta, janela com intérprete de Libras e audiodescrição na TV).</li>
+</ul>
+</section>
+
 <section class="faq-section" aria-label="Perguntas frequentes">
   <h2 id="faq">Perguntas frequentes</h2>
   <details class="faq-item reveal"><summary>O que é audiodescrição?</summary><div class="faq-a">É a tradução do conteúdo visual em palavras, permitindo que pessoas cegas ou com baixa visão acompanhem imagens, vídeos e cenas.</div></details>

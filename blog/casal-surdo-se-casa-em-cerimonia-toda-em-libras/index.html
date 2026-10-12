@@ -45,7 +45,9 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Equipe LIBRAS.SE"
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se/"
   },
   "publisher": {
     "@type": "Organization",
@@ -384,6 +386,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -435,7 +444,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">Blog LIBRAS.SE</span>
       <h1 class="pa-title">Casal surdo se casa em cerimônia toda em Libras no Paraná</h1>
       <p class="pa-sub">Josimar e Mariza oficializaram a união em Pitanga com a celebração em sinais. Os convidados ouvintes acompanharam tudo pela interpretação para o português.</p>
-      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span><time datetime="2026-09-23">23 de setembro de 2026</time><span class="dot"></span>2 min de leitura</div>
+      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span>Publicado em <time datetime="2026-09-23">23 de set. de 2026</time><span class="dot"></span>2 min de leitura</div>
     </header>
     <figure class="pa-fig"><picture><source srcset="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.avif" type="image/avif"><source srcset="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.webp" type="image/webp"><img src="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.jpg" alt="Ilustração de noivos trocando votos em Libras num salão decorado com flores, com uma intérprete sinalizando ao lado e convidados sorrindo ao fundo" width="1200" height="675" fetchpriority="high" decoding="async"></picture><figcaption>Noivos trocam os votos em Libras numa cerimônia toda em sinais. | Ilustração criada com IA</figcaption></figure>
     <div class="pa-body">
@@ -458,14 +467,14 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>Não é a primeira vez que um momento marcante da vida ganha a forma da Libras. Em Caruaru, um pastor aprendeu um pouco da língua para fazer o <a href="/blog/crianca-surda-batizada-em-libras-em-caruaru/">batizado em Libras de uma criança surda</a>, filha de pais surdos.</p>
 <p>O casamento de Josimar e Mariza ganhou ainda um significado a mais por acontecer em setembro, mês dedicado à comunidade surda, que tem como uma das principais datas o <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/">Dia Nacional dos Surdos</a>, em 26 de setembro, como lembrou o jornal.</p>
     </div>
-    <section class="pa-refs" aria-labelledby="pa-refs-t">
-      <h2 id="pa-refs-t">Créditos e referências</h2>
-      <p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do jornal Paraná Centro.</p>
-      <ol>
-<li><strong>Paraná Centro.</strong> “Casal de surdos celebra casamento com cerimônia realizada em Libras em Pitanga”, por Aldinei dos Passos Andreis, 22 de setembro de 2026. <a href="https://jornal.paranacentro.com.br/noticia/54061/casal-de-surdos-celebra-casamento-com-cerimonia-realizada-em-libras-em-pitanga" target="_blank" rel="noopener noreferrer">Ler a matéria</a></li>
-        <li><strong>Imagem:</strong> capa criada com IA para a LIBRAS.SE. Os personagens são genéricos e não retratam os noivos; as fotos da cerimônia estão na matéria original.</li>
-      </ol>
-    </section>
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações do jornal Paraná Centro.</p>
+<ul>
+  <li>Paraná Centro, Aldinei dos Passos Andreis. <a href="https://jornal.paranacentro.com.br/noticia/54061/casal-de-surdos-celebra-casamento-com-cerimonia-realizada-em-libras-em-pitanga" target="_blank" rel="noopener noreferrer">Casal de surdos celebra casamento com cerimônia realizada em Libras em Pitanga</a>. 22 de setembro de 2026.</li>
+  <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE. Os personagens são genéricos e não retratam os noivos; as fotos da cerimônia estão na matéria original.</li>
+</ul>
+</section>
     <div class="pa-tags" role="group" aria-label="Tags"><a class="pa-tag" href="/glossario/libras/">#libras</a><span class="pa-tag">#casamento em Libras</span><a class="pa-tag" href="/glossario/comunidade-surda/">#comunidade surda</a><a class="pa-tag" href="/glossario/bilinguismo/">#bilinguismo</a><span class="pa-tag">#Paraná</span></div>
 
     <section class="pa-cta" aria-label="Soluções e recursos da LIBRAS.SE">

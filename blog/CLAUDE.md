@@ -383,7 +383,10 @@ Os blocos antigos `.pa-actions` (Jogo/Vocabulário/Glossário), `.pa-related` ("
 
 ```bash
 # depois de publicar ou editar um post (a ordem importa: links.py lê os cards da home)
+python3 tools/seo/redirects.py     # se mudou tools/seo/redirects.json (post fundido, slug trocado)
 python3 tools/blog/home.py
+python3 tools/blog/autores.py      # páginas de autor a partir do author do JSON-LD
+python3 tools/seo/videos.py        # VideoObject dos vídeos do post
 python3 tools/seo/links.py
 python3 tools/seo/llms.py          # inventário do blog no llms-full.txt
 python3 tools/seo/auditoria.py     # confere órfãs, links de entrada, título e description
@@ -794,7 +797,9 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 - [ ] Imagens com `.avif` + `.webp` + fallback, `width`/`height` e `loading` corretos
 - [ ] **Fechamento** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" escritos à mão; banner, "Continue lendo" e ícones gerados por `python3 tools/seo/links.py`
 - [ ] Footer canônico do site (`#foot`) ao final
-- [ ] Editoria do post em `tools/blog/home.json`, depois `python3 tools/blog/home.py` e `python3 tools/seo/links.py` (§5, §8)
+- [ ] Editoria do post em `tools/blog/home.json`, depois `python3 tools/blog/home.py`, `python3 tools/blog/autores.py`, `python3 tools/seo/videos.py` e `python3 tools/seo/links.py` (§5, §8)
+- [ ] Bloco **Créditos e referências** (`<section class="pa-refs">`) com todas as fontes linkadas e os créditos de imagem; números com fonte e ano
+- [ ] `python3 tools/seo/checagem_blog.py --base tools/seo/checagem_blog.base.json` sem categoria piorando
 - [ ] `python3 tools/seo/auditoria.py` sem novo problema no post
 - [ ] CTA aponta para páginas reais (huet/soluções/jogo/sinal/glossário)
 - [ ] WhatsApp flutuante e skip-link presentes

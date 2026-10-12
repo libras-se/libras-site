@@ -45,7 +45,9 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "Equipe LIBRAS.SE"
+    "@id": "https://libras.se/#organization",
+    "name": "LIBRAS.SE",
+    "url": "https://libras.se/"
   },
   "publisher": {
     "@type": "Organization",
@@ -287,6 +289,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 </style>
 <style id="yt-lite-css">.yt-lite{position:relative;display:block;width:100%;aspect-ratio:16/9;background:#0e3538;overflow:hidden;cursor:pointer;border:0;padding:0}.yt-lite img{width:100%;height:100%;object-fit:cover;display:block}.yt-lite button{position:absolute;inset:0;margin:auto;width:72px;height:50px;border:0;border-radius:14px;background:rgba(14,53,56,.88);cursor:pointer;transition:background .2s}.yt-lite button::before{content:"";position:absolute;left:29px;top:15px;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff}.yt-lite:hover button,.yt-lite button:focus-visible{background:#1a9ca4}.yt-lite button:focus-visible{outline:3px solid #4fd1c5;outline-offset:3px}.yt-lite iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.pa-video__frame .yt-lite{position:absolute;inset:0;aspect-ratio:auto;height:100%}</style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json" data-lse="videos">{"@context":"https://schema.org","@graph":[{"@type":"VideoObject","name":"90 Decibéis - Making Off","description":"Por trás das câmeras de #90Decibéis! 🧡 \n\nProduzido por Daniel Gonçalves, este making of mostra o processo de criação do filme e um pouco mais sobre uma história que fala de acessibilidade, representatividade e inclusão. \n\nO longa acompanha Ana, uma advogada que enfrenta a perda progressiva da audiçã","thumbnailUrl":"https://i.ytimg.com/vi/ZH_KcuKia_Q/hqdefault.jpg","uploadDate":"2026-10-01","embedUrl":"https://www.youtube.com/embed/ZH_KcuKia_Q","duration":"PT24M51S"}]}</script>
 
 <!-- LSE:CSS (gerado por tools/seo/links.py) -->
 <style id="lse-css">
@@ -379,6 +382,13 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -430,7 +440,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">Blog LIBRAS.SE</span>
       <h1 class="pa-title">Benedita Casé protagoniza “90 Decibéis”, filme sobre surdez que chegou à TV aberta</h1>
       <p class="pa-sub">Surda desde bebê, a filha de Regina Casé vive uma advogada que descobre uma perda auditiva progressiva. O roteiro é de Julia Spadaccini, que também tem deficiência auditiva.</p>
-      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span><time datetime="2026-10-07">7 de outubro de 2026</time><span class="dot"></span>3 min de leitura</div>
+      <div class="pa-meta">Por <strong>Equipe LIBRAS.SE</strong><span class="dot"></span>Publicado em <time datetime="2026-10-07">7 de out. de 2026</time><span class="dot"></span>3 min de leitura</div>
     </header>
     <figure class="pa-fig"><picture><source srcset="/assets/img/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez.avif" type="image/avif"><source srcset="/assets/img/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez.webp" type="image/webp"><img src="/assets/img/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez.jpg" alt="Ilustração de uma mulher de blazer, com aparelho auditivo atrás da orelha, trabalhando numa mesa de escritório enquanto um menino desenha ao lado e ondas sonoras se apagam ao redor" width="1200" height="675" fetchpriority="high" decoding="async"></picture><figcaption>Ana, a personagem do filme, é advogada, mãe e descobre uma perda auditiva progressiva. A ilustração é uma cena genérica. | Ilustração criada com IA</figcaption></figure>
     <div class="pa-body">
@@ -461,21 +471,21 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
 <p>A trajetória de Benedita ajuda a lembrar que a <a href="/glossario/comunidade-surda/">comunidade surda</a> é diversa. Há pessoas <a href="/glossario/surdo/">surdas</a> que têm a <a href="/glossario/libras/">Libras</a> como primeira língua. Outras são oralizadas, usam aparelho auditivo ou implante coclear, fazem leitura labial e se comunicam principalmente em português. E muitas transitam entre as duas línguas. A idade da perda auditiva, a família, a escola e o acesso à Libras pesam nessas escolhas, e nenhum caminho é mais legítimo que o outro.</p>
 <p>O Observatório da TV, com informações da Globo, descreve Benedita como atriz surda oralizada. O caso também derruba um mito: ser surdo não significa não falar, um dos motivos pelos quais <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/">o termo surdo-mudo é errado</a>. Nos cinemas, outro lançamento com protagonista surda, <a href="/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/">“Nem Toda História de Amor Acaba em Morte”</a>, levou a Libras para dentro da cena.</p>
     </div>
-    <section class="pa-refs" aria-labelledby="pa-refs-t">
-      <h2 id="pa-refs-t">Créditos e referências</h2>
-      <p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações de Veja Saúde, Tribuna do Sertão (Agência O Globo), Estado de Minas (Folhapress), Folha de Pernambuco, Observatório da TV, CNN Brasil, Correio e TV Globo.</p>
-      <ol>
-        <li><strong>Veja Saúde</strong>, André Bernardo: <a href="https://saude.abril.com.br/coluna/saude-e-pop/filha-de-regina-case-benedita-estreia-no-cinema-em-filme-sobre-surdez/" target="_blank" rel="noopener noreferrer">Filha de Regina Casé, Benedita estreia no cinema em filme sobre surdez</a>, 28 de setembro de 2026. Fonte da história de Benedita e de Julia Spadaccini e da fala do diretor.</li>
-        <li><strong>Tribuna do Sertão</strong>, Agência O Globo: <a href="https://www.tribunadosertao.com.br/cultura-pop/2026/05/08/898581-filha-de-regina-case-benedita-estreia-no-teatro-em-surda-ser-atriz-era-impensavel-para-mim" target="_blank" rel="noopener noreferrer">Filha de Regina Casé, Benedita estreia no teatro em ‘Surda’: ‘Ser atriz era impensável para mim’</a>, 8 de maio de 2026.</li>
-        <li><strong>Estado de Minas</strong>, Folhapress: <a href="https://www.em.com.br/cultura/2026/06/7434853-nao-virou-atriz-antes-por-capacitismo-meu-e-dela-diz-regina-case-sobre-filha.html" target="_blank" rel="noopener noreferrer">‘Não virou atriz antes por capacitismo meu e dela’, diz Regina Casé sobre filha</a>, 4 de junho de 2026.</li>
-        <li><strong>Folha de Pernambuco</strong>: <a href="https://www.folhape.com.br/cultura/regina-case-sobre-filha-pcd-so-nao-virou-atriz-antes-por-capacitismo/491853/" target="_blank" rel="noopener noreferrer">Regina Casé sobre filha PCD: ‘Só não virou atriz antes por capacitismo meu e dela’</a>, 4 de junho de 2026. Fonte do relato de Regina sobre o teste.</li>
-        <li><strong>Observatório da TV</strong>, publicado pela Super Rádio Tupi: <a href="https://www.tupi.fm/entretenimento/tela-quente-globo-estreia-filme-brasileiro-com-historia-emocionante-de-transformacao-nesta-segunda-28/" target="_blank" rel="noopener noreferrer">Tela Quente: Globo estreia filme brasileiro com história emocionante de transformação nesta segunda (28)</a>, 27 de setembro de 2026. Fonte da sinopse e da data de exibição.</li>
-        <li><strong>CNN Brasil</strong>: <a href="https://www.cnnbrasil.com.br/pop/cinema/fernanda-montenegro-enaltece-estreia-de-filha-de-regina-case-como-atriz/" target="_blank" rel="noopener noreferrer">Fernanda Montenegro enaltece estreia de filha de Regina Casé como atriz</a>, 8 de outubro de 2025. Fonte da exibição no Festival do Rio e da fala de Benedita à Marie Claire.</li>
-        <li><strong>Correio</strong>: <a href="https://www.correio24horas.com.br/em-alta/solteira-filha-de-regina-case-surpreende-amigos-apos-fim-do-casamento-o-que-esta-acontecendo--1026" target="_blank" rel="noopener noreferrer">Solteira, filha de Regina Casé surpreende amigos após fim do casamento</a>, 6 de outubro de 2026. Registro da transmissão do filme na TV Globo.</li>
-        <li><strong>Vídeo</strong>: <a href="https://www.youtube.com/watch?v=ZH_KcuKia_Q" target="_blank" rel="noopener noreferrer">90 Decibéis: Making Off</a>, canal oficial da TV Globo no YouTube, 1º de outubro de 2026. A proporção de 70% do elenco está na descrição do vídeo.</li>
-        <li><strong>Capa</strong>: ilustração criada com IA para a LIBRAS.SE. A personagem é genérica e não retrata Benedita Casé Zerbini nem o elenco do filme.</li>
-      </ol>
-    </section>
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações de Veja Saúde, Tribuna do Sertão (Agência O Globo), Estado de Minas (Folhapress), Folha de Pernambuco, Observatório da TV, CNN Brasil, Correio e TV Globo.</p>
+<ul>
+  <li>Veja Saúde, André Bernardo. <a href="https://saude.abril.com.br/coluna/saude-e-pop/filha-de-regina-case-benedita-estreia-no-cinema-em-filme-sobre-surdez/" target="_blank" rel="noopener noreferrer">Filha de Regina Casé, Benedita estreia no cinema em filme sobre surdez</a>. 28 de setembro de 2026. Fonte da história de Benedita e de Julia Spadaccini e da fala do diretor.</li>
+  <li>Tribuna do Sertão, com Agência O Globo. <a href="https://www.tribunadosertao.com.br/cultura-pop/2026/05/08/898581-filha-de-regina-case-benedita-estreia-no-teatro-em-surda-ser-atriz-era-impensavel-para-mim" target="_blank" rel="noopener noreferrer">Filha de Regina Casé, Benedita estreia no teatro em ‘Surda’: ‘Ser atriz era impensável para mim’</a>. 8 de maio de 2026.</li>
+  <li>Estado de Minas, com Folhapress. <a href="https://www.em.com.br/cultura/2026/06/7434853-nao-virou-atriz-antes-por-capacitismo-meu-e-dela-diz-regina-case-sobre-filha.html" target="_blank" rel="noopener noreferrer">‘Não virou atriz antes por capacitismo meu e dela’, diz Regina Casé sobre filha</a>. 4 de junho de 2026.</li>
+  <li>Folha de Pernambuco. <a href="https://www.folhape.com.br/cultura/regina-case-sobre-filha-pcd-so-nao-virou-atriz-antes-por-capacitismo/491853/" target="_blank" rel="noopener noreferrer">Regina Casé sobre filha PCD: ‘Só não virou atriz antes por capacitismo meu e dela’</a>. 4 de junho de 2026. Fonte do relato de Regina sobre o teste.</li>
+  <li>Observatório da TV, publicado pela Super Rádio Tupi. <a href="https://www.tupi.fm/entretenimento/tela-quente-globo-estreia-filme-brasileiro-com-historia-emocionante-de-transformacao-nesta-segunda-28/" target="_blank" rel="noopener noreferrer">Tela Quente: Globo estreia filme brasileiro com história emocionante de transformação nesta segunda (28)</a>. 27 de setembro de 2026. Fonte da sinopse e da data de exibição.</li>
+  <li>CNN Brasil. <a href="https://www.cnnbrasil.com.br/pop/cinema/fernanda-montenegro-enaltece-estreia-de-filha-de-regina-case-como-atriz/" target="_blank" rel="noopener noreferrer">Fernanda Montenegro enaltece estreia de filha de Regina Casé como atriz</a>. 8 de outubro de 2025. Fonte da exibição no Festival do Rio e da fala de Benedita à Marie Claire.</li>
+  <li>Correio. <a href="https://www.correio24horas.com.br/em-alta/solteira-filha-de-regina-case-surpreende-amigos-apos-fim-do-casamento-o-que-esta-acontecendo--1026" target="_blank" rel="noopener noreferrer">Solteira, filha de Regina Casé surpreende amigos após fim do casamento</a>. 6 de outubro de 2026. Registro da transmissão do filme na TV Globo.</li>
+  <li>Vídeo: TV Globo, canal oficial no YouTube. <a href="https://www.youtube.com/watch?v=ZH_KcuKia_Q" target="_blank" rel="noopener noreferrer">90 Decibéis: Making Off</a>. 1º de outubro de 2026. A proporção de 70% do elenco está na descrição do vídeo.</li>
+  <li>Imagem de capa: ilustração criada com IA para a LIBRAS.SE. A personagem é genérica e não retrata Benedita Casé Zerbini nem o elenco do filme.</li>
+</ul>
+</section>
     <div class="pa-tags" role="group" aria-label="Tags"><span class="pa-tag">#90 Decibéis</span><span class="pa-tag">#perda auditiva</span><a class="pa-tag" href="/glossario/surdo/">#surdo</a><a class="pa-tag" href="/glossario/comunidade-surda/">#comunidade surda</a><span class="pa-tag">#representatividade</span><span class="pa-tag">#cinema nacional</span></div>
 
     <section class="pa-cta" aria-label="Soluções e recursos da LIBRAS.SE">

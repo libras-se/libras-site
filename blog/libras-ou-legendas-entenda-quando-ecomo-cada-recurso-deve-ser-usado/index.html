@@ -27,7 +27,7 @@
 <meta name="twitter:title" content="Libras ou legendas? Quando usar cada recurso de acessibilidade | LIBRAS.SE">
 <meta name="twitter:description" content="Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas, eventos e conteúdos digitais.">
 <meta name="twitter:image" content="https://libras.se/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Libras ou legendas? Quando usar cada recurso de acessibilidade","description":"Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas, eventos e conteúdos digitais.","url":"https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/","datePublished":"2025-05-28T16:30:12.617Z","dateModified":"2026-04-21T16:00:00.000Z","author":{"@type":"Organization","name":"LIBRAS.SE","url":"https://libras.se"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.png","width":1200,"height":630},"mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Libras ou legendas? Quando usar cada recurso de acessibilidade","description":"Libras e legendas não são recursos equivalentes. Entenda quando usar janela de Libras, legenda comum e LSE em vídeos, aulas, eventos e conteúdos digitais.","url":"https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/","datePublished":"2025-05-28T16:30:12.617Z","dateModified":"2026-04-21T16:00:00.000Z","author":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/"},"publisher":{"@type":"Organization","@id":"https://libras.se/#organization","name":"LIBRAS.SE","url":"https://libras.se/","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png","width":512,"height":512},"sameAs":["https://instagram.com/libras.se","https://youtube.com/@librasse","https://linkedin.com/company/librasse","https://facebook.com/librasse","https://tiktok.com/@libras.se"]},"image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado.png","width":1200,"height":630},"mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/"}}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,7 +48,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Libras ou legendas? quando usar cada recurso",
+      "name": "Libras ou legendas? Quando usar cada recurso",
       "item": "https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/"
     }
   ]
@@ -1000,6 +1000,11 @@
   .ft-bot p{font-size:.7rem;color:rgba(255,255,255,.6);font-family:'Bricolage Grotesque',sans-serif}
   @media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr}}
   @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}.bm-inner{grid-template-columns:1fr;gap:24px;padding:40px 22px}.bm-divider{width:100%;height:1px}}
+
+  /* Ícones em SVG (no lugar de emojis) */
+  .info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+  .card-icon svg{width:22px;height:22px;color:var(--teal-dark)}
+  .error-icon svg{display:block;width:18px;height:18px;color:var(--orange)}
 </style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
 
@@ -1094,6 +1099,13 @@
 .pa-refs li strong{font-weight:700;color:#154245}
 .pa-refs a{color:#12737a;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;overflow-wrap:anywhere}
 @media(max-width:640px){.pa-refs{padding:22px 20px}}
+/* cartão de link para publicação de rede social (no lugar do embed, que carrega scripts de terceiros) */
+.pa-link-card{margin:18px 0 22px!important}
+.pa-link-card a{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(79,209,197,.35);border-radius:14px;background:#f6fcfb;color:#0e3538!important;font-weight:700;text-decoration:none!important;transition:border-color .2s,background .2s}
+.pa-link-card a:hover{border-color:#1a9ca4;background:#ecf8f6}
+.pa-link-card a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.pa-link-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#12737a;border-right:1px solid rgba(79,209,197,.35);padding-right:12px}
+.pa-link-card a::after{content:"↗";margin-left:auto;color:#12737a}
 /* links dentro de listas do template editorial (.body-list não tinha estilo de link) */
 .body-list a{color:#12737a;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
@@ -1163,20 +1175,14 @@
     <div class="hero-kicker" role="group" aria-label="Categoria do artigo">Acessibilidade audiovisual</div>
     <h1 class="hero-title">
       Libras ou legendas?<br>
-      <em>quando usar cada recurso</em>
+      <em>Quando usar cada recurso</em>
     </h1>
     <p class="hero-subtitle">
       Nem toda acessibilidade para pessoas surdas acontece do mesmo jeito. Entender a diferença entre Libras, legenda comum e LSE evita escolhas incompletas.
     </p>
     <div class="hero-meta">
-      <span class="meta-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Publicado em <time datetime="2025-05-28">28 de mai. de 2025</time>
-      </span>
-      <span class="meta-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
-        Atualizado em <time datetime="2026-06-04">4 de jun. de 2026</time>
-      </span>
+      <span class="meta-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Publicado em <time datetime="2025-05-28">28 de mai. de 2025</time></span>
+      <span class="meta-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Atualizado em <time datetime="2026-04-21">21 de abr. de 2026</time></span>
       <span class="meta-badge">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         7 min de leitura
@@ -1221,7 +1227,7 @@
 
   <!-- LAW CALLOUT 1 -->
   <div class="law-callout reveal">
-    <div class="law-icon">⚖️</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
     <div class="law-content">
       <h4>Lei nº 10.436/2002, Libras é língua reconhecida</h4>
       <p>A Lei de Libras reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora com estrutura gramatical própria. O Decreto nº 5.626/2005 reforça: pessoa surda é aquela que compreende e interage com o mundo por <strong>experiências visuais</strong>, manifestando sua cultura principalmente por meio de Libras. Isso significa que Libras não é adaptação do português, é uma língua independente. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
@@ -1239,22 +1245,22 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🎓</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
       <h3>Vídeos educacionais e aulas</h3>
       <p>Cursos, treinamentos e videoaulas ganham muito com janela de Libras. O aprendizado por língua visual é mais eficiente para pessoas sinalizantes do que acompanhar texto sincronizado.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🏛️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
       <h3>Campanhas e conteúdos institucionais</h3>
       <p>Vídeos de interesse público, comunicados de órgãos governamentais e campanhas de saúde têm maior alcance quando oferecem interpretação em Libras.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📡</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
       <h3>Eventos ao vivo e transmissões</h3>
       <p>Conferências, cerimônias e lives precisam de intérprete visível tanto para o público presencial quanto para quem assiste online.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🤝</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <h3>Conteúdos para a comunidade surda</h3>
       <p>Qualquer material voltado diretamente para pessoas surdas sinalizantes, informativos, orientações, comunicações internas, deve priorizar Libras como canal principal.</p>
     </div>
@@ -1282,7 +1288,7 @@
 
   <!-- LAW CALLOUT 2 - LBI -->
   <div class="law-callout reveal">
-    <div class="law-icon">📋</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
     <div class="law-content">
       <h4>Lei Brasileira de Inclusão (Lei nº 13.146/2015)</h4>
       <p>A LBI define comunicação de forma ampla, incluindo Libras, visualização de textos, Braille, linguagem simples, dispositivos multimídia e tecnologias da informação e comunicação. Isso sustenta diretamente a ideia de que <strong>acessibilidade não é um recurso único</strong>, diferentes pessoas precisam de caminhos diferentes para acessar o mesmo conteúdo. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Ver lei completa →</a></p>
@@ -1298,7 +1304,7 @@
 
   <div class="comparison-grid reveal">
     <div class="comparison-card">
-      <h3>🤟 Libras</h3>
+      <h3>Libras</h3>
       <dl>
         <div>
           <dt>Melhor para</dt>
@@ -1319,7 +1325,7 @@
       </dl>
     </div>
     <div class="comparison-card">
-      <h3>💬 Legenda comum</h3>
+      <h3>Legenda comum</h3>
       <dl>
         <div>
           <dt>Melhor para</dt>
@@ -1340,7 +1346,7 @@
       </dl>
     </div>
     <div class="comparison-card orange-top">
-      <h3>📝 LSE</h3>
+      <h3>LSE</h3>
       <dl>
         <div>
           <dt>Melhor para</dt>
@@ -1386,27 +1392,27 @@
 
   <div class="error-grid reveal">
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"Já tem legenda, então não precisa de Libras."</strong> Legenda e Libras atendem públicos diferentes. Uma não substitui a outra.</p>
     </div>
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"A legenda automática resolve."</strong> Erros de reconhecimento de fala, nomes trocados e ausência de marcação sonora comprometem o entendimento. Não é entrega final.</p>
     </div>
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"A janela de Libras pode ficar pequena."</strong> Uma janela pequena demais, mal posicionada ou sem contraste vira recurso simbólico, sem utilidade real para quem precisa.</p>
     </div>
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"É só colocar o intérprete em qualquer canto."</strong> O posicionamento, o enquadramento e a visibilidade do intérprete fazem parte da acessibilidade. Não é detalhe.</p>
     </div>
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"Todo surdo prefere a mesma solução."</strong> A comunidade surda é diversa. Surdos sinalizantes, oralizados e ensurdecidos têm necessidades distintas de comunicação.</p>
     </div>
     <div class="error-card">
-      <span class="error-icon">❌</span>
+      <span class="error-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
       <p><strong>"Acessibilidade é opcional."</strong> Legislações como a LBI e normas técnicas como a ABNT NBR 15290 estabelecem obrigações. Planejar é mais barato do que corrigir depois.</p>
     </div>
   </div>
@@ -1471,6 +1477,20 @@
 
   <p class="body-text reveal">Quanto mais cedo o recurso for pensado, melhor o resultado: mais integrado, mais eficiente e mais honesto com as pessoas que precisam dele.</p>
 
+<section class="pa-refs" aria-labelledby="pa-refs-t">
+<h2 id="pa-refs-t">Créditos e referências</h2>
+<p class="pa-refs__by">Texto: Equipe LIBRAS.SE, com informações da Lei de Libras e do decreto que a regulamenta, da Lei Brasileira de Inclusão, das diretrizes WCAG 2.2 do W3C, do IBGE e da ABNT.</p>
+<ul>
+  <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener noreferrer">Lei nº 10.436, de 24 de abril de 2002</a> (reconhece a Libras como meio legal de comunicação e expressão).</li>
+  <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener noreferrer">Decreto nº 5.626, de 22 de dezembro de 2005</a> (regulamenta a Lei de Libras).</li>
+  <li>Brasil. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Lei nº 13.146, de 6 de julho de 2015</a> (Lei Brasileira de Inclusão da Pessoa com Deficiência).</li>
+  <li>W3C. <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.2</a>.</li>
+  <li>IBGE. <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener noreferrer">Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência</a>. Agência de Notícias IBGE, maio de 2025.</li>
+  <li>IBGE. <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-algum-tipo-de-deficiencia" target="_blank" rel="noopener noreferrer">PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência</a>. Agência de Notícias IBGE, agosto de 2021.</li>
+  <li>ABNT. <a href="https://www.normas.com.br/visualizar/abnt-nbr-nm/24743/abnt-nbr15290-acessibilidade-em-comunicacao-na-televisao" target="_blank" rel="noopener noreferrer">ABNT NBR 15290, Acessibilidade em comunicação na televisão</a>. Página da norma no catálogo da ABNT.</li>
+</ul>
+</section>
+
   <!-- CTA -->
   <div class="cta-block reveal">
     <h2>Precisa decidir o melhor<br>formato acessível?</h2>
@@ -1480,19 +1500,6 @@
     </a>
   </div>
 
-  <!-- REFERÊNCIAS -->
-  <div class="references reveal">
-    <h4>Referências</h4>
-    <ol>
-      <li>BRASIL. <em>Lei nº 10.436, de 24 de abril de 2002.</em> Dispõe sobre a Língua Brasileira de Sinais – Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>BRASIL. <em>Decreto nº 5.626, de 22 de dezembro de 2005.</em> Regulamenta a Lei de Libras. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2005/Decreto/D5626.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>BRASIL. <em>Lei nº 13.146, de 6 de julho de 2015.</em> Lei Brasileira de Inclusão da Pessoa com Deficiência. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">planalto.gov.br</a></li>
-      <li>W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2.</em> Disponível em: <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">w3.org</a></li>
-      <li>IBGE. <em>Censo 2022: Brasil tem 14,4 milhões de pessoas com deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
-      <li>IBGE. <em>PNS 2019: país tem 17,3 milhões de pessoas com algum tipo de deficiência.</em> Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/31445-pns-2019-pais-tem-17-3-milhoes-de-pessoas-com-algum-tipo-de-deficiencia" target="_blank" rel="noopener">agenciadenoticias.ibge.gov.br</a></li>
-      <li>ABNT NBR 15290. <em>Acessibilidade em comunicação na televisão</em>, escopo de consulta pública. Disponível em: <a href="https://www.normas.com.br/visualizar/abnt-nbr-nm/24743/abnt-nbr15290-acessibilidade-em-comunicacao-na-televisao" target="_blank" rel="noopener">normas.com.br</a></li>
-    </ol>
-  </div>
 
 </main>
 

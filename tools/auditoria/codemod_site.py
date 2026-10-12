@@ -21,6 +21,7 @@ O que faz:
   youtube      iframe do YouTube → fachada leve (miniatura; o player só carrega no clique)
   speculation  prefetch moderado dos links do blog (navegação instantânea no Chrome)
   busca        botão de envio, visualmente oculto, nos formulários de busca da home do blog
+  feed         <link rel="alternate"> do feed Atom (blog/feed.xml) no <head> das páginas do blog
 """
 import json
 import re
@@ -85,6 +86,7 @@ YT_CSS = (
     '.pa-video__frame .yt-lite{position:absolute;inset:0;aspect-ratio:auto;height:100%}</style>'
 )
 YT_JS = '<script src="/assets/js/yt-lite.js" defer></script>'
+FEED = '<link rel="alternate" type="application/atom+xml" title="Blog LIBRAS.SE" href="https://libras.se/blog/feed.xml">'
 
 
 def arquivos():
@@ -258,11 +260,19 @@ def op_busca(t, f):
     return novo, novo.count('type="submit" class="sr"') - t.count('type="submit" class="sr"')
 
 
+def op_feed(t, f):
+    rel = f.relative_to(RAIZ).as_posix()
+    if not ((rel.startswith("blog/") and rel.endswith("index.html")) or rel == "tools/blog/home.html") \
+            or "application/atom+xml" in t or "</head>" not in t:
+        return t, 0
+    return t.replace("</head>", FEED + "\n</head>", 1), 1
+
+
 OPS = [
     ("favicon", op_favicon), ("touch-icon", op_toque_corrige), ("barra", op_barra), ("rodape-css", op_rodape_css),
     ("rodape-h4", op_rodape_h4), ("aria", op_aria), ("body", op_body), ("emoji-lbl", op_emoji_lbl),
     ("https", op_https), ("publisher", op_publisher), ("youtube", op_youtube), ("speculation", op_speculation),
-    ("busca", op_busca),
+    ("busca", op_busca), ("feed", op_feed),
 ]
 
 

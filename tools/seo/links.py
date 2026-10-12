@@ -255,7 +255,7 @@ CSS = """<!-- LSE:CSS (gerado por tools/seo/links.py) -->
 </style>
 <!-- /LSE:CSS -->"""
 
-JS = """<script>(function(){var vs=document.querySelectorAll('.lse-ad video[data-src]');if(!vs.length||!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.3});vs.forEach(function(v){o.observe(v)})})();</script>"""
+JS = """<script>(function(){var vs=document.querySelectorAll('.lse-ad video[data-src],video.lse-loop[data-src]');if(!vs.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var o=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.3});vs.forEach(function(v){o.observe(v)})})();</script>"""
 
 ICONES = [
     ("/aprender-libras/", "Aprenda Libras", "Comece por aqui", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'),

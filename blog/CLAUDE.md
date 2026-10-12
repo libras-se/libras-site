@@ -114,8 +114,9 @@ cta_type:               # vídeo | soluções | jogo | glossário
 <meta property="og:url" content="https://libras.se/blog/[slug]/">
 <meta property="og:title" content="[Título]">
 <meta property="og:description" content="[Descrição]">
-<meta property="og:image" content="https://libras.se/assets/img/blog/[slug]/[slug].webp">
+<meta property="og:image" content="https://libras.se/assets/img/blog/[slug]/[slug].jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Libras.se">
 <meta property="article:published_time" content="[ISO]">
 <meta property="article:modified_time" content="[ISO]">
@@ -123,11 +124,16 @@ cta_type:               # vídeo | soluções | jogo | glossário
 <meta name="twitter:site" content="@librasse">
 <meta name="twitter:title" content="[Título]">
 <meta name="twitter:description" content="[Descrição]">
-<meta name="twitter:image" content="https://libras.se/assets/img/blog/[slug]/[slug].webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/blog/[slug]/[slug].jpg">
 <meta name="theme-color" content="#4fd1c5">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
+<link rel="alternate" type="application/atom+xml" title="Blog LIBRAS.SE" href="https://libras.se/blog/feed.xml">
 ```
+
+A imagem de compartilhamento (OG) é sempre um **JPG 1200×675 abaixo de 300 KB** (WebP e PNG não
+aparecem em todas as redes). `python3 tools/seo/og.py` gera o JPG a partir da capa, se faltar, e
+alinha og:image, twitter:image e a `image` do JSON-LD.
 
 ### JSON-LD obrigatório (os dois níveis)
 
@@ -384,7 +390,8 @@ Os blocos antigos `.pa-actions` (Jogo/Vocabulário/Glossário), `.pa-related` ("
 ```bash
 # depois de publicar ou editar um post (a ordem importa: links.py lê os cards da home)
 python3 tools/seo/redirects.py     # se mudou tools/seo/redirects.json (post fundido, slug trocado)
-python3 tools/blog/home.py
+python3 tools/seo/og.py            # OG em JPG 1200x675 e metas alinhadas
+python3 tools/blog/home.py         # home, /todos/, /temas/, /tema/<editoria>/, feed.xml e sitemap
 python3 tools/blog/autores.py      # páginas de autor a partir do author do JSON-LD
 python3 tools/seo/videos.py        # VideoObject dos vídeos do post
 python3 tools/seo/links.py
@@ -797,6 +804,7 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 - [ ] Imagens com `.avif` + `.webp` + fallback, `width`/`height` e `loading` corretos
 - [ ] **Fechamento** (§8): tags `#` + CTA "Precisa do seu conteúdo em Libras?" escritos à mão; banner, "Continue lendo" e ícones gerados por `python3 tools/seo/links.py`
 - [ ] Footer canônico do site (`#foot`) ao final
+- [ ] OG em JPG 1200×675 (`python3 tools/seo/og.py`) e description de 120 a 160 caracteres
 - [ ] Editoria do post em `tools/blog/home.json`, depois `python3 tools/blog/home.py`, `python3 tools/blog/autores.py`, `python3 tools/seo/videos.py` e `python3 tools/seo/links.py` (§5, §8)
 - [ ] Bloco **Créditos e referências** (`<section class="pa-refs">`) com todas as fontes linkadas e os créditos de imagem; números com fonte e ano
 - [ ] `python3 tools/seo/checagem_blog.py --base tools/seo/checagem_blog.base.json` sem categoria piorando

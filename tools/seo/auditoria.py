@@ -34,7 +34,7 @@ def tipo(url):
     if url == "/blog/":
         return "blog-home"
     if url.startswith("/blog/"):
-        return "blog-hub" if url in ("/blog/todos/", "/blog/temas/") else "post"
+        return "blog-hub" if url in ("/blog/todos/", "/blog/temas/") or url.startswith("/blog/tema/") else "post"
     for pre, t in (("/glossario/", "glossario"), ("/sinal/", "sinal"), ("/jogos/", "jogo"), ("/jogo/", "jogo"),
                    ("/aprender-libras/", "aprender"), ("/atividades/", "aprender"), ("/materiais/", "aprender"),
                    ("/cultura-surda/", "aprender"), ("/libras-para-", "comercial"), ("/acessibilidade-para-", "comercial"),

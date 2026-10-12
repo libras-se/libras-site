@@ -1,41 +1,53 @@
 {
- "_leia": "Configuração da home do blog (tools/blog/home.py). 'classificacao' define a editoria de cada post; post novo sem entrada cai em 'inclusao' e o gerador avisa. 'mais_lidas' é curadoria manual. 'destaques': curadoria do carrossel (vazio = os posts mais recentes fora de mais_lidas e de capas_com_texto). 'capas_destaque': foto sem texto escrito usada no carrossel no lugar da capa do post (img, opcional) e o ponto de foco (pos, como no object-position) usado no recorte 16:9 e no 4:5 do celular; permite destacar posts de capas_com_texto. 'capas_com_texto': posts cuja imagem de capa tem texto escrito, que não entram no carrossel (o título ficaria sobreposto). 'materiais_destaque': PDFs de assets/materiais/ mostrados na faixa de materiais grátis.",
+ "_leia": "Configuração da home do blog (tools/blog/home.py). 'classificacao' define a editoria de cada post; post novo sem entrada cai em 'inclusao' e o gerador avisa. 'mais_lidas' é curadoria manual. 'destaques': curadoria do carrossel (vazio = os posts mais recentes fora de mais_lidas e de capas_com_texto). 'capas_destaque': foto sem texto escrito usada no carrossel no lugar da capa do post (img, opcional) e o ponto de foco (pos, como no object-position) usado no recorte 16:9 e no 4:5 do celular; permite destacar posts de capas_com_texto. 'capas_com_texto': posts cuja imagem de capa tem texto escrito, que não entram no carrossel (o título ficaria sobreposto). 'materiais_destaque': PDFs de assets/materiais/ mostrados na faixa de materiais grátis. Em temas, seo_titulo e seo_desc são o título e a description da página da editoria (/blog/tema/<editoria>/).",
  "temas": {
   "lingua": {
    "rotulo": "Língua & Cultura Surda",
    "curto": "Língua & Cultura",
    "desc": "A Libras como língua: sinais, gramática, termos certos e a cultura da comunidade surda.",
-   "cor": "#1a9ca4"
+   "cor": "#1a9ca4",
+   "seo_titulo": "Língua e cultura surda: artigos sobre a Libras",
+   "seo_desc": "A Libras como língua: o que é, datilologia, sinais de pessoas, variações regionais, termos certos como surdo e gestuante, e as datas da comunidade surda."
   },
   "educacao": {
    "rotulo": "Educação",
    "curto": "Educação",
    "desc": "Ensino, escolas, universidades e o avanço da Libras na educação.",
-   "cor": "#2f6fde"
+   "cor": "#2f6fde",
+   "seo_titulo": "Libras na educação: escolas, ensino e intérpretes",
+   "seo_desc": "A Libras na educação: escolas bilíngues, intérpretes em sala de aula, universidades, Enem em Libras, videoaulas acessíveis e quem aprende a língua de sinais."
   },
   "direitos": {
    "rotulo": "Direitos & Cidadania",
    "curto": "Direitos",
    "desc": "Legislação, cidadania, serviços públicos e direitos da comunidade surda.",
-   "cor": "#7c5cd6"
+   "cor": "#7c5cd6",
+   "seo_titulo": "Direitos da pessoa surda: leis, Libras e cidadania",
+   "seo_desc": "Direitos da comunidade surda: Lei de Libras, eleições e urnas acessíveis, intérpretes na saúde e no trabalho, Censo e decisões da Justiça sobre acessibilidade."
   },
   "inclusao": {
    "rotulo": "Inclusão & Acessibilidade",
    "curto": "Acessibilidade",
    "desc": "Acessibilidade em vídeos, eventos e na internet, e histórias que aproximam surdos e ouvintes.",
-   "cor": "#16a34a"
+   "cor": "#16a34a",
+   "seo_titulo": "Acessibilidade em Libras: vídeos, eventos e internet",
+   "seo_desc": "Como incluir pessoas surdas em vídeos, eventos, marcas e na internet: janela de Libras, legendas, intérpretes, capacitismo e tecnologia com língua de sinais."
   },
   "cultura": {
    "rotulo": "Cultura & Entretenimento",
    "curto": "Cultura",
    "desc": "Música, cinema, TV, carnaval e a presença da Libras na cultura.",
-   "cor": "#e08a0b"
+   "cor": "#e08a0b",
+   "seo_titulo": "Libras na cultura: música, cinema, TV e carnaval",
+   "seo_desc": "A Libras na música, no cinema, nas séries, nos quadrinhos e no carnaval: artistas e personagens surdos, filmes sobre surdez e shows com intérpretes."
   },
   "esporte": {
    "rotulo": "Esporte",
    "curto": "Esporte",
    "desc": "Libras nos estádios, nas torcidas e no esporte brasileiro.",
-   "cor": "#e5484d"
+   "cor": "#e5484d",
+   "seo_titulo": "Libras no esporte: futebol e atletas surdos",
+   "seo_desc": "A Libras no esporte: transmissões de futebol em língua de sinais, gol comemorado em Libras, técnicos que aprenderam a sinalizar e as Surdolimpíadas."
   }
  },
  "mais_lidas": [

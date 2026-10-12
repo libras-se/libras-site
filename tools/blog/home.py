@@ -3,17 +3,24 @@
 
 Fonte da verdade dos posts: os cartões <article data-post> da própria home (um por post
 publicado), como o audit/sync_blog.py espera. O gerador:
-  1. lê os cartões existentes (verbatim) e cria cartões para posts novos que ainda não têm;
+  1. refaz o cartão de cada post publicado (ver abaixo);
   2. monta o portal (manchetes, mais lidas, editorias, Aprender Libras, arquivo filtrável)
      a partir desses cartões e de tools/blog/home.json (editorias, mais lidas, destaques);
-  3. regenera /blog/todos/ e /blog/temas/ e acrescenta posts novos ao sitemap, com o mesmo
-     algoritmo do sync_blog.py, para que o --check continue limpo;
-  4. gera miniaturas leves em assets/img/blog/thumbs/ para as vistas do portal.
+  3. regenera /blog/todos/, /blog/temas/ e as páginas de editoria /blog/tema/<editoria>/, e
+     mantém o sitemap (posts novos, lastmod, páginas de editoria);
+  4. gera miniaturas leves em assets/img/blog/thumbs/ para as vistas do portal;
+  5. gera o feed Atom blog/feed.xml com os 20 posts mais recentes.
+
+Os cartões são refeitos a partir do próprio post (headline, description e imagem do JSON-LD),
+para não ficarem com título, resumo ou imagem de outra versão; do cartão antigo ficam só os
+filtros (data-cat) e as palavras de busca (data-search). A imagem do cartão é a miniatura
+480/960 (data-capa guarda a imagem de origem), não a capa de 1200 px.
 
 Uso:  python3 tools/blog/home.py
 """
 import html
 import json
+from xml.sax.saxutils import escape as xesc, quoteattr
 import re
 import sys
 import unicodedata
@@ -31,6 +38,8 @@ JSONLD = re.compile(r'(<script type="application/ld\+json">)([\s\S]*?)(</script>
 MESES = "jan fev mar abr mai jun jul ago set out nov dez".split()
 TZ = ZoneInfo("America/Sao_Paulo")
 THUMBS = ROOT / "assets/img/blog/thumbs"
+SIZES_FEED = "(max-width:700px) 92vw, 250px"
+SIZES_GRADE = "(max-width:560px) 92vw, (max-width:900px) 46vw, 344px"
 
 
 def esc(s):
@@ -82,31 +91,36 @@ def busca(texto):
     return " ".join(sorted(set(re.findall(r"[a-z0-9]{3,}", "".join(c for c in t if unicodedata.category(c) != "Mn")))))
 
 
-def card_novo(slug, art, tema):
-    """Cartão no mesmo formato dos existentes, para um post que ainda não está na home."""
+def capa_do_post(art):
+    im = art["a"].get("image")
+    url = im if isinstance(im, str) else (im.get("url") if isinstance(im, dict) else im[0])
+    return url.replace(SITE, "")
+
+
+def miniatura_html(slug, capa, sizes=SIZES_FEED):
+    tag = img({"slug": slug, "img": capa}, (480, 960), sizes, alt="")
+    return f'<picture>{tag[:-1]} itemprop="image" data-capa="{esc(capa)}"></picture>'
+
+
+def cartao(slug, art, tema, antigo=None):
+    """Cartão do post a partir dos dados do próprio post; do cartão antigo, só data-cat e data-search."""
     a = art["a"]
-    titulo = a["headline"]
-    desc = a.get("description", "")
-    img = a["image"] if isinstance(a["image"], str) else (a["image"].get("url") or a["image"][0])
-    img = img.replace(SITE, "")
-    base = Path(img).with_suffix("")
-    fontes = "".join(f'\n              <source srcset="{base}.{ext}" type="image/{ext}">'
-                     for ext in ("avif", "webp") if (ROOT / f"{str(base).lstrip('/')}.{ext}").exists() and not img.endswith("." + ext))
-    rot = CFG["temas"][tema]["curto"]
+    titulo, desc = a["headline"], a.get("description", "")
+    attrs = dict(re.findall(r'(data-search|data-cat)="([^"]*)"', re.match(r"<article\b[^>]*>", antigo)[0])) if antigo else {}
+    palavras = " ".join(sorted(set(attrs.get("data-search", "").split()) | set(busca(titulo + " " + desc).split())))
+    if not antigo:
+        print(f"  + cartão criado para o post novo: {slug} (editoria {tema})")
     leitura = art["leitura"] or 3
     d = dia(a["datePublished"])
-    print(f"  + cartão criado para o post novo: {slug} (editoria {tema})")
     return f'''<article class="bl-card"
           data-post
-          data-search="{busca(titulo + ' ' + desc)}"
-          data-cat="acessibilidade"
+          data-search="{palavras}"
+          data-cat="{attrs.get("data-cat", "acessibilidade")}"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/{slug}/" class="bl-card__link-cover" aria-label="Ler artigo: {esc(titulo)}"></a>
           <a href="/blog/{slug}/" class="bl-card__thumb" aria-label="{esc(titulo)}">
-            <picture>{fontes}
-              <img src="{img}" alt="{esc(titulo)}" loading="lazy" decoding="async" itemprop="image" width="1200" height="675">
-            </picture>
-            <span class="bl-card__badge">{esc(rot)}</span>
+            {miniatura_html(slug, capa_do_post(art))}
+            <span class="bl-card__badge">{esc(CFG["temas"][tema]["curto"])}</span>
           </a>
           <div class="bl-card__body">
             <div class="bl-card__meta">
@@ -142,7 +156,7 @@ def normaliza(card, art, tema):
 def dados(slug, card, art, tema):
     titulo = plano(re.search(r'class="bl-card__title"[^>]*>\s*<a[^>]*>([\s\S]*?)</a>', card)[1])
     exc = re.search(r'class="bl-card__excerpt"[^>]*>([\s\S]*?)</p>', card)
-    img = re.search(r'<img\b[^>]*\bsrc="([^"]+)"', card)[1]
+    img = (re.search(r'data-capa="([^"]+)"', card) or re.search(r'<img\b[^>]*\bsrc="([^"]+)"', card))[1]
     leitura = re.search(r"(\d+)\s*min de leitura", card)
     d = dia(art["a"]["datePublished"])
     return {"slug": slug, "titulo": titulo, "resumo": plano(exc[1]) if exc else art["a"].get("description", ""),
@@ -289,7 +303,7 @@ def render(posts, cards_feed, total, jsonld):
           <header class="ed-h"><h3 id="ed-{t}"><i class="d-{t}"></i>{esc(CFG["temas"][t]["rotulo"])}</h3><span>{len(ps)}</span></header>
           <a class="ed-lead" href="/blog/{lead['slug']}/"><span class="ed-img">{img(lead, (480, 960), "(max-width:700px) 80vw, 380px")}</span><b>{esc(lead['titulo'])}</b><time datetime="{lead['data'].isoformat()}">{lead['dataTxt']}</time></a>
           <ul>{"".join(f'<li><a href="/blog/{p["slug"]}/">{esc(p["titulo"])}</a></li>' for p in resto)}</ul>
-          <a class="ed-mais" href="/blog/temas/#{t}" data-tema-link="{t}">Mais de {esc(CFG["temas"][t]["curto"])} <span aria-hidden="true">→</span></a>
+          <a class="ed-mais" href="/blog/tema/{t}/" data-tema-link="{t}">Mais de {esc(CFG["temas"][t]["curto"])} <span aria-hidden="true">→</span></a>
         </section>''')
 
     # Filtros do arquivo
@@ -350,7 +364,8 @@ def itemlist_ld(cards_ordem, arts):
 
 
 def compacto(card):
-    return re.sub(r'class="bl-card[^"]*"', 'class="bl-card bl-card--sm rv"', card, count=1).replace('loading="eager"', 'loading="lazy"').replace(' fetchpriority="high"', "")
+    card = re.sub(r'class="bl-card[^"]*"', 'class="bl-card bl-card--sm rv"', card, count=1)
+    return card.replace('loading="eager"', 'loading="lazy"').replace(' fetchpriority="high"', "").replace(SIZES_FEED, SIZES_GRADE)
 
 
 def derivadas(cards, ordem, temas_de):
@@ -361,26 +376,147 @@ def derivadas(cards, ordem, temas_de):
     t = re.sub(r'(<div class="bl-grid" id="bl-all-grid">)[\s\S]*?(</div>\s*<p class="bl-no-results")',
                lambda m: m[1] + "\n" + "\n".join(comp[s] for s in ordem) + "\n    " + m[2], t, count=1)
     t = re.sub(r'(<p id="bl-post-count"[^>]*>)[^<]*(</p>)', lambda m: m[1] + f"{len(cards)} publicações" + m[2], t)
-    p.write_text(t)
+    p.write_text(com_css(t))
 
     p = ROOT / "blog/temas/index.html"
     t = p.read_text()
     grupos = []
     for k, info in CFG["temas"].items():
         sel = [s for s in ordem if temas_de[s] == k]
+        mais = (f'\n      <p class="bl-theme-more"><a href="/blog/tema/{k}/">Ver {"os " + str(len(sel)) + " posts" if len(sel) > 1 else "o post"} de {html.escape(info["rotulo"], quote=False)} →</a></p>')
         grupos.append(f'''    <section class="bl-theme-group" id="{k}">
-      <h2>{html.escape(info["rotulo"], quote=False)} <span style="color:var(--txm);font-weight:700;font-size:.9rem">· {len(sel)}</span></h2>
+      <h2><a href="/blog/tema/{k}/">{html.escape(info["rotulo"], quote=False)}</a> <span style="color:var(--txm);font-weight:700;font-size:.9rem">· {len(sel)}</span></h2>
       <p style="color:var(--txs);font-size:.92rem;margin:-12px 0 22px">{esc(info["desc"])}</p>
       <div class="bl-grid">
-''' + "\n".join(comp[s] for s in sel) + "\n      </div>\n    </section>")
+''' + "\n".join(comp[s] for s in sel[:POR_TEMA]) + "\n      </div>" + mais + "\n    </section>")
     ini = t.index('    <section class="bl-theme-group"')
     fim = t.rindex("</section>", 0, t.index("</main>")) + len("</section>")
     while t[ini:fim].count('<section class="bl-theme-group"') < t[ini:fim].count("</section>"):
         fim = t.rindex("</section>", 0, fim - 1) + len("</section>")
     t = t[:ini] + "\n\n".join(grupos) + t[fim:]
-    barra = "".join(f'<a class="bl-theme-pill" href="#{k}">{html.escape(i["curto"], quote=False)}</a>' for k, i in CFG["temas"].items())
-    t = re.sub(r'(<div class="bl-theme-bar rv"[^>]*>)[\s\S]*?(</div>)', lambda m: m[1] + barra + m[2], t, count=1)
+    t = re.sub(r'(<div class="bl-theme-bar rv"[^>]*>)[\s\S]*?(</div>)', lambda m: m[1] + pilulas() + m[2], t, count=1)
+    t = com_css(t)
     p.write_text(t)
+    paginas_tema(t, comp, ordem, temas_de)
+
+
+POR_TEMA = 6
+BL_CSS = ("/* LSE:BL (tools/blog/home.py): pílulas legíveis no fundo claro, miniatura 16:9 sem cortar texto, editorias */\n"
+          ".bl-page-wrap .bl-theme-pill{color:var(--p3);background:#fff;border-color:rgba(79,209,197,.45)}\n"
+          ".bl-page-wrap .bl-theme-pill:hover{color:var(--p1);background:rgba(79,209,197,.15);border-color:var(--teal)}\n"
+          ".bl-page-wrap .bl-theme-pill.active,.bl-page-wrap .bl-theme-pill[aria-current]{background:var(--teal);color:var(--p1);border-color:var(--teal)}\n"
+          ".bl-card--sm .bl-card__thumb{aspect-ratio:16/9}\n"
+          ".bl-theme-group h2 a{color:inherit;text-decoration:none}.bl-theme-group h2 a:hover{color:var(--teal-dd)}\n"
+          ".bl-theme-more{margin:22px 0 0;text-align:right}.bl-theme-more a{font-weight:700;font-size:.9rem;color:#12737a}")
+BL_CSS_RE = re.compile(r"/\* (?:LSE:BL|páginas de editoria) \(tools/blog/home\.py\)[^*]*\*/\n(?:[^\n<]*\n)*?(?=</style>)")
+
+
+def com_css(t):
+    """Põe (ou atualiza) o bloco BL_CSS no fim do primeiro <style>."""
+    t = BL_CSS_RE.sub("", t, count=1)
+    return t.replace("</style>", BL_CSS + "\n</style>", 1)
+
+
+def pilulas(atual=None):
+    atual_attr = ' aria-current="page"'
+    return "".join(f'<a class="bl-theme-pill" href="/blog/tema/{k}/"{atual_attr if k == atual else ""}>{html.escape(i["curto"], quote=False)}</a>'
+                   for k, i in CFG["temas"].items())
+
+
+def paginas_tema(base, comp, ordem, temas_de):
+    """/blog/tema/<editoria>/: página própria de cada editoria (título, description e introdução de
+    home.json, todos os cartões da editoria), com o mesmo cabeçalho, CSS e rodapé de /blog/temas/."""
+    for k, info in CFG["temas"].items():
+        sel = [s for s in ordem if temas_de[s] == k]
+        url = f"{SITE}/blog/tema/{k}/"
+        tit, desc = info["seo_titulo"], info["seo_desc"]
+        t = base
+        t = re.sub(r"<title>[^<]*</title>", lambda m: f"<title>{esc(tit)} | LIBRAS.SE</title>", t, count=1)
+        for padrao, valor in ((r'name="description"', desc), (r'property="og:description"', desc), (r'name="twitter:description"', desc),
+                              (r'property="og:title"', f"{tit} | Blog LIBRAS.SE"), (r'name="twitter:title"', f"{tit} | Blog LIBRAS.SE"),
+                              (r'property="og:url"', url)):
+            t = re.sub(rf'(<meta {padrao} content=")[^"]*(")', lambda m, v=valor: m[1] + esc(v) + m[2], t, count=1)
+        t = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m[1] + url + m[2], t, count=1)
+        ld = [
+            {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{SITE}/blog/"},
+                {"@type": "ListItem", "position": 3, "name": "Posts por tema", "item": f"{SITE}/blog/temas/"},
+                {"@type": "ListItem", "position": 4, "name": info["rotulo"], "item": url}]},
+            {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": tit, "description": desc,
+             "inLanguage": "pt-BR", "isPartOf": {"@type": "Blog", "@id": f"{SITE}/blog/#blog", "name": "Blog LIBRAS.SE", "url": f"{SITE}/blog/"},
+             "publisher": {"@id": f"{SITE}/#organization"},
+             "mainEntity": {"@type": "ItemList", "numberOfItems": len(sel), "itemListElement": [
+                 {"@type": "ListItem", "position": i, "url": f"{SITE}/blog/{s}/"} for i, s in enumerate(sel, 1)]}},
+        ]
+        bloco = "\n".join(f'<script type="application/ld+json">\n{json.dumps(x, ensure_ascii=False, indent=2)}\n</script>' for x in ld)
+        t = re.sub(r'<script type="application/ld\+json">[\s\S]*?</script>', lambda m: bloco, t, count=1)
+        t = re.sub(r'(<div class="bl-page-hero__in">)[\s\S]*?(</div>)',
+                   lambda m: m[1] + f'\n      <h1>{html.escape(info["rotulo"], quote=False)}</h1>\n      <p>{esc(desc)}</p>\n    ' + m[2], t, count=1)
+        ini = t.index('<div class="bl-theme-bar rv"')
+        fim = t.rindex("</section>", 0, t.index("</main>")) + len("</section>")
+        while t[ini:fim].count('<section class="bl-theme-group"') < t[ini:fim].count("</section>"):
+            fim = t.rindex("</section>", 0, fim - 1) + len("</section>")
+        corpo = (f'<nav class="bl-theme-bar rv" aria-label="Editorias do blog" style="justify-content:center;margin-bottom:36px">{pilulas(k)}</nav>\n'
+                 f'    <section class="bl-theme-group" aria-label="{len(sel)} {"publicações" if len(sel) != 1 else "publicação"} em {esc(info["rotulo"])}">\n'
+                 '      <div class="bl-grid">\n' + "\n".join(comp[s] for s in sel) + "\n      </div>\n"
+                 '      <p class="bl-theme-more"><a href="/blog/temas/">← Todas as editorias</a></p>\n    </section>')
+        t = t[:ini] + corpo + t[fim:]
+        dest = ROOT / f"blog/tema/{k}/index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not dest.exists() or dest.read_text() != t:
+            dest.write_text(t)
+
+
+def atom(ordem, arts, temas_de, n=20):
+    """blog/feed.xml (Atom) com os n posts mais recentes. Determinístico: só muda quando os posts mudam."""
+    def rfc(iso):
+        d = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+        return (d if d.tzinfo else d.replace(tzinfo=TZ)).isoformat().replace("+00:00", "Z")
+
+    def autores(a):
+        au = a.get("author") or []
+        out = []
+        for x in (au if isinstance(au, list) else [au]):
+            if isinstance(x, dict) and x.get("name"):
+                out.append(f"    <author><name>{xesc(x['name'])}</name>" + (f"<uri>{xesc(x['url'])}</uri>" if x.get("url") else "") + "</author>")
+        return "\n".join(out) or "    <author><name>LIBRAS.SE</name></author>"
+    entradas, atualizacoes = [], []
+    for s in ordem[:n]:
+        a = arts[s]["a"]
+        url = f"{SITE}/blog/{s}/"
+        pub, mod = rfc(a["datePublished"]), rfc(a.get("dateModified") or a["datePublished"])
+        atualizacoes.append(mod)
+        k = temas_de[s]
+        capa = SITE + capa_do_post(arts[s])
+        entradas.append(f"""  <entry>
+    <title>{xesc(a["headline"])}</title>
+    <link rel="alternate" type="text/html" href={quoteattr(url)}/>
+    <id>{xesc(url)}</id>
+    <published>{pub}</published>
+    <updated>{mod}</updated>
+{autores(a)}
+    <category term="{k}" label={quoteattr(CFG["temas"][k]["rotulo"])} scheme="{SITE}/blog/tema/"/>
+    <summary>{xesc(a.get("description", ""))}</summary>
+    <media:thumbnail url={quoteattr(capa)} width="1200" height="675"/>
+  </entry>""")
+    xml = f"""<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="pt-BR">
+  <title>Blog LIBRAS.SE</title>
+  <subtitle>Notícias e artigos sobre Libras, acessibilidade audiovisual e cultura surda.</subtitle>
+  <link rel="self" type="application/atom+xml" href="{SITE}/blog/feed.xml"/>
+  <link rel="alternate" type="text/html" href="{SITE}/blog/"/>
+  <id>{SITE}/blog/</id>
+  <updated>{max(atualizacoes)}</updated>
+  <icon>{SITE}/assets/img/favicon/cropped-FAVICONpng-1-32x32.png</icon>
+  <logo>{SITE}/assets/img/favicon/cropped-FAVICONpng-1-512x512.png</logo>
+  <rights>© LIBRAS.SE</rights>
+{chr(10).join(entradas)}
+</feed>
+"""
+    p = ROOT / "blog/feed.xml"
+    if not p.exists() or p.read_text() != xml:
+        p.write_text(xml)
 
 
 def sitemap(arts):
@@ -411,6 +547,17 @@ def sitemap(arts):
         d = dia(a["a"].get("dateModified") or a["a"]["datePublished"]).isoformat()
         novos += f"  <url>\n    <loc>{html.escape(u)}</loc>\n    <lastmod>{d}</lastmod>\n  </url>\n"
         print(f"  + sitemap: {u}")
+    temas = {}
+    for s, a in arts.items():
+        k = CFG["classificacao"].get(s, "inclusao")
+        temas[k] = max(temas.get(k, ""), dia(a["a"]["datePublished"]).isoformat())
+    for k, d in temas.items():
+        u = f"{SITE}/blog/tema/{k}/"
+        if f"<loc>{u}</loc>" in t:
+            t = re.sub(rf"(<loc>{re.escape(u)}</loc>\s*<lastmod>)([^<]*)(</lastmod>)", lambda m, d=d: m[1] + max(m[2], d) + m[3], t)
+        else:
+            novos += f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{d}</lastmod>\n  </url>\n"
+            print(f"  + sitemap: {u}")
     t = t.replace("</urlset>", novos + "</urlset>")
     # A home do blog, /todos/ e /temas/ mudam a cada post novo: o lastmod delas acompanha o post
     # mais recente (só avança, para não desfazer uma data posta à mão por outra mudança).
@@ -436,13 +583,14 @@ def main():
     for s in set(existentes) - set(arts):
         print(f"  - cartão removido (post não publicado): {s}")
     ordem = sorted(arts, key=lambda s: (arts[s]["a"]["datePublished"], f"{SITE}/blog/{s}/"), reverse=True)
-    cards = {s: normaliza(existentes[s] if s in existentes else card_novo(s, arts[s], temas_de[s]), arts[s], temas_de[s]) for s in ordem}
+    cards = {s: normaliza(cartao(s, arts[s], temas_de[s], existentes.get(s)), arts[s], temas_de[s]) for s in ordem}
     posts = [dados(s, cards[s], arts[s], temas_de[s]) for s in ordem]
     out = render(posts, [cards[s] for s in ordem], len(ordem), itemlist_ld(ordem, arts))
     (ROOT / "blog/index.html").write_text(out)
     derivadas(cards, ordem, temas_de)
+    atom(ordem, arts, temas_de)
     sitemap(arts)
-    print(f"ok  blog/index.html ({len(ordem)} posts), blog/todos/, blog/temas/")
+    print(f"ok  blog/index.html ({len(ordem)} posts), blog/todos/, blog/temas/, blog/tema/*/, blog/feed.xml")
 
 
 if __name__ == "__main__":

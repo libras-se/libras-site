@@ -305,7 +305,7 @@
     border-radius: 16px; border: 4px solid var(--white); box-shadow: 0 10px 30px rgba(15,42,42,0.18);
     display: flex; align-items: flex-end; justify-content: center; overflow: hidden;
   }
-  .libras-window::after { content: '🤟'; font-size: 2rem; padding-bottom: 12px; opacity: 0.85; }
+  .libras-window::after { content: 'LIBRAS'; font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.14em; color: var(--teal-dark); padding-bottom: 12px; opacity: 0.85; }
   .caption-bar {
     position: absolute; left: 36px; right: 36px; bottom: 28px; min-height: 34px;
     border-radius: 10px; background: rgba(15,42,42,0.9); display: flex; align-items: center;
@@ -389,6 +389,10 @@
     .libras-window { width: 30%; right: 18px; bottom: 70px; }
     .caption-bar { left: 18px; right: 18px; bottom: 18px; font-size: 0.68rem; }
   }
+
+  /* Ícones em SVG (no lugar de emojis) */
+  .info-icon svg,.law-icon svg{width:26px;height:26px;stroke:#fff;fill:none}
+  .card-icon svg{width:22px;height:22px;color:var(--teal-dark)}
 </style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/blog/*"},{"not":{"href_matches":"/blog/feed.xml"}}]},"eagerness":"moderate"}]}</script>
 
@@ -626,7 +630,7 @@
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">⚖️</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
     <div class="law-content">
       <h4>Lei nº 10.436/2002, Libras como meio legal de comunicação</h4>
       <p>A lei reconhece a Língua Brasileira de Sinais como meio legal de comunicação e expressão, descrevendo-a como sistema linguístico de natureza visual-motora, com estrutura gramatical própria. Libras em videoaulas não é adorno visual, é acesso linguístico garantido por lei.</p>
@@ -634,7 +638,7 @@
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">📋</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
     <div class="law-content">
       <h4>Decreto nº 5.626/2005, Experiência visual e educação bilíngue</h4>
       <p>O decreto reconhece a pessoa surda como aquela que compreende e interage com o mundo por experiências visuais, manifestando sua cultura principalmente pelo uso da Libras. Em videoaulas, isso significa que o planejamento visual, posição da janela, iluminação, enquadramento, é parte da acessibilidade, não detalhe de produção.</p>
@@ -679,39 +683,39 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🤟</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
       <h3>Libras</h3>
       <p>Interpretação integrada ao vídeo, com tamanho, enquadramento, iluminação e sincronização adequados. Essencial para estudantes surdos sinalizantes.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📝</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
       <h3>Legenda revisada</h3>
       <p>Conferida por pessoa humana, com pontuação, termos técnicos e sincronização corretos. Fundamental para surdos oralizados, ensurdecidos e ouvintes em ambientes sem som.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📄</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
       <h3>Transcrição</h3>
       <p>Versão textual completa do conteúdo. Permite buscar trechos, revisar conceitos fora do vídeo e usar tecnologias assistivas.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📂</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <h3>Material de apoio acessível</h3>
       <p>Slides em formato acessível, PDFs com texto selecionável e documentos que não dependem exclusivamente do áudio da aula.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🖥️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
       <h3>Slides legíveis</h3>
       <p>Fonte adequada, bom contraste, pouco texto por slide e espaço reservado para a janela de Libras sem cobrir o conteúdo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">▶️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
       <h3>Player acessível</h3>
       <p>Controles de pausa, velocidade, ativação de legenda e navegação por teclado funcionando corretamente em qualquer dispositivo.</p>
     </div>
   </div>
 
   <div class="law-callout reveal">
-    <div class="law-icon">🛡️</div>
+    <div class="law-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
     <div class="law-content">
       <h4>LBI, Lei nº 13.146/2015</h4>
       <p>A Lei Brasileira de Inclusão reconhece comunicação em modo amplo, incluindo Libras, visualização de textos, dispositivos multimídia e tecnologias da informação. Acessibilidade é definida como condição para acesso com segurança e autonomia, o que sustenta a combinação de Libras, legendas, transcrição e recursos digitais em videoaulas.</p>
@@ -778,32 +782,32 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🗣️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <h3>Ritmo de fala moderado</h3>
       <p>Falar rápido demais compromete tanto a interpretação em Libras quanto a qualidade da legenda. Pausas entre blocos de conteúdo ajudam.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🔤</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></svg></div>
       <h3>Slides com pouco texto</h3>
       <p>Fonte legível, bom contraste e espaço suficiente para a janela de Libras. Evitar texto incorporado em imagem, tecnologias assistivas não conseguem ler.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🖼️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
       <h3>Exemplos visuais descritos</h3>
       <p>Quando mostrar algo na tela, descrever oralmente o que está sendo exibido, não deixar que a imagem fale por si só.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">✂️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
       <h3>Cortes sem quebrar a interpretação</h3>
       <p>Cortes no meio de uma frase podem inviabilizar a interpretação em Libras. Cortar em pausas naturais do discurso.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📷</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg></div>
       <h3>Janela estável e bem enquadrada</h3>
       <p>O intérprete deve aparecer da cabeça até abaixo da cintura, com espaço lateral para os sinais, bem iluminado, sem fundo com muito movimento e sem cortes nas mãos.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🤝</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <h3>Alinhamento prévio com intérpretes</h3>
       <p>Compartilhar roteiro, termos técnicos e contexto antes da gravação garante uma interpretação mais precisa e fluida.</p>
     </div>
@@ -846,29 +850,29 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🎓</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
       <h3>Cursos livres e profissionalizantes</h3>
       <p>Onde estudantes surdos buscam qualificação profissional e precisam de acesso completo ao conteúdo técnico para avançar na carreira.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🏢</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
       <h3>Treinamentos corporativos</h3>
       <p>Especialmente em empresas com colaboradores surdos ou que precisam cumprir requisitos de acessibilidade em onboarding e capacitação.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🏛️</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
       <h3>EAD, faculdades e pós-graduação</h3>
       <p>Ambientes que concentram grande diversidade de estudantes e onde a obrigatoriedade legal de acessibilidade se aplica com mais rigor.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🌐</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
       <h3>Conteúdos públicos de saúde e direitos</h3>
       <p>Campanhas, orientações e informações de cidadania e segurança que precisam chegar a toda a população, independentemente de como ela se comunica.</p>
     </div>
   </div>
 
   <div class="info-callout reveal">
-    <div class="info-icon">📐</div>
+    <div class="info-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
     <div class="info-content">
       <h4>WCAG 2.2, Acessibilidade audiovisual em camadas</h4>
       <p>As diretrizes internacionais de acessibilidade para conteúdo web estabelecem requisitos para conteúdo audiovisual: legendas para vídeo pré-gravado (critério 1.2.2, nível A), alternativas de mídia (1.2.3, nível A), audiodescrição (1.2.5, nível AA) e interpretação em língua de sinais para vídeo pré-gravado (1.2.6, nível AAA). Acessibilidade audiovisual tem camadas, cada uma atende uma necessidade diferente.</p>
@@ -891,32 +895,32 @@
 
   <div class="use-grid reveal">
     <div class="use-card">
-      <div class="card-icon">🔍</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Janela de Libras pequena demais</h3>
       <p>Uma janela muito pequena inviabiliza a leitura da interpretação, especialmente em dispositivos móveis ou para quem tem baixa visão.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">✋</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Intérprete mal enquadrado</h3>
       <p>Mãos cortadas, expressões faciais fora do frame ou fundo com excesso de movimento dificultam ou impossibilitam a leitura da interpretação.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">🤖</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Legenda automática sem revisão</h3>
       <p>Erros frequentes com termos técnicos e nomes próprios distorcem o sentido do conteúdo, especialmente em áreas especializadas.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📊</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Slide disputando espaço com Libras</h3>
       <p>Slides com muito texto ou gráficos que ocupam a tela inteira não deixam espaço para a janela de Libras sem cobrir o conteúdo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📁</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Sem transcrição ou material de apoio</h3>
       <p>O conteúdo fica preso no vídeo, sem alternativa para quem não consegue ou não quer assistir ao arquivo completo.</p>
     </div>
     <div class="use-card">
-      <div class="card-icon">📱</div>
+      <div class="card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
       <h3>Player sem controles acessíveis no mobile</h3>
       <p>Botões de legenda, velocidade e pausa inacessíveis ou muito pequenos em dispositivos móveis prejudicam a experiência de todos.</p>
     </div>

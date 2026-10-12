@@ -22,7 +22,19 @@ O que faz:
   speculation  prefetch moderado dos links do blog (navegação instantânea no Chrome)
   busca        botão de envio, visualmente oculto, nos formulários de busca da home do blog
   feed         <link rel="alternate"> do feed Atom (blog/feed.xml) no <head> das páginas do blog
+  gtm-iframe   title no <iframe> do Google Tag Manager dentro do <noscript>
+  faq-region   resposta de FAQ com role="region" e sem nome vira div comum (eram dezenas de "regiões" sem nome)
+  aria-papel   aria-label em elemento sem papel: contêiner ganha role="group"; vídeo sem controles e
+               abreviação ("7d" = 7 dias) ganham role="img"; rótulo igual ao texto sai
+  oculto-foco  link ou botão com aria-hidden="true" sai da ordem do Tab (tabindex="-1")
+  conteudo     <div> dentro de <button> vira <span>; "&" solto vira &amp;
+  contraste    cores de texto abaixo de 4,5:1 nos posts (data, links), em /todos/ e na home do blog
+  logo         nome do link do logo inclui o texto visível ("LIBRAS.SE Blog") e a grafia da marca
+  jsonld       entidades HTML decodificadas no JSON-LD; Article do glossário com headline, autor e imagem
+  titulo-nivel título que pula nível nos posts (ex.: <h4> logo depois de <h2>) ganha aria-level com o
+               nível certo, sem mudar tag nem visual
 """
+import html
 import json
 import re
 import sys
@@ -102,6 +114,7 @@ def arquivos():
         f = RAIZ / rel
         if f.exists():
             yield f
+    yield from sorted((RAIZ / "tools/aprender/paginas").glob("*.html"))
 
 
 def e_post(f):
@@ -268,11 +281,171 @@ def op_feed(t, f):
     return t.replace("</head>", FEED + "\n</head>", 1), 1
 
 
+def op_gtm_iframe(t, f):
+    novo = re.sub(r'(<noscript><iframe )(src="https://www\.googletagmanager\.com/ns\.html[^"]*")(?![^>]*\btitle=)',
+                  r'\1title="Google Tag Manager" \2', t)
+    return novo, novo.count('title="Google Tag Manager"') - t.count('title="Google Tag Manager"')
+
+
+def op_faq_region(t, f):
+    novo = re.sub(r'<div (class="faq-a[^"]*"[^>]*?) role="region"((?![^>]*aria-label)[^>]*)>', r'<div \1\2>', t)
+    return novo, t.count('role="region"') - novo.count('role="region"')
+
+
+def op_aria_papel(t, f):
+    n = 0
+
+    def troca(m):
+        nonlocal n
+        tag, attrs, depois = m[1], m[2], t[m.end():m.end() + 400]
+        if "role=" in attrs:
+            return m[0]
+        rotulo = re.search(r'aria-label="([^"]*)"', attrs)[1]
+        if tag == "video":
+            return m[0]
+        folha = re.match(rf"([^<]*)</{tag}>", depois)
+        if folha and folha[1].strip():
+            n += 1
+            if " ".join(folha[1].split()).lower() == rotulo.strip().lower():
+                return "<" + tag + re.sub(r' aria-label="[^"]*"', "", attrs) + ">"
+            return f"<{tag} role=\"img\"{attrs}>"
+        n += 1
+        return f"<{tag} role=\"group\"{attrs}>"
+    novo = re.sub(r'<(div|span)((?:\s[^>]*)?\saria-label="[^"]*"[^>]*)>', troca, t)
+    sem = re.sub(r'(<video\b[^>]*?) role="img"', r"\1", novo)
+    return sem, n + (novo != sem)
+
+
+def op_oculto_foco(t, f):
+    novo = re.sub(r'<(a|button)\b((?=[^>]*\baria-hidden="true")(?![^>]*\btabindex=)[^>]*)>', r'<\1\2 tabindex="-1">', t)
+    return novo, novo.count('tabindex="-1"') - t.count('tabindex="-1"')
+
+
+def fora_de_script(t, fn):
+    """Aplica fn só ao HTML fora de <script> (JSON-LD e JS não usam entidades HTML)."""
+    partes = re.split(r"(<script\b[\s\S]*?</script>)", t)
+    return "".join(p if i % 2 else fn(p) for i, p in enumerate(partes))
+
+
+def op_conteudo(t, f):
+    novo = re.sub(r'<div class="faq-arr" aria-hidden="true">([^<]*)</div>', r'<span class="faq-arr" aria-hidden="true">\1</span>', t)
+    novo = fora_de_script(novo, lambda s: s.replace("D&I ", "D&amp;I ").replace("D&I.", "D&amp;I.").replace("Q&As", "Q&amp;As"))
+    novo = novo.replace('<nav class="alpha-nav" id="alpha-nav">', '<nav class="alpha-nav" id="alpha-nav" aria-label="Termos por letra">')
+    return novo, int(novo != t)
+
+
+CONTRASTE = {
+    # template dos posts de baixa complexidade: data (2,37:1) e links do texto (3,11:1)
+    ".pa-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--txm)}":
+        ".pa-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.82rem;color:#487577}",
+    ".pa-body a{color:var(--teal-dd);": ".pa-body a{color:#12737a;",
+    # /todos/ e /temas/: data dos cards (3,51:1) e contador (2,37:1)
+    "color:var(--bk-s);opacity:.65;margin-bottom:10px}": "color:#587373;margin-bottom:10px}",
+    'id="bl-post-count" style="text-align:center;color:var(--txm);': 'id="bl-post-count" style="text-align:center;color:var(--txs);',
+    ".bl-no-results{text-align:center;padding:48px 24px;color:var(--txm);": ".bl-no-results{text-align:center;padding:48px 24px;color:var(--txs);",
+}
+
+
+def op_contraste(t, f):
+    novo = t
+    for a, b in CONTRASTE.items():
+        novo = novo.replace(a, b)
+    if f.relative_to(RAIZ).as_posix() in ("tools/blog/home.html", "blog/index.html"):
+        # home do blog: cinza de apoio (4,1:1) e textos em --teal-dd (3,3:1); o token do design system fica
+        novo = novo.replace("--muted:#5d8487", "--muted:#4d7477")
+        if "--teal-txt" not in novo:
+            novo = novo.replace("--muted:#4d7477", "--muted:#4d7477;--teal-txt:#12737a", 1)
+        novo = re.sub(r"(?<![-\w])color:var\(--teal-dd\)", "color:var(--teal-txt)", novo)
+    return novo, int(novo != t)
+
+
+def op_logo(t, f):
+    novo = re.sub(r'(<a href="/" class="nlogo" aria-label=")[^"]*("[^>]*>\s*<span class="nlogo-txt" aria-hidden="true">LIBRAS\.SE</span>\s*<span class="nsub" aria-hidden="true">([^<]+)</span>)',
+                  lambda m: f"{m[1]}LIBRAS.SE {m[3]}, página inicial do site{m[2]}", t)
+    novo = novo.replace('aria-label="Libras.se, Página inicial"', 'aria-label="LIBRAS.SE, Página inicial"')
+    return novo, int(novo != t)
+
+
+def op_titulo_nivel(t, f):
+    """Nos posts, componentes do template (caixas, passos, cards) usam <h4> logo abaixo de um <h2> (ou do <h1>):
+    o nível certo (anterior + 1) vai no aria-level, sem mudar tag nem CSS."""
+    if not e_post(f) and f.relative_to(RAIZ).as_posix() != "blog/CLAUDE.md":
+        return t, 0
+    corpo_ini = t.find("<body")
+    if corpo_ini < 0:
+        return t, 0
+    partes, ult, n, pos = [t[:corpo_ini]], 1, 0, corpo_ini
+    for m in re.finditer(r"<h([1-6])\b([^>]*)>", t[corpo_ini:]):
+        ini = corpo_ini + m.start()
+        nivel = int(m[1])
+        attrs = re.sub(r'\s*aria-level="\d"', "", m[2])
+        certo = min(nivel, ult + 1)
+        tag = f'<h{nivel} aria-level="{certo}"{attrs}>' if certo != nivel else f"<h{nivel}{attrs}>"
+        if tag != m[0]:
+            partes.append(t[pos:ini] + tag)
+            pos, n = ini + len(m[0]), n + 1
+        ult = certo
+    partes.append(t[pos:])
+    return "".join(partes), n
+
+
+ORG_AUTOR = {"@type": "Organization", "@id": "https://libras.se/#organization", "name": "LIBRAS.SE", "url": "https://libras.se/"}
+
+
+def op_jsonld(t, f):
+    """JSON-LD é lido como JSON puro: entidades HTML (&ccedil;) chegavam literais ao Google. Decodifica os textos.
+    No glossário, o Article tinha só name: ganha headline, autor (a organização) e a imagem da OG."""
+    n = 0
+    og = re.search(r'<meta property="og:image" content="([^"]+)"', t)
+
+    def limpa(x):
+        if isinstance(x, str):
+            return html.unescape(x) if "&" in x else x
+        if isinstance(x, list):
+            return [limpa(i) for i in x]
+        if isinstance(x, dict):
+            return {k: limpa(v) for k, v in x.items()}
+        return x
+
+    def nos(o):
+        if isinstance(o, list):
+            for i in o:
+                yield from nos(i)
+        elif isinstance(o, dict):
+            yield o
+            if "@graph" in o:
+                yield from nos(o["@graph"])
+
+    def troca(m):
+        nonlocal n
+        bruto = m[2]
+        try:
+            o = json.loads(bruto)
+        except ValueError:
+            return m[0]
+        novo = limpa(o)
+        for nd in nos(novo):
+            if nd.get("@type") == "Article" and nd.get("name") and not nd.get("headline"):
+                nd["headline"] = nd["name"]
+                nd.setdefault("author", ORG_AUTOR)
+                if og:
+                    nd.setdefault("image", html.unescape(og[1]))
+        if novo == o:
+            return m[0]
+        n += 1
+        multi = "\n" in bruto.strip()
+        s = json.dumps(novo, ensure_ascii=False, indent=2 if multi else None, separators=None if multi else (",", ":"))
+        return m[1] + ("\n" + s + "\n" if multi else s) + m[3]
+    return re.sub(r'(<script type="application/ld\+json"[^>]*>)([\s\S]*?)(</script>)', troca, t), n
+
+
 OPS = [
     ("favicon", op_favicon), ("touch-icon", op_toque_corrige), ("barra", op_barra), ("rodape-css", op_rodape_css),
     ("rodape-h4", op_rodape_h4), ("aria", op_aria), ("body", op_body), ("emoji-lbl", op_emoji_lbl),
     ("https", op_https), ("publisher", op_publisher), ("youtube", op_youtube), ("speculation", op_speculation),
-    ("busca", op_busca), ("feed", op_feed),
+    ("busca", op_busca), ("feed", op_feed), ("gtm-iframe", op_gtm_iframe), ("faq-region", op_faq_region),
+    ("aria-papel", op_aria_papel), ("oculto-foco", op_oculto_foco), ("conteudo", op_conteudo),
+    ("contraste", op_contraste), ("logo", op_logo), ("titulo-nivel", op_titulo_nivel), ("jsonld", op_jsonld),
 ]
 
 

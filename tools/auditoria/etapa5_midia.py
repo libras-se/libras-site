@@ -74,13 +74,11 @@ def sotaque():
         if m:
             rotulo = re.sub(r"^GIF ", "Vídeo ", m[1])
             url = "/assets/img/blog/libras-tem-sotaque-e-giria/"
-            t = t.replace(m[0], f'<video class="lse-loop" role="img" muted loop playsinline preload="none" poster="{url}{base}.webp" '
+            t = t.replace(m[0], f'<video class="lse-loop" muted loop playsinline preload="none" poster="{url}{base}.webp" '
                                 f'data-src="{url}{base}.mp4" width="600" height="338" aria-label="{rotulo}"></video>')
         for velho in (gif, SOTAQUE / f"{nome} EM LIBRAS.webp"):
             if velho.exists() and mp4.exists():
                 git("rm", "-q", str(velho.relative_to(RAIZ)))
-    # vídeo sem controles faz o papel do GIF: é uma imagem animada (role="img" com aria-label)
-    t = t.replace('<video class="lse-loop" muted loop', '<video class="lse-loop" role="img" muted loop')
     t = t.replace(".sign-figure img {", ".sign-figure img, .sign-figure video {")
     t = t.replace("Os GIFs a seguir comparam", "Os vídeos curtos a seguir comparam")
     t = t.replace(">GIFs com exemplos reais de variação regional", ">vídeos com exemplos reais de variação regional")

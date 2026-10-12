@@ -316,7 +316,7 @@ main{padding-top:80px}
 .bl-theme-pill.active{background:var(--teal);color:var(--p1);border-color:var(--teal);box-shadow:0 4px 16px rgba(79,209,197,.28)}
 
 /* no results */
-.bl-no-results{text-align:center;padding:48px 24px;color:var(--txm);font-size:.9rem;display:none}
+.bl-no-results{text-align:center;padding:48px 24px;color:var(--txs);font-size:.9rem;display:none}
 .bl-no-results.show{display:block}
 
 /* ── FEATURED SECTION ── */
@@ -342,7 +342,7 @@ main{padding-top:80px}
 .bl-card__body{padding:22px;display:flex;flex-direction:column;flex:1}
 .bl-card--lg{height:auto}
 .bl-card--lg .bl-card__body{padding:26px 28px}
-.bl-card__meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--bk-s);opacity:.65;margin-bottom:10px}
+.bl-card__meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:#587373;margin-bottom:10px}
 .bl-card__dot{width:3px;height:3px;border-radius:50%;background:currentColor}
 .bl-card__title{font-size:1rem;font-weight:700;color:var(--bk);line-height:1.35;margin-bottom:10px;letter-spacing:-.015em}
 .bl-card--lg .bl-card__title{font-size:1.28rem;margin-bottom:12px}
@@ -502,6 +502,7 @@ main{padding-top:80px}
 .bl-card--sm .bl-card__thumb{aspect-ratio:16/9}
 .bl-theme-group h2 a{color:inherit;text-decoration:none}.bl-theme-group h2 a:hover{color:var(--teal-dd)}
 .bl-theme-more{margin:22px 0 0;text-align:right}.bl-theme-more a{font-weight:700;font-size:.9rem;color:#12737a}
+.bl-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <link rel="alternate" type="application/atom+xml" title="Blog LIBRAS.SE" href="https://libras.se/blog/feed.xml">
 
@@ -630,7 +631,7 @@ main{padding-top:80px}
 <nav id="nav" aria-label="Navegação principal">
   <div class="w">
     <div class="navi">
-      <a href="/" class="nlogo" aria-label="LIBRAS.SE, Página inicial">
+      <a href="/" class="nlogo" aria-label="LIBRAS.SE Conteúdos, página inicial do site">
         <span class="nlogo-txt" aria-hidden="true">LIBRAS.SE</span>
         <span class="nsub" aria-hidden="true">Conteúdos</span>
       </a>
@@ -657,7 +658,8 @@ main{padding-top:80px}
   </header>
   <div class="bl-page-wrap">
     <nav class="bl-theme-bar rv" aria-label="Editorias do blog" style="justify-content:center;margin-bottom:36px"><a class="bl-theme-pill" href="/blog/tema/lingua/" aria-current="page">Língua &amp; Cultura</a><a class="bl-theme-pill" href="/blog/tema/educacao/">Educação</a><a class="bl-theme-pill" href="/blog/tema/direitos/">Direitos</a><a class="bl-theme-pill" href="/blog/tema/inclusao/">Acessibilidade</a><a class="bl-theme-pill" href="/blog/tema/cultura/">Cultura</a><a class="bl-theme-pill" href="/blog/tema/esporte/">Esporte</a></nav>
-    <section class="bl-theme-group" aria-label="13 publicações em Língua &amp; Cultura Surda">
+    <section class="bl-theme-group" aria-labelledby="bl-tema-t">
+      <h2 class="bl-sr" id="bl-tema-t">13 publicações em Língua &amp; Cultura Surda</h2>
       <div class="bl-grid">
 <article class="bl-card bl-card--sm rv"
           data-post
@@ -666,8 +668,8 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Quem ajudou a construir os estudos sobre Libras? A homenagem a Lucinda Ferreira"></a>
-          <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__thumb" aria-label="Quem ajudou a construir os estudos sobre Libras? A homenagem a Lucinda Ferreira">
-            <picture><img src="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp" srcset="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp 480w, /assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras.jpg"></picture>
+          <a href="/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp" srcset="/assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-480.webp 480w, /assets/img/blog/thumbs/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" fetchpriority="high" itemprop="image" data-capa="/assets/img/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
           <div class="bl-card__body">
@@ -692,8 +694,8 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__link-cover" aria-label="Ler artigo: O Brasil tem outras línguas de sinais além da Libras"></a>
-          <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__thumb" aria-label="O Brasil tem outras línguas de sinais além da Libras">
-            <picture><img src="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp" srcset="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp 480w, /assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras.jpg"></picture>
+          <a href="/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp" srcset="/assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-480.webp 480w, /assets/img/blog/thumbs/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" itemprop="image" data-capa="/assets/img/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
           <div class="bl-card__body">
@@ -718,8 +720,8 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Casal surdo se casa em cerimônia toda em Libras no Paraná"></a>
-          <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__thumb" aria-label="Casal surdo se casa em cerimônia toda em Libras no Paraná">
-            <picture><img src="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp" srcset="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp 480w, /assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.jpg"></picture>
+          <a href="/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
+            <picture><img src="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp" srcset="/assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-480.webp 480w, /assets/img/blog/thumbs/casal-surdo-se-casa-em-cerimonia-toda-em-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="eager" itemprop="image" data-capa="/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
           <div class="bl-card__body">
@@ -744,7 +746,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2026"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-que-e-libras/" class="bl-card__link-cover" aria-label="Ler artigo: O que é Libras? Entenda a Língua Brasileira de Sinais"></a>
-          <a href="/blog/o-que-e-libras/" class="bl-card__thumb" aria-label="O que é Libras? Entenda a Língua Brasileira de Sinais">
+          <a href="/blog/o-que-e-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-que-e-libras-480.webp" srcset="/assets/img/blog/thumbs/o-que-e-libras-480.webp 480w, /assets/img/blog/thumbs/o-que-e-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-que-e-libras/o-que-e-libras-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -770,7 +772,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2025"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__link-cover" aria-label="Ler artigo: Gestuante entra para a língua portuguesa: entenda o significado e o uso"></a>
-          <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__thumb" aria-label="Gestuante entra para a língua portuguesa: entenda o significado e o uso">
+          <a href="/blog/gestuante-entra-para-a-lingua-portuguesa/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-480.webp" srcset="/assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-480.webp 480w, /assets/img/blog/thumbs/gestuante-entra-para-a-lingua-portuguesa-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/gestuante-entra-para-a-lingua-portuguesa/gestuante-entra-para-a-lingua-portuguesa-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -796,7 +798,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Nacional dos Surdos: conquistas e reflexões"></a>
-          <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__thumb" aria-label="Dia Nacional dos Surdos: conquistas e reflexões">
+          <a href="/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-480.webp" srcset="/assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-480.webp 480w, /assets/img/blog/thumbs/dia-nacional-dos-surdos-conquistas-e-reflexoes-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-nacional-dos-surdos-conquistas-e-reflexoes/dia-nacional-dos-surdos-conquistas-e-reflexoes.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -822,7 +824,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__link-cover" aria-label="Ler artigo: Entrevista: &quot;Libras não é português com as mãos&quot;"></a>
-          <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__thumb" aria-label="Entrevista: &quot;Libras não é português com as mãos&quot;">
+          <a href="/blog/entrevista-libras-nao-e-portugues-com-as-maos/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-480.webp" srcset="/assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-480.webp 480w, /assets/img/blog/thumbs/entrevista-libras-nao-e-portugues-com-as-maos-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/entrevista-libras-nao-e-portugues-com-as-maos/entrevista-libras-nao-e-portugues-com-as-maos.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -848,7 +850,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2022"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__link-cover" aria-label="Ler artigo: O papel da Libras na inclusão do surdo"></a>
-          <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__thumb" aria-label="O papel da Libras na inclusão do surdo">
+          <a href="/blog/o-papel-da-libras-na-inclusao-do-surdo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-480.webp" srcset="/assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-480.webp 480w, /assets/img/blog/thumbs/o-papel-da-libras-na-inclusao-do-surdo-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/o-papel-da-libras-na-inclusao-do-surdo/o-papel-da-libras-na-inclusao-do-surdo.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -874,7 +876,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__link-cover" aria-label="Ler artigo: Dia Internacional das Línguas de Sinais"></a>
-          <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__thumb" aria-label="Dia Internacional das Línguas de Sinais">
+          <a href="/blog/dia-internacional-das-linguas-de-sinais/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-480.webp" srcset="/assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-480.webp 480w, /assets/img/blog/thumbs/dia-internacional-das-linguas-de-sinais-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/dia-internacional-das-linguas-de-sinais/dia-internacional-das-linguas-de-sinais.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -900,7 +902,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__link-cover" aria-label="Ler artigo: Como são criados os sinais de pessoas na Libras?"></a>
-          <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__thumb" aria-label="Como são criados os sinais de pessoas na Libras?">
+          <a href="/blog/como-sao-criados-sinais-de-pessoas-na-libras/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-480.webp" srcset="/assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-480.webp 480w, /assets/img/blog/thumbs/como-sao-criados-sinais-de-pessoas-na-libras-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/como-sao-criados-sinais-de-pessoas-na-libras/como-sao-criados-sinais-de-pessoas-na-libras.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -926,7 +928,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__link-cover" aria-label="Ler artigo: Datilologia: o alfabeto manual da Libras explicado"></a>
-          <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" aria-label="Datilologia: o alfabeto manual da Libras explicado">
+          <a href="/blog/voce-sabe-o-que-e-datilologia/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-480.webp" srcset="/assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-480.webp 480w, /assets/img/blog/thumbs/voce-sabe-o-que-e-datilologia-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/voce-sabe-o-que-e-datilologia/voce-sabe-o-que-e-datilologia-og.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -952,7 +954,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__link-cover" aria-label="Ler artigo: Entenda por que é errado o termo surdo-mudo"></a>
-          <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__thumb" aria-label="Entenda por que é errado o termo surdo-mudo">
+          <a href="/blog/entenda-porque-e-errado-o-termo-surdo-mudo/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-480.webp" srcset="/assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-480.webp 480w, /assets/img/blog/thumbs/entenda-porque-e-errado-o-termo-surdo-mudo-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/entenda-porque-e-errado-o-termo-surdo-mudo/entenda-porque-e-errado-o-termo-surdo-mudo.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>
@@ -978,7 +980,7 @@ main{padding-top:80px}
           data-tema="lingua" data-ano="2021"
           itemscope itemtype="https://schema.org/BlogPosting">
           <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__link-cover" aria-label="Ler artigo: Libras tem sotaque e gíria? Entenda as variações regionais"></a>
-          <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__thumb" aria-label="Libras tem sotaque e gíria? Entenda as variações regionais">
+          <a href="/blog/libras-tem-sotaque-e-giria/" class="bl-card__thumb" tabindex="-1" aria-hidden="true">
             <picture><img src="/assets/img/blog/thumbs/libras-tem-sotaque-e-giria-480.webp" srcset="/assets/img/blog/thumbs/libras-tem-sotaque-e-giria-480.webp 480w, /assets/img/blog/thumbs/libras-tem-sotaque-e-giria-960.webp 960w" sizes="(max-width:560px) 92vw, (max-width:900px) 46vw, 344px" alt="" width="480" height="270" decoding="async" loading="lazy" itemprop="image" data-capa="/assets/img/blog/libras-tem-sotaque-e-giria/libras-tem-sotaque-e-giria.jpg"></picture>
             <span class="bl-card__badge">Língua &amp; Cultura</span>
           </a>

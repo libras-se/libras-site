@@ -352,19 +352,11 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dd);background:rgba(79,209,197,.12);border:1px solid rgba(79,209,197,.28);border-radius:var(--rpill);padding:7px 16px;margin-bottom:18px}
 .hero-eyebrow svg{width:14px;height:14px;flex-shrink:0}
-.hero-hl{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.95rem,3.4vw,3rem);color:var(--p1);line-height:1.05;letter-spacing:-.04em;margin-bottom:18px}
-.hero-hl .line{display:block;text-wrap:balance}
+.hero-hl{font-family:'M',sans-serif;font-weight:900;font-size:clamp(1.7rem,calc((min(100vw,1140px) - 132px) / 2 / 10.6),3.1rem);color:var(--p1);line-height:1.05;letter-spacing:-.04em;margin-bottom:18px}
+.hero-hl .line{display:block;white-space:nowrap}
 .hero-sub{font-size:.98rem;font-weight:400;color:var(--txs);max-width:440px;margin-bottom:26px;line-height:1.7}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
 .hero-trust{display:flex;flex-wrap:wrap;gap:16px;font-size:.71rem;font-weight:600;color:var(--txm)}
-.hero-vol{display:flex;align-items:center;gap:12px;width:fit-content;max-width:100%;margin-top:18px;padding:10px 18px 10px 10px;border-radius:var(--rlg);background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;box-shadow:0 10px 28px rgba(14,53,56,.2);transition:var(--tr)}
-.hero-vol:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(14,53,56,.28)}
-.hero-vol:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-.hv-ic{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(129,230,217,.16);color:var(--tl)}
-.hv-ic svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.hv-tx b{display:block;font-family:'M',sans-serif;font-weight:900;font-size:.82rem;letter-spacing:-.01em}
-.hv-tx small{display:block;font-size:.68rem;font-weight:300;color:rgba(255,255,255,.7);margin-top:2px}
-.hv-ar{margin-left:4px;font-weight:700;color:var(--tl)}
 .hero-trust span::before{content:'\2713 ';color:var(--teal-d);font-weight:900}
 .hero-right{position:relative;height:500px;display:flex;align-items:flex-end;justify-content:center}
 .iw{position:relative;width:290px;z-index:3;aspect-ratio:290/420}
@@ -378,9 +370,10 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .fb .ft{font-size:.74rem;font-weight:700;color:var(--p1);font-family:'M',sans-serif}
 .fb1{bottom:55px;right:90px;animation:floatBadge 7s ease-in-out infinite}
 .fb2{top:16%;right:40px;animation:floatBadge 9s ease-in-out infinite 1.5s}
-.fb3{bottom:100px;left:-28px;animation:floatBadge 8s ease-in-out infinite 3s}
+.fb3{bottom:120px;left:-28px;animation:floatBadge 8s ease-in-out infinite 3s}
 .fb4{top:210px;right:-12px;animation:floatBadge 10s ease-in-out infinite .8s}
 .fb5{top:150px;left:30px;animation:floatBadge 8.5s ease-in-out infinite 2s}
+.fb6{bottom:8px;left:54px;animation:floatBadge 9.5s ease-in-out infinite 4s}
 .hero-logos-row{background:transparent;padding:28px 0 0;border-top:1px solid rgba(79,209,197,.1);overflow:hidden;position:relative;z-index:2;width:100%;margin-top:auto}
 .lb{position:relative}
 .lb::before,.lb::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none}
@@ -675,13 +668,13 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
   .hero-right .fb .fi{font-size:.8rem}
   .hero-right .fb1{bottom:30px;right:40px}
   .hero-right .fb2{top:10%;right:10px}
-  .hero-right .fb3{bottom:60px;left:-8px}
+  .hero-right .fb3{bottom:80px;left:-8px}
   .hero-right .fb4{top:160px;right:-4px}
   .hero-right .fb5{top:110px;left:8px}
-  .hero-hl{margin-top:4px}
+  .hero-right .fb6{bottom:2px;left:66px}
+  .hero-hl{margin-top:4px;font-size:clamp(1.7rem,calc((100vw - 44px) / 10.8),3.1rem)}
   .hero-sub{margin-left:auto;margin-right:auto}
   .hero-trust{display:none}
-  .hero-vol{margin-left:auto;margin-right:auto;text-align:left}
   .lt{gap:44px}
   .li img{height:50px;max-width:108px;width:auto}
   .li.li-sm img{height:30px;max-width:65px;width:auto}
@@ -894,9 +887,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           ENTREGA EXPRESSA EM 1 HORA
         </div>
         <h1 id="hero-title" class="hero-hl rvh">
-          <span class="line">Tradução em Libras para</span>
-          <span class="line refract">vídeos e filmes</span>
-          <span class="line">com entrega em 1 hora</span>
+          <span class="line">Tradução em Libras</span>
+          <span class="line">para <span class="refract">vídeos e filmes</span></span>
+          <span class="line">com entrega</span>
+          <span class="line">em 1 hora</span>
         </h1>
         <p class="hero-sub rv d1">Janela de Libras para publicidade, séries, filmes e videoaulas, com intérpretes humanos, revisão especializada e arquivo pronto para publicar.</p>
         <div class="hero-btns rv d3">
@@ -911,11 +905,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span>Arquivo pronto para editar</span>
           <span>Padrão TV e Cinema</span>
         </div>
-        <a href="/orcamento/" class="hero-vol rv d4" aria-label="Também disponível para alta demanda: entrega por lote para séries e programações inteiras. Pedir orçamento">
-          <span class="hv-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg></span>
-          <span class="hv-tx"><b>Também disponível para alta demanda</b><small>Entrega por lote para séries e programações inteiras</small></span>
-          <span class="hv-ar" aria-hidden="true">→</span>
-        </a>
       </div>
       <div class="hero-right rv d1">
         <div class="iw">
@@ -931,6 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="fb fb3"><span class="fi" aria-hidden="true"><svg class="svg-ico svg-ico-hand" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M18 11V6a2 2 0 0 0-4 0v4"/><path d="M14 10V4a2 2 0 0 0-4 0v7"/><path d="M10 11V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></span><span class="ft">Cada sinal importa</span></div>
         <div class="fb fb4"><span class="fi" aria-hidden="true"><svg class="svg-ico svg-ico-video" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="M3 7h12v10H3z"/><path d="M15 10l5-3v10l-5-3z"/></svg></span><span class="ft">Padrão Cinema</span></div>
         <div class="fb fb5"><span class="fi" aria-hidden="true"><svg class="svg-ico svg-ico-accessibility" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><circle cx="12" cy="4" r="2"/><path d="M5 8h14"/><path d="M12 10v5"/><path d="M8 22l4-7 4 7"/><path d="M8 13l4-3 4 3"/></svg></span><span class="ft">Acessibilidade</span></div>
+        <div class="fb fb6"><span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex-shrink:0"><path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg></span><span class="ft">Alta demanda</span></div>
       </div>
     </div>
   </div>

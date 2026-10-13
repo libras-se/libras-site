@@ -414,27 +414,27 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 .how-tech-link{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:.75rem;font-weight:600;color:var(--teal-d);border:1px solid rgba(79,209,197,.3);background:rgba(79,209,197,.07);border-radius:var(--rpill);padding:5px 14px;transition:var(--tr)}
 .how-tech-link:hover{background:rgba(79,209,197,.14);border-color:rgba(79,209,197,.5);transform:translateY(-1px)}
 .how-tech-link svg{width:12px;height:12px;stroke:var(--teal-d);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.how-flow{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:860px;margin:0 auto}
-.how-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 14px;transition:var(--tr)}
-.how-box{width:100px;height:100px;border-radius:30px;background:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.9);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.95);backdrop-filter:var(--blur);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:var(--tr);position:relative;overflow:hidden}
-.how-box::before{content:'';position:absolute;top:-30px;left:-30px;width:80px;height:80px;border-radius:50%;background:rgba(79,209,197,.06);transition:var(--tr)}
-.how-step.act .how-box{background:var(--p1);border-color:transparent;box-shadow:0 12px 40px rgba(10,34,37,.22),0 0 0 5px rgba(79,209,197,.18)}
-.how-step.act .how-box svg{stroke:rgba(255,255,255,.9)}
-.how-step.act .how-box .hb-logo-text{-webkit-text-fill-color:#fff !important;background:none}
-.how-box svg{transition:stroke .3s;stroke:var(--p3);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.how-lbl{font-family:'M',sans-serif;font-weight:700;font-size:.88rem;color:var(--p1);margin-bottom:4px;transition:color .3s}
-.how-step.act .how-lbl{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* animação 3D "Simples, rápido e fácil": vídeo com fundo transparente (tools/como-funciona-video) + trilho de passos sincronizado */
+.how-stage{max-width:1000px;margin:-44px auto 0}
+.how3d{position:relative;aspect-ratio:1440/900}
+.how3d img,.how3d video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.how3d video{opacity:0;transition:opacity .7s ease}
+.how3d.play video{opacity:1}
+.how3d.play img{opacity:0;transition:opacity .5s ease .15s}
+.how-rail{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:860px;margin:-10px auto 0;padding:0}
+.how-st{position:relative;display:flex;align-items:flex-start;gap:12px;padding:14px 16px 18px;border-radius:var(--rlg);transition:background var(--tr)}
+.how-rail.vivo .how-st{cursor:pointer}
+.how-rail.vivo .how-st:hover{background:rgba(255,255,255,.55)}
+.how-n{flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:'M',sans-serif;font-weight:900;font-size:.8rem;background:rgba(255,255,255,.85);color:var(--txm);box-shadow:inset 0 0 0 1.5px rgba(79,209,197,.3);transition:var(--tr)}
+.how-st.act .how-n{background:var(--gb);color:#fff;box-shadow:0 6px 18px rgba(79,209,197,.35)}
+.how-lbl{font-family:'M',sans-serif;font-weight:700;font-size:.92rem;color:var(--p1);margin:5px 0 3px}
+.how-st.act .how-lbl{background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .how-sub{font-size:.74rem;font-weight:300;color:var(--txm);line-height:1.5}
-.how-connector{width:52px;flex-shrink:0;display:flex;align-items:flex-start;justify-content:center;padding-top:44px}
-.how-line{width:100%;height:1.5px;background:rgba(79,209,197,.25);position:relative}
-.how-line::after{content:'';position:absolute;right:-6px;top:-4.5px;width:10px;height:10px;border-right:1.5px solid rgba(79,209,197,.35);border-top:1.5px solid rgba(79,209,197,.35);transform:rotate(45deg)}
-.how-connector.act .how-line{background:var(--teal-d)}
-.how-connector.act .how-line::after{border-color:var(--teal-d)}
-.how-pay{text-align:center;margin-top:50px;font-size:.82rem;font-weight:700;color:var(--txm);display:flex;align-items:center;justify-content:center;gap:10px}
+.how-pg{position:absolute;left:60px;right:16px;bottom:8px;height:2px;border-radius:2px;background:rgba(79,209,197,.18);overflow:hidden;opacity:0;transition:opacity .4s}
+.how-rail.vivo .how-pg{opacity:1}
+.how-pg i{position:absolute;inset:0;background:var(--gb);transform:scaleX(0);transform-origin:left}
+.how-pay{text-align:center;margin-top:36px;font-size:.82rem;font-weight:700;color:var(--txm);display:flex;align-items:center;justify-content:center;gap:10px}
 .how-pay-sep{width:3px;height:3px;border-radius:50%;background:rgba(79,209,197,.5)}
-.hb-logo-text{font-family:'M',sans-serif;font-weight:900;font-size:.7rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;line-height:1.2;display:block}
-.hb-dots2{display:flex;gap:4px;justify-content:center;margin-top:5px}
-.hb-d{width:5px;height:5px;border-radius:50%;transition:background .3s}
 #notai{padding:112px 0;position:relative;overflow:hidden;z-index:1}
 .na-wbg{position:absolute;font-family:'M',sans-serif;font-weight:900;font-size:24vw;color:rgba(10,34,37,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.06em;line-height:1}
 .na-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2}
@@ -698,8 +698,13 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
   .na-grid{grid-template-columns:1fr}
   .map-wrap{max-width:360px;margin:24px auto 0}
   .map-stage{left:auto;transform:none;margin:0 auto}
-  .how-flow{flex-direction:column;align-items:center;gap:20px;max-width:300px;margin:0 auto}
-  .how-connector{width:auto;height:24px;padding:0;align-items:center;transform:rotate(90deg)}
+  .how-stage{margin:-14px -22px 0}
+  .how-rail{gap:4px;margin-top:0;padding:0 14px}
+  .how-st{flex-direction:column;align-items:center;text-align:center;gap:2px;padding:10px 6px 16px}
+  .how-lbl{font-size:.82rem}
+  .how-sub{font-size:.68rem}
+  .how-pg{left:14px;right:14px}
+  .how-pay{margin-top:24px}
   .pr-cards{grid-template-columns:1fr;max-width:360px;margin:0 auto}
   .pr-cards .prc:nth-child(3){grid-column:unset;max-width:unset}
   #packages > .w{padding:0 12px;max-width:100%}
@@ -1026,37 +1031,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
     </div>
-    <div class="how-flow" role="list" aria-label="Passos do processo">
-      <div class="how-step rv d1" id="hs1" role="listitem">
-        <div class="how-box" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="34" height="34"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 15V9m-3 3 3-3 3 3"/></svg>
-        </div>
-        <div class="how-lbl">Você envia</div>
-        <div class="how-sub">Upload + janela + prazo</div>
+    <div class="how-stage rv d1">
+      <!-- vídeo decorativo com fundo transparente; o trilho abaixo traz o conteúdo em texto -->
+      <div class="how3d" id="how3d" aria-hidden="true">
+        <img src="/assets/videos/como-funciona/como-funciona.webp?v=2" alt="" width="1440" height="900" loading="lazy" decoding="async">
+        <video id="how3dv" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
       </div>
-      <div class="how-connector" id="ha1" aria-hidden="true"><div class="how-line"></div></div>
-      <div class="how-step rv d2" id="hs2" role="listitem">
-        <div class="how-box" aria-hidden="true">
-          <div style="text-align:center;position:relative;z-index:2">
-            <span class="hb-logo-text">LIBRAS.SE</span>
-            <div class="hb-dots2">
-              <div class="hb-d" id="hd1" style="background:rgba(79,209,197,.25)"></div>
-              <div class="hb-d" id="hd2" style="background:rgba(79,209,197,.5)"></div>
-              <div class="hb-d" id="hd3" style="background:var(--teal-d)"></div>
-            </div>
-          </div>
-        </div>
-        <div class="how-lbl">Nós traduzimos</div>
-        <div class="how-sub">Intérprete real + sistema</div>
-      </div>
-      <div class="how-connector" id="ha2" aria-hidden="true"><div class="how-line"></div></div>
-      <div class="how-step rv d3" id="hs3" role="listitem">
-        <div class="how-box" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="34" height="34"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 9v6m-3-3 3 3 3-3"/><path d="M8.5 18.5 11 20h2l2.5-1.5" stroke-width="1.4" opacity=".45"/></svg>
-        </div>
-        <div class="how-lbl">Você baixa</div>
-        <div class="how-sub">Libras inserida + ProRes</div>
-      </div>
+      <ol class="how-rail" id="howRail" aria-label="Passos do processo">
+        <li class="how-st" data-t="0"><span class="how-n" aria-hidden="true">1</span><div><div class="how-lbl">Você envia</div><div class="how-sub">Upload + janela + prazo</div></div><span class="how-pg" aria-hidden="true"><i></i></span></li>
+        <li class="how-st" data-t="3.9"><span class="how-n" aria-hidden="true">2</span><div><div class="how-lbl">Nós traduzimos</div><div class="how-sub">Intérprete real + sistema</div></div><span class="how-pg" aria-hidden="true"><i></i></span></li>
+        <li class="how-st" data-t="8"><span class="how-n" aria-hidden="true">3</span><div><div class="how-lbl">Você baixa</div><div class="how-sub">Libras inserida + ProRes</div></div><span class="how-pg" aria-hidden="true"><i></i></span></li>
+      </ol>
     </div>
     <div class="how-pay rv d5">
       <span>Pagamento online</span>
@@ -1613,30 +1598,59 @@ const rvO = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -24px 0px' });
 document.querySelectorAll('.rv').forEach(el => rvO.observe(el));
 
-const hs = ['hs1', 'hs2', 'hs3'];
-const ha = ['ha1', 'ha2'];
-let hsi = 0;
-function cycleH() {
-  hs.forEach(id => { const el = document.getElementById(id); if (el) el.classList.remove('act'); });
-  ha.forEach(id => { const el = document.getElementById(id); if (el) el.classList.remove('act'); });
-  const el = document.getElementById(hs[hsi]); if (el) el.classList.add('act');
-  if (hsi > 0) { const a = document.getElementById(ha[hsi - 1]); if (a) a.classList.add('act'); }
-  hsi = (hsi + 1) % hs.length;
-}
-cycleH();
-setInterval(cycleH, 1400);
-
-let di = 0;
-const dotIds = ['hd1', 'hd2', 'hd3'];
-setInterval(() => {
-  dotIds.forEach((id, i) => {
-    const el = document.getElementById(id); if (!el) return;
-    const phase = (di + i) % 3;
-    el.style.background = phase === 2 ? 'var(--teal-d)' : phase === 1 ? 'rgba(79,209,197,.5)' : 'rgba(79,209,197,.18)';
-    el.style.transform = phase === 2 ? 'scale(1.3)' : 'scale(1)';
+// Como funciona: vídeo 3D com fundo transparente. Só baixa perto da seção, toca quando visível
+// e move o trilho de passos junto. WebKit (Safari, iPhone, iPad) só mostra transparência em HEVC.
+(() => {
+  const box = document.getElementById('how3d');
+  const vid = document.getElementById('how3dv');
+  const rail = document.getElementById('howRail');
+  if (!box || !vid || !rail) return;
+  // sem movimento: no lugar do primeiro quadro, o quadro-resumo (vídeo já com a janela de Libras)
+  if (prefersReducedMotion || navigator.connection?.saveData) {
+    box.querySelector('img').src = '/assets/videos/como-funciona/como-funciona-resumo.webp?v=2';
+    return;
+  }
+  const passos = [...rail.querySelectorAll('.how-st')];
+  const inicio = passos.map(li => parseFloat(li.dataset.t));
+  const DUR = 12;
+  const ua = navigator.userAgent;
+  const webkit = /iP(hone|ad|od)/.test(ua) || /^((?!chrome|chromium|crios|fxios|android|edg).)*safari/i.test(ua);
+  let carregado = false, raf = 0;
+  vid.muted = true;
+  function desenhar() {
+    const t = vid.currentTime % DUR;
+    let i = inicio.length - 1;
+    while (i > 0 && t < inicio[i]) i--;
+    const fim = inicio[i + 1] ?? DUR;
+    passos.forEach((li, k) => {
+      li.classList.toggle('act', k === i);
+      li.querySelector('.how-pg i').style.transform = `scaleX(${k < i ? 1 : k > i ? 0 : (t - inicio[i]) / (fim - inicio[i])})`;
+    });
+    if (!vid.paused) raf = requestAnimationFrame(desenhar);
+  }
+  new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting || carregado) return;
+    carregado = true;
+    // ?v= muda a cada novo render (o nginx serve vídeo e imagem com cache imutável de 1 ano)
+    vid.src = `/assets/videos/como-funciona/como-funciona.${webkit ? 'mov' : 'webm'}?v=2`;
+  }, { rootMargin: '600px 0px' }).observe(box);
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) vid.play().catch(() => {});
+    else vid.pause();
+  }, { threshold: 0.25 }).observe(box);
+  vid.addEventListener('playing', () => {
+    box.classList.add('play');
+    rail.classList.add('vivo');
+    cancelAnimationFrame(raf);
+    desenhar();
   });
-  di++;
-}, 480);
+  vid.addEventListener('pause', () => cancelAnimationFrame(raf));
+  passos.forEach((li, k) => li.addEventListener('click', () => {
+    if (!rail.classList.contains('vivo')) return;
+    vid.currentTime = inicio[k] + 0.05;
+    desenhar();
+  }));
+})();
 
 let cdt = 59 * 60 + 30;
 function updCd() {

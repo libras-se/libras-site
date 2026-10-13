@@ -1,0 +1,5 @@
+# Dependências do tools/blog/novo_post.py e dos geradores que ele roda (og.py, home.py e links.py
+# usam o Pillow; o resto é biblioteca padrão). Python 3.10 ou mais novo.
+# Instalação: python3 -m pip install -r tools/blog/requirements-publicador.txt
+markdown-it-py==4.2.0
+Pillow==12.3.0

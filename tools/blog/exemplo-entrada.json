@@ -1,0 +1,26 @@
+{
+  "versao": 1,
+  "tipo": "post_simples",
+  "slug": "libras-em-eventos-corporativos",
+  "titulo": "Libras em eventos corporativos: o que muda na prática",
+  "subtitulo": "Intérprete no palco, janela no telão e transmissão acessível: o que considerar ao incluir pessoas surdas em convenções, treinamentos e lançamentos.",
+  "descricao": "Libras em eventos corporativos: como planejar intérpretes, janela no telão e transmissão acessível para incluir pessoas surdas no público.",
+  "palavras_chave": ["libras em eventos", "intérprete de libras", "acessibilidade em eventos corporativos"],
+  "editoria": "inclusao",
+  "tags": ["acessibilidade", "libras", "eventos", "intérprete de libras"],
+  "autor": "Libras.se",
+  "publicado_em": "2026-10-13",
+  "markdown": "Convenções de vendas, treinamentos e lançamentos de produto costumam ter palco, telão e transmissão ao vivo. Para as pessoas surdas da plateia, nada disso funciona sem Libras. A Lei Brasileira de Inclusão garante o acesso à comunicação, e as empresas que planejam a acessibilidade desde o início gastam menos e evitam improviso no dia.\n\n## Planejamento começa no orçamento\n\nO primeiro passo é saber quem vai estar no público. Um formulário de inscrição com a pergunta sobre recursos de acessibilidade já mostra se haverá participantes surdos e quais recursos eles preferem: intérpretes de Libras, legendas ou os dois.\n\nCom essa informação, a produção reserva o espaço do intérprete no palco, com luz própria e fundo neutro, e define onde a janela de Libras vai aparecer no telão e na transmissão. Em eventos longos, a regra é ter dupla de intérpretes, que se revezam a cada 20 ou 30 minutos.\n\n## O que muda no palco e no telão\n\n- O intérprete precisa receber o roteiro, os nomes dos palestrantes e os vídeos com antecedência.\n- A câmera do telão deve enquadrar o intérprete inteiro, da cintura para cima, sem cortar as mãos.\n- Vídeos exibidos no evento já devem chegar com janela de Libras e legenda.\n\n> Acessibilidade que só aparece no dia do evento quase sempre vira improviso.\n\n### Transmissão e gravação\n\nSe o evento é transmitido, a janela de Libras precisa estar na imagem que vai para a internet, e não só no palco. A gravação também deve manter a janela, para que o conteúdo continue acessível depois. Veja mais orientações no guia de [acessibilidade em eventos para pessoas surdas](/blog/acessibilidade-em-eventos-para-pessoas-surdas/) do blog.\n\n## Por que vale o investimento\n\nIncluir a comunidade surda amplia o público, melhora a imagem da marca e cumpre a lei. O mais importante, porém, é que todos os participantes entendem a mesma mensagem ao mesmo tempo. Quem quiser se aprofundar pode consultar a [Lei Brasileira de Inclusão](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm) e o material da [Secretaria Nacional dos Direitos da Pessoa com Deficiência](https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia).",
+  "fontes": [
+    {"url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm", "titulo": "Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira de Inclusão da Pessoa com Deficiência)"},
+    {"url": "https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia", "titulo": "Pessoa com deficiência, Ministério dos Direitos Humanos e da Cidadania"}
+  ],
+  "capa": null,
+  "cta": "A LIBRAS.SE leva intérpretes de Libras para o seu evento e entrega os vídeos com janela de Libras prontos para o telão e a transmissão.",
+  "origem": {
+    "sistema": "agentes.libras.se",
+    "aprovacao": "00000000-0000-4000-8000-000000000001",
+    "artefato": "00000000-0000-4000-8000-000000000002",
+    "versao": 1
+  }
+}

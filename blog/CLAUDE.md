@@ -412,6 +412,72 @@ Depois do `LSE:MAIS` vem **o footer canônico do site** (`<footer id="foot">`, c
 
 ---
 
+## 9. Publicação pelo Agent Control
+
+Posts de **baixa complexidade** aprovados no Agent Control (agentes.libras.se) chegam sozinhos:
+
+1. O servidor cria a branch `agentes/blog-<slug>` a partir da `main`, commita **um** arquivo
+   `blog/_entrada/<slug>.json` e abre um PR.
+2. O workflow `.github/workflows/publicar-post.yml` roda `python3 tools/blog/novo_post.py` na branch:
+   valida o JSON, gera a capa e o post a partir do molde `tools/blog/post-simples.html`, registra a
+   editoria no `home.json`, roda os geradores do §8 (`og.py`, `home.py`, `autores.py`, `links.py`,
+   `llms.py`, `auditoria.py`; `videos.py` e `redirects.py` não se aplicam), apaga o JSON e commita tudo
+   na mesma branch como `feat(blog): <título>` (usuário `github-actions[bot]`).
+3. Com o run verde, o servidor faz o merge (squash) e confere a página no ar. JSON inválido deixa o run
+   vermelho, com cada problema no log e nas anotações do run; nada é commitado.
+
+Formato (versão 1; exemplo completo em `tools/blog/exemplo-entrada.json`):
+
+| Campo | Regra |
+|---|---|
+| `versao`, `tipo` | `1` e `"post_simples"` |
+| `slug` | kebab-case sem acento, 3 a 90 caracteres; não pode existir em `blog/` (ver re-execução) |
+| `titulo`, `subtitulo` | texto simples, sem `<` ou `>`; o título é o H1 (o `<title>` leva ` \| LIBRAS.SE` se couber em 60) |
+| `descricao` | 70 a 165 caracteres (aviso fora de 120 a 160) |
+| `palavras_chave`, `tags` | listas de textos (tags: 3 a 6 recomendadas); tag que é termo do glossário vira link |
+| `editoria` | `lingua`, `educacao`, `direitos`, `inclusao`, `cultura` ou `esporte` |
+| `autor` | `"Libras.se"` (vira `Organization` no JSON-LD e "Equipe LIBRAS.SE" no post) ou um nome de `tools/blog/autores.json`; outro nome é erro |
+| `publicado_em` | `AAAA-MM-DD`, até amanhã; hoje usa a hora da publicação, outro dia usa 12h de São Paulo |
+| `markdown` | corpo sem H1: `##`, `###`, parágrafos, listas, negrito, itálico, links e citações; mínimo de 150 palavras em 3 blocos |
+| `fontes` | `[{ "url": "https://...", "titulo": "..." }]`, vão para "Créditos e referências" |
+| `capa` | `null` (foto horizontal do banco editorial escolhida pelo tema, crédito "Banco editorial LIBRAS.SE") ou `{ "arquivo": "/assets/img/...", "alt": "...", "credito": "..." }` com imagem que já existe no repositório |
+| `cta` | parágrafo do bloco "Precisa do seu conteúdo em Libras?"; sem preço |
+| `origem` | `{ "sistema", "aprovacao", "artefato", "versao" }` |
+
+O que o script garante:
+
+- **Texto não confiável.** O markdown é convertido com HTML bruto desligado (markdown-it-py, `html=False`):
+  `<script>` e qualquer tag saem escapados. Link só passa se for `http(s)://` (http vira https) ou um
+  caminho `/...` que existe no site (`https://libras.se/...` vira caminho relativo); os outros (`javascript:`,
+  `data:`, `//host`, âncora, `mailto:`, página inexistente) perdem o link e ficam como texto, com aviso no log.
+  Imagens do markdown são retiradas, `#` vira `##`, e travessão, emoji e `LIBRAS-SE` são corrigidos (§8 e checagem).
+- **Glossário (§6):** a primeira ocorrência de cada termo publicado de `glossario/termos.csv` vira link, fora
+  de subtítulos e de links. As variações (plural, "pessoas surdas", "Lei de Libras", "intérprete de Libras"...)
+  ficam em `APELIDOS` no script; termo novo no CSV usa o próprio nome e a sigla. `libras` minúsculo e a marca não linkam.
+- **Capa:** `assets/img/blog/<slug>/<slug>.{jpg,webp,avif}` em 1200x675 (o JPG abaixo de 300 KB é a og:image,
+  que o `og.py` aceita como está), com legenda e crédito em "Créditos e referências".
+- **Re-execução:** o post leva `<!-- agentes:origem aprovacao=<id> artefato=<id> versao=<n> -->` logo depois do
+  `<!DOCTYPE html>`. Rodar de novo o mesmo JSON (mesmos três valores) refaz o post igual, sem diferença nenhuma;
+  outro JSON com um slug que já existe é erro.
+- **Molde:** o cabeçalho, o rodapé e o CSS vêm do molde versionado `tools/blog/post-simples.html` (escolhido em vez de
+  copiar um post na hora, para não quebrar quando um post muda). O script avisa se o cabeçalho ou o rodapé do molde
+  ficarem diferentes dos do post de referência `tradutor-de-libras-se-destaca-no-rock-in-rio`: aí é atualizar o molde.
+
+Para testar localmente (Python 3.10+):
+
+```bash
+python3 -m pip install -r tools/blog/requirements-publicador.txt
+python3 tools/blog/novo_post.py --validar tools/blog/exemplo-entrada.json   # só valida
+cp tools/blog/exemplo-entrada.json blog/_entrada/libras-em-eventos-corporativos.json
+python3 tools/blog/novo_post.py                                              # monta, roda o §8, apaga o JSON
+git status   # para descartar o teste: git checkout -- . && git clean -fd (confira antes)
+```
+
+Dois posts publicados ao mesmo tempo mexem nos mesmos arquivos gerados (home, sitemap, "Continue lendo"): publique
+um por vez e, se o PR ficar em conflito com a `main`, recrie a branch a partir da `main` e mande o JSON de novo.
+
+---
+
 # TIER BAIXO, Post de baixa complexidade
 
 Base: **design system principal do site** (fonte `'M'` Museo Sans Rounded,

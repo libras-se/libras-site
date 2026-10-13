@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Como funciona, animação 3D da home</title>
+<style>
+/* ============================================================
+   LIBRAS.SE · "Simples, rápido e fácil" (home, seção #how)
+   Palco 1440x900 com fundo transparente. A janela do huet flutua em 3D
+   e as peças saltam da tela (preserve-3d), em loop de 12s:
+   0 a 3,9s Você envia · 3,9 a 8s Nós traduzimos · 8 a 12s Você baixa.
+   Regras: peso 1000 só no logo · nunca preto puro · sem travessões.
+   ============================================================ */
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300;font-display:block}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-500.woff2') format('woff2');font-weight:500;font-display:block}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900;font-display:block}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-1000.woff2') format('woff2');font-weight:1000;font-display:block}
+
+:root{
+  --bg:#f0fafa;--bg2:#e8f6f5;--bg3:#dff2f0;
+  --p1:#0e3538;--p2:#154245;--p3:#2a6069;
+  --teal:#4fd1c5;--tl:#81e6d9;--txl:#b2f5ea;
+  --teal-d:#2eb8c0;--teal-dd:#1a9ca4;--deep:#006a63;
+  --txt:#12393d;--txs:#3d6063;--txm:#7aacad;
+  --row:#e3ecea;--chip:#eef6f4;
+  --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
+  --gc:linear-gradient(135deg,#0e3538,#2a6069);
+  --shg:0 10px 30px rgba(79,209,197,.34);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1440px;height:900px;overflow:hidden;background:transparent}
+body{font-family:'M',system-ui,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+/* prévia no navegador (?fundo): mostra a cor da seção para julgar a integração */
+html[data-fundo] body{background:var(--bg2)}
+svg{display:block}
+.ic{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- 3D ---------- */
+.palco{position:absolute;inset:0;perspective:2100px;perspective-origin:50% 42%}
+.camera{position:absolute;left:200px;top:102px;width:1040px;height:650px;transform-style:preserve-3d}
+.flutua,.janela{position:absolute;inset:0;transform-style:preserve-3d}
+.chao{position:absolute;left:100px;right:100px;top:626px;height:90px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(14,53,56,.26),rgba(14,53,56,.10) 55%,transparent);filter:blur(14px)}
+/* espessura: lâminas empilhadas atrás da tela dão corpo ao "aparelho" quando ele gira */
+.esp{position:absolute;inset:0;border-radius:30px;background:linear-gradient(160deg,#d6eeeb,#b7dbd6)}
+.esp.ult{box-shadow:0 46px 90px rgba(14,53,56,.20),0 16px 34px rgba(14,53,56,.10)}
+
+/* ---------- JANELA (huet no navegador) ---------- */
+.tela{position:absolute;inset:0;border-radius:30px;overflow:hidden;background:linear-gradient(170deg,#ffffff 0%,#f6fcfb 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.95),0 0 0 1px rgba(79,209,197,.22)}
+.barra{position:absolute;left:0;top:0;right:0;height:56px;display:flex;align-items:center;gap:9px;padding:0 22px;
+  background:#f1f9f8;border-bottom:1px solid rgba(79,209,197,.2)}
+.barra i{width:12px;height:12px;border-radius:50%;background:#d3e3e1}
+.barra .url{margin-left:16px;width:420px;height:34px;border-radius:999px;background:#fff;display:flex;align-items:center;gap:9px;padding:0 16px;
+  font-weight:700;font-size:16px;color:var(--p3);box-shadow:inset 0 0 0 1px rgba(79,209,197,.28)}
+.barra .url svg{width:16px;height:16px;color:var(--deep)}
+.barra .logo{margin-left:auto;font-weight:1000;font-size:20px;letter-spacing:-.02em;background:var(--gb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.conteudo{position:absolute;left:0;top:56px;width:1040px;height:594px}
+.sc{position:absolute;inset:0}
+
+/* tipografia de app */
+.kick{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-dd)}
+.tit{font-weight:900;font-size:32px;letter-spacing:-.02em;color:var(--p1);line-height:1.1}
+.chipm{display:inline-flex;align-items:center;height:28px;padding:0 11px;border-radius:9px;background:var(--chip);font-weight:700;font-size:14px;color:var(--p3);white-space:nowrap}
+
+/* ---------- TELA A: envio ---------- */
+.a-cab{position:absolute;left:44px;top:30px}
+.a-cab .tit{margin-top:6px}
+.etapas{position:absolute;right:44px;top:44px;display:flex;align-items:center;gap:9px}
+.etapas .e{position:relative;display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--txm);white-space:nowrap}
+.etapas .b{position:relative;width:30px;height:30px}
+.etapas .b span{position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;font-weight:900;font-size:14px}
+.etapas .b .p{background:var(--chip);color:var(--txm)}
+.etapas .b .at{background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.etapas .b .ok{background:var(--deep);color:#fff}
+.etapas .b .ok svg{width:16px;height:16px;stroke-width:3.2}
+.etapas .nome{position:relative}
+.etapas .nome .ativo{position:absolute;left:0;top:0;color:var(--p1)}
+.etapas .traco{width:26px;height:3px;border-radius:2px;background:var(--row)}
+
+.zona{position:absolute;left:44px;top:116px;width:952px;height:250px;border-radius:24px;border:2px dashed rgba(26,156,164,.38);background:rgba(240,250,250,.85)}
+.zona .brilho-z{position:absolute;inset:-2px;border-radius:24px;border:2px solid var(--teal-d);box-shadow:0 0 0 9px rgba(79,209,197,.15),0 0 60px rgba(79,209,197,.45)}
+.vazia{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+.vazia .ico{width:68px;height:68px;border-radius:22px;display:grid;place-items:center;background:var(--gb);box-shadow:var(--shg);color:#fff;margin-bottom:8px}
+.vazia .ico svg{width:34px;height:34px}
+.vazia h3{font-weight:900;font-size:26px;color:var(--p1);letter-spacing:-.02em}
+.vazia p{font-weight:500;font-size:17px;color:var(--txs)}
+.arq{position:absolute;inset:0}
+.arq .mini{position:absolute;left:30px;top:30px;width:330px;height:186px;border-radius:16px;overflow:hidden;background:var(--p1);box-shadow:0 12px 30px rgba(14,53,56,.18)}
+.arq .mini img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.arq .mini .dur{position:absolute;right:10px;bottom:10px;padding:3px 8px;border-radius:7px;background:rgba(14,53,56,.75);color:#fff;font-weight:700;font-size:13px}
+.arq .info{position:absolute;left:392px;top:42px;right:32px}
+.arq .nome{font-weight:900;font-size:28px;color:var(--p1);letter-spacing:-.02em}
+.arq .meta{display:flex;gap:8px;margin-top:12px}
+.arq .barra-p{position:absolute;left:392px;right:32px;top:150px;height:10px;border-radius:999px;background:var(--row);overflow:hidden}
+.arq .barra-p i{position:absolute;inset:0;border-radius:999px;background:var(--gb);transform-origin:left;box-shadow:0 0 14px rgba(79,209,197,.7)}
+.arq .estado{position:absolute;left:392px;right:32px;top:174px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:16px;color:var(--txs)}
+.okp{display:inline-flex;align-items:center;gap:8px;color:var(--deep);font-weight:900}
+.okp b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.okp b svg{width:15px;height:15px;stroke-width:3.4}
+
+.prazo-l{position:absolute;left:44px;top:392px;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--txm)}
+.prazos{position:absolute;left:44px;top:420px;display:flex;gap:26px}
+.pz{position:relative;width:300px;height:76px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1.5px rgba(79,209,197,.25);display:flex;align-items:center;gap:14px;padding:0 18px}
+.pz .rel{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--chip);color:var(--p3)}
+.pz .rel svg{width:22px;height:22px}
+.pz b{display:block;font-weight:900;font-size:20px;color:var(--p1);letter-spacing:-.01em}
+.pz small{display:block;font-weight:500;font-size:14px;color:var(--txm);margin-top:2px}
+.pz .sel{position:absolute;inset:0;border-radius:18px;background:linear-gradient(135deg,rgba(79,209,197,.14),rgba(129,230,217,.06));
+  box-shadow:inset 0 0 0 2px var(--teal-d),0 12px 34px rgba(79,209,197,.28)}
+.pz .marca{position:absolute;right:16px;top:50%;margin-top:-14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.pz .marca svg{width:16px;height:16px;stroke-width:3.4}
+.a-rod{position:absolute;left:44px;right:44px;top:520px;display:flex;align-items:center;justify-content:space-between}
+.a-rod .passo{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--txm)}
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:15px;
+  font-weight:900;font-size:18px;color:#fff;background:var(--gb);box-shadow:var(--shg);white-space:nowrap}
+.botao svg{width:20px;height:20px;stroke-width:2.6}
+
+/* ---------- PLAYER (compartilhado entre B e C) ---------- */
+.player{position:absolute;left:44px;top:30px;width:620px;height:349px;border-radius:20px;overflow:hidden;background:var(--p1);
+  box-shadow:0 16px 40px rgba(14,53,56,.2)}
+.player .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 36%;transform-origin:58% 40%}
+.player .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,53,56,.28) 0%,transparent 26%,transparent 70%,rgba(14,53,56,.32) 100%)}
+.tc{position:absolute;left:14px;top:14px;display:flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:9px;background:rgba(14,53,56,.62);
+  color:#e7fbf8;font-weight:700;font-size:14px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.tc svg{width:12px;height:12px;fill:var(--tl);stroke:none}
+.entregue{position:absolute;left:14px;top:14px;display:flex;align-items:center;gap:8px;height:32px;padding:0 14px 0 6px;border-radius:999px;background:var(--gb);color:#fff;font-weight:900;font-size:15px;box-shadow:var(--shg)}
+.entregue b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.28)}
+.entregue svg{width:13px;height:13px;stroke-width:3.4}
+/* janela de Libras com fundo transparente: só a intérprete recortada, apoiada no pé do vídeo */
+.jan{position:absolute;left:424px;top:121px;width:204px;height:228px}
+.jan img,.cartao img{position:absolute;left:50%;bottom:0;height:100%;translate:-50% 0}
+.jan .caixa{position:absolute;inset:0;border-radius:17px;overflow:hidden}
+.jan .caixa .xadrez{background-size:16.8px 16.8px}
+.jan .moldura{position:absolute;inset:0;border-radius:17px;box-shadow:0 0 0 2px rgba(178,245,234,.95),0 24px 54px rgba(10,34,37,.38),0 0 42px rgba(79,209,197,.45)}
+.jan .livre{filter:drop-shadow(0 6px 12px rgba(10,34,37,.4))}
+/* linha que "remove o fundo" de cima para baixo */
+.jan .scan{position:absolute;left:-8px;right:-8px;top:-1px;height:3px;border-radius:3px;background:#e9fffb;box-shadow:0 0 10px 2px rgba(129,230,217,.95),0 0 26px 6px rgba(79,209,197,.55)}
+.jan .halo{position:absolute;left:-15%;right:-15%;bottom:-35%;height:95%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(129,230,217,.8),rgba(79,209,197,.28) 60%,transparent)}
+/* xadrez: o símbolo de transparência dos editores de vídeo */
+.xadrez{position:absolute;inset:0;background:repeating-conic-gradient(#dde9e7 0 25%,#ffffff 0 50%) 0 0/28px 28px}
+
+/* ---------- TELA B: tradução ---------- */
+.trilhas{position:absolute;left:44px;top:398px;width:620px}
+.tr{display:flex;align-items:center;gap:12px}
+.tr+.tr{margin-top:8px}
+.tr .rot{width:56px;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--txm)}
+.tr .faixa{position:relative;flex:1;height:42px;border-radius:10px;overflow:hidden;display:flex;gap:2px;background:var(--row)}
+.tr .faixa img{flex:1;min-width:0;height:100%;object-fit:cover}
+.tr .faixa.lib{height:28px;background:var(--chip)}
+.tr .faixa.lib i{position:absolute;left:0;top:0;bottom:0;width:100%;border-radius:10px;background:var(--gb);transform-origin:left;box-shadow:0 0 14px rgba(79,209,197,.6)}
+.tr .faixa.lib span{position:absolute;left:12px;top:50%;translate:0 -50%;font-weight:900;font-size:13px;color:#fff;letter-spacing:.04em}
+.cabeca{position:absolute;left:68px;top:-6px;width:2px;height:90px;background:var(--p1);border-radius:2px}
+.cabeca::before{content:'';position:absolute;left:-6px;top:-4px;width:14px;height:10px;border-radius:3px;background:var(--p1)}
+.b-rod{position:absolute;left:44px;top:504px;display:flex;align-items:center;gap:10px;font-weight:900;font-size:16px;color:var(--p1)}
+.b-rod span{font-weight:500;color:var(--txm)}
+
+.status{position:absolute;left:696px;top:30px;width:300px;height:520px;border-radius:22px;background:#f3faf9;box-shadow:inset 0 0 0 1px rgba(79,209,197,.22);padding:24px 22px}
+.status .kick{margin-bottom:22px}
+.passos{position:relative}
+.ps{position:relative;display:flex;gap:14px;height:86px}
+.ps .c{position:relative;flex:0 0 42px;height:42px}
+.ps .c span{position:absolute;inset:0;border-radius:50%;display:grid;place-items:center}
+.ps .c .p{background:#fff;color:var(--txm);box-shadow:inset 0 0 0 1.5px rgba(79,209,197,.3)}
+.ps .c .at{background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.ps .c .ok{background:var(--deep);color:#fff}
+.ps .c svg{width:20px;height:20px}
+.ps .c .ok svg{stroke-width:3.2}
+.ps .c .pulso{inset:-7px;border-radius:50%;box-shadow:0 0 0 2px rgba(79,209,197,.55)}
+.ps .tx b{display:block;font-weight:900;font-size:18px;color:var(--p1);margin-top:2px}
+.ps .tx small{display:block;font-weight:500;font-size:14px;color:var(--txm);margin-top:3px}
+.liga{position:absolute;left:20px;width:3px;height:44px;border-radius:2px;background:var(--row);overflow:hidden}
+.liga i{position:absolute;inset:0;background:var(--gb);transform-origin:top}
+.prz{position:absolute;left:22px;right:22px;bottom:24px;padding-top:18px;border-top:1px solid rgba(79,209,197,.2)}
+.prz .lin{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px;color:var(--txs)}
+.prz .lin b{font-weight:900;color:var(--p1)}
+.prz .bp{position:relative;height:8px;border-radius:999px;background:var(--row);overflow:hidden;margin-top:10px}
+.prz .bp i{position:absolute;inset:0;border-radius:999px;background:var(--gb);transform-origin:left}
+
+/* ---------- TELA C: entrega ---------- */
+.formatos{position:absolute;left:44px;top:398px;width:620px;display:flex;gap:16px}
+.fm{position:relative;flex:1;height:92px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1.5px rgba(79,209,197,.25);display:flex;align-items:center;gap:14px;padding:0 18px}
+.fm .rel{flex:0 0 46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--chip);color:var(--deep)}
+.fm .rel svg{width:24px;height:24px}
+.fm>span{position:relative}
+.fm .rel.alfa{background:repeating-conic-gradient(#d7e5e3 0 25%,#ffffff 0 50%) 0 0/11.5px 11.5px;box-shadow:inset 0 0 0 1.5px rgba(79,209,197,.35)}
+.fm .fm-sel{position:absolute;inset:0;border-radius:18px;background:linear-gradient(135deg,rgba(79,209,197,.14),rgba(129,230,217,.06));
+  box-shadow:inset 0 0 0 2px var(--teal-d),0 12px 30px rgba(79,209,197,.26)}
+.fm .marca{position:absolute;right:14px;top:14px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.fm .marca svg{width:14px;height:14px;stroke-width:3.4}
+.fm b{display:block;font-weight:900;font-size:17px;color:var(--p1)}
+.fm small{display:block;font-weight:500;font-size:14px;color:var(--txm);margin-top:3px}
+.c-rod{position:absolute;left:44px;top:512px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--txs)}
+.c-rod svg{width:18px;height:18px;color:var(--deep)}
+.baixar{position:absolute;left:696px;top:30px;width:300px;height:520px;border-radius:22px;background:#f3faf9;box-shadow:inset 0 0 0 1px rgba(79,209,197,.22);padding:26px 24px}
+.baixar .arq-ic{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:var(--gc);color:#fff;box-shadow:0 14px 30px rgba(14,53,56,.25);margin:10px 0 18px}
+.baixar .arq-ic svg{width:32px;height:32px}
+.baixar .nome{font-weight:900;font-size:19px;color:var(--p1);letter-spacing:-.01em;margin-top:8px}
+.baixar .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.baixar .chipm.esc{background:var(--p1);color:#fff}
+.bt-baixar{position:absolute;left:24px;right:24px;top:300px;height:60px;border-radius:16px;overflow:hidden;background:var(--gc);color:#fff;
+  box-shadow:0 14px 30px rgba(14,53,56,.25);display:grid;place-items:center;font-weight:900;font-size:18px}
+.bt-baixar .enche{position:absolute;inset:0;background:var(--gb);transform-origin:left}
+.bt-baixar .rotulo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px}
+.bt-baixar svg{width:22px;height:22px;stroke-width:2.6}
+.baixar .aviso{position:absolute;left:24px;right:24px;top:392px;display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:14px;line-height:1.45;color:var(--txs);padding-top:18px;border-top:1px solid rgba(79,209,197,.2)}
+.baixar .aviso svg{flex:0 0 20px;width:20px;height:20px;color:var(--deep);margin-top:1px}
+
+/* cursor */
+.cursor{position:absolute;left:0;top:0;width:30px;height:30px;filter:drop-shadow(0 5px 8px rgba(10,34,37,.3))}
+.clique{position:absolute;left:0;top:0;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;border:3px solid rgba(46,184,192,.85)}
+.brilho{position:absolute;top:-10%;bottom:-10%;left:0;width:34%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);pointer-events:none}
+
+/* ---------- PEÇAS QUE SALTAM DA TELA ---------- */
+.solta{position:absolute;left:0;top:0;transform-origin:0 0}
+/* arquivo arrastado (passo 1) */
+.voo{width:260px;padding:10px;border-radius:20px;background:#fff;box-shadow:0 30px 70px rgba(10,34,37,.28),0 0 0 1px rgba(79,209,197,.22)}
+.voo .mini{height:136px;border-radius:13px;overflow:hidden;background:var(--p1)}
+.voo .mini img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.voo .rot{display:flex;align-items:center;gap:8px;margin:10px 4px 2px;font-weight:900;font-size:16px;color:var(--p1)}
+.voo .rot svg{width:18px;height:18px;color:var(--deep)}
+/* selos "Simples / Rápido / Fácil" */
+.selo{display:flex;align-items:center;gap:14px;padding:12px 26px 12px 12px;border-radius:999px;white-space:nowrap;
+  background:linear-gradient(150deg,rgba(255,255,255,.98),rgba(244,252,251,.94));
+  box-shadow:0 26px 60px rgba(14,53,56,.20),0 0 0 1px rgba(79,209,197,.28),inset 0 1px 0 #fff}
+.selo .ico{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--gb);color:#fff;box-shadow:var(--shg)}
+.selo .ico svg{width:26px;height:26px;stroke-width:2.4}
+.selo b{display:block;font-weight:900;font-size:26px;letter-spacing:-.02em;line-height:1;background:linear-gradient(125deg,#0b8088 0%,#159aa3 45%,#2bb8bd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.selo small{display:block;font-weight:700;font-size:15px;color:var(--txs);margin-top:5px}
+/* intérprete (passo 2): sai da tela, grava na frente da câmera e pousa no canto do player */
+.cartao{width:340px;height:380px;border-radius:28px}
+.cartao .moldura{position:absolute;inset:0;border-radius:28px;
+  box-shadow:0 0 0 3px rgba(178,245,234,.95),0 40px 90px rgba(10,34,37,.38),0 0 70px rgba(79,209,197,.45)}
+.cartao .ci{position:absolute;inset:0;border-radius:28px;overflow:hidden}
+.cartao .ci-fundo{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,#2f7c83 0%,#1a5258 55%,#0e3538 100%)}
+.cartao .grav{position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:8px;height:32px;padding:0 13px;border-radius:999px;background:rgba(14,53,56,.62);
+  color:#e7fbf8;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.cartao .grav i{width:9px;height:9px;border-radius:50%;background:var(--tl);box-shadow:0 0 0 4px rgba(129,230,217,.25),0 0 12px var(--tl)}
+.cartao .tag-alfa{position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:9px;height:36px;padding:0 15px 0 10px;border-radius:999px;
+  background:rgba(14,53,56,.86);color:#e7fbf8;font-weight:900;font-size:15px;box-shadow:0 10px 24px rgba(10,34,37,.25)}
+.cartao .tag-alfa svg{width:20px;height:20px;color:var(--tl)}
+.cartao .nome-i{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;background:linear-gradient(180deg,transparent,rgba(14,53,56,.82));color:#fff}
+.cartao .nome-i b{display:block;font-weight:900;font-size:21px}
+.cartao .nome-i small{display:block;font-weight:500;font-size:14px;color:rgba(231,251,248,.8);margin-top:2px}
+/* notificação (passo 3) */
+.aviso3d{display:flex;align-items:center;gap:14px;width:396px;padding:14px 18px 14px 14px;border-radius:22px;
+  background:linear-gradient(150deg,rgba(255,255,255,.99),rgba(244,252,251,.95));
+  box-shadow:0 30px 70px rgba(14,53,56,.22),0 0 0 1px rgba(79,209,197,.28),inset 0 1px 0 #fff}
+.aviso3d .ico{flex:0 0 52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--gc);color:var(--tl)}
+.aviso3d .ico svg{width:28px;height:28px}
+.aviso3d .tx{flex:1}
+.aviso3d .top{display:flex;justify-content:space-between;align-items:center}
+.aviso3d .logo{font-weight:1000;font-size:13px;letter-spacing:.02em;background:var(--gb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.aviso3d .agora{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--txm)}
+.aviso3d b{display:block;font-weight:900;font-size:17px;color:var(--p1);margin-top:4px}
+/* arquivo baixado saindo da tela */
+.baixado{width:92px;height:112px;border-radius:20px;background:var(--gc);color:#fff;display:grid;place-items:center;
+  box-shadow:0 30px 60px rgba(10,34,37,.32),0 0 0 2px rgba(178,245,234,.8),0 0 50px rgba(79,209,197,.5)}
+.baixado svg{width:42px;height:42px;stroke-width:2.4}
+.baixado span{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-weight:900;font-size:12px;letter-spacing:.08em;color:var(--tl)}
+</style>
+</head>
+<body>
+<div class="palco">
+  <div class="camera" id="camera">
+    <div class="chao" id="chao"></div>
+    <div class="flutua" id="flutua">
+      <div class="janela">
+        <div class="esp" style="transform:translateZ(-4px)"></div>
+        <div class="esp" style="transform:translateZ(-8px)"></div>
+        <div class="esp" style="transform:translateZ(-12px)"></div>
+        <div class="esp" style="transform:translateZ(-16px)"></div>
+        <div class="esp" style="transform:translateZ(-20px)"></div>
+        <div class="esp ult" style="transform:translateZ(-24px)"></div>
+
+        <div class="tela">
+          <div class="barra"><i></i><i></i><i></i>
+            <span class="url"><svg class="ic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>huet.libras.se</span>
+            <span class="logo">LIBRAS.SE</span>
+          </div>
+
+          <div class="conteudo">
+            <!-- A: envio -->
+            <section class="sc" id="scA">
+              <div class="a-cab"><div class="kick">Novo envio</div><div class="tit">Selecionar arquivos</div></div>
+              <div class="etapas">
+                <span class="e"><span class="b"><span class="p">1</span><span class="at" id="e1at">1</span><span class="ok" id="e1ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span><span class="nome">Vídeo<span class="ativo" id="e1n">Vídeo</span></span></span>
+                <span class="traco"></span>
+                <span class="e"><span class="b"><span class="p">2</span><span class="at" id="e2at">2</span></span><span class="nome">Prazo<span class="ativo" id="e2n">Prazo</span></span></span>
+                <span class="traco"></span>
+                <span class="e"><span class="b"><span class="p">3</span></span>Customização</span>
+                <span class="traco"></span>
+                <span class="e"><span class="b"><span class="p">4</span></span>Carrinho</span>
+              </div>
+              <div class="zona" id="zona">
+                <div class="brilho-z" id="brilhoZ"></div>
+                <div class="vazia" id="vazia">
+                  <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5M4 20h16"/></svg></div>
+                  <h3>Solte seus vídeos aqui</h3>
+                  <p>ou clique nesta área para escolher da pasta</p>
+                </div>
+                <div class="arq" id="arq">
+                  <div class="mini"><img src="/assets/img/banco-editorial/LIBRAS.SE_8.webp" alt=""><span class="dur">00:30</span></div>
+                  <div class="info">
+                    <div class="nome">campanha-30s.mp4</div>
+                    <div class="meta"><span class="chipm">1920 × 1080</span><span class="chipm">16:9</span><span class="chipm">30 fps</span><span class="chipm">00:30</span></div>
+                  </div>
+                  <div class="barra-p"><i id="barraP"></i></div>
+                  <div class="estado"><span id="pct">Enviando 0%</span><span class="okp" id="enviado"><b><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></b>Enviado</span></div>
+                </div>
+              </div>
+              <div class="prazo-l">Prazo de entrega</div>
+              <div class="prazos">
+                <div class="pz"><span class="rel"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></span><span><b>7 dias</b><small>Padrão</small></span></div>
+                <div class="pz"><span class="rel"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span><b>24 horas</b><small>Rápido</small></span></div>
+                <div class="pz" id="pz3"><span class="sel" id="pzSel"></span><span class="rel" style="position:relative"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span><span style="position:relative"><b>1 hora</b><small>Expresso</small></span><span class="marca" id="pzOk"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></div>
+              </div>
+              <div class="a-rod"><span class="passo">Etapa 1 de 4</span><span class="botao" id="proximo">Próximo<svg class="ic" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></span></div>
+            </section>
+
+            <!-- B: tradução -->
+            <section class="sc" id="scB">
+              <div class="trilhas">
+                <div class="tr"><span class="rot">Vídeo</span><div class="faixa" id="faixa"></div></div>
+                <div class="tr"><span class="rot">Libras</span><div class="faixa lib"><i id="faixaLib"></i><span id="faixaLibT">Intérprete</span></div></div>
+                <div class="cabeca" id="cabeca"></div>
+              </div>
+              <div class="b-rod">campanha-30s.mp4<span>00:30 · 16:9</span></div>
+              <div class="status">
+                <div class="kick">Status da tradução</div>
+                <div class="passos">
+                  <div class="liga" style="top:46px"><i id="l1"></i></div>
+                  <div class="liga" style="top:132px"><i id="l2"></i></div>
+                  <div class="liga" style="top:218px"><i id="l3"></i></div>
+                  <div class="ps" id="ps1"><span class="c"><span class="p"><svg class="ic" viewBox="0 0 24 24"><path d="M4 13h4l2 3h4l2-3h4"/><path d="M4 13 6.5 5h11L20 13v6H4z"/></svg></span><span class="ok" id="ps1ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span>
+                    <span class="tx"><b>Recebido</b><small>Seu vídeo chegou</small></span></div>
+                  <div class="ps" id="ps2"><span class="c"><span class="pulso" id="ps2pulso"></span><span class="p"><svg class="ic" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-6-2.34l-3.6-3.6a2 2 0 0 1 2.830-2.82L7 15"/></svg></span><span class="at" id="ps2at"><svg class="ic" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-6-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span><span class="ok" id="ps2ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span>
+                    <span class="tx"><b>Intérprete gravando</b><small>Intérprete real, em estúdio</small></span></div>
+                  <div class="ps" id="ps3"><span class="c"><span class="p"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="at" id="ps3at"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="ok" id="ps3ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span>
+                    <span class="tx"><b>Em revisão</b><small>Equipe de qualidade</small></span></div>
+                  <div class="ps" id="ps4"><span class="c"><span class="p"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5 12 15.5l5-5M4.5 20h15"/></svg></span><span class="ok" id="ps4ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span>
+                    <span class="tx"><b>Pronto para baixar</b><small>Avisamos você na hora</small></span></div>
+                </div>
+                <div class="prz">
+                  <div class="lin"><span>Prazo</span><b>Expresso · até 1 hora</b></div>
+                  <div class="bp"><i id="przBar"></i></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- C: entrega -->
+            <section class="sc" id="scC">
+              <div class="formatos">
+                <div class="fm"><span class="rel"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><rect x="13" y="11" width="5.5" height="5.5" rx="1"/></svg></span><span><b>Libras inserida</b><small>Pronto para publicar</small></span></div>
+                <div class="fm"><span class="fm-sel" id="fmSel"></span><span class="rel alfa"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.4"/><path d="M5.5 20c1.1-3.5 3.6-5.4 6.5-5.4s5.4 1.9 6.5 5.4"/></svg></span><span><b>Fundo transparente</b><small>ProRes 4444 com alpha</small></span><span class="marca" id="fmOk"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></div>
+              </div>
+              <div class="c-rod"><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Revisado pela equipe LIBRAS.SE</div>
+              <div class="baixar">
+                <div class="kick">Entrega</div>
+                <div class="arq-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m10 11.5 4.5 2.5-4.5 2.5z"/></svg></div>
+                <div class="nome">campanha-30s_libras.mov</div>
+                <div class="meta"><span class="chipm esc">ProRes 4444</span><span class="chipm">Alpha</span><span class="chipm">1920 × 1080</span></div>
+                <div class="bt-baixar" id="btBaixar">
+                  <span class="enche" id="enche"></span>
+                  <span class="rotulo" id="rotBaixar"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5 12 15.5l5-5M4.5 20h15"/></svg>Baixar vídeo</span>
+                  <span class="rotulo" id="rotBaixando"><span id="pctB">Baixando 0%</span></span>
+                  <span class="rotulo" id="rotBaixado"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Baixado</span>
+                </div>
+                <div class="aviso"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg><span>Também enviamos o link por e-mail e WhatsApp.</span></div>
+              </div>
+            </section>
+
+            <!-- player compartilhado (B e C) -->
+            <div class="player" id="player">
+              <img class="foto" id="foto" src="/assets/img/banco-editorial/LIBRAS.SE_8.webp" alt="">
+              <div class="veu"></div>
+              <div class="tc" id="tc"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg><span id="tcT">00:00:00:00</span></div>
+              <div class="entregue" id="entregue"><b><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></b>Entregue</div>
+              <div class="jan" id="jan">
+                <span class="halo" id="anel"></span>
+                <div class="moldura" id="janMoldura"></div>
+                <div class="caixa" id="janCaixa"><div class="xadrez" id="janXadrez"></div><img class="interp" alt=""></div>
+                <img class="interp livre" id="janLivre" alt="">
+                <span class="scan" id="scan"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="clique" id="clique"></div>
+          <div class="cursor" id="cursor"><svg viewBox="0 0 24 24"><path d="M4 2.5v17l4.6-4.3 3 6.6 3-1.4-3-6.4h6.3z" fill="#0e3538" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+          <div class="brilho" id="brilho"></div>
+        </div>
+
+        <!-- peças em 3D (coordenadas da janela, origem no canto superior esquerdo) -->
+        <div class="solta voo" id="voo">
+          <div class="mini"><img src="/assets/img/banco-editorial/LIBRAS.SE_8.webp" alt=""></div>
+          <div class="rot"><svg class="ic" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m10 11.5 4.5 2.5-4.5 2.5z"/></svg>campanha-30s.mp4</div>
+        </div>
+        <div class="solta selo" id="selo1"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5M4 20h16"/></svg></span><span><b>Simples</b><small>É só arrastar o vídeo</small></span></div>
+        <div class="solta selo" id="selo2"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span><span><b>Rápido</b><small>Entrega em até 1 hora</small></span></div>
+        <div class="solta selo" id="selo3"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5 12 15.5l5-5M4.5 20h15"/></svg></span><span><b>Fácil</b><small>Baixe pronto para publicar</small></span></div>
+        <div class="solta cartao" id="cartao">
+          <div class="moldura" id="moldura"></div>
+          <div class="ci" id="ci"><div class="ci-fundo" id="ciFundo"></div><div class="xadrez" id="ciXadrez"></div><img class="interp" alt=""></div>
+          <div class="grav" id="grav"><i></i>Gravando</div>
+          <div class="tag-alfa" id="tagAlfa"><svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke-dasharray="3 2.6"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 17c.9-2.3 2.5-3.5 4.5-3.5s3.6 1.2 4.5 3.5"/></svg>Fundo transparente</div>
+          <div class="nome-i" id="nomeI"><b>Intérprete real</b><small>Tradução humana em Libras</small></div>
+        </div>
+        <div class="solta aviso3d" id="aviso3d">
+          <span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-6-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span>
+          <span class="tx"><span class="top"><span class="logo">LIBRAS.SE</span><span class="agora">agora</span></span><b>Seu vídeo com Libras está pronto</b></span>
+        </div>
+        <div class="solta baixado" id="baixado"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5 12 15.5l5-5"/></svg><span>.MOV</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { Stage, DUR, trilha, janela, aCada, sequencia, prog, easeOut, easeInOut } from "./stage.js";
+
+if (new URLSearchParams(location.search).has("fundo")) document.documentElement.dataset.fundo = "";
+
+const $ = (id) => document.getElementById(id);
+const T = (x, y, z = 0, extra = "") => ({ transform: `translate3d(${x}px,${y}px,${z}px) ${extra}`.trim() });
+const vis = (o, extra = {}) => ({ opacity: o, ...extra });
+
+await Stage.iniciar(async () => {
+  // miniaturas da trilha de vídeo
+  const faixa = $("faixa");
+  for (let i = 0; i < 8; i++)
+    faixa.insertAdjacentHTML("beforeend", `<img src="/assets/img/banco-editorial/LIBRAS.SE_8.webp" style="object-position:${18 + i * 9}% ${30 + (i % 3) * 8}%" alt="">`);
+
+  // ---------------------------------------------------------------- câmera
+  // gira para mostrar a profundidade a cada troca de passo; o estado final é igual ao inicial (loop)
+  const cam = (rx, ry, z = 0) => ({ transform: `translateZ(${z}px) rotateX(${rx}deg) rotateY(${ry}deg)` });
+  trilha("#camera", [
+    [0, cam(9, -15, 0), "suave"],
+    [3.8, cam(7, -9, 10), "inOut"],
+    [4.7, cam(6, 13, 40), "suave"],
+    [7.85, cam(7, 8, 40), "inOut"],
+    [8.75, cam(9, -6, 30), "suave"],
+    [11.15, cam(9, -10, 16), "inOut"],
+    [12, cam(9, -15, 0)],
+  ]);
+  // flutuação contínua (períodos que dividem o loop)
+  aCada((t) => {
+    const y = Math.sin((t / 6) * Math.PI * 2) * 9;
+    const r = Math.sin((t / 12) * Math.PI * 2) * 0.5;
+    $("flutua").style.transform = `translateY(${y}px) rotateZ(${r}deg)`;
+    $("chao").style.transform = `translateZ(-120px) scale(${1 - y / 160})`;
+    $("chao").style.opacity = String(0.9 + y / 90);
+  });
+  // brilho de vidro passando a cada giro
+  trilha("#brilho", [
+    [0, { translate: "-120% 0", opacity: 0 }],
+    [3.85, { translate: "-120% 0", opacity: 1 }, "inOut"],
+    [4.75, { translate: "330% 0", opacity: 1 }],
+    [4.76, { translate: "-120% 0", opacity: 0 }],
+    [7.9, { translate: "-120% 0", opacity: 1 }, "inOut"],
+    [8.8, { translate: "330% 0", opacity: 1 }],
+    [8.81, { translate: "-120% 0", opacity: 0 }],
+    [11.15, { translate: "-120% 0", opacity: 1 }, "inOut"],
+    [11.95, { translate: "330% 0", opacity: 1 }],
+    [11.96, { translate: "-120% 0", opacity: 0 }],
+  ]);
+
+  // ---------------------------------------------------------------- telas
+  const fora = (x) => ({ opacity: 0, translate: `${x}px 0`, filter: "blur(8px)" });
+  const dentro = { opacity: 1, translate: "0 0", filter: "blur(0px)" };
+  trilha("#scA", [[0, dentro], [3.9, dentro, "in"], [4.35, fora(-60)], [11.45, fora(60), "out"], [11.98, dentro]]);
+  trilha("#scB", [[0, fora(60)], [3.95, fora(60), "out"], [4.6, dentro], [8.0, dentro, "in"], [8.38, fora(-40)]]);
+  trilha("#scC", [[0, fora(60)], [8.1, fora(60), "out"], [8.75, dentro], [11.1, dentro, "in"], [11.5, fora(-50)]]);
+  trilha("#player", [
+    [0, { opacity: 0, transform: "translateX(70px) scale(.94)", filter: "blur(8px)" }],
+    [3.95, { opacity: 0, transform: "translateX(70px) scale(.94)", filter: "blur(8px)" }, "out"],
+    [4.65, { opacity: 1, transform: "none", filter: "blur(0px)" }],
+    [11.1, { opacity: 1, transform: "none", filter: "blur(0px)" }, "in"],
+    [11.5, { opacity: 0, transform: "translateX(-50px) scale(.96)", filter: "blur(8px)" }],
+  ]);
+
+  // selos "Simples / Rápido / Fácil": sempre no mesmo canto, metade para fora da janela
+  const SELO = {
+    dIn: 0.6, dOut: 0.45,
+    de: { ...T(-40, 610, 290, "rotateY(18deg)"), opacity: 0, filter: "blur(10px)" },
+    para: { ...T(-60, 576, 160, "rotateY(0deg)"), opacity: 1, filter: "blur(0px)" },
+    sai: { ...T(-30, 540, 290, "rotateY(-8deg)"), opacity: 0, filter: "blur(10px)" },
+  };
+
+  // ---------------------------------------------------------------- passo 1: você envia
+  // arquivo voa de fora da tela (perto da câmera) e pousa na zona de upload
+  trilha("#voo", [
+    [0, { ...T(-30, 420, 260, "rotateZ(-16deg) rotateY(24deg) scale(1)"), opacity: 0, filter: "blur(8px)" }],
+    [0.3, { ...T(-30, 420, 260, "rotateZ(-16deg) rotateY(24deg) scale(1)"), opacity: 0, filter: "blur(8px)" }, "linear"],
+    [0.55, { ...T(0, 380, 250, "rotateZ(-13deg) rotateY(20deg) scale(1)"), opacity: 1, filter: "blur(0px)" }, "out"],
+    [1.3, { ...T(390, 168, 150, "rotateZ(-3deg) rotateY(0deg) scale(1)"), opacity: 1, filter: "blur(0px)" }, "suave"],
+    [1.62, { ...T(390, 202, 4, "rotateZ(0deg) rotateY(0deg) scale(.86)"), opacity: 1, filter: "blur(0px)" }, "in"],
+    [1.76, { ...T(390, 202, 0, "rotateZ(0deg) rotateY(0deg) scale(.8)"), opacity: 0, filter: "blur(0px)" }],
+  ]);
+  trilha("#brilhoZ", [[0, vis(0)], [1.3, vis(0), "out"], [1.6, vis(1)], [2.3, vis(0)]]);
+  trilha("#vazia", [[0, vis(1, { scale: "1" })], [1.5, vis(1, { scale: "1" }), "in"], [1.7, vis(0, { scale: ".94" })], [10.5, vis(0, { scale: ".94" })], [10.6, vis(1, { scale: "1" })]]);
+  trilha("#arq", [[0, vis(0, { translate: "0 14px" })], [1.66, vis(0, { translate: "0 14px" }), "out"], [2.05, vis(1, { translate: "0 0" })], [10.5, vis(1)], [10.6, vis(0, { translate: "0 14px" })]]);
+  trilha("#barraP", [[0, { scale: "0 1" }], [1.85, { scale: "0 1" }, "suave"], [2.9, { scale: "1 1" }], [10.5, { scale: "1 1" }], [10.6, { scale: "0 1" }]]);
+  aCada((t) => {
+    const p = Math.round(easeInOut(prog(t, 1.85, 2.9)) * 100);
+    $("pct").textContent = p < 100 ? `Enviando ${p}%` : "100%";
+  });
+  trilha("#enviado", [[0, vis(0, { scale: ".6" })], [2.9, vis(0, { scale: ".6" }), "back"], [3.25, vis(1, { scale: "1" })], [10.5, vis(1)], [10.6, vis(0, { scale: ".6" })]]);
+  trilha("#pzSel", [[0, vis(0)], [3.02, vis(0), "out"], [3.25, vis(1)], [10.5, vis(1)], [10.6, vis(0)]]);
+  trilha("#pzOk", [[0, vis(0, { scale: ".4" })], [3.05, vis(0, { scale: ".4" }), "back"], [3.4, vis(1, { scale: "1" })], [10.5, vis(1)], [10.6, vis(0, { scale: ".4" })]]);
+  trilha("#pz3", [[0, { scale: "1" }], [2.98, { scale: "1" }, "out"], [3.06, { scale: ".965" }, "back"], [3.3, { scale: "1" }]]);
+  trilha("#proximo", [[0, { scale: "1" }], [3.5, { scale: "1" }, "out"], [3.58, { scale: ".94" }, "back"], [3.8, { scale: "1" }]]);
+  // barra de etapas: Vídeo conclui, Prazo fica ativa
+  trilha("#e1at", [[0, vis(1)], [3.05, vis(1)], [3.25, vis(0)], [10.5, vis(0)], [10.6, vis(1)]]);
+  trilha("#e1ok", [[0, vis(0, { scale: ".5" })], [3.05, vis(0, { scale: ".5" }), "back"], [3.35, vis(1, { scale: "1" })], [10.5, vis(1)], [10.6, vis(0, { scale: ".5" })]]);
+  trilha("#e1n", [[0, vis(1)]]);
+  trilha("#e2at", [[0, vis(0, { scale: ".6" })], [3.1, vis(0, { scale: ".6" }), "back"], [3.4, vis(1, { scale: "1" })], [10.5, vis(1)], [10.6, vis(0, { scale: ".6" })]]);
+  trilha("#e2n", [[0, vis(0)], [3.1, vis(0)], [3.4, vis(1)], [10.5, vis(1)], [10.6, vis(0)]]);
+  janela("#selo1", { ...SELO, ini: 0.85, fim: 3.7 });
+
+  // ---------------------------------------------------------------- passo 2: nós traduzimos
+  trilha("#ps1ok", [[0, vis(0, { scale: ".5" })], [4.45, vis(0, { scale: ".5" }), "back"], [4.8, vis(1, { scale: "1" })]]);
+  trilha("#l1", [[0, { scale: "1 0" }], [4.7, { scale: "1 0" }, "suave"], [5.0, { scale: "1 1" }]]);
+  trilha("#ps2at", [[0, vis(0)], [4.9, vis(0), "out"], [5.15, vis(1)], [7.3, vis(1)], [7.45, vis(0)]]);
+  trilha("#ps2pulso", [
+    [0, vis(0, { scale: ".8" })], [5.1, vis(0, { scale: ".8" }), "out"], [5.7, vis(1, { scale: "1.25" })], [5.71, vis(0, { scale: ".8" }), "out"],
+    [6.3, vis(1, { scale: "1.25" })], [6.31, vis(0, { scale: ".8" }), "out"], [6.9, vis(1, { scale: "1.25" })], [6.91, vis(0, { scale: ".8" })],
+  ]);
+  trilha("#ps2ok", [[0, vis(0, { scale: ".5" })], [7.3, vis(0, { scale: ".5" }), "back"], [7.6, vis(1, { scale: "1" })]]);
+  trilha("#l2", [[0, { scale: "1 0" }], [7.35, { scale: "1 0" }, "suave"], [7.55, { scale: "1 1" }]]);
+  trilha("#ps3at", [[0, vis(0)], [7.45, vis(0), "out"], [7.55, vis(1)], [7.7, vis(1)], [7.8, vis(0)]]);
+  trilha("#ps3ok", [[0, vis(0, { scale: ".5" })], [7.65, vis(0, { scale: ".5" }), "back"], [7.9, vis(1, { scale: "1" })]]);
+  trilha("#l3", [[0, { scale: "1 0" }], [7.62, { scale: "1 0" }, "suave"], [7.78, { scale: "1 1" }]]);
+  trilha("#ps4ok", [[0, vis(0, { scale: ".5" })], [7.75, vis(0, { scale: ".5" }), "back"], [7.98, vis(1, { scale: "1" })]]);
+  trilha("#ps2", [[0, vis(.5)], [4.9, vis(.5)], [5.15, vis(1)]]);
+  trilha("#ps3", [[0, vis(.5)], [7.4, vis(.5)], [7.55, vis(1)]]);
+  trilha("#ps4", [[0, vis(.5)], [7.7, vis(.5)], [7.85, vis(1)]]);
+  trilha("#przBar", [[0, { scale: "0 1" }], [4.5, { scale: "0.04 1" }, "linear"], [7.9, { scale: "1 1" }]]);
+  trilha("#faixaLib", [[0, { scale: "0 1" }], [5.1, { scale: "0 1" }, "linear"], [7.3, { scale: "1 1" }]]);
+  trilha("#faixaLibT", [[0, vis(0)], [5.4, vis(0)], [5.7, vis(1)]]);
+  trilha("#cabeca", [[0, { translate: "0 0" }], [4.6, { translate: "0 0" }, "linear"], [7.9, { translate: "548px 0" }]]);
+  // relógio do vídeo do cliente
+  aCada((t) => {
+    const s = Math.max(0, t - 4.3) * 1.0;
+    const f = Math.floor((s % 1) * 30);
+    $("tcT").textContent = `00:00:${String(Math.floor(s)).padStart(2, "0")}:${String(f).padStart(2, "0")}`;
+  });
+  trilha("#tc", [[0, vis(1)], [8.1, vis(1)], [8.3, vis(0)]]);
+  trilha("#foto", [[0, { scale: "1.05" }], [4.0, { scale: "1.05" }, "linear"], [11.7, { scale: "1.16" }]]);
+  // a intérprete sai de dentro da tela e grava na frente da câmera; o fundo do estúdio vira xadrez
+  // (fundo transparente), ela pousa no canto do vídeo e uma varredura remove o xadrez: fica só ela, recortada
+  // sobre a cena, apoiada no pé do quadro
+  const JX = 44 + 424, JY = 56 + 30 + 121; // canto da área da intérprete no player (coords. da janela)
+  trilha("#cartao", [
+    [0, { ...T(676, 210, 0, "rotateY(0deg) scale(.5)"), opacity: 0 }],
+    [4.85, { ...T(676, 210, 0, "rotateY(0deg) scale(.5)"), opacity: 0 }, "out"],
+    [5.55, { ...T(630, 112, 250, "rotateY(-10deg) scale(1)"), opacity: 1 }, "suave"],
+    [6.1, { ...T(626, 100, 262, "rotateY(-12deg) scale(1)"), opacity: 1 }, "suave"],
+    [6.75, { ...T(630, 110, 250, "rotateY(-10deg) scale(1)"), opacity: 1 }, "inOut"],
+    [7.35, { ...T(JX, JY, 1, "rotateY(0deg) scale(.6)"), opacity: 1 }, "linear"],
+    [7.42, { ...T(JX, JY, 0, "rotateY(0deg) scale(.6)"), opacity: 0 }],
+  ]);
+  trilha("#grav", [[0, vis(1)], [5.9, vis(1)], [6.05, vis(0)]]);
+  trilha("#nomeI", [[0, vis(1)], [5.95, vis(1)], [6.15, vis(0)]]);
+  trilha("#ciFundo", [[0, vis(1)], [6.0, vis(1), "suave"], [6.3, vis(0)]]);
+  trilha("#ciXadrez", [[0, vis(0)], [6.0, vis(0), "suave"], [6.3, vis(1)]]);
+  trilha("#tagAlfa", [[0, vis(0, { scale: ".8" })], [6.1, vis(0, { scale: ".8" }), "back"], [6.35, vis(1, { scale: "1" })], [6.85, vis(1, { scale: "1" })], [7.0, vis(0, { scale: ".9" })]]);
+  trilha("#jan", [[0, vis(0)], [7.33, vis(0)], [7.37, vis(1)]]);
+  trilha("#janXadrez", [[0, { clipPath: "inset(0% 0 0 0)" }], [7.5, { clipPath: "inset(0% 0 0 0)" }, "inOut"], [7.92, { clipPath: "inset(100% 0 0 0)" }]]);
+  trilha("#scan", [
+    [0, { translate: "0 0", opacity: 0 }], [7.44, { translate: "0 0", opacity: 0 }, "linear"],
+    [7.5, { translate: "0 0", opacity: 1 }, "inOut"], [7.92, { translate: "0 228px", opacity: 1 }, "linear"], [8.0, { translate: "0 228px", opacity: 0 }],
+  ]);
+  trilha("#janMoldura", [[0, vis(1)], [7.72, vis(1), "suave"], [7.98, vis(0)]]);
+  // sem o fundo, a imagem deixa de ser cortada pela borda da caixa (o cotovelo aparece inteiro) e ganha sombra
+  trilha("#janLivre", [[0, vis(0)], [7.8, vis(0), "suave"], [7.97, vis(1)]]);
+  trilha("#janCaixa", [[0, vis(1)], [7.97, vis(1), "linear"], [7.98, vis(0)]]);
+  trilha("#anel", [[0, vis(0, { scale: ".7" })], [7.78, vis(0, { scale: ".7" }), "out"], [8.05, vis(1, { scale: "1" }), "suave"], [8.7, vis(0, { scale: "1.1" })]]);
+  janela("#selo2", { ...SELO, ini: 5.25, fim: 7.75 });
+  await sequencia(".interp", "interprete", { em: 4.85 });
+
+  // ---------------------------------------------------------------- passo 3: você baixa
+  trilha("#entregue", [[0, vis(0, { scale: ".6" })], [8.35, vis(0, { scale: ".6" }), "back"], [8.7, vis(1, { scale: "1" })]]);
+  trilha("#fmSel", [[0, vis(0)], [8.8, vis(0), "out"], [9.1, vis(1)]]);
+  trilha("#fmOk", [[0, vis(0, { scale: ".4" })], [8.9, vis(0, { scale: ".4" }), "back"], [9.2, vis(1, { scale: "1" })]]);
+  janela("#aviso3d", {
+    ini: 8.2, fim: 11.05, dIn: 0.7, dOut: 0.45,
+    de: { ...T(640, 4, 250, "rotateX(-18deg)"), opacity: 0, filter: "blur(10px)" },
+    para: { ...T(640, -8, 140, "rotateX(0deg)"), opacity: 1, filter: "blur(0px)" },
+    sai: { ...T(630, 30, 220, "rotateX(-10deg)"), opacity: 0, filter: "blur(10px)" },
+  });
+  janela("#selo3", { ...SELO, ini: 8.85, fim: 11.05 });
+  trilha("#btBaixar", [[0, { scale: "1" }], [9.5, { scale: "1" }, "out"], [9.6, { scale: ".95" }, "back"], [9.85, { scale: "1" }]]);
+  trilha("#enche", [[0, { scale: "0 1" }], [9.65, { scale: "0 1" }, "suave"], [10.4, { scale: "1 1" }]]);
+  trilha("#rotBaixar", [[0, vis(1)], [9.6, vis(1)], [9.7, vis(0)]]);
+  trilha("#rotBaixando", [[0, vis(0)], [9.65, vis(0)], [9.75, vis(1)], [10.38, vis(1)], [10.45, vis(0)]]);
+  trilha("#rotBaixado", [[0, vis(0, { scale: ".7" })], [10.4, vis(0, { scale: ".7" }), "back"], [10.65, vis(1, { scale: "1" })]]);
+  aCada((t) => { $("pctB").textContent = `Baixando ${Math.round(easeInOut(prog(t, 9.65, 10.4)) * 100)}%`; });
+  // o arquivo baixado sai da tela em direção a quem assiste
+  const BX = 696 + 150 - 46, BY = 56 + 30 + 300 - 26;
+  trilha("#baixado", [
+    [0, { ...T(BX, BY, 0, "rotateZ(0deg) scale(.6)"), opacity: 0 }],
+    [10.35, { ...T(BX, BY, 0, "rotateZ(0deg) scale(.6)"), opacity: 0 }, "out"],
+    [10.55, { ...T(BX + 6, BY - 70, 120, "rotateZ(4deg) scale(1)"), opacity: 1 }, "in"],
+    [11.1, { ...T(BX + 110, BY + 170, 400, "rotateZ(14deg) scale(1.05)"), opacity: 0 }],
+  ]);
+
+  // ---------------------------------------------------------------- cursor (coords. da tela)
+  const PZ = [44 + 2 * 326 + 150, 56 + 420 + 40]; // "1 hora"
+  const PX = [996 - 66, 56 + 520 + 28]; // "Próximo"
+  const BB = [696 + 150 + 10, 56 + 30 + 300 + 32]; // "Baixar vídeo"
+  const cur = (x, y, s = 1) => ({ transform: `translate(${x}px,${y}px) scale(${s})` });
+  trilha("#cursor", [
+    [0, { ...cur(560, 380), opacity: 0 }],
+    [2.25, { ...cur(560, 380), opacity: 0 }, "out"],
+    [2.45, { ...cur(600, 400), opacity: 1 }, "inOut"],
+    [2.96, { ...cur(...PZ), opacity: 1 }, "out"],
+    [3.02, { ...cur(...PZ, 0.85), opacity: 1 }, "out"],
+    [3.12, { ...cur(...PZ), opacity: 1 }, "inOut"],
+    [3.5, { ...cur(...PX), opacity: 1 }, "out"],
+    [3.56, { ...cur(...PX, 0.85), opacity: 1 }, "out"],
+    [3.66, { ...cur(...PX), opacity: 1 }, "in"],
+    [3.9, { ...cur(PX[0] + 30, PX[1] + 30), opacity: 0 }],
+    [8.9, { ...cur(560, 600), opacity: 0 }, "out"],
+    [9.1, { ...cur(600, 560), opacity: 1 }, "inOut"],
+    [9.5, { ...cur(...BB), opacity: 1 }, "out"],
+    [9.56, { ...cur(...BB, 0.85), opacity: 1 }, "out"],
+    [9.66, { ...cur(...BB), opacity: 1 }, "inOut"],
+    [10.3, { ...cur(BB[0] + 40, BB[1] + 120), opacity: 1 }, "in"],
+    [10.6, { ...cur(BB[0] + 50, BB[1] + 140), opacity: 0 }],
+  ]);
+  const cl = (x, y, s, o) => ({ transform: `translate(${x}px,${y}px) scale(${s})`, opacity: o });
+  trilha("#clique", [
+    [0, cl(...PZ, 0.3, 0)], [3.0, cl(...PZ, 0.3, 0)], [3.02, cl(...PZ, 0.3, 1), "out"], [3.45, cl(...PZ, 1.4, 0)],
+    [3.54, cl(...PX, 0.3, 0)], [3.56, cl(...PX, 0.3, 1), "out"], [3.95, cl(...PX, 1.4, 0)],
+    [9.54, cl(...BB, 0.3, 0)], [9.56, cl(...BB, 0.3, 1), "out"], [9.95, cl(...BB, 1.4, 0)],
+  ]);
+});
+</script>
+</body>
+</html>

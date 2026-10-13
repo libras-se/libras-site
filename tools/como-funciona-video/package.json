@@ -1,0 +1,14 @@
+{
+  "name": "libras-se-como-funciona-video",
+  "private": true,
+  "type": "module",
+  "description": "Animação 3D 'Simples, rápido e fácil' da home (#how): cena HTML/CSS capturada quadro a quadro com Playwright e codificada com canal alfa (WebM VP9 + HEVC para Safari).",
+  "scripts": {
+    "midia": "node midia.mjs",
+    "stills": "node render.mjs --stills",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}

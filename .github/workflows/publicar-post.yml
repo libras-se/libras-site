@@ -27,7 +27,9 @@ concurrency:
 
 jobs:
   publicar:
-    runs-on: ubuntu-latest
+    # Imagem fixa: o ubuntu-latest passa para o Ubuntu 26 em outubro de 2026, e uma troca de
+    # imagem não deve mudar a publicação sem ninguém ver.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Recusa a branch principal

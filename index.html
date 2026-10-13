@@ -417,8 +417,10 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;touch-action:manipu
 #notai{padding:112px 0;position:relative;overflow:hidden;z-index:1}
 .na-wbg{position:absolute;font-family:'M',sans-serif;font-weight:900;font-size:24vw;color:rgba(10,34,37,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.06em;line-height:1}
 .na-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2}
-/* mapa à esquerda no desktop; no HTML (e no celular) o texto vem primeiro */
-@media(min-width:769px){.na-grid>.map-outer{order:-1}}
+/* no HTML (e no celular) o texto vem primeiro */
+/* mapa à esquerda no desktop, colado no texto: vão menor e o mapa alinhado à direita da coluna,
+   avançando 24px (a faixa à direita do SVG é oceano, por causa das ilhas de Trindade) */
+@media(min-width:769px){.na-grid{gap:24px}.na-grid>.map-outer{order:-1;margin-right:-24px}.na-grid .map-wrap{margin:0 0 0 auto}}
 .na-h{font-family:'M',sans-serif;font-weight:900;font-size:clamp(2rem,4.2vw,3.2rem);color:var(--p1);line-height:1.04;letter-spacing:-.035em;margin-bottom:14px}
 .na-h em{font-style:normal;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .na-sub{font-size:.93rem;font-weight:300;color:var(--txs);line-height:1.8;margin-bottom:26px;max-width:400px}
@@ -1015,7 +1017,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="map-blob" aria-hidden="true"></div>
         <div class="map-wrap">
           <div class="map-stage">
-            <img class="map-img-el" src="assets/img/home/brazil-map.svg?v=3" alt="Mapa do Brasil com cidades onde a LIBRAS.SE atua" width="500" height="560" loading="lazy" decoding="async"/>
+            <img class="map-img-el" src="assets/img/home/brazil-map.svg?v=4" alt="Mapa do Brasil com cidades onde a LIBRAS.SE atua" width="500" height="560" loading="lazy" decoding="async"/>
             <div class="pins" id="pinsLayer" aria-label="Cidades com intérpretes disponíveis">
               <div class="pin" style="--x:30.77%;--y:8.16%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Boa Vista</span></div></div>
               <div class="pin" style="--x:32.16%;--y:22.68%"><div class="pin-body"><div class="pdot"><div class="pring" aria-hidden="true"></div></div><span class="pname">Manaus</span></div></div>

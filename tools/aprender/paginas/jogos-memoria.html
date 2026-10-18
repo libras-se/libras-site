@@ -146,7 +146,7 @@ META-->
         <h2 id="como">Três passos, nenhuma regra difícil</h2>
       </div>
       <div class="how">
-        <div><b>1</b><h3>Escolha o tema e o nível</h3><p>Sentimentos, comida, animais, rotina, verbos ou todos misturados. Comece com 6 pares e vá aumentando.</p></div>
+        <div><b>1</b><h3>Escolha o tema e o nível</h3><p>Sentimentos, comida, animais, cores, alfabeto, times de futebol e mais, ou todos misturados. Comece com 6 pares e vá aumentando.</p></div>
         <div><b>2</b><h3>Vire duas cartas</h3><p>Uma mostra o sinal em vídeo, a outra a palavra. Observe a configuração de mão, o movimento e a expressão facial.</p></div>
         <div><b>3</b><h3>Forme todos os pares</h3><p>Quanto menos jogadas, melhor. No fim, reveja cada sinal no nosso vocabulário em vídeo.</p></div>
       </div>
@@ -187,7 +187,7 @@ META-->
 (function(){
   var SINAIS = {{SINAIS_JSON}};
   var VID = '/assets/videos/sinais/', ILU = '/assets/img/sinais/';
-  var TEMAS = [['', 'Todos'], ['Sentimentos', 'Sentimentos'], ['Alimentos', 'Comida'], ['Animais', 'Animais'], ['Cotidiano', 'Rotina e casa'], ['Verbos', 'Verbos'], ['Família e pessoas', 'Pessoas']];
+  var TEMAS = [['', 'Todos'], ['Sentimentos', 'Sentimentos'], ['Alimentos', 'Comida'], ['Animais', 'Animais'], ['Cotidiano', 'Rotina e casa'], ['Verbos', 'Verbos'], ['Família e pessoas', 'Pessoas'], ['Cores', 'Cores'], ['Lugares', 'Lugares'], ['Alfabeto', 'Alfabeto'], ['Times de futebol', 'Futebol'], ['Estados', 'Estados']];
   var $ = function(id){ return document.getElementById(id); };
   var board = $('board'), live = $('live');
   var tema = '', pares = 6, deck = [], abertas = [], feitos = 0, jogadas = 0, t0 = 0, timer = null, travado = false;

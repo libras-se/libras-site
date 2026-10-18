@@ -88,12 +88,23 @@ O script faz quatro coisas:
 
 Páginas de sinal vêm de `sinal/sinais.json` (textos). Sem vídeo publicado, a página sai como "vídeo em preparação".
 
+Dois campos opcionais por sinal em `sinal/sinais.json`:
+- `publicado_em`: data do lote em que o sinal entrou. Vai para o `uploadDate` do vídeo e para o sitemap; sem ela, vale a data geral.
+- `corte`: publica a página com o corte de outro item do app. Serve para sinais criados com "Usar como outro sinal…",
+  que ganham o slug da palavra digitada. Exemplo: `{"slug": "letra-r", "corte": "r"}` publica o "R" que a Bruna separou
+  de uma tomada da letra S em `/sinal/letra-r/`. Se o item `letra-r` do app for aprovado depois, o `publicar.py` avisa e
+  mantém o corte indicado.
+
+Depois de publicar, rode `python3 tools/aprender/build.py`: os jogos (memória, quiz), o bingo, o caça-palavras e a página
+do alfabeto leem a lista de sinais com vídeo.
+
 Para o commit, entram:
 - `assets/videos/sinais/`
 - `sinal/`
 - `sitemap.xml`
 - `jogo/index.html`
 - `tools/sinais/aprovacoes.json`
+- as páginas geradas por `tools/aprender/build.py` (jogos, atividades, alfabeto)
 
 ## Formato
 

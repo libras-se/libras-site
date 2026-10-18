@@ -208,7 +208,8 @@ a{{text-decoration:none;color:inherit}}
 {page_css.strip()}
 {PARTIALS["footer_css"]}
 </style>
-{PARTIALS["promo-css_html"]}</head>
+{PARTIALS["promo-css_html"]}<script src="/assets/js/libras-lead.js" defer></script>
+</head>
 <body>
 {GTM_NOSCRIPT}
 {header}

@@ -355,6 +355,7 @@ section+section{margin-top:52px}
 @media(max-width:420px){.promo-cta span{display:none}.promo-cta{padding:6px 10px}}
 @media(prefers-reduced-motion:reduce){#promo{opacity:1!important;transform:none!important;transition:height .45s}#promo::before,.promo-badge svg{animation:none!important}.promo-first .promo-badge,.promo-first .promo-txt,.promo-first .promo-cta{opacity:1;animation:none!important}}
 </style>
+<script src="/assets/js/libras-lead.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -707,7 +708,10 @@ document.getElementById('reportForm').addEventListener('submit', function (e) {
   var desc = document.getElementById('descricao').value.trim();
   if (!tipo && !desc) { document.getElementById('tipo').focus(); return; }
   var message = 'Observação sobre https://libras.se/sinal/janela/\nTipo: ' + tipo + '\n' + desc;
-  window.open('https://wa.me/5548996367511?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+  var waUrl = 'https://wa.me/5548996367511?text=' + encodeURIComponent(message);
+  // com o script de captação, a mensagem ganha o "(ref …)" que liga o contato à página
+  if (window.LibrasLead && window.LibrasLead.openWhatsApp) window.LibrasLead.openWhatsApp(waUrl);
+  else window.open(waUrl, '_blank', 'noopener,noreferrer');
   document.getElementById('reportOk').style.display = 'block';
 });
 </script>

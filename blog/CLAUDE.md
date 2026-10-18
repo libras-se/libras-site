@@ -129,7 +129,11 @@ cta_type:               # vídeo | soluções | jogo | glossário
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="alternate" type="application/atom+xml" title="Blog LIBRAS.SE" href="https://libras.se/blog/feed.xml">
+<script src="/assets/js/libras-lead.js" defer></script>
 ```
+
+O `libras-lead.js` (última linha, antes do `</head>`) põe o código de origem `(ref …)` nos links do
+WhatsApp e envia os formulários ao CRM. Sem ele, o clique no WhatsApp do post não chega ao CRM.
 
 A imagem de compartilhamento (OG) é sempre um **JPG 1200×675 abaixo de 300 KB** (WebP e PNG não
 aparecem em todas as redes). `python3 tools/seo/og.py` gera o JPG a partir da capa, se faltar, e
@@ -867,6 +871,7 @@ if (statRow) new IntersectionObserver((ents,obs)=>ents.forEach(e=>{if(e.isInters
 - [ ] Nível de complexidade escolhido conforme o tipo de conteúdo (§1)
 - [ ] `<title>` com até 60 caracteres (título + ` | LIBRAS.SE` se couber); `<meta name="description">` com 120 a 160
 - [ ] OG/Twitter, canonical, `theme-color`, favicon e GA presentes
+- [ ] `<script src="/assets/js/libras-lead.js" defer></script>` uma vez no `<head>` (§3)
 - [ ] JSON-LD `BlogPosting` + `BreadcrumbList` (+ `FAQPage` se houver FAQ)
 - [ ] Header canônico com badge `Blog` e `aria-current="page"`; links do Blog → `/blog/`
 - [ ] **Todo termo da área linkado ao glossário** na 1ª ocorrência (§6, conferir `termos.csv`)

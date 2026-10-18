@@ -384,6 +384,7 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 @media(max-width:420px){.promo-cta span{display:none}.promo-cta{padding:6px 10px}}
 @media(prefers-reduced-motion:reduce){#promo{opacity:1!important;transform:none!important;transition:height .45s}#promo::before,.promo-badge svg{animation:none!important}.promo-first .promo-badge,.promo-first .promo-txt,.promo-first .promo-cta{opacity:1;animation:none!important}}
 </style>
+<script src="/assets/js/libras-lead.js" defer></script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -523,9 +524,14 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
           <label for="s-sug">Sugest&atilde;o</label>
           <textarea id="s-sug" name="suggestion" placeholder="Descreva o termo, a corre&ccedil;&atilde;o ou a adi&ccedil;&atilde;o que voc&ecirc; prop&otilde;e&hellip;" required></textarea>
         </div>
+        <!-- honeypot antispam: invisível para humanos, bots preenchem -->
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;height:1px;width:1px;overflow:hidden">
+          <label for="s-website">N&atilde;o preencha este campo</label>
+          <input type="text" id="s-website" name="website" tabindex="-1" autocomplete="off"/>
+        </div>
         <div class="sform-acts">
           <button type="submit" class="btn bp" id="sbtn">Enviar sugest&atilde;o &rarr;</button>
-          <span class="sform-note">Respondemos em at&eacute; 5 dias &uacute;teis.</span>
+          <span class="sform-note">Respondemos em at&eacute; 5 dias &uacute;teis. Ao enviar, voc&ecirc; concorda com a <a href="/politica/" style="color:inherit;text-decoration:underline">Pol&iacute;tica de Privacidade</a>.</span>
         </div>
         <div id="sform-status" role="alert"></div>
       </form>
@@ -917,6 +923,19 @@ document.getElementById('sform').addEventListener('submit', async function(e) {
 
   btn.disabled = true; btn.textContent = 'Enviando…';
   status.className = ''; status.textContent = '';
+
+  // Captação no CRM interno — em paralelo; o n8n continua sendo quem confirma o envio
+  if (window.LibrasLead) {
+    const hp = document.getElementById('s-website');
+    window.LibrasLead.send({
+      formId: 'glossario-sugestao',
+      formType: 'glossary_suggestion',
+      website: hp ? hp.value : undefined,
+      contact: { name: name.slice(0, 200), email: email.slice(0, 200) },
+      consent: { privacyPolicyAccepted: true },
+      request: { description: suggestion.slice(0, 4000), additionalData: { tipo: type } }
+    });
+  }
 
   try {
     const res = await fetch(WEBHOOK_URL, {

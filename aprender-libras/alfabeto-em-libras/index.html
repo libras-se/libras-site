@@ -400,6 +400,18 @@ a{text-decoration:none;color:inherit}
 .legenda{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.78rem;color:var(--txm)}
 .legenda span{display:inline-flex;align-items:center;gap:6px}
 .legenda i{width:8px;height:8px;border-radius:50%;background:var(--teal-d);display:inline-block}
+.sb-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.sb-card{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:18px;box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--tr),box-shadow var(--tr)}
+.sb-card:hover{transform:translateY(-3px);box-shadow:var(--shm)}
+.sb-card:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sb-vis{display:block;aspect-ratio:4/3;background:#f0fafa;position:relative;overflow:hidden}
+.sb-vis img,.sb-vis video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.45);transform-origin:40% 25%}
+.sb-txt{padding:10px 12px 12px}
+.sb-txt b{font-size:.95rem;font-weight:900;color:var(--p1);letter-spacing:-.02em}
+.sb-txt small{display:none}
+@media(max-width:1060px){.sb-grid{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:820px){.sb-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:520px){.sb-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
 .nome-box{background:var(--gc);border-radius:var(--rx);padding:30px 32px;color:#fff;position:relative;overflow:hidden}
 .nome-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 90% 20%,rgba(79,209,197,.18),transparent 65%);pointer-events:none}
 .nome-box>*{position:relative}
@@ -583,6 +595,92 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="abc" id="abc" aria-label="Alfabeto manual da Libras"></div>
       <div class="legenda"><span><i></i> letra com movimento</span><span>No modo treino, toque numa mão para revelar a letra.</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="em-video" aria-labelledby="t-video">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Em vídeo</span>
+        <h2 id="t-video">Veja as letras em vídeo</h2>
+        <p>Passe o mouse ou toque no cartão para ver a letra feita pela nossa intérprete, e abra a página de cada uma para exemplos de uso. As letras A, N, P, S, X, Y e Z estão em revisão e entram em breve.</p>
+      </div>
+      <div class="sb-grid"><a class="sb-card" href="/sinal/letra-b/" data-video="/assets/videos/sinais/letra-b.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-b.webp" alt="Intérprete fazendo o sinal de Letra B em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra B</b><small>Sinal da letra B no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-c/" data-video="/assets/videos/sinais/letra-c.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-c.webp" alt="Intérprete fazendo o sinal de Letra C em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra C</b><small>Sinal da letra C no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-d/" data-video="/assets/videos/sinais/letra-d.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-d.webp" alt="Intérprete fazendo o sinal de Letra D em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra D</b><small>Sinal da letra D no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-e/" data-video="/assets/videos/sinais/letra-e.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-e.webp" alt="Intérprete fazendo o sinal de Letra E em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra E</b><small>Sinal da letra E no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-f/" data-video="/assets/videos/sinais/letra-f.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-f.webp" alt="Intérprete fazendo o sinal de Letra F em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra F</b><small>Sinal da letra F no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-g/" data-video="/assets/videos/sinais/letra-g.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-g.webp" alt="Intérprete fazendo o sinal de Letra G em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra G</b><small>Sinal da letra G no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-h/" data-video="/assets/videos/sinais/letra-h.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-h.webp" alt="Intérprete fazendo o sinal de Letra H em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra H</b><small>Sinal da letra H no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-i/" data-video="/assets/videos/sinais/letra-i.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-i.webp" alt="Intérprete fazendo o sinal de Letra I em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra I</b><small>Sinal da letra I no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-j/" data-video="/assets/videos/sinais/letra-j.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-j.webp" alt="Intérprete fazendo o sinal de Letra J em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra J</b><small>Sinal da letra J no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-k/" data-video="/assets/videos/sinais/letra-k.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-k.webp" alt="Intérprete fazendo o sinal de Letra K em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra K</b><small>Sinal da letra K no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-l/" data-video="/assets/videos/sinais/letra-l.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-l.webp" alt="Intérprete fazendo o sinal de Letra L em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra L</b><small>Sinal da letra L no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-m/" data-video="/assets/videos/sinais/letra-m.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-m.webp" alt="Intérprete fazendo o sinal de Letra M em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra M</b><small>Sinal da letra M no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-o/" data-video="/assets/videos/sinais/letra-o.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-o.webp" alt="Intérprete fazendo o sinal de Letra O em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra O</b><small>Sinal da letra O no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-q/" data-video="/assets/videos/sinais/letra-q.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-q.webp" alt="Intérprete fazendo o sinal de Letra Q em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra Q</b><small>Sinal da letra Q no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-r/" data-video="/assets/videos/sinais/letra-r.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-r.webp" alt="Intérprete fazendo o sinal de Letra R em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra R</b><small>Sinal da letra R no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-t/" data-video="/assets/videos/sinais/letra-t.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-t.webp" alt="Intérprete fazendo o sinal de Letra T em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra T</b><small>Sinal da letra T no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-u/" data-video="/assets/videos/sinais/letra-u.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-u.webp" alt="Intérprete fazendo o sinal de Letra U em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra U</b><small>Sinal da letra U no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-v/" data-video="/assets/videos/sinais/letra-v.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-v.webp" alt="Intérprete fazendo o sinal de Letra V em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra V</b><small>Sinal da letra V no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a>
+<a class="sb-card" href="/sinal/letra-w/" data-video="/assets/videos/sinais/letra-w.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/letra-w.webp" alt="Intérprete fazendo o sinal de Letra W em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Letra W</b><small>Sinal da letra W no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</small></span>
+</a></div>
     </div>
   </section>
 
@@ -868,6 +966,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.fonts.ready.then(function(){ window.print(); });
   });
   window.addEventListener('afterprint', function(){ document.body.classList.remove('imprimindo'); });
+})();
+</script><script>
+(function(){
+  // Vídeo da letra no hover (desktop) ou no primeiro toque (celular), como no vocabulário
+  var touch = window.matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.sb-card[data-video]').forEach(function(card){
+    var vis = card.querySelector('.sb-vis'), v = null;
+    function play(){
+      if (!v) { v = document.createElement('video'); v.src = card.dataset.video; v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('aria-hidden', 'true'); vis.appendChild(v); }
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    }
+    function stop(){ if (v) v.pause(); }
+    if (touch) {
+      card.addEventListener('click', function(e){ if (!card.classList.contains('tocando')) { e.preventDefault(); card.classList.add('tocando'); play(); } });
+    } else {
+      card.addEventListener('mouseenter', play); card.addEventListener('mouseleave', stop);
+      card.addEventListener('focus', play); card.addEventListener('blur', stop);
+    }
+  });
 })();
 </script>
 <script id="promo-js">

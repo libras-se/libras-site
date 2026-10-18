@@ -272,8 +272,10 @@ Termos:
 
 ## Ferramentas e experiencias
 
-- https://libras.se/sinal/ - indice com mais de 70 sinais em Libras em video, gravados por interpretes da LIBRAS.SE, com ilustracao, definicao e exemplos; busca por palavra e categoria.
+- https://libras.se/sinal/ - indice com mais de 140 sinais em Libras em video, gravados por interpretes da LIBRAS.SE, com definicao, exemplos e ilustracao em parte deles; busca por palavra e categoria (sentimentos, alimentos, animais, cores, lugares, estados, times de futebol, alfabeto e outras).
 - https://libras.se/sinal/desculpa/ - pagina individual do sinal de "desculpa".
+- https://libras.se/sinal/letra-b/ - exemplo de pagina de letra do alfabeto manual (datilologia), com video da letra.
+- https://libras.se/sinal/flamengo/ - exemplo de pagina de time de futebol, com o sinal usado pelas torcidas surdas.
 - https://libras.se/jogo/ - jogo educativo para descobrir e praticar sinais.
 
 ## Regras editoriais para respostas

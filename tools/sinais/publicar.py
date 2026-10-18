@@ -42,9 +42,16 @@ def fold(s):
     return re.sub(r"[^a-z0-9]+", "-", unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()).strip("-")
 
 
-publicar, barrados = {}, []
+# Sinal criado no app com "Usar como outro sinal…" ganha o slug da palavra digitada (ex.: "r"). Para publicar com o
+# slug da página, a entrada de sinal/sinais.json aponta o corte: {"slug": "letra-r", "corte": "r"}.
+PAGINA = {s["corte"]: s["slug"] for s in json.loads((ROOT / "sinal" / "sinais.json").read_text())["sinais"] if s.get("corte")}
+
+publicar, corte_de, barrados, ignorados = {}, {}, [], []
 for slug, d in sorted(ap["itens"].items()):
     if d.get("status") != "aprovado":
+        continue
+    if slug in PAGINA.values() and slug not in PAGINA:  # a página publica outro corte
+        ignorados.append(slug)
         continue
     a = d.get("aprovado", {})
     base = work / "revisao" / slug / f"t{a.get('tomada')}"
@@ -53,7 +60,8 @@ for slug, d in sorted(ap["itens"].items()):
     if not meta or meta["assinatura"] != a.get("assinatura"):
         barrados.append(slug)
         continue
-    publicar[slug] = base
+    publicar[PAGINA.get(slug, slug)] = base
+    corte_de[PAGINA.get(slug, slug)] = slug
 
 mudou = []
 DEST.mkdir(parents=True, exist_ok=True)
@@ -73,11 +81,11 @@ for f in sorted(DEST.glob("*")):
 # ilustrações
 ilus, ilu_barradas = {}, []
 for slug, base in publicar.items():
-    pasta = work / "ilustracoes" / slug
+    pasta = work / "ilustracoes" / corte_de[slug]
     versoes = sorted((int(f.stem[1:]) for f in pasta.glob("v*.json") if f.stem[1:].isdigit()), reverse=True)
     if not versoes:
         continue
-    d = ap["itens"][slug].get("ilustracao", {})
+    d = ap["itens"][corte_de[slug]].get("ilustracao", {})
     if d.get("status") == "aprovado":
         k = d["versao"]
     elif args.preview_ilustracoes:
@@ -85,7 +93,7 @@ for slug, base in publicar.items():
     else:
         continue
     meta = json.loads((pasta / f"v{k}.json").read_text())
-    if meta["assinatura_video"] != ap["itens"][slug]["aprovado"]["assinatura"]:
+    if meta["assinatura_video"] != ap["itens"][corte_de[slug]]["aprovado"]["assinatura"]:
         ilu_barradas.append(slug)
         continue
     ilus[slug] = pasta / f"v{k}.png"
@@ -122,6 +130,10 @@ if novo != texto:
 print(f"Aprovados e publicáveis: {len(publicar)}")
 if barrados:
     print(f"Barrados (corte mudou depois da aprovação, aprove de novo): {', '.join(barrados)}")
+if ignorados:
+    print(f"Aprovados, mas a página publica outro corte (campo \"corte\" em sinal/sinais.json): {', '.join(ignorados)}")
+if PAGINA:
+    print("Publicados com outro slug: " + ", ".join(f"{c} -> {s}" for c, s in PAGINA.items() if s in publicar))
 print(f"Ilustrações publicáveis: {len(ilus)}" + (" (prévia: inclui não aprovadas)" if args.preview_ilustracoes else ""))
 if ilu_barradas:
     print(f"Ilustrações desatualizadas (o corte do vídeo mudou, gere de novo): {', '.join(ilu_barradas)}")

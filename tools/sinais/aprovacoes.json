@@ -1,10 +1,45 @@
 {
  "_leia": "Decisões do app tools/sinais/aprovar.py. Não edite à mão com o app aberto.",
  "ajustes": {
+  "ajuda#2": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:05:50-03:00",
+   "fim": 498.18,
+   "ini": 487.58,
+   "por": "bruna"
+  },
+  "amarelo#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:28:31-03:00",
+   "fim": 173.03,
+   "ini": 168.1,
+   "por": "bruna"
+  },
   "ansioso#2": {
    "arquivo": "1-003",
    "fim": 218.885,
    "ini": 211.21
+  },
+  "bebe#1": {
+   "arquivo": "1-003",
+   "em": "2026-10-16T17:12:48-03:00",
+   "fim": 583.24,
+   "ini": 579.25,
+   "por": "bruna"
+  },
+  "boa-tarde#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:54:52-03:00",
+   "fim": 424.71,
+   "ini": 415.982,
+   "por": "bruna"
+  },
+  "deodoro-da-fonseca#1": {
+   "arquivo": "presidentes + times",
+   "em": "2026-10-16T19:05:52-03:00",
+   "fim": 89.83,
+   "ini": 81.1,
+   "por": "bruna"
   },
   "ensinar#1": {
    "arquivo": "1-003",
@@ -16,14 +51,262 @@
    "fim": 324.541,
    "ini": 315.04
   },
+  "jair-bolsonaro#1": {
+   "arquivo": "presidentes + times",
+   "em": "2026-10-16T19:04:13-03:00",
+   "fim": 59.71,
+   "ini": 54.87,
+   "por": "bruna"
+  },
+  "leao#2": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:18:12-03:00",
+   "fim": 59.66,
+   "ini": 51.43,
+   "por": "bruna"
+  },
+  "letra-b#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:08:13-03:00",
+   "fim": 588.94,
+   "ini": 586.08,
+   "por": "bruna"
+  },
+  "letra-c#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:09:30-03:00",
+   "fim": 591.82,
+   "ini": 588.97,
+   "por": "bruna"
+  },
+  "letra-d#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:10:28-03:00",
+   "fim": 602.45,
+   "ini": 597.92,
+   "por": "bruna"
+  },
+  "letra-e#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:11:19-03:00",
+   "fim": 608.32,
+   "ini": 602.89,
+   "por": "bruna"
+  },
+  "letra-f#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:13:40-03:00",
+   "fim": 612.92,
+   "ini": 608.57,
+   "por": "bruna"
+  },
+  "letra-g#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:16:04-03:00",
+   "fim": 617.95,
+   "ini": 613.07,
+   "por": "bruna"
+  },
+  "letra-h#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:17:26-03:00",
+   "fim": 625.01,
+   "ini": 617.93,
+   "por": "bruna"
+  },
+  "letra-i#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:18:21-03:00",
+   "fim": 629.54,
+   "ini": 624.75,
+   "por": "bruna"
+  },
+  "letra-m#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:20:46-03:00",
+   "fim": 652.92,
+   "ini": 648.76,
+   "por": "bruna"
+  },
+  "letra-q#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T18:22:17-03:00",
+   "fim": 675.34,
+   "ini": 670.72,
+   "por": "bruna"
+  },
+  "marrom#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:33:29-03:00",
+   "fim": 197.15,
+   "ini": 192.85,
+   "por": "bruna"
+  },
+  "mato-grosso-do-sul#2": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:51:23-03:00",
+   "fim": 104.11,
+   "ini": 97.15,
+   "por": "bruna"
+  },
+  "michel-temer#1": {
+   "arquivo": "presidentes + times",
+   "em": "2026-10-16T19:03:22-03:00",
+   "fim": 54.93,
+   "ini": 49.62,
+   "por": "bruna"
+  },
+  "montanha#3": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:53:05-03:00",
+   "fim": 335.24,
+   "ini": 330.84,
+   "por": "bruna"
+  },
+  "para#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:52:30-03:00",
+   "fim": 116.25,
+   "ini": 109.743,
+   "por": "bruna"
+  },
+  "por-favor#2": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:57:21-03:00",
+   "fim": 466.88,
+   "ini": 456.39,
+   "por": "bruna"
+  },
+  "praia#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:37:11-03:00",
+   "fim": 253.754,
+   "ini": 247.81,
+   "por": "bruna"
+  },
+  "preto#2": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:35:19-03:00",
+   "fim": 225.5,
+   "ini": 215.22,
+   "por": "bruna"
+  },
+  "rio-grande-do-norte#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:54:20-03:00",
+   "fim": 167.88,
+   "ini": 161.33,
+   "por": "bruna"
+  },
+  "rio-grande-do-sul#2": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:55:13-03:00",
+   "fim": 174.59,
+   "ini": 167.78,
+   "por": "bruna"
+  },
+  "rondonia#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:55:59-03:00",
+   "fim": 180.79,
+   "ini": 174.59,
+   "por": "bruna"
+  },
+  "roxo#1": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:30:14-03:00",
+   "fim": 183.37,
+   "ini": 178.645,
+   "por": "bruna"
+  },
+  "santa-catarina#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:56:46-03:00",
+   "fim": 191.98,
+   "ini": 187.34,
+   "por": "bruna"
+  },
+  "santos#1": {
+   "arquivo": "presidentes + times",
+   "em": "2026-10-16T19:08:44-03:00",
+   "fim": 171.89,
+   "ini": 167.9,
+   "por": "bruna"
+  },
+  "sao-paulo#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:57:52-03:00",
+   "fim": 198.44,
+   "ini": 191.74,
+   "por": "bruna"
+  },
+  "sergipe#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T18:58:50-03:00",
+   "fim": 205.33,
+   "ini": 198.67,
+   "por": "bruna"
+  },
+  "tocantins#1": {
+   "arquivo": "estados",
+   "em": "2026-10-16T19:00:29-03:00",
+   "fim": 211.58,
+   "ini": 205.27,
+   "por": "bruna"
+  },
+  "vasco#1": {
+   "arquivo": "presidentes + times",
+   "em": "2026-10-16T19:07:27-03:00",
+   "fim": 152.63,
+   "ini": 147.4,
+   "por": "bruna"
+  },
+  "vermelho#2": {
+   "arquivo": "2-002",
+   "em": "2026-10-16T17:26:54-03:00",
+   "fim": 130.22,
+   "ini": 120.3,
+   "por": "bruna"
+  },
   "viajar#2": {
    "arquivo": "1-003",
    "fim": 395.328,
    "ini": 387.62
   }
  },
- "extras": {},
+ "extras": {
+  "r": {
+   "arquivo": "2-002",
+   "bloco": "alfabeto",
+   "categoria": "Alfabeto",
+   "fim": 681.047,
+   "ini": 677.31,
+   "origem": "letra-s#1",
+   "palavra": "R",
+   "por": "bruna"
+  }
+ },
  "itens": {
+  "abelha": {
+   "aprovado": {
+    "assinatura": "c952e921c7ba",
+    "em": "2026-10-16T17:23:58-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:23:58-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "acre": {
+   "atualizado_em": "2026-10-16T18:48:53-03:00",
+   "nota": "recorte, cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "agua": {
    "aprovado": {
     "assinatura": "a841348d6217",
@@ -41,11 +324,38 @@
    "status": "aprovado",
    "tomada": 1
   },
-  "ajudar": {
-   "atualizado_em": "2026-10-08T09:47:38-03:00",
+  "ajuda": {
+   "aprovado": {
+    "assinatura": "5379847682f8",
+    "em": "2026-10-16T18:06:17-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T18:06:17-03:00",
    "nota": "",
-   "status": "ajustar",
+   "por": "bruna",
+   "status": "aprovado",
    "tomada": 2
+  },
+  "ajudar": {
+   "atualizado_em": "2026-10-13T21:01:19-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "alagoas": {
+   "aprovado": {
+    "assinatura": "6d5268429115",
+    "em": "2026-10-16T18:49:06-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:49:06-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
   },
   "alegre": {
    "aprovado": {
@@ -62,6 +372,39 @@
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "amapa": {
+   "aprovado": {
+    "assinatura": "87b0fec014c1",
+    "em": "2026-10-16T18:49:25-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:49:25-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "amarelo": {
+   "aprovado": {
+    "assinatura": "dccd48a486f4",
+    "em": "2026-10-16T17:28:44-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:28:44-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "amazonas": {
+   "atualizado_em": "2026-10-16T18:49:32-03:00",
+   "nota": "recorte",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "amigo": {
@@ -149,6 +492,78 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "athletico-paranaense": {
+   "aprovado": {
+    "assinatura": "cfb2ac176f5d",
+    "em": "2026-10-16T19:09:16-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:16-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "atletico-mineiro": {
+   "aprovado": {
+    "assinatura": "01fbaefaaa92",
+    "em": "2026-10-16T19:09:53-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "avai": {
+   "aprovado": {
+    "assinatura": "40bd0a8210ee",
+    "em": "2026-10-16T19:09:25-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:25-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "avo": {
+   "atualizado_em": "2026-10-16T17:05:40-03:00",
+   "nota": "cortar na mão de repouso. ",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "azul": {
+   "aprovado": {
+    "assinatura": "20be6a83090e",
+    "em": "2026-10-16T17:27:21-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:27:21-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "bahia": {
+   "aprovado": {
+    "assinatura": "0855d128635a",
+    "em": "2026-10-16T18:49:39-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:49:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "banana": {
    "aprovado": {
     "assinatura": "fbb69f4c310a",
@@ -183,9 +598,45 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "bebe": {
+   "aprovado": {
+    "assinatura": "cf1f1ca226ec",
+    "em": "2026-10-16T17:13:09-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:13:09-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "boa-noite": {
+   "atualizado_em": "2026-10-16T17:55:28-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "boa-tarde": {
+   "aprovado": {
+    "assinatura": "bf4c30c04453",
+    "em": "2026-10-16T17:55:14-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:55:14-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "bom-dia": {
-   "atualizado_em": "2026-10-08T09:52:51-03:00",
-   "tomada": 3
+   "atualizado_em": "2026-10-16T17:53:59-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
   },
   "borboleta": {
    "aprovado": {
@@ -203,6 +654,20 @@
    "nota": "",
    "status": "aprovado",
    "tomada": 1
+  },
+  "botafogo": {
+   "atualizado_em": "2026-10-16T19:06:47-03:00",
+   "nota": "recorte",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "branco": {
+   "atualizado_em": "2026-10-16T17:33:55-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
   },
   "cachorro": {
    "aprovado": {
@@ -272,6 +737,13 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "campo": {
+   "atualizado_em": "2026-10-16T17:47:14-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "cansado": {
    "aprovado": {
     "assinatura": "368e8082c3d0",
@@ -323,6 +795,39 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "cavalo": {
+   "atualizado_em": "2026-10-16T17:14:09-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "ceara": {
+   "aprovado": {
+    "assinatura": "6392cfefdea6",
+    "em": "2026-10-16T18:49:46-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:49:46-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "ceara-sporting-club": {
+   "aprovado": {
+    "assinatura": "7338a8364ade",
+    "em": "2026-10-16T19:10:39-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:10:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "cerveja": {
    "aprovado": {
     "assinatura": "335e72fc9ab2",
@@ -338,6 +843,39 @@
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "chapecoense": {
+   "aprovado": {
+    "assinatura": "9054b7da95e5",
+    "em": "2026-10-16T19:09:44-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:44-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "cidade": {
+   "aprovado": {
+    "assinatura": "cb99185eca4d",
+    "em": "2026-10-16T17:37:50-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:37:50-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "cinza": {
+   "atualizado_em": "2026-10-16T17:35:52-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "cobra": {
@@ -374,6 +912,19 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "corinthians": {
+   "aprovado": {
+    "assinatura": "c445192df851",
+    "em": "2026-10-16T19:07:45-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T19:07:45-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
+  },
   "correr": {
    "aprovado": {
     "assinatura": "86e7952ddc28",
@@ -408,9 +959,25 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "cruzeiro": {
+   "aprovado": {
+    "assinatura": "f0badf349d6d",
+    "em": "2026-10-16T19:10:05-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:10:05-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "deodoro-da-fonseca": {
-   "atualizado_em": "2026-10-06T17:26:05-03:00",
-   "tomada": 2
+   "atualizado_em": "2026-10-16T19:06:03-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
   },
   "desculpa": {
    "aprovado": {
@@ -429,6 +996,13 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "dilma-rousseff": {
+   "atualizado_em": "2026-10-16T19:01:02-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "dinheiro": {
    "aprovado": {
     "assinatura": "613020568926",
@@ -443,6 +1017,19 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "distrito-federal": {
+   "aprovado": {
+    "assinatura": "6c2315d21242",
+    "em": "2026-10-16T18:49:52-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:49:52-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -466,6 +1053,19 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "elefante": {
+   "aprovado": {
+    "assinatura": "d1a1cc04ec9a",
+    "em": "2026-10-16T17:23:44-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:23:44-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -500,6 +1100,26 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "espirito-santo": {
+   "atualizado_em": "2026-10-16T18:50:03-03:00",
+   "nota": "recorte",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "esporte-clube-bahia": {
+   "aprovado": {
+    "assinatura": "2e1bcf277b5e",
+    "em": "2026-10-16T19:10:16-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:10:16-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -641,9 +1261,130 @@
    "status": "aprovado",
    "tomada": 1
   },
-  "flamengo": {
-   "atualizado_em": "2026-10-06T17:26:55-03:00",
+  "feliz-ano-novo": {
+   "aprovado": {
+    "assinatura": "60dc49bd775a",
+    "em": "2026-10-16T18:07:07-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:07:07-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "feliz-natal": {
+   "atualizado_em": "2026-10-16T18:06:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "fernando-collor": {
+   "atualizado_em": "2026-10-16T19:02:49-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "fernando-henrique-cardoso": {
+   "atualizado_em": "2026-10-16T19:02:13-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "figueirense": {
+   "aprovado": {
+    "assinatura": "dd8e305fb34d",
+    "em": "2026-10-16T19:09:35-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:35-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "filha": {
+   "aprovado": {
+    "assinatura": "e8c9b5b5a975",
+    "em": "2026-10-16T17:04:50-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:04:50-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "filho": {
+   "aprovado": {
+    "assinatura": "cde26f9bfa63",
+    "em": "2026-10-16T17:04:11-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:04:11-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
    "tomada": 2
+  },
+  "flamengo": {
+   "aprovado": {
+    "assinatura": "0f7cd487af79",
+    "em": "2026-10-16T19:06:19-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T19:06:19-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
+  },
+  "floresta": {
+   "aprovado": {
+    "assinatura": "2a5a8b463b46",
+    "em": "2026-10-16T17:47:49-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:47:49-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "fluminense": {
+   "aprovado": {
+    "assinatura": "f2e07b624d2e",
+    "em": "2026-10-16T19:06:28-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:06:28-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "fortaleza": {
+   "aprovado": {
+    "assinatura": "a7039fff035a",
+    "em": "2026-10-16T19:10:24-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:10:24-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
   },
   "frango": {
    "aprovado": {
@@ -696,6 +1437,26 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "getulio-vargas": {
+   "atualizado_em": "2026-10-16T19:01:13-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "goias": {
+   "aprovado": {
+    "assinatura": "b7fe18f49eb7",
+    "em": "2026-10-16T18:50:11-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:50:11-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "gostar": {
    "aprovado": {
     "assinatura": "86a96a2b30e3",
@@ -713,9 +1474,73 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "gremio": {
+   "atualizado_em": "2026-10-16T19:09:03-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "hospital": {
+   "aprovado": {
+    "assinatura": "82e68f46c357",
+    "em": "2026-10-16T17:48:53-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:48:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "igreja": {
+   "atualizado_em": "2026-10-16T17:49:36-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "internacional": {
+   "aprovado": {
+    "assinatura": "a9a4d4ece3da",
+    "em": "2026-10-16T19:09:10-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:09:10-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "irma": {
+   "atualizado_em": "2026-10-16T17:23:22-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 2
+  },
   "irmao": {
-   "atualizado_em": "2026-10-08T09:49:56-03:00",
-   "tomada": 3
+   "atualizado_em": "2026-10-16T17:18:52-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "itamar-franco": {
+   "atualizado_em": "2026-10-16T19:04:49-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "jair-bolsonaro": {
+   "atualizado_em": "2026-10-16T19:04:22-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
   },
   "janela": {
    "aprovado": {
@@ -734,6 +1559,47 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "jk": {
+   "atualizado_em": "2026-10-16T19:02:02-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "joao-goulart": {
+   "atualizado_em": "2026-10-16T19:04:29-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "jose-sarney": {
+   "atualizado_em": "2026-10-16T19:04:41-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "laranja": {
+   "atualizado_em": "2026-10-16T17:29:22-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "leao": {
+   "aprovado": {
+    "assinatura": "4b08fa2c5f63",
+    "em": "2026-10-16T17:18:39-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:18:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
+  },
   "leite": {
    "aprovado": {
     "assinatura": "79fbd92a55df",
@@ -751,6 +1617,296 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "letra-a": {
+   "atualizado_em": "2026-10-16T18:07:29-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 5
+  },
+  "letra-b": {
+   "aprovado": {
+    "assinatura": "3608cc3f5334",
+    "em": "2026-10-16T18:08:27-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:08:27-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-c": {
+   "aprovado": {
+    "assinatura": "d9c575a6b632",
+    "em": "2026-10-16T18:09:38-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:09:38-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-d": {
+   "aprovado": {
+    "assinatura": "f08f97d4b18c",
+    "em": "2026-10-16T18:10:39-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:10:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-e": {
+   "aprovado": {
+    "assinatura": "9c265c68c902",
+    "em": "2026-10-16T18:12:11-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:12:11-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-f": {
+   "aprovado": {
+    "assinatura": "8764aed85b34",
+    "em": "2026-10-16T18:13:50-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:13:50-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-g": {
+   "aprovado": {
+    "assinatura": "75f2e884f79e",
+    "em": "2026-10-16T18:16:14-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:16:14-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-h": {
+   "aprovado": {
+    "assinatura": "68c5b31894b2",
+    "em": "2026-10-16T18:17:39-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:17:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-i": {
+   "aprovado": {
+    "assinatura": "ffc55fbf4c8e",
+    "em": "2026-10-16T18:19:30-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:19:30-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-j": {
+   "aprovado": {
+    "assinatura": "a570ebb8ed1a",
+    "em": "2026-10-16T18:19:36-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:19:36-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-k": {
+   "aprovado": {
+    "assinatura": "ed999b0556f1",
+    "em": "2026-10-16T18:19:47-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:19:47-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-l": {
+   "aprovado": {
+    "assinatura": "86ed529ddfa1",
+    "em": "2026-10-16T18:20:01-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:20:01-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-m": {
+   "aprovado": {
+    "assinatura": "10ab31e5bd37",
+    "em": "2026-10-16T18:21:01-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:21:01-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-n": {
+   "atualizado_em": "2026-10-16T18:21:18-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "letra-o": {
+   "aprovado": {
+    "assinatura": "adcd607c7e1e",
+    "em": "2026-10-16T18:21:27-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:21:27-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-p": {
+   "atualizado_em": "2026-10-16T18:21:31-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "letra-q": {
+   "aprovado": {
+    "assinatura": "c7c22028a2b7",
+    "em": "2026-10-16T18:35:53-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:35:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-r": {
+   "atualizado_em": "2026-10-16T18:35:59-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "letra-s": {
+   "atualizado_em": "2026-10-16T18:36:49-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "letra-t": {
+   "aprovado": {
+    "assinatura": "c83eabd36aa8",
+    "em": "2026-10-16T18:36:58-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:36:58-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-u": {
+   "aprovado": {
+    "assinatura": "6ea363ec702e",
+    "em": "2026-10-16T18:37:03-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:37:03-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-v": {
+   "aprovado": {
+    "assinatura": "4a97df1d6487",
+    "em": "2026-10-16T18:37:11-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:37:11-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-w": {
+   "aprovado": {
+    "assinatura": "521cde50c9e1",
+    "em": "2026-10-16T18:37:18-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:37:18-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "letra-x": {
+   "atualizado_em": "2026-10-16T18:37:27-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "letra-y": {
+   "atualizado_em": "2026-10-16T18:38:13-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": null
+  },
+  "letra-z": {
+   "atualizado_em": "2026-10-16T18:38:19-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": null
+  },
   "livro": {
    "aprovado": {
     "assinatura": "195280e4768f",
@@ -761,11 +1917,20 @@
    "ilustracao": {
     "aprovado_em": "2026-10-08T15:35:06-03:00",
     "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
-    "status": "aprovado",
+    "pedido_em": "2026-10-16T19:14:39-03:00",
+    "pedido_por": "bruna",
+    "status": "refazer",
     "versao": 1
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "lula": {
+   "atualizado_em": "2026-10-16T19:00:51-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "macaco": {
@@ -784,6 +1949,59 @@
    "nota": "",
    "status": "aprovado",
    "tomada": 1
+  },
+  "mae": {
+   "atualizado_em": "2026-10-10T09:07:35-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 7
+  },
+  "maranhao": {
+   "aprovado": {
+    "assinatura": "0ea8e4b2997e",
+    "em": "2026-10-16T18:50:23-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:50:23-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "marrom": {
+   "aprovado": {
+    "assinatura": "3606bc9e584e",
+    "em": "2026-10-16T17:33:37-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:33:37-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "mato-grosso": {
+   "atualizado_em": "2026-10-16T18:50:31-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "mato-grosso-do-sul": {
+   "aprovado": {
+    "assinatura": "e1cce43344f9",
+    "em": "2026-10-16T18:51:33-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T18:51:33-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
   },
   "medico": {
    "aprovado": {
@@ -819,11 +2037,45 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "mercado": {
+   "atualizado_em": "2026-10-16T17:49:09-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "mesa": {
    "atualizado_em": "2026-10-06T17:14:56-03:00",
    "nota": "",
    "status": "ajustar",
    "tomada": 1
+  },
+  "michel-temer": {
+   "atualizado_em": "2026-10-16T19:03:36-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "minas-gerais": {
+   "atualizado_em": "2026-10-16T18:51:47-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "montanha": {
+   "aprovado": {
+    "assinatura": "8c808894474f",
+    "em": "2026-10-16T17:53:19-03:00",
+    "por": "bruna",
+    "tomada": 3
+   },
+   "atualizado_em": "2026-10-16T17:53:19-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 3
   },
   "morar": {
    "aprovado": {
@@ -839,6 +2091,19 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "museu": {
+   "aprovado": {
+    "assinatura": "a88d08fa8f1e",
+    "em": "2026-10-16T17:49:28-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:49:28-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -876,6 +2141,153 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "numero-0": {
+   "atualizado_em": "2026-10-16T18:38:47-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-1": {
+   "atualizado_em": "2026-10-16T18:38:50-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-10": {
+   "atualizado_em": "2026-10-16T18:47:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-11": {
+   "atualizado_em": "2026-10-16T18:47:54-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-12": {
+   "atualizado_em": "2026-10-16T18:47:58-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-13": {
+   "atualizado_em": "2026-10-16T18:47:58-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-14": {
+   "atualizado_em": "2026-10-16T18:47:59-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-15": {
+   "atualizado_em": "2026-10-16T18:48:01-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-16": {
+   "atualizado_em": "2026-10-16T18:48:02-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-17": {
+   "atualizado_em": "2026-10-16T18:48:04-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-18": {
+   "atualizado_em": "2026-10-16T18:48:05-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-19": {
+   "atualizado_em": "2026-10-16T18:48:06-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-2": {
+   "atualizado_em": "2026-10-16T18:38:50-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-20": {
+   "atualizado_em": "2026-10-16T18:48:07-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-3": {
+   "atualizado_em": "2026-10-16T18:38:53-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-4": {
+   "atualizado_em": "2026-10-16T18:38:55-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-5": {
+   "atualizado_em": "2026-10-16T18:38:56-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": null
+  },
+  "numero-6": {
+   "atualizado_em": "2026-10-16T18:38:57-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-7": {
+   "atualizado_em": "2026-10-16T18:38:58-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-8": {
+   "atualizado_em": "2026-10-16T18:38:59-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
+  "numero-9": {
+   "atualizado_em": "2026-10-16T18:39:00-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "regravar",
+   "tomada": 1
+  },
   "obrigado": {
    "aprovado": {
     "assinatura": "96516489d6ba",
@@ -890,6 +2302,19 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "ola": {
+   "aprovado": {
+    "assinatura": "0b78e96b3935",
+    "em": "2026-10-16T17:53:31-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:53:31-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -956,6 +2381,85 @@
    "status": "ajustar",
    "tomada": 1
   },
+  "pai": {
+   "aprovado": {
+    "assinatura": "31b02bdeb810",
+    "em": "2026-10-16T17:01:30-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:01:30-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
+  },
+  "palmeiras": {
+   "aprovado": {
+    "assinatura": "1730d3915ed4",
+    "em": "2026-10-16T19:07:57-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:07:57-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "para": {
+   "aprovado": {
+    "assinatura": "bf9fee4d5dec",
+    "em": "2026-10-16T18:52:40-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:52:40-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "parabens": {
+   "aprovado": {
+    "assinatura": "038e937f72f0",
+    "em": "2026-10-16T18:06:28-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:06:28-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "paraiba": {
+   "atualizado_em": "2026-10-16T18:52:57-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "parana": {
+   "aprovado": {
+    "assinatura": "ec5a1e203a2b",
+    "em": "2026-10-16T18:53:08-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:53:08-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "parque": {
+   "atualizado_em": "2026-10-16T17:48:45-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
   "passaro": {
    "aprovado": {
     "assinatura": "a9d1d6b9efba",
@@ -971,6 +2475,13 @@
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "pato": {
+   "atualizado_em": "2026-10-16T17:24:17-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "peixe": {
@@ -990,6 +2501,33 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "pernambuco": {
+   "atualizado_em": "2026-10-16T18:53:20-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "piaui": {
+   "aprovado": {
+    "assinatura": "bc39b7424413",
+    "em": "2026-10-16T18:53:26-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:53:26-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "por-favor": {
+   "atualizado_em": "2026-10-16T18:00:31-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
   "porta": {
    "aprovado": {
     "assinatura": "463a8b475c7f",
@@ -1004,6 +2542,32 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 2
+  },
+  "praia": {
+   "aprovado": {
+    "assinatura": "4dc93bf26e0c",
+    "em": "2026-10-16T17:47:03-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:47:03-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "preto": {
+   "aprovado": {
+    "assinatura": "47266caec9ba",
+    "em": "2026-10-16T17:35:42-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:35:42-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 2
   },
@@ -1041,6 +2605,19 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "r": {
+   "aprovado": {
+    "assinatura": "041fc0912fb6",
+    "em": "2026-10-16T18:36:41-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:36:41-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "raiva": {
    "aprovado": {
     "assinatura": "6a84a6ac0c34",
@@ -1058,6 +2635,54 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "rio-de-janeiro": {
+   "atualizado_em": "2026-10-16T18:53:48-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "rio-grande-do-norte": {
+   "atualizado_em": "2026-10-16T18:54:36-03:00",
+   "nota": "recorte",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "rio-grande-do-sul": {
+   "atualizado_em": "2026-10-16T18:55:25-03:00",
+   "nota": "recorte",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 2
+  },
+  "rondonia": {
+   "aprovado": {
+    "assinatura": "7f8c9d68f6ad",
+    "em": "2026-10-16T18:56:13-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T18:56:13-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "roraima": {
+   "atualizado_em": "2026-10-16T18:56:21-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "rosa": {
+   "atualizado_em": "2026-10-16T17:30:39-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "roupa": {
    "aprovado": {
     "assinatura": "85a5de3d6226",
@@ -1072,6 +2697,59 @@
     "versao": 1
    },
    "nota": "",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "roxo": {
+   "aprovado": {
+    "assinatura": "c4ab6788de8a",
+    "em": "2026-10-16T17:30:23-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:30:23-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "santa-catarina": {
+   "atualizado_em": "2026-10-16T18:57:09-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "santos": {
+   "aprovado": {
+    "assinatura": "e8a03bec54f1",
+    "em": "2026-10-16T19:08:54-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:08:54-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "sao-paulo": {
+   "atualizado_em": "2026-10-16T18:58:10-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
+  "sao-paulo-futebol-clube": {
+   "aprovado": {
+    "assinatura": "786c59048d18",
+    "em": "2026-10-16T19:08:06-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:08:06-03:00",
+   "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -1107,6 +2785,13 @@
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "sergipe": {
+   "atualizado_em": "2026-10-16T18:59:02-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "sim": {
@@ -1160,6 +2845,13 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "sport-recife": {
+   "atualizado_em": "2026-10-16T19:10:32-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "ajustar",
+   "tomada": 1
+  },
   "suco": {
    "aprovado": {
     "assinatura": "cfcd54cfc66c",
@@ -1211,6 +2903,19 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "tartaruga": {
+   "aprovado": {
+    "assinatura": "87692f519e6a",
+    "em": "2026-10-16T17:24:05-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:24:05-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "tchau": {
    "aprovado": {
     "assinatura": "7edd2d784760",
@@ -1228,6 +2933,19 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "teatro": {
+   "aprovado": {
+    "assinatura": "85b2510aaff8",
+    "em": "2026-10-16T17:49:20-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:49:20-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
+  },
   "telefone": {
    "aprovado": {
     "assinatura": "6cd9a55e01cb",
@@ -1243,6 +2961,13 @@
    },
    "nota": "",
    "status": "aprovado",
+   "tomada": 1
+  },
+  "tocantins": {
+   "atualizado_em": "2026-10-16T19:00:38-03:00",
+   "nota": "recorte cabelo",
+   "por": "bruna",
+   "status": "ajustar",
    "tomada": 1
   },
   "trabalho": {
@@ -1279,6 +3004,32 @@
    "status": "aprovado",
    "tomada": 1
   },
+  "vasco": {
+   "aprovado": {
+    "assinatura": "868dda9e771d",
+    "em": "2026-10-16T19:07:37-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T19:07:37-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
+  "verde": {
+   "aprovado": {
+    "assinatura": "43b898f02127",
+    "em": "2026-10-16T17:27:45-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-10-16T17:27:45-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 1
+  },
   "vergonha": {
    "aprovado": {
     "assinatura": "eceed5ddd506",
@@ -1295,6 +3046,19 @@
    "nota": "",
    "status": "aprovado",
    "tomada": 1
+  },
+  "vermelho": {
+   "aprovado": {
+    "assinatura": "177e018b8173",
+    "em": "2026-10-16T17:27:08-03:00",
+    "por": "bruna",
+    "tomada": 2
+   },
+   "atualizado_em": "2026-10-16T17:27:08-03:00",
+   "nota": "",
+   "por": "bruna",
+   "status": "aprovado",
+   "tomada": 2
   },
   "viajar": {
    "aprovado": {

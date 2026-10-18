@@ -5,6 +5,7 @@ Uso (na raiz do repo): python3 tools/sinais/build_pages.py
 - /sinal/<slug>/index.html  (template-sinal.html + header/footer canônicos em partials/)
 - /sinal/index.html         (cards, filtros, contagem e ItemList entre marcadores SINAIS:*)
 - sitemap.xml               (bloco SINAIS com extensão de vídeo do Google)
+Cada sinal pode ter "publicado_em" próprio (data do lote em que entrou); sem ele, vale o "publicado_em" geral.
 O vídeo de cada sinal (assets/videos/sinais/<slug>.mp4/.webp) só existe depois de aprovado e publicado por
 publicar.py. Sem vídeo publicado, a página sai em modo "vídeo em preparação" (sem VideoObject e fora do sitemap de vídeo).
 """
@@ -81,7 +82,7 @@ def page(s):
             break
     if len(desc) > 160:
         desc = desc[:157].rsplit(" ", 1)[0].rstrip(",;:") + "…"
-    upload = data["publicado_em"] + "T00:00:00-03:00"
+    upload = s.get("publicado_em", data["publicado_em"]) + "T00:00:00-03:00"
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
@@ -255,7 +256,7 @@ def sitemap():
             block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
-    <lastmod>{data['publicado_em']}</lastmod>
+    <lastmod>{s.get('publicado_em', data['publicado_em'])}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>"""
@@ -265,7 +266,7 @@ def sitemap():
         block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
-    <lastmod>{data['publicado_em']}</lastmod>
+    <lastmod>{s.get('publicado_em', data['publicado_em'])}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -274,7 +275,7 @@ def sitemap():
       <video:description>{d}</video:description>
       <video:content_loc>{SITE}{VID_DIR}/{s['slug']}.mp4</video:content_loc>
       <video:duration>{max(1, round(s['dur']))}</video:duration>
-      <video:publication_date>{data['publicado_em']}T00:00:00-03:00</video:publication_date>
+      <video:publication_date>{s.get('publicado_em', data['publicado_em'])}T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>"""

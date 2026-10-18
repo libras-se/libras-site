@@ -5,8 +5,9 @@
  *
  * - Aditivo e não-bloqueante: nunca lança, nunca atrasa o fluxo atual
  *   (n8n / WhatsApp continuam funcionando mesmo com a API fora do ar).
- * - Idempotente: gera uma chave por tentativa de formulário (sessionStorage),
- *   reutilizada em retry/refresh e limpa após sucesso.
+ * - Idempotente: a chave vale para o mesmo conteúdo do formulário (sessionStorage
+ *   guarda só o hash), é reutilizada em retry/refresh e trocada se os dados mudam;
+ *   só é limpa quando a API confirma o recebimento (`data.received`).
  * - First touch: UTMs/gclid/fbclid/landing/referrer gravados uma única vez
  *   em localStorage; visitorId anônimo preparado para a fase de analytics.
  */
@@ -22,6 +23,7 @@
 	var VISITOR_KEY = 'librasse_vid';
 	var SESSION_KEY = 'librasse_sid';
 	var IDEM_PREFIX = 'librasse_idem_';
+	var pendingSubmissions = Object.create(null);
 
 	function safeStorage(getStorage) {
 		try {
@@ -135,26 +137,34 @@
 	}
 
 	/** Uma chave por tentativa de formulário: retry/refresh reusam; sucesso limpa. */
-	function idempotencyKey(formId) {
+	async function idempotencyKey(formId, payload) {
 		var key = IDEM_PREFIX + formId;
-		var value = session ? session.getItem(key) : null;
-		if (!value) {
-			value = uuid();
-			if (session) {
-				try {
-					session.setItem(key, value);
-				} catch (e) {
-					/* segue com a chave em memória */
-				}
-			}
+		var consent = payload.consent || {};
+		var fingerprint = JSON.stringify({ formType: payload.formType, contact: payload.contact, request: payload.request,
+			privacy: consent.privacyPolicyAccepted, marketingEmail: consent.marketingEmail, marketingWhatsapp: consent.marketingWhatsapp });
+		// No sessionStorage vai só o hash do conteúdo, nunca os dados de contato.
+		var canHash = window.crypto && window.crypto.subtle;
+		if (canHash) {
+			var digest = await window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(fingerprint));
+			fingerprint = Array.from(new Uint8Array(digest)).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
 		}
-		return value;
+		var value = (canHash ? readJson(session, key) : null) || pendingSubmissions[key];
+		if (!value || value.fingerprint !== fingerprint) {
+			value = { id: uuid(), fingerprint: fingerprint };
+			pendingSubmissions[key] = value;
+			if (canHash) writeJson(session, key, value);
+		}
+		return value.id;
 	}
 
-	function clearIdempotencyKey(formId) {
+	function clearIdempotencyKey(formId, id) {
+		var key = IDEM_PREFIX + formId;
+		var current = readJson(session, key) || pendingSubmissions[key];
+		if (!current || current.id !== id) return;
+		delete pendingSubmissions[key];
 		if (session) {
 			try {
-				session.removeItem(IDEM_PREFIX + formId);
+				session.removeItem(key);
 			} catch (e) {
 				/* ignore */
 			}
@@ -165,11 +175,11 @@
 	 * Envia a captação para o CRM. Nunca lança; retorna uma Promise<boolean>
 	 * (true = aceito pela API) que os formulários podem ignorar com segurança.
 	 */
-	function send(payload) {
+	async function send(payload) {
 		try {
 			var formId = payload.formId || payload.formType || 'form';
 			var ft = ensureFirstTouch();
-			var idem = idempotencyKey(formId);
+			var idem = await idempotencyKey(formId, payload);
 
 			var consent = payload.consent || {};
 			if (consent.consentTextVersion === undefined) consent.consentTextVersion = CONSENT_TEXT_VERSION;
@@ -215,10 +225,13 @@
 					signal: controller ? controller.signal : undefined,
 					keepalive: true,
 				})
-				.then(function (res) {
+				.then(async function (res) {
 					if (timer) window.clearTimeout(timer);
-					if (res.ok) clearIdempotencyKey(formId);
-					return res.ok;
+					if (!res.ok) return false;
+					var result = await res.json();
+					var accepted = result.success === true && result.data && result.data.received === true;
+					if (accepted) clearIdempotencyKey(formId, idem);
+					return Boolean(accepted);
 				})
 				.catch(function () {
 					if (timer) window.clearTimeout(timer);

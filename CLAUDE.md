@@ -48,6 +48,7 @@ Arquivo absoluto (subpastas): `/assets/fonts/museo-sans-rounded-*.woff2`
 - Cor primária escura: `#0e3538`, nunca `#0a2225` nem preto puro
 - Sem `font-weight:1000` em nenhum outro elemento além do logo
 - WhatsApp: `5548996367511`
+- Toda página com link do WhatsApp ou formulário carrega `<script src="/assets/js/libras-lead.js" defer></script>` no `<head>` (antes do `</head>`, uma vez só). Ele põe o `(ref …)` do CRM no texto do wa.me e manda os formulários ao CRM (`LibrasLead.send`). Para abrir o WhatsApp por script, use `LibrasLead.openWhatsApp(url)`.
 
 ---
 

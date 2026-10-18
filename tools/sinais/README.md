@@ -72,6 +72,11 @@ python3 tools/sinais/sincronizar.py enviar            # sobe as ilustrações no
   retomam se a conexão cair.
 - **Credencial de admin:** fica em `~/.config/libras-sinais/admin` (fora do git).
 - **Usuários:** são definidos na variável `SINAIS_USUARIOS` do Dokploy.
+- **Sem o SSD:** aponte `SINAIS_WORK` para uma pasta local e rode o `baixar` (traz cortes, proxies e ilustrações do
+  servidor). O `ilustrar.py` usa a mesma variável e, sem a curva de movimento do bruto (`motion/`), mede o movimento no
+  próprio corte. No `publicar.py`, passe `--work` com a mesma pasta.
+- **Limite do Codex:** a geração de imagem para depois de umas 25 a 30 ilustrações e só volta no horário indicado
+  ("try again at…"). O `ilustrar.py` registra cada falha como `ERRO … o Codex não gerou a imagem`; rode de novo depois.
 
 ## 3. Publicar
 

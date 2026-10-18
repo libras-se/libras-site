@@ -2,7 +2,7 @@
  * LibrasLead — captação de leads do site para o CRM interno (api.libras.se).
  *
  * Uso: LibrasLead.send({ formId, formType, contact, consent, request })
- *      LibrasLead.openWhatsApp(urlDoWaMe)  // abre o wa.me por script, com "(ref …)"
+ *      LibrasLead.openWhatsApp(urlDoWaMe)  // abre o wa.me por script, já com o "(ref …)"
  *      Links <a href="https://wa.me/…"> ganham o "(ref …)" sozinhos (ver abaixo).
  *
  * - Aditivo e não-bloqueante: nunca lança, nunca atrasa o fluxo atual
@@ -246,27 +246,51 @@
 
 	/* ── Clique no WhatsApp → código de origem "(ref XXXXXX)" ──────────────────
 	 *
-	 * A api devolve um código curto para o clique; o site põe " (ref CÓDIGO)" no fim
-	 * da mensagem pronta do wa.me e, quando a mensagem chega, a api liga a página e
-	 * as UTMs ao contato. Regras:
-	 * - clique comum: espera o código no máximo TOUCH_TIMEOUT_MS; sem código (api
-	 *   fora, lenta ou com erro) abre o link original, igual a antes;
-	 * - target="_blank": a aba nova é aberta já no clique (about:blank) e navega
-	 *   quando o código chega, para o bloqueador de pop-up não barrar;
-	 * - Ctrl/Cmd/Shift/Alt, clique do meio ou pop-up bloqueado: o navegador segue
-	 *   sozinho e o clique é só registrado (sendBeacon), sem código no texto.
+	 * O código é gerado aqui no navegador, no próprio clique: o href do link ganha
+	 * " (ref CÓDIGO)" no fim do texto pronto antes de o navegador seguir, e o clique
+	 * nativo continua (sem preventDefault, sem espera, sem janela extra). O registro
+	 * vai à api por sendBeacon (POST /v1/crm/web-touch com o mesmo código); quando a
+	 * mensagem chega no atendimento, a api liga a página e as UTMs ao contato. Com a
+	 * api fora, o WhatsApp abre igual, só não há registro do clique.
+	 * Vale para clique comum, Ctrl/Cmd/Shift e clique do meio. Novo clique no mesmo
+	 * link troca o código (não acumula).
 	 */
 	var TOUCH_ENDPOINT = API_BASE + '/v1/crm/web-touch';
-	var TOUCH_TIMEOUT_MS = 1200;
+	var CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // sem 0/O, 1/I/L (igual à api)
+	var CODE_LENGTH = 6;
+	var CODE_RE = /^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$/;
 	var WA_SELECTOR = 'a[href*="wa.me/"], a[href*="api.whatsapp.com/send"]';
-	var REF_RE = /\(ref\s+[A-Z0-9]{6}\)/i;
-	var CODE_RE = /^[A-Z0-9]{6}$/i;
+	var REF_RE = /\s*\(ref\s+[A-Z0-9]{6}\)/gi;
+	// o mesmo "(ref XXXXXX)" ainda codificado na URL: "+(ref+X)", "%20(ref%20X)", "%28ref%20X%29"…
+	var RAW_REF_RE = /(?:\+|%20)*(?:\(|%28)ref(?:\+|%20)+[A-Z0-9]{6}(?:\)|%29)/gi;
+
+	/** Código de 6 caracteres do alfabeto da api (crypto quando houver). */
+	function newCode() {
+		var out = '';
+		var n = CODE_ALPHABET.length;
+		var limit = 256 - (256 % n); // descarta o resto para não enviesar
+		try {
+			if (window.crypto && typeof window.crypto.getRandomValues === 'function') {
+				while (out.length < CODE_LENGTH) {
+					var buf = window.crypto.getRandomValues(new Uint8Array(16));
+					for (var i = 0; i < buf.length && out.length < CODE_LENGTH; i++) {
+						if (buf[i] < limit) out += CODE_ALPHABET.charAt(buf[i] % n);
+					}
+				}
+				return out;
+			}
+		} catch (e) {
+			out = '';
+		}
+		while (out.length < CODE_LENGTH) out += CODE_ALPHABET.charAt(Math.floor(Math.random() * n));
+		return out;
+	}
 
 	function cut(value, max) {
 		return value ? String(value).slice(0, max) : undefined;
 	}
 
-	function touchBody() {
+	function touchBody(code) {
 		var ft = {};
 		try {
 			ft = ensureFirstTouch() || {};
@@ -274,6 +298,7 @@
 			/* sem first touch: segue só com a página atual */
 		}
 		return JSON.stringify({
+			code: code,
 			kind: 'whatsapp_click',
 			visitorId: visitorId() || undefined,
 			pageUrl: cut(window.location.href, 1000),
@@ -291,9 +316,9 @@
 	}
 
 	/** Registra o clique sem esperar resposta (texto puro: sem preflight do CORS). */
-	function beaconTouch() {
+	function beaconTouch(code) {
 		try {
-			var body = touchBody();
+			var body = touchBody(code);
 			if (navigator.sendBeacon && navigator.sendBeacon(TOUCH_ENDPOINT, body)) return;
 			window
 				.fetch(TOUCH_ENDPOINT, {
@@ -305,54 +330,14 @@
 				})
 				.catch(function () {});
 		} catch (e) {
-			/* registro é opcional */
+			/* registro é opcional: o clique segue igual */
 		}
 	}
 
-	/** Promise<string|null> que sempre resolve, em até TOUCH_TIMEOUT_MS. */
-	function requestCode() {
-		return new Promise(function (resolve) {
-			var done = false;
-			var controller = typeof AbortController === 'function' ? new AbortController() : null;
-			var timer = null;
-			function finish(code) {
-				if (done) return;
-				done = true;
-				if (timer) window.clearTimeout(timer);
-				resolve(code);
-			}
-			timer = window.setTimeout(function () {
-				finish(null);
-				if (controller) controller.abort();
-			}, TOUCH_TIMEOUT_MS);
-			try {
-				window
-					.fetch(TOUCH_ENDPOINT, {
-						method: 'POST',
-						headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-						body: touchBody(),
-						credentials: 'omit',
-						signal: controller ? controller.signal : undefined,
-					})
-					.then(function (res) {
-						return res.ok ? res.json() : null;
-					})
-					.then(function (json) {
-						var code = json && json.success === true && json.data ? json.data.code : null;
-						finish(typeof code === 'string' && CODE_RE.test(code) ? code.toUpperCase() : null);
-					})
-					.catch(function () {
-						finish(null);
-					});
-			} catch (e) {
-				finish(null);
-			}
-		});
-	}
-
 	/**
-	 * Acrescenta " (ref CÓDIGO)" ao fim do parâmetro `text`, sem reescrever o resto
-	 * da URL: o texto atual continua com o mesmo encoding ("+" ou "%20").
+	 * Põe " (ref CÓDIGO)" no fim do parâmetro `text`, sem reescrever o resto da URL:
+	 * o texto atual continua com o mesmo encoding ("+" ou "%20"). Um ref que já
+	 * esteja no texto é trocado pelo novo. Sem `text`, cria "Olá! (ref …)".
 	 */
 	function withRef(href, code) {
 		if (!code || !CODE_RE.test(code)) return href;
@@ -369,14 +354,19 @@
 				var name = eq >= 0 ? parts[i].slice(0, eq) : parts[i];
 				if (name !== 'text') continue;
 				found = true;
-				var raw = eq >= 0 ? parts[i].slice(eq + 1) : '';
-				var decoded = raw;
+				var raw = (eq >= 0 ? parts[i].slice(eq + 1) : '').replace(RAW_REF_RE, '');
+				var decoded = null;
 				try {
 					decoded = decodeURIComponent(raw.replace(/\+/g, ' '));
 				} catch (e) {
-					/* texto mal codificado: compara cru */
+					/* texto mal codificado: fica como está */
 				}
-				if (REF_RE.test(decoded)) return href;
+				if (decoded !== null && REF_RE.test(decoded)) {
+					// ref num encoding inesperado: refaz o texto sem ele
+					REF_RE.lastIndex = 0;
+					raw = encodeURIComponent(decoded.replace(REF_RE, ''));
+				}
+				REF_RE.lastIndex = 0;
 				var sp = raw.indexOf('+') >= 0 && raw.indexOf('%20') < 0 ? '+' : '%20';
 				raw = raw.replace(/(?:\+|%20)+$/i, '') || encodeURIComponent('Olá!');
 				parts[i] = 'text=' + raw + sp + '(ref' + sp + code + ')';
@@ -389,90 +379,53 @@
 		}
 	}
 
-	function opensNewWindow(target) {
-		return !!target && !/^_(self|top|parent)$/i.test(target);
-	}
-
-	/** Abre a janela/aba já dentro do gesto do usuário; null se o navegador barrar. */
-	function openBlank(target) {
-		var win = null;
-		try {
-			win = window.open('about:blank', target || '_blank');
-		} catch (e) {
-			return null;
-		}
-		if (!win) return null;
-		try {
-			win.opener = null;
-			win.document.title = 'Abrindo o WhatsApp…';
-		} catch (e) {
-			/* janela já em outra origem: só navega */
-		}
-		return win;
-	}
-
-	/** Busca o código e leva ao WhatsApp; sem código, vai para o link original. */
-	function resolveAndGo(url, win) {
-		function go(dest) {
-			try {
-				if (win) win.location.replace(dest);
-				else window.location.assign(dest);
-			} catch (e) {
-				try {
-					if (win) win.location.href = url;
-					else window.location.href = url;
-				} catch (e2) {
-					/* sem saída */
-				}
-			}
-		}
-		requestCode().then(function (code) {
-			go(withRef(url, code));
-		});
-	}
-
-	function linkTarget(el) {
-		var target = el.getAttribute('target');
-		if (target) return target;
-		var baseEl = document.querySelector('base[target]');
-		return baseEl ? baseEl.getAttribute('target') : '';
-	}
-
 	function closestWhatsApp(e) {
 		var t = e.target;
 		if (t && t.nodeType !== 1) t = t.parentElement;
 		return t && t.closest ? t.closest(WA_SELECTOR) : null;
 	}
 
+	/** Troca o código no href do link (síncrono) e devolve o código usado. */
+	function tagLink(el) {
+		var code = newCode();
+		var href = el.getAttribute('href');
+		if (!href) return null;
+		var next = withRef(href, code);
+		if (next === href) return null;
+		el.setAttribute('href', next);
+		return code;
+	}
+
 	function onClick(e) {
 		try {
-			if (e.defaultPrevented) return;
+			if (e.defaultPrevented) return; // outro script já cuidou do clique
 			var el = closestWhatsApp(e);
-			if (!el || !el.href) return;
-			if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || el.hasAttribute('download')) {
-				beaconTouch();
-				return;
-			}
-			var url = el.href;
-			var target = linkTarget(el);
-			var win = null;
-			if (opensNewWindow(target)) {
-				win = openBlank(target);
-				if (!win) {
-					beaconTouch(); // pop-up barrado: o clique nativo segue, sem código
-					return;
-				}
-			}
-			e.preventDefault();
-			resolveAndGo(url, win);
+			if (!el) return;
+			var code = tagLink(el);
+			if (code) beaconTouch(code);
 		} catch (err) {
-			/* nunca quebrar o clique: sem preventDefault o navegador segue */
+			/* nunca quebrar o clique */
 		}
 	}
 
+	// Clique do meio: o href muda no mousedown (antes do navegador abrir a aba) e o
+	// registro sai no auxclick, com o mesmo código.
+	var middleCode = null;
+	function onMouseDown(e) {
+		try {
+			if (e.button !== 1) return;
+			var el = closestWhatsApp(e);
+			middleCode = el ? tagLink(el) : null;
+		} catch (err) {
+			middleCode = null;
+		}
+	}
 	function onAuxClick(e) {
 		try {
-			if (e.button === 1 && closestWhatsApp(e)) beaconTouch();
+			if (e.button !== 1 || !closestWhatsApp(e)) return;
+			var code = middleCode || tagLink(closestWhatsApp(e));
+			middleCode = null;
+			if (code) beaconTouch(code);
 		} catch (err) {
 			/* ignore */
 		}
@@ -480,31 +433,28 @@
 
 	/**
 	 * Para quem abre o WhatsApp por script (ex.: formulário "reportar" dos sinais).
-	 * Chame dentro do submit/clique. Retorna true quando o código vai no texto e
-	 * false quando o navegador barrou a aba (aí abre o link original, sem código).
+	 * Chame dentro do submit/clique: abre na hora, já com o "(ref …)".
 	 */
 	function openWhatsApp(url) {
-		var win = null;
+		var dest = url;
 		try {
-			win = openBlank('_blank');
-			if (win) {
-				resolveAndGo(url, win);
-				return true;
-			}
-			beaconTouch();
+			var code = newCode();
+			dest = withRef(url, code);
+			if (dest !== url) beaconTouch(code);
 		} catch (e) {
-			if (win) return true;
+			dest = url;
 		}
 		try {
-			window.open(url, '_blank', 'noopener,noreferrer');
+			window.open(dest, '_blank', 'noopener,noreferrer');
 		} catch (e2) {
 			/* sem saída */
 		}
-		return false;
+		return dest;
 	}
 
 	try {
 		document.addEventListener('click', onClick, false);
+		document.addEventListener('mousedown', onMouseDown, false);
 		document.addEventListener('auxclick', onAuxClick, false);
 	} catch (e) {
 		/* ignore */
@@ -517,5 +467,5 @@
 		/* ignore */
 	}
 
-	window.LibrasLead = { send: send, openWhatsApp: openWhatsApp, whatsappWithRef: withRef };
+	window.LibrasLead = { send: send, openWhatsApp: openWhatsApp, whatsappWithRef: withRef, newRefCode: newCode };
 })();

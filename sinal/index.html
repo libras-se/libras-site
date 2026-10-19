@@ -1116,6 +1116,8 @@ a{text-decoration:none;color:inherit}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chip{font-family:'M',sans-serif;font-size:.74rem;font-weight:700;color:var(--p3);background:rgba(79,209,197,.08);border:1.5px solid rgba(46,184,192,.22);border-radius:var(--rpill);padding:7px 14px;cursor:pointer;transition:var(--tr)}
 .chip:hover{background:rgba(79,209,197,.16)}
+a.chip{display:inline-block;text-decoration:none}
+.ed-card p a,.faq-a a{color:var(--teal-dd);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .chip.on{background:var(--p1);border-color:var(--p1);color:#fff}
 .chip:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 .chips:empty{display:none}
@@ -1304,21 +1306,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="chips" role="group" aria-label="Filtrar por categoria"><!-- SINAIS:FILTROS -->
       <button type="button" class="chip on" data-cat="" aria-pressed="true">Todos</button>
-      <button type="button" class="chip" data-cat="Animais" aria-pressed="false">Animais</button>
-      <button type="button" class="chip" data-cat="Cotidiano" aria-pressed="false">Cotidiano</button>
-      <button type="button" class="chip" data-cat="Expressões" aria-pressed="false">Expressões</button>
-      <button type="button" class="chip" data-cat="Estados" aria-pressed="false">Estados</button>
-      <button type="button" class="chip" data-cat="Sentimentos" aria-pressed="false">Sentimentos</button>
-      <button type="button" class="chip" data-cat="Cores" aria-pressed="false">Cores</button>
-      <button type="button" class="chip" data-cat="Família e pessoas" aria-pressed="false">Família e pessoas</button>
-      <button type="button" class="chip" data-cat="Verbos" aria-pressed="false">Verbos</button>
-      <button type="button" class="chip" data-cat="Alimentos" aria-pressed="false">Alimentos</button>
-      <button type="button" class="chip" data-cat="Times de futebol" aria-pressed="false">Times de futebol</button>
-      <button type="button" class="chip" data-cat="Saudações" aria-pressed="false">Saudações</button>
-      <button type="button" class="chip" data-cat="Lugares" aria-pressed="false">Lugares</button>
+      <a href="/sinal/categoria/animais/" class="chip" role="button" data-cat="Animais" aria-pressed="false">Animais</a>
+      <a href="/sinal/categoria/cotidiano/" class="chip" role="button" data-cat="Cotidiano" aria-pressed="false">Cotidiano</a>
+      <a href="/sinal/categoria/expressoes/" class="chip" role="button" data-cat="Expressões" aria-pressed="false">Expressões</a>
+      <a href="/sinal/categoria/estados/" class="chip" role="button" data-cat="Estados" aria-pressed="false">Estados</a>
+      <a href="/sinal/categoria/sentimentos/" class="chip" role="button" data-cat="Sentimentos" aria-pressed="false">Sentimentos</a>
+      <a href="/sinal/categoria/cores/" class="chip" role="button" data-cat="Cores" aria-pressed="false">Cores</a>
+      <a href="/sinal/categoria/familia-e-pessoas/" class="chip" role="button" data-cat="Família e pessoas" aria-pressed="false">Família e pessoas</a>
+      <a href="/sinal/categoria/verbos/" class="chip" role="button" data-cat="Verbos" aria-pressed="false">Verbos</a>
+      <a href="/sinal/categoria/alimentos/" class="chip" role="button" data-cat="Alimentos" aria-pressed="false">Alimentos</a>
+      <a href="/sinal/categoria/times-de-futebol/" class="chip" role="button" data-cat="Times de futebol" aria-pressed="false">Times de futebol</a>
+      <a href="/sinal/categoria/saudacoes/" class="chip" role="button" data-cat="Saudações" aria-pressed="false">Saudações</a>
+      <a href="/sinal/categoria/lugares/" class="chip" role="button" data-cat="Lugares" aria-pressed="false">Lugares</a>
       <button type="button" class="chip" data-cat="Pronomes" aria-pressed="false">Pronomes</button>
       <button type="button" class="chip" data-cat="Educação" aria-pressed="false">Educação</button>
-      <button type="button" class="chip" data-cat="Alfabeto" aria-pressed="false">Alfabeto</button>
+      <a href="/aprender-libras/alfabeto-em-libras/" class="chip" role="button" data-cat="Alfabeto" aria-pressed="false">Alfabeto</a>
       <button type="button" class="chip" data-cat="Cultura" aria-pressed="false">Cultura</button>
       <!-- /SINAIS:FILTROS --></div>
     </div>
@@ -3365,7 +3367,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   }
   input.addEventListener('input', apply);
   chips.forEach(function (b) {
-    b.addEventListener('click', function () {
+    b.addEventListener('click', function (e) {
+      if (b.dataset.cat === undefined) return;  /* nas páginas de categoria os chips são links comuns */
+      e.preventDefault();
       cat = b.dataset.cat;
       chips.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); });
       apply();

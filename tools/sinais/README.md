@@ -115,3 +115,12 @@ Para o commit, entram:
 | Poster | WebP |
 | Fundo | `#f0fafa` |
 | Marca d'água | "LIBRAS.SE" em Museo Sans Rounded 1000 com o gradiente do logo (`make_watermark.py`) |
+
+## Páginas por categoria (/sinal/categoria/<slug>/)
+
+O `build_pages.py` gera uma página para cada categoria de `categorias.json` com pelo menos `minimo` sinais com vídeo.
+A página é montada a partir do `/sinal/` já gerado: head, hero, cards, textos e FAQ próprios, e entra no bloco SINAIS do sitemap.
+Os textos (title de até 60 caracteres, description de 70 a 165, dois cards editoriais e FAQ) ficam em `categorias.json`, sem travessão e sem emoji.
+Categoria nova em `sinais.json` sem entrada em `categorias.json` continua só como filtro no `/sinal/`.
+Em `fora` vai a categoria que já tem página em outra área: Alfabeto aponta para `/aprender-libras/alfabeto-em-libras/`.
+Nas páginas de sinal, a categoria entra no breadcrumb, o selo vira link e aparece "Ver todos: <categoria>".

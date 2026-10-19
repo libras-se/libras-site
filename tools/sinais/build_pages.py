@@ -65,10 +65,28 @@ def com_banner(header):
 
 
 def related(s, n=4):
-    same = [x for x in sinais if x is not s and x["categoria"] == s["categoria"] and x["video"]]
-    rest = [x for x in sinais if x is not s and x not in same and x["video"]]
+    """Os n sinais seguintes da mesma categoria, em rodízio. Pegar sempre os primeiros da lista deixava
+    metade dos sinais só com o link do hub; assim cada página recebe links das vizinhas."""
+    com_video = [x for x in sinais if x["video"]]
+    same = [x for x in com_video if x["categoria"] == s["categoria"]]
+    if s in same:
+        i = same.index(s)
+        same = same[i + 1:] + same[:i]
+    rest = [x for x in com_video if x is not s and x not in same]
+    if rest:
+        k = sinais.index(s) % len(rest)
+        rest = rest[k:] + rest[:k]
     rest += [x for x in sinais if x is not s and not x["video"]]
     return (same + rest)[:n]
+
+
+def titulo(s):
+    """Title de até 60 caracteres: nomes longos (times, estados) perdem o "veja o"."""
+    for t in (f"{s['palavra']} em Libras: veja o sinal em vídeo | LIBRAS.SE",
+              f"{s['palavra']} em Libras: sinal em vídeo | LIBRAS.SE"):
+        if len(t) <= 60:
+            return t
+    return f"Sinal de {s['palavra']} em Libras | LIBRAS.SE"
 
 
 def page(s):
@@ -163,7 +181,7 @@ def page(s):
         + f'<span>{esc(r["palavra"])}</span></a>'
         for r in related(s))
     rep = {
-        "TITLE": f"{s['palavra']} em Libras: veja o sinal em vídeo | LIBRAS.SE",
+        "TITLE": titulo(s),
         "OG_TITLE": f"{s['palavra']} em Libras, sinal em vídeo | LIBRAS.SE",
         "DESC": esc(desc), "URL": url, "OG_MEDIA": og_media, "OG_IMAGE": og_image, "PRELOAD": preload,
         "PLAYER": player,
@@ -282,6 +300,9 @@ def sitemap():
     if "<!-- SINAIS:SITEMAP -->" not in text:
         text = text.replace("</urlset>", "  <!-- SINAIS:SITEMAP --><!-- /SINAIS:SITEMAP -->\n</urlset>")
     text = replace_block(text, "SITEMAP", block + "\n  ")
+    # o hub /sinal/ muda a cada lote: lastmod = data do lote mais recente
+    ultimo = max(s.get("publicado_em", data["publicado_em"]) for s in sinais)
+    text = re.sub(rf"(<loc>{re.escape(SITE)}/sinal/</loc>\s*<lastmod>)[^<]+", rf"\g<1>{ultimo}", text)
     p.write_text(text)
 
 

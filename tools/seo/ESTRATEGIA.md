@@ -156,7 +156,7 @@ O blog tem notícia de sobra e pouco conteúdo de "como fazer" e "o que é", que
 
 | Busca | Formato | Onde |
 |---|---|---|
-| cores em Libras; números em Libras | página de aprender com vídeo e PDF | `/aprender-libras/` (números já existe) |
+| cores em Libras; números em Libras | página de aprender com vídeo e PDF | `/aprender-libras/` (números já existe). Desde 19/10/2026, `/sinal/categoria/cores/` atende a busca; falta o PDF |
 | bom dia em Libras; saudações; frases em Libras | página de aprender e sinais em vídeo (gravar) | `/aprender-libras/` + `/sinal/` |
 | como aprender Libras sozinho; curso de Libras grátis | post pilar que leva à trilha do Aprender | blog → `/aprender-libras/` |
 | história da Libras; surdos famosos | post pilar | blog → `/cultura-surda/` |

@@ -1,0 +1,319 @@
+{
+  "_leia": "Páginas /sinal/categoria/<slug>/ geradas por build_pages.py. Só entram categorias com pelo menos 'minimo' sinais com vídeo. {n} vira o número de sinais com vídeo da categoria. Sem travessão e sem emoji nos textos.",
+  "minimo": 5,
+  "fora": {
+    "Alfabeto": "/aprender-libras/alfabeto-em-libras/"
+  },
+  "faq_comum": [
+    {
+      "q": "Os sinais desta página valem para todo o Brasil?",
+      "a": "Os vídeos mostram uma das formas usadas no Brasil, gravadas por intérprete profissional da LIBRAS.SE. Como em qualquer língua, alguns sinais variam entre regiões e comunidades surdas. Se na sua cidade o sinal for diferente, as duas formas podem estar certas."
+    },
+    {
+      "q": "Ver os sinais basta para aprender Libras?",
+      "a": "Ajuda a ampliar o vocabulário, mas não substitui o estudo da língua, que tem gramática própria, expressão facial e uso do espaço. Para começar com uma trilha organizada, veja a área <a href=\"/aprender-libras/\">Aprender Libras</a>, gratuita e sem cadastro."
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "Cores",
+      "slug": "cores",
+      "h1": "Cores em",
+      "title": "Cores em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Veja as cores em Libras em vídeo: amarelo, azul, verde, vermelho, roxo, marrom e preto, com intérprete profissional e exemplos de uso.",
+      "sub": "Os sinais das cores em Libras, em vídeo e com intérprete profissional. Abra uma cor para ver o sinal em câmera lenta, a definição e frases de exemplo.",
+      "nota": "As cores estão entre os primeiros sinais que se aprende, porque servem para descrever roupas, objetos, comidas e lugares.",
+      "editorial": [
+        {
+          "h": "Onde a cor entra na frase",
+          "p": "Em Libras, o sinal da cor costuma vir depois do que ela descreve, como em CARRO AZUL ou CAMISA VERMELHA. Por isso vale treinar a cor junto com um objeto, e não sozinha. Combine as cores com os sinais de <a href=\"/sinal/categoria/alimentos/\">alimentos</a> e de <a href=\"/sinal/categoria/animais/\">animais</a> para montar as primeiras frases."
+        },
+        {
+          "h": "Cores para ensinar crianças",
+          "p": "Cores rendem boas atividades em sala: mostre um objeto, faça o sinal e peça que a turma repita. As <a href=\"/atividades/\">atividades para imprimir</a> e os <a href=\"/jogos/\">jogos de Libras</a> ajudam a fixar o vocabulário."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como aprender as cores em Libras mais rápido?",
+          "a": "Associe cada sinal a objetos que você vê todo dia e diga a cor de tudo que estiver por perto, como o céu AZUL ou a banana AMARELA. Repetir o sinal em contexto fixa melhor do que decorar a lista."
+        }
+      ]
+    },
+    {
+      "categoria": "Estados",
+      "slug": "estados",
+      "h1": "Estados do Brasil em",
+      "title": "Estados do Brasil em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais dos estados brasileiros em Libras em vídeo: Bahia, Ceará, Paraná, Pará, Goiás, Distrito Federal e outros, com intérprete profissional.",
+      "sub": "Os sinais dos estados brasileiros e do Distrito Federal em Libras, em vídeo e com intérprete profissional.",
+      "nota": "A lista cresce a cada lote: novos estados entram quando os vídeos são gravados e revisados.",
+      "editorial": [
+        {
+          "h": "Quando não se conhece o sinal",
+          "p": "Se você não sabe o sinal de um estado ou cidade, é comum soletrar o nome com o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto manual</a>, a <a href=\"/glossario/datilologia/\">datilologia</a>. Quem conhece o sinal costuma apresentá-lo durante a conversa."
+        },
+        {
+          "h": "Nomes de lugar variam",
+          "p": "Nomes de lugares estão entre os sinais que mais variam: a comunidade surda de cada região pode usar uma forma própria para o seu estado. Veja também os sinais de <a href=\"/sinal/categoria/lugares/\">lugares</a>, como cidade, praia e museu, e os <a href=\"/sinal/categoria/times-de-futebol/\">times de futebol</a> de cada estado."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Todos os estados têm sinal em Libras?",
+          "a": "Sim. Os estados brasileiros e o Distrito Federal têm sinais usados pela comunidade surda. Esta página reúne os que a LIBRAS.SE já gravou e revisou; os demais entram nos próximos lotes."
+        }
+      ]
+    },
+    {
+      "categoria": "Times de futebol",
+      "slug": "times-de-futebol",
+      "h1": "Times de futebol em",
+      "title": "Times de futebol em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais dos times de futebol em Libras em vídeo: Flamengo, Corinthians, Palmeiras, Vasco, Santos, São Paulo e mais, com intérprete profissional.",
+      "sub": "Os sinais de {n} clubes do futebol brasileiro em Libras, em vídeo e com intérprete profissional.",
+      "nota": "Para falar de futebol com pessoas surdas, do resultado da rodada ao time do coração.",
+      "editorial": [
+        {
+          "h": "Como nasce o sinal de um time",
+          "p": "Assim como os <a href=\"/blog/como-sao-criados-sinais-de-pessoas-na-libras/\">sinais de pessoas</a>, o sinal de um clube é criado e consolidado pela própria comunidade surda, e muitas vezes lembra algo marcante do time, como o escudo, o mascote ou o uniforme. Por isso pode haver variações entre torcidas e regiões."
+        },
+        {
+          "h": "Futebol com acessibilidade",
+          "p": "Transmissões com narração em Libras ainda são raras no Brasil. Leia no blog <a href=\"/blog/futebol-paixao-nacional-libras/\">como Bahia e Vasco já transmitiram jogos em Libras</a> e veja os sinais dos <a href=\"/sinal/categoria/estados/\">estados</a> para falar da origem de cada clube."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como fazer o sinal do Flamengo em Libras?",
+          "a": "Abra a página <a href=\"/sinal/flamengo/\">Flamengo em Libras</a>: o vídeo mostra o sinal em loop e em câmera lenta, com frases de exemplo. O mesmo vale para os outros clubes desta lista."
+        }
+      ]
+    },
+    {
+      "categoria": "Sentimentos",
+      "slug": "sentimentos",
+      "h1": "Sentimentos em",
+      "title": "Sentimentos em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais de sentimentos e emoções em Libras em vídeo: feliz, triste, medo, raiva, saudade, amor, eu te amo e outros, com intérprete profissional.",
+      "sub": "Os sinais de sentimentos e emoções em Libras, em vídeo e com intérprete profissional.",
+      "nota": "Repare no rosto da intérprete: nos sinais de sentimento, a expressão facial faz parte do sinal.",
+      "editorial": [
+        {
+          "h": "O rosto também sinaliza",
+          "p": "Em Libras, a <a href=\"/glossario/expressao-nao-manual/\">expressão não manual</a> (rosto, olhar e corpo) faz parte da gramática. Fazer o sinal de TRISTE sorrindo confunde quem vê. Nos vídeos, use a câmera lenta para observar as mãos e o rosto ao mesmo tempo."
+        },
+        {
+          "h": "Emoções na sala de aula",
+          "p": "Sentimentos são um bom tema para turmas com alunos surdos e ouvintes: cada um mostra como está se sentindo no dia com o sinal. Os <a href=\"/aprender-libras/sinais-basicos/\">sinais básicos</a> e os <a href=\"/jogos/\">jogos de Libras</a> completam a aula."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como se diz eu te amo em Libras?",
+          "a": "Existe um sinal próprio para EU TE AMO, mostrado na página <a href=\"/sinal/eu-te-amo/\">Eu te amo em Libras</a>. Ele é diferente do sinal de AMOR, que também está nesta lista."
+        }
+      ]
+    },
+    {
+      "categoria": "Saudações",
+      "slug": "saudacoes",
+      "h1": "Saudações em",
+      "title": "Saudações em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Saudações em Libras em vídeo: olá, tchau, boa tarde, parabéns, feliz aniversário e feliz ano novo, com intérprete profissional e exemplos de uso.",
+      "sub": "Os sinais para cumprimentar, se despedir e comemorar em Libras, em vídeo e com intérprete profissional.",
+      "nota": "Cumprimentar em Libras é o primeiro passo para conversar com uma pessoa surda.",
+      "editorial": [
+        {
+          "h": "Comece pelo cumprimento",
+          "p": "OLÁ e TCHAU abrem e fecham qualquer conversa. Olhe para quem está sinalizando: em Libras, o contato visual mostra que você está prestando atenção. Depois, aprenda as <a href=\"/sinal/categoria/expressoes/\">expressões do dia a dia</a>, como obrigado e desculpa."
+        },
+        {
+          "h": "Datas para comemorar",
+          "p": "PARABÉNS, FELIZ ANIVERSÁRIO e FELIZ ANO NOVO servem para mensagens em vídeo, cartões e eventos. Se a mensagem for um vídeo para muita gente, a <a href=\"/solucoes/\">LIBRAS.SE traduz o vídeo para Libras</a> com intérprete profissional."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como dar bom dia em Libras?",
+          "a": "O sinal de BOM DIA está em preparação e ganha vídeo em breve na página <a href=\"/sinal/bom-dia/\">Bom dia em Libras</a>. Enquanto isso, veja OLÁ e BOA TARDE nesta lista."
+        }
+      ]
+    },
+    {
+      "categoria": "Expressões",
+      "slug": "expressoes",
+      "h1": "Expressões do dia a dia em",
+      "title": "Expressões em Libras: obrigado, desculpa e mais | LIBRAS.SE",
+      "description": "Expressões do dia a dia em Libras em vídeo: obrigado, desculpa, sim, não e ajuda, com intérprete profissional, definição e exemplos de uso.",
+      "sub": "Palavras curtas que aparecem em toda conversa, em vídeo e com intérprete profissional.",
+      "nota": "SIM e NÃO costumam vir acompanhados do movimento da cabeça, que reforça o sentido do sinal.",
+      "editorial": [
+        {
+          "h": "Cortesia em Libras",
+          "p": "OBRIGADO e DESCULPA estão entre os sinais mais procurados por quem começa. Junte com as <a href=\"/sinal/categoria/saudacoes/\">saudações</a> e você já consegue abrir e fechar uma conversa com educação. A página de <a href=\"/aprender-libras/sinais-basicos/\">sinais básicos</a> organiza esses sinais por situação."
+        },
+        {
+          "h": "Pedir e oferecer ajuda",
+          "p": "O sinal de AJUDA é útil em lojas, recepções e serviços de saúde. Empresas que atendem o público podem ir além do vocabulário: veja os <a href=\"/libras-para-empresas/\">serviços de Libras para empresas</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como se diz obrigado em Libras?",
+          "a": "A página <a href=\"/sinal/obrigado/\">Obrigado em Libras</a> mostra o sinal em vídeo, em loop e em câmera lenta, com frases de exemplo e dicas de uso."
+        }
+      ]
+    },
+    {
+      "categoria": "Família e pessoas",
+      "slug": "familia-e-pessoas",
+      "h1": "Família e pessoas em",
+      "title": "Família e pessoas em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais de família e pessoas em Libras em vídeo: pai, filho, filha, bebê, amigo, criança, professor, surdo, ouvinte e mais, com intérprete profissional.",
+      "sub": "Os sinais para falar da família, dos amigos e das pessoas do dia a dia, em vídeo e com intérprete profissional.",
+      "nota": "Inclui SURDO e OUVINTE, dois sinais importantes para entender a comunidade surda.",
+      "editorial": [
+        {
+          "h": "Surdo, e não surdo-mudo",
+          "p": "Pessoas surdas se identificam como <a href=\"/glossario/surdo/\">surdas</a>. O termo surdo-mudo é incorreto: surdos têm voz e se comunicam em Libras. Entenda no blog <a href=\"/blog/entenda-porque-e-errado-o-termo-surdo-mudo/\">por que é errado dizer surdo-mudo</a>."
+        },
+        {
+          "h": "Sinal de nome",
+          "p": "Além dos sinais de parentesco, cada pessoa da comunidade surda costuma receber um sinal de nome, dado por uma pessoa surda. Veja <a href=\"/blog/como-sao-criados-sinais-de-pessoas-na-libras/\">como são criados os sinais de pessoas</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "O que significa ouvinte em Libras?",
+          "a": "OUVINTE é como a comunidade surda chama quem escuta. Os sinais de <a href=\"/sinal/ouvinte/\">ouvinte</a> e de <a href=\"/sinal/surdo/\">surdo</a> estão nesta lista, cada um com definição e exemplos."
+        }
+      ]
+    },
+    {
+      "categoria": "Verbos",
+      "slug": "verbos",
+      "h1": "Verbos em",
+      "title": "Verbos em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Verbos em Libras em vídeo: comer, aprender, ensinar, estudar, falar, gostar, morar, viajar e mais, com intérprete profissional e frases de exemplo.",
+      "sub": "Os verbos para montar as primeiras frases em Libras, em vídeo e com intérprete profissional.",
+      "nota": "Em Libras, o verbo não muda com o tempo como no português: passado e futuro são indicados por outros sinais, como ONTEM e AMANHÃ.",
+      "editorial": [
+        {
+          "h": "Verbos que mudam de direção",
+          "p": "Alguns verbos de Libras mudam a direção do movimento para mostrar quem faz a ação e quem a recebe, usando o <a href=\"/glossario/espaco-de-sinalizacao/\">espaço de sinalização</a>. Outros ficam sempre no mesmo lugar do corpo."
+        },
+        {
+          "h": "Monte frases",
+          "p": "Combine os verbos com <a href=\"/sinal/categoria/familia-e-pessoas/\">pessoas</a>, <a href=\"/sinal/categoria/alimentos/\">alimentos</a> e <a href=\"/sinal/categoria/lugares/\">lugares</a>, como em EU GOSTAR CAFÉ. A ordem das palavras em Libras nem sempre é a do português; veja exemplos em <a href=\"/aprender-libras/sinais-basicos/\">sinais básicos</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como os verbos de Libras indicam o passado?",
+          "a": "O verbo em si não muda. O tempo vem de sinais como ONTEM, AMANHÃ ou JÁ, colocados na frase, e do contexto da conversa."
+        }
+      ]
+    },
+    {
+      "categoria": "Alimentos",
+      "slug": "alimentos",
+      "h1": "Alimentos em",
+      "title": "Alimentos em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais de alimentos e bebidas em Libras em vídeo: arroz, feijão, frango, peixe, banana, leite, café, suco, sorvete e mais, com intérprete profissional.",
+      "sub": "Os sinais de comidas e bebidas em Libras, em vídeo, para usar à mesa, no mercado e no restaurante.",
+      "nota": "Junte com o verbo COMER e com as cores para montar frases simples.",
+      "editorial": [
+        {
+          "h": "Um prato para treinar",
+          "p": "Arroz, feijão, frango e suco formam um prato bem brasileiro e um bom roteiro para praticar. Diga o que comeu hoje usando os sinais desta lista e os <a href=\"/sinal/categoria/verbos/\">verbos</a>, como COMER e GOSTAR."
+        },
+        {
+          "h": "Para escolas e restaurantes",
+          "p": "O <a href=\"/jogos/jogo-da-memoria-libras/\">jogo da memória</a> ajuda a fixar os sinais de alimentos com crianças. Cardápios em vídeo e conteúdos de marcas de alimentos também podem ter Libras: veja a <a href=\"/libras-para-publicidade/\">Libras para publicidade</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como treinar os sinais de alimentos?",
+          "a": "Faça o sinal sempre que vir o alimento, na cozinha ou no mercado. Depois, teste a memória no <a href=\"/jogos/jogo-da-memoria-libras/\">jogo da memória de Libras</a>."
+        }
+      ]
+    },
+    {
+      "categoria": "Animais",
+      "slug": "animais",
+      "h1": "Animais em",
+      "title": "Animais em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais de animais em Libras em vídeo: cachorro, gato, pássaro, leão, macaco, elefante, cobra, borboleta e mais, com intérprete profissional.",
+      "sub": "Os sinais de animais em Libras, em vídeo e com intérprete profissional, para aprender sozinho ou com crianças.",
+      "nota": "Animais costumam ser um dos temas preferidos de quem está começando, de qualquer idade.",
+      "editorial": [
+        {
+          "h": "Sinais que lembram o animal",
+          "p": "Muitos sinais de animais lembram uma característica do bicho, como a forma ou o jeito de se mover. Isso ajuda a memorizar, mas não é regra: Libras não é mímica, e cada sinal tem <a href=\"/glossario/configuracao-de-mao/\">configuração de mão</a>, movimento e ponto de articulação próprios."
+        },
+        {
+          "h": "Animais para crianças",
+          "p": "Mostre a figura do animal, faça o sinal e peça que a criança repita. Os <a href=\"/jogos/\">jogos de Libras</a> e as <a href=\"/atividades/\">atividades para imprimir</a> transformam a lista em brincadeira."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Os sinais de animais são mímica?",
+          "a": "Não. Mesmo quando lembram o animal, os sinais seguem as regras da Libras e são combinados entre os falantes. Quem imita o animal do próprio jeito não está fazendo o sinal."
+        }
+      ]
+    },
+    {
+      "categoria": "Cotidiano",
+      "slug": "cotidiano",
+      "h1": "Sinais do dia a dia em",
+      "title": "Sinais do dia a dia em Libras, em vídeo | LIBRAS.SE",
+      "description": "Sinais do cotidiano em Libras em vídeo: casa, banheiro, água, carro, ônibus, telefone, dinheiro, trabalho e mais, com intérprete profissional.",
+      "sub": "Os sinais de objetos, lugares da casa e coisas da rotina em Libras, em vídeo e com intérprete profissional.",
+      "nota": "São sinais que aparecem em conversas simples, do café da manhã à volta do trabalho.",
+      "editorial": [
+        {
+          "h": "Em casa",
+          "p": "CASA, CAMA, PORTA, JANELA e BANHEIRO servem para descrever a rotina e para pedir informação. Junte com os <a href=\"/sinal/categoria/verbos/\">verbos</a>, como MORAR, para contar onde você vive."
+        },
+        {
+          "h": "Na rua e no trabalho",
+          "p": "CARRO, ÔNIBUS, DINHEIRO e TRABALHO entram em conversas sobre deslocamento e compras. Se a sua empresa atende pessoas surdas, conheça a <a href=\"/libras-para-empresas/\">Libras para empresas</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como perguntar onde fica o banheiro em Libras?",
+          "a": "Use o sinal de <a href=\"/sinal/banheiro/\">banheiro</a> com expressão de pergunta: sobrancelhas e olhar indicam que é uma pergunta. Em Libras, a expressão facial faz esse papel."
+        }
+      ]
+    },
+    {
+      "categoria": "Lugares",
+      "slug": "lugares",
+      "h1": "Lugares em",
+      "title": "Lugares em Libras: sinais em vídeo | LIBRAS.SE",
+      "description": "Sinais de lugares em Libras em vídeo: cidade, praia, floresta, montanha, hospital, museu e teatro, com intérprete profissional e exemplos de uso.",
+      "sub": "Os sinais de lugares em Libras, da praia ao hospital, em vídeo e com intérprete profissional.",
+      "nota": "Úteis para falar de viagens, passeios e para pedir informação na rua.",
+      "editorial": [
+        {
+          "h": "Viagens e passeios",
+          "p": "PRAIA, MONTANHA, FLORESTA e CIDADE servem para contar onde você foi ou quer ir. Junte com o verbo VIAJAR, da lista de <a href=\"/sinal/categoria/verbos/\">verbos</a>, e com os sinais dos <a href=\"/sinal/categoria/estados/\">estados</a>."
+        },
+        {
+          "h": "Cultura e saúde acessíveis",
+          "p": "Museus, teatros e hospitais são lugares onde a comunicação em Libras faz diferença. Para exposições, peças e festivais, veja a <a href=\"/acessibilidade-para-projetos-culturais/\">acessibilidade para projetos culturais</a>."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Como dizer que vou à praia em Libras?",
+          "a": "Combine os sinais de <a href=\"/sinal/eu/\">eu</a>, <a href=\"/sinal/viajar/\">viajar</a> e <a href=\"/sinal/praia/\">praia</a>. Veja cada um na sua página e repare na ordem das frases de exemplo."
+        }
+      ]
+    }
+  ]
+}

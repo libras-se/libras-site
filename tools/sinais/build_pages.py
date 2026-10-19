@@ -4,6 +4,7 @@ Uso (na raiz do repo): python3 tools/sinais/build_pages.py
 
 - /sinal/<slug>/index.html  (template-sinal.html + header/footer canônicos em partials/)
 - /sinal/index.html         (cards, filtros, contagem e ItemList entre marcadores SINAIS:*)
+- /sinal/categoria/<slug>/  (uma página por categoria, textos em categorias.json, a partir do /sinal/ gerado)
 - sitemap.xml               (bloco SINAIS com extensão de vídeo do Google)
 Cada sinal pode ter "publicado_em" próprio (data do lote em que entrou); sem ele, vale o "publicado_em" geral.
 O vídeo de cada sinal (assets/videos/sinais/<slug>.mp4/.webp) só existe depois de aprovado e publicado por
@@ -53,6 +54,18 @@ for s in data["sinais"]:
 # listagem: primeiro os que têm vídeo publicado, depois em ordem alfabética
 sinais.sort(key=lambda s: (not s["video"], fold(s["palavra"])))
 OG_PADRAO = f"{SITE}/assets/img/og/sinal.webp"
+
+# categorias com página própria: as de categorias.json com pelo menos "minimo" sinais com vídeo
+CAT = json.loads((HERE / "categorias.json").read_text())
+_nomes = {s["categoria"] for s in sinais}
+assert all(c["categoria"] in _nomes for c in CAT["categorias"]), "categoria de categorias.json sem sinal"
+CAT_PAGINAS = [c for c in CAT["categorias"]
+               if sum(1 for s in sinais if s["categoria"] == c["categoria"] and s["video"]) >= CAT["minimo"]]
+CAT_PROPRIA = {c["categoria"]: f"/sinal/categoria/{c['slug']}/" for c in CAT_PAGINAS}
+CAT_URL = {**CAT_PROPRIA, **CAT["fora"]}  # fora: categoria com página em outra área (Alfabeto)
+SETA_BC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>'
+SETA_LINK = ('<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" '
+             'aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>')
 
 
 SKIP = '<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>'
@@ -105,7 +118,9 @@ def page(s):
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
             {"@type": "ListItem", "position": 2, "name": "Sinais em Libras", "item": f"{SITE}/sinal/"},
-            {"@type": "ListItem", "position": 3, "name": s["palavra"], "item": url}]},
+            *([{"@type": "ListItem", "position": 3, "name": s["categoria"], "item": SITE + CAT_PROPRIA[s["categoria"]]}]
+              if s["categoria"] in CAT_PROPRIA else []),
+            {"@type": "ListItem", "position": 4 if s["categoria"] in CAT_PROPRIA else 3, "name": s["palavra"], "item": url}]},
         {"@type": "DefinedTerm", "name": s["palavra"], "description": re.sub("<[^>]+>", "", s["resumo"]),
          "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sinais em Libras", "url": f"{SITE}/sinal/"},
          "url": url, **({"image": f"{SITE}{ILU_DIR}/{s['slug']}.webp"} if s["ilustracao"] else {})},
@@ -190,7 +205,13 @@ def page(s):
         "FOOTER_CSS": partials["footer_css"], "UTILS_CSS": partials["utils_css"],
         "HEADER_HTML": com_banner(partials["header_html"]), "FOOTER_HTML": partials["footer_html"], "BASE_JS": partials["base_js"],
         "PROMO_CSS": partials["promo-css_html"], "PROMO_JS": partials["promo-js_html"],
-        "PALAVRA": esc(s["palavra"]), "CATEGORIA": esc(s["categoria"]), "PRON": esc(s["pron"]),
+        "PALAVRA": esc(s["palavra"]), "PRON": esc(s["pron"]),
+        "BC_CAT": (f'      <a href="{CAT_PROPRIA[s["categoria"]]}">{esc(s["categoria"])}</a>\n      {SETA_BC}\n'
+                   if s["categoria"] in CAT_PROPRIA else ""),
+        "ENTRY_CAT": (f'<a href="{CAT_URL[s["categoria"]]}" class="entry-cat">{esc(s["categoria"])}</a>'
+                      if s["categoria"] in CAT_URL else f'<span class="entry-cat">{esc(s["categoria"])}</span>'),
+        "REL_CAT": (f'    <a href="{CAT_URL[s["categoria"]]}" class="rel-all">Ver todos: {esc(s["categoria"].lower())} {SETA_LINK}</a>\n'
+                    if s["categoria"] in CAT_URL else ""),
         "CLASSE": esc(s["classe"]), "RESUMO": esc(s["resumo"]), "DEFS": defs, "DADOS": dados_html, "EXEMPLOS": ex,
         "CONTEXTO": ctx, "RELACIONADOS": rel,
     }
@@ -209,17 +230,9 @@ def replace_block(text, name, content):
     return pat.sub(lambda m: m.group(1) + content + m.group(3), text)
 
 
-def index():
-    p = ROOT / "sinal" / "index.html"
-    text = p.read_text()
-    cats = []
-    for s in sinais:
-        if s["categoria"] not in cats:
-            cats.append(s["categoria"])
-    chips = '\n      <button type="button" class="chip on" data-cat="" aria-pressed="true">Todos</button>' + "".join(
-        f'\n      <button type="button" class="chip" data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in cats) + "\n      "
+def cards_html(lista):
     cards = ""
-    for s in sinais:
+    for s in lista:
         nome = esc(fold(s["palavra"] + " " + s.get("busca", "")))
         v, img = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
         if s["video"]:
@@ -242,6 +255,21 @@ def index():
         </div>
       </article>'''
     cards += "\n      "
+    return cards
+
+
+def index():
+    p = ROOT / "sinal" / "index.html"
+    text = p.read_text()
+    cats = []
+    for s in sinais:
+        if s["categoria"] not in cats:
+            cats.append(s["categoria"])
+    chips = '\n      <button type="button" class="chip on" data-cat="" aria-pressed="true">Todos</button>' + "".join(
+        f'\n      <a href="{CAT_URL[c]}" class="chip" role="button" data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</a>'
+        if c in CAT_URL else
+        f'\n      <button type="button" class="chip" data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in cats) + "\n      "
+    cards = cards_html(sinais)
     n = len(sinais)
     nv = sum(1 for s in sinais if s["video"])
     count = (f"{nv} {'sinal' if nv == 1 else 'sinais'} em vídeo, com página própria. Mais sinais em breve." if nv
@@ -256,6 +284,90 @@ def index():
     text = replace_block(text, "CONTAGEM", count)
     text = replace_block(text, "ITEMLIST", f'\n<script type="application/ld+json">\n{itemlist}\n</script>\n')
     p.write_text(text)
+
+
+def sem_tags(s):
+    return re.sub("<[^>]+>", "", s)
+
+
+def categorias():
+    """Uma página por categoria, feita a partir do /sinal/ já gerado: troca head, hero, cards, textos e FAQ."""
+    hub = (ROOT / "sinal" / "index.html").read_text()
+    faq_ld_hub = re.search(r'<script type="application/ld\+json">\n\{\n  "@context": "https://schema.org",\n  "@graph".*?</script>', hub, re.S)
+    assert faq_ld_hub, "bloco JSON-LD do /sinal/ não encontrado"
+    for c in CAT_PAGINAS:
+        cat, rel = c["categoria"], CAT_PROPRIA[c["categoria"]]
+        url = SITE + rel
+        lista = [s for s in sinais if s["categoria"] == cat]
+        nv = sum(1 for s in lista if s["video"])
+        assert 70 <= len(c["description"]) <= 165 and len(c["title"]) <= 60, f"{cat}: title ou description fora do tamanho"
+        nome = f'{c["h1"]} Libras'
+        capa = next(f"{SITE}{VID_DIR}/{s['slug']}.webp" for s in lista if s["video"])
+        faqs = c["faq"] + CAT["faq_comum"]
+        graph = {"@context": "https://schema.org", "@graph": [
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Início", "item": f"{SITE}/"},
+                {"@type": "ListItem", "position": 2, "name": "Sinais em Libras", "item": f"{SITE}/sinal/"},
+                {"@type": "ListItem", "position": 3, "name": cat, "item": url}]},
+            {"@type": "CollectionPage", "name": nome, "description": c["description"], "url": url, "inLanguage": "pt-BR",
+             "isPartOf": {"@type": "WebSite", "name": "LIBRAS.SE", "url": f"{SITE}/"}},
+            {"@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": sem_tags(f["a"])}} for f in faqs]}]}
+        itemlist = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": nome, "numberOfItems": len(lista),
+                               "itemListElement": [{"@type": "ListItem", "position": i, "name": f"{s['palavra']} em Libras",
+                                                    "url": f"{SITE}/sinal/{s['slug']}/"} for i, s in enumerate(lista, 1)]},
+                              ensure_ascii=False, indent=1)
+        chips = '\n      <a href="/sinal/" class="chip">Todos os sinais</a>' + "".join(
+            f'\n      <a href="{u}" class="chip on" aria-current="page">{esc(k)}</a>' if k == cat else
+            f'\n      <a href="{u}" class="chip">{esc(k)}</a>' for k, u in CAT_URL.items()) + "\n      "
+        ed = "\n".join(f'''
+      <div class="ed-card rv d{i}">
+        <h2{' id="ed-h"' if i == 1 else ''}>{esc(e["h"])}</h2>
+        <p>{e["p"]}</p>
+      </div>''' for i, e in enumerate(c["editorial"], 1))
+        faq = "".join(f'''
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          {esc(f["q"])}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region"><p>{f["a"]}</p></div>
+      </div>
+''' for f in faqs)
+        exemplos = ", ".join(s["palavra"].lower() for s in lista[:2])
+        trocas = [
+            (r"<title>.*?</title>", f"<title>{esc(c['title'])}</title>"),
+            (r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(c["description"])}">'),
+            (r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">'),
+            (r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">'),
+            (r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(nome)}, sinais em vídeo | LIBRAS.SE">'),
+            (r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(c["description"])}">'),
+            (r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{capa}">'),
+            (re.escape(faq_ld_hub.group(0)), f'<script type="application/ld+json">\n{json.dumps(graph, ensure_ascii=False, indent=1)}\n</script>'),
+            (r"<span>Sinais em Libras</span>", f'<a href="/sinal/">Sinais em Libras</a>\n      {SETA_BC}\n      <span>{esc(cat)}</span>'),
+            (r'<h1 class="rv">.*?</h1>', f'<h1 class="rv">{esc(c["h1"])} <span class="gt">Libras</span></h1>'),
+            (r'<p class="hero-sub rv d1">.*?</p>', f'<p class="hero-sub rv d1">{esc(c["sub"].replace("{n}", str(nv)))}</p>'),
+            (r'<div class="hero-note rv d2">.*?</div>', f'<div class="hero-note rv d2">{esc(c["nota"])}</div>'),
+            (r'placeholder="[^"]*"', f'placeholder="Busque nesta lista: {esc(exemplos)}…"'),
+            (r'aria-label="Filtrar por categoria"', 'aria-label="Outras categorias"'),
+            (r'<p class="section-label rv" id="sinais-h">.*?</p>', f'<p class="section-label rv" id="sinais-h">{esc(nome)}</p>'),
+            (r'<div class="ed-grid">.*?\n    </div>\n  </div>\n</section>', f'<div class="ed-grid">{ed}\n\n    </div>\n  </div>\n</section>'),
+            (r'(<div class="faq-list rv d1">\n).*?(\n    </div>\n  </div>\n</section>)', None),
+        ]
+        out = hub
+        for pat, novo in trocas:
+            if novo is None:  # FAQ: mantém o contêiner, troca os itens
+                out, k = re.subn(pat, lambda m: m.group(1) + faq + m.group(2), out, count=1, flags=re.S)
+            else:
+                out, k = re.subn(pat, lambda m: novo, out, count=1, flags=re.S)
+            assert k == 1, f"{cat}: não achei {pat[:60]}"
+        out = replace_block(out, "FILTROS", chips)
+        out = replace_block(out, "CARDS", cards_html(lista))
+        out = replace_block(out, "CONTAGEM", f"{nv} {'sinal' if nv == 1 else 'sinais'} em vídeo, com página própria.")
+        out = replace_block(out, "ITEMLIST", f'\n<script type="application/ld+json">\n{itemlist}\n</script>\n')
+        dest = ROOT / rel.strip("/") / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(out)
 
 
 def sitemap():
@@ -297,6 +409,15 @@ def sitemap():
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>"""
+    for c in CAT_PAGINAS:
+        datas = [s.get("publicado_em", data["publicado_em"]) for s in sinais if s["categoria"] == c["categoria"]]
+        block += f"""
+  <url>
+    <loc>{SITE}{CAT_PROPRIA[c['categoria']]}</loc>
+    <lastmod>{max(datas)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>"""
     if "<!-- SINAIS:SITEMAP -->" not in text:
         text = text.replace("</urlset>", "  <!-- SINAIS:SITEMAP --><!-- /SINAIS:SITEMAP -->\n</urlset>")
     text = replace_block(text, "SITEMAP", block + "\n  ")
@@ -309,5 +430,6 @@ def sitemap():
 for s in sinais:
     page(s)
 index()
+categorias()
 sitemap()
 print(f"{len(sinais)} páginas de sinal geradas; /sinal/ e sitemap.xml atualizados")

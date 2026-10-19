@@ -128,6 +128,9 @@ def breadcrumb_html(items):
     return f'<nav class="bc" aria-label="Você está em">{seta.join(partes)}</nav>'
 
 
+MUDOU = set()  # páginas cujo HTML mudou nesta execução: ganham lastmod de hoje no sitemap
+
+
 def build(src):
     text = src.read_text()
     m = re.match(r"\s*<!--META\s*(\{.*?\})\s*META-->\s*", text, re.S)
@@ -229,6 +232,8 @@ a{{text-decoration:none;color:inherit}}
     assert not sobra, f"{src.name}: marcadores sem substituição {sobra}"
     dest = ROOT / meta["url"].strip("/") / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
+    if not dest.exists() or dest.read_text() != out:
+        MUDOU.add(meta["url"])
     dest.write_text(out)
     return meta["url"]
 
@@ -248,7 +253,7 @@ def sitemap():
     antigo = re.search(r"  <!-- APRENDER:SITEMAP -->.*?<!-- /APRENDER:SITEMAP -->\n", text, re.S)
     datas = dict(re.findall(r"<loc>(https://libras\.se[^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", antigo.group(0))) if antigo else {}
     bloco = "  <!-- APRENDER:SITEMAP -->\n" + "".join(
-        f"  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{datas.get(SITE + u, hoje)}</lastmod>\n"
+        f"  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{hoje if u in MUDOU else datas.get(SITE + u, hoje)}</lastmod>\n"
         f"    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>\n" for u, pr in urls) + "  <!-- /APRENDER:SITEMAP -->\n"
     text = text.replace(antigo.group(0), bloco) if antigo else text.replace("</urlset>", bloco + "</urlset>")
     p.write_text(text)

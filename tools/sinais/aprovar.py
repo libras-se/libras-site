@@ -201,8 +201,8 @@ def ilu_decidir(body, usuario):
         d["por"] = usuario
         if d.get("status") == "aprovado":
             d["aprovado_em"] = agora()
-        if d.get("status") == "refazer":
-            d.update(pedido_em=agora(), pedido_por=usuario)
+        if d.get("status") == "refazer":  # sem nota nova, não herda a nota da aprovação anterior
+            d.update(pedido_em=agora(), pedido_por=usuario, nota=body.get("nota", ""))
     alterar(fn)
 
 

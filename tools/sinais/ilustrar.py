@@ -15,6 +15,7 @@ A nota (opcional) vira uma instrução extra para o Codex, usada no "gerar de no
 import argparse
 import datetime
 import json
+import os
 import shutil
 import subprocess
 import tempfile
@@ -24,23 +25,34 @@ from pathlib import Path
 import numpy as np
 
 HERE = Path(__file__).parent
-WORK = Path("/Volumes/Extreme Pro/LIBRAS.SE/TRABALHOS/VIDEOS GLOSSARIO/_processamento")
+WORK = Path(os.environ.get("SINAIS_WORK", "/Volumes/Extreme Pro/LIBRAS.SE/TRABALHOS/VIDEOS GLOSSARIO/_processamento"))
 ESTILO = HERE / "ilustracao-estilo.jpg"
 PROMPT = HERE / "ilustracao-prompt.txt"
 FPS = 30000 / 1001
 COBRE_MARCA = "drawbox=x=1020:y=15:w=250:h=70:color=0xF0FAFA:t=fill,crop=960:720:160:0"
 
 
-def trecho_ativo(meta):
+def curva_do_clipe(video):
+    """Distância de cada quadro do corte ao repouso (o corte começa e termina com as mãos paradas).
+    Substitui a curva do bruto quando motion/ não está disponível (sem o SSD, o trabalho vem do servidor)."""
+    w, h = 64, 36
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(video), "-vf", f"scale={w}:{h},format=gray",
+                          "-f", "rawvideo", "-"], check=True, capture_output=True).stdout
+    f = np.frombuffer(raw, np.uint8).reshape(-1, h, w).astype(np.float32)
+    return np.minimum(abs(f - f[0]).mean((1, 2)), abs(f - f[-1]).mean((1, 2)))
+
+
+def trecho_ativo(meta, video):
     """Começo e fim (s, relativos ao clipe) do movimento do sinal, pela distância ao repouso."""
     npz = WORK / "motion" / f"{meta['arquivo']}.npz"
     pad = 0.1
     dur = meta["fim"] - meta["ini"] + 2 * pad
-    if not npz.exists():
-        return dur * 0.2, dur * 0.7
-    d = np.load(npz)["dist"]
-    a, b = int((meta["ini"] - pad) * FPS), int((meta["fim"] + pad) * FPS)
-    seg = d[a:b]
+    if npz.exists():
+        d = np.load(npz)["dist"]
+        a, b = int((meta["ini"] - pad) * FPS), int((meta["fim"] + pad) * FPS)
+        seg = d[a:b]
+    else:
+        seg = curva_do_clipe(video)
     on = np.flatnonzero(seg > seg.min() + 0.5 * (seg.max() - seg.min()))
     if len(on) < 3:
         return dur * 0.2, dur * 0.7
@@ -48,7 +60,7 @@ def trecho_ativo(meta):
 
 
 def quadros(video, meta, pasta):
-    t0, t1 = trecho_ativo(meta)
+    t0, t1 = trecho_ativo(meta, video)
     chave = pasta / "chave.png"
     seq = pasta / "seq.png"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{(t0 + t1) / 2:.2f}", "-i", str(video), "-frames:v", "1",

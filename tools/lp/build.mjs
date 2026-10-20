@@ -16,7 +16,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const TODAY = new Date().toISOString().slice(0, 10);
 const HUET = 'https://huet.libras.se';
 const WA = '5548996367511';
-const ASSET_V = '20261020';
+const ASSET_V = '20261020b';
 
 /* ── ícones (traço, currentColor) ─────────────────────────────────────── */
 const P = {
@@ -87,8 +87,18 @@ function huetUrl(p, path, cta, extra = {}) {
 }
 const quoteUrl = (p, cta) =>
 	p.quotePath ? huetUrl(p, p.quotePath, cta) : huetUrl(p, '/dashboard/requests/quote', cta, { service: p.quote });
-const meetUrl = (p, cta) =>
-	huetUrl(p, '/dashboard/requests/schedule', cta, { topic: `${p.ouvirTopic} (vim pelo site)`, service: p.quote });
+/** Agendamento no próprio site (/agendar), sem login: horários reais da agenda comercial. */
+const meetUrl = (p, cta) => {
+	const q = new URLSearchParams({
+		topic: p.ouvirTopic,
+		service: p.quote,
+		utm_source: 'site',
+		utm_medium: 'lp',
+		utm_campaign: p.slug,
+		utm_content: cta,
+	});
+	return `/agendar/?${q.toString()}`;
+};
 const waUrl = (p) =>
 	`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Estava na página de ${p.label} do site da LIBRAS.SE e quero conversar sobre o meu projeto.`)}`;
 
@@ -116,7 +126,7 @@ function faqFor(p) {
 		},
 		{
 			q: 'Posso conversar com a equipe antes de fechar?',
-			a: 'Pode, e é o que recomendamos. Escolha um horário livre na nossa agenda pelo HUET para uma conversa por vídeo, ou chame no WhatsApp. Antes de propor qualquer coisa, queremos entender o seu cenário: prazo, minutagem, destino da obra e o que o edital ou o cliente exige.',
+			a: 'Pode, e é o que recomendamos. Escolha um horário livre na nossa agenda, aqui mesmo no site, para uma conversa por vídeo, ou chame no WhatsApp. Antes de propor qualquer coisa, queremos entender o seu cenário: prazo, minutagem, destino da obra e o que o edital ou o cliente exige.',
 		},
 	];
 }
@@ -224,7 +234,7 @@ function blockOuvir(p) {
           <figcaption>Conversa por vídeo, sem compromisso</figcaption>
         </figure>
         <div class="lp-paths">
-          <a class="lp-path" href="${esc(meetUrl(p, 'card-reuniao'))}" target="_blank" rel="noopener" data-lp-cta="reuniao"><span class="lp-path-ic">${ic('calendar')}</span><span><b>Agendar uma conversa por vídeo</b><span>Escolha um horário livre na nossa agenda. A confirmação chega por e-mail com o convite.</span></span><span class="lp-path-go">${ic('arrow')}</span></a>
+          <a class="lp-path" href="${esc(meetUrl(p, 'card-reuniao'))}" data-lp-cta="reuniao"><span class="lp-path-ic">${ic('calendar')}</span><span><b>Agendar uma conversa por vídeo</b><span>Escolha um horário livre na nossa agenda. A confirmação chega por e-mail com o convite.</span></span><span class="lp-path-go">${ic('arrow')}</span></a>
           <a class="lp-path wa" href="${esc(waUrl(p))}" target="_blank" rel="noopener noreferrer" data-lp-cta="whatsapp"><span class="lp-path-ic">${ic('chat')}</span><span><b>Falar agora no WhatsApp</b><span>Atendimento por gente de verdade. Mande o que já tiver: link, roteiro ou minutagem.</span></span><span class="lp-path-go">${ic('arrow')}</span></a>
           <a class="lp-path qt" href="${esc(quoteUrl(p, 'card-orcamento'))}" target="_blank" rel="noopener" data-lp-cta="orcamento"><span class="lp-path-ic">${ic('file')}</span><span><b>${quoteTitle}</b><span>${quoteDesc}</span></span><span class="lp-path-go">${ic('arrow')}</span></a>
         </div>
@@ -263,7 +273,7 @@ function blockOuvir(p) {
           <p data-lp-ok="msg"></p>
           <div class="lp-ok-btns">
             <a class="btn bw" data-lp-ok="wa" data-lp-cta="sucesso-whatsapp" href="${esc(waUrl(p))}" target="_blank" rel="noopener noreferrer">Adiantar pelo WhatsApp</a>
-            <a class="btn bp" data-lp-ok="meet" data-lp-cta="sucesso-reuniao" href="${esc(meetUrl(p, 'sucesso-reuniao'))}" target="_blank" rel="noopener">Escolher horário para conversar</a>
+            <a class="btn bp" data-lp-ok="meet" data-lp-cta="sucesso-reuniao" href="${esc(meetUrl(p, 'sucesso-reuniao'))}">Escolher horário para conversar</a>
             <a class="btn lp-ghost" data-lp-cta="sucesso-orcamento" href="${esc(quoteUrl(p, 'sucesso-orcamento'))}" target="_blank" rel="noopener">${p.quotePath ? 'Gerar estimativa no HUET' : 'Gerar orçamento prévio no HUET'}</a>
           </div>
         </div>
@@ -371,7 +381,7 @@ function blockTail(p) {
 <div class="lp-dock" role="region" aria-label="Atalhos de contato">
   <span class="lp-dock-t">Vamos conversar sobre o seu projeto?</span>
   <a class="btn lp-dk-ghost" href="${esc(quoteUrl(p, 'dock-orcamento'))}" target="_blank" rel="noopener" data-lp-cta="dock-orcamento">${p.quotePath ? 'Estimativa' : 'Orçamento'}</a>
-  <a class="btn bp" href="${esc(meetUrl(p, 'dock-reuniao'))}" target="_blank" rel="noopener" data-lp-cta="dock-reuniao">Agendar conversa</a>
+  <a class="btn bp" href="${esc(meetUrl(p, 'dock-reuniao'))}" data-lp-cta="dock-reuniao">Agendar conversa</a>
   <a class="btn bw" href="${esc(waUrl(p))}" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" data-lp-cta="dock-whatsapp">${WA_ICON}<span>WhatsApp</span></a>
 </div>
 <script type="application/json" id="lp-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>

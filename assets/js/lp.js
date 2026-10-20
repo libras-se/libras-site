@@ -389,6 +389,15 @@
 			}
 			// Quem pediu reunião vê o agendamento primeiro; quem pediu WhatsApp, o WhatsApp.
 			if (meet && wa && d.pref === 'reuniao' && accepted) meet.parentNode.insertBefore(meet, wa);
+			// /agendar abre com os dados já digitados (só nesta aba).
+			try {
+				window.sessionStorage.setItem(
+					'librasse_agendar_prefill',
+					JSON.stringify({ name: d.name, email: d.email, phone: d.whatsapp, company: d.company, topic: d.description }),
+				);
+			} catch (err) {
+				/* ignore */
+			}
 			box.classList.add('sent');
 			okBox.classList.add('on');
 			okBox.setAttribute('tabindex', '-1');

@@ -467,5 +467,28 @@
 		/* ignore */
 	}
 
-	window.LibrasLead = { send: send, openWhatsApp: openWhatsApp, whatsappWithRef: withRef, newRefCode: newCode };
+	/** First touch + visitante, no formato do bloco `attribution` da API (usado pelo /agendar). */
+	function attribution() {
+		var ft = ensureFirstTouch();
+		return {
+			utmSource: ft.utmSource || undefined,
+			utmMedium: ft.utmMedium || undefined,
+			utmCampaign: ft.utmCampaign || undefined,
+			utmContent: ft.utmContent || undefined,
+			utmTerm: ft.utmTerm || undefined,
+			gclid: ft.gclid || undefined,
+			fbclid: ft.fbclid || undefined,
+			landingPage: ft.landingPage || undefined,
+			visitorId: visitorId() || undefined,
+		};
+	}
+
+	window.LibrasLead = {
+		apiBase: API_BASE,
+		send: send,
+		attribution: attribution,
+		openWhatsApp: openWhatsApp,
+		whatsappWithRef: withRef,
+		newRefCode: newCode,
+	};
 })();

@@ -217,6 +217,11 @@
   .body-text a:hover{color:var(--teal-dark)}
   .drop-cap::first-letter{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:3.8em;line-height:.75;float:left;margin-right:8px;margin-top:6px;color:var(--teal-dark)}
   mark{background:linear-gradient(120deg,rgba(72,191,178,.25) 0%,rgba(72,191,178,.1) 100%);color:inherit;border-radius:3px;padding:1px 4px}
+  /* Grifo animado (marca-texto): /assets/js/grifo.js adiciona .on quando o trecho entra na tela */
+  mark.grifo{background:linear-gradient(90deg,rgba(72,191,178,.3) 50%,transparent 50%) 100% 0/200% 100% no-repeat;padding:1px 0;transition:background-position var(--grifo-d,.9s) cubic-bezier(.5,.1,.35,1)}
+  mark.grifo.on{background-position:0 0}
+  @media(prefers-reduced-motion:reduce){mark.grifo{transition:none}}
+  @media print{mark.grifo{background-position:0 0}}
 
   /* PULL QUOTE */
   .pull-quote{margin:56px 0;padding:40px 48px;background:linear-gradient(135deg,var(--teal-dark) 0%,var(--teal-mid) 100%);border-radius:var(--radius-lg);position:relative;overflow:hidden}
@@ -559,7 +564,7 @@
   <div class="reveal">
     <h2 class="section-label">A língua que você talvez não conheça ainda</h2>
     <p class="body-text drop-cap">
-      O Brasil fala, escreve, digita e também sinaliza. A <a href="/glossario/libras/"><strong>Língua Brasileira de Sinais</strong></a>, a Libras, é a língua usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Não é um código secreto. Não é português com as mãos. Não é mímica. É uma língua de verdade: com gramática, história, cultura e papel central na vida de milhões de pessoas.
+      O Brasil fala, escreve, digita e também sinaliza. A <a href="/glossario/libras/"><strong>Língua Brasileira de Sinais</strong></a>, a Libras, é a língua usada principalmente pela <a href="/glossario/comunidade-surda/">comunidade surda</a> no Brasil. Não é um código secreto. Não é português com as mãos. Não é mímica. <mark class="grifo">É uma língua de verdade: com gramática, história, cultura e papel central na vida de milhões de pessoas.</mark>
     </p>
     <p class="body-text">
       Você provavelmente já viu alguém sinalizando em um vídeo, em um evento ou na televisão. A primeira impressão costuma ser a de que aquilo é uma tradução palavra por palavra do português. Mas a estrutura é diferente, a lógica é diferente, e a língua é diferente, no bom sentido.
@@ -576,7 +581,7 @@
       <strong>Libras é a Língua Brasileira de Sinais</strong>: uma língua visual-espacial, percebida pelos olhos e produzida com mãos, rosto, corpo e movimento. Ela tem vocabulário, gramática, sintaxe e estrutura próprios, independentes do português.
     </p>
     <p class="body-text">
-      O termo correto é <mark>Língua Brasileira de Sinais</mark>, não "linguagem de sinais". A diferença não é apenas semântica: enquanto "linguagem" descreve qualquer sistema de comunicação (linguagem dos pássaros, linguagem de programação), "língua" se refere a um sistema linguístico natural, com gramática, fonologia e capacidade plena de expressão humana. A Libras é, portanto, uma língua, e merece ser tratada como tal.
+      <mark class="grifo">O termo correto é Língua Brasileira de Sinais, não "linguagem de sinais".</mark> A diferença não é apenas semântica: enquanto "linguagem" descreve qualquer sistema de comunicação (linguagem dos pássaros, linguagem de programação), "língua" se refere a um sistema linguístico natural, com gramática, fonologia e capacidade plena de expressão humana. A Libras é, portanto, uma língua, e merece ser tratada como tal.
     </p>
   </div>
 
@@ -592,7 +597,7 @@
   <div class="reveal">
     <h2 class="section-label">Uma língua construída com parâmetros</h2>
     <p class="body-text">
-      Cada sinal em Libras é formado por elementos específicos chamados parâmetros. Mudar qualquer um deles pode mudar completamente o significado do sinal, assim como trocar uma letra em uma palavra escrita altera o sentido. Esses parâmetros mostram que <strong>Libras tem estrutura, regras e precisão linguística</strong>.
+      Cada sinal em Libras é formado por elementos específicos chamados parâmetros. <mark class="grifo">Mudar qualquer um deles pode mudar completamente o significado do sinal</mark>, assim como trocar uma letra em uma palavra escrita altera o sentido. Esses parâmetros mostram que <strong>Libras tem estrutura, regras e precisão linguística</strong>.
     </p>
   </div>
 
@@ -661,7 +666,7 @@
       Em Libras, a ordem dos elementos na frase pode seguir uma lógica diferente do português. O uso do <a href="/glossario/espaco-de-sinalizacao/">espaço de sinalização</a> organiza as referências. As marcações gramaticais não são feitas por palavras escritas, mas por movimentos, posições e expressões.
     </p>
     <p class="body-text">
-      Isso tem implicações diretas na educação. Na perspectiva do <a href="/glossario/bilinguismo/">bilinguismo</a> aplicado à surdez, a Libras é reconhecida como primeira língua para muitas pessoas surdas, e o português escrito, como segunda língua. Não é hierarquia: é respeito à língua natural de cada pessoa.
+      Isso tem implicações diretas na educação. Na perspectiva do <a href="/glossario/bilinguismo/">bilinguismo</a> aplicado à surdez, <mark class="grifo">a Libras é reconhecida como primeira língua para muitas pessoas surdas, e o português escrito, como segunda língua.</mark> Não é hierarquia: é respeito à língua natural de cada pessoa.
     </p>
   </div>
 
@@ -690,7 +695,7 @@
   <div class="reveal">
     <h2 class="section-label">Uma breve história da Libras no Brasil</h2>
     <p class="body-text">
-      A Libras não foi criada por um decreto. Ela se desenvolveu a partir do uso real: na escola, nas famílias, nos encontros da <a href="/glossario/comunidade-surda/">comunidade surda</a>. Mas a história tem marcos importantes que ajudam a entender como chegamos até aqui.
+      <mark class="grifo">A Libras não foi criada por um decreto. Ela se desenvolveu a partir do uso real</mark>: na escola, nas famílias, nos encontros da <a href="/glossario/comunidade-surda/">comunidade surda</a>. Mas a história tem marcos importantes que ajudam a entender como chegamos até aqui.
     </p>
   </div>
 
@@ -743,7 +748,7 @@
   <div class="reveal">
     <h2 class="section-label">O reconhecimento legal da Libras</h2>
     <p class="body-text">
-      Reconhecer a Libras em lei foi um avanço fundamental. Mas o reconhecimento jurídico só tem valor quando vem acompanhado de aplicação prática: intérpretes qualificados, materiais acessíveis, políticas públicas e espaços que incluam de verdade.
+      Reconhecer a Libras em lei foi um avanço fundamental. Mas <mark class="grifo">o reconhecimento jurídico só tem valor quando vem acompanhado de aplicação prática</mark>: intérpretes qualificados, materiais acessíveis, políticas públicas e espaços que incluam de verdade.
     </p>
   </div>
 
@@ -1068,5 +1073,6 @@
     });
   });
 </script>
+<script src="/assets/js/grifo.js" defer></script>
 </body>
 </html>

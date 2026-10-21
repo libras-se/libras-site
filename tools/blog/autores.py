@@ -25,7 +25,9 @@ ROOT = home.ROOT
 SITE = home.SITE
 CFG = json.loads((HERE / "autores.json").read_text())
 MOLDE = (HERE / "autor.html").read_text()
-ORG = {"@id": f"{SITE}/#organization", "@type": "Organization", "name": "LIBRAS.SE", "url": f"{SITE}/"}
+ORG = {"@id": f"{SITE}/#organization", "@type": "Organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
+       "sameAs": ["https://instagram.com/libras.se", "https://youtube.com/@librasse", "https://linkedin.com/company/librasse",
+                  "https://facebook.com/librasse", "https://tiktok.com/@libras.se"]}
 
 
 def esc(s):

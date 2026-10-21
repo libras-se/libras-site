@@ -300,7 +300,11 @@ def visual(v):
         return (f'<video muted loop playsinline preload="none" aria-hidden="true" width="360" height="270" poster="{base}/{val}.webp" '
                 f'data-src="{base}/{val}.mp4"></video><span class="lse-ad-w">{esc(SINAIS.get(val, val))}</span>')
     if tipo == "capa":
-        return f'<img class="lse-capa" src="/assets/materiais/capas/{val}.webp" alt="" loading="lazy" decoding="async">'
+        from PIL import Image
+        with Image.open(ROOT / f"assets/materiais/capas/{val}.webp") as im:
+            w, h = im.size
+        return (f'<img class="lse-capa" src="/assets/materiais/capas/{val}.webp" alt="" width="{w}" height="{h}" '
+                f'loading="lazy" decoding="async">')
     return f'<span class="lse-dat" aria-hidden="true">{esc(val)}</span>'
 
 

@@ -66,7 +66,9 @@ CARIMBO = "<!-- agentes:origem aprovacao={} artefato={} versao={} -->"
 CARIMBO_RE = re.compile(r"<!-- agentes:origem aprovacao=(\S+) artefato=(\S+) versao=(\d+) -->")
 NA_ACTION = os.environ.get("GITHUB_ACTIONS") == "true"
 
-ORGANIZACAO = {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "LIBRAS.SE", "url": f"{SITE}/"}
+ORGANIZACAO = {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
+               "sameAs": ["https://instagram.com/libras.se", "https://youtube.com/@librasse", "https://linkedin.com/company/librasse",
+                          "https://facebook.com/librasse", "https://tiktok.com/@libras.se"]}
 PUBLISHER = {
     "@type": "Organization", "@id": f"{SITE}/#organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
     "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/favicon/cropped-FAVICONpng-1-512x512.png", "width": 512, "height": 512},

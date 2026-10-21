@@ -24,7 +24,14 @@
      "addressLocality": "Florianópolis",
      "addressRegion": "SC",
      "addressCountry": "BR"
-    }
+    },
+    "sameAs": [
+     "https://instagram.com/libras.se",
+     "https://youtube.com/@librasse",
+     "https://linkedin.com/company/librasse",
+     "https://facebook.com/librasse",
+     "https://tiktok.com/@libras.se"
+    ]
    }
   },
   {

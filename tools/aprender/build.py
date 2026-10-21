@@ -26,7 +26,10 @@ home = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(home)  # miniaturas leves das capas do blog
 SKIP = '<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>'
 
-GTM = """<!-- Google Tag Manager -->
+# Medição igual em todas as páginas: gtag.js (eventos gtag('event') chegam ao GA4) + GTM (tags do container).
+GTM = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GD3C5XV1L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2GD3C5XV1L');gtag('config','AW-16996694944');</script>
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -36,6 +39,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 GTM_NOSCRIPT = ('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ7MN3KX" '
                 'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>')
+
+
+REDES = ["https://instagram.com/libras.se", "https://youtube.com/@librasse", "https://linkedin.com/company/librasse",
+         "https://facebook.com/librasse", "https://tiktok.com/@libras.se"]
+
+
+def com_redes(x):
+    """Toda Organization LIBRAS.SE do JSON-LD leva as redes sociais (sameAs)."""
+    if isinstance(x, list):
+        return [com_redes(i) for i in x]
+    if isinstance(x, dict):
+        x = {k: com_redes(v) for k, v in x.items()}
+        if x.get("@type") == "Organization" and x.get("name") == "LIBRAS.SE" and "sameAs" not in x:
+            x["sameAs"] = REDES
+    return x
 
 
 def esc(s):
@@ -138,7 +156,7 @@ def build(src):
     meta = json.loads(m.group(1))
     body = text[m.end():]
     url = SITE + meta["url"]
-    graph = [breadcrumb(meta["breadcrumb"])] + meta.get("jsonld", [])
+    graph = com_redes([breadcrumb(meta["breadcrumb"])] + meta.get("jsonld", []))
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1)
     og_image = SITE + meta.get("og_image", "/assets/img/og/blog.webp")
 

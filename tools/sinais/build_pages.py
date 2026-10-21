@@ -131,7 +131,10 @@ def page(s):
          "duration": f"PT{round(s['dur'] or 0)}S", "inLanguage": "bzs", "isFamilyFriendly": True,
          "width": 1280, "height": 720,
          "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
-                       "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/logo/LIBRAS-SE_marca-1536x862.png"}}},
+                       "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/logo/LIBRAS-SE_marca-1536x862.png"},
+                       "sameAs": ["https://instagram.com/libras.se", "https://youtube.com/@librasse",
+                                  "https://linkedin.com/company/librasse", "https://facebook.com/librasse",
+                                  "https://tiktok.com/@libras.se"]}},
     ]
     if not s["video"]:
         graph = graph[:2]

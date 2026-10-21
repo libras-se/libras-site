@@ -1,6 +1,6 @@
 {
-  "name": "Libras.se",
-  "short_name": "Libras.se",
+  "name": "LIBRAS.SE",
+  "short_name": "LIBRAS.SE",
   "description": "A plataforma de tradução em Libras mais ágil do Brasil. Vídeos para todos.",
   "start_url": "/",
   "scope": "/",
@@ -35,7 +35,7 @@
       "sizes": "1200x630",
       "type": "image/webp",
       "form_factor": "wide",
-      "label": "Libras.se, Página inicial"
+      "label": "LIBRAS.SE, Página inicial"
     }
   ]
 }

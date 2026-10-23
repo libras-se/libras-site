@@ -56,7 +56,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Conteudo editorial e educativo
 
-- [Blog](https://libras.se/blog/): 86 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
+- [Blog](https://libras.se/blog/): 87 artigos sobre Libras, acessibilidade audiovisual, cultura surda, inclusao, eventos, educacao e boas praticas.
 - [Glossario](https://libras.se/glossario/): definicoes de termos de Libras e acessibilidade com exemplos praticos e fontes verificadas.
 - [Sinais em Libras](https://libras.se/sinal/): mais de 140 sinais em video gravados por interpretes da LIBRAS.SE, com definicao, exemplos de uso e ilustracao em parte deles; inclui cores, lugares, estados, times de futebol e letras do alfabeto manual; consulta por palavra ou categoria.
 - Sinais por categoria, uma página para cada: [cores](https://libras.se/sinal/categoria/cores/), [estados](https://libras.se/sinal/categoria/estados/), [times de futebol](https://libras.se/sinal/categoria/times-de-futebol/), [sentimentos](https://libras.se/sinal/categoria/sentimentos/), [saudacoes](https://libras.se/sinal/categoria/saudacoes/), [familia e pessoas](https://libras.se/sinal/categoria/familia-e-pessoas/), [verbos](https://libras.se/sinal/categoria/verbos/), [alimentos](https://libras.se/sinal/categoria/alimentos/), [animais](https://libras.se/sinal/categoria/animais/), [lugares](https://libras.se/sinal/categoria/lugares/), [cotidiano](https://libras.se/sinal/categoria/cotidiano/) e [expressoes](https://libras.se/sinal/categoria/expressoes/).
@@ -74,7 +74,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Artigos do blog
 
-O blog tem 86 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
+O blog tem 87 posts indexaveis. Para descoberta ampla, use tambem [todos os posts](https://libras.se/blog/todos/) e [posts por tema](https://libras.se/blog/temas/). Artigos prioritarios para respostas e citacoes:
 
 - [O que e Libras? Entenda a Lingua Brasileira de Sinais](https://libras.se/blog/o-que-e-libras/)
 - [Libras e reconhecida como lingua de instrucao em Belo Horizonte](https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/)

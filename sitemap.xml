@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://libras.se/blog/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -380,13 +380,13 @@
   </url>
   <url>
     <loc>https://libras.se/blog/todos/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/blog/temas/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3301,7 +3301,7 @@
   </url>
   <url>
     <loc>https://libras.se/blog/tema/inclusao/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://libras.se/blog/tema/esporte/</loc>
@@ -3322,5 +3322,9 @@
   <url>
     <loc>https://libras.se/blog/tema/direitos/</loc>
     <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://libras.se/blog/lse-legenda-para-surdos-e-ensurdecidos/</loc>
+    <lastmod>2026-10-23</lastmod>
   </url>
 </urlset>

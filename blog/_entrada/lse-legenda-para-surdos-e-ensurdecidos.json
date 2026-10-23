@@ -1,0 +1,51 @@
+{
+  "versao": 1,
+  "tipo": "post_simples",
+  "slug": "lse-legenda-para-surdos-e-ensurdecidos",
+  "titulo": "LSE: o que é a legenda para surdos e ensurdecidos | LIBRAS.SE",
+  "subtitulo": "A LSE traz as falas, diz quem fala e descreve sons e música. Entenda como ela difere da legenda comum e por que complementa a janela de Libras, sem substituí-la.",
+  "descricao": "LSE: o que é a legenda para surdos e ensurdecidos, como difere da legenda comum e por que complementa a janela de Libras em vídeos de empresas e EAD.",
+  "palavras_chave": [
+    "LSE",
+    "legenda para surdos e ensurdecidos",
+    "o que é LSE",
+    "legenda para surdos",
+    "diferença entre LSE e legenda",
+    "acessibilidade audiovisual",
+    "janela de Libras"
+  ],
+  "editoria": "inclusao",
+  "tags": [
+    "lse",
+    "legenda para surdos e ensurdecidos",
+    "o que é lse",
+    "legenda para surdos",
+    "diferença entre lse e legenda",
+    "acessibilidade audiovisual"
+  ],
+  "autor": "Libras.se",
+  "publicado_em": "2026-10-23",
+  "markdown": "Se você produz vídeos para uma agência, uma produtora, um curso EAD ou a comunicação interna de uma empresa, já deve ter ouvido \"coloca uma legenda aí que resolve\". Resolve em parte. Para quem é surdo ou perdeu a audição ao longo da vida, uma legenda que só transcreve as falas deixa de fora boa parte do que o vídeo conta. É para isso que existe a [LSE](https://libras.se/glossario/lse/), a Legenda para Surdos e Ensurdecidos.\n\nNeste guia você vê o que é a LSE, em que ela difere da legenda comum, quem se beneficia e por que ela anda junto com a [janela de Libras](https://libras.se/glossario/janela-de-libras/), sem tomar o lugar dela.\n\n## O que é a LSE\n\nA LSE é uma legenda pensada para quem não ouve o áudio do vídeo. Ela traz as falas em português escrito, como qualquer legenda, mas acrescenta o que uma pessoa que ouve percebe sem esforço:\n\n- **quem está falando**, quando isso não fica claro na imagem;\n- **sons relevantes**, como uma batida na porta, um alarme, aplausos ou risos;\n- **efeitos, trilha e música**, com marcações entre colchetes, como [música tensa] ou [batida na porta].\n\nPense numa cena de entrevista em que alguém fora do quadro responde uma pergunta, ou num vídeo de treinamento em que um alerta sonoro avisa que algo deu errado. Na legenda comum, esse alerta some. Na LSE, ele aparece escrito.\n\n## Quem são as pessoas \"ensurdecidas\"\n\nO termo \"ensurdecidas\" se refere a pessoas que perderam a audição depois de já terem adquirido a linguagem oral. Muitas delas cresceram falando e lendo português, não usam Libras e dependem do texto para acompanhar um vídeo. Esse grupo se soma às pessoas [surdas](https://libras.se/glossario/surdo/) que leem português e preferem ou precisam do texto para acessar o conteúdo.\n\nVale lembrar: nem toda pessoa surda usa Libras. A Libras é uma língua, com gramática própria, e não uma versão do português feita com as mãos. Por isso o conteúdo acessível costuma combinar recursos, e não escolher um só.\n\n## LSE x legenda comum: qual é a diferença\n\nA legenda comum transcreve o que é dito. Ela serve bem a quem assiste sem som no celular, a quem está num ambiente barulhento e a quem quer reforçar o entendimento de uma fala. É útil, mas geralmente não identifica falantes nem descreve sons.\n\nA LSE entrega a experiência sonora em texto. A diferença na prática:\n\n| | Legenda comum | LSE |\n|---|---|---|\n| Falas | Sim | Sim |\n| Identificação de quem fala | Em geral não | Sim, quando necessário |\n| Sons e ruídos relevantes | Em geral não | Sim, entre colchetes |\n| Música e trilha | Em geral não | Sim |\n| Pensada para | Quem ouve, mas não pode ligar o som | Pessoas surdas e ensurdecidas |\n\nOutro ponto importante é a revisão. Legenda gerada de forma automática costuma errar nomes, termos técnicos e pontuação, e não marca sons. Para um vídeo institucional ou um curso, o ideal é que uma pessoa revise a LSE antes da entrega.\n\n## Por que a LSE não substitui a janela de Libras\n\nEssa é a dúvida mais comum de quem contrata acessibilidade pela primeira vez: \"Se eu colocar LSE, preciso da Libras?\". A resposta depende de quem você quer alcançar.\n\nPara uma pessoa surda que tem a Libras como primeira língua, o português escrito é uma segunda língua. A legenda informa o texto, mas a Libras comunica o conteúdo na língua em que ela pensa e se expressa. Em vídeos com ritmo rápido, termos técnicos ou emoção, essa diferença pesa. Já uma pessoa ensurdecida que nunca aprendeu Libras vai se beneficiar muito mais da LSE.\n\nPor isso os dois recursos se complementam:\n\n- **Janela de Libras:** atende pessoas surdas que usam Libras.\n- **LSE:** atende pessoas surdas e ensurdecidas que leem português.\n- **Audiodescrição:** atende pessoas cegas ou com baixa visão.\n\nQuer entender melhor essa conta? Leia [Libras ou legendas? Quando usar cada recurso](https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/) e [Por que incluir janela de Libras em vídeos](https://libras.se/blog/por-que-incluir-janela-de-libras-em-videos/). Para decidir tamanho e posição da janela sem que ela brigue com a legenda na tela, veja o guia sobre a [margem da janela de Libras](https://libras.se/blog/margem-da-janela-de-libras-no-video/).\n\n## Onde a LSE faz diferença no seu projeto\n\n**Produtoras e audiovisual.** Em curtas, documentários, séries e filmes, o som conta a história. Uma música que sobe antes de uma revelação ou um ruído fora de quadro são informação narrativa. Sem LSE, a pessoa que não ouve perde esse trecho.\n\n**Agências e publicidade.** Campanhas com locução, jingle e vários personagens ganham alcance quando a legenda identifica as vozes e a trilha. Vale pensar nisso já no roteiro e na edição, para a legenda não competir com logos e textos da arte.\n\n**EAD e educação.** Em videoaulas, a LSE ajuda com termos técnicos, falas de convidados e sons de demonstrações. Para turmas com estudantes surdos, ela convive com a Libras, e não a substitui.\n\n**Comunicação interna e treinamento.** Vídeos de integração, segurança e compliance costumam ter vários falantes e avisos sonoros. Com LSE, o colaborador surdo ou ensurdecido recebe a mesma informação que os colegas.\n\n## E a lei, o que diz?\n\nA [Lei Brasileira de Inclusão (Lei 13.146/2015)](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm) trata a acessibilidade como direito. No artigo 67, ela prevê que os serviços de radiodifusão de sons e imagens permitam recursos como a subtitulação por legenda oculta, a janela com intérprete de Libras e a audiodescrição. Ou seja, a lei trata esses recursos em conjunto, não como alternativas. Exigências para cada tipo de vídeo ou edital variam, então confira o que se aplica ao seu projeto. A Libras.se entrega os recursos de acessibilidade, mas não faz consultoria jurídica.\n\n## Como começar a pensar em LSE no seu vídeo\n\n1. **Defina o público.** Pense em quem vai assistir: pessoas surdas sinalizantes, ensurdecidas, ou os dois grupos.\n2. **Combine os recursos.** Em projetos de grande alcance, Libras e LSE juntas cobrem mais gente.\n3. **Planeje a tela.** Reserve espaço para a legenda e para a janela de Libras, para que nada cubra o rosto de quem fala ou textos importantes.\n4. **Peça revisão humana.** Marcações de som e identificação de falantes dependem de julgamento, e legenda automática não faz isso bem.\n5. **Contrate junto.** Quando Libras, LSE e audiodescrição saem de fornecedores diferentes, o prazo e o padrão se perdem. Um contrato único simplifica a coordenação.\n\nPara o passo a passo e modelos de apoio, vale olhar os [materiais gratuitos da Libras.se](https://libras.se/materiais/).\n\n## Libras e LSE num contrato único\n\nA Libras.se traduz vídeos para Libras com intérpretes humanos e coordena a LSE e a audiodescrição junto com a Libras. A produção de LSE e audiodescrição pode ser feita por parceiros técnicos especializados, mas, para você, o fluxo é único: um contrato, uma coordenação e uma entrega centralizada. O pedido é feito pelo Huet, e o valor depende da duração, do formato, do prazo e dos recursos escolhidos. Para saber mais sobre o conceito, consulte também o verbete de [acessibilidade audiovisual](https://libras.se/glossario/acessibilidade-audiovisual/) no glossário.\n\n**Precisa do seu conteúdo em Libras?** A Libras.se traduz seu conteúdo para Libras com intérpretes reais e entrega editada, pronta para publicar. [Enviar vídeo agora](https://huet.libras.se) · [Conhecer soluções](https://libras.se/solucoes)\n\n#lse #acessibilidade #libras #legenda #acessibilidadeaudiovisual",
+  "fontes": [
+    {
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "titulo": "Lei 13.146/2015 (Lei Brasileira de Inclusão), art. 67 — Planalto"
+    },
+    {
+      "url": "https://libras.se/blog/libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado/",
+      "titulo": "Libras ou legendas? Quando usar cada recurso — Blog Libras.se"
+    },
+    {
+      "url": "https://libras.se/glossario/lse/",
+      "titulo": "Glossário Libras.se: LSE"
+    }
+  ],
+  "capa": null,
+  "cta": "Libras e LSE num contrato único: envie seu vídeo pelo Huet (huet.libras.se) ou conheça as soluções em libras.se/solucoes.",
+  "origem": {
+    "sistema": "agentes.libras.se",
+    "artefato": "a94de80c-7c86-4685-8bfd-c381934a28d9",
+    "versao": 1,
+    "aprovacao": "a93142ba-a201-41f5-bca4-271fa8841775"
+  }
+}

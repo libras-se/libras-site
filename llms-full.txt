@@ -115,7 +115,7 @@ URLs de navegacao editorial:
 - https://libras.se/blog/todos/ - acervo navegavel de posts.
 - https://libras.se/blog/temas/ - posts agrupados por tema.
 
-Artigos publicados (86 paginas indexaveis; os pilares de cada tema vem primeiro):
+Artigos publicados (87 paginas indexaveis; os pilares de cada tema vem primeiro):
 
 - https://libras.se/blog/o-que-e-libras/ - Libras e a Lingua Brasileira de Sinais: uma lingua visual, completa e com gramatica propria. Entenda o que e, sua historia, reconhecimento legal e importancia para a comunidade surda.
 - https://libras.se/blog/voce-sabe-o-que-e-datilologia/ - Do abecedario da Xuxa as palavras que nascem dos sinais soletrados, entenda o que e datilologia e seu papel na Lingua Brasileira de Sinais.
@@ -130,6 +130,7 @@ Artigos publicados (86 paginas indexaveis; os pilares de cada tema vem primeiro)
 - https://libras.se/blog/oscar-coda-melhor-filme-do-mundo-sobre-surdez/ - CODA, No Ritmo do Coracao levou tres Oscars em 2022, incluindo Melhor Filme. Entenda por que o filme sobre uma familia surda e um marco de representatividade.
 - https://libras.se/blog/o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras/ - "O Som do Silencio" (Sound of Metal) ganhou o Oscar e ensina muito sobre Libras e identidade surda. Entenda como o filme retrata a comunidade surda e a lingua de sinais.
 - https://libras.se/blog/surdolimpiadas-as-olimpiadas-exclusivas-para-surdos/ - Como funcionam as Surdolimpiadas (Deaflympics), por que surdos nao disputam as Paralimpiadas e como foram as edicoes de Caxias do Sul (2022) e Toquio (2025).
+- https://libras.se/blog/lse-legenda-para-surdos-e-ensurdecidos/ - LSE: o que e a legenda para surdos e ensurdecidos, como difere da legenda comum e por que complementa a janela de Libras em videos de empresas e EAD.
 - https://libras.se/blog/oktoberfest-de-blumenau-tem-aplicativo-com-libras/ - Oktoberfest de Blumenau 2026 tem app gratuito e totens com mapa 3D, traducao em Libras e audiodescricao. Veja como funciona o Oktober Mais Perto.
 - https://libras.se/blog/enem-2026-em-libras-videoprovas-para-treinar/ - Enem 2026 em Libras: a plataforma do Inep reune as videoprovas de 2017 a 2025, cadernos, gabaritos e a cartilha de redacao. Veja como funciona e treine.
 - https://libras.se/blog/lucinda-ferreira-e-a-construcao-dos-estudos-sobre-libras/ - Lucinda Ferreira, pioneira dos estudos sobre Libras, ganhou homenagem da Abralin. Veja a trajetoria dela, o livro de 1995 e os surdos que pesquisaram junto.

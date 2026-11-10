@@ -25,6 +25,7 @@ HERE = Path(__file__).parent
 ROOT = HERE.parents[1]
 DEST = ROOT / "assets" / "videos" / "sinais"
 DEST_ILU = ROOT / "assets" / "img" / "sinais"
+DEST_CART = DEST_ILU / "cartoes"  # ilustração + figurinha, montado por figurinhas.py
 JOGO = ROOT / "jogo" / "index.html"
 
 p = argparse.ArgumentParser()
@@ -98,22 +99,28 @@ for slug, base in publicar.items():
         continue
     ilus[slug] = pasta / f"v{k}.png"
 DEST_ILU.mkdir(parents=True, exist_ok=True)
+refazer_cartoes = []
 for slug, png in ilus.items():
     dst = DEST_ILU / f"{slug}.webp"
     stamp = dst.with_suffix(".origem")
     origem = f"{png}:{png.stat().st_mtime_ns}"
+    origem_antiga = stamp.read_text() if stamp.exists() else None  # None: checkout novo, a imagem em si não mudou
     if not dst.exists() or not stamp.exists() or stamp.read_text() != origem:
         mudou.append(f"+ {dst.relative_to(ROOT)}")
         if not args.simular:
             subprocess.run(["cwebp", "-quiet", "-q", "80", "-m", "6", "-resize", "960", "720", str(png), "-o", str(dst)],
                            check=True)
             stamp.write_text(origem)
+            if origem_antiga and (DEST_CART / dst.name).exists():
+                (DEST_CART / dst.name).unlink()  # a ilustração mudou: o cartão antigo não vale mais
+                refazer_cartoes.append(slug)
 for f in sorted(DEST_ILU.glob("*.webp")):
     if f.stem not in ilus:
         mudou.append(f"- {f.relative_to(ROOT)} (ilustração não aprovada)")
         if not args.simular:
             f.unlink()
             f.with_suffix(".origem").unlink(missing_ok=True)
+            (DEST_CART / f.name).unlink(missing_ok=True)
 
 # jogo: só referencia vídeo de sinal publicado
 texto = JOGO.read_text()
@@ -138,6 +145,9 @@ print(f"Ilustrações publicáveis: {len(ilus)}" + (" (prévia: inclui não apro
 if ilu_barradas:
     print(f"Ilustrações desatualizadas (o corte do vídeo mudou, gere de novo): {', '.join(ilu_barradas)}")
 print("\n".join(mudou) if mudou else "Nada mudou nos vídeos.")
+if refazer_cartoes:
+    print("Ilustração nova em sinal com figurinha. Refaça o cartão: uv run --python 3.12 --with numpy --with pillow "
+          f"tools/sinais/figurinhas.py compor {' '.join(refazer_cartoes)} && python3 tools/sinais/build_pages.py")
 if args.simular:
     sys.exit(0)
 subprocess.run([sys.executable, str(HERE / "build_pages.py")], check=True, cwd=ROOT)

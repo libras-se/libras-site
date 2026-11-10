@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://libras.se/sinal/letra-m/">
 <meta property="og:title" content="Letra M em Libras, sinal em vídeo | LIBRAS.SE">
 <meta property="og:description" content="Sinal de Letra M em Libras em vídeo, com exemplos de uso. Sinal da letra M no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.">
-<meta property="og:image" content="https://libras.se/assets/img/sinais/letra-m.webp">
+<meta property="og:image" content="https://libras.se/assets/img/sinais/cartoes/letra-m.webp">
 <meta property="og:image:width" content="960">
 <meta property="og:image:height" content="720">
 <meta property="og:video" content="https://libras.se/assets/videos/sinais/letra-m.mp4">
@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:image" content="https://libras.se/assets/img/sinais/letra-m.webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/sinais/cartoes/letra-m.webp">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "url": "https://libras.se/sinal/"
    },
    "url": "https://libras.se/sinal/letra-m/",
-   "image": "https://libras.se/assets/img/sinais/letra-m.webp"
+   "image": "https://libras.se/assets/img/sinais/cartoes/letra-m.webp"
   },
   {
    "@type": "VideoObject",
@@ -298,6 +298,62 @@ section+section{margin-top:52px}
 .report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
 .report-submit:hover{background:var(--teal-d)}
 .report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+/* Elemento divertido do sinal: figurinha (ou camisa, mapa, letra) no cabeçalho */
+.entry-art{float:right;width:112px;margin:-6px 0 10px 16px;position:relative;z-index:1}
+.entry-art img,.entry-art>svg{display:block;width:100%;height:auto}
+.figu{filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));animation:figu 6s ease-in-out infinite;transform-origin:50% 60%}
+.figu:hover{animation-duration:1.2s}
+@keyframes figu{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-7px)}}
+.art-letra svg{fill:var(--tl);stroke:#fff;stroke-width:22;stroke-linejoin:round;paint-order:stroke;overflow:visible}
+.mapa{position:relative;aspect-ratio:500/560}
+.mapa img,.mapa svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapa-uf{fill:var(--p1);stroke:#fff;stroke-width:1.5}
+.mapa-anel{fill:none;stroke:var(--p1);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:anel 2.4s ease-out infinite}
+@keyframes anel{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.art-mapa .mapa-uf{fill:#fff;stroke:var(--p1)}.art-mapa .mapa-anel{stroke:#fff}
+@media(min-width:861px){
+  .entry-header.com-arte .wn{position:relative;padding-right:340px;min-height:300px}
+  .entry-art{float:none;position:absolute;right:40px;top:50%;width:270px;margin:-135px 0 0}
+  .entry-art.art-mapa{width:230px;margin-top:-129px}
+  .entry-header.com-arte .entry-word{font-size:clamp(3rem,5.6vw,4.6rem);overflow-wrap:anywhere}
+}
+/* Ficha da categoria: time, estado, letra */
+.ficha{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:28px 32px}
+.ficha-art{margin:0;text-align:center}
+.ficha-art .camisa{width:190px;max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(10,34,37,.16));transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ficha-art:hover .camisa{transform:rotate(-5deg) scale(1.04)}
+.ficha-art .mapa{width:190px;max-width:100%;margin:0 auto}
+.ficha-art figcaption{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-dados{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ficha-dados dt{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:3px}
+.ficha-dados dd{font-size:.95rem;font-weight:700;color:var(--p1);line-height:1.35}
+.ficha-dados a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
+.ficha-dados a:hover{color:var(--p1)}
+.cores{display:inline-flex;margin-right:8px;vertical-align:-3px}
+.cores i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(14,53,56,.25);margin-right:-5px}
+.ficha-nota{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-sub{font-size:.95rem;font-weight:700;color:var(--p1);margin:26px 0 12px}
+.simbolos{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.simbolos li{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:var(--sh);padding:16px 20px;border-top:3px solid var(--teal)}
+.simbolos strong{display:block;font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:3px}
+.simbolos span{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.55}
+.jeitos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jeito{border-radius:20px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.jeito:hover{transform:translateY(-4px) rotate(-2deg)}
+.jeito:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+.jeito svg{width:100%;max-width:150px;aspect-ratio:1;fill:var(--p1)}
+.jeito span{font-size:.7rem;font-weight:700;color:var(--txs);text-align:center;line-height:1.3}
+.jeito.j2{background:var(--bg3)}.jeito.j2 svg{fill:var(--teal-dd)}
+.jeito.j3{background:repeating-linear-gradient(#fff 0 27px,rgba(46,184,192,.28) 27px 28px)}
+.jeito.j3 span{background:#fff;padding:1px 8px;border-radius:var(--rpill)}
+.jeito.j4 svg{fill:none;stroke:var(--teal-dd);stroke-width:22;stroke-dasharray:1 44;stroke-linecap:round;overflow:visible}
+.jeito.j5{background:var(--gc);border-color:transparent}.jeito.j5 svg{fill:#fff}
+.jeito.j6{background:var(--p1);border-color:transparent}.jeito.j6 svg{fill:var(--teal);padding:16px}
+.jeito.j7{background:var(--gb);border-color:transparent}.jeito.j7 svg{fill:#fff}
+.jeito.j5 span,.jeito.j6 span{color:rgba(255,255,255,.75)}.jeito.j7 span{color:var(--p1)}
+.letra-com{font-family:'EB Garamond','Georgia',serif;font-size:1.25rem;color:var(--txt);margin-top:18px;text-align:center}
+.letra-com strong{font-family:'Playfair Display','Georgia',serif;font-weight:900;font-size:1.6rem;color:var(--teal-dd);margin-right:2px}
+.letra-com a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
@@ -317,6 +373,8 @@ section+section{margin-top:52px}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 
 @media(max-width:860px){
+  .ficha{grid-template-columns:150px 1fr;gap:20px;padding:22px 20px}
+  .jeitos{grid-template-columns:repeat(4,1fr);gap:8px}
   .player{padding:12px}
   .player-grid.com-ilustra{grid-template-columns:1fr}
   .player-info{padding:0 4px 6px}
@@ -329,9 +387,13 @@ section+section{margin-top:52px}
   .entry-header{padding:96px 0 40px}
   .def-card,.report-section{padding:22px 20px}
   .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .ficha{grid-template-columns:1fr}
+  .ficha-dados{gap:14px 16px}
+  .simbolos{grid-template-columns:1fr}
+  .jeitos{grid-template-columns:repeat(2,1fr)}
   .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.figu,.mapa-anel{animation:none}.mapa-anel{opacity:.7}.jeito,.ficha-art .camisa{transition:none}}
 </style>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -431,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="main-content">
 
-<header class="entry-header">
+<header class="entry-header com-arte">
   <div class="wn">
     <nav class="bc" aria-label="Localização">
       <a href="/">Início</a>
@@ -447,6 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="entry-dot">·</span>
       <span class="entry-class">substantivo masculino</span>
     </div>
+    <div class="entry-art figu" aria-hidden="true"><img src="/assets/img/sinais/figurinhas/letra-m.webp" alt="" width="600" height="600" decoding="async"></div>
     <p class="entry-def-preview">Sinal da letra M no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</p>
   </div>
 </header>
@@ -462,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <video id="sinalVid" src="/assets/videos/sinais/letra-m.mp4" poster="/assets/videos/sinais/letra-m.webp" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de Letra M em Libras"></video>
         </div>
         <figure class="ilustra">
-          <img src="/assets/img/sinais/letra-m.webp" width="960" height="720" alt="Ilustração do sinal de Letra M em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="/assets/img/sinais/cartoes/letra-m.webp" width="960" height="720" alt="Ilustração do sinal de Letra M em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos. No canto, uma figurinha: a letra desenhada com macaco, maçã, morango e mala" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>
       </div>
@@ -477,6 +540,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="player-credit">Interpretação: Bruna Garcia, TILS da LIBRAS.SE</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">A letra M de vários jeitos</h2>
+    <ul class="jeitos" aria-label="A letra M escrita de oito jeitos">
+      <li class="jeito j1"><svg viewBox="-89 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M48 -57C45 -21 64 0 100 0H166C201 0 220 -18 223 -53L241 -322C245 -376 241 -442 241 -442H243C243 -442 267 -367 283 -322L342 -159C353 -129 373 -115 405 -115H461C493 -115 513 -129 524 -159L583 -322C599 -367 623 -442 623 -442H625C625 -442 621 -376 625 -322L643 -53C646 -18 665 0 700 0H765C801 0 820 -21 817 -57L768 -662C765 -697 746 -715 711 -715H621C589 -715 569 -701 559 -670L470 -413C454 -367 434 -295 434 -295H432C432 -295 412 -367 396 -413L307 -670C297 -701 277 -715 245 -715H155C120 -715 101 -697 98 -662Z"/></svg><span>De forma, maiúscula</span></li>
+      <li class="jeito j2"><svg viewBox="-71 -775 1040 1040" class="" aria-hidden="true" focusable="false"><path d="M51 -55C51 -19 70 0 106 0H169C205 0 224 -19 224 -55V-218C224 -289 244 -370 323 -370C356 -370 363 -343 363 -305V-55C363 -19 382 0 418 0H481C517 0 536 -19 536 -55V-218C536 -295 560 -370 635 -370C668 -370 675 -343 675 -305V-55C675 -19 694 0 730 0H793C829 0 848 -19 848 -55V-334C848 -476 775 -527 681 -527C604 -527 543 -483 516 -440H514C487 -498 435 -527 370 -527C289 -527 241 -474 217 -438H215C215 -438 216 -446 216 -451V-460C216 -496 198 -515 162 -515H106C70 -515 51 -496 51 -460Z"/></svg><span>De forma, minúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-253 -1335 2098 2098" class="" aria-hidden="true" focusable="false"><path d="M1426 18Q1373 18 1338 -6Q1303 -30 1285 -76Q1267 -123 1267 -191V-863Q1267 -929 1250 -973Q1234 -1017 1200 -1039Q1166 -1061 1115 -1061Q1080 -1061 1049 -1050Q1018 -1040 990 -1020Q961 -1001 938 -974Q914 -946 896 -910Q877 -875 866 -833V-13Q866 1 855 8Q844 15 822 15Q801 15 790 8Q779 1 779 -13V-865Q779 -929 762 -972Q744 -1016 708 -1038Q672 -1061 617 -1061Q584 -1061 554 -1051Q524 -1041 498 -1022Q471 -1003 448 -976Q425 -949 408 -914Q390 -880 378 -839V-13Q378 1 367 8Q356 15 334 15Q312 15 301 8Q290 1 290 -13V-959Q290 -1014 272 -1040Q255 -1065 217 -1065Q189 -1065 164 -1052Q140 -1040 116 -1014Q92 -987 67 -943Q58 -929 45 -927Q32 -925 16 -934Q-1 -944 -3 -957Q-5 -970 4 -985Q34 -1038 67 -1074Q100 -1110 138 -1129Q176 -1148 223 -1148Q279 -1148 315 -1122Q351 -1097 366 -1047Q370 -1034 373 -1019Q376 -1004 377 -987Q396 -1024 422 -1053Q449 -1082 480 -1103Q512 -1124 548 -1135Q584 -1146 623 -1146Q676 -1146 718 -1132Q759 -1118 790 -1090Q820 -1061 838 -1020Q844 -1008 848 -994Q852 -981 856 -966Q875 -1008 902 -1041Q930 -1074 964 -1098Q999 -1121 1038 -1134Q1078 -1146 1121 -1146Q1198 -1146 1250 -1114Q1302 -1083 1328 -1022Q1354 -960 1354 -867V-193Q1354 -152 1362 -124Q1371 -97 1388 -82Q1406 -68 1431 -68Q1450 -68 1466 -75Q1482 -82 1496 -96Q1509 -111 1522 -131Q1534 -148 1546 -152Q1559 -155 1575 -144Q1593 -133 1595 -119Q1597 -105 1587 -89Q1573 -63 1555 -42Q1537 -22 1516 -9Q1495 4 1472 11Q1450 18 1426 18Z"/></svg><span>Cursiva, maiúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-541 -1258 2016 2016" class="" aria-hidden="true" focusable="false"><path d="M161 15Q140 15 130 8Q119 2 119 -11V-369Q119 -411 106 -426Q93 -440 70 -440Q53 -440 42 -431Q30 -422 24 -405Q17 -388 15 -365Q14 -349 6 -342Q-2 -334 -20 -334Q-36 -334 -46 -341Q-56 -348 -55 -374Q-53 -417 -38 -448Q-22 -480 6 -498Q33 -515 70 -515Q98 -515 119 -508Q140 -502 156 -490Q172 -478 182 -460Q192 -443 197 -422L198 -418Q214 -447 234 -466Q254 -485 276 -497Q297 -509 319 -514Q341 -519 360 -519Q411 -519 451 -500Q491 -481 514 -440Q538 -400 538 -334V-11Q538 2 527 8Q516 15 494 15Q472 15 462 8Q451 2 451 -11V-326Q451 -362 441 -388Q431 -413 408 -426Q386 -439 348 -439Q330 -439 311 -434Q292 -428 272 -415Q253 -402 236 -381Q219 -360 205 -329V-11Q205 2 194 8Q183 15 161 15ZM881 17Q855 17 836 10Q817 3 806 -10Q794 -23 788 -42Q783 -62 783 -86V-326Q783 -361 773 -386Q763 -412 740 -426Q718 -439 681 -439Q655 -439 628 -430Q602 -421 578 -400Q554 -380 536 -345Q517 -310 506 -259H480Q480 -316 496 -364Q511 -411 540 -446Q568 -481 607 -500Q646 -519 693 -519Q744 -519 784 -500Q823 -481 846 -440Q869 -400 869 -334V-96Q869 -83 873 -74Q877 -66 884 -62Q891 -58 900 -58Q912 -58 919 -61Q926 -64 932 -69Q938 -74 946 -80Q953 -85 963 -82Q973 -80 981 -69Q987 -62 989 -52Q991 -41 985 -33Q974 -17 957 -6Q940 5 920 11Q901 17 881 17Z"/></svg><span>Cursiva, minúscula</span></li>
+      <li class="jeito j4"><svg viewBox="-89 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M48 -57C45 -21 64 0 100 0H166C201 0 220 -18 223 -53L241 -322C245 -376 241 -442 241 -442H243C243 -442 267 -367 283 -322L342 -159C353 -129 373 -115 405 -115H461C493 -115 513 -129 524 -159L583 -322C599 -367 623 -442 623 -442H625C625 -442 621 -376 625 -322L643 -53C646 -18 665 0 700 0H765C801 0 820 -21 817 -57L768 -662C765 -697 746 -715 711 -715H621C589 -715 569 -701 559 -670L470 -413C454 -367 434 -295 434 -295H432C432 -295 412 -367 396 -413L307 -670C297 -701 277 -715 245 -715H155C120 -715 101 -697 98 -662Z"/></svg><span>Pontilhada, para traçar</span></li>
+      <li class="jeito j5"><svg viewBox="-80 -1327 2061 2061" class="" aria-hidden="true" focusable="false"><path d="M937 -708V-688Q907 -687 892 -680Q876 -674 871 -656Q866 -639 866 -602V-106Q866 -70 872 -52Q877 -34 892 -28Q907 -22 937 -20V0Q906 -2 858 -2Q810 -3 760 -3Q706 -3 658 -2Q611 -2 582 0V-20Q616 -22 634 -28Q651 -34 657 -52Q663 -70 663 -106V-641L673 -643L422 -1H406L124 -643V-196Q124 -129 130 -94Q135 -58 156 -42Q178 -27 225 -20V0Q205 -2 173 -2Q141 -3 113 -3Q91 -3 68 -2Q45 -2 30 0V-20Q61 -27 76 -42Q91 -56 96 -88Q101 -120 101 -176V-602Q101 -639 96 -656Q91 -674 76 -680Q60 -687 30 -688V-708Q45 -707 68 -706Q91 -705 113 -705Q171 -705 224 -706Q277 -707 320 -708L518 -262L488 -229L673 -705Q693 -705 716 -705Q739 -705 760 -705Q810 -705 858 -706Q906 -707 937 -708ZM1371 -533Q1417 -533 1444 -522Q1470 -510 1484 -493Q1499 -475 1506 -445Q1513 -415 1513 -364V-93Q1513 -51 1523 -36Q1533 -21 1559 -21V0Q1540 -1 1502 -2Q1465 -4 1429 -4Q1390 -4 1353 -2Q1316 -1 1297 0V-21Q1317 -21 1325 -36Q1333 -51 1333 -93V-418Q1333 -439 1329 -453Q1325 -467 1316 -474Q1308 -481 1294 -481Q1276 -481 1260 -472Q1243 -463 1232 -446Q1222 -430 1222 -409V-93Q1222 -51 1230 -36Q1238 -21 1258 -21V0Q1241 -1 1206 -2Q1172 -4 1136 -4Q1094 -4 1051 -2Q1008 -1 986 0V-21Q1017 -21 1030 -36Q1042 -51 1042 -93V-410Q1042 -455 1030 -476Q1018 -498 986 -498V-519Q1018 -516 1048 -516Q1098 -516 1142 -520Q1185 -523 1222 -530V-458Q1245 -498 1283 -516Q1321 -533 1371 -533ZM1672 -533Q1718 -533 1744 -522Q1771 -510 1785 -493Q1800 -475 1807 -445Q1814 -415 1814 -364V-93Q1814 -51 1826 -36Q1839 -21 1870 -21V0Q1850 -1 1810 -2Q1769 -4 1730 -4Q1691 -4 1654 -2Q1617 -1 1598 0V-21Q1618 -21 1626 -36Q1634 -51 1634 -93V-418Q1634 -439 1629 -453Q1624 -467 1614 -474Q1603 -481 1585 -481Q1567 -481 1550 -470Q1534 -459 1524 -442Q1513 -424 1511 -403L1504 -443Q1531 -496 1574 -514Q1618 -533 1672 -533Z"/></svg><span>Com serifa</span></li>
+      <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M0 -125V-1000H250V-875H375V-750H500V-875H625V-1000H875V-125H625V-625H500V-375H375V-625H250V-125Z"/></svg><span>Em pixels</span></li>
+      <li class="jeito j7"><svg viewBox="-40 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M85 -159Q55 -159 40 -178Q26 -197 26 -222Q26 -248 40 -267Q55 -286 85 -286Q67 -286 56 -301Q45 -316 41 -338Q37 -360 41 -382Q45 -404 56 -419Q67 -434 85 -434Q56 -434 42 -454Q27 -473 27 -500Q27 -526 42 -546Q56 -565 85 -565Q47 -565 34 -580Q22 -595 34 -610Q47 -625 85 -625Q54 -625 44 -637Q33 -649 44 -661Q54 -673 85 -673Q86 -697 102 -708Q118 -720 138 -720Q159 -719 174 -706Q189 -694 189 -670Q196 -687 212 -690Q227 -694 243 -688Q259 -681 268 -668Q276 -654 269 -637Q292 -650 310 -644Q329 -639 339 -623Q349 -607 345 -588Q341 -569 319 -555Q348 -573 364 -570Q379 -566 375 -551Q371 -536 341 -518Q368 -534 388 -525Q407 -516 412 -496Q417 -476 399 -457Q414 -466 430 -460Q439 -475 456 -482Q472 -488 490 -477Q467 -491 462 -508Q457 -525 466 -538Q474 -552 492 -555Q509 -558 531 -545Q508 -559 502 -575Q497 -591 504 -603Q511 -615 528 -618Q545 -620 568 -606Q545 -621 539 -638Q533 -655 541 -667Q549 -679 566 -681Q584 -683 608 -668Q607 -692 622 -704Q637 -717 656 -718Q676 -718 691 -706Q706 -694 707 -670Q716 -687 730 -690Q744 -694 756 -688Q769 -681 774 -668Q780 -654 771 -637Q808 -637 820 -622Q832 -607 820 -592Q808 -577 771 -577Q806 -577 818 -563Q829 -549 818 -535Q806 -521 771 -521Q801 -521 811 -506Q821 -490 811 -474Q801 -458 771 -458Q793 -458 806 -443Q820 -428 824 -406Q829 -384 824 -362Q820 -340 806 -325Q793 -310 771 -310Q795 -310 807 -299Q819 -288 819 -274Q819 -260 807 -249Q795 -238 771 -238Q793 -238 806 -222Q819 -207 824 -184Q828 -161 824 -138Q819 -114 806 -98Q793 -83 771 -83Q810 -83 823 -73Q836 -63 823 -53Q810 -43 771 -43Q774 -17 760 -2Q746 13 726 16Q705 18 688 7Q671 -4 668 -30Q660 -9 645 -3Q630 3 616 -3Q601 -9 594 -24Q588 -38 596 -59Q558 -59 546 -71Q533 -83 546 -94Q558 -106 596 -106Q568 -106 554 -126Q539 -145 538 -171Q536 -197 548 -218Q560 -240 586 -244Q564 -244 556 -261Q546 -257 540 -267Q528 -269 515 -277Q532 -265 532 -247Q531 -229 520 -214Q509 -198 492 -192Q476 -186 459 -198Q449 -181 428 -182Q407 -182 386 -194Q364 -207 352 -224Q341 -242 351 -260Q343 -255 335 -252Q329 -238 317 -228Q305 -218 291 -217Q306 -207 308 -190Q309 -173 297 -160Q285 -146 260 -146Q293 -146 304 -132Q315 -118 304 -104Q293 -91 260 -91Q292 -82 298 -64Q305 -45 290 -33Q276 -21 243 -30Q243 -4 227 9Q211 22 190 22Q169 22 153 9Q137 -4 137 -30Q137 -1 129 12Q121 24 110 12Q99 1 92 -40Q84 -81 85 -159Z"/></svg><span>De bolhas</span></li>
+    </ul>
+    <p class="letra-com"><strong>M</strong> de <a href="/sinal/macaco/">macaco</a>, maçã, morango e mala.</p>
+    <h3 class="ficha-sub">Sinais que começam com M</h3>
+    <nav class="rel-grid" aria-label="Sinais que começam com a letra M">
+      <a href="/sinal/macaco/" class="rel-card"><img src="/assets/img/sinais/macaco.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Macaco</span></a>
+      <a href="/sinal/maranhao/" class="rel-card"><img src="/assets/img/sinais/maranhao.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Maranhão</span></a>
+      <a href="/sinal/marrom/" class="rel-card"><img src="/assets/img/sinais/marrom.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Marrom</span></a>
+      <a href="/sinal/mato-grosso-do-sul/" class="rel-card"><img src="/assets/img/sinais/mato-grosso-do-sul.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Mato Grosso do Sul</span></a>
+      <a href="/sinal/medico/" class="rel-card"><img src="/assets/img/sinais/medico.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Médico</span></a>
+      <a href="/sinal/medo/" class="rel-card"><img src="/assets/img/sinais/medo.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Medo</span></a>
+      <a href="/sinal/montanha/" class="rel-card"><img src="/assets/img/sinais/montanha.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Montanha</span></a>
+      <a href="/sinal/morar/" class="rel-card"><img src="/assets/img/sinais/morar.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Morar</span></a>
+    </nav>
   </section>
 
   <section aria-labelledby="def-h">

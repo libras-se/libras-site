@@ -119,6 +119,29 @@
   "letra-v": {"cor": "coral red (#ef5350)", "com": [["vaca", "cow"], ["violão", "acoustic guitar"], ["vela", "candle"], ["vulcão", "volcano"]]},
   "letra-w": {"cor": "teal (#2eb8c0)", "com": [["waffle", "waffle"], ["windsurfe", "windsurf board with sail"], ["wi-fi", "wi-fi signal symbol"]]}
  },
+ "numeros": {
+  "numero-0": {"n": 0, "extenso": "zero", "cor": "teal (#2eb8c0)"},
+  "numero-1": {"n": 1, "extenso": "um", "cor": "sunny yellow (#ffc93c)"},
+  "numero-2": {"n": 2, "extenso": "dois", "cor": "orange (#ff8a3d)"},
+  "numero-3": {"n": 3, "extenso": "três", "cor": "leaf green (#34c759)"},
+  "numero-4": {"n": 4, "extenso": "quatro", "cor": "sky blue (#3b9cf6)"},
+  "numero-5": {"n": 5, "extenso": "cinco", "cor": "coral red (#ef5350)"},
+  "numero-6": {"n": 6, "extenso": "seis", "cor": "teal (#2eb8c0)"},
+  "numero-7": {"n": 7, "extenso": "sete", "cor": "sunny yellow (#ffc93c)"},
+  "numero-8": {"n": 8, "extenso": "oito", "cor": "orange (#ff8a3d)"},
+  "numero-9": {"n": 9, "extenso": "nove", "cor": "leaf green (#34c759)"},
+  "numero-10": {"n": 10, "extenso": "dez", "cor": "sky blue (#3b9cf6)"},
+  "numero-11": {"n": 11, "extenso": "onze", "cor": "coral red (#ef5350)"},
+  "numero-12": {"n": 12, "extenso": "doze", "cor": "teal (#2eb8c0)"},
+  "numero-13": {"n": 13, "extenso": "treze", "cor": "sunny yellow (#ffc93c)"},
+  "numero-14": {"n": 14, "extenso": "quatorze", "cor": "orange (#ff8a3d)"},
+  "numero-15": {"n": 15, "extenso": "quinze", "cor": "leaf green (#34c759)"},
+  "numero-16": {"n": 16, "extenso": "dezesseis", "cor": "sky blue (#3b9cf6)"},
+  "numero-17": {"n": 17, "extenso": "dezessete", "cor": "coral red (#ef5350)"},
+  "numero-18": {"n": 18, "extenso": "dezoito", "cor": "teal (#2eb8c0)"},
+  "numero-19": {"n": 19, "extenso": "dezenove", "cor": "sunny yellow (#ffc93c)"},
+  "numero-20": {"n": 20, "extenso": "vinte", "cor": "orange (#ff8a3d)"}
+ },
  "cores": {
   "amarelo": "#f7c81e", "azul": "#1e6ad6", "marrom": "#7b4a2a", "preto": "#16191c", "roxo": "#7b2cbf", "verde": "#1f9d55", "vermelho": "#e02b2b"
  },
@@ -257,6 +280,9 @@
   "medico": {"arte": "a cute cartoon stethoscope with a happy face around a red heart, with a white doctor's bag with a green cross and a thermometer.", "alt": "estetoscópio em volta de um coração"},
   "professor": {"arte": "a cute cartoon red apple with a happy face sitting on a stack of books, with a pair of glasses and a ruler.", "alt": "maçã em cima de uma pilha de livros"},
   "amigo": {"arte": "two cute cartoon puzzle pieces (one teal, one yellow) with happy faces fitting together and hugging, with a small heart.", "alt": "duas peças de quebra-cabeça se abraçando"},
+  "irma": {"arte": "two cute cartoon bear cub sisters hugging side by side, the bigger one with a yellow bow on her ear and the smaller one holding a daisy, with a small heart above them.", "alt": "duas ursinhas irmãs abraçadas"},
+  "irmao": {"arte": "two cute cartoon bear cub brothers side by side, the bigger one with a blue cap putting his arm around the smaller one, who holds a toy ball, with a small heart above them.", "alt": "dois ursinhos irmãos lado a lado"},
+  "mesa": {"arte": "a cute cartoon wooden dining table with a happy face on its front, covered with a small checkered tablecloth in teal and white, with a vase of flowers and a bowl of fruit on top and two little chairs.", "alt": "mesa sorridente com vaso de flores e fruteira"},
   "familia": {"arte": "a cute cartoon family of four ducks (two adults and two ducklings) walking in a row with a heart above them.", "alt": "família de patinhos"}
  }
 }

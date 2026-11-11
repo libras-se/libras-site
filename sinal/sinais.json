@@ -3890,6 +3890,672 @@
         "Contexto de uso": "Datilologia"
       },
       "publicado_em": "2026-10-18"
+    },
+    {
+      "slug": "numero-0",
+      "palavra": "Número 0",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/ze-ro/",
+      "busca": "0 zero número numero numeral contar quantidade",
+      "resumo": "Sinal do número 0 (zero) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral que indica ausência de quantidade. Na contagem, vem antes do um.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "O jogo terminou zero a zero.",
+        "O termômetro marcou zero grau.",
+        "Sobrou zero: comeram o bolo inteiro."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "zero",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-1",
+      "palavra": "Número 1",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/um/",
+      "busca": "1 um número numero numeral contar quantidade",
+      "resumo": "Sinal do número 1 (um) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do zero e antes do dois. Escreve-se um.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Tenho um irmão.",
+        "A consulta é à uma hora.",
+        "Quero só um café."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "um",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-2",
+      "palavra": "Número 2",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/dois/",
+      "busca": "2 dois número numero numeral contar quantidade",
+      "resumo": "Sinal do número 2 (dois) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do um e antes do três. Escreve-se dois.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Tenho dois filhos.",
+        "O ônibus passa às duas horas.",
+        "Comprei dois livros."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dois",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-3",
+      "palavra": "Número 3",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/três/",
+      "busca": "3 três número numero numeral contar quantidade",
+      "resumo": "Sinal do número 3 (três) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dois e antes do quatro. Escreve-se três.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Minha filha tem três anos.",
+        "Faltam três dias para a viagem.",
+        "Somos três irmãos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "três",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-4",
+      "palavra": "Número 4",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/qua-tro/",
+      "busca": "4 quatro número numero numeral contar quantidade",
+      "resumo": "Sinal do número 4 (quatro) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do três e antes do cinco. Escreve-se quatro.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "A mesa tem quatro cadeiras.",
+        "O cachorro tem quatro patas.",
+        "A reunião é às quatro da tarde."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "quatro",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-5",
+      "palavra": "Número 5",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/cin-co/",
+      "busca": "5 cinco número numero numeral contar quantidade",
+      "resumo": "Sinal do número 5 (cinco) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do quatro e antes do seis. Escreve-se cinco.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "A mão tem cinco dedos.",
+        "Trabalho cinco dias por semana.",
+        "Espere cinco minutos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "cinco",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-6",
+      "palavra": "Número 6",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/seis/",
+      "busca": "6 seis número numero numeral contar quantidade",
+      "resumo": "Sinal do número 6 (seis) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do cinco e antes do sete. Escreve-se seis.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Acordo às seis da manhã.",
+        "Meu filho tem seis anos.",
+        "Compre seis ovos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "seis",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-7",
+      "palavra": "Número 7",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/se-te/",
+      "busca": "7 sete número numero numeral contar quantidade",
+      "resumo": "Sinal do número 7 (sete) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do seis e antes do oito. Escreve-se sete.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "A semana tem sete dias.",
+        "O jantar é às sete da noite.",
+        "Ela mora na casa número sete."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "sete",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-8",
+      "palavra": "Número 8",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/oi-to/",
+      "busca": "8 oito número numero numeral contar quantidade",
+      "resumo": "Sinal do número 8 (oito) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do sete e antes do nove. Escreve-se oito.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Trabalho oito horas por dia.",
+        "A aranha tem oito patas.",
+        "A aula começa às oito."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "oito",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-9",
+      "palavra": "Número 9",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/no-ve/",
+      "busca": "9 nove número numero numeral contar quantidade",
+      "resumo": "Sinal do número 9 (nove) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do oito e antes do dez. Escreve-se nove.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "A gravidez dura cerca de nove meses.",
+        "A loja abre às nove.",
+        "Meu sobrinho tem nove anos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "nove",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-10",
+      "palavra": "Número 10",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/dez/",
+      "busca": "10 dez número numero numeral contar quantidade",
+      "resumo": "Sinal do número 10 (dez) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do nove e antes do onze. Escreve-se dez.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Tirei dez na prova.",
+        "As duas mãos somam dez dedos.",
+        "Volto em dez minutos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dez",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-11",
+      "palavra": "Número 11",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/on-ze/",
+      "busca": "11 onze número numero numeral contar quantidade",
+      "resumo": "Sinal do número 11 (onze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dez e antes do doze. Escreve-se onze.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Um time de futebol entra em campo com onze jogadores.",
+        "Novembro é o mês onze.",
+        "Minha filha tem onze anos."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "onze",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-12",
+      "palavra": "Número 12",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/do-ze/",
+      "busca": "12 doze número numero numeral contar quantidade",
+      "resumo": "Sinal do número 12 (doze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do onze e antes do treze. Escreve-se doze.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "O ano tem doze meses.",
+        "Uma dúzia são doze ovos.",
+        "O almoço é às doze horas."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "doze",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-13",
+      "palavra": "Número 13",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/tre-ze/",
+      "busca": "13 treze número numero numeral contar quantidade",
+      "resumo": "Sinal do número 13 (treze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do doze e antes do quatorze. Escreve-se treze.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Ele tem treze anos.",
+        "A reunião é no dia treze.",
+        "Faltam treze dias para o Natal."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "treze",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-14",
+      "palavra": "Número 14",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/qua-tor-ze/",
+      "busca": "14 quatorze número numero numeral contar quantidade catorze",
+      "resumo": "Sinal do número 14 (quatorze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do treze e antes do quinze. Escreve-se quatorze ou catorze.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Ela faz quatorze anos em maio.",
+        "O ônibus sai às quatorze horas.",
+        "Quatorze também se escreve catorze."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "quatorze",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-15",
+      "palavra": "Número 15",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/quin-ze/",
+      "busca": "15 quinze número numero numeral contar quantidade",
+      "resumo": "Sinal do número 15 (quinze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do quatorze e antes do dezesseis. Escreve-se quinze.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "A festa de quinze anos foi linda.",
+        "Espere quinze minutos.",
+        "O pagamento cai no dia quinze."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "quinze",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-16",
+      "palavra": "Número 16",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/de-zes-seis/",
+      "busca": "16 dezesseis número numero numeral contar quantidade",
+      "resumo": "Sinal do número 16 (dezesseis) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do quinze e antes do dezessete. Escreve-se dezesseis.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Aos dezesseis anos já se pode votar no Brasil.",
+        "A aula termina às dezesseis horas.",
+        "Moro no apartamento dezesseis."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dezesseis",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-17",
+      "palavra": "Número 17",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/de-zes-se-te/",
+      "busca": "17 dezessete número numero numeral contar quantidade",
+      "resumo": "Sinal do número 17 (dezessete) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dezesseis e antes do dezoito. Escreve-se dezessete.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Meu irmão tem dezessete anos.",
+        "O filme começa às dezessete horas.",
+        "Faltam dezessete dias para as férias."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dezessete",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-18",
+      "palavra": "Número 18",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/de-zoi-to/",
+      "busca": "18 dezoito número numero numeral contar quantidade",
+      "resumo": "Sinal do número 18 (dezoito) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dezessete e antes do dezenove. Escreve-se dezoito.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Com dezoito anos se chega à maioridade.",
+        "O jogo é às dezoito horas.",
+        "Ela tirou a carteira de motorista aos dezoito."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dezoito",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-19",
+      "palavra": "Número 19",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/de-ze-no-ve/",
+      "busca": "19 dezenove número numero numeral contar quantidade",
+      "resumo": "Sinal do número 19 (dezenove) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dezoito e antes do vinte. Escreve-se dezenove.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "O jantar é às dezenove horas.",
+        "Ele tem dezenove anos.",
+        "Faltam dezenove dias para o meu aniversário."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "dezenove",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "numero-20",
+      "palavra": "Número 20",
+      "categoria": "Números",
+      "classe": "numeral",
+      "pron": "/vin-te/",
+      "busca": "20 vinte número numero numeral contar quantidade",
+      "resumo": "Sinal do número 20 (vinte) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.",
+      "definicoes": [
+        "Numeral cardinal que vem depois do dezenove e antes do vinte e um. Escreve-se vinte.",
+        "<em>Em Libras:</em> os números têm sinais próprios. Alguns mudam de forma conforme o uso, como número cardinal, quantidade ou ordinal. O vídeo mostra a forma gravada pela nossa intérprete."
+      ],
+      "exemplos": [
+        "Cheguei vinte minutos atrasado.",
+        "Ela tem vinte anos.",
+        "O curso tem vinte aulas."
+      ],
+      "contexto": [
+        "<strong>Cardinal, quantidade e ordinal:</strong> em Libras, a forma de um número pode mudar conforme o uso. O sinal para dizer um telefone ou um endereço pode ser diferente do usado para contar coisas. Na dúvida, observe como a comunidade surda da sua região sinaliza.",
+        "<strong>Para treinar:</strong> veja todos os <a href=\"/aprender-libras/numeros-em-libras/\">números em Libras</a> e depois o <a href=\"/aprender-libras/alfabeto-em-libras/\">alfabeto em Libras</a>. Números e letras são a base para dizer idade, datas, telefones e nomes.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Por extenso": "vinte",
+        "Contexto de uso": "Contagem, datas e horas"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "irma",
+      "palavra": "Irmã",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo feminino",
+      "pron": "/ir-mã/",
+      "busca": "irmã irma irmãs mana família parentesco",
+      "resumo": "Sinal usado para falar de irmã.",
+      "definicoes": [
+        "Filha do mesmo pai e da mesma mãe, ou de um deles, em relação aos outros filhos.",
+        "<em>Em Libras:</em> faz parte do vocabulário de parentesco, ao lado de irmão, pai, filho e filha. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Minha irmã mora em Curitiba.",
+        "Tenho uma irmã mais velha.",
+        "Ela foi ao cinema com a irmã."
+      ],
+      "contexto": [
+        "<strong>Família e Libras:</strong> a maioria das crianças surdas nasce em famílias ouvintes. Quando irmãos e irmãs aprendem Libras, a criança surda participa das conversas e das brincadeiras de casa.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "irmao",
+      "palavra": "Irmão",
+      "categoria": "Família e pessoas",
+      "classe": "substantivo masculino",
+      "pron": "/ir-mão/",
+      "busca": "irmão irmao irmãos mano família parentesco",
+      "resumo": "Sinal usado para falar de irmão.",
+      "definicoes": [
+        "Filho do mesmo pai e da mesma mãe, ou de um deles, em relação aos outros filhos.",
+        "<em>Em Libras:</em> faz parte do vocabulário de parentesco, ao lado de irmã, pai, filho e filha. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "Meu irmão é professor.",
+        "Tenho dois irmãos.",
+        "O irmão mais novo ainda está na escola."
+      ],
+      "contexto": [
+        "<strong>Família e Libras:</strong> a maioria das crianças surdas nasce em famílias ouvintes. Quando irmãos e irmãs aprendem Libras, a criança surda participa das conversas e das brincadeiras de casa.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      },
+      "publicado_em": "2026-11-11"
+    },
+    {
+      "slug": "mesa",
+      "palavra": "Mesa",
+      "categoria": "Cotidiano",
+      "classe": "substantivo feminino",
+      "pron": "/me-sa/",
+      "busca": "mesa móvel jantar cozinha escrivaninha",
+      "resumo": "Sinal usado para falar de mesa, o móvel onde se come, estuda e trabalha.",
+      "definicoes": [
+        "Móvel com um tampo apoiado em pés, usado para comer, escrever, estudar e trabalhar.",
+        "<em>Em Libras:</em> é um sinal do vocabulário básico do dia a dia, usado em casa, na escola e no trabalho. Como todo sinal, pode variar entre regiões."
+      ],
+      "exemplos": [
+        "O almoço está na mesa.",
+        "Coloque os livros em cima da mesa.",
+        "A família se reuniu em volta da mesa."
+      ],
+      "contexto": [
+        "<strong>Na frase:</strong> Libras tem gramática própria, e a ordem dos sinais numa frase nem sempre segue a do português. Aprenda o sinal junto com exemplos de uso.",
+        "<strong>Variações regionais:</strong> sinais podem variar entre regiões e comunidades. O vídeo mostra uma das formas usadas no Brasil."
+      ],
+      "dados": {
+        "Contexto de uso": "Cotidiano"
+      },
+      "publicado_em": "2026-11-11"
     }
   ]
 }

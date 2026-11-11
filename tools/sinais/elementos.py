@@ -5,6 +5,7 @@ Usado pelo build_pages.py. Os dados ficam em elementos.json e os contornos das l
 - Estados: o estado destacado no mapa do Brasil, sigla, capital, região, gentílico e quatro símbolos do lugar.
 - Alfabeto: a letra de oito jeitos (de forma, cursiva, pontilhada para traçar, com serifa, em pixels, de bolhas)
   e as palavras do vocabulário que começam com ela.
+- Números: o número de vários jeitos, por extenso, a quantidade no quadro de dez e os vizinhos (antes e depois).
 - Cores: a mancha de tinta da cor.
 Quando o sinal tem figurinha (figurinhas.py), ela ocupa o cabeçalho; sem figurinha, entra o desenho da ficha.
 """
@@ -103,6 +104,25 @@ def glifo(estilo, L, cls=""):
     return f'<svg viewBox="{g["vb"]}" class="{cls}" aria-hidden="true" focusable="false"><path d="{g["d"]}"/></svg>'
 
 
+# ---------- números ----------
+JEITOS_NUM = [("forma-mai", "De forma", "j1"), ("cursiva-mai", "Cursivo", "j3"), ("forma-mai", "Pontilhado, para traçar", "j4"),
+              ("serifa", "Com serifa", "j5"), ("pixel", "Em pixels", "j6"), ("divertida", "De bolhas", "j7")]
+
+
+def quadro_de_dez(n):
+    """A quantidade no quadro de dez das aulas de matemática: 5 x 2 casas, uma bolinha por unidade (dois quadros acima de 10)."""
+    quadros = 2 if n > 10 else 1
+    alt = 40 * quadros + 8 * (quadros - 1)
+    out = f'<svg viewBox="-5 {round(alt / 2 - 55)} 110 110" aria-hidden="true" focusable="false">'
+    for q in range(quadros):
+        y0 = q * 48
+        out += f'<rect x="0" y="{y0}" width="100" height="40" rx="4" fill="#fff" stroke="#2eb8c0" stroke-width="2"/>'
+        out += f'<path d="M0 {y0 + 20}H100' + "".join(f"M{x} {y0}V{y0 + 40}" for x in (20, 40, 60, 80)) + '" stroke="#2eb8c0" stroke-width="1.2" fill="none"/>'
+        for i in range(min(10, n - q * 10)):
+            out += f'<circle cx="{10 + (i % 5) * 20}" cy="{y0 + 10 + (i // 5) * 20}" r="6.5" fill="{TRACO}"/>'
+    return out + "</svg>"
+
+
 # ---------- arte do cabeçalho ----------
 def arte(s):
     """HTML da arte do cabeçalho (decorativa) ou '' quando o sinal ainda não tem elemento."""
@@ -115,6 +135,8 @@ def arte(s):
         return f'<div class="entry-art art-mapa" aria-hidden="true">{mapa(EL["estados"][slug]["mapa"], "h")}</div>'
     if slug in EL["letras"]:
         return f'<div class="entry-art figu art-letra" aria-hidden="true">{glifo("divertida", s["palavra"][-1])}</div>'
+    if slug in EL["numeros"]:
+        return f'<div class="entry-art figu art-letra" aria-hidden="true">{glifo("divertida", str(EL["numeros"][slug]["n"]))}</div>'
     if slug in EL["cores"]:
         return (f'<div class="entry-art figu" aria-hidden="true"><svg viewBox="0 0 200 200" class="tinta">'
                 f'<path fill="{EL["cores"][slug]}" stroke="#fff" stroke-width="7" stroke-linejoin="round" d="M98 14c30-8 62 8 74 36 9 21 22 33 18 60-5 34-34 44-48 62-13 17-45 20-64 6-17-13-45-14-56-40-12-28 2-48 6-68 6-30 38-48 70-56Z"/>'
@@ -127,6 +149,8 @@ def alt_figurinha(slug):
     """Descrição da figurinha, para o texto alternativo do cartão (ilustração + figurinha)."""
     if slug in EL["letras"]:
         return f"a letra desenhada com {lista_pt([pt for pt, _ in EL['letras'][slug]['com']])}"
+    if slug in EL["numeros"]:
+        return f"o número {EL['numeros'][slug]['n']} como personagem sorridente"
     return EL["figurinhas"].get(slug, {}).get("alt", "")
 
 
@@ -197,6 +221,27 @@ def ficha(s, sinais):
     <ul class="jeitos" aria-label="A letra {L} escrita de oito jeitos">{tiles}
     </ul>
     <p class="letra-com"><strong>{L}</strong> de {com}.</p>{vocab}
+  </section>
+
+'''
+    if slug in EL["numeros"]:
+        d = EL["numeros"][slug]
+        n = d["n"]
+        tiles = "".join(f'\n      <li class="jeito {cls}">{glifo(est, str(n))}<span>{esc(rot)}</span></li>' for est, rot, cls in JEITOS_NUM)
+        tiles += (f'\n      <li class="jeito j2"><b class="ext">{esc(d["extenso"])}</b><span>Por extenso</span></li>'
+                  f'\n      <li class="jeito jq">{quadro_de_dez(n)}<span>{"Nenhuma unidade" if n == 0 else "Quantidade no quadro de dez"}</span></li>')
+        viz = []
+        for m, txt in ((n - 1, "Antes vem o"), (n + 1, "depois vem o")):
+            x = por_slug.get(f"numero-{m}")
+            if x:
+                viz.append(f'{txt} <a href="/sinal/{x["slug"]}/">{m}</a>')
+        vizinhos = (", ".join(viz) + ".") if viz else ""
+        vizinhos = vizinhos[0].upper() + vizinhos[1:] if vizinhos else ""
+        return f'''  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">O número {n} de vários jeitos</h2>
+    <ul class="jeitos" aria-label="O número {n} escrito de vários jeitos">{tiles}
+    </ul>
+    <p class="letra-com"><strong>{n}</strong> {esc(d["extenso"])}. {vizinhos}</p>
   </section>
 
 '''

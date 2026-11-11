@@ -2,7 +2,8 @@
   "_leia": "Páginas /sinal/categoria/<slug>/ geradas por build_pages.py. Só entram categorias com pelo menos 'minimo' sinais com vídeo. {n} vira o número de sinais com vídeo da categoria. Sem travessão e sem emoji nos textos.",
   "minimo": 5,
   "fora": {
-    "Alfabeto": "/aprender-libras/alfabeto-em-libras/"
+    "Alfabeto": "/aprender-libras/alfabeto-em-libras/",
+    "Números": "/aprender-libras/numeros-em-libras/"
   },
   "faq_comum": [
     {
@@ -170,7 +171,7 @@
       "slug": "familia-e-pessoas",
       "h1": "Família e pessoas em",
       "title": "Família e pessoas em Libras: sinais em vídeo | LIBRAS.SE",
-      "description": "Sinais de família e pessoas em Libras em vídeo: pai, filho, filha, bebê, amigo, criança, professor, surdo, ouvinte e mais, com intérprete profissional.",
+      "description": "Sinais de família e pessoas em Libras em vídeo: pai, filho, filha, irmão, irmã, bebê, amigo, criança, professor, surdo e mais, com intérprete profissional.",
       "sub": "Os sinais para falar da família, dos amigos e das pessoas do dia a dia, em vídeo e com intérprete profissional.",
       "nota": "Inclui SURDO e OUVINTE, dois sinais importantes para entender a comunidade surda.",
       "editorial": [

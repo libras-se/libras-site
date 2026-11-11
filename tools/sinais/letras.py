@@ -2,7 +2,7 @@
 
 Uso: uv run --python 3.12 --with fonttools --with brotli tools/sinais/letras.py [pasta-de-cache-das-fontes]
 
-As páginas /sinal/letra-x/ mostram a letra "de vários jeitos" (de forma, cursiva, pontilhada para traçar, com serifa,
+As páginas /sinal/letra-x/ e /sinal/numero-n/ mostram a letra ou o número "de vários jeitos" (de forma, cursiva, pontilhada para traçar, com serifa,
 pixel e divertida). Para não carregar seis fontes em cada página, o contorno de cada letra vira um <path> de SVG.
 O build_pages.py só lê o letras.json; este script roda de novo apenas se a lista de estilos mudar.
 
@@ -79,5 +79,11 @@ for nome, (origem, eixos, molde) in ESTILOS.items():
     for L, (d, b) in letras.items():
         cx = (b[0] + b[2]) / 2
         saida[nome][L] = {"d": d, "vb": f"{round(cx - lado / 2)} {round((y0 + y1) / 2 - lado / 2)} {round(lado)} {round(lado)}"}
+    if nome.endswith("-min"):  # algarismo não tem minúscula
+        continue
+    for n in range(21):  # números de 0 a 20, para as páginas /sinal/numero-n/
+        d, b = desenha(f, str(n), escala)
+        cx, ln = (b[0] + b[2]) / 2, max(lado, (b[2] - b[0]) * 1.12)
+        saida[nome][str(n)] = {"d": d, "vb": f"{round(cx - ln / 2)} {round((y0 + y1) / 2 - ln / 2)} {round(ln)} {round(ln)}"}
 (HERE / "letras.json").write_text(json.dumps(saida, ensure_ascii=False, separators=(",", ":")))
 print(f"letras.json: {len(saida)} estilos, {(HERE / 'letras.json').stat().st_size // 1024} KB")

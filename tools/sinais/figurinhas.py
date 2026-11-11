@@ -14,7 +14,7 @@ O que cada etapa grava:
 A ilustração limpa (assets/img/sinais/<slug>.webp) não muda: os jogos e as atividades continuam com ela, senão a
 figurinha entregaria a resposta.
 
-O texto pedido ao Codex vem de elementos.json ("figurinhas" -> "arte"; as letras são montadas a partir de "letras").
+O texto pedido ao Codex vem de elementos.json ("figurinhas" -> "arte"; as letras e os números são montados a partir de "letras" e "numeros").
 O limite de imagens do Codex vale aqui também: quando ele para, rode `gerar --pendentes` de novo mais tarde.
 """
 import argparse
@@ -71,6 +71,14 @@ def pedido(slug):
                 f"with small cute things whose Portuguese names start with {L} hugging it and peeking around it: {coisas}. "
                 f"Each little thing has a happy face and its own bright color.")
         return arte, f"letra {L} gigante com {lista_pt([pt for pt, _ in d['com']])}", "magenta"
+    if slug in EL["numeros"]:
+        d = EL["numeros"][slug]
+        n = d["n"]
+        quem = f"the single digit {n}" if n < 10 else f"the two digits {' and '.join(str(n))} side by side, forming {n}"
+        arte = (f"the number {n} ({quem}) drawn as a giant chunky playful 3D block numeral in {d['cor']} with a lighter highlight, "
+                f"as a cheerful character with a happy face and little arms and legs, jumping and celebrating, with colorful "
+                f"confetti and a few small stars around it.")
+        return arte, f"o número {n} como personagem sorridente", "magenta"
     f = EL["figurinhas"].get(slug)
     return (f["arte"], f["alt"], f.get("fundo", "magenta")) if f else None
 
@@ -106,9 +114,13 @@ def recortar(slug):
 def gerar(slug, tentativas=2):
     arte, alt, fundo = pedido(slug)
     hexa, evitar = FUNDOS[fundo]
-    letra = SINAIS[slug]["palavra"][-1] if slug in EL["letras"] else None
-    texto = (f"The capital letter {letra} is the ONLY letter in the image. No other text, letters or numbers."
-             if letra else "No text, no letters, no numbers anywhere.")
+    if slug in EL["letras"]:
+        texto = f"The capital letter {SINAIS[slug]['palavra'][-1]} is the ONLY letter in the image. No other text, letters or numbers."
+    elif slug in EL["numeros"]:
+        n = EL["numeros"][slug]["n"]
+        texto = f"The number {n} is the ONLY number in the image, written exactly once. No letters, no words, no other digits."
+    else:
+        texto = "No text, no letters, no numbers anywhere."
     prompt = PROMPT.format(arte=arte, cor="green" if fundo == "verde" else "magenta", hex=hexa, evitar=evitar, texto=texto)
     destino = ORIG / slug
     destino.mkdir(parents=True, exist_ok=True)
@@ -190,7 +202,7 @@ def main():
         slugs += [s for c in args.categoria for s, d in SINAIS.items() if d["categoria"] == c]
         if args.pendentes:
             slugs += list(SINAIS)
-        slugs = [s for s in dict.fromkeys(slugs) if pedido(s) and (args.refazer or not original(s))]
+        slugs = [s for s in dict.fromkeys(slugs) if pedido(s) and (args.refazer or not (FIG / f"{s}.webp").exists())]
         print(f"gerar {len(slugs)}: {', '.join(slugs) or 'nada'}", flush=True)
         with ThreadPoolExecutor(args.jobs) as ex:
             for f in [ex.submit(gerar, s) for s in slugs]:

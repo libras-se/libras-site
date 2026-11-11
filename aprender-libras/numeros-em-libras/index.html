@@ -15,13 +15,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Números em Libras de 0 a 9, com cartaz para imprimir</title>
-<meta name="description" content="Veja os números em Libras de 0 a 9, aprenda a formar telefones, datas e números maiores e baixe grátis o cartaz dos números em Libras em PDF.">
+<meta name="description" content="Veja os números em Libras de 0 a 9, os sinais de 0 a 20 em vídeo, aprenda a formar telefones e datas e baixe grátis o cartaz dos números em PDF.">
 <link rel="canonical" href="https://libras.se/aprender-libras/numeros-em-libras/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://libras.se/aprender-libras/numeros-em-libras/">
 <meta property="og:title" content="Números em Libras de 0 a 9">
-<meta property="og:description" content="Veja os números em Libras de 0 a 9, aprenda a formar telefones, datas e números maiores e baixe grátis o cartaz dos números em Libras em PDF.">
+<meta property="og:description" content="Veja os números em Libras de 0 a 9, os sinais de 0 a 20 em vídeo, aprenda a formar telefones e datas e baixe grátis o cartaz dos números em PDF.">
 <meta property="og:image" content="https://libras.se/assets/img/og/numeros-em-libras.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    "teaches": "Números na Língua Brasileira de Sinais (Libras)",
    "isAccessibleForFree": true,
    "datePublished": "2026-10-08",
-   "dateModified": "2026-10-08",
+   "dateModified": "2026-11-11",
    "image": "https://libras.se/assets/img/og/numeros-em-libras.webp",
    "author": {
     "@type": "Organization",
@@ -398,6 +398,18 @@ a{text-decoration:none;color:inherit}
 .ex .dat{font-size:2.4rem;color:var(--p1);display:block;margin:6px 0}
 .ex p{font-size:.82rem;color:var(--txs);font-weight:300;line-height:1.55}
 .ex details summary{cursor:pointer;font-size:.8rem;font-weight:700;color:var(--teal-dd);margin-top:6px}
+.sb-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.sb-card{background:var(--card);border:1px solid rgba(255,255,255,.72);border-radius:18px;box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--tr),box-shadow var(--tr)}
+.sb-card:hover{transform:translateY(-3px);box-shadow:var(--shm)}
+.sb-card:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sb-vis{display:block;aspect-ratio:4/3;background:#f0fafa;position:relative;overflow:hidden}
+.sb-vis img,.sb-vis video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.45);transform-origin:40% 25%}
+.sb-txt{padding:10px 12px 12px}
+.sb-txt b{font-size:.95rem;font-weight:900;color:var(--p1);letter-spacing:-.02em}
+.sb-txt small{display:none}
+@media(max-width:1060px){.sb-grid{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:820px){.sb-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:520px){.sb-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
 @media(max-width:820px){.num-grid{grid-template-columns:repeat(4,1fr)}.ex{grid-template-columns:1fr}}
 @media(max-width:520px){.num-grid{grid-template-columns:repeat(3,1fr)}.conv{padding:24px 18px}}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
@@ -515,7 +527,7 @@ a{text-decoration:none;color:inherit}
 <section class="hero" aria-labelledby="titulo">
   <div class="w">
     <nav class="bc" aria-label="Você está em"><a href="/">Início</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg><a href="/aprender-libras/">Aprender Libras</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg><span aria-current="page">Números em Libras</span></nav>
-    <span class="hlbl">0 a 9 · cartaz em PDF</span>
+    <span class="hlbl">0 a 9 · vídeos de 0 a 20 · cartaz em PDF</span>
     <h1 id="titulo">Números <em>em Libras</em></h1>
     <p class="hero-sub">Os algarismos de 0 a 9 no alfabeto manual da Libras, um conversor para treinar telefones e datas e um cartaz grátis para imprimir.</p>
     <div class="hero-btns">
@@ -536,6 +548,100 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="num-grid" id="num-grid"></div>
       <div class="note" style="margin-top:22px"><strong>Atenção a um detalhe da Libras:</strong> alguns números mudam conforme o uso. Quando indicam quantidade, como em "dois livros" ou "três pessoas", os números de 1 a 4 costumam ser feitos de outro jeito. Na dúvida, confirme com um professor de Libras ou com a comunidade surda da sua cidade, já que também há <a href="/blog/libras-tem-sotaque-e-giria/" style="color:var(--teal-dd);font-weight:700">variações regionais</a>.</div>
+    </div>
+  </section>
+
+  <section class="sec" id="em-video" aria-labelledby="t-video">
+    <div class="w">
+      <div class="sec-head">
+        <span class="lbl">Em vídeo</span>
+        <h2 id="t-video">Veja os números de 0 a 20 em vídeo</h2>
+        <p>Passe o mouse ou toque no cartão para ver o número feito pela nossa intérprete, e abra a página de cada um para ver o sinal em câmera lenta, a escrita por extenso e exemplos de uso.</p>
+      </div>
+      <div class="sb-grid"><a class="sb-card" href="/sinal/numero-0/" data-video="/assets/videos/sinais/numero-0.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-0.webp" alt="Intérprete fazendo o sinal de Número 0 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 0</b><small>Sinal do número 0 (zero) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-1/" data-video="/assets/videos/sinais/numero-1.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-1.webp" alt="Intérprete fazendo o sinal de Número 1 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 1</b><small>Sinal do número 1 (um) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-2/" data-video="/assets/videos/sinais/numero-2.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-2.webp" alt="Intérprete fazendo o sinal de Número 2 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 2</b><small>Sinal do número 2 (dois) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-3/" data-video="/assets/videos/sinais/numero-3.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-3.webp" alt="Intérprete fazendo o sinal de Número 3 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 3</b><small>Sinal do número 3 (três) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-4/" data-video="/assets/videos/sinais/numero-4.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-4.webp" alt="Intérprete fazendo o sinal de Número 4 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 4</b><small>Sinal do número 4 (quatro) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-5/" data-video="/assets/videos/sinais/numero-5.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-5.webp" alt="Intérprete fazendo o sinal de Número 5 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 5</b><small>Sinal do número 5 (cinco) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-6/" data-video="/assets/videos/sinais/numero-6.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-6.webp" alt="Intérprete fazendo o sinal de Número 6 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 6</b><small>Sinal do número 6 (seis) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-7/" data-video="/assets/videos/sinais/numero-7.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-7.webp" alt="Intérprete fazendo o sinal de Número 7 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 7</b><small>Sinal do número 7 (sete) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-8/" data-video="/assets/videos/sinais/numero-8.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-8.webp" alt="Intérprete fazendo o sinal de Número 8 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 8</b><small>Sinal do número 8 (oito) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-9/" data-video="/assets/videos/sinais/numero-9.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-9.webp" alt="Intérprete fazendo o sinal de Número 9 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 9</b><small>Sinal do número 9 (nove) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-10/" data-video="/assets/videos/sinais/numero-10.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-10.webp" alt="Intérprete fazendo o sinal de Número 10 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 10</b><small>Sinal do número 10 (dez) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-11/" data-video="/assets/videos/sinais/numero-11.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-11.webp" alt="Intérprete fazendo o sinal de Número 11 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 11</b><small>Sinal do número 11 (onze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-12/" data-video="/assets/videos/sinais/numero-12.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-12.webp" alt="Intérprete fazendo o sinal de Número 12 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 12</b><small>Sinal do número 12 (doze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-13/" data-video="/assets/videos/sinais/numero-13.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-13.webp" alt="Intérprete fazendo o sinal de Número 13 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 13</b><small>Sinal do número 13 (treze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-14/" data-video="/assets/videos/sinais/numero-14.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-14.webp" alt="Intérprete fazendo o sinal de Número 14 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 14</b><small>Sinal do número 14 (quatorze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-15/" data-video="/assets/videos/sinais/numero-15.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-15.webp" alt="Intérprete fazendo o sinal de Número 15 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 15</b><small>Sinal do número 15 (quinze) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-16/" data-video="/assets/videos/sinais/numero-16.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-16.webp" alt="Intérprete fazendo o sinal de Número 16 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 16</b><small>Sinal do número 16 (dezesseis) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-17/" data-video="/assets/videos/sinais/numero-17.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-17.webp" alt="Intérprete fazendo o sinal de Número 17 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 17</b><small>Sinal do número 17 (dezessete) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-18/" data-video="/assets/videos/sinais/numero-18.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-18.webp" alt="Intérprete fazendo o sinal de Número 18 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 18</b><small>Sinal do número 18 (dezoito) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-19/" data-video="/assets/videos/sinais/numero-19.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-19.webp" alt="Intérprete fazendo o sinal de Número 19 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 19</b><small>Sinal do número 19 (dezenove) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a>
+<a class="sb-card" href="/sinal/numero-20/" data-video="/assets/videos/sinais/numero-20.mp4">
+  <span class="sb-vis"><img src="/assets/videos/sinais/numero-20.webp" alt="Intérprete fazendo o sinal de Número 20 em Libras" width="1280" height="720" loading="lazy" decoding="async"></span>
+  <span class="sb-txt"><b>Número 20</b><small>Sinal do número 20 (vinte) em Libras, usado para contar e para dizer idade, datas, horas e quantidades.</small></span>
+</a></div>
     </div>
   </section>
 
@@ -714,6 +820,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 </script>
 <script>
+(function(){
+  // Vídeo do número no hover (desktop) ou no primeiro toque (celular), como no vocabulário
+  var touch = window.matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.sb-card[data-video]').forEach(function(card){
+    var vis = card.querySelector('.sb-vis'), v = null;
+    function play(){
+      if (!v) { v = document.createElement('video'); v.src = card.dataset.video; v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('aria-hidden', 'true'); vis.appendChild(v); }
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    }
+    function stop(){ if (v) v.pause(); }
+    if (touch) {
+      card.addEventListener('click', function(e){ if (!card.classList.contains('tocando')) { e.preventDefault(); card.classList.add('tocando'); play(); } });
+    } else {
+      card.addEventListener('mouseenter', play); card.addEventListener('mouseleave', stop);
+      card.addEventListener('focus', play); card.addEventListener('blur', stop);
+    }
+  });
+})();
+</script><script>
 (function(){
   var g = document.getElementById('num-grid');
   g.innerHTML = '0123456789'.split('').map(function(n){

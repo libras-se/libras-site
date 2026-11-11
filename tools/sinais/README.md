@@ -121,6 +121,7 @@ estado, a letra desenhada, o bicho, a comida) e, em três categorias, uma **fich
 | Times de futebol | camisa tradicional em SVG, apelido, mascote, cores, estádio, quem torce e link para o sinal do estado |
 | Estados | o estado destacado no mapa do Brasil, sigla, capital, região, gentílico, times do estado e quatro símbolos do lugar |
 | Alfabeto | a letra de oito jeitos (de forma, cursiva, pontilhada para traçar, com serifa, pixel, bolhas) e os sinais que começam com ela |
+| Números | o número de seis jeitos, por extenso, a quantidade no quadro de dez e os vizinhos (antes e depois) |
 
 Os dados ficam em `elementos.json`; o desenho, em `elementos.py`. Os contornos das letras ficam em `letras.json`
 (gerado uma vez por `letras.py`). Sem escudo oficial de clube: só cores, camisa e mascote.
@@ -143,6 +144,7 @@ python3 tools/sinais/build_pages.py
   `"fundo": "verde"`, quando o desenho precisa de roxo ou rosa).
 - **Aprovação**: confira a folha de contato antes de commitar. Procure texto, número ou escudo que o Codex tenha inventado.
 - **Limite do Codex**: vale o mesmo das ilustrações. Quando parar, rode `gerar --pendentes` de novo mais tarde.
+  O `--pendentes` olha a figurinha publicada no repositório, então funciona sem o SSD (aponte `SINAIS_WORK` para uma pasta local).
 - Quando a ilustração de um sinal muda, o `publicar.py` apaga o cartão antigo e avisa para rodar o `compor`.
 
 ## Formato
@@ -161,5 +163,6 @@ O `build_pages.py` gera uma página para cada categoria de `categorias.json` com
 A página é montada a partir do `/sinal/` já gerado: head, hero, cards, textos e FAQ próprios, e entra no bloco SINAIS do sitemap.
 Os textos (title de até 60 caracteres, description de 70 a 165, dois cards editoriais e FAQ) ficam em `categorias.json`, sem travessão e sem emoji.
 Categoria nova em `sinais.json` sem entrada em `categorias.json` continua só como filtro no `/sinal/`.
-Em `fora` vai a categoria que já tem página em outra área: Alfabeto aponta para `/aprender-libras/alfabeto-em-libras/`.
+Em `fora` vai a categoria que já tem página em outra área: Alfabeto aponta para `/aprender-libras/alfabeto-em-libras/` e
+Números para `/aprender-libras/numeros-em-libras/` (que lista os vídeos com `{{SINAIS:numero-0,...}}`).
 Nas páginas de sinal, a categoria entra no breadcrumb, o selo vira link e aparece "Ver todos: <categoria>".

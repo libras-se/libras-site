@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1819,6 +1819,36 @@
     </video:video>
   </url>
   <url>
+    <loc>https://libras.se/sinal/irma/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/irma.webp</video:thumbnail_loc>
+      <video:title>Sinal de Irmã em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Irmã em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/irma.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/irmao/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/irmao.webp</video:thumbnail_loc>
+      <video:title>Sinal de Irmão em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Irmão em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/irmao.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
     <loc>https://libras.se/sinal/janela/</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -2254,6 +2284,21 @@
     </video:video>
   </url>
   <url>
+    <loc>https://libras.se/sinal/mesa/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/mesa.webp</video:thumbnail_loc>
+      <video:title>Sinal de Mesa em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Mesa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/mesa.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
     <loc>https://libras.se/sinal/montanha/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2325,6 +2370,321 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/nao.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-0/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-0.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 0 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 0 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-0.mp4</video:content_loc>
+      <video:duration>2</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-1/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-1.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 1 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 1 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-1.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-10/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-10.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 10 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 10 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-10.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-11/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-11.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 11 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 11 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-11.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-12/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-12.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 12 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 12 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-12.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-13/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-13.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 13 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 13 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-13.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-14/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-14.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 14 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 14 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-14.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-15/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-15.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 15 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 15 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-15.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-16/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-16.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 16 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 16 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-16.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-17/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-17.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 17 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 17 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-17.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-18/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-18.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 18 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 18 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-18.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-19/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-19.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 19 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 19 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-19.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-2/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-2.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 2 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 2 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-2.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-20/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-20.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 20 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 20 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-20.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-3/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-3.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 3 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 3 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-3.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-4/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-4.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 4 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 4 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-4.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-5/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-5.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 5 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 5 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-5.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-6/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-6.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 6 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 6 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-6.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-7/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-7.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 7 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 7 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-7.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-8/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-8.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 8 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 8 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-8.mp4</video:content_loc>
+      <video:duration>4</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://libras.se/sinal/numero-9/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <video:video>
+      <video:thumbnail_loc>https://libras.se/assets/videos/sinais/numero-9.webp</video:thumbnail_loc>
+      <video:title>Sinal de Número 9 em Libras</video:title>
+      <video:description>Vídeo curto com o sinal de Número 9 em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
+      <video:content_loc>https://libras.se/assets/videos/sinais/numero-9.mp4</video:content_loc>
+      <video:duration>3</video:duration>
+      <video:publication_date>2026-11-11T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -3038,7 +3398,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/categoria/familia-e-pessoas/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3062,7 +3422,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/categoria/cotidiano/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3082,7 +3442,7 @@
   </url>
   <url>
     <loc>https://libras.se/aprender-libras/numeros-em-libras/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3100,13 +3460,13 @@
   </url>
   <url>
     <loc>https://libras.se/atividades/bingo-de-libras/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/atividades/caca-palavras-em-libras/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3136,13 +3496,13 @@
   </url>
   <url>
     <loc>https://libras.se/jogos/jogo-da-memoria-libras/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://libras.se/jogos/quiz-de-libras/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

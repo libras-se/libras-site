@@ -1744,18 +1744,30 @@
    "tomada": 1
   },
   "irma": {
-   "atualizado_em": "2026-10-16T17:23:22-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "068c375b98ea",
+    "em": "2026-11-11T09:44:55-03:00",
+    "por": "bruna",
+    "tomada": 6
+   },
+   "atualizado_em": "2026-11-11T09:44:55-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": 2
+   "status": "aprovado",
+   "tomada": 6
   },
   "irmao": {
-   "atualizado_em": "2026-10-16T17:18:52-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "1b2ee2d596c9",
+    "em": "2026-11-11T09:44:46-03:00",
+    "por": "bruna",
+    "tomada": 6
+   },
+   "atualizado_em": "2026-11-11T09:44:46-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "ajustar",
-   "tomada": 1
+   "status": "aprovado",
+   "tomada": 6
   },
   "itamar-franco": {
    "atualizado_em": "2026-10-16T19:04:49-03:00",
@@ -2272,20 +2284,22 @@
   "livro": {
    "aprovado": {
     "assinatura": "195280e4768f",
-    "em": "2026-10-08T09:39:23-03:00",
+    "em": "2026-11-11T09:44:25-03:00",
+    "por": "bruna",
     "tomada": 1
    },
-   "atualizado_em": "2026-10-08T09:39:23-03:00",
+   "atualizado_em": "2026-11-11T09:44:25-03:00",
    "ilustracao": {
-    "aprovado_em": "2026-10-20T11:33:54-03:00",
+    "aprovado_em": "2026-11-11T09:44:23-03:00",
     "nota": "Aprovada em lote por instrução do usuário (2026-10-20), após conferência contra o quadro de referência.",
     "pedido_em": "2026-10-16T19:14:39-03:00",
     "pedido_por": "bruna",
-    "por": "luis",
+    "por": "bruna",
     "status": "aprovado",
     "versao": 2
    },
    "nota": "",
+   "por": "bruna",
    "status": "aprovado",
    "tomada": 1
   },
@@ -2429,9 +2443,16 @@
    "tomada": 1
   },
   "mesa": {
-   "atualizado_em": "2026-10-06T17:14:56-03:00",
+   "aprovado": {
+    "assinatura": "1db1c678ee4f",
+    "em": "2026-11-11T09:47:09-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:47:09-03:00",
    "nota": "",
-   "status": "ajustar",
+   "por": "bruna",
+   "status": "aprovado",
    "tomada": 1
   },
   "michel-temer": {
@@ -2540,150 +2561,276 @@
    "tomada": 1
   },
   "numero-0": {
-   "atualizado_em": "2026-10-16T18:38:47-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "982409cff98d",
+    "em": "2026-11-11T09:45:02-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:02-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-1": {
-   "atualizado_em": "2026-10-16T18:38:50-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "3957e6b31e6e",
+    "em": "2026-11-11T09:45:08-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:08-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-10": {
-   "atualizado_em": "2026-10-16T18:47:53-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "bb07d0da9ba9",
+    "em": "2026-11-11T09:45:59-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:59-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-11": {
-   "atualizado_em": "2026-10-16T18:47:54-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "30f5a8ae5b0b",
+    "em": "2026-11-11T09:46:04-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:04-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-12": {
-   "atualizado_em": "2026-10-16T18:47:58-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "8158f60b8553",
+    "em": "2026-11-11T09:46:09-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:09-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-13": {
-   "atualizado_em": "2026-10-16T18:47:58-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "c3e70326bfc9",
+    "em": "2026-11-11T09:46:14-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:14-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-14": {
-   "atualizado_em": "2026-10-16T18:47:59-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "bd236fa9eb30",
+    "em": "2026-11-11T09:46:19-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:19-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-15": {
-   "atualizado_em": "2026-10-16T18:48:01-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "b67c9c2922cf",
+    "em": "2026-11-11T09:46:25-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:25-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-16": {
-   "atualizado_em": "2026-10-16T18:48:02-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "92ea899e3402",
+    "em": "2026-11-11T09:46:30-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:30-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-17": {
-   "atualizado_em": "2026-10-16T18:48:04-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "09330aec943e",
+    "em": "2026-11-11T09:46:34-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:34-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-18": {
-   "atualizado_em": "2026-10-16T18:48:05-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "7f8a9cfba1f1",
+    "em": "2026-11-11T09:46:39-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:39-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-19": {
-   "atualizado_em": "2026-10-16T18:48:06-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "735026a464cd",
+    "em": "2026-11-11T09:46:43-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:43-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-2": {
-   "atualizado_em": "2026-10-16T18:38:50-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "5cdadc9a3da7",
+    "em": "2026-11-11T09:45:15-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:15-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-20": {
-   "atualizado_em": "2026-10-16T18:48:07-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "99096a14a5ff",
+    "em": "2026-11-11T09:46:55-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:46:55-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-3": {
-   "atualizado_em": "2026-10-16T18:38:53-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "932626528b1b",
+    "em": "2026-11-11T09:45:20-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:20-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-4": {
-   "atualizado_em": "2026-10-16T18:38:55-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "d89fb030a9f2",
+    "em": "2026-11-11T09:45:24-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:24-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-5": {
-   "atualizado_em": "2026-10-16T18:38:56-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "437812ba3065",
+    "em": "2026-11-11T09:45:29-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:29-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
-   "tomada": null
+   "status": "aprovado",
+   "tomada": 1
   },
   "numero-6": {
-   "atualizado_em": "2026-10-16T18:38:57-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "17e4621098ef",
+    "em": "2026-11-11T09:45:34-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:34-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-7": {
-   "atualizado_em": "2026-10-16T18:38:58-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "cee994b0a823",
+    "em": "2026-11-11T09:45:38-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:38-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-8": {
-   "atualizado_em": "2026-10-16T18:38:59-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "825b2e44bc97",
+    "em": "2026-11-11T09:45:45-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:45-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "numero-9": {
-   "atualizado_em": "2026-10-16T18:39:00-03:00",
-   "nota": "",
+   "aprovado": {
+    "assinatura": "52fef5e5b811",
+    "em": "2026-11-11T09:45:50-03:00",
+    "por": "bruna",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T09:45:50-03:00",
+   "nota": "regravação de 20/out",
    "por": "bruna",
-   "status": "regravar",
+   "status": "aprovado",
    "tomada": 1
   },
   "obrigado": {
@@ -2758,10 +2905,11 @@
    "tomada": 1
   },
   "orgulho": {
-   "atualizado_em": "2026-10-08T09:46:07-03:00",
+   "atualizado_em": "2026-11-11T09:47:22-03:00",
    "nota": "",
+   "por": "bruna",
    "status": "ajustar",
-   "tomada": 2
+   "tomada": 1
   },
   "ouvinte": {
    "aprovado": {

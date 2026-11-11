@@ -14,14 +14,19 @@ import html
 import json
 import re
 import subprocess
+import sys
 import unicodedata
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+import elementos  # noqa: E402  (arte do cabeçalho e ficha de cada categoria)
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).parent
 SITE = "https://libras.se"
 VID_DIR = "/assets/videos/sinais"
 ILU_DIR = "/assets/img/sinais"
+CART_DIR = ILU_DIR + "/cartoes"  # ilustração + figurinha (figurinhas.py); os jogos seguem com a ilustração limpa
 
 data = json.loads((ROOT / "sinal" / "sinais.json").read_text())
 partials = {p.stem + "_" + p.suffix[1:]: p.read_text() for p in (HERE / "partials").iterdir() if p.is_file()}
@@ -48,6 +53,8 @@ for s in data["sinais"]:
     s["video"] = (ROOT / VID_DIR.lstrip("/") / f"{s['slug']}.mp4").exists()
     s["dur"] = duration(s["slug"]) if s["video"] else None
     s["ilustracao"] = s["video"] and (ROOT / ILU_DIR.lstrip("/") / f"{s['slug']}.webp").exists()
+    s["cartao"] = s["ilustracao"] and (ROOT / CART_DIR.lstrip("/") / f"{s['slug']}.webp").exists()
+    s["img"] = f"{CART_DIR if s['cartao'] else ILU_DIR}/{s['slug']}.webp"  # a imagem do sinal nas páginas e nos cards
     if not s["video"]:
         print(f"sem vídeo publicado (página em modo 'em preparação'): {s['slug']}")
     sinais.append(s)
@@ -123,7 +130,7 @@ def page(s):
             {"@type": "ListItem", "position": 4 if s["categoria"] in CAT_PROPRIA else 3, "name": s["palavra"], "item": url}]},
         {"@type": "DefinedTerm", "name": s["palavra"], "description": re.sub("<[^>]+>", "", s["resumo"]),
          "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sinais em Libras", "url": f"{SITE}/sinal/"},
-         "url": url, **({"image": f"{SITE}{ILU_DIR}/{s['slug']}.webp"} if s["ilustracao"] else {})},
+         "url": url, **({"image": SITE + s["img"]} if s["ilustracao"] else {})},
         {"@type": "VideoObject", "name": f"Sinal de {s['palavra']} em Libras",
          "description": f"Vídeo curto com o sinal de {s['palavra']} em Libras (Língua Brasileira de Sinais), "
                         f"interpretado por intérprete profissional da LIBRAS.SE.",
@@ -149,10 +156,11 @@ def page(s):
     ex = "\n".join(f'      <div class="exemplo-item"><span class="exemplo-n">{i}.</span><p class="exemplo-text">{esc(e)}</p></div>'
                    for i, e in enumerate(s["exemplos"], 1))
     ctx = "\n".join(f"      <p>{c}</p>" for c in s["contexto"])
-    ilu = f"{ILU_DIR}/{s['slug']}.webp"
+    ilu = s["img"]
+    alt_fig = elementos.alt_figurinha(s["slug"]) if s["cartao"] else ""
     figura = (f'''
         <figure class="ilustra">
-          <img src="{ilu}" width="960" height="720" alt="Ilustração do sinal de {esc(s['palavra'])} em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="{ilu}" width="960" height="720" alt="Ilustração do sinal de {esc(s['palavra'])} em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos{esc(f'. No canto, uma figurinha: {alt_fig}' if alt_fig else '')}" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>''' if s["ilustracao"] else "")
     if s["video"]:
@@ -198,6 +206,7 @@ def page(s):
            if r["video"] else '<span class="rel-vazio" aria-hidden="true"></span>')
         + f'<span>{esc(r["palavra"])}</span></a>'
         for r in related(s))
+    arte = elementos.arte(s)
     rep = {
         "TITLE": titulo(s),
         "OG_TITLE": f"{s['palavra']} em Libras, sinal em vídeo | LIBRAS.SE",
@@ -209,6 +218,7 @@ def page(s):
         "HEADER_HTML": com_banner(partials["header_html"]), "FOOTER_HTML": partials["footer_html"], "BASE_JS": partials["base_js"],
         "PROMO_CSS": partials["promo-css_html"], "PROMO_JS": partials["promo-js_html"],
         "PALAVRA": esc(s["palavra"]), "PRON": esc(s["pron"]),
+        "ARTE": arte, "COM_ARTE": " com-arte" if arte else "", "FICHA": elementos.ficha(s, sinais),
         "BC_CAT": (f'      <a href="{CAT_PROPRIA[s["categoria"]]}">{esc(s["categoria"])}</a>\n      {SETA_BC}\n'
                    if s["categoria"] in CAT_PROPRIA else ""),
         "ENTRY_CAT": (f'<a href="{CAT_URL[s["categoria"]]}" class="entry-cat">{esc(s["categoria"])}</a>'
@@ -240,7 +250,7 @@ def cards_html(lista):
         v, img = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
         if s["video"]:
             visual = f'''<div class="card-visual" data-video="{v}">
-          {f'<img src="{ILU_DIR}/{s["slug"]}.webp" alt="Ilustração do sinal de {esc(s["palavra"])} em Libras" width="960" height="720" loading="lazy" decoding="async">' if s["ilustracao"] else f'<img src="{img}" alt="Intérprete fazendo o sinal de {esc(s["palavra"])} em Libras" width="1280" height="720" loading="lazy" decoding="async">'}
+          {f'<img src="{s["img"]}" alt="Ilustração do sinal de {esc(s["palavra"])} em Libras" width="960" height="720" loading="lazy" decoding="async">' if s["ilustracao"] else f'<img src="{img}" alt="Intérprete fazendo o sinal de {esc(s["palavra"])} em Libras" width="1280" height="720" loading="lazy" decoding="async">'}
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
         </div>'''
         else:

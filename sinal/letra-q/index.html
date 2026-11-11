@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://libras.se/sinal/letra-q/">
 <meta property="og:title" content="Letra Q em Libras, sinal em vídeo | LIBRAS.SE">
 <meta property="og:description" content="Sinal de Letra Q em Libras em vídeo, com exemplos de uso. Sinal da letra Q no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.">
-<meta property="og:image" content="https://libras.se/assets/img/sinais/letra-q.webp">
+<meta property="og:image" content="https://libras.se/assets/img/sinais/cartoes/letra-q.webp">
 <meta property="og:image:width" content="960">
 <meta property="og:image:height" content="720">
 <meta property="og:video" content="https://libras.se/assets/videos/sinais/letra-q.mp4">
@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:image" content="https://libras.se/assets/img/sinais/letra-q.webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/sinais/cartoes/letra-q.webp">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "url": "https://libras.se/sinal/"
    },
    "url": "https://libras.se/sinal/letra-q/",
-   "image": "https://libras.se/assets/img/sinais/letra-q.webp"
+   "image": "https://libras.se/assets/img/sinais/cartoes/letra-q.webp"
   },
   {
    "@type": "VideoObject",
@@ -298,6 +298,62 @@ section+section{margin-top:52px}
 .report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
 .report-submit:hover{background:var(--teal-d)}
 .report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+/* Elemento divertido do sinal: figurinha (ou camisa, mapa, letra) no cabeçalho */
+.entry-art{float:right;width:112px;margin:-6px 0 10px 16px;position:relative;z-index:1}
+.entry-art img,.entry-art>svg{display:block;width:100%;height:auto}
+.figu{filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));animation:figu 6s ease-in-out infinite;transform-origin:50% 60%}
+.figu:hover{animation-duration:1.2s}
+@keyframes figu{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-7px)}}
+.art-letra svg{fill:var(--tl);stroke:#fff;stroke-width:22;stroke-linejoin:round;paint-order:stroke;overflow:visible}
+.mapa{position:relative;aspect-ratio:500/560}
+.mapa img,.mapa svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapa-uf{fill:var(--p1);stroke:#fff;stroke-width:1.5}
+.mapa-anel{fill:none;stroke:var(--p1);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:anel 2.4s ease-out infinite}
+@keyframes anel{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.art-mapa .mapa-uf{fill:#fff;stroke:var(--p1)}.art-mapa .mapa-anel{stroke:#fff}
+@media(min-width:861px){
+  .entry-header.com-arte .wn{position:relative;padding-right:340px;min-height:300px}
+  .entry-art{float:none;position:absolute;right:40px;top:50%;width:270px;margin:-135px 0 0}
+  .entry-art.art-mapa{width:230px;margin-top:-129px}
+  .entry-header.com-arte .entry-word{font-size:clamp(3rem,5.6vw,4.6rem);overflow-wrap:anywhere}
+}
+/* Ficha da categoria: time, estado, letra */
+.ficha{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:28px 32px}
+.ficha-art{margin:0;text-align:center}
+.ficha-art .camisa{width:190px;max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(10,34,37,.16));transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ficha-art:hover .camisa{transform:rotate(-5deg) scale(1.04)}
+.ficha-art .mapa{width:190px;max-width:100%;margin:0 auto}
+.ficha-art figcaption{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-dados{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ficha-dados dt{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:3px}
+.ficha-dados dd{font-size:.95rem;font-weight:700;color:var(--p1);line-height:1.35}
+.ficha-dados a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
+.ficha-dados a:hover{color:var(--p1)}
+.cores{display:inline-flex;margin-right:8px;vertical-align:-3px}
+.cores i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(14,53,56,.25);margin-right:-5px}
+.ficha-nota{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-sub{font-size:.95rem;font-weight:700;color:var(--p1);margin:26px 0 12px}
+.simbolos{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.simbolos li{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:var(--sh);padding:16px 20px;border-top:3px solid var(--teal)}
+.simbolos strong{display:block;font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:3px}
+.simbolos span{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.55}
+.jeitos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jeito{border-radius:20px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.jeito:hover{transform:translateY(-4px) rotate(-2deg)}
+.jeito:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+.jeito svg{width:100%;max-width:150px;aspect-ratio:1;fill:var(--p1)}
+.jeito span{font-size:.7rem;font-weight:700;color:var(--txs);text-align:center;line-height:1.3}
+.jeito.j2{background:var(--bg3)}.jeito.j2 svg{fill:var(--teal-dd)}
+.jeito.j3{background:repeating-linear-gradient(#fff 0 27px,rgba(46,184,192,.28) 27px 28px)}
+.jeito.j3 span{background:#fff;padding:1px 8px;border-radius:var(--rpill)}
+.jeito.j4 svg{fill:none;stroke:var(--teal-dd);stroke-width:22;stroke-dasharray:1 44;stroke-linecap:round;overflow:visible}
+.jeito.j5{background:var(--gc);border-color:transparent}.jeito.j5 svg{fill:#fff}
+.jeito.j6{background:var(--p1);border-color:transparent}.jeito.j6 svg{fill:var(--teal);padding:16px}
+.jeito.j7{background:var(--gb);border-color:transparent}.jeito.j7 svg{fill:#fff}
+.jeito.j5 span,.jeito.j6 span{color:rgba(255,255,255,.75)}.jeito.j7 span{color:var(--p1)}
+.letra-com{font-family:'EB Garamond','Georgia',serif;font-size:1.25rem;color:var(--txt);margin-top:18px;text-align:center}
+.letra-com strong{font-family:'Playfair Display','Georgia',serif;font-weight:900;font-size:1.6rem;color:var(--teal-dd);margin-right:2px}
+.letra-com a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
@@ -317,6 +373,8 @@ section+section{margin-top:52px}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 
 @media(max-width:860px){
+  .ficha{grid-template-columns:150px 1fr;gap:20px;padding:22px 20px}
+  .jeitos{grid-template-columns:repeat(4,1fr);gap:8px}
   .player{padding:12px}
   .player-grid.com-ilustra{grid-template-columns:1fr}
   .player-info{padding:0 4px 6px}
@@ -329,9 +387,13 @@ section+section{margin-top:52px}
   .entry-header{padding:96px 0 40px}
   .def-card,.report-section{padding:22px 20px}
   .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .ficha{grid-template-columns:1fr}
+  .ficha-dados{gap:14px 16px}
+  .simbolos{grid-template-columns:1fr}
+  .jeitos{grid-template-columns:repeat(2,1fr)}
   .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.figu,.mapa-anel{animation:none}.mapa-anel{opacity:.7}.jeito,.ficha-art .camisa{transition:none}}
 </style>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -431,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="main-content">
 
-<header class="entry-header">
+<header class="entry-header com-arte">
   <div class="wn">
     <nav class="bc" aria-label="Localização">
       <a href="/">Início</a>
@@ -447,6 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="entry-dot">·</span>
       <span class="entry-class">substantivo masculino</span>
     </div>
+    <div class="entry-art figu" aria-hidden="true"><img src="/assets/img/sinais/figurinhas/letra-q.webp" alt="" width="600" height="600" decoding="async"></div>
     <p class="entry-def-preview">Sinal da letra Q no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</p>
   </div>
 </header>
@@ -462,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <video id="sinalVid" src="/assets/videos/sinais/letra-q.mp4" poster="/assets/videos/sinais/letra-q.webp" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de Letra Q em Libras"></video>
         </div>
         <figure class="ilustra">
-          <img src="/assets/img/sinais/letra-q.webp" width="960" height="720" alt="Ilustração do sinal de Letra Q em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="/assets/img/sinais/cartoes/letra-q.webp" width="960" height="720" alt="Ilustração do sinal de Letra Q em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos. No canto, uma figurinha: a letra desenhada com queijo, quadro, quati e quiabo" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>
       </div>
@@ -477,6 +540,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="player-credit">Interpretação: Bruna Garcia, TILS da LIBRAS.SE</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">A letra Q de vários jeitos</h2>
+    <ul class="jeitos" aria-label="A letra Q escrita de oito jeitos">
+      <li class="jeito j1"><svg viewBox="-116 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M32 -362C32 -152 184 12 406 12C484 12 554 -9 612 -47L649 -13C672 10 698 7 722 -19L747 -47C771 -74 768 -102 740 -125L709 -150C751 -210 780 -280 780 -362C780 -567 627 -727 406 -727C184 -727 32 -567 32 -362ZM213 -362C213 -479 293 -567 406 -567C516 -567 599 -479 599 -362C599 -329 592 -298 580 -270L545 -305C522 -327 496 -324 472 -297L447 -269C424 -242 426 -215 452 -192L484 -164C462 -153 432 -148 406 -148C293 -148 213 -240 213 -362Z"/></svg><span>De forma, maiúscula</span></li>
+      <li class="jeito j2"><svg viewBox="-224 -775 1040 1040" class="" aria-hidden="true" focusable="false"><path d="M24 -258C24 -98 119 12 251 12C359 12 395 -55 395 -55H397C397 -55 395 -37 395 -11V145C395 181 414 200 450 200H513C549 200 568 181 568 145V-460C568 -496 549 -515 513 -515H466C430 -515 411 -496 411 -472V-468C411 -462 412 -458 412 -458H410C410 -458 374 -527 262 -527C123 -527 24 -421 24 -258ZM198 -258C198 -337 245 -381 299 -381C367 -381 400 -320 400 -258C400 -169 351 -131 299 -131C239 -131 198 -181 198 -258Z"/></svg><span>De forma, minúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-390 -1335 2098 2098" class="" aria-hidden="true" focusable="false"><path d="M545 17Q441 17 358 -22Q274 -61 215 -134Q156 -206 125 -306Q94 -407 94 -529Q94 -632 113 -718Q132 -803 167 -871Q202 -939 249 -991Q296 -1043 352 -1080Q409 -1116 472 -1138Q493 -1144 506 -1140Q518 -1135 525 -1116Q533 -1096 528 -1083Q524 -1070 507 -1064Q448 -1043 398 -1009Q348 -975 308 -928Q268 -882 241 -822Q214 -762 200 -689Q185 -616 185 -529Q185 -426 210 -341Q235 -256 282 -195Q329 -134 396 -101Q462 -68 545 -68Q603 -68 656 -84Q708 -101 753 -133Q735 -157 718 -181Q700 -205 680 -226Q660 -247 636 -264Q612 -282 582 -292Q551 -301 513 -302Q514 -282 506 -266Q498 -251 484 -242Q470 -234 451 -234Q416 -234 397 -256Q378 -277 378 -305Q378 -323 386 -339Q393 -355 408 -366Q393 -422 384 -485Q376 -548 376 -623Q376 -692 388 -753Q399 -814 423 -864Q447 -914 482 -950Q518 -986 566 -1006Q614 -1026 675 -1026Q754 -1026 821 -993Q888 -960 938 -898Q988 -837 1016 -752Q1044 -668 1044 -563Q1044 -497 1032 -434Q1021 -372 1000 -316Q978 -259 946 -210Q915 -162 876 -122Q891 -106 907 -94Q923 -81 942 -74Q962 -66 985 -66Q1033 -66 1072 -96Q1112 -126 1152 -187Q1160 -199 1174 -202Q1187 -204 1202 -195Q1219 -185 1223 -172Q1227 -159 1218 -143Q1187 -91 1150 -55Q1113 -19 1071 -1Q1029 17 982 17Q941 17 909 6Q877 -4 852 -22Q826 -41 805 -64Q750 -26 684 -4Q619 17 545 17ZM675 -941Q632 -941 598 -925Q564 -909 539 -880Q514 -852 498 -813Q482 -774 474 -726Q466 -678 466 -625Q466 -556 473 -497Q480 -438 493 -384Q549 -384 593 -372Q637 -361 672 -342Q706 -322 732 -298Q759 -273 780 -246Q802 -219 821 -192Q852 -226 876 -268Q901 -309 918 -356Q935 -403 944 -456Q953 -508 953 -563Q953 -649 932 -718Q911 -788 873 -838Q835 -888 784 -914Q733 -941 675 -941Z"/></svg><span>Cursiva, maiúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-663 -1258 2016 2016" class="" aria-hidden="true" focusable="false"><path d="M258 17Q201 17 157 -10Q113 -38 88 -94Q63 -150 63 -235Q63 -287 72 -331Q82 -375 101 -410Q120 -445 147 -469Q174 -493 209 -506Q244 -519 286 -519Q319 -519 354 -510Q388 -501 418 -484V-489Q418 -502 429 -508Q440 -515 461 -515Q483 -515 494 -508Q504 -502 504 -489V620Q504 633 494 640Q483 646 461 646Q440 646 429 640Q418 633 418 620V-68Q394 -34 366 -16Q339 3 312 10Q284 17 258 17ZM151 -239Q151 -184 164 -144Q177 -105 204 -84Q230 -63 270 -63Q299 -63 326 -73Q352 -83 376 -106Q399 -129 418 -166V-404Q387 -424 357 -432Q327 -440 295 -440Q269 -440 247 -432Q225 -424 207 -408Q189 -392 176 -368Q164 -344 158 -312Q151 -280 151 -239ZM322 223Q304 223 300 212Q295 201 295 188Q295 174 300 162Q304 150 322 150H601Q619 150 624 162Q628 174 628 188Q628 201 624 212Q619 223 601 223Z"/></svg><span>Cursiva, minúscula</span></li>
+      <li class="jeito j4"><svg viewBox="-116 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M32 -362C32 -152 184 12 406 12C484 12 554 -9 612 -47L649 -13C672 10 698 7 722 -19L747 -47C771 -74 768 -102 740 -125L709 -150C751 -210 780 -280 780 -362C780 -567 627 -727 406 -727C184 -727 32 -567 32 -362ZM213 -362C213 -479 293 -567 406 -567C516 -567 599 -479 599 -362C599 -329 592 -298 580 -270L545 -305C522 -327 496 -324 472 -297L447 -269C424 -242 426 -215 452 -192L484 -164C462 -153 432 -148 406 -148C293 -148 213 -240 213 -362Z"/></svg><span>Pontilhada, para traçar</span></li>
+      <li class="jeito j5"><svg viewBox="-302 -1327 2061 2061" class="" aria-hidden="true" focusable="false"><path d="M775 -36 794 -31Q789 33 771 81Q753 129 721 153Q699 170 665 179Q631 188 596 188Q540 188 486 172Q431 155 376 130Q322 106 264 82Q258 80 251 78Q244 75 240 75Q221 86 199 93Q176 100 156 100Q136 100 122 93Q109 86 109 70Q109 39 164 39Q199 39 240 57Q278 47 305 34Q333 22 362 11Q391 0 432 -3L433 13Q401 16 377 24Q354 33 331 43Q307 53 275 62Q361 64 424 66Q486 67 536 64Q585 61 630 52Q685 40 718 21Q750 2 775 -36ZM414 -722Q527 -722 612 -679Q697 -636 744 -556Q791 -475 791 -360Q791 -248 743 -164Q695 -80 609 -33Q524 14 413 14Q300 14 215 -29Q130 -72 83 -153Q36 -234 36 -348Q36 -460 85 -544Q133 -628 218 -675Q303 -722 414 -722ZM410 -704Q360 -704 323 -659Q286 -614 266 -535Q246 -456 246 -352Q246 -246 269 -168Q292 -89 331 -46Q370 -4 417 -4Q467 -4 504 -49Q541 -94 561 -174Q581 -253 581 -356Q581 -463 558 -541Q535 -619 496 -662Q457 -704 410 -704ZM1080 -533Q1116 -533 1148 -530Q1179 -526 1207 -510L1196 -494Q1183 -505 1167 -509Q1151 -513 1137 -513Q1091 -513 1068 -450Q1045 -387 1045 -260Q1045 -172 1054 -124Q1063 -75 1078 -56Q1094 -38 1112 -38Q1140 -38 1162 -58Q1184 -79 1184 -110V-61Q1164 -23 1135 -4Q1106 14 1062 14Q1005 14 958 -14Q912 -43 885 -104Q858 -165 858 -263Q858 -354 886 -414Q913 -473 963 -503Q1013 -533 1080 -533ZM1357 -535 1371 -525Q1367 -512 1366 -498Q1364 -484 1364 -470V88Q1364 130 1376 145Q1389 160 1420 160V181Q1400 180 1362 178Q1323 177 1282 177Q1227 177 1176 178Q1126 180 1098 181V160Q1139 160 1162 144Q1184 127 1184 78V-520Q1217 -507 1252 -506Q1286 -505 1314 -514Q1343 -522 1357 -535Z"/></svg><span>Com serifa</span></li>
+      <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M875 -875V-375H750V-250H625V-125H125V-250H0V-875H125V-1000H750V-875ZM625 -875H250V-250H500V-375H375V-500H625ZM750 -125V-250H875V-125Z"/></svg><span>Em pixels</span></li>
+      <li class="jeito j7"><svg viewBox="-97 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M432 -24Q432 1 412 13Q391 25 364 25Q338 25 318 12Q298 0 298 -25Q290 -3 271 6Q252 14 230 10Q208 7 189 -4Q170 -16 161 -34Q152 -53 160 -75Q140 -59 120 -66Q99 -72 84 -90Q69 -109 68 -130Q66 -152 86 -167Q68 -165 55 -177Q42 -189 36 -208Q29 -228 30 -248Q30 -269 38 -284Q47 -300 65 -302Q41 -302 28 -314Q16 -325 16 -340Q16 -356 28 -368Q40 -379 65 -379Q44 -382 34 -400Q25 -417 24 -442Q24 -466 32 -488Q39 -511 54 -525Q69 -539 89 -536Q68 -552 66 -572Q64 -591 76 -606Q87 -622 106 -625Q126 -628 147 -612Q135 -637 146 -658Q158 -678 181 -689Q204 -700 227 -696Q250 -693 262 -668Q258 -695 270 -710Q281 -726 298 -728Q316 -731 331 -719Q346 -707 350 -680Q352 -706 374 -718Q395 -729 421 -726Q447 -724 466 -708Q484 -693 482 -667Q493 -694 512 -702Q530 -711 547 -704Q564 -697 571 -678Q578 -659 567 -631Q587 -648 610 -642Q632 -636 649 -616Q666 -597 669 -574Q672 -550 653 -533Q678 -538 694 -524Q709 -510 714 -489Q718 -468 708 -450Q699 -431 674 -426Q708 -426 720 -416Q731 -406 720 -396Q709 -385 675 -385Q699 -385 711 -374Q723 -364 723 -350Q723 -336 711 -326Q699 -315 675 -315Q702 -314 714 -300Q726 -285 725 -267Q724 -249 710 -236Q696 -223 670 -224Q690 -214 690 -189Q690 -164 676 -138Q663 -112 644 -98Q661 -94 670 -80Q679 -66 678 -49Q676 -32 661 -19Q684 -30 698 -22Q712 -14 710 4Q709 22 685 42Q679 73 669 84Q659 95 652 86Q645 78 648 51Q640 74 614 83Q589 92 556 84Q522 76 488 50Q455 24 432 -24ZM447 -187Q425 -201 424 -212Q424 -223 440 -220Q428 -230 428 -245Q427 -260 437 -272Q447 -283 466 -283Q445 -286 439 -297Q433 -308 442 -318Q451 -327 475 -327Q460 -326 452 -340Q444 -354 444 -372Q443 -391 451 -405Q459 -419 475 -419Q445 -417 440 -429Q436 -441 458 -446Q442 -447 436 -457Q430 -467 436 -478Q419 -474 404 -484Q389 -494 386 -511Q377 -499 364 -500Q350 -500 341 -512Q342 -502 336 -500Q330 -498 321 -507Q324 -498 319 -493Q314 -488 304 -492Q314 -478 312 -456Q311 -433 300 -415Q289 -397 271 -397Q289 -395 298 -382Q306 -370 305 -355Q304 -340 294 -328Q284 -317 265 -317Q284 -318 292 -308Q300 -298 296 -286Q293 -275 277 -271Q291 -270 302 -256Q313 -243 318 -225Q324 -207 321 -193Q340 -203 374 -198Q409 -192 447 -187Z"/></svg><span>De bolhas</span></li>
+    </ul>
+    <p class="letra-com"><strong>Q</strong> de <a href="/sinal/queijo/">queijo</a>, quadro, quati e quiabo.</p>
+    <h3 class="ficha-sub">Sinais que começam com Q</h3>
+    <nav class="rel-grid" aria-label="Sinais que começam com a letra Q">
+      <a href="/sinal/queijo/" class="rel-card"><img src="/assets/img/sinais/queijo.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Queijo</span></a>
+    </nav>
   </section>
 
   <section aria-labelledby="def-h">

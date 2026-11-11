@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://libras.se/sinal/letra-u/">
 <meta property="og:title" content="Letra U em Libras, sinal em vídeo | LIBRAS.SE">
 <meta property="og:description" content="Sinal de Letra U em Libras em vídeo, com exemplos de uso. Sinal da letra U no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.">
-<meta property="og:image" content="https://libras.se/assets/img/sinais/letra-u.webp">
+<meta property="og:image" content="https://libras.se/assets/img/sinais/cartoes/letra-u.webp">
 <meta property="og:image:width" content="960">
 <meta property="og:image:height" content="720">
 <meta property="og:video" content="https://libras.se/assets/videos/sinais/letra-u.mp4">
@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:image" content="https://libras.se/assets/img/sinais/letra-u.webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/sinais/cartoes/letra-u.webp">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "url": "https://libras.se/sinal/"
    },
    "url": "https://libras.se/sinal/letra-u/",
-   "image": "https://libras.se/assets/img/sinais/letra-u.webp"
+   "image": "https://libras.se/assets/img/sinais/cartoes/letra-u.webp"
   },
   {
    "@type": "VideoObject",
@@ -298,6 +298,62 @@ section+section{margin-top:52px}
 .report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
 .report-submit:hover{background:var(--teal-d)}
 .report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+/* Elemento divertido do sinal: figurinha (ou camisa, mapa, letra) no cabeçalho */
+.entry-art{float:right;width:112px;margin:-6px 0 10px 16px;position:relative;z-index:1}
+.entry-art img,.entry-art>svg{display:block;width:100%;height:auto}
+.figu{filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));animation:figu 6s ease-in-out infinite;transform-origin:50% 60%}
+.figu:hover{animation-duration:1.2s}
+@keyframes figu{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-7px)}}
+.art-letra svg{fill:var(--tl);stroke:#fff;stroke-width:22;stroke-linejoin:round;paint-order:stroke;overflow:visible}
+.mapa{position:relative;aspect-ratio:500/560}
+.mapa img,.mapa svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapa-uf{fill:var(--p1);stroke:#fff;stroke-width:1.5}
+.mapa-anel{fill:none;stroke:var(--p1);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:anel 2.4s ease-out infinite}
+@keyframes anel{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.art-mapa .mapa-uf{fill:#fff;stroke:var(--p1)}.art-mapa .mapa-anel{stroke:#fff}
+@media(min-width:861px){
+  .entry-header.com-arte .wn{position:relative;padding-right:340px;min-height:300px}
+  .entry-art{float:none;position:absolute;right:40px;top:50%;width:270px;margin:-135px 0 0}
+  .entry-art.art-mapa{width:230px;margin-top:-129px}
+  .entry-header.com-arte .entry-word{font-size:clamp(3rem,5.6vw,4.6rem);overflow-wrap:anywhere}
+}
+/* Ficha da categoria: time, estado, letra */
+.ficha{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:28px 32px}
+.ficha-art{margin:0;text-align:center}
+.ficha-art .camisa{width:190px;max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(10,34,37,.16));transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ficha-art:hover .camisa{transform:rotate(-5deg) scale(1.04)}
+.ficha-art .mapa{width:190px;max-width:100%;margin:0 auto}
+.ficha-art figcaption{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-dados{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ficha-dados dt{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:3px}
+.ficha-dados dd{font-size:.95rem;font-weight:700;color:var(--p1);line-height:1.35}
+.ficha-dados a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
+.ficha-dados a:hover{color:var(--p1)}
+.cores{display:inline-flex;margin-right:8px;vertical-align:-3px}
+.cores i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(14,53,56,.25);margin-right:-5px}
+.ficha-nota{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-sub{font-size:.95rem;font-weight:700;color:var(--p1);margin:26px 0 12px}
+.simbolos{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.simbolos li{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:var(--sh);padding:16px 20px;border-top:3px solid var(--teal)}
+.simbolos strong{display:block;font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:3px}
+.simbolos span{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.55}
+.jeitos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jeito{border-radius:20px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.jeito:hover{transform:translateY(-4px) rotate(-2deg)}
+.jeito:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+.jeito svg{width:100%;max-width:150px;aspect-ratio:1;fill:var(--p1)}
+.jeito span{font-size:.7rem;font-weight:700;color:var(--txs);text-align:center;line-height:1.3}
+.jeito.j2{background:var(--bg3)}.jeito.j2 svg{fill:var(--teal-dd)}
+.jeito.j3{background:repeating-linear-gradient(#fff 0 27px,rgba(46,184,192,.28) 27px 28px)}
+.jeito.j3 span{background:#fff;padding:1px 8px;border-radius:var(--rpill)}
+.jeito.j4 svg{fill:none;stroke:var(--teal-dd);stroke-width:22;stroke-dasharray:1 44;stroke-linecap:round;overflow:visible}
+.jeito.j5{background:var(--gc);border-color:transparent}.jeito.j5 svg{fill:#fff}
+.jeito.j6{background:var(--p1);border-color:transparent}.jeito.j6 svg{fill:var(--teal);padding:16px}
+.jeito.j7{background:var(--gb);border-color:transparent}.jeito.j7 svg{fill:#fff}
+.jeito.j5 span,.jeito.j6 span{color:rgba(255,255,255,.75)}.jeito.j7 span{color:var(--p1)}
+.letra-com{font-family:'EB Garamond','Georgia',serif;font-size:1.25rem;color:var(--txt);margin-top:18px;text-align:center}
+.letra-com strong{font-family:'Playfair Display','Georgia',serif;font-weight:900;font-size:1.6rem;color:var(--teal-dd);margin-right:2px}
+.letra-com a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
@@ -317,6 +373,8 @@ section+section{margin-top:52px}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 
 @media(max-width:860px){
+  .ficha{grid-template-columns:150px 1fr;gap:20px;padding:22px 20px}
+  .jeitos{grid-template-columns:repeat(4,1fr);gap:8px}
   .player{padding:12px}
   .player-grid.com-ilustra{grid-template-columns:1fr}
   .player-info{padding:0 4px 6px}
@@ -329,9 +387,13 @@ section+section{margin-top:52px}
   .entry-header{padding:96px 0 40px}
   .def-card,.report-section{padding:22px 20px}
   .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .ficha{grid-template-columns:1fr}
+  .ficha-dados{gap:14px 16px}
+  .simbolos{grid-template-columns:1fr}
+  .jeitos{grid-template-columns:repeat(2,1fr)}
   .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.figu,.mapa-anel{animation:none}.mapa-anel{opacity:.7}.jeito,.ficha-art .camisa{transition:none}}
 </style>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -431,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="main-content">
 
-<header class="entry-header">
+<header class="entry-header com-arte">
   <div class="wn">
     <nav class="bc" aria-label="Localização">
       <a href="/">Início</a>
@@ -447,6 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="entry-dot">·</span>
       <span class="entry-class">substantivo masculino</span>
     </div>
+    <div class="entry-art figu" aria-hidden="true"><img src="/assets/img/sinais/figurinhas/letra-u.webp" alt="" width="600" height="600" decoding="async"></div>
     <p class="entry-def-preview">Sinal da letra U no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</p>
   </div>
 </header>
@@ -462,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <video id="sinalVid" src="/assets/videos/sinais/letra-u.mp4" poster="/assets/videos/sinais/letra-u.webp" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de Letra U em Libras"></video>
         </div>
         <figure class="ilustra">
-          <img src="/assets/img/sinais/letra-u.webp" width="960" height="720" alt="Ilustração do sinal de Letra U em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="/assets/img/sinais/cartoes/letra-u.webp" width="960" height="720" alt="Ilustração do sinal de Letra U em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos. No canto, uma figurinha: a letra desenhada com urso, unicórnio, uva e urubu" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>
       </div>
@@ -477,6 +540,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="player-credit">Interpretação: Bruna Garcia, TILS da LIBRAS.SE</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">A letra U de vários jeitos</h2>
+    <ul class="jeitos" aria-label="A letra U escrita de oito jeitos">
+      <li class="jeito j1"><svg viewBox="-161 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M62 -263C62 -102 180 12 362 12C542 12 660 -102 660 -263V-660C660 -696 641 -715 605 -715H540C504 -715 485 -696 485 -660V-263C485 -188 436 -148 361 -148C286 -148 237 -188 237 -263V-660C237 -696 218 -715 182 -715H117C81 -715 62 -696 62 -660Z"/></svg><span>De forma, maiúscula</span></li>
+      <li class="jeito j2"><svg viewBox="-220 -775 1040 1040" class="" aria-hidden="true" focusable="false"><path d="M45 -181C45 -36 126 12 228 12C297 12 361 -22 389 -77H391C391 -77 390 -69 390 -64V-55C390 -19 408 0 444 0H500C536 0 555 -19 555 -55V-460C555 -496 536 -515 500 -515H437C401 -515 382 -496 382 -460V-287C382 -210 347 -145 273 -145C237 -145 218 -165 218 -213V-460C218 -496 199 -515 163 -515H100C64 -515 45 -496 45 -460Z"/></svg><span>De forma, minúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-467 -1335 2098 2098" class="" aria-hidden="true" focusable="false"><path d="M571 18Q482 18 418 -18Q355 -54 321 -126Q287 -199 287 -309V-959Q287 -1014 270 -1040Q253 -1065 215 -1065Q188 -1065 164 -1052Q140 -1040 116 -1014Q93 -987 68 -943Q59 -929 45 -926Q31 -924 16 -934Q-2 -944 -4 -957Q-6 -970 3 -985Q33 -1038 66 -1074Q99 -1110 137 -1129Q175 -1148 221 -1148Q300 -1148 338 -1100Q375 -1052 375 -959V-319Q375 -232 398 -176Q421 -121 466 -94Q511 -67 577 -67Q614 -67 647 -76Q680 -84 710 -100Q739 -116 763 -139Q787 -162 806 -192Q825 -223 838 -259V-1117Q838 -1131 849 -1138Q860 -1145 882 -1145Q903 -1145 914 -1138Q925 -1131 925 -1117V-193Q925 -152 934 -124Q942 -97 959 -82Q976 -68 1002 -68Q1031 -68 1052 -84Q1074 -100 1094 -131Q1105 -148 1118 -152Q1130 -155 1146 -144Q1165 -133 1167 -119Q1169 -105 1158 -89Q1144 -63 1126 -43Q1108 -23 1088 -10Q1067 4 1044 11Q1021 18 997 18Q953 18 921 1Q889 -16 870 -50Q850 -83 843 -131Q843 -134 842 -136Q842 -138 842 -140Q822 -102 794 -72Q765 -43 730 -23Q696 -3 656 8Q616 18 571 18Z"/></svg><span>Cursiva, maiúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-640 -1258 2016 2016" class="" aria-hidden="true" focusable="false"><path d="M269 17Q211 17 172 -4Q133 -24 114 -64Q94 -105 94 -166V-489Q94 -502 104 -508Q115 -515 136 -515Q158 -515 169 -508Q180 -502 180 -489V-166Q180 -131 191 -107Q202 -83 224 -71Q247 -59 280 -59Q308 -59 332 -68Q356 -77 376 -92Q395 -108 410 -130Q425 -152 435 -177V-489Q435 -502 446 -508Q456 -515 478 -515Q499 -515 510 -508Q521 -502 521 -489V-96Q521 -82 525 -73Q529 -64 536 -60Q544 -56 553 -56Q562 -56 570 -60Q577 -63 584 -69Q592 -75 599 -80Q607 -86 616 -83Q626 -80 634 -69Q639 -62 641 -52Q643 -42 636 -33Q626 -18 610 -6Q594 5 575 12Q556 19 536 19Q512 19 494 12Q477 6 465 -6Q453 -18 446 -34Q439 -50 437 -69L436 -78Q422 -56 404 -38Q387 -21 366 -8Q345 4 320 10Q296 17 269 17Z"/></svg><span>Cursiva, minúscula</span></li>
+      <li class="jeito j4"><svg viewBox="-161 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M62 -263C62 -102 180 12 362 12C542 12 660 -102 660 -263V-660C660 -696 641 -715 605 -715H540C504 -715 485 -696 485 -660V-263C485 -188 436 -148 361 -148C286 -148 237 -188 237 -263V-660C237 -696 218 -715 182 -715H117C81 -715 62 -696 62 -660Z"/></svg><span>Pontilhada, para traçar</span></li>
+      <li class="jeito j5"><svg viewBox="-375 -1327 2061 2061" class="" aria-hidden="true" focusable="false"><path d="M681 -708V-688Q651 -682 636 -667Q620 -652 615 -620Q610 -589 610 -532V-291Q610 -229 602 -174Q593 -119 569 -79Q543 -36 492 -11Q440 14 354 14Q308 14 257 4Q206 -6 166 -34Q132 -59 114 -95Q96 -131 90 -179Q84 -227 84 -288V-602Q84 -639 79 -656Q74 -674 59 -680Q44 -687 13 -688V-708Q42 -707 90 -706Q137 -705 189 -705Q241 -705 289 -706Q337 -707 368 -708V-688Q334 -687 316 -680Q299 -674 293 -656Q287 -639 287 -602V-194Q287 -145 295 -112Q303 -78 318 -58Q334 -38 358 -30Q381 -21 412 -21Q479 -21 517 -54Q555 -86 571 -144Q587 -203 587 -280V-512Q587 -579 582 -614Q576 -650 555 -666Q534 -682 486 -688V-708Q506 -707 538 -706Q570 -705 598 -705Q621 -705 644 -706Q666 -707 681 -708ZM1241 -530V-109Q1241 -64 1254 -42Q1266 -21 1297 -21V0Q1266 -3 1235 -3Q1185 -3 1142 0Q1099 3 1061 11V-61Q1037 -21 996 -4Q956 14 902 14Q856 14 830 2Q803 -9 789 -26Q774 -44 767 -74Q760 -104 760 -155V-410Q760 -455 748 -476Q736 -498 704 -498V-519Q736 -516 766 -516Q816 -516 860 -520Q903 -523 940 -530V-101Q940 -80 945 -66Q950 -52 961 -45Q972 -38 989 -38Q1008 -38 1024 -47Q1040 -56 1050 -72Q1061 -89 1061 -110V-410Q1061 -455 1049 -476Q1037 -498 1005 -498V-519Q1037 -516 1067 -516Q1117 -516 1160 -520Q1204 -523 1241 -530Z"/></svg><span>Com serifa</span></li>
+      <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M125 -125V-250H0V-1000H250V-250H625V-1000H875V-250H750V-125Z"/></svg><span>Em pixels</span></li>
+      <li class="jeito j7"><svg viewBox="-95 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M333 -21Q329 3 310 12Q292 20 270 16Q249 12 236 -3Q222 -18 227 -42Q215 -23 196 -22Q177 -20 160 -30Q144 -40 137 -58Q130 -75 141 -94Q116 -74 100 -76Q85 -78 86 -94Q88 -109 114 -129Q99 -126 87 -138Q75 -150 67 -171Q59 -192 57 -214Q55 -235 60 -252Q65 -269 79 -272Q56 -272 44 -290Q33 -308 33 -332Q33 -355 44 -373Q56 -391 79 -391Q52 -391 38 -406Q25 -420 25 -439Q25 -458 38 -472Q52 -486 79 -486Q52 -486 38 -504Q24 -521 24 -544Q24 -567 38 -584Q52 -602 79 -602Q53 -602 40 -612Q27 -622 27 -636Q27 -649 40 -659Q53 -669 79 -669Q79 -695 98 -708Q116 -722 141 -722Q166 -722 185 -709Q204 -696 204 -670Q204 -696 214 -710Q225 -723 238 -723Q251 -723 262 -710Q272 -696 272 -670Q301 -669 315 -648Q329 -628 328 -601Q328 -574 313 -554Q298 -533 269 -534Q293 -534 304 -520Q316 -506 316 -488Q316 -470 304 -456Q293 -443 269 -443Q308 -443 320 -432Q333 -421 320 -410Q308 -399 269 -399Q291 -399 302 -385Q313 -371 314 -352Q315 -334 306 -318Q296 -303 276 -300Q302 -302 316 -291Q330 -280 332 -264Q333 -248 322 -235Q339 -235 337 -221Q369 -235 401 -219Q402 -239 416 -252Q431 -264 453 -261Q439 -273 434 -295Q429 -317 432 -340Q435 -363 446 -379Q458 -395 477 -395Q449 -395 436 -416Q422 -436 422 -462Q422 -489 436 -510Q449 -530 477 -530Q453 -530 441 -545Q429 -560 429 -580Q429 -599 441 -614Q453 -629 477 -629Q457 -643 458 -658Q458 -673 472 -678Q486 -684 506 -670Q506 -698 517 -712Q528 -726 542 -726Q556 -726 567 -712Q578 -698 578 -670Q578 -696 588 -710Q599 -723 612 -723Q625 -723 636 -710Q646 -696 646 -670Q669 -675 684 -662Q698 -648 702 -628Q707 -607 698 -588Q690 -570 667 -566Q690 -566 702 -546Q714 -526 714 -500Q714 -474 702 -454Q690 -435 667 -435Q688 -435 701 -420Q714 -406 718 -384Q722 -363 718 -342Q714 -321 701 -306Q688 -292 667 -292Q701 -292 712 -281Q724 -270 712 -259Q701 -248 667 -248Q705 -243 716 -228Q727 -214 712 -202Q698 -191 660 -196Q683 -184 687 -163Q691 -142 681 -122Q671 -103 652 -94Q632 -85 608 -98Q628 -74 628 -60Q627 -45 612 -46Q598 -48 578 -72Q590 -47 586 -30Q581 -12 568 -6Q554 1 538 -6Q521 -14 509 -39Q513 -13 494 2Q474 18 444 22Q413 25 382 15Q352 5 333 -21Z"/></svg><span>De bolhas</span></li>
+    </ul>
+    <p class="letra-com"><strong>U</strong> de urso, unicórnio, uva e urubu.</p>
   </section>
 
   <section aria-labelledby="def-h">

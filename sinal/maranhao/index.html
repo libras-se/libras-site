@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://libras.se/sinal/maranhao/">
 <meta property="og:title" content="Maranhão em Libras, sinal em vídeo | LIBRAS.SE">
 <meta property="og:description" content="Sinal de Maranhão em Libras em vídeo, com exemplos de uso. Sinal usado para falar do Maranhão, estado da região Nordeste do Brasil.">
-<meta property="og:image" content="https://libras.se/assets/img/sinais/maranhao.webp">
+<meta property="og:image" content="https://libras.se/assets/img/sinais/cartoes/maranhao.webp">
 <meta property="og:image:width" content="960">
 <meta property="og:image:height" content="720">
 <meta property="og:video" content="https://libras.se/assets/videos/sinais/maranhao.mp4">
@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:image" content="https://libras.se/assets/img/sinais/maranhao.webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/sinais/cartoes/maranhao.webp">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "url": "https://libras.se/sinal/"
    },
    "url": "https://libras.se/sinal/maranhao/",
-   "image": "https://libras.se/assets/img/sinais/maranhao.webp"
+   "image": "https://libras.se/assets/img/sinais/cartoes/maranhao.webp"
   },
   {
    "@type": "VideoObject",
@@ -304,6 +304,62 @@ section+section{margin-top:52px}
 .report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
 .report-submit:hover{background:var(--teal-d)}
 .report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+/* Elemento divertido do sinal: figurinha (ou camisa, mapa, letra) no cabeçalho */
+.entry-art{float:right;width:112px;margin:-6px 0 10px 16px;position:relative;z-index:1}
+.entry-art img,.entry-art>svg{display:block;width:100%;height:auto}
+.figu{filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));animation:figu 6s ease-in-out infinite;transform-origin:50% 60%}
+.figu:hover{animation-duration:1.2s}
+@keyframes figu{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-7px)}}
+.art-letra svg{fill:var(--tl);stroke:#fff;stroke-width:22;stroke-linejoin:round;paint-order:stroke;overflow:visible}
+.mapa{position:relative;aspect-ratio:500/560}
+.mapa img,.mapa svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapa-uf{fill:var(--p1);stroke:#fff;stroke-width:1.5}
+.mapa-anel{fill:none;stroke:var(--p1);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:anel 2.4s ease-out infinite}
+@keyframes anel{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.art-mapa .mapa-uf{fill:#fff;stroke:var(--p1)}.art-mapa .mapa-anel{stroke:#fff}
+@media(min-width:861px){
+  .entry-header.com-arte .wn{position:relative;padding-right:340px;min-height:300px}
+  .entry-art{float:none;position:absolute;right:40px;top:50%;width:270px;margin:-135px 0 0}
+  .entry-art.art-mapa{width:230px;margin-top:-129px}
+  .entry-header.com-arte .entry-word{font-size:clamp(3rem,5.6vw,4.6rem);overflow-wrap:anywhere}
+}
+/* Ficha da categoria: time, estado, letra */
+.ficha{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:28px 32px}
+.ficha-art{margin:0;text-align:center}
+.ficha-art .camisa{width:190px;max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(10,34,37,.16));transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ficha-art:hover .camisa{transform:rotate(-5deg) scale(1.04)}
+.ficha-art .mapa{width:190px;max-width:100%;margin:0 auto}
+.ficha-art figcaption{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-dados{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ficha-dados dt{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:3px}
+.ficha-dados dd{font-size:.95rem;font-weight:700;color:var(--p1);line-height:1.35}
+.ficha-dados a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
+.ficha-dados a:hover{color:var(--p1)}
+.cores{display:inline-flex;margin-right:8px;vertical-align:-3px}
+.cores i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(14,53,56,.25);margin-right:-5px}
+.ficha-nota{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-sub{font-size:.95rem;font-weight:700;color:var(--p1);margin:26px 0 12px}
+.simbolos{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.simbolos li{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:var(--sh);padding:16px 20px;border-top:3px solid var(--teal)}
+.simbolos strong{display:block;font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:3px}
+.simbolos span{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.55}
+.jeitos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jeito{border-radius:20px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.jeito:hover{transform:translateY(-4px) rotate(-2deg)}
+.jeito:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+.jeito svg{width:100%;max-width:150px;aspect-ratio:1;fill:var(--p1)}
+.jeito span{font-size:.7rem;font-weight:700;color:var(--txs);text-align:center;line-height:1.3}
+.jeito.j2{background:var(--bg3)}.jeito.j2 svg{fill:var(--teal-dd)}
+.jeito.j3{background:repeating-linear-gradient(#fff 0 27px,rgba(46,184,192,.28) 27px 28px)}
+.jeito.j3 span{background:#fff;padding:1px 8px;border-radius:var(--rpill)}
+.jeito.j4 svg{fill:none;stroke:var(--teal-dd);stroke-width:22;stroke-dasharray:1 44;stroke-linecap:round;overflow:visible}
+.jeito.j5{background:var(--gc);border-color:transparent}.jeito.j5 svg{fill:#fff}
+.jeito.j6{background:var(--p1);border-color:transparent}.jeito.j6 svg{fill:var(--teal);padding:16px}
+.jeito.j7{background:var(--gb);border-color:transparent}.jeito.j7 svg{fill:#fff}
+.jeito.j5 span,.jeito.j6 span{color:rgba(255,255,255,.75)}.jeito.j7 span{color:var(--p1)}
+.letra-com{font-family:'EB Garamond','Georgia',serif;font-size:1.25rem;color:var(--txt);margin-top:18px;text-align:center}
+.letra-com strong{font-family:'Playfair Display','Georgia',serif;font-weight:900;font-size:1.6rem;color:var(--teal-dd);margin-right:2px}
+.letra-com a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
@@ -323,6 +379,8 @@ section+section{margin-top:52px}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 
 @media(max-width:860px){
+  .ficha{grid-template-columns:150px 1fr;gap:20px;padding:22px 20px}
+  .jeitos{grid-template-columns:repeat(4,1fr);gap:8px}
   .player{padding:12px}
   .player-grid.com-ilustra{grid-template-columns:1fr}
   .player-info{padding:0 4px 6px}
@@ -335,9 +393,13 @@ section+section{margin-top:52px}
   .entry-header{padding:96px 0 40px}
   .def-card,.report-section{padding:22px 20px}
   .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .ficha{grid-template-columns:1fr}
+  .ficha-dados{gap:14px 16px}
+  .simbolos{grid-template-columns:1fr}
+  .jeitos{grid-template-columns:repeat(2,1fr)}
   .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.figu,.mapa-anel{animation:none}.mapa-anel{opacity:.7}.jeito,.ficha-art .camisa{transition:none}}
 </style>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -437,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="main-content">
 
-<header class="entry-header">
+<header class="entry-header com-arte">
   <div class="wn">
     <nav class="bc" aria-label="Localização">
       <a href="/">Início</a>
@@ -455,6 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="entry-dot">·</span>
       <span class="entry-class">substantivo próprio</span>
     </div>
+    <div class="entry-art figu" aria-hidden="true"><img src="/assets/img/sinais/figurinhas/maranhao.webp" alt="" width="600" height="600" decoding="async"></div>
     <p class="entry-def-preview">Sinal usado para falar do Maranhão, estado da região Nordeste do Brasil.</p>
   </div>
 </header>
@@ -470,7 +533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <video id="sinalVid" src="/assets/videos/sinais/maranhao.mp4" poster="/assets/videos/sinais/maranhao.webp" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de Maranhão em Libras"></video>
         </div>
         <figure class="ilustra">
-          <img src="/assets/img/sinais/maranhao.webp" width="960" height="720" alt="Ilustração do sinal de Maranhão em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="/assets/img/sinais/cartoes/maranhao.webp" width="960" height="720" alt="Ilustração do sinal de Maranhão em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos. No canto, uma figurinha: Lençóis Maranhenses, bumba meu boi e azulejos de São Luís" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>
       </div>
@@ -485,6 +548,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="player-credit">Interpretação: Bruna Garcia, TILS da LIBRAS.SE</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">Conheça o estado</h2>
+    <div class="ficha">
+      <figure class="ficha-art"><div class="mapa"><img src="/assets/img/home/brazil-map.svg" alt="" width="500" height="560" loading="lazy" decoding="async"><svg viewBox="0 0 500 560" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="mapa-uf" d="M288.5,150.0L280.8,157.9L281.6,157.3L282.4,157.7L283.2,155.8L284.9,155.4L287.2,156.7L289.6,156.4L290.5,158.3L294.1,160.3L295.5,170.5L293.8,180.3L291.5,183.2L292.6,184.8L293.2,184.2L294.1,184.6L294.3,185.6L293.2,186.6L294.1,186.6L299.0,195.0L303.6,192.9L305.0,194.3L304.6,198.3L301.7,199.4L300.4,203.0L300.4,205.9L299.5,206.4L298.7,208.9L300.3,208.9L302.0,213.7L303.0,213.4L304.1,214.7L303.2,218.1L304.9,219.4L306.2,224.1L308.4,224.7L309.8,224.2L310.1,225.3L310.7,225.3L312.4,214.6L311.3,212.7L310.2,207.0L312.6,202.6L315.9,189.8L317.2,188.5L321.5,187.0L322.7,185.5L324.1,186.0L325.4,183.7L328.2,182.1L330.9,177.4L334.5,176.4L337.6,178.4L339.4,177.4L342.0,177.3L342.9,176.0L343.9,171.3L341.3,167.6L341.0,161.7L343.9,157.8L344.2,155.7L342.6,149.9L343.7,146.0L342.5,144.5L342.2,142.4L344.9,138.2L345.5,134.9L347.4,131.8L347.8,132.3L350.6,131.5L351.4,129.3L353.4,128.1L354.9,125.1L354.2,123.8L354.8,122.0L350.0,121.2L349.9,122.3L349.1,122.2L338.8,116.5L337.0,116.9L337.2,118.6L336.5,117.6L335.9,118.8L335.9,118.2L334.7,119.0L333.8,118.4L335.2,117.4L335.4,115.3L330.4,122.2L328.6,122.3L331.0,119.5L331.1,117.5L328.2,118.6L327.4,119.7L326.9,124.8L325.9,126.2L325.0,126.1L324.2,125.3L324.7,121.5L326.7,118.2L326.1,117.8L327.3,117.5L327.6,116.5L326.5,113.9L324.7,115.9L324.1,115.5L326.2,112.5L325.3,112.1L326.3,111.7L325.0,108.3L324.5,108.0L324.5,108.7L323.4,109.0L323.9,108.1L322.9,107.8L324.6,106.6L323.9,105.7L321.8,106.5L322.3,103.8L321.1,104.7L321.3,105.8L319.7,104.4L318.1,106.3L317.1,106.3L317.5,105.0L316.6,104.6L317.6,104.2L317.5,102.8L316.9,102.5L315.6,104.7L316.4,102.3L315.3,103.3L314.9,102.0L314.0,102.0L314.1,99.9L313.4,101.9L313.1,99.7L312.6,100.8L312.2,100.4L311.6,101.1L311.1,100.4L311.6,98.8L310.6,100.9L310.3,98.8L308.5,101.3L309.0,102.8L308.2,104.7L308.4,107.6L306.7,108.6L307.9,109.6L307.1,114.0L305.5,115.1L305.7,119.2L303.0,121.6L303.9,123.4L302.9,124.0L302.9,126.9L299.1,133.4L298.6,137.4L296.1,140.0L295.5,142.7L292.9,147.0L292.2,147.7L291.0,147.4L288.5,150.0ZM319.6,104.6L319.6,103.9L319.6,104.6ZM319.8,103.8L320.0,103.3L319.8,103.8ZM326.3,121.9L324.6,125.2L325.2,126.1L326.3,125.0L326.3,121.9ZM315.1,101.3L314.7,100.8L314.4,101.4L315.1,101.3ZM321.1,101.9L320.5,102.5L320.7,103.7L322.2,102.7L321.1,101.9ZM323.2,104.8L322.7,105.8L323.2,104.8ZM323.4,104.6L323.0,105.4L323.4,104.6ZM323.6,105.6L323.3,106.1L323.6,105.6ZM313.4,101.8L313.4,100.7L313.4,101.8ZM336.3,116.8L335.5,117.1L335.9,117.7L336.3,116.8ZM336.7,117.4L336.5,117.0L336.7,117.4ZM334.0,117.1L333.7,117.6L334.0,117.1Z"/><circle class="mapa-anel" cx="318" cy="162" r="78"/></svg></div><figcaption>Onde fica no mapa do Brasil</figcaption></figure>
+      <dl class="ficha-dados"><div><dt>Sigla</dt><dd>MA</dd></div><div><dt>Capital</dt><dd>São Luís</dd></div><div><dt>Região</dt><dd>Nordeste</dd></div><div><dt>Quem nasce lá é</dt><dd>maranhense</dd></div></dl>
+    </div>
+    <ul class="simbolos">
+      <li><strong>Lençóis Maranhenses</strong><span>As dunas brancas se enchem de lagoas de água doce na época das chuvas.</span></li>
+      <li><strong>Bumba meu boi</strong><span>A festa do boi do Maranhão é Patrimônio Cultural Imaterial da Humanidade.</span></li>
+      <li><strong>Azulejos</strong><span>O centro histórico de São Luís é coberto de azulejos portugueses.</span></li>
+      <li><strong>Reggae</strong><span>São Luís é chamada de Jamaica brasileira por causa do reggae.</span></li>
+    </ul>
   </section>
 
   <section aria-labelledby="def-h">

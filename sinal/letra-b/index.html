@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://libras.se/sinal/letra-b/">
 <meta property="og:title" content="Letra B em Libras, sinal em vídeo | LIBRAS.SE">
 <meta property="og:description" content="Sinal de Letra B em Libras em vídeo, com exemplos de uso. Sinal da letra B no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.">
-<meta property="og:image" content="https://libras.se/assets/img/sinais/letra-b.webp">
+<meta property="og:image" content="https://libras.se/assets/img/sinais/cartoes/letra-b.webp">
 <meta property="og:image:width" content="960">
 <meta property="og:image:height" content="720">
 <meta property="og:video" content="https://libras.se/assets/videos/sinais/letra-b.mp4">
@@ -33,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="LIBRAS.SE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@librasse">
-<meta name="twitter:image" content="https://libras.se/assets/img/sinais/letra-b.webp">
+<meta name="twitter:image" content="https://libras.se/assets/img/sinais/cartoes/letra-b.webp">
 <link rel="icon" href="/assets/img/favicon/cropped-FAVICONpng-1-32x32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon/cropped-FAVICONpng-1-180x180.png">
 <link rel="manifest" href="/manifest.json">
@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "url": "https://libras.se/sinal/"
    },
    "url": "https://libras.se/sinal/letra-b/",
-   "image": "https://libras.se/assets/img/sinais/letra-b.webp"
+   "image": "https://libras.se/assets/img/sinais/cartoes/letra-b.webp"
   },
   {
    "@type": "VideoObject",
@@ -298,6 +298,62 @@ section+section{margin-top:52px}
 .report-submit{align-self:flex-start;background:var(--p1);color:#fff;border:none;border-radius:var(--rpill);padding:12px 28px;font-family:'M',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr)}
 .report-submit:hover{background:var(--teal-d)}
 .report-ok{display:none;font-size:.86rem;color:var(--teal-d);font-weight:700;padding:10px 0}
+/* Elemento divertido do sinal: figurinha (ou camisa, mapa, letra) no cabeçalho */
+.entry-art{float:right;width:112px;margin:-6px 0 10px 16px;position:relative;z-index:1}
+.entry-art img,.entry-art>svg{display:block;width:100%;height:auto}
+.figu{filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));animation:figu 6s ease-in-out infinite;transform-origin:50% 60%}
+.figu:hover{animation-duration:1.2s}
+@keyframes figu{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-7px)}}
+.art-letra svg{fill:var(--tl);stroke:#fff;stroke-width:22;stroke-linejoin:round;paint-order:stroke;overflow:visible}
+.mapa{position:relative;aspect-ratio:500/560}
+.mapa img,.mapa svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapa-uf{fill:var(--p1);stroke:#fff;stroke-width:1.5}
+.mapa-anel{fill:none;stroke:var(--p1);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:anel 2.4s ease-out infinite}
+@keyframes anel{0%{transform:scale(.55);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.art-mapa .mapa-uf{fill:#fff;stroke:var(--p1)}.art-mapa .mapa-anel{stroke:#fff}
+@media(min-width:861px){
+  .entry-header.com-arte .wn{position:relative;padding-right:340px;min-height:300px}
+  .entry-art{float:none;position:absolute;right:40px;top:50%;width:270px;margin:-135px 0 0}
+  .entry-art.art-mapa{width:230px;margin-top:-129px}
+  .entry-header.com-arte .entry-word{font-size:clamp(3rem,5.6vw,4.6rem);overflow-wrap:anywhere}
+}
+/* Ficha da categoria: time, estado, letra */
+.ficha{display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:center;background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:var(--rlg);box-shadow:var(--sh);padding:28px 32px}
+.ficha-art{margin:0;text-align:center}
+.ficha-art .camisa{width:190px;max-width:100%;height:auto;filter:drop-shadow(0 8px 14px rgba(10,34,37,.16));transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ficha-art:hover .camisa{transform:rotate(-5deg) scale(1.04)}
+.ficha-art .mapa{width:190px;max-width:100%;margin:0 auto}
+.ficha-art figcaption{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-dados{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.ficha-dados dt{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);margin-bottom:3px}
+.ficha-dados dd{font-size:.95rem;font-weight:700;color:var(--p1);line-height:1.35}
+.ficha-dados a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
+.ficha-dados a:hover{color:var(--p1)}
+.cores{display:inline-flex;margin-right:8px;vertical-align:-3px}
+.cores i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(14,53,56,.25);margin-right:-5px}
+.ficha-nota{font-size:.72rem;color:var(--txm);margin-top:10px}
+.ficha-sub{font-size:.95rem;font-weight:700;color:var(--p1);margin:26px 0 12px}
+.simbolos{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.simbolos li{background:var(--card-s);border:1px solid rgba(255,255,255,.7);border-radius:18px;box-shadow:var(--sh);padding:16px 20px;border-top:3px solid var(--teal)}
+.simbolos strong{display:block;font-size:.95rem;font-weight:900;color:var(--p1);margin-bottom:3px}
+.simbolos span{font-size:.86rem;font-weight:300;color:var(--txs);line-height:1.55}
+.jeitos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jeito{border-radius:20px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.jeito:hover{transform:translateY(-4px) rotate(-2deg)}
+.jeito:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+.jeito svg{width:100%;max-width:150px;aspect-ratio:1;fill:var(--p1)}
+.jeito span{font-size:.7rem;font-weight:700;color:var(--txs);text-align:center;line-height:1.3}
+.jeito.j2{background:var(--bg3)}.jeito.j2 svg{fill:var(--teal-dd)}
+.jeito.j3{background:repeating-linear-gradient(#fff 0 27px,rgba(46,184,192,.28) 27px 28px)}
+.jeito.j3 span{background:#fff;padding:1px 8px;border-radius:var(--rpill)}
+.jeito.j4 svg{fill:none;stroke:var(--teal-dd);stroke-width:22;stroke-dasharray:1 44;stroke-linecap:round;overflow:visible}
+.jeito.j5{background:var(--gc);border-color:transparent}.jeito.j5 svg{fill:#fff}
+.jeito.j6{background:var(--p1);border-color:transparent}.jeito.j6 svg{fill:var(--teal);padding:16px}
+.jeito.j7{background:var(--gb);border-color:transparent}.jeito.j7 svg{fill:#fff}
+.jeito.j5 span,.jeito.j6 span{color:rgba(255,255,255,.75)}.jeito.j7 span{color:var(--p1)}
+.letra-com{font-family:'EB Garamond','Georgia',serif;font-size:1.25rem;color:var(--txt);margin-top:18px;text-align:center}
+.letra-com strong{font-family:'Playfair Display','Georgia',serif;font-weight:900;font-size:1.6rem;color:var(--teal-dd);margin-right:2px}
+.letra-com a{color:var(--teal-dd);text-decoration:underline;text-underline-offset:3px}
 #foot{background:var(--p1);padding:52px 0 24px;border-top:1px solid rgba(255,255,255,.04);position:relative;z-index:1}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:22px}
 .ft-logo{font-family:'M',sans-serif;font-weight:1000;font-size:1.6rem;background:var(--gb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:12px;letter-spacing:-.02em}
@@ -317,6 +373,8 @@ section+section{margin-top:52px}
 @media(max-width:768px){.ft-top{grid-template-columns:1fr}.ft-bot{flex-direction:column;align-items:flex-start}}
 
 @media(max-width:860px){
+  .ficha{grid-template-columns:150px 1fr;gap:20px;padding:22px 20px}
+  .jeitos{grid-template-columns:repeat(4,1fr);gap:8px}
   .player{padding:12px}
   .player-grid.com-ilustra{grid-template-columns:1fr}
   .player-info{padding:0 4px 6px}
@@ -329,9 +387,13 @@ section+section{margin-top:52px}
   .entry-header{padding:96px 0 40px}
   .def-card,.report-section{padding:22px 20px}
   .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .ficha{grid-template-columns:1fr}
+  .ficha-dados{gap:14px 16px}
+  .simbolos{grid-template-columns:1fr}
+  .jeitos{grid-template-columns:repeat(2,1fr)}
   .cta-strip{padding:28px 22px;flex-direction:column;align-items:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.figu,.mapa-anel{animation:none}.mapa-anel{opacity:.7}.jeito,.ficha-art .camisa{transition:none}}
 </style>
 <style id="promo-css">
 :root{--promoh:46px}
@@ -431,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="main-content">
 
-<header class="entry-header">
+<header class="entry-header com-arte">
   <div class="wn">
     <nav class="bc" aria-label="Localização">
       <a href="/">Início</a>
@@ -447,6 +509,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="entry-dot">·</span>
       <span class="entry-class">substantivo masculino</span>
     </div>
+    <div class="entry-art figu" aria-hidden="true"><img src="/assets/img/sinais/figurinhas/letra-b.webp" alt="" width="600" height="600" decoding="async"></div>
     <p class="entry-def-preview">Sinal da letra B no alfabeto manual da Libras, usado para soletrar nomes, siglas e palavras.</p>
   </div>
 </header>
@@ -462,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <video id="sinalVid" src="/assets/videos/sinais/letra-b.mp4" poster="/assets/videos/sinais/letra-b.webp" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de Letra B em Libras"></video>
         </div>
         <figure class="ilustra">
-          <img src="/assets/img/sinais/letra-b.webp" width="960" height="720" alt="Ilustração do sinal de Letra B em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos" decoding="async">
+          <img src="/assets/img/sinais/cartoes/letra-b.webp" width="960" height="720" alt="Ilustração do sinal de Letra B em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos. No canto, uma figurinha: a letra desenhada com banana, borboleta, bola e balão" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>
       </div>
@@ -477,6 +540,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="player-credit">Interpretação: Bruna Garcia, TILS da LIBRAS.SE</p>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="ficha-h">
+    <h2 class="sec-label" id="ficha-h">A letra B de vários jeitos</h2>
+    <ul class="jeitos" aria-label="A letra B escrita de oito jeitos">
+      <li class="jeito j1"><svg viewBox="-185 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M69 -55C69 -19 88 0 124 0H332C474 0 604 -57 604 -213C604 -276 574 -349 492 -374V-376C546 -407 575 -468 575 -528C575 -651 475 -715 332 -715H124C88 -715 69 -696 69 -660ZM244 -438V-565H331C378 -565 397 -537 397 -504C397 -470 378 -438 334 -438ZM244 -150V-298H350C401 -298 425 -265 425 -225C425 -185 400 -150 349 -150Z"/></svg><span>De forma, maiúscula</span></li>
+      <li class="jeito j2"><svg viewBox="-196 -775 1040 1040" class="" aria-hidden="true" focusable="false"><path d="M52 -55C52 -19 71 0 107 0H156C192 0 211 -19 211 -46V-50C211 -56 210 -60 210 -60H212C212 -60 250 12 359 12C492 12 596 -94 596 -260C596 -417 502 -527 367 -527C271 -527 225 -462 225 -462H223C223 -462 225 -480 225 -506V-660C225 -696 206 -715 170 -715H107C71 -715 52 -696 52 -660ZM220 -259C220 -341 269 -381 322 -381C381 -381 422 -330 422 -255C422 -175 376 -131 319 -131C254 -131 220 -190 220 -259Z"/></svg><span>De forma, minúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-503 -1335 2098 2098" class="" aria-hidden="true" focusable="false"><path d="M675 12Q626 12 580 1Q535 -10 504 -27Q482 -40 478 -55Q475 -70 488 -92Q499 -109 512 -112Q525 -115 543 -105Q577 -87 615 -79Q653 -71 698 -71Q756 -71 806 -92Q856 -113 894 -151Q931 -189 952 -240Q973 -290 973 -349Q973 -422 941 -472Q909 -523 848 -549Q787 -575 697 -575Q675 -566 652 -560Q628 -553 609 -553Q582 -553 564 -568Q546 -583 546 -607Q546 -624 554 -637Q562 -650 578 -658Q594 -665 617 -665Q641 -665 660 -660Q680 -656 696 -650Q737 -657 772 -670Q806 -684 832 -703Q859 -722 876 -748Q894 -773 903 -805Q912 -837 912 -875Q912 -933 886 -975Q861 -1017 812 -1040Q763 -1063 693 -1063Q640 -1063 590 -1044Q541 -1026 499 -988Q457 -951 426 -896Q394 -840 376 -766Q358 -691 358 -598V-14Q358 -1 348 6Q338 14 315 14Q293 14 282 6Q271 -1 271 -14V-916Q252 -877 226 -844Q199 -812 166 -784Q132 -757 89 -733Q72 -724 58 -728Q44 -731 35 -751Q25 -769 28 -782Q31 -795 50 -805Q111 -837 154 -883Q197 -929 224 -988Q252 -1046 265 -1116Q270 -1135 282 -1140Q293 -1146 315 -1146Q336 -1146 347 -1140Q358 -1133 358 -1119V-923Q386 -979 424 -1021Q462 -1063 507 -1090Q552 -1118 603 -1132Q654 -1146 707 -1146Q805 -1146 870 -1112Q936 -1079 969 -1020Q1002 -962 1002 -886Q1002 -832 988 -788Q975 -745 950 -712Q924 -680 886 -657Q849 -634 801 -620V-618Q878 -618 938 -584Q997 -550 1031 -490Q1065 -430 1065 -352Q1065 -274 1036 -208Q1007 -142 954 -92Q901 -43 830 -16Q759 12 675 12Z"/></svg><span>Cursiva, maiúscula</span></li>
+      <li class="jeito j3"><svg viewBox="-785 -1258 2016 2016" class="" aria-hidden="true" focusable="false"><path d="M-57 17Q-76 17 -85 6Q-94 -6 -94 -20Q-94 -35 -85 -46Q-76 -58 -57 -58Q-26 -58 4 -74Q34 -90 63 -120Q92 -151 119 -194Q146 -236 170 -288Q194 -341 214 -402Q235 -464 252 -532Q269 -599 280 -672Q292 -745 298 -820Q304 -896 304 -972Q304 -988 317 -996Q330 -1005 348 -1005Q365 -1005 378 -996Q391 -988 391 -972Q391 -895 383 -816Q375 -737 360 -660Q346 -582 326 -508Q306 -435 280 -368Q255 -301 225 -242Q195 -183 162 -136Q129 -88 93 -54Q57 -20 20 -2Q-18 17 -57 17ZM308 19Q270 19 236 6Q203 -8 178 -34Q152 -61 138 -101Q123 -141 123 -193V-957Q123 -1054 158 -1102Q192 -1150 260 -1150Q304 -1150 333 -1130Q362 -1110 376 -1070Q391 -1031 391 -972Q391 -953 378 -944Q365 -935 348 -935Q330 -935 317 -944Q304 -953 304 -972Q304 -1006 299 -1028Q294 -1049 284 -1060Q274 -1070 258 -1070Q242 -1070 231 -1059Q220 -1048 214 -1024Q209 -999 209 -957V-211Q209 -169 216 -140Q223 -111 237 -94Q251 -77 272 -69Q292 -61 318 -61Q340 -61 360 -68Q380 -75 397 -90Q414 -104 427 -126Q440 -149 447 -178Q454 -208 454 -246Q454 -302 442 -357Q429 -412 400 -461Q390 -479 394 -492Q399 -505 413 -512Q427 -519 443 -519Q456 -519 464 -513Q471 -507 478 -495Q492 -472 506 -436Q521 -399 531 -353Q541 -307 541 -255Q541 -213 532 -172Q523 -132 505 -98Q487 -63 459 -37Q431 -11 394 4Q356 19 308 19Z"/></svg><span>Cursiva, minúscula</span></li>
+      <li class="jeito j4"><svg viewBox="-185 -879 1043 1043" class="" aria-hidden="true" focusable="false"><path d="M69 -55C69 -19 88 0 124 0H332C474 0 604 -57 604 -213C604 -276 574 -349 492 -374V-376C546 -407 575 -468 575 -528C575 -651 475 -715 332 -715H124C88 -715 69 -696 69 -660ZM244 -438V-565H331C378 -565 397 -537 397 -504C397 -470 378 -438 334 -438ZM244 -150V-298H350C401 -298 425 -265 425 -225C425 -185 400 -150 349 -150Z"/></svg><span>Pontilhada, para traçar</span></li>
+      <li class="jeito j5"><svg viewBox="-380 -1327 2061 2061" class="" aria-hidden="true" focusable="false"><path d="M28 -708Q57 -707 105 -706Q152 -705 200 -705Q250 -705 296 -706Q342 -707 361 -707Q498 -707 565 -663Q632 -619 632 -550Q632 -515 607 -478Q582 -440 531 -412Q480 -383 401 -373V-371Q504 -366 566 -339Q628 -312 656 -274Q684 -235 684 -194Q684 -127 648 -84Q612 -41 545 -20Q477 0 384 0Q360 0 314 -2Q267 -3 202 -3Q152 -3 105 -2Q57 -2 28 0V-20Q59 -22 74 -28Q89 -34 94 -52Q99 -70 99 -106V-602Q99 -639 94 -656Q89 -674 73 -680Q58 -687 28 -688ZM356 -688Q322 -688 312 -671Q302 -654 302 -602V-106Q302 -71 307 -53Q312 -35 326 -29Q340 -23 367 -23Q423 -23 449 -68Q474 -114 474 -198Q474 -275 438 -317Q401 -359 316 -359H243Q243 -359 243 -368Q243 -376 243 -376H329Q368 -376 389 -398Q410 -421 418 -458Q426 -496 426 -539Q426 -613 410 -650Q394 -688 356 -688ZM1099 -533Q1173 -533 1223 -472Q1273 -410 1273 -282Q1273 -169 1241 -104Q1209 -39 1156 -12Q1103 14 1040 14Q1006 14 978 10Q950 6 924 -10L935 -26Q948 -16 964 -11Q980 -6 994 -6Q1041 -6 1064 -69Q1086 -132 1086 -259Q1086 -348 1077 -396Q1068 -444 1053 -462Q1038 -481 1019 -481Q991 -481 969 -461Q947 -441 947 -409V-458Q970 -496 1009 -514Q1048 -533 1099 -533ZM947 -782V2Q914 -12 880 -13Q845 -14 817 -6Q789 2 774 16L760 6Q765 -8 766 -22Q767 -35 767 -49V-662Q767 -707 755 -728Q743 -750 711 -750V-771Q743 -768 773 -768Q823 -768 866 -772Q910 -775 947 -782Z"/></svg><span>Com serifa</span></li>
+      <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M0 -125V-1000H750V-875H875V-625H750V-500H875V-250H750V-125ZM250 -625H625V-875H250ZM250 -250H625V-500H250Z"/></svg><span>Em pixels</span></li>
+      <li class="jeito j7"><svg viewBox="-90 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M85 -159Q58 -159 44 -176Q30 -192 30 -214Q30 -237 44 -254Q58 -270 85 -270Q60 -270 47 -286Q34 -302 34 -322Q34 -343 47 -358Q60 -374 85 -374Q66 -374 54 -388Q43 -403 40 -424Q36 -446 40 -467Q43 -488 54 -502Q66 -517 85 -517Q50 -517 38 -533Q26 -549 38 -565Q50 -581 85 -581Q63 -583 52 -597Q42 -611 43 -628Q44 -646 56 -658Q68 -671 90 -670Q90 -699 107 -714Q124 -729 146 -729Q168 -729 185 -714Q202 -699 202 -670Q202 -690 218 -702Q233 -713 256 -717Q278 -721 300 -717Q323 -713 338 -702Q354 -690 354 -670Q354 -699 368 -714Q382 -728 400 -728Q419 -728 432 -714Q446 -699 446 -669Q449 -695 460 -706Q472 -718 486 -716Q499 -715 508 -701Q517 -687 514 -662Q523 -694 538 -702Q553 -710 562 -696Q570 -681 561 -649Q575 -666 594 -666Q613 -666 628 -654Q643 -641 648 -623Q652 -605 638 -587Q665 -593 682 -582Q698 -570 702 -551Q707 -532 698 -514Q688 -496 661 -490Q684 -482 692 -468Q700 -454 695 -441Q690 -428 675 -422Q660 -416 637 -425Q660 -395 657 -376Q654 -358 635 -359Q616 -360 593 -390Q604 -376 605 -361Q631 -351 650 -329Q669 -307 657 -286Q681 -292 696 -286Q711 -279 714 -266Q718 -253 709 -240Q700 -227 676 -220Q704 -214 716 -198Q727 -182 724 -164Q720 -147 704 -136Q687 -125 658 -131Q678 -112 678 -92Q678 -72 665 -58Q652 -45 632 -44Q612 -44 592 -63Q605 -32 600 -18Q596 -3 582 -10Q568 -16 555 -47Q558 -25 544 -10Q529 5 506 12Q484 19 460 17Q437 15 420 4Q403 -8 400 -30Q400 -3 384 11Q368 25 346 25Q325 25 309 11Q293 -3 293 -30Q293 -7 280 4Q268 16 251 16Q234 16 222 4Q209 -7 209 -30Q209 -11 196 -2Q184 8 165 6Q146 4 128 -13Q109 -30 96 -66Q84 -101 85 -159ZM275 -475Q291 -475 298 -462Q306 -448 308 -432Q310 -416 310 -409Q312 -425 324 -431Q336 -437 349 -432Q362 -428 365 -414Q363 -432 382 -440Q401 -449 416 -442Q414 -453 420 -464Q427 -476 439 -480Q429 -486 424 -500Q418 -513 420 -524Q412 -518 406 -522Q401 -526 403 -537Q391 -522 368 -524Q344 -525 334 -541Q334 -529 325 -520Q316 -512 304 -512Q309 -500 302 -488Q294 -475 275 -475ZM366 -142Q365 -159 380 -166Q394 -172 408 -168Q403 -185 410 -204Q418 -224 433 -234Q417 -241 404 -256Q391 -270 389 -285Q381 -272 363 -269Q345 -266 329 -271Q332 -255 320 -241Q309 -227 291 -229Q306 -220 311 -200Q316 -180 313 -164Q328 -171 347 -166Q366 -160 366 -142Z"/></svg><span>De bolhas</span></li>
+    </ul>
+    <p class="letra-com"><strong>B</strong> de <a href="/sinal/banana/">banana</a>, <a href="/sinal/borboleta/">borboleta</a>, bola e balão.</p>
+    <h3 class="ficha-sub">Sinais que começam com B</h3>
+    <nav class="rel-grid" aria-label="Sinais que começam com a letra B">
+      <a href="/sinal/bahia/" class="rel-card"><img src="/assets/img/sinais/bahia.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Bahia</span></a>
+      <a href="/sinal/banana/" class="rel-card"><img src="/assets/img/sinais/banana.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Banana</span></a>
+      <a href="/sinal/banheiro/" class="rel-card"><img src="/assets/img/sinais/banheiro.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Banheiro</span></a>
+      <a href="/sinal/bebe/" class="rel-card"><img src="/assets/img/sinais/bebe.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Bebê</span></a>
+      <a href="/sinal/boa-tarde/" class="rel-card"><img src="/assets/img/sinais/boa-tarde.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Boa tarde</span></a>
+      <a href="/sinal/borboleta/" class="rel-card"><img src="/assets/img/sinais/borboleta.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Borboleta</span></a>
+    </nav>
   </section>
 
   <section aria-labelledby="def-h">

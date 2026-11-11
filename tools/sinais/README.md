@@ -111,6 +111,40 @@ Para o commit, entram:
 - `tools/sinais/aprovacoes.json`
 - as páginas geradas por `tools/aprender/build.py` (jogos, atividades, alfabeto)
 
+## Elementos divertidos: figurinha e ficha de cada sinal
+
+Cada página de sinal pode ter um elemento que ajuda a lembrar da palavra: a **figurinha** (mascote do time, símbolos do
+estado, a letra desenhada, o bicho, a comida) e, em três categorias, uma **ficha**.
+
+| Categoria | Ficha (gerada pelo `build_pages.py`, sem IA) |
+|---|---|
+| Times de futebol | camisa tradicional em SVG, apelido, mascote, cores, estádio, quem torce e link para o sinal do estado |
+| Estados | o estado destacado no mapa do Brasil, sigla, capital, região, gentílico, times do estado e quatro símbolos do lugar |
+| Alfabeto | a letra de oito jeitos (de forma, cursiva, pontilhada para traçar, com serifa, pixel, bolhas) e os sinais que começam com ela |
+
+Os dados ficam em `elementos.json`; o desenho, em `elementos.py`. Os contornos das letras ficam em `letras.json`
+(gerado uma vez por `letras.py`). Sem escudo oficial de clube: só cores, camisa e mascote.
+
+```bash
+F="uv run --python 3.12 --with numpy --with pillow tools/sinais/figurinhas.py"
+$F gerar --pendentes            # pede ao Codex as figurinhas que faltam (descrição em elementos.json), recorta e compõe
+$F gerar flamengo --refazer     # versão nova de uma figurinha
+$F folha /tmp/figurinhas.jpg    # folha de contato para aprovar de uma vez
+$F compor                       # refaz os cartões (ilustração + figurinha)
+python3 tools/sinais/build_pages.py
+```
+
+- **Figurinha** (`assets/img/sinais/figurinhas/<slug>.webp`): recortada, com transparência. Aparece no cabeçalho da página.
+  Sem figurinha, o cabeçalho de time, estado, letra e cor mostra o desenho da ficha (camisa, mapa, letra, mancha de tinta).
+- **Cartão** (`assets/img/sinais/cartoes/<slug>.webp`): a ilustração do sinal com a figurinha no canto mais vazio. Vai para a
+  página do sinal, os cards do `/sinal/` e o `og:image`. A ilustração limpa continua em `assets/img/sinais/<slug>.webp` e é
+  a que os jogos e as atividades usam (a figurinha entregaria a resposta).
+- **Originais**: ficam em `<WORK>/figurinhas/<slug>/v<k>.png`, fora do repositório, em fundo magenta (ou verde, com
+  `"fundo": "verde"`, quando o desenho precisa de roxo ou rosa).
+- **Aprovação**: confira a folha de contato antes de commitar. Procure texto, número ou escudo que o Codex tenha inventado.
+- **Limite do Codex**: vale o mesmo das ilustrações. Quando parar, rode `gerar --pendentes` de novo mais tarde.
+- Quando a ilustração de um sinal muda, o `publicar.py` apaga o cartão antigo e avisa para rodar o `compor`.
+
 ## Formato
 
 | Item | Valor |

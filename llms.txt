@@ -34,7 +34,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 - [Solucoes](https://libras.se/solucoes/): traducao de video, interpretacao ao vivo, videoaulas acessiveis e pacotes de Libras para empresas, emissoras e plataformas.
 - [Orcamento](https://libras.se/orcamento/): solicitacao de proposta para janela de Libras em filmes, longas, documentarios, series, campanhas e conteudos audiovisuais.
 - [Tecnologia](https://libras.se/tecnologia/): OBS Studio customizado, upload automatico via API, dashboard de revisao e plugin em desenvolvimento para Adobe Premiere e DaVinci Resolve.
-- [Libras.se Estudio](https://libras.se/estudio/): software licenciado para equipes de interpretes (calibracao do chroma key com nota, gravacao Full HD, controle pelo celular, envio automatico, aviso no WhatsApp e painel de producao). Escala com a rede de mais de 50 interpretes da LIBRAS.SE pelo Brasil.
+- [Libras.se Estudio](https://libras.se/estudio/): software e servico para equipes de interpretes, com suporte 24/7 e reuniao mensal (calibracao do chroma key com nota, gravacao Full HD, controle pelo celular, envio automatico, aviso no WhatsApp e painel de producao). Escala com a rede de mais de 50 interpretes da LIBRAS.SE pelo Brasil.
 - [Portfolio](https://libras.se/portfolio/): mais de 340 videos interpretados em Libras para marcas como Itau, Nubank, Salesforce, Natura e Ministerio da Saude.
 - [Proposito](https://libras.se/proposito/): razao de existir, valores e visao da empresa sobre comunicacao em Libras.
 - [Seja TIL](https://libras.se/sejatils/): cadastro de interpretes parceiros, com horario flexivel, software proprio de gravacao e pagamento semanal.

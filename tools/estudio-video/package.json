@@ -1,0 +1,14 @@
+{
+  "name": "libras-se-estudio-video",
+  "private": true,
+  "type": "module",
+  "description": "Vídeo demonstrativo do Libras.se Estúdio (página /estudio/): cena HTML/CSS capturada quadro a quadro com Playwright e codificada em MP4.",
+  "scripts": {
+    "midia": "node midia.mjs",
+    "stills": "node render.mjs --stills",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}

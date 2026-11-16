@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<title>Libras.se Estúdio em 36 segundos (cena)</title>
+<!-- Cena do vídeo demonstrativo da página /estudio/. render.mjs captura quadro a quadro em 1600×900.
+     Prévia em tempo real: sirva a raiz do repositório e abra /tools/estudio-video/cena.html?play
+     As telas do app são recriadas a partir dos prints reais do Libras.se Estúdio (GAMA 1.5.1),
+     com dados fictícios. -->
+<style>
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-300.woff2') format('woff2');font-weight:300}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-500.woff2') format('woff2');font-weight:500}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-900.woff2') format('woff2');font-weight:900}
+@font-face{font-family:'M';src:url('/assets/fonts/museo-sans-rounded-1000.woff2') format('woff2');font-weight:1000}
+:root{
+  --bg:#f0fafa;--ink:#0e3538;--txs:#3d6063;--txm:#7aacad;
+  --logo:linear-gradient(125deg,#0b8088,#159aa3 45%,#2bb8bd);
+  --gb:linear-gradient(130deg,#1aa8b0 0%,#4fd1c5 50%,#81e6d9 100%);
+  --app:#121617;--app2:#181e1f;--app3:#1f2728;--line:rgba(255,255,255,.08);
+  --at:#e9f2f1;--am:#8fa5a6;--teal:#12927f;--teal2:#2ee0b4;--amber:#f2b21b;--rec:#e5484d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1600px;height:900px;overflow:hidden}
+body{font-family:'M',sans-serif;background:var(--bg);color:var(--ink);position:relative;-webkit-font-smoothing:antialiased}
+.abs{position:absolute}
+/* fundo da marca */
+.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+.g1{width:720px;height:520px;left:-160px;top:-180px;background:#bff1ec}
+.g2{width:760px;height:560px;right:-200px;bottom:-240px;background:#c9f3ee}
+.g3{width:420px;height:420px;left:620px;top:300px;background:#e0f8f5;opacity:.7}
+
+/* ---------- abertura e encerramento ---------- */
+.center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.logo{font-weight:1000;font-size:92px;letter-spacing:-.025em;line-height:1;background:var(--logo);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:baseline;gap:18px}
+.logo em{font-style:normal;font-weight:300;font-size:64px;letter-spacing:-.01em;background:none;-webkit-text-fill-color:#159aa3;color:#159aa3}
+.h{font-size:46px;font-weight:700;line-height:1.16;letter-spacing:-.02em;color:var(--ink);margin-top:34px}
+.h .gt{background:var(--logo);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.chips{display:flex;gap:12px;margin-top:38px}
+.chip{display:flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;background:rgba(255,255,255,.8);border:1px solid rgba(79,209,197,.28);box-shadow:0 8px 28px rgba(10,34,37,.07);font-size:19px;font-weight:700;color:var(--ink)}
+.chip i{width:22px;height:22px;border-radius:50%;background:var(--logo);display:grid;place-items:center}
+.chip i::after{content:'';width:9px;height:5px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:translateY(-1px) rotate(-45deg)}
+.url{margin-top:40px;font-size:24px;font-weight:700;color:#159aa3;letter-spacing:.01em}
+
+/* ---------- legenda dos passos ---------- */
+.cap{position:absolute;left:0;right:0;bottom:30px;display:flex;justify-content:center}
+.cap p{display:flex;align-items:center;gap:14px;padding:12px 26px 12px 12px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid rgba(79,209,197,.25);box-shadow:0 10px 34px rgba(10,34,37,.1);font-size:24px;font-weight:700;color:var(--ink)}
+.cap b{width:40px;height:40px;border-radius:50%;background:var(--logo);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:900}
+
+/* ---------- janela do app ---------- */
+#win{left:160px;top:44px;width:1280px;height:740px}
+.window{position:absolute;inset:0;border-radius:22px;background:var(--app);box-shadow:0 40px 110px rgba(10,34,37,.28),0 0 0 1px rgba(10,34,37,.12);overflow:hidden;color:var(--at)}
+.tbar{height:40px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#0d1112;border-bottom:1px solid var(--line);position:relative}
+.tbar i{width:12px;height:12px;border-radius:50%;display:block}
+.tbar span{position:absolute;left:0;right:0;text-align:center;font-size:14px;color:var(--am);font-weight:500}
+.scr{position:absolute;left:0;right:0;top:40px;bottom:0}
+
+/* calibração */
+.steps{position:absolute;left:28px;right:28px;top:16px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.steps div{font-size:14px;font-weight:500;color:#5fbfb3}
+.steps div u{display:block;height:5px;border-radius:5px;background:#283233;margin-top:9px;overflow:hidden;text-decoration:none}
+.steps div u s{display:block;height:100%;width:100%;background:#15a08b;transform-origin:left}
+.steps .now{color:var(--amber)}
+.steps .now u s{background:var(--amber)}
+.steps .off{color:#6f8586}
+.pv{position:absolute;left:28px;top:82px;width:736px;height:478px;border-radius:24px;background:#0b0f10;border:1px solid var(--line);overflow:hidden}
+.pv-top{position:absolute;left:0;right:0;top:0;height:56px;display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:0 18px;z-index:3}
+.pv-top em{position:absolute;left:20px;top:22px;width:11px;height:11px;border-radius:50%;background:var(--teal2);box-shadow:0 0 12px var(--teal2)}
+.tg{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.14em;padding:7px 12px;border-radius:9px;border:1px solid rgba(255,255,255,.14);color:#c5d3d3;background:rgba(10,14,15,.6)}
+.tg.on{border-color:#2ee0b4;color:#2ee0b4;background:rgba(46,224,180,.1)}
+.vw{position:absolute;left:0;right:0;top:56px;bottom:0;overflow:hidden}
+.vw img{position:absolute;left:-29px;top:-12px;width:794px;height:447px;object-fit:cover}
+.checker{position:absolute;inset:0;background-color:#1a2a2b;background-image:linear-gradient(45deg,#223738 25%,transparent 25%,transparent 75%,#223738 75%),linear-gradient(45deg,#223738 25%,transparent 25%,transparent 75%,#223738 75%);background-size:28px 28px;background-position:0 0,14px 14px}
+.scan{position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#2ee0b4,transparent);box-shadow:0 0 18px #2ee0b4;top:0}
+.scanlbl{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:14px;font-weight:700;letter-spacing:.08em;color:#2ee0b4;background:rgba(10,14,15,.78);padding:8px 16px;border-radius:99px;border:1px solid rgba(46,224,180,.35)}
+.side{position:absolute;left:800px;top:82px;width:452px}
+.k{font-size:13px;font-weight:700;letter-spacing:.2em;color:#3fb7a4}
+.side h3{font-size:34px;font-weight:700;letter-spacing:-.01em;margin-top:8px;color:#fff}
+.side p.d{font-size:16px;line-height:1.55;color:#a9bcbc;margin-top:10px;font-weight:300}
+.card{margin-top:18px;border-radius:18px;background:var(--app2);border:1px solid var(--line);padding:18px}
+.card h4{font-size:16px;font-weight:700;color:#fff}
+.card p{font-size:13.5px;color:#93a8a9;margin-top:4px;line-height:1.45}
+.btn{margin-top:14px;height:50px;border-radius:12px;background:var(--teal);display:grid;place-items:center;font-size:17px;font-weight:700;color:#fff;position:relative}
+.btn span{position:absolute;inset:0;display:grid;place-items:center}
+.meter{margin-top:14px;border-radius:14px;background:#0e1314;border:1px solid var(--line);padding:16px}
+.meter .row{display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:700;color:#fff}
+.meter .row b{font-family:ui-monospace,Menlo,monospace;font-weight:500;color:#c9d6d6;font-size:16px}
+.bar{height:8px;border-radius:8px;background:#253031;margin-top:12px;overflow:hidden}
+.bar s{display:block;height:100%;width:100%;background:linear-gradient(90deg,#12927f,#2ee0b4);transform-origin:left;transform:scaleX(0)}
+.tons{display:flex;gap:8px;margin-top:14px;align-items:center}
+.tons small{font-size:11px;letter-spacing:.14em;color:#7d9495;font-weight:700;margin-right:6px}
+.tons i{width:54px;height:24px;border-radius:7px;display:block}
+.ready{position:absolute;left:800px;top:82px;width:452px;height:478px;border-radius:20px;background:linear-gradient(160deg,#16302c,#121a1a);border:1px solid rgba(46,224,180,.25);display:flex;flex-direction:column;justify-content:center;padding:36px}
+.ok{width:74px;height:74px;border-radius:20px;background:#13c08a;display:grid;place-items:center;box-shadow:0 0 40px rgba(19,192,138,.45)}
+.ok::after{content:'';width:28px;height:14px;border-left:5px solid #fff;border-bottom:5px solid #fff;transform:translateY(-3px) rotate(-45deg)}
+.ready h3{font-size:36px;color:#fff;margin-top:24px;font-weight:700}
+.ready ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.ready li{font-size:16px;color:#b8c9c9;display:flex;gap:10px}
+.ready li b{color:#fff;font-weight:700;margin-left:auto}
+.foot{position:absolute;left:0;right:0;bottom:0;height:78px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:#101415}
+.foot span{font-size:15px;color:#8aa0a1}
+.foot b{height:46px;padding:0 24px;border-radius:12px;background:var(--teal);display:grid;place-items:center;font-size:16px;color:#fff;font-weight:700}
+
+/* estúdio de gravação */
+.stage{position:absolute;left:24px;top:84px;width:828px;height:466px;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.stage .aula{position:absolute;inset:0;width:100%;height:100%}
+.stage .tl{position:absolute;left:556px;top:178px;width:278px;height:288px;overflow:hidden}
+.stage .tl img{position:absolute;left:-118px;top:0;width:514px;height:289px}
+.rhead{position:absolute;left:24px;top:20px;right:448px;display:flex;align-items:center;gap:14px}
+.rhead h3{font-size:24px;color:#fff;font-weight:700}
+.rhead small{font-size:15px;color:#8fa5a6}
+.recchip{margin-left:auto;display:flex;align-items:center;gap:9px;padding:8px 14px;border-radius:99px;background:rgba(229,72,77,.14);border:1px solid rgba(229,72,77,.5);font-size:15px;font-weight:700;color:#ff8a8d;font-family:ui-monospace,Menlo,monospace}
+.recchip i{width:11px;height:11px;border-radius:50%;background:var(--rec);display:block;box-shadow:0 0 10px var(--rec)}
+.specs{position:absolute;left:24px;top:566px;display:flex;gap:10px}
+.specs span{font-size:13.5px;font-weight:700;color:#a9bcbc;padding:8px 13px;border-radius:9px;background:var(--app2);border:1px solid var(--line)}
+.toast{position:absolute;left:24px;top:612px;width:828px;border-radius:14px;background:var(--app2);border:1px solid var(--line);padding:14px 18px}
+.toast .row{display:flex;align-items:center;gap:12px;font-size:15px;color:#dfe9e9;font-weight:700}
+.toast .row small{font-weight:500;color:#8fa5a6;font-size:14px}
+.toast .row b{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-weight:500;color:#2ee0b4}
+.toast .bar{margin-top:10px;height:6px}
+.sidebar{position:absolute;right:0;top:0;bottom:0;width:404px;background:#0f1314;border-left:1px solid var(--line)}
+.brand{padding:18px 22px 14px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:8px}
+.brand b{font-weight:1000;font-size:26px;letter-spacing:-.02em;background:linear-gradient(125deg,#3fb7a4,#69d3c4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand span{font-size:22px;color:#3fb7a4;font-weight:300}
+.tree{padding:14px 22px;font-size:14.5px;color:#c4d2d2;display:grid;gap:9px;border-bottom:1px solid var(--line)}
+.tree div:nth-child(2){padding-left:18px}.tree div:nth-child(3){padding-left:36px}
+.tree .tsel{display:inline-block;background:#12382f;color:#7ee6cf;padding:4px 10px;border-radius:7px}
+.list{padding:14px 16px;display:grid;gap:9px}
+.list h5{font-size:14px;color:#c9d6d6;font-weight:700;padding:2px 6px 4px}
+.it{height:58px;border-radius:13px;border:1px solid var(--line);background:#141a1b;display:flex;align-items:center;gap:12px;padding:0 14px;position:relative}
+.it .ic{width:26px;height:18px;border:2px solid #23a58f;border-radius:4px;position:relative;flex:none}
+.it .ic::after{content:'';position:absolute;right:-8px;top:2px;border-left:7px solid #23a58f;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.it p{font-size:15px;color:#fff;font-weight:700;line-height:1.2}
+.it p small{display:block;font-size:12px;color:#7f9596;font-weight:500}
+.it .st{margin-left:auto;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.st.apr{background:rgba(46,224,180,.1);color:#5fe3c0;border:1px solid rgba(46,224,180,.3)}
+.st.dot{width:14px;height:14px;padding:0;border-radius:50%;background:#16c47f;box-shadow:0 0 0 4px rgba(22,196,127,.15)}
+.it.cur{border-color:#2ee0b4;background:#132423}
+.st.rec{background:rgba(229,72,77,.14);color:#ff8a8d;border:1px solid rgba(229,72,77,.45)}
+.st.env{background:rgba(242,178,27,.12);color:#f6c757;border:1px solid rgba(242,178,27,.4)}
+.st.rvw{background:rgba(120,160,255,.12);color:#a9c1ff;border:1px solid rgba(120,160,255,.35)}
+.sbot{position:absolute;left:16px;right:16px;bottom:16px;display:grid;gap:10px}
+.sbot .pronto{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#dfe9e9;padding:7px 12px;border-radius:99px;border:1px solid var(--line);width:max-content}
+.sbot .pronto i{width:9px;height:9px;border-radius:50%;background:#16c47f;display:block}
+.gravar{height:54px;border-radius:13px;background:#1a2122;border:1px solid var(--line);display:grid;place-items:center;font-size:17px;font-weight:700;letter-spacing:.08em;color:#e7efef;position:relative;overflow:hidden}
+.gravar span{position:absolute;inset:0;display:grid;place-items:center}
+.gravar .on{background:var(--rec);color:#fff}
+
+/* celular */
+#phone{left:1318px;top:150px;width:250px;height:520px}
+.ph{position:absolute;inset:0;border-radius:42px;background:#0b1011;border:9px solid #1c2b2d;box-shadow:0 40px 90px rgba(10,34,37,.35);overflow:hidden;color:#fff}
+.ph .notch{width:74px;height:20px;border-radius:12px;background:#000;margin:10px auto 0}
+.ph .in{padding:16px 16px 0}
+.ph .k2{font-size:10.5px;font-weight:700;letter-spacing:.16em;color:#5fd0cb}
+.conn{display:inline-flex;align-items:center;gap:7px;margin-top:10px;background:#10302f;color:#7ee0d6;padding:5px 11px;border-radius:99px;font-size:12px;font-weight:700}
+.conn i{width:7px;height:7px;border-radius:50%;background:#2ee0b4;display:block}
+.sel{margin-top:14px;border-radius:16px;border:1px solid #1d2a2b;background:#12191a;padding:13px}
+.sel small{font-size:10px;letter-spacing:.14em;color:#7a9799;font-weight:700}
+.sel p{font-size:16px;font-weight:700;margin-top:4px}
+.sel span{font-size:11.5px;color:#8fa9aa}
+.big{margin-top:14px;height:64px;border-radius:18px;position:relative}
+.big span{position:absolute;inset:0;border-radius:18px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:19px;font-weight:700}
+.big .g{background:var(--rec)}
+.big .g i{width:12px;height:12px;border-radius:50%;background:#fff;display:block}
+.big .f{background:#262f30;border:2px solid var(--rec);color:#ff9c9e}
+.big .f i{width:12px;height:12px;border-radius:3px;background:#ff6b6f;display:block}
+.big .d{background:#12382f;color:#7ee6cf}
+.tmr{margin-top:12px;text-align:center;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#ff8a8d;height:18px;position:relative}
+.tmr span{position:absolute;left:0;right:0}
+.tabs{margin-top:10px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center;font-size:11px;font-weight:700;color:#c9dcdc}
+.tabs span{padding:8px 0;border-radius:10px;background:#141c1d;border:1px solid #1d2a2b}
+.wa{position:absolute;left:8px;right:8px;top:30px;border-radius:18px;background:#fff;color:#0e3538;padding:12px 13px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.wa small{display:flex;align-items:center;gap:7px;font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#1fa855}
+.wa small i{width:16px;height:16px;border-radius:50%;background:#25d366;display:block}
+.wa p{font-size:13px;line-height:1.38;margin-top:6px}
+
+/* painel da coordenação (claro) */
+#painel{left:160px;top:44px;width:1280px;height:740px}
+.pw{position:absolute;inset:0;border-radius:22px;background:rgba(255,255,255,.9);box-shadow:0 40px 110px rgba(10,34,37,.18),0 0 0 1px rgba(10,34,37,.06);overflow:hidden}
+.pw .tbar{background:#f6fbfb;border-bottom:1px solid rgba(10,34,37,.07)}
+.pw .tbar span{color:#5f7f81}
+.ptop{position:absolute;left:36px;right:36px;top:64px;display:flex;align-items:center;gap:16px}
+.ptop .lg{font-weight:1000;font-size:26px;letter-spacing:-.02em;background:var(--logo);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ptop .tabs2{display:flex;gap:4px;padding:4px;border-radius:99px;border:1px solid rgba(10,34,37,.08);background:#fff;margin-left:14px}
+.ptop .tabs2 span{font-size:14px;font-weight:700;color:#3d6063;padding:7px 15px;border-radius:99px}
+.ptop .tabs2 span.on{background:#159aa3;color:#fff}
+.ptop small{margin-left:auto;font-size:14px;color:#5f7f81}
+.kpis{position:absolute;left:36px;right:36px;top:124px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kpi{border-radius:18px;background:#fff;border:1px solid rgba(10,34,37,.07);box-shadow:0 8px 26px rgba(10,34,37,.05);padding:18px 20px}
+.kpi b{display:block;font-size:40px;font-weight:900;letter-spacing:-.02em;line-height:1;position:relative;height:40px}
+.kpi b span{position:absolute;left:0;top:0}
+.kpi p{font-size:15px;font-weight:700;color:var(--ink);margin-top:10px}
+.kpi small{font-size:12.5px;color:#7a9a9c}
+.prog{position:absolute;left:36px;right:36px;top:262px;display:flex;align-items:center;gap:16px;font-size:14px;color:#3d6063;font-weight:700}
+.prog .pb{flex:1;height:10px;border-radius:10px;background:#e2f1f0;overflow:hidden}
+.prog .pb s{display:block;height:100%;background:linear-gradient(90deg,#159aa3,#4fd1c5);width:100%;transform-origin:left}
+.prog em{font-style:normal;position:relative;width:250px;height:18px;text-align:right}
+.prog em span{position:absolute;right:0}
+.rev{position:absolute;left:36px;top:300px;width:760px;height:410px;border-radius:22px;background:#fff;border:1px solid rgba(10,34,37,.08);box-shadow:0 14px 40px rgba(10,34,37,.07);padding:22px}
+.rev .thumb{position:absolute;left:22px;top:22px;width:420px;height:236px;border-radius:14px;overflow:hidden;background:#000}
+.rev .thumb img{position:absolute}
+.rev .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(14,53,56,.75);display:grid;place-items:center}
+.rev .play::after{content:'';border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.rev .meta{position:absolute;left:462px;top:22px;right:22px}
+.rev .meta h4{font-size:24px;font-weight:700;color:var(--ink)}
+.rev .meta p{font-size:14px;color:#5f7f81;margin-top:4px;line-height:1.45}
+.stchip{display:inline-block;margin-top:12px;position:relative;height:30px;width:150px}
+.stchip span{position:absolute;left:0;top:0;font-size:13.5px;font-weight:700;padding:6px 12px;border-radius:99px;white-space:nowrap}
+.stchip .a{background:#eaf0ff;color:#4a63c4}
+.stchip .b{background:#dcf6ea;color:#16834f}
+.ring{position:absolute;left:462px;top:150px;width:110px;height:110px}
+.ring svg{position:absolute;inset:0}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;font-weight:900;color:var(--ink)}
+.ring small{position:absolute;left:124px;top:22px;width:160px;font-size:15px;font-weight:700;color:var(--ink);line-height:1.3}
+.ring small em{display:block;font-style:normal;font-weight:500;font-size:13px;color:#16834f}
+.checks{position:absolute;left:22px;top:276px;width:420px;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.checks span{font-size:13.5px;color:#3d6063;font-weight:700;display:flex;align-items:center;gap:8px}
+.checks span i{width:18px;height:18px;border-radius:50%;background:#dcf6ea;display:grid;place-items:center;flex:none}
+.checks span i::after{content:'';width:7px;height:4px;border-left:2px solid #16834f;border-bottom:2px solid #16834f;transform:translateY(-1px) rotate(-45deg)}
+.acts{position:absolute;left:462px;right:22px;bottom:22px;display:flex;gap:10px}
+.acts span{flex:1;height:52px;border-radius:14px;display:grid;place-items:center;font-size:16px;font-weight:700}
+.acts .dv{border:1.5px solid rgba(10,34,37,.14);color:#3d6063}
+.acts .ap{background:linear-gradient(135deg,#0e3538,#2a6069);color:#fff;box-shadow:0 8px 22px rgba(10,34,37,.25)}
+.cursor{position:absolute;width:26px;height:26px;left:0;top:0}
+.cursor::before{content:'';position:absolute;left:0;top:0;border-left:13px solid #0e3538;border-top:7px solid transparent;border-bottom:7px solid transparent;transform:rotate(-30deg) translate(2px,-1px);filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.queue{position:absolute;left:816px;top:300px;width:428px;height:410px;border-radius:22px;background:#fff;border:1px solid rgba(10,34,37,.08);box-shadow:0 14px 40px rgba(10,34,37,.07);padding:20px}
+.queue h5{font-size:15px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between}
+.queue h5 small{font-weight:500;color:#7a9a9c}
+.qrow{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid rgba(10,34,37,.06);font-size:14.5px;color:var(--ink);font-weight:700;position:relative}
+.qrow:last-child{border-bottom:none}
+.qrow small{display:block;font-size:12px;color:#7a9a9c;font-weight:500}
+.qrow .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:12px;color:#fff;font-weight:700;flex:none}
+.qrow .s{margin-left:auto;font-size:12px;font-weight:700;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.qrow .n{font-family:ui-monospace,Menlo,monospace;color:#3d6063;font-size:13px;width:28px;text-align:right}
+.s.ok2{background:#dcf6ea;color:#16834f}.s.rv{background:#eaf0ff;color:#4a63c4}.s.gr{background:#fdecec;color:#c23b40}.s.ds{background:#eef3f3;color:#5f7f81}
+.qrow .swap{position:relative;margin-left:auto;width:96px;height:24px}
+.qrow .swap span{position:absolute;right:0;top:0}
+.fict{position:absolute;right:30px;bottom:14px;font-size:11.5px;color:#9ab5b6}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+
+<!-- abertura -->
+<div class="center" id="intro">
+  <div class="logo" id="introLogo">LIBRAS.SE <em>Estúdio</em></div>
+  <p class="h" id="introH">O estúdio de Libras da sua equipe,<br><span class="gt">em qualquer lugar.</span></p>
+</div>
+
+<!-- janela do app -->
+<div class="abs" id="win"><div class="abs" id="winIn" style="inset:0">
+  <div class="window">
+    <div class="tbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i>
+      <span id="tt1">Libras.se Estúdio · Configuração da câmera</span><span id="tt2">Libras.se Estúdio · Gravação</span></div>
+
+    <!-- tela 1: calibração -->
+    <div class="scr" id="calib">
+      <div class="steps">
+        <div>Boas-vindas<u><s></s></u></div>
+        <div>Câmera<u><s></s></u></div>
+        <div id="stRec">Recorte<u><s id="stRecS"></s></u></div>
+        <div id="stCk" class="now">Chroma key<u><s id="stCkS"></s></u></div>
+        <div id="stOk" class="off">Tudo pronto<u><s id="stOkS"></s></u></div>
+      </div>
+      <div class="pv">
+        <div class="pv-top"><em></em>
+          <span class="tg" id="tgP">PROBLEMAS</span>
+          <span class="tg" id="tgM">MÁSCARA</span>
+          <span class="tg" id="tgO">ORIGINAL</span>
+          <span class="tg on">CÂMERA ATIVA</span>
+        </div>
+        <div class="vw">
+          <img id="sqO" alt=""/>
+          <div class="abs" id="vM" style="inset:0"><img id="sqM" alt=""/></div>
+          <div class="abs" id="vR" style="inset:0"><div class="checker"></div><img id="sqR" alt=""/></div>
+          <div class="scan" id="scan"></div>
+          <div class="scanlbl" id="scanLbl">CALIBRANDO O RECORTE…</div>
+        </div>
+      </div>
+      <div class="side" id="side">
+        <p class="k">ETAPA 4 DE 5</p>
+        <h3>Ajuste o chroma key</h3>
+        <p class="d">O Estúdio calibra sozinho: fique na posição de interpretação e observe as mãos na prévia.</p>
+        <div class="card">
+          <h4>Calibrar o recorte</h4>
+          <p>A análise acontece só neste computador. Nenhuma imagem é salva ou enviada.</p>
+          <div class="btn"><span id="b1">Calibrar</span><span id="b2">Calibrando…</span><span id="b3">Calibrar de novo</span></div>
+          <div class="meter">
+            <div class="row"><span id="ql">Qualidade do recorte</span><b id="qn">0/100</b></div>
+            <div class="bar"><s id="qbar"></s></div>
+            <div class="tons" id="tons"><small>TONS REMOVIDOS</small><i style="background:#8fc74f"></i><i style="background:#9fd25e"></i><i style="background:#7db544"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="ready" id="ready">
+        <div class="ok"></div>
+        <h3>Tudo pronto para gravar.</h3>
+        <ul>
+          <li>Câmera<b>Full HD (USB)</b></li>
+          <li>Cor do fundo<b>#9BCF5F</b></li>
+          <li>Recorte<b>Excelente · 92/100</b></li>
+        </ul>
+      </div>
+      <div class="foot"><span>Configurar depois</span><b>Revisar configuração →</b></div>
+    </div>
+
+    <!-- tela 2: gravação -->
+    <div class="scr" id="rec">
+      <div class="rhead"><div><h3>Tema 02 · Bloco 03</h3><small>Gestão de Projetos Ágeis · Scrum na prática</small></div>
+        <span class="recchip" id="recchip"><i id="recdot"></i><span id="rectime">REC 00:00</span></span></div>
+      <div class="stage">
+        <img class="aula" src="/tools/estudio-video/cache/aula.png" alt=""/>
+        <div class="tl"><img id="sqT" alt=""/></div>
+      </div>
+      <div class="specs"><span>Full HD · 1080p · 30 fps</span><span>MP4 · H.264</span><span>Câmera Full HD (USB)</span><span>Recorte Excelente</span></div>
+      <div class="toast" id="toast">
+        <div class="row" id="tr1"><span>Finalizando o vídeo em Full HD…</span></div>
+        <div class="row" id="tr2"><span>Enviando</span><small>Tema 02 · Bloco 03.mp4 · 107,5 MB</small><b id="upn">0%</b></div>
+        <div class="bar"><s id="upbar"></s></div>
+      </div>
+      <div class="sidebar">
+        <div class="brand"><b>LIBRAS.SE</b><span>estúdio</span></div>
+        <div class="tree"><div>▢ Videoaulas 2026</div><div>▤ Gestão de Projetos Ágeis</div><div><span class="tsel">Tema 2 · Scrum na prática</span></div></div>
+        <div class="list">
+          <h5>Sua fila · 6 aulas</h5>
+          <div class="it"><i class="ic"></i><p>Tema 02 · Bloco 01<small>9:12 · reservado</small></p><span class="st apr">✓ Aprovado</span></div>
+          <div class="it"><i class="ic"></i><p>Tema 02 · Bloco 02<small>8:37 · reservado</small></p><span class="st apr">✓ Aprovado</span></div>
+          <div class="it cur"><i class="ic"></i><p>Tema 02 · Bloco 03<small>9:48 · reservado</small></p>
+            <span class="abs" style="right:14px;top:18px;width:120px;height:24px">
+              <span class="st dot abs" id="s3a" style="right:0;top:5px"></span>
+              <span class="st rec abs" id="s3b" style="right:0;top:0">● Gravando</span>
+              <span class="st env abs" id="s3c" style="right:0;top:0">↑ Enviando</span>
+              <span class="st rvw abs" id="s3d" style="right:0;top:0">Em revisão</span>
+            </span></div>
+          <div class="it"><i class="ic"></i><p>Tema 02 · Bloco 04<small>10:05 · reservado</small></p><span class="st dot"></span></div>
+          <div class="it"><i class="ic"></i><p>Tema 02 · Bloco 05<small>7:56 · reservado</small></p><span class="st dot"></span></div>
+        </div>
+        <div class="sbot">
+          <span class="pronto"><i></i>Pronto</span>
+          <div class="gravar"><span id="gv1">● GRAVAR</span><span class="on" id="gv2">■ FINALIZAR</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<!-- celular -->
+<div class="abs" id="phone"><div class="abs" id="phIn" style="inset:0">
+  <div class="ph">
+    <div class="notch"></div>
+    <div class="in">
+      <p class="k2">CONTROLE REMOTO · LIBRAS.SE</p>
+      <span class="conn"><i></i>Conectado</span>
+      <div class="sel"><small>AULA SELECIONADA</small><p>Tema 02 · Bloco 03</p><span>Gestão de Projetos Ágeis</span></div>
+      <div class="big" id="bigBtn">
+        <span class="g" id="pg"><i></i>Gravar</span>
+        <span class="f" id="pf"><i></i>Finalizar</span>
+        <span class="d" id="pd">✓ Finalizado</span>
+      </div>
+      <div class="tmr"><span id="ptm">Gravando 00:00</span><span id="ptm2" style="color:#7ee6cf">Enviando a entrega…</span></div>
+      <div class="tabs"><span>Vídeos</span><span>Downloads</span><span>Envios</span></div>
+    </div>
+    <div class="wa" id="wa"><small><i></i>WHATSAPP · LIBRAS.SE</small><p>Entrega recebida: “Tema 02 · Bloco 03” (biblioteca “Gestão de Projetos Ágeis”).</p></div>
+  </div>
+</div></div>
+
+<!-- painel da coordenação -->
+<div class="abs" id="painel"><div class="pw">
+  <div class="tbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>Painel da coordenação</span></div>
+  <div class="ptop"><span class="lg">LIBRAS.SE</span><div class="tabs2"><span class="on">Produção</span><span>Revisão</span><span>Equipe</span><span>Pendências</span></div><small>Gestão de Projetos Ágeis · Videoaulas 2026</small></div>
+  <div class="kpis">
+    <div class="kpi"><b style="color:#159aa3">24</b><p>Aulas da disciplina</p><small>4 temas · 6 blocos cada</small></div>
+    <div class="kpi"><b style="color:#16834f"><span id="k1a">2</span><span id="k1b">3</span></b><p>Aprovadas</p><small>prontas para publicar</small></div>
+    <div class="kpi"><b style="color:#4a63c4"><span id="k2a">1</span><span id="k2b">0</span></b><p>Em revisão</p><small>nota técnica já calculada</small></div>
+    <div class="kpi"><b style="color:#d9822b">3</b><p>Intérpretes</p><small>gravando esta disciplina</small></div>
+  </div>
+  <div class="prog"><span>Andamento</span><div class="pb"><s id="pbar"></s></div><em><span id="pga">2 de 24 aulas aprovadas</span><span id="pgb">3 de 24 aulas aprovadas</span></em></div>
+  <div class="rev">
+    <div class="thumb"><img src="/tools/estudio-video/cache/aula.png" style="left:0;top:0;width:420px;height:236px" alt=""/>
+      <div class="abs" style="left:282px;top:90px;width:142px;height:146px;overflow:hidden"><img src="/tools/estudio-video/cache/recorte/0170.png" style="left:-60px;top:0;width:262px;height:147px" alt=""/></div>
+      <div class="play"></div></div>
+    <div class="meta"><h4>Tema 02 · Bloco 03</h4><p>Enviado agora pelo Estúdio · 9:48 · 1920×1080</p>
+      <span class="stchip"><span class="a" id="sca">● Em revisão</span><span class="b" id="scb">✓ Aprovada</span></span></div>
+    <div class="ring"><svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="none" stroke="#e2f1f0" stroke-width="10"/><circle id="ringc" cx="55" cy="55" r="46" fill="none" stroke="url(#rg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" transform="rotate(-90 55 55)"/><defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#159aa3"/><stop offset="1" stop-color="#4fd1c5"/></linearGradient></defs></svg><b id="rn">0</b><small>Nota técnica<em id="rl">calculando…</em></small></div>
+    <div class="checks" id="checks"><span><i></i>Full HD 1080p</span><span><i></i>Áudio e vídeo em sincronia</span><span><i></i>Duração confere com a aula</span><span><i></i>Recorte sem sobras</span></div>
+    <div class="acts"><span class="dv">Devolver</span><span class="ap" id="apBtn">Aprovar</span></div>
+    <div class="cursor" id="cursor"></div>
+  </div>
+  <div class="queue">
+    <h5>Tema 2 · Scrum na prática <small>6 aulas</small></h5>
+    <div class="qrow"><span class="av" style="background:#5b8def">AL</span><div>Bloco 01<small>Ana L.</small></div><span class="n">94</span><span class="s ok2">Aprovada</span></div>
+    <div class="qrow"><span class="av" style="background:#5b8def">AL</span><div>Bloco 02<small>Ana L.</small></div><span class="n">91</span><span class="s ok2">Aprovada</span></div>
+    <div class="qrow"><span class="av" style="background:#159aa3">RM</span><div>Bloco 03<small>Rafael M.</small></div><span class="n" id="qn3">—</span><span class="swap"><span class="s rv" id="q3a">Em revisão</span><span class="s ok2" id="q3b">Aprovada</span></span></div>
+    <div class="qrow"><span class="av" style="background:#159aa3">RM</span><div>Bloco 04<small>Rafael M.</small></div><span class="n">—</span><span class="s gr">Em gravação</span></div>
+    <div class="qrow"><span class="av" style="background:#d9822b">CS</span><div>Bloco 05<small>Carla S.</small></div><span class="n">—</span><span class="s ds">Reservada</span></div>
+  </div>
+  <p class="fict">Dados fictícios</p>
+</div></div>
+
+<!-- encerramento -->
+<div class="center" id="end">
+  <div class="logo" id="endLogo">LIBRAS.SE <em>Estúdio</em></div>
+  <p class="h" id="endH">Padrão de estúdio para<br><span class="gt">toda a sua equipe de intérpretes.</span></p>
+  <div class="chips" id="endChips">
+    <span class="chip"><i></i>Calibração com nota</span>
+    <span class="chip"><i></i>Controle pelo celular</span>
+    <span class="chip"><i></i>Envio automático</span>
+    <span class="chip"><i></i>Revisão e aprovação</span>
+  </div>
+  <p class="url" id="endUrl">libras.se/estudio</p>
+</div>
+
+<!-- legendas dos passos -->
+<div class="cap" id="c1"><p><b>1</b>Calibra a câmera sozinho e dá nota ao recorte</p></div>
+<div class="cap" id="c2"><p><b>2</b>Grava a aula com o controle no celular</p></div>
+<div class="cap" id="c3"><p><b>3</b>Finaliza em Full HD, envia e avisa no WhatsApp</p></div>
+<div class="cap" id="c4"><p><b>4</b>A coordenação confere a nota técnica e aprova</p></div>
+
+<script type="module">
+import { trilha, janela, aCada, sequencia, prog, easeOut, easeInOut, Stage } from "./stage.js";
+
+const $ = (s) => document.querySelector(s);
+const vis = (el, on) => { el.style.opacity = on ? 1 : 0; };
+const mmss = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+await Stage.iniciar(async () => {
+	// ---------- abertura 0 → 3,3 ----------
+	trilha("#introLogo", [[0.15, { opacity: 0, transform: "translateY(24px) scale(.96)" }, "out"], [1.0, { opacity: 1, transform: "none" }], [2.7, { opacity: 1, transform: "none" }, "in"], [3.2, { opacity: 0, transform: "translateY(-30px) scale(1.04)" }]]);
+	trilha("#introH", [[0.5, { opacity: 0, transform: "translateY(26px)" }, "out"], [1.3, { opacity: 1, transform: "none" }], [2.8, { opacity: 1, transform: "none" }, "in"], [3.25, { opacity: 0, transform: "translateY(-24px)" }]]);
+
+	// ---------- janela do app ----------
+	trilha("#win", [
+		[2.9, { opacity: 0, transform: "translateY(60px) scale(.94)" }, "out"],
+		[3.8, { opacity: 1, transform: "none" }],
+		[11.6, { opacity: 1, transform: "none" }, "inOut"],
+		[12.5, { opacity: 1, transform: "translateX(-110px)" }],
+		[24.8, { opacity: 1, transform: "translateX(-110px)" }, "in"],
+		[25.6, { opacity: 0, transform: "translateX(-260px) scale(.92)" }],
+	]);
+	trilha("#tt1", [[11.6, { opacity: 1 }], [12.0, { opacity: 0 }]]);
+	trilha("#tt2", [[11.6, { opacity: 0 }], [12.0, { opacity: 1 }]]);
+	trilha("#calib", [[11.5, { opacity: 1, transform: "none" }, "in"], [12.1, { opacity: 0, transform: "translateX(-40px)" }]]);
+	trilha("#rec", [[11.7, { opacity: 0, transform: "translateX(40px)" }, "out"], [12.4, { opacity: 1, transform: "none" }]]);
+
+	// passos do assistente
+	trilha("#stRecS", [[3.8, { transform: "scaleX(.35)" }, "out"], [4.6, { transform: "scaleX(1)" }]]);
+	trilha("#stCkS", [[4.6, { transform: "scaleX(0)" }, "linear"], [9.0, { transform: "scaleX(1)" }]]);
+	trilha("#stOkS", [[9.6, { transform: "scaleX(0)" }, "out"], [10.4, { transform: "scaleX(1)" }]]);
+
+	// prévia: original → máscara → recorte (cortina da esquerda para a direita)
+	await sequencia("#sqO", "original", { em: 3.0 });
+	await sequencia("#sqM", "mascara", { em: 3.0 });
+	await sequencia("#sqR", "recorte", { em: 3.0 });
+	await sequencia("#sqT", "recorte", { em: 12.0 });
+	trilha("#vM", [[6.0, { clipPath: "inset(0 100% 0 0)" }, "inOut"], [6.6, { clipPath: "inset(0 0% 0 0)" }]]);
+	trilha("#vR", [[8.0, { clipPath: "inset(0 100% 0 0)" }, "inOut"], [8.6, { clipPath: "inset(0 0% 0 0)" }]]);
+	trilha("#scan", [[4.5, { opacity: 0, top: "0px" }, "linear"], [4.7, { opacity: 1, top: "30px" }, "linear"], [5.7, { opacity: 1, top: "380px" }, "linear"], [5.9, { opacity: 0, top: "410px" }]]);
+	janela("#scanLbl", { ini: 4.5, fim: 5.8, de: { opacity: 0 }, para: { opacity: 1 }, dIn: 0.3, dOut: 0.3 });
+
+	// painel lateral → "tudo pronto"
+	trilha("#side", [[9.9, { opacity: 1, transform: "none" }, "in"], [10.3, { opacity: 0, transform: "translateY(-16px)" }]]);
+	trilha("#ready", [[10.2, { opacity: 0, transform: "scale(.92)" }, "back"], [10.8, { opacity: 1, transform: "none" }]]);
+	trilha("#qbar", [[6.0, { transform: "scaleX(0)" }, "out"], [8.6, { transform: "scaleX(.92)" }]]);
+	trilha("#tons", [[7.0, { opacity: 0 }, "out"], [7.5, { opacity: 1 }]]);
+
+	// ---------- gravação ----------
+	trilha("#phone", [
+		[12.1, { opacity: 0, transform: "translateX(140px) rotate(6deg)" }, "out"],
+		[12.9, { opacity: 1, transform: "none" }],
+		[25.0, { opacity: 1, transform: "none" }, "in"],
+		[25.6, { opacity: 0, transform: "translateX(160px) rotate(6deg)" }],
+	]);
+	// toque no botão do celular: gravar em 13,4 e finalizar em 19,4
+	trilha("#bigBtn", [[13.2, { transform: "none" }, "out"], [13.35, { transform: "scale(.92)" }, "back"], [13.6, { transform: "none" }], [19.2, { transform: "none" }, "out"], [19.35, { transform: "scale(.92)" }, "back"], [19.6, { transform: "none" }]]);
+	janela("#wa", { ini: 22.9, fim: 26, de: { opacity: 0, transform: "translateY(-30px)" }, para: { opacity: 1, transform: "none" }, dIn: 0.5 });
+	janela("#toast", { ini: 19.5, fim: 24.4, de: { opacity: 0, transform: "translateY(16px)" }, para: { opacity: 1, transform: "none" }, dIn: 0.4, dOut: 0.4 });
+	trilha("#upbar", [[19.5, { transform: "scaleX(0)" }, "linear"], [20.3, { transform: "scaleX(0)" }, "suave"], [22.7, { transform: "scaleX(1)" }]]);
+
+	// ---------- painel da coordenação ----------
+	trilha("#painel", [
+		[25.1, { opacity: 0, transform: "translateX(240px) scale(.94)" }, "out"],
+		[26.0, { opacity: 1, transform: "none" }],
+		[31.2, { opacity: 1, transform: "none" }, "in"],
+		[31.8, { opacity: 0, transform: "translateY(-40px) scale(.96)" }],
+	]);
+	trilha("#ringc", [[26.0, { strokeDashoffset: 289 }, "out"], [27.6, { strokeDashoffset: 289 * (1 - 0.96) }]]);
+	[...document.querySelectorAll("#checks span")].forEach((el, i) =>
+		trilha(el, [[26.4 + i * 0.25, { opacity: 0, transform: "translateY(8px)" }, "out"], [26.9 + i * 0.25, { opacity: 1, transform: "none" }]]));
+	trilha("#cursor", [[27.6, { opacity: 0, transform: "translate(560px,420px)" }, "out"], [27.9, { opacity: 1, transform: "translate(560px,420px)" }, "inOut"], [28.6, { opacity: 1, transform: "translate(706px,368px)" }], [30.6, { opacity: 1, transform: "translate(706px,368px)" }], [31.0, { opacity: 0, transform: "translate(706px,368px)" }]]);
+	trilha("#apBtn", [[28.6, { transform: "none" }, "out"], [28.75, { transform: "scale(.94)" }, "back"], [29.0, { transform: "none" }]]);
+	trilha("#pbar", [[26.0, { transform: "scaleX(.0833)" }, "out"], [29.0, { transform: "scaleX(.0833)" }, "out"], [29.8, { transform: "scaleX(.125)" }]]);
+
+	// ---------- encerramento ----------
+	trilha("#endLogo", [[31.7, { opacity: 0, transform: "translateY(24px) scale(.96)" }, "out"], [32.5, { opacity: 1, transform: "none" }], [35.4, { opacity: 1, transform: "none" }, "in"], [35.9, { opacity: 0, transform: "none" }]]);
+	trilha("#endH", [[32.0, { opacity: 0, transform: "translateY(22px)" }, "out"], [32.8, { opacity: 1, transform: "none" }], [35.4, { opacity: 1, transform: "none" }, "in"], [35.9, { opacity: 0, transform: "none" }]]);
+	[...document.querySelectorAll("#endChips .chip")].forEach((el, i) =>
+		trilha(el, [[32.6 + i * 0.15, { opacity: 0, transform: "translateY(16px) scale(.94)" }, "back"], [33.2 + i * 0.15, { opacity: 1, transform: "none" }], [35.4, { opacity: 1, transform: "none" }, "in"], [35.9, { opacity: 0, transform: "none" }]]));
+	trilha("#endUrl", [[33.4, { opacity: 0 }, "out"], [34.0, { opacity: 1 }], [35.4, { opacity: 1 }, "in"], [35.9, { opacity: 0 }]]);
+
+	// legendas
+	janela("#c1", { ini: 3.8, fim: 11.2, de: { opacity: 0, transform: "translateY(20px)" }, para: { opacity: 1, transform: "none" } });
+	janela("#c2", { ini: 12.3, fim: 19.0, de: { opacity: 0, transform: "translateY(20px)" }, para: { opacity: 1, transform: "none" } });
+	janela("#c3", { ini: 19.5, fim: 25.0, de: { opacity: 0, transform: "translateY(20px)" }, para: { opacity: 1, transform: "none" } });
+	janela("#c4", { ini: 26.0, fim: 31.0, de: { opacity: 0, transform: "translateY(20px)" }, para: { opacity: 1, transform: "none" } });
+
+	// ---------- o que é calculado a cada quadro ----------
+	aCada((t) => {
+		// visibilidade bruta de cada bloco (fora da sua janela não pinta)
+		$("#intro").style.visibility = t < 3.4 ? "visible" : "hidden";
+		$("#end").style.visibility = t > 31.5 ? "visible" : "hidden";
+		$("#win").style.visibility = t > 2.8 && t < 25.8 ? "visible" : "hidden";
+		$("#painel").style.visibility = t > 25 && t < 32 ? "visible" : "hidden";
+
+		// assistente: rótulo do passo atual e botões da prévia
+		const pronto = t >= 9.6;
+		$("#stCk").className = pronto ? "" : "now";
+		$("#stOk").className = pronto ? "now" : "off";
+		$("#tgO").classList.toggle("on", t < 6.0);
+		$("#tgM").classList.toggle("on", t >= 6.0 && t < 8.0);
+		$("#tgP").classList.toggle("on", false);
+		vis($("#b1"), t < 4.5); vis($("#b2"), t >= 4.5 && t < 6.0); vis($("#b3"), t >= 6.0);
+		const q = Math.round(92 * easeOut(prog(t, 6.0, 8.6)));
+		$("#qn").textContent = `${q}/100`;
+		$("#ql").textContent = t < 6 ? "Qualidade do recorte" : q < 60 ? "Qualidade do recorte: analisando" : q < 85 ? "Qualidade do recorte: Boa" : "Qualidade do recorte: Excelente";
+
+		// gravação
+		const gravando = t >= 13.4 && t < 19.4;
+		const seg = gravando ? (t - 13.4) * 1.0 : t >= 19.4 ? 6 : 0;
+		const shown = Math.floor(seg * 7); // o relógio corre 7× (a aula tem 9:48; o vídeo mostra só um trecho)
+		$("#rectime").textContent = `REC ${mmss(shown)}`;
+		vis($("#recchip"), t >= 13.4 && t < 19.4);
+		vis($("#recdot"), Math.floor(t * 2) % 2 === 0);
+		vis($("#gv1"), !gravando); vis($("#gv2"), gravando);
+		vis($("#pg"), t < 13.4); vis($("#pf"), gravando); vis($("#pd"), t >= 19.4);
+		$("#ptm").textContent = `Gravando ${mmss(shown)}`;
+		vis($("#ptm"), gravando); vis($("#ptm2"), t >= 19.4 && t < 22.8);
+		vis($("#s3a"), t < 13.4); vis($("#s3b"), gravando); vis($("#s3c"), t >= 19.4 && t < 22.8); vis($("#s3d"), t >= 22.8);
+		vis($("#tr1"), t < 20.3); $("#tr1").style.display = t < 20.3 ? "flex" : "none";
+		$("#tr2").style.display = t >= 20.3 ? "flex" : "none";
+		const up = Math.round(100 * easeInOut(prog(t, 20.3, 22.7)));
+		$("#upn").textContent = t >= 22.7 ? "✓ Enviado" : `${up}%`;
+
+		// painel
+		const n = Math.round(96 * easeOut(prog(t, 26.0, 27.6)));
+		$("#rn").textContent = String(n);
+		$("#rl").textContent = t < 27.6 ? "calculando…" : "Excelente · 96 de 100";
+		const aprovada = t >= 28.8;
+		vis($("#sca"), !aprovada); vis($("#scb"), aprovada);
+		vis($("#k1a"), !aprovada); vis($("#k1b"), aprovada);
+		vis($("#k2a"), !aprovada); vis($("#k2b"), aprovada);
+		vis($("#pga"), !aprovada); vis($("#pgb"), aprovada);
+		vis($("#q3a"), !aprovada); vis($("#q3b"), aprovada);
+		$("#qn3").textContent = t >= 27.6 ? "96" : "—";
+	});
+});
+</script>
+</body>
+</html>

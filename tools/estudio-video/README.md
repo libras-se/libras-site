@@ -11,7 +11,7 @@ Vídeo de 36 s, sem som, que mostra o Estúdio de ponta a ponta:
 | 25 a 31,5 s | 4 · Aprova | painel da coordenação: nota técnica 96, clique em Aprovar, contadores sobem |
 | 31,5 a 36 s | Encerramento | os quatro diferenciais e libras.se/estudio |
 
-As telas do app são recriadas em HTML a partir dos prints reais do Estúdio (GAMA 1.5.1), com dados
+As telas do app são recriadas em HTML a partir dos prints reais do Estúdio (versão 1.5.1), com dados
 fictícios. A intérprete é uma gravação nossa em fundo verde (`fonte/teste-croma.mp4`, banco de vídeos
 LIBRAS.SE, direitos próprios). A aula de fundo é fictícia (`aula.html`).
 

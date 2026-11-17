@@ -164,23 +164,34 @@ def page(s):
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>''' if s["ilustracao"] else "")
     if s["video"]:
-        player = f'''    <div class="player">
-      <div class="player-grid{' com-ilustra' if s['ilustracao'] else ''}">
-        <div class="player-media">
-          <video id="sinalVid" src="{video}" poster="{poster}" width="1280" height="720" muted loop playsinline preload="auto" aria-label="Vídeo do sinal de {esc(s['palavra'])} em Libras"></video>
-        </div>{figura}
+        # Página de exibição: o vídeo abre no cabeçalho, visível sem rolar, e começa sozinho em loop
+        hero_video = f'''    <div class="hero-vid">
+      <div class="player-media">
+        <video id="sinalVid" src="{video}" poster="{poster}" width="1280" height="720" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do sinal de {esc(s['palavra'])} em Libras"></video>
       </div>
-      <div class="player-info">
-        <p class="player-kicker">Sinal em vídeo</p>
-        <h3 class="player-title">Como é o sinal de {esc(s['palavra'])} em Libras</h3>
-        <p class="player-desc">O vídeo repete o sinal em loop. Use a câmera lenta para observar a configuração das mãos, o movimento e a expressão facial, que faz parte do sinal.</p>
+      <div class="hero-ctrls">
         <div class="player-ctrls">
           <button type="button" class="pbtn" id="vPlay"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>Pausar</span></button>
           <button type="button" class="pbtn" id="vSlow" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg><span>Câmera lenta</span></button>
         </div>
-        <p class="player-credit">Interpretação: {esc(data['interprete'])}</p>
+        <p class="player-credit">Interpretação: {esc(data['interprete'].split(',')[0])}</p>
       </div>
     </div>'''
+        como = f'''  <section aria-labelledby="video-h">
+    <h2 class="sec-label" id="video-h">Como fazer o sinal</h2>
+    <div class="player">
+      <div class="player-grid{' com-ilustra' if s['ilustracao'] else ''}">{figura}
+      <div class="player-info">
+        <p class="player-kicker">Sinal em vídeo</p>
+        <h3 class="player-title">Como é o sinal de {esc(s['palavra'])} em Libras</h3>
+        <p class="player-desc">O vídeo no topo da página repete o sinal em loop. Use a câmera lenta para observar a configuração das mãos, o movimento e a expressão facial, que faz parte do sinal.</p>
+        <p class="player-credit">Interpretação: {esc(data['interprete'])}</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+'''
         og_media = (f'<meta property="og:image" content="{SITE + poster}">\n<meta property="og:image:width" content="1280">\n'
                     f'<meta property="og:image:height" content="720">\n<meta property="og:video" content="{SITE + video}">\n'
                     f'<meta property="og:video:type" content="video/mp4">\n<meta property="og:video:width" content="1280">\n'
@@ -192,9 +203,10 @@ def page(s):
                                         f'<meta property="og:image" content="{SITE + ilu}">\n<meta property="og:image:width" content="960">\n<meta property="og:image:height" content="720">')
             og_image = SITE + ilu
     else:
-        player = f'''    <div class="player">
+        hero_video = f'''    <div class="hero-vid">
       <div class="player-media"><div class="player-vazio"><strong>Vídeo em preparação</strong>O sinal de {esc(s['palavra'])} está em validação com a nossa intérprete e será publicado em breve.</div></div>
     </div>'''
+        como = ""
         og_media = f'<meta property="og:image" content="{OG_PADRAO}">'
         preload = ""
         og_image = OG_PADRAO
@@ -211,7 +223,7 @@ def page(s):
         "TITLE": titulo(s),
         "OG_TITLE": f"{s['palavra']} em Libras, sinal em vídeo | LIBRAS.SE",
         "DESC": esc(desc), "URL": url, "OG_MEDIA": og_media, "OG_IMAGE": og_image, "PRELOAD": preload,
-        "PLAYER": player,
+        "HERO_VIDEO": hero_video, "COMO": como,
         "JSONLD": json.dumps(ld, ensure_ascii=False, indent=1),
         "FONTS_CSS": partials["fonts_css"], "VARS_CSS": partials["vars_css"], "HEADER_CSS": partials["header_css"],
         "FOOTER_CSS": partials["footer_css"], "UTILS_CSS": partials["utils_css"],

@@ -53,6 +53,12 @@
       "badge": "Campanha pronta para ir ao ar"
     },
     {
+      "slug": "tradutor-de-libras", "page": "tradutor-de-libras/index.html", "theme": "light",
+      "eyebrow": "Tradutor de Libras · intérprete real",
+      "lead": "Seu vídeo traduzido em", "accent": "Libras por intérpretes", "tail": "",
+      "badge": "Entrega em até 1 hora"
+    },
+    {
       "slug": "libras-para-videoaulas", "page": "libras-para-videoaulas/index.html", "theme": "light",
       "eyebrow": "Acessibilidade para EAD",
       "lead": "Videoaulas acessíveis em", "accent": "Libras, LSE e audiodescrição", "tail": "",

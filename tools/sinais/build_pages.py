@@ -395,6 +395,16 @@ def categorias():
         dest.write_text(out)
 
 
+# Última mudança de layout das páginas de sinal (template-sinal.html). O lastmod do sitemap é a data mais
+# recente entre ela e a publicação do sinal; a data do vídeo (uploadDate, publication_date) continua a da publicação.
+# Suba esta data quando o template mudar de forma relevante para o Google (ex.: 2026-11-16, vídeo no topo da página).
+LAYOUT_EM = "2026-11-16"
+
+
+def modificado(s):
+    return max(s.get("publicado_em", data["publicado_em"]), LAYOUT_EM)
+
+
 def sitemap():
     p = ROOT / "sitemap.xml"
     text = p.read_text()
@@ -411,7 +421,7 @@ def sitemap():
             block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
-    <lastmod>{s.get('publicado_em', data['publicado_em'])}</lastmod>
+    <lastmod>{modificado(s)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>"""
@@ -421,7 +431,7 @@ def sitemap():
         block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
-    <lastmod>{s.get('publicado_em', data['publicado_em'])}</lastmod>
+    <lastmod>{modificado(s)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>

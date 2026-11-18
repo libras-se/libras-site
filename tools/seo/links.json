@@ -233,6 +233,10 @@
    "titulo": "Libras em vídeos e campanhas",
    "links": [
     [
+     "Tradutor de Libras para vídeos",
+     "/tradutor-de-libras/"
+    ],
+    [
      "Libras para empresas",
      "/libras-para-empresas/"
     ],
@@ -379,7 +383,12 @@
    "manifesto-por-libras-em-videos",
    "responsavel-pelo-que-entendem"
   ],
-  "/libras-para-publicidade/": [
+  "/tradutor-de-libras/": [
+   "por-que-incluir-janela-de-libras-em-videos",
+   "margem-da-janela-de-libras-no-video",
+   "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
+  ],
+ "/libras-para-publicidade/": [
    "4-marcas-que-investem-em-libras-nos-videos",
    "influenciadores-surdos-relatam-dificuldade-com-publis",
    "por-que-incluir-janela-de-libras-em-videos"

@@ -42,6 +42,7 @@ A LIBRAS.SE cria acessibilidade para videos, filmes, documentarios, series, curt
 
 ## Verticais e paginas de solucao
 
+- [Tradutor de Libras](https://libras.se/tradutor-de-libras/): traducao de videos do portugues para Libras e de Libras para portugues por interpretes reais, com entrega em 1 hora, 24 horas ou 7 dias; comparacao com VLibras e Hand Talk.
 - [Libras para Empresas](https://libras.se/libras-para-empresas/): acessibilidade para videos corporativos, treinamentos, endomarketing, comunicacao interna, reunioes remotas e pacotes mensais para RH, D&I e compliance.
 - [Libras para Publicidade](https://libras.se/libras-para-publicidade/): janela de Libras para campanhas publicitarias com entrega expressa em 1 hora e formatos para TV, reels, stories e midia paga.
 - [Libras para Videoaulas e EAD](https://libras.se/libras-para-videoaulas/): Libras, LSE e audiodescricao para cursos online, universidades, edtechs e LMS, com glossario por disciplina e entrega por lote.

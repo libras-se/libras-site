@@ -149,6 +149,13 @@
    "ini": 97.15,
    "por": "bruna"
   },
+  "mesa#1": {
+   "arquivo": "1-003",
+   "em": "2026-11-11T15:15:28-03:00",
+   "fim": 114.08,
+   "ini": 110.11,
+   "por": "luis"
+  },
   "michel-temer#1": {
    "arquivo": "presidentes + times",
    "em": "2026-10-16T19:03:22-03:00",
@@ -308,10 +315,10 @@
    "tomada": 1
   },
   "acre": {
-   "atualizado_em": "2026-10-16T18:48:53-03:00",
-   "nota": "recorte, cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:35-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "agua": {
@@ -352,10 +359,10 @@
    "tomada": 2
   },
   "ajudar": {
-   "atualizado_em": "2026-10-13T21:01:19-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:35-03:00",
+   "nota": "19/nov: as duas variantes de repouso a repouso (antes terminava no OU); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "alagoas": {
@@ -436,10 +443,10 @@
    "tomada": 1
   },
   "amazonas": {
-   "atualizado_em": "2026-10-16T18:49:32-03:00",
-   "nota": "recorte",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:35-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "amigo": {
@@ -588,10 +595,10 @@
    "tomada": 1
   },
   "avo": {
-   "atualizado_em": "2026-10-16T17:05:40-03:00",
-   "nota": "cortar na mão de repouso. ",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:36-03:00",
+   "nota": "19/nov: termina na mão de repouso; tirado o BEBÊ que vinha junto; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "azul": {
@@ -689,10 +696,10 @@
    "tomada": 1
   },
   "boa-noite": {
-   "atualizado_em": "2026-10-16T17:55:28-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:36-03:00",
+   "nota": "19/nov: as duas variantes de repouso a repouso (antes começava no OU); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "boa-tarde": {
@@ -716,10 +723,10 @@
    "tomada": 1
   },
   "bom-dia": {
-   "atualizado_em": "2026-10-16T17:53:59-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:36-03:00",
+   "nota": "19/nov: começa e termina em repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "borboleta": {
@@ -740,17 +747,17 @@
    "tomada": 1
   },
   "botafogo": {
-   "atualizado_em": "2026-10-16T19:06:47-03:00",
-   "nota": "recorte",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:36-03:00",
+   "nota": "19/nov: o fim cortava o sinal antes do repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "branco": {
-   "atualizado_em": "2026-10-16T17:33:55-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:36-03:00",
+   "nota": "19/nov: começa depois do OU, termina em repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "cachorro": {
@@ -822,10 +829,10 @@
    "tomada": 1
   },
   "campo": {
-   "atualizado_em": "2026-10-16T17:47:14-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:37-03:00",
+   "nota": "19/nov: sem o começo de FLORESTA; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "cansado": {
@@ -880,10 +887,10 @@
    "tomada": 1
   },
   "cavalo": {
-   "atualizado_em": "2026-10-16T17:14:09-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:37-03:00",
+   "nota": "19/nov: as duas variantes de repouso a repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "ceara": {
@@ -1099,10 +1106,10 @@
    "tomada": 1
   },
   "deodoro-da-fonseca": {
-   "atualizado_em": "2026-10-16T19:06:03-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:37-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "desculpa": {
@@ -1123,10 +1130,10 @@
    "tomada": 1
   },
   "dilma-rousseff": {
-   "atualizado_em": "2026-10-16T19:01:02-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:37-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "dinheiro": {
@@ -1167,9 +1174,10 @@
    "tomada": 1
   },
   "dormir": {
-   "atualizado_em": "2026-10-08T09:48:17-03:00",
-   "nota": "",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:37-03:00",
+   "nota": "19/nov: as duas variantes de repouso a repouso (antes terminava no OU); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "ele-ela": {
@@ -1244,10 +1252,10 @@
    "tomada": 1
   },
   "espirito-santo": {
-   "atualizado_em": "2026-10-16T18:50:03-03:00",
-   "nota": "recorte",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "esporte-clube-bahia": {
@@ -1433,24 +1441,24 @@
    "tomada": 1
   },
   "feliz-natal": {
-   "atualizado_em": "2026-10-16T18:06:53-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: as duas variantes até o repouso (antes terminava no OU); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "fernando-collor": {
-   "atualizado_em": "2026-10-16T19:02:49-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "fernando-henrique-cardoso": {
-   "atualizado_em": "2026-10-16T19:02:13-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "figueirense": {
@@ -1646,10 +1654,10 @@
    "tomada": 1
   },
   "getulio-vargas": {
-   "atualizado_em": "2026-10-16T19:01:13-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "goias": {
@@ -1690,10 +1698,10 @@
    "tomada": 1
   },
   "gremio": {
-   "atualizado_em": "2026-10-16T19:09:03-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:38-03:00",
+   "nota": "19/nov: o corte antigo era o SANTOS; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "hospital": {
@@ -1717,10 +1725,10 @@
    "tomada": 1
   },
   "igreja": {
-   "atualizado_em": "2026-10-16T17:49:36-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: sem ela pegando o celular no fim; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "internacional": {
@@ -1770,17 +1778,17 @@
    "tomada": 6
   },
   "itamar-franco": {
-   "atualizado_em": "2026-10-16T19:04:49-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "jair-bolsonaro": {
-   "atualizado_em": "2026-10-16T19:04:22-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "janela": {
@@ -1801,31 +1809,31 @@
    "tomada": 1
   },
   "jk": {
-   "atualizado_em": "2026-10-16T19:02:02-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "joao-goulart": {
-   "atualizado_em": "2026-10-16T19:04:29-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "jose-sarney": {
-   "atualizado_em": "2026-10-16T19:04:41-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:39-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "laranja": {
-   "atualizado_em": "2026-10-16T17:29:22-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: termina na mão de repouso, antes do ROXO; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "leao": {
@@ -1866,11 +1874,11 @@
    "tomada": 1
   },
   "letra-a": {
-   "atualizado_em": "2026-10-16T18:07:29-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
-   "tomada": 5
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: as tomadas antigas eram as letras B a I; este é o A; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
+   "tomada": 1
   },
   "letra-b": {
    "aprovado": {
@@ -2113,10 +2121,10 @@
    "tomada": 1
   },
   "letra-n": {
-   "atualizado_em": "2026-10-16T18:21:18-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: vai até o repouso (antes cortava com a mão ainda em N); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "letra-o": {
@@ -2140,10 +2148,10 @@
    "tomada": 1
   },
   "letra-p": {
-   "atualizado_em": "2026-10-16T18:21:31-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: o corte antigo era o fim do N; confira: o trecho tem duas configurações; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "letra-q": {
@@ -2167,17 +2175,17 @@
    "tomada": 1
   },
   "letra-r": {
-   "atualizado_em": "2026-10-16T18:35:59-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: o corte antigo era o Q; este é o mesmo R do extra 'r'; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "letra-s": {
-   "atualizado_em": "2026-10-16T18:36:49-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:40-03:00",
+   "nota": "19/nov: o corte antigo era o R; este é o S (punho); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "letra-t": {
@@ -2261,25 +2269,25 @@
    "tomada": 1
   },
   "letra-x": {
-   "atualizado_em": "2026-10-16T18:37:27-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:41-03:00",
+   "nota": "19/nov: o render usava o bruto 3 (celular); este é o X do alfabeto; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "letra-y": {
-   "atualizado_em": "2026-10-16T18:38:13-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
-   "tomada": null
+   "atualizado_em": "2026-11-19T16:32:41-03:00",
+   "nota": "19/nov: não tinha sido encontrado; Y logo depois do X; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
+   "tomada": 1
   },
   "letra-z": {
-   "atualizado_em": "2026-10-16T18:38:19-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
-   "tomada": null
+   "atualizado_em": "2026-11-19T16:32:41-03:00",
+   "nota": "19/nov: não tinha sido encontrado; Z traçado antes do alfabeto direto; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
+   "tomada": 1
   },
   "livro": {
    "aprovado": {
@@ -2304,10 +2312,10 @@
    "tomada": 1
   },
   "lula": {
-   "atualizado_em": "2026-10-16T19:00:51-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:41-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "macaco": {
@@ -2328,10 +2336,10 @@
    "tomada": 1
   },
   "mae": {
-   "atualizado_em": "2026-10-10T09:07:35-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:41-03:00",
+   "nota": "19/nov: sem o OU no começo; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 7
   },
   "maranhao": {
@@ -2375,10 +2383,10 @@
    "tomada": 1
   },
   "mato-grosso": {
-   "atualizado_em": "2026-10-16T18:50:31-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:42-03:00",
+   "nota": "19/nov: o corte antigo era o fim do Maranhão; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "mato-grosso-do-sul": {
@@ -2436,37 +2444,31 @@
    "tomada": 1
   },
   "mercado": {
-   "atualizado_em": "2026-10-16T17:49:09-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:42-03:00",
+   "nota": "19/nov: as duas variantes até o repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "mesa": {
-   "aprovado": {
-    "assinatura": "1db1c678ee4f",
-    "em": "2026-11-11T09:47:09-03:00",
-    "por": "bruna",
-    "tomada": 1
-   },
-   "atualizado_em": "2026-11-11T09:47:09-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "aprovado",
+   "atualizado_em": "2026-11-19T16:32:42-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "michel-temer": {
-   "atualizado_em": "2026-10-16T19:03:36-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:42-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "minas-gerais": {
-   "atualizado_em": "2026-10-16T18:51:47-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:42-03:00",
+   "nota": "19/nov: pega o início do sinal (mão no pescoço) e a datilologia M-G; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "montanha": {
@@ -2876,14 +2878,15 @@
     "em": "2026-10-08T09:47:25-03:00",
     "tomada": 1
    },
-   "atualizado_em": "2026-10-08T09:47:25-03:00",
+   "atualizado_em": "2026-11-19T16:32:43-03:00",
    "ilustracao": {
     "aprovado_em": "2026-10-08T15:35:06-03:00",
     "nota": "Aprovada em lote por instrução do usuário (fluxo completo, 2026-10-08), após conferência contra o quadro de referência.",
     "status": "aprovado",
     "versao": 1
    },
-   "nota": "",
+   "nota": "ATENÇÃO: o t1 aprovado repete o FALAR. t2 = tomada nova: o t1 aprovado repete o FALAR",
+   "por": "luis",
    "status": "aprovado",
    "tomada": 1
   },
@@ -2905,10 +2908,16 @@
    "tomada": 1
   },
   "orgulho": {
-   "atualizado_em": "2026-11-11T09:47:22-03:00",
+   "aprovado": {
+    "assinatura": "a76d9eb4718a",
+    "em": "2026-11-11T16:00:17-03:00",
+    "por": "luis",
+    "tomada": 1
+   },
+   "atualizado_em": "2026-11-11T16:00:17-03:00",
    "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "por": "luis",
+   "status": "aprovado",
    "tomada": 1
   },
   "ouvinte": {
@@ -2929,10 +2938,11 @@
    "tomada": 1
   },
   "ouvir": {
-   "atualizado_em": "2026-10-08T09:38:30-03:00",
-   "nota": "",
-   "status": "ajustar",
-   "tomada": 1
+   "atualizado_em": "2026-11-19T16:32:43-03:00",
+   "nota": "19/nov: o t1 era ela mexendo no celular; este é a mão na orelha; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
+   "tomada": 2
   },
   "pai": {
    "aprovado": {
@@ -3015,10 +3025,10 @@
    "tomada": 1
   },
   "paraiba": {
-   "atualizado_em": "2026-10-16T18:52:57-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:43-03:00",
+   "nota": "19/nov: tirados 3 s parados no início; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "parana": {
@@ -3042,10 +3052,10 @@
    "tomada": 1
   },
   "parque": {
-   "atualizado_em": "2026-10-16T17:48:45-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:43-03:00",
+   "nota": "19/nov: as duas variantes de repouso a repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "passaro": {
@@ -3066,10 +3076,10 @@
    "tomada": 1
   },
   "pato": {
-   "atualizado_em": "2026-10-16T17:24:17-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:43-03:00",
+   "nota": "19/nov: termina na mão de repouso; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "peixe": {
@@ -3090,10 +3100,10 @@
    "tomada": 1
   },
   "pernambuco": {
-   "atualizado_em": "2026-10-16T18:53:20-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "piaui": {
@@ -3117,10 +3127,10 @@
    "tomada": 1
   },
   "por-favor": {
-   "atualizado_em": "2026-10-16T18:00:31-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "porta": {
@@ -3252,24 +3262,24 @@
    "tomada": 1
   },
   "rio-de-janeiro": {
-   "atualizado_em": "2026-10-16T18:53:48-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: aparado o repouso inicial; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "rio-grande-do-norte": {
-   "atualizado_em": "2026-10-16T18:54:36-03:00",
-   "nota": "recorte",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "rio-grande-do-sul": {
-   "atualizado_em": "2026-10-16T18:55:25-03:00",
-   "nota": "recorte",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 2
   },
   "rondonia": {
@@ -3293,17 +3303,17 @@
    "tomada": 1
   },
   "roraima": {
-   "atualizado_em": "2026-10-16T18:56:21-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:44-03:00",
+   "nota": "19/nov: o fim cortava a datilologia R-R; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "rosa": {
-   "atualizado_em": "2026-10-16T17:30:39-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: as duas variantes até o repouso (antes cortava com a mão no rosto); recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "roupa": {
@@ -3344,10 +3354,10 @@
    "tomada": 1
   },
   "santa-catarina": {
-   "atualizado_em": "2026-10-16T18:57:09-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "santos": {
@@ -3371,10 +3381,10 @@
    "tomada": 1
   },
   "sao-paulo": {
-   "atualizado_em": "2026-10-16T18:58:10-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "sao-paulo-futebol-clube": {
@@ -3432,10 +3442,10 @@
    "tomada": 1
   },
   "sergipe": {
-   "atualizado_em": "2026-10-16T18:59:02-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "sim": {
@@ -3490,10 +3500,10 @@
    "tomada": 1
   },
   "sport-recife": {
-   "atualizado_em": "2026-10-16T19:10:32-03:00",
-   "nota": "",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: o corte antigo era o fim do FORTALEZA; recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "suco": {
@@ -3622,10 +3632,10 @@
    "tomada": 1
   },
   "tocantins": {
-   "atualizado_em": "2026-10-16T19:00:38-03:00",
-   "nota": "recorte cabelo",
-   "por": "bruna",
-   "status": "ajustar",
+   "atualizado_em": "2026-11-19T16:32:45-03:00",
+   "nota": "19/nov: recorte refeito (chave nova: cabelo inteiro, sem contorno verde)",
+   "por": "luis",
+   "status": "pendente",
    "tomada": 1
   },
   "trabalho": {

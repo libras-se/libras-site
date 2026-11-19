@@ -156,6 +156,33 @@ python3 tools/sinais/build_pages.py
 | Poster | WebP |
 | Fundo | `#f0fafa` |
 | Marca d'água | "LIBRAS.SE" em Museo Sans Rounded 1000 com o gradiente do logo (`make_watermark.py`) |
+| Recorte | `chromakey` padrão; perfil `dif` para os sinais listados em `chaves.json` (abaixo) |
+
+## Recorte do chroma: perfis de chave (`chaves.json`)
+
+O `chromakey` padrão compara só a cor e apaga o cabelo escuro que pega reflexo verde (a Bruna anota "recorte, cabelo").
+Para esses sinais existe o perfil `dif` (`render.py` → `CHAVES`), que recorta pela diferença entre o verde e o maior dos
+outros dois canais:
+
+- o fundo fica em 71 a 77, a mecha de cabelo em 30 a 50, a pele abaixo de 0 e a camiseta perto de 0;
+- nas bordas, a cor do verde é descontada do pixel, então o cabelo fino fica escuro e natural, sem halo;
+- a máscara perde 1 px e é suavizada, porque o vídeo do celular (H.264 4:2:0) vaza o verde para dentro da pele e
+  deixaria um contorno oliva nos dedos;
+- as laterais (x < 220 e x > 1700 no bruto) ficam sempre transparentes, porque a tela tem duas marcas fixas ali;
+- o recorte é feito já em 1280×720, cerca de 20 s por tomada no Mac.
+
+Os perfis por sinal ficam em `<WORKDIR>/chaves.json`, que o `sincronizar.py enviar` sobe para o servidor:
+
+```json
+{"itens": {"lula": "dif", "sao-paulo": "dif"}}
+```
+
+- Sinal fora da lista continua no `chromakey` e mantém a assinatura de antes, então as aprovações antigas valem.
+- Pôr um sinal **aprovado** na lista muda a assinatura e derruba a aprovação: ele volta a precisar de revisão.
+- O app online usa o mesmo `render.py`, então o "Ajustar" lá respeita o perfil. Isso só vale depois que a imagem do
+  app for reimplantada no Dokploy com este código.
+- Para testar um perfil novo, acrescente outra entrada em `CHAVES` em vez de mudar a `dif`. Mudar a `dif` muda a
+  assinatura de todos os sinais que a usam.
 
 ## Páginas por categoria (/sinal/categoria/<slug>/)
 

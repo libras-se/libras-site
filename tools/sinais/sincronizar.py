@@ -30,7 +30,7 @@ if os.environ.get("SINAIS_IP"):  # DNS ainda propagando: conecta direto no IP, m
     import socket
     _gai, _host, _ip = socket.getaddrinfo, urllib.parse.urlparse(URL).hostname, os.environ["SINAIS_IP"]
     socket.getaddrinfo = lambda h, *a, **k: _gai(_ip if h == _host else h, *a, **k)
-ENVIAR = ["manifest.csv", "extent.json", "revisao", "proxy", "ilustracoes"]
+ENVIAR = ["manifest.csv", "extent.json", "chaves.json", "revisao", "proxy", "ilustracoes"]
 
 
 def credencial():

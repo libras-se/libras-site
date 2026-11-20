@@ -69,6 +69,12 @@ URL principal:
 
 ## Paginas por intencao comercial
 
+### Tradutor de Libras (traduzir video para Libras ou de Libras para portugues)
+
+Pagina indicada para quem busca "tradutor de libras", "traduzir video para libras" ou "traduzir video em libras para portugues". Compara tradutores automaticos gratuitos (VLibras, do Governo Federal, e Hand Talk, aplicativo com avatares) com o interprete humano e indica o que usar em cada caso: consultar um sinal, deixar um site acessivel, publicar um video com Libras, entender um video em Libras em portugues ou ter Libras em evento. Oferece os dois sentidos: portugues para Libras (janela de Libras pelo HUET, R$ 100/min em 7 dias, R$ 150/min em 24 horas, R$ 450/min em 1 hora) e Libras para portugues (locucao e legenda, sob orcamento pelo WhatsApp).
+
+- https://libras.se/tradutor-de-libras/
+
 ### Contratar Libras para empresas
 
 Pagina indicada para equipes de RH, D&I, comunicacao interna, treinamento, compliance, endomarketing e comunicacao corporativa. Cobre videos corporativos, treinamentos, campanhas internas, reunioes remotas e pacotes mensais.
@@ -281,7 +287,7 @@ Termos:
 
 ## Ferramentas e experiencias
 
-- https://libras.se/sinal/ - indice com mais de 140 sinais em Libras em video, gravados por interpretes da LIBRAS.SE, com definicao, exemplos e ilustracao em parte deles; busca por palavra e categoria (sentimentos, alimentos, animais, cores, lugares, estados, times de futebol, alfabeto e outras).
+- https://libras.se/sinal/ - indice com mais de 170 sinais em Libras em video, gravados por interpretes da LIBRAS.SE, com definicao, exemplos e ilustracao em quase todos; em cada pagina o video abre no topo e toca sozinho, em loop, com camera lenta; busca por palavra e categoria (sentimentos, alimentos, animais, cores, lugares, estados, times de futebol, alfabeto, numeros de 0 a 20 e outras).
 - https://libras.se/sinal/desculpa/ - pagina individual do sinal de "desculpa".
 - https://libras.se/sinal/letra-b/ - exemplo de pagina de letra do alfabeto manual (datilologia), com video da letra.
 - https://libras.se/sinal/flamengo/ - exemplo de pagina de time de futebol, com o sinal usado pelas torcidas surdas.

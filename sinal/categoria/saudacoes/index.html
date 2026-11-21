@@ -105,49 +105,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "@context": "https://schema.org",
  "@type": "ItemList",
  "name": "Saudações em Libras",
- "numberOfItems": 7,
+ "numberOfItems": 9,
  "itemListElement": [
   {
    "@type": "ListItem",
    "position": 1,
+   "name": "Bem-vindo em Libras",
+   "url": "https://libras.se/sinal/bem-vindo/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
    "name": "Boa tarde em Libras",
    "url": "https://libras.se/sinal/boa-tarde/"
   },
   {
    "@type": "ListItem",
-   "position": 2,
+   "position": 3,
+   "name": "Bom dia em Libras",
+   "url": "https://libras.se/sinal/bom-dia/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
    "name": "Feliz aniversário em Libras",
    "url": "https://libras.se/sinal/feliz-aniversario/"
   },
   {
    "@type": "ListItem",
-   "position": 3,
+   "position": 5,
    "name": "Feliz Ano Novo em Libras",
    "url": "https://libras.se/sinal/feliz-ano-novo/"
   },
   {
    "@type": "ListItem",
-   "position": 4,
+   "position": 6,
    "name": "Olá em Libras",
    "url": "https://libras.se/sinal/ola/"
   },
   {
    "@type": "ListItem",
-   "position": 5,
+   "position": 7,
    "name": "Parabéns em Libras",
    "url": "https://libras.se/sinal/parabens/"
   },
   {
    "@type": "ListItem",
-   "position": 6,
+   "position": 8,
    "name": "Tchau em Libras",
    "url": "https://libras.se/sinal/tchau/"
   },
   {
    "@type": "ListItem",
-   "position": 7,
-   "name": "Bom dia em Libras",
-   "url": "https://libras.se/sinal/bom-dia/"
+   "position": 9,
+   "name": "Tudo bem? em Libras",
+   "url": "https://libras.se/sinal/tudo-bem/"
   }
  ]
 }
@@ -281,6 +293,7 @@ a{text-decoration:none;color:inherit}
 .card-visual img,.card-visual video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .card-visual video{opacity:0;transition:opacity .2s}
 .card-visual.playing video{opacity:1}
+.card-visual.vert img,.card-visual.vert video{object-position:50% 28%}
 .card-badge{position:absolute;bottom:12px;left:12px;z-index:2;display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.72);border-radius:var(--rpill);padding:5px 10px}
 .card-badge svg{width:9px;height:9px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -474,7 +487,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="search-box rv">
       <div class="search-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="search" id="busca" placeholder="Busque nesta lista: boa tarde, feliz aniversário…" autocomplete="off" aria-label="Buscar sinal em Libras">
+        <input type="search" id="busca" placeholder="Busque nesta lista: bem-vindo, boa tarde…" autocomplete="off" aria-label="Buscar sinal em Libras">
       </div>
       <div class="chips" role="group" aria-label="Outras categorias"><!-- SINAIS:FILTROS -->
       <a href="/sinal/" class="chip">Todos os sinais</a>
@@ -500,8 +513,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cards-section" aria-labelledby="sinais-h">
   <div class="w">
     <p class="section-label rv" id="sinais-h">Saudações em Libras</p>
-    <p class="section-sub rv d1"><!-- SINAIS:CONTAGEM -->6 sinais em vídeo, com página própria.<!-- /SINAIS:CONTAGEM --></p>
+    <p class="section-sub rv d1"><!-- SINAIS:CONTAGEM -->9 sinais em vídeo, com página própria.<!-- /SINAIS:CONTAGEM --></p>
     <div class="cards-grid" id="cardsGrid"><!-- SINAIS:CARDS -->
+      <article class="sinal-card" data-nome="bem-vindo bem-vindo bem vindo bem-vinda bem vinda bem-vindos boas-vindas boas vindas benvindo" data-cat="Saudações">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/bem-vindo.mp4">
+          <img src="/assets/videos/sinais-canal/bem-vindo.webp" alt="Intérprete fazendo o sinal de Bem-vindo em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Saudações</span>
+          <h2 class="card-nome"><a href="/sinal/bem-vindo/" class="card-a">Bem-vindo</a></h2>
+          <p class="card-desc">Sinal usado para receber alguém com alegria ao chegar a um lugar, a um evento ou a um grupo novo.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
       <article class="sinal-card" data-nome="boa tarde boa tarde cumprimento saudacao tarde" data-cat="Saudações">
         <div class="card-visual" data-video="/assets/videos/sinais/boa-tarde.mp4">
           <img src="/assets/img/sinais/cartoes/boa-tarde.webp" alt="Ilustração do sinal de Boa tarde em Libras" width="960" height="720" loading="lazy" decoding="async">
@@ -511,6 +536,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-cat">Saudações</span>
           <h2 class="card-nome"><a href="/sinal/boa-tarde/" class="card-a">Boa tarde</a></h2>
           <p class="card-desc">Cumprimento usado à tarde para saudar alguém ao chegar ou ao começar uma conversa.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="bom dia bom dia cumprimento saudacao manha" data-cat="Saudações">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/bom-dia.mp4">
+          <img src="/assets/videos/sinais-canal/bom-dia.webp" alt="Intérprete fazendo o sinal de Bom dia em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Saudações</span>
+          <h2 class="card-nome"><a href="/sinal/bom-dia/" class="card-a">Bom dia</a></h2>
+          <p class="card-desc">Cumprimento usado pela manhã para saudar alguém ao chegar, ao encontrar uma pessoa ou ao começar uma conversa.</p>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
@@ -574,14 +611,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
-      <article class="sinal-card" data-nome="bom dia bom dia cumprimento saudacao manha" data-cat="Saudações">
-        <div class="card-visual card-vazio">
-          <span class="card-badge">Vídeo em breve</span>
+      <article class="sinal-card" data-nome="tudo bem? tudo bem tudo bom como vai beleza cumprimento saudacao pergunta" data-cat="Saudações">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/tudo-bem.mp4">
+          <img src="/assets/videos/sinais-canal/tudo-bem.webp" alt="Intérprete fazendo o sinal de Tudo bem? em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
         </div>
         <div class="card-body">
           <span class="card-cat">Saudações</span>
-          <h2 class="card-nome"><a href="/sinal/bom-dia/" class="card-a">Bom dia</a></h2>
-          <p class="card-desc">Cumprimento usado pela manhã para saudar alguém ao chegar, ao encontrar uma pessoa ou ao começar uma conversa.</p>
+          <h2 class="card-nome"><a href="/sinal/tudo-bem/" class="card-a">Tudo bem?</a></h2>
+          <p class="card-desc">Cumprimento usado para perguntar como a pessoa está, logo depois de dizer oi ou olá, e também para responder que está tudo certo.</p>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>

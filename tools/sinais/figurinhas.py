@@ -39,6 +39,9 @@ CART = ILU / "cartoes"
 ESTILO = HERE / "ilustracao-estilo.jpg"
 EL = json.loads((HERE / "elementos.json").read_text())
 SINAIS = {s["slug"]: s for s in json.loads((ROOT / "sinal" / "sinais.json").read_text())["sinais"]}
+# Modelo e esforço do Codex, quando o padrão do ~/.codex/config.toml não serve (ex.: CODEX_MODEL=gpt-6.1-sol CODEX_ESFORCO=medium)
+CODEX_OPCOES = ([*(["-m", os.environ["CODEX_MODEL"]] if os.environ.get("CODEX_MODEL") else []),
+                 *(["-c", f"model_reasoning_effort={os.environ['CODEX_ESFORCO']}"] if os.environ.get("CODEX_ESFORCO") else [])])
 FUNDOS = {"magenta": ("#FF00FF", "magenta or hot pink"), "verde": ("#00FF00", "green")}
 
 PROMPT = """Use your image generation tool to create ONE square (1:1) image: a fun die-cut STICKER illustration for a children-friendly Brazilian Sign Language dictionary.
@@ -128,7 +131,7 @@ def gerar(slug, tentativas=2):
         td = Path(td)
         shutil.copy(ESTILO, td / "estilo.jpg")
         for _ in range(tentativas):
-            out = subprocess.run(["codex", "exec", "--skip-git-repo-check", "-C", str(td), "-s", "workspace-write",
+            out = subprocess.run(["codex", "exec", "--skip-git-repo-check", *CODEX_OPCOES, "-C", str(td), "-s", "workspace-write",
                                   "-i", str(td / "estilo.jpg"), "-"], input=prompt, text=True, capture_output=True, timeout=900)
             if (td / "figurinha.png").exists():
                 break

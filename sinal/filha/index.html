@@ -257,6 +257,23 @@ section+section{margin-top:52px}
 .player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
 .player-vazio strong{color:#fff;font-size:1.05rem}
 .player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Vídeo do canal (vertical): inteiro no quadro, sobre o próprio poster desfocado */
+.player-media.vert video{object-fit:contain}
+.player-media .vert-bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.player-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+/* Outra versão do sinal (vídeos do canal) */
+.versoes{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px 20px}
+.versoes-txt{flex-basis:100%;font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.6}
+.versao{margin:0;width:min(230px,100%);display:flex;flex-direction:column;gap:8px}
+.versao video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--rlg);background:#0e3538;display:block}
+.versao figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.versao figcaption a{color:inherit;text-decoration:underline}
+.versoes-txt a{color:var(--teal-dd);text-decoration:underline}
+.yt-short{margin:0;width:min(315px,100%);display:flex;flex-direction:column;gap:8px}
+.yt-short iframe{width:100%;height:auto;aspect-ratio:9/16;border:0;border-radius:var(--rlg);background:#0e3538;display:block}
+.yt-short figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.yt-short figcaption a{color:inherit;text-decoration:underline}
+.prov{display:inline-block;margin-right:6px;padding:2px 9px;border-radius:var(--rpill);background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.45);color:#fde68a;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
 .player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
 .player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
@@ -617,9 +634,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="sec-label" id="rel-h">Outros sinais em Libras</h2>
     <nav class="rel-grid" aria-label="Outros sinais">
       <a href="/sinal/filho/" class="rel-card"><img src="/assets/img/sinais/filho.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Filho</span></a>
+      <a href="/sinal/interprete/" class="rel-card"><img src="/assets/videos/sinais-canal/interprete.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span>Intérprete</span></a>
       <a href="/sinal/irma/" class="rel-card"><img src="/assets/videos/sinais/irma.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Irmã</span></a>
       <a href="/sinal/irmao/" class="rel-card"><img src="/assets/videos/sinais/irmao.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Irmão</span></a>
-      <a href="/sinal/medico/" class="rel-card"><img src="/assets/img/sinais/medico.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Médico</span></a>
     </nav>
     <a href="/sinal/categoria/familia-e-pessoas/" class="rel-all">Ver todos: família e pessoas <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
     <a href="/sinal/" class="rel-all">Ver todos os sinais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>

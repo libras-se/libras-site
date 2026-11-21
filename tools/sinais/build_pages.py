@@ -8,7 +8,10 @@ Uso (na raiz do repo): python3 tools/sinais/build_pages.py
 - sitemap.xml               (bloco SINAIS com extensão de vídeo do Google)
 Cada sinal pode ter "publicado_em" próprio (data do lote em que entrou); sem ele, vale o "publicado_em" geral.
 O vídeo de cada sinal (assets/videos/sinais/<slug>.mp4/.webp) só existe depois de aprovado e publicado por
-publicar.py. Sem vídeo publicado, a página sai em modo "vídeo em preparação" (sem VideoObject e fora do sitemap de vídeo).
+publicar.py. Sem ele, a página usa o vídeo do canal do YouTube (assets/videos/sinais-canal, lista em sinal/canal.json,
+gerada por producao-conteudo/youtube-sinais/exportar_site.py), em formato vertical. Quando os dois existem, o do canal
+aparece como "outra versão". Sem nenhum vídeo, a página sai em modo "vídeo em preparação" (sem VideoObject e fora do
+sitemap de vídeo). Os jogos e atividades (tools/aprender) continuam só com os vídeos da intérprete.
 """
 import html
 import json
@@ -25,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).parent
 SITE = "https://libras.se"
 VID_DIR = "/assets/videos/sinais"
+CANAL_DIR = "/assets/videos/sinais-canal"  # cortes dos shorts do canal (versão provisória, vertical 540x960)
 ILU_DIR = "/assets/img/sinais"
 CART_DIR = ILU_DIR + "/cartoes"  # ilustração + figurinha (figurinhas.py); os jogos seguem com a ilustração limpa
 
@@ -44,6 +48,18 @@ def duration(slug):
     return float(out.stdout.strip())
 
 
+_canal_json = ROOT / "sinal" / "canal.json"
+CANAL = json.loads(_canal_json.read_text()) if _canal_json.exists() else {"canal": "", "sinais": {}}
+INTERPRETE = data["interprete"].split(",")[0]
+
+
+def video_canal(c):
+    return {"src": f"{CANAL_DIR}/{c['arquivo']}.mp4", "poster": f"{CANAL_DIR}/{c['arquivo']}.webp", "w": 540, "h": 960,
+            "dur": c["dur"], "credito": c["interprete"] or "equipe LIBRAS.SE", "canal": True,
+            "youtube": f"https://www.youtube.com/shorts/{c['youtube']}", "data": c["data"], "yt_id": c["youtube"],
+            "yt_dur": c.get("dur_youtube"), "titulo": c["titulo"]}
+
+
 def seg_txt(d):
     return f"{d:.1f}".replace(".", ",") + " s" if d else "em preparação"
 
@@ -55,11 +71,18 @@ for s in data["sinais"]:
     s["ilustracao"] = s["video"] and (ROOT / ILU_DIR.lstrip("/") / f"{s['slug']}.webp").exists()
     s["cartao"] = s["ilustracao"] and (ROOT / CART_DIR.lstrip("/") / f"{s['slug']}.webp").exists()
     s["img"] = f"{CART_DIR if s['cartao'] else ILU_DIR}/{s['slug']}.webp"  # a imagem do sinal nas páginas e nos cards
-    if not s["video"]:
+    canal = [video_canal(c) for c in CANAL["sinais"].get(s["slug"], [])
+             if (ROOT / CANAL_DIR.lstrip("/") / f"{c['arquivo']}.mp4").exists()]
+    # vid: o vídeo principal da página (o da intérprete; sem ele, o do canal). outras: as versões do canal que sobram.
+    s["vid"] = ({"src": f"{VID_DIR}/{s['slug']}.mp4", "poster": f"{VID_DIR}/{s['slug']}.webp", "w": 1280, "h": 720,
+                 "dur": s["dur"], "credito": INTERPRETE, "canal": False} if s["video"] else (canal[0] if canal else None))
+    s["outras"] = canal if s["video"] else canal[1:]
+    s["canal"] = canal
+    if not s["vid"]:
         print(f"sem vídeo publicado (página em modo 'em preparação'): {s['slug']}")
     sinais.append(s)
 # listagem: primeiro os que têm vídeo publicado, depois em ordem alfabética
-sinais.sort(key=lambda s: (not s["video"], fold(s["palavra"])))
+sinais.sort(key=lambda s: (not s["vid"], fold(s["palavra"])))
 OG_PADRAO = f"{SITE}/assets/img/og/sinal.webp"
 
 # categorias com página própria: as de categorias.json com pelo menos "minimo" sinais com vídeo
@@ -67,7 +90,7 @@ CAT = json.loads((HERE / "categorias.json").read_text())
 _nomes = {s["categoria"] for s in sinais}
 assert all(c["categoria"] in _nomes for c in CAT["categorias"]), "categoria de categorias.json sem sinal"
 CAT_PAGINAS = [c for c in CAT["categorias"]
-               if sum(1 for s in sinais if s["categoria"] == c["categoria"] and s["video"]) >= CAT["minimo"]]
+               if sum(1 for s in sinais if s["categoria"] == c["categoria"] and s["vid"]) >= CAT["minimo"]]
 CAT_PROPRIA = {c["categoria"]: f"/sinal/categoria/{c['slug']}/" for c in CAT_PAGINAS}
 CAT_URL = {**CAT_PROPRIA, **CAT["fora"]}  # fora: categoria com página em outra área (Alfabeto)
 SETA_BC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>'
@@ -87,7 +110,7 @@ def com_banner(header):
 def related(s, n=4):
     """Os n sinais seguintes da mesma categoria, em rodízio. Pegar sempre os primeiros da lista deixava
     metade dos sinais só com o link do hub; assim cada página recebe links das vizinhas."""
-    com_video = [x for x in sinais if x["video"]]
+    com_video = [x for x in sinais if x["vid"]]
     same = [x for x in com_video if x["categoria"] == s["categoria"]]
     if s in same:
         i = same.index(s)
@@ -96,7 +119,7 @@ def related(s, n=4):
     if rest:
         k = sinais.index(s) % len(rest)
         rest = rest[k:] + rest[:k]
-    rest += [x for x in sinais if x is not s and not x["video"]]
+    rest += [x for x in sinais if x is not s and not x["vid"]]
     return (same + rest)[:n]
 
 
@@ -111,10 +134,11 @@ def titulo(s):
 
 def page(s):
     url = f"{SITE}/sinal/{s['slug']}/"
-    video, poster = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
+    v = s["vid"] or {}
+    video, poster, vw, vh = v.get("src"), v.get("poster"), v.get("w"), v.get("h")
     # description com até 160 caracteres (o Google corta o resto no resultado de busca)
     for ini in ((f"Sinal de {s['palavra']} em Libras em vídeo, com exemplos de uso. ", f"Sinal de {s['palavra']} em Libras em vídeo. ")
-                if s["video"] else (f"{s['palavra']} em Libras: definição, exemplos de uso e contexto. ", f"{s['palavra']} em Libras: ")):
+                if s["vid"] else (f"{s['palavra']} em Libras: definição, exemplos de uso e contexto. ", f"{s['palavra']} em Libras: ")):
         desc = ini + s["resumo"]
         if len(desc) <= 160:
             break
@@ -133,24 +157,34 @@ def page(s):
          "url": url, **({"image": SITE + s["img"]} if s["ilustracao"] else {})},
         {"@type": "VideoObject", "name": f"Sinal de {s['palavra']} em Libras",
          "description": f"Vídeo curto com o sinal de {s['palavra']} em Libras (Língua Brasileira de Sinais), "
-                        f"interpretado por intérprete profissional da LIBRAS.SE.",
-         "thumbnailUrl": SITE + poster, "contentUrl": SITE + video, "uploadDate": upload,
-         "duration": f"PT{round(s['dur'] or 0)}S", "inLanguage": "bzs", "isFamilyFriendly": True,
-         "width": 1280, "height": 720,
+                        f"interpretado por intérprete profissional da LIBRAS.SE"
+                        + (", do quadro Sinal novo todo dia do canal da LIBRAS.SE no YouTube." if v.get("canal") else "."),
+         "thumbnailUrl": SITE + (poster or ""), "contentUrl": SITE + (video or ""),
+         "uploadDate": (v["data"] + "T00:00:00-03:00") if v.get("canal") else upload,
+         "duration": f"PT{max(1, round(v.get('dur') or 0))}S", "inLanguage": "bzs", "isFamilyFriendly": True,
+         "width": vw, "height": vh,
          "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
                        "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/logo/LIBRAS-SE_marca-1536x862.png"},
                        "sameAs": ["https://instagram.com/libras.se", "https://youtube.com/@librasse",
                                   "https://linkedin.com/company/librasse", "https://facebook.com/librasse",
                                   "https://tiktok.com/@libras.se"]}},
     ]
-    if not s["video"]:
+    if not s["vid"]:
         graph = graph[:2]
+    graph += [{"@type": "VideoObject", "name": f"{s['palavra']} em Libras: short do quadro Sinal novo todo dia",
+               "description": f"Short do canal da LIBRAS.SE no YouTube ({titulo_curto(c['titulo'])}) com o sinal de "
+                              f"{s['palavra']} em Libras e a explicação de quem interpreta.",
+               "thumbnailUrl": f"https://i.ytimg.com/vi/{c['yt_id']}/hqdefault.jpg",
+               "embedUrl": f"https://www.youtube.com/embed/{c['yt_id']}", "url": c["youtube"],
+               "uploadDate": c["data"] + "T00:00:00-03:00", "inLanguage": "bzs", "isFamilyFriendly": True,
+               **({"duration": f"PT{c['yt_dur']}S"} if c.get("yt_dur") else {})}
+              for c in shorts_unicos(s)]
     ld = {"@context": "https://schema.org", "@graph": graph}
     defs = "\n".join(f'        <li><span class="def-num">{i}.</span><p class="def-text">{d}</p></li>'
                      for i, d in enumerate(s["definicoes"], 1))
     dados = {"Categoria": s["categoria"], "Classe gramatical": s["classe"].replace(" · ", ", ").capitalize(),
-             **s.get("dados", {}), "Interpretação": data["interprete"].split(",")[0] if s["video"] else "Em preparação",
-             "Variação regional": "Pode variar", "Registro": "Vídeo LIBRAS.SE"}
+             **s.get("dados", {}), "Interpretação": v["credito"] if s["vid"] else "Em preparação",
+             "Variação regional": "Pode variar", "Registro": "Canal LIBRAS.SE no YouTube (provisório)" if v.get("canal") else "Vídeo LIBRAS.SE"}
     dados_html = "\n".join(f'      <div class="dado-item"><p class="dado-label">{esc(k)}</p><p class="dado-value">{esc(v)}</p></div>'
                            for k, v in list(dados.items())[:6])
     ex = "\n".join(f'      <div class="exemplo-item"><span class="exemplo-n">{i}.</span><p class="exemplo-text">{esc(e)}</p></div>'
@@ -163,18 +197,21 @@ def page(s):
           <img src="{ilu}" width="960" height="720" alt="Ilustração do sinal de {esc(s['palavra'])} em Libras: a intérprete no meio do sinal, com setas indicando o movimento das mãos{esc(f'. No canto, uma figurinha: {alt_fig}' if alt_fig else '')}" decoding="async">
           <figcaption>Ilustração: as setas mostram o movimento das mãos.</figcaption>
         </figure>''' if s["ilustracao"] else "")
-    if s["video"]:
-        # Página de exibição: o vídeo abre no cabeçalho, visível sem rolar, e começa sozinho em loop
+    if s["vid"]:
+        # Página de exibição: o vídeo abre no cabeçalho, visível sem rolar, e começa sozinho em loop.
+        # O vídeo do canal é vertical: fica inteiro no quadro 16:9, sobre o próprio poster desfocado.
+        vert = v.get("canal")
+        fundo = f'\n        <img class="vert-bg" src="{poster}" alt="" aria-hidden="true">' if vert else ""
         hero_video = f'''    <div class="hero-vid">
-      <div class="player-media">
-        <video id="sinalVid" src="{video}" poster="{poster}" width="1280" height="720" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do sinal de {esc(s['palavra'])} em Libras"></video>
+      <div class="player-media{' vert' if vert else ''}">{fundo}
+        <video id="sinalVid" src="{video}" poster="{poster}" width="{vw}" height="{vh}" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do sinal de {esc(s['palavra'])} em Libras"></video>
       </div>
       <div class="hero-ctrls">
         <div class="player-ctrls">
           <button type="button" class="pbtn" id="vPlay"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><span>Pausar</span></button>
           <button type="button" class="pbtn" id="vSlow" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg><span>Câmera lenta</span></button>
         </div>
-        <p class="player-credit">Interpretação: {esc(data['interprete'].split(',')[0])}</p>
+        <p class="player-credit">{'<span class="prov" title="Gravado fora do estúdio. A versão no padrão do sinalário está em preparação.">Vídeo provisório</span> ' if vert else ''}Interpretação: {esc(v['credito'])}</p>
       </div>
     </div>'''
         como = f'''  <section aria-labelledby="video-h">
@@ -184,18 +221,18 @@ def page(s):
       <div class="player-info">
         <p class="player-kicker">Sinal em vídeo</p>
         <h3 class="player-title">Como é o sinal de {esc(s['palavra'])} em Libras</h3>
-        <p class="player-desc">O vídeo no topo da página repete o sinal em loop. Use a câmera lenta para observar a configuração das mãos, o movimento e a expressão facial, que faz parte do sinal.</p>
-        <p class="player-credit">Interpretação: {esc(data['interprete'])}</p>
+        <p class="player-desc">O vídeo no topo da página repete o sinal em loop. Use a câmera lenta para observar a configuração das mãos, o movimento e a expressão facial, que faz parte do sinal.{CANAL_TXT if vert else ''}</p>
+        <p class="player-credit">Interpretação: {esc(v['credito'] if vert else data['interprete'])}{f' · <a href="{v["youtube"]}" target="_blank" rel="noopener">ver o vídeo completo no YouTube</a>' if vert else ''}</p>
       </div>
       </div>
     </div>
   </section>
 
-'''
-        og_media = (f'<meta property="og:image" content="{SITE + poster}">\n<meta property="og:image:width" content="1280">\n'
-                    f'<meta property="og:image:height" content="720">\n<meta property="og:video" content="{SITE + video}">\n'
-                    f'<meta property="og:video:type" content="video/mp4">\n<meta property="og:video:width" content="1280">\n'
-                    f'<meta property="og:video:height" content="720">')
+''' + outras_versoes(s)
+        og_media = (f'<meta property="og:image" content="{SITE + poster}">\n<meta property="og:image:width" content="{vw}">\n'
+                    f'<meta property="og:image:height" content="{vh}">\n<meta property="og:video" content="{SITE + video}">\n'
+                    f'<meta property="og:video:type" content="video/mp4">\n<meta property="og:video:width" content="{vw}">\n'
+                    f'<meta property="og:video:height" content="{vh}">')
         preload = f'<link rel="preload" as="image" href="{poster}">\n'
         og_image = SITE + poster
         if s["ilustracao"]:  # a ilustração é a melhor imagem para compartilhamento e Google Imagens
@@ -214,8 +251,8 @@ def page(s):
         f'      <a href="/sinal/{r["slug"]}/" class="rel-card">'
         + (f'<img src="{ILU_DIR}/{r["slug"]}.webp" alt="" width="960" height="720" loading="lazy" decoding="async">'
            if r["ilustracao"] else
-           f'<img src="{VID_DIR}/{r["slug"]}.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">'
-           if r["video"] else '<span class="rel-vazio" aria-hidden="true"></span>')
+           f'<img src="{r["vid"]["poster"]}" alt="" width="{r["vid"]["w"]}" height="{r["vid"]["h"]}" loading="lazy" decoding="async">'
+           if r["vid"] else '<span class="rel-vazio" aria-hidden="true"></span>')
         + f'<span>{esc(r["palavra"])}</span></a>'
         for r in related(s))
     arte = elementos.arte(s)
@@ -238,7 +275,7 @@ def page(s):
         "REL_CAT": (f'    <a href="{CAT_URL[s["categoria"]]}" class="rel-all">Ver todos: {esc(s["categoria"].lower())} {SETA_LINK}</a>\n'
                     if s["categoria"] in CAT_URL else ""),
         "CLASSE": esc(s["classe"]), "RESUMO": esc(s["resumo"]), "DEFS": defs, "DADOS": dados_html, "EXEMPLOS": ex,
-        "CONTEXTO": ctx, "RELACIONADOS": rel,
+        "CONTEXTO": ctx, "RELACIONADOS": rel, "YOUTUBE": youtube_completo(s),
     }
     out = template
     for k, v in rep.items():
@@ -247,6 +284,64 @@ def page(s):
     dest = ROOT / "sinal" / s["slug"] / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(out)
+
+
+CANAL_TXT = (" Este vídeo é do quadro Sinal novo todo dia, do nosso canal no YouTube, gravado no dia a dia, fora do"
+             " estúdio. A versão gravada em estúdio pela nossa intérprete está em preparação.")
+
+
+def titulo_curto(titulo):
+    """'SINAL NOVO TODO DIA 🍕"Pizza”' -> 'Sinal novo todo dia: "Pizza"' (sem emoji)."""
+    limpo = re.sub(r"[^\w\s.,!?:;()'\"“”-]", "", titulo).replace("“", '"').replace("”", '"')
+    limpo = re.sub(r"\s+", " ", limpo).strip()
+    return re.sub(r"(?i)^sinal novo todo dia\s*:?\s*", "Sinal novo todo dia: ", limpo)
+
+
+def shorts_unicos(s):
+    """Os shorts do canal com este sinal, um por vídeo do YouTube (um short pode ensinar vários sinais)."""
+    vistos = {}
+    for c in s.get("canal", []):
+        vistos.setdefault(c["yt_id"], c)
+    return list(vistos.values())
+
+
+def youtube_completo(s):
+    """O short inteiro do YouTube, no fim da página: contexto da explicação e sinal de vídeo para o Google."""
+    shorts = shorts_unicos(s)
+    if not shorts:
+        return ""
+    itens = "\n".join(f'''      <figure class="yt-short">
+        <iframe src="https://www.youtube.com/embed/{c['yt_id']}" title="{esc(titulo_curto(c['titulo']))}, no canal da LIBRAS.SE no YouTube" width="315" height="560" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>{esc(titulo_curto(c['titulo']))} · <a href="{c['youtube']}" target="_blank" rel="noopener">abrir no YouTube</a></figcaption>
+      </figure>''' for c in shorts)
+    return f'''  <section aria-labelledby="yt-h">
+    <h2 class="sec-label" id="yt-h">Vídeo completo no YouTube</h2>
+    <div class="versoes yt">
+      <p class="versoes-txt">O short original do quadro Sinal novo todo dia, com a explicação de quem interpreta. Inscreva-se no <a href="https://www.youtube.com/@libras-se-yt" target="_blank" rel="noopener">canal da LIBRAS.SE no YouTube</a> para aprender um sinal novo por dia.</p>
+{itens}
+    </div>
+  </section>
+
+'''
+
+
+def outras_versoes(s):
+    """Versões do canal do YouTube que não estão no cabeçalho: sinal já gravado em estúdio ou com dois shorts."""
+    if not s["outras"]:
+        return ""
+    itens = "\n".join(f'''      <figure class="versao">
+        <video src="{c['src']}" poster="{c['poster']}" width="{c['w']}" height="{c['h']}" autoplay muted loop playsinline preload="metadata" aria-label="Outra versão do sinal de {esc(s['palavra'])} em Libras"></video>
+        <figcaption>Interpretação: {esc(c['credito'])} · <a href="{c['youtube']}" target="_blank" rel="noopener">ver no YouTube</a></figcaption>
+      </figure>''' for c in s["outras"])
+    return f'''  <section aria-labelledby="versoes-h">
+    <h2 class="sec-label" id="versoes-h">Outra versão do sinal</h2>
+    <div class="versoes">
+      <p class="versoes-txt">Do quadro Sinal novo todo dia, do nosso canal no YouTube. Sinais podem variar entre pessoas e regiões: compare com o vídeo do topo.</p>
+{itens}
+    </div>
+  </section>
+
+'''
 
 
 def replace_block(text, name, content):
@@ -259,10 +354,10 @@ def cards_html(lista):
     cards = ""
     for s in lista:
         nome = esc(fold(s["palavra"] + " " + s.get("busca", "")))
-        v, img = f"{VID_DIR}/{s['slug']}.mp4", f"{VID_DIR}/{s['slug']}.webp"
-        if s["video"]:
-            visual = f'''<div class="card-visual" data-video="{v}">
-          {f'<img src="{s["img"]}" alt="Ilustração do sinal de {esc(s["palavra"])} em Libras" width="960" height="720" loading="lazy" decoding="async">' if s["ilustracao"] else f'<img src="{img}" alt="Intérprete fazendo o sinal de {esc(s["palavra"])} em Libras" width="1280" height="720" loading="lazy" decoding="async">'}
+        if s["vid"]:
+            v, img, w, h = s["vid"]["src"], s["vid"]["poster"], s["vid"]["w"], s["vid"]["h"]
+            visual = f'''<div class="card-visual{' vert' if s['vid']['canal'] else ''}" data-video="{v}">
+          {f'<img src="{s["img"]}" alt="Ilustração do sinal de {esc(s["palavra"])} em Libras" width="960" height="720" loading="lazy" decoding="async">' if s["ilustracao"] else f'<img src="{img}" alt="Intérprete fazendo o sinal de {esc(s["palavra"])} em Libras" width="{w}" height="{h}" loading="lazy" decoding="async">'}
           <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
         </div>'''
         else:
@@ -296,7 +391,7 @@ def index():
         f'\n      <button type="button" class="chip" data-cat="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in cats) + "\n      "
     cards = cards_html(sinais)
     n = len(sinais)
-    nv = sum(1 for s in sinais if s["video"])
+    nv = sum(1 for s in sinais if s["vid"])
     count = (f"{nv} {'sinal' if nv == 1 else 'sinais'} em vídeo, com página própria. Mais sinais em breve." if nv
              else f"{n} {'sinal' if n == 1 else 'sinais'} com página própria. Vídeos em breve.")
     itemlist = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": "Sinais em Libras",
@@ -324,10 +419,11 @@ def categorias():
         cat, rel = c["categoria"], CAT_PROPRIA[c["categoria"]]
         url = SITE + rel
         lista = [s for s in sinais if s["categoria"] == cat]
-        nv = sum(1 for s in lista if s["video"])
+        nv = sum(1 for s in lista if s["vid"])
         assert 70 <= len(c["description"]) <= 165 and len(c["title"]) <= 60, f"{cat}: title ou description fora do tamanho"
         nome = f'{c["h1"]} Libras'
-        capa = next(f"{SITE}{VID_DIR}/{s['slug']}.webp" for s in lista if s["video"])
+        capa = next((f"{SITE}{VID_DIR}/{s['slug']}.webp" for s in lista if s["video"]),
+                    next(SITE + s["vid"]["poster"] for s in lista if s["vid"]))
         faqs = c["faq"] + CAT["faq_comum"]
         graph = {"@context": "https://schema.org", "@graph": [
             {"@type": "BreadcrumbList", "itemListElement": [
@@ -407,7 +503,7 @@ def sitemap():
         text = re.sub(rf"\s*<url>\s*<loc>{re.escape(SITE)}/sinal/{s['slug']}/</loc>.*?</url>", "", text, flags=re.S)
     block = ""
     for s in sinais:
-        if not s["video"]:
+        if not s["vid"]:
             block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
@@ -418,6 +514,8 @@ def sitemap():
             continue
         title = esc(f"Sinal de {s['palavra']} em Libras")
         d = esc(f"Vídeo curto com o sinal de {s['palavra']} em Libras, interpretado por intérprete profissional da LIBRAS.SE.")
+        v = s["vid"]
+        pub = v["data"] if v["canal"] else s.get("publicado_em", data["publicado_em"])
         block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
@@ -425,12 +523,12 @@ def sitemap():
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
-      <video:thumbnail_loc>{SITE}{VID_DIR}/{s['slug']}.webp</video:thumbnail_loc>
+      <video:thumbnail_loc>{SITE}{v['poster']}</video:thumbnail_loc>
       <video:title>{title}</video:title>
       <video:description>{d}</video:description>
-      <video:content_loc>{SITE}{VID_DIR}/{s['slug']}.mp4</video:content_loc>
-      <video:duration>{max(1, round(s['dur']))}</video:duration>
-      <video:publication_date>{s.get('publicado_em', data['publicado_em'])}T00:00:00-03:00</video:publication_date>
+      <video:content_loc>{SITE}{v['src']}</video:content_loc>
+      <video:duration>{max(1, round(v['dur']))}</video:duration>
+      <video:publication_date>{pub}T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>"""

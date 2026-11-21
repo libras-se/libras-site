@@ -251,6 +251,23 @@ section+section{margin-top:52px}
 .player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
 .player-vazio strong{color:#fff;font-size:1.05rem}
 .player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Vídeo do canal (vertical): inteiro no quadro, sobre o próprio poster desfocado */
+.player-media.vert video{object-fit:contain}
+.player-media .vert-bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.player-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+/* Outra versão do sinal (vídeos do canal) */
+.versoes{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px 20px}
+.versoes-txt{flex-basis:100%;font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.6}
+.versao{margin:0;width:min(230px,100%);display:flex;flex-direction:column;gap:8px}
+.versao video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--rlg);background:#0e3538;display:block}
+.versao figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.versao figcaption a{color:inherit;text-decoration:underline}
+.versoes-txt a{color:var(--teal-dd);text-decoration:underline}
+.yt-short{margin:0;width:min(315px,100%);display:flex;flex-direction:column;gap:8px}
+.yt-short iframe{width:100%;height:auto;aspect-ratio:9/16;border:0;border-radius:var(--rlg);background:#0e3538;display:block}
+.yt-short figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.yt-short figcaption a{color:inherit;text-decoration:underline}
+.prov{display:inline-block;margin-right:6px;padding:2px 9px;border-radius:var(--rpill);background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.45);color:#fde68a;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
 .player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
 .player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
@@ -578,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M0 -125V-1000H750V-875H875V-625H750V-500H875V-250H750V-125ZM250 -625H625V-875H250ZM250 -250H625V-500H250Z"/></svg><span>Em pixels</span></li>
       <li class="jeito j7"><svg viewBox="-90 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M85 -159Q58 -159 44 -176Q30 -192 30 -214Q30 -237 44 -254Q58 -270 85 -270Q60 -270 47 -286Q34 -302 34 -322Q34 -343 47 -358Q60 -374 85 -374Q66 -374 54 -388Q43 -403 40 -424Q36 -446 40 -467Q43 -488 54 -502Q66 -517 85 -517Q50 -517 38 -533Q26 -549 38 -565Q50 -581 85 -581Q63 -583 52 -597Q42 -611 43 -628Q44 -646 56 -658Q68 -671 90 -670Q90 -699 107 -714Q124 -729 146 -729Q168 -729 185 -714Q202 -699 202 -670Q202 -690 218 -702Q233 -713 256 -717Q278 -721 300 -717Q323 -713 338 -702Q354 -690 354 -670Q354 -699 368 -714Q382 -728 400 -728Q419 -728 432 -714Q446 -699 446 -669Q449 -695 460 -706Q472 -718 486 -716Q499 -715 508 -701Q517 -687 514 -662Q523 -694 538 -702Q553 -710 562 -696Q570 -681 561 -649Q575 -666 594 -666Q613 -666 628 -654Q643 -641 648 -623Q652 -605 638 -587Q665 -593 682 -582Q698 -570 702 -551Q707 -532 698 -514Q688 -496 661 -490Q684 -482 692 -468Q700 -454 695 -441Q690 -428 675 -422Q660 -416 637 -425Q660 -395 657 -376Q654 -358 635 -359Q616 -360 593 -390Q604 -376 605 -361Q631 -351 650 -329Q669 -307 657 -286Q681 -292 696 -286Q711 -279 714 -266Q718 -253 709 -240Q700 -227 676 -220Q704 -214 716 -198Q727 -182 724 -164Q720 -147 704 -136Q687 -125 658 -131Q678 -112 678 -92Q678 -72 665 -58Q652 -45 632 -44Q612 -44 592 -63Q605 -32 600 -18Q596 -3 582 -10Q568 -16 555 -47Q558 -25 544 -10Q529 5 506 12Q484 19 460 17Q437 15 420 4Q403 -8 400 -30Q400 -3 384 11Q368 25 346 25Q325 25 309 11Q293 -3 293 -30Q293 -7 280 4Q268 16 251 16Q234 16 222 4Q209 -7 209 -30Q209 -11 196 -2Q184 8 165 6Q146 4 128 -13Q109 -30 96 -66Q84 -101 85 -159ZM275 -475Q291 -475 298 -462Q306 -448 308 -432Q310 -416 310 -409Q312 -425 324 -431Q336 -437 349 -432Q362 -428 365 -414Q363 -432 382 -440Q401 -449 416 -442Q414 -453 420 -464Q427 -476 439 -480Q429 -486 424 -500Q418 -513 420 -524Q412 -518 406 -522Q401 -526 403 -537Q391 -522 368 -524Q344 -525 334 -541Q334 -529 325 -520Q316 -512 304 -512Q309 -500 302 -488Q294 -475 275 -475ZM366 -142Q365 -159 380 -166Q394 -172 408 -168Q403 -185 410 -204Q418 -224 433 -234Q417 -241 404 -256Q391 -270 389 -285Q381 -272 363 -269Q345 -266 329 -271Q332 -255 320 -241Q309 -227 291 -229Q306 -220 311 -200Q316 -180 313 -164Q328 -171 347 -166Q366 -160 366 -142Z"/></svg><span>De bolhas</span></li>
     </ul>
-    <p class="letra-com"><strong>B</strong> de <a href="/sinal/banana/">banana</a>, <a href="/sinal/borboleta/">borboleta</a>, bola e balão.</p>
+    <p class="letra-com"><strong>B</strong> de <a href="/sinal/banana/">banana</a>, <a href="/sinal/borboleta/">borboleta</a>, bola e <a href="/sinal/balao/">balão</a>.</p>
     <h3 class="ficha-sub">Sinais que começam com B</h3>
     <nav class="rel-grid" aria-label="Sinais que começam com a letra B">
       <a href="/sinal/bahia/" class="rel-card"><img src="/assets/img/sinais/bahia.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Bahia</span></a>

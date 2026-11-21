@@ -112,6 +112,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "https://tiktok.com/@libras.se"
     ]
    }
+  },
+  {
+   "@type": "VideoObject",
+   "name": "Desculpa em Libras: short do quadro Sinal novo todo dia",
+   "description": "Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : \"desculpa\".) com o sinal de Desculpa em Libras e a explicação de quem interpreta.",
+   "thumbnailUrl": "https://i.ytimg.com/vi/7-6aOHhBlpY/hqdefault.jpg",
+   "embedUrl": "https://www.youtube.com/embed/7-6aOHhBlpY",
+   "url": "https://www.youtube.com/shorts/7-6aOHhBlpY",
+   "uploadDate": "2025-04-30T00:00:00-03:00",
+   "inLanguage": "bzs",
+   "isFamilyFriendly": true,
+   "duration": "PT19S"
   }
  ]
 }
@@ -257,6 +269,23 @@ section+section{margin-top:52px}
 .player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
 .player-vazio strong{color:#fff;font-size:1.05rem}
 .player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Vídeo do canal (vertical): inteiro no quadro, sobre o próprio poster desfocado */
+.player-media.vert video{object-fit:contain}
+.player-media .vert-bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.player-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+/* Outra versão do sinal (vídeos do canal) */
+.versoes{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px 20px}
+.versoes-txt{flex-basis:100%;font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.6}
+.versao{margin:0;width:min(230px,100%);display:flex;flex-direction:column;gap:8px}
+.versao video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--rlg);background:#0e3538;display:block}
+.versao figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.versao figcaption a{color:inherit;text-decoration:underline}
+.versoes-txt a{color:var(--teal-dd);text-decoration:underline}
+.yt-short{margin:0;width:min(315px,100%);display:flex;flex-direction:column;gap:8px}
+.yt-short iframe{width:100%;height:auto;aspect-ratio:9/16;border:0;border-radius:var(--rlg);background:#0e3538;display:block}
+.yt-short figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.yt-short figcaption a{color:inherit;text-decoration:underline}
+.prov{display:inline-block;margin-right:6px;padding:2px 9px;border-radius:var(--rpill);background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.45);color:#fde68a;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
 .player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
 .player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
@@ -573,6 +602,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section aria-labelledby="versoes-h">
+    <h2 class="sec-label" id="versoes-h">Outra versão do sinal</h2>
+    <div class="versoes">
+      <p class="versoes-txt">Do quadro Sinal novo todo dia, do nosso canal no YouTube. Sinais podem variar entre pessoas e regiões: compare com o vídeo do topo.</p>
+      <figure class="versao">
+        <video src="/assets/videos/sinais-canal/desculpa.mp4" poster="/assets/videos/sinais-canal/desculpa.webp" width="540" height="960" autoplay muted loop playsinline preload="metadata" aria-label="Outra versão do sinal de Desculpa em Libras"></video>
+        <figcaption>Interpretação: Guito · <a href="https://www.youtube.com/shorts/7-6aOHhBlpY" target="_blank" rel="noopener">ver no YouTube</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
 
   <section aria-labelledby="def-h">
     <h2 class="sec-label" id="def-h">Definição</h2>
@@ -613,13 +653,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section aria-labelledby="yt-h">
+    <h2 class="sec-label" id="yt-h">Vídeo completo no YouTube</h2>
+    <div class="versoes yt">
+      <p class="versoes-txt">O short original do quadro Sinal novo todo dia, com a explicação de quem interpreta. Inscreva-se no <a href="https://www.youtube.com/@libras-se-yt" target="_blank" rel="noopener">canal da LIBRAS.SE no YouTube</a> para aprender um sinal novo por dia.</p>
+      <figure class="yt-short">
+        <iframe src="https://www.youtube.com/embed/7-6aOHhBlpY" title="UM SINAL NOVO TODO DIA : &quot;desculpa&quot;., no canal da LIBRAS.SE no YouTube" width="315" height="560" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>UM SINAL NOVO TODO DIA : &quot;desculpa&quot;. · <a href="https://www.youtube.com/shorts/7-6aOHhBlpY" target="_blank" rel="noopener">abrir no YouTube</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section aria-labelledby="rel-h">
     <h2 class="sec-label" id="rel-h">Outros sinais em Libras</h2>
     <nav class="rel-grid" aria-label="Outros sinais">
+      <a href="/sinal/fica-em-casa/" class="rel-card"><img src="/assets/videos/sinais-canal/fica-em-casa.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span>Fica em casa</span></a>
+      <a href="/sinal/fofoca/" class="rel-card"><img src="/assets/videos/sinais-canal/fofoca.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span>Fofoca</span></a>
+      <a href="/sinal/malvada/" class="rel-card"><img src="/assets/videos/sinais-canal/malvada.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span>Malvada</span></a>
       <a href="/sinal/nao/" class="rel-card"><img src="/assets/img/sinais/nao.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Não</span></a>
-      <a href="/sinal/obrigado/" class="rel-card"><img src="/assets/img/sinais/obrigado.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Obrigado</span></a>
-      <a href="/sinal/sim/" class="rel-card"><img src="/assets/img/sinais/sim.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Sim</span></a>
-      <a href="/sinal/ajuda/" class="rel-card"><img src="/assets/img/sinais/ajuda.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Ajuda</span></a>
     </nav>
     <a href="/sinal/categoria/expressoes/" class="rel-all">Ver todos: expressões <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
     <a href="/sinal/" class="rel-all">Ver todos os sinais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>

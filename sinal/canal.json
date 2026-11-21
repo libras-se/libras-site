@@ -1,0 +1,1058 @@
+{
+ "_leia": "Vídeos do canal youtube.com/@libras-se-yt cortados para o sinalário (producao-conteudo/youtube-sinais). Arquivo gerado por exportar_site.py: não edite à mão. VÍDEOS PROVISÓRIOS: todos estes sinais precisam ser regravados no estúdio para padronizar (lista em producao-conteudo/youtube-sinais/regravar.md); o vídeo da intérprete, quando aprovado, vira o principal sozinho.",
+ "canal": "https://www.youtube.com/@libras-se-yt",
+ "sinais": {
+  "academia": [
+   {
+    "youtube": "845JoyfnBGk",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Academia”",
+    "data": "2025-05-29",
+    "interprete": "Guito",
+    "dur": 2.97,
+    "dur_youtube": 19,
+    "arquivo": "academia"
+   },
+   {
+    "youtube": "0gZqHFfrfZs",
+    "titulo": "Aprenda Libras - Um sinal por dia: Academia",
+    "data": "2021-03-31",
+    "interprete": null,
+    "dur": 11.5,
+    "dur_youtube": 26,
+    "arquivo": "academia-2"
+   }
+  ],
+  "acessibilidade": [
+   {
+    "youtube": "VefrI2-OGwA",
+    "titulo": "Aprenda Libras - Um sinal por dia: Acessibilidade",
+    "data": "2021-03-19",
+    "interprete": null,
+    "dur": 6.63,
+    "dur_youtube": 19,
+    "arquivo": "acessibilidade"
+   }
+  ],
+  "aeroporto": [
+   {
+    "youtube": "buTuWm2edwY",
+    "titulo": "SINAL NOVO TODO DIA 🛩️\"Aeroporto”",
+    "data": "2025-07-01",
+    "interprete": "Guito",
+    "dur": 5.63,
+    "dur_youtube": 37,
+    "arquivo": "aeroporto"
+   }
+  ],
+  "balao": [
+   {
+    "youtube": "-Bv60Ci-uLg",
+    "titulo": "UM SINAL NOVO TODO DIA: “Balão”, “Bandeirinhas” e “Barraca”.",
+    "data": "2025-06-17",
+    "interprete": "Guito",
+    "dur": 4.83,
+    "dur_youtube": 29,
+    "arquivo": "balao"
+   }
+  ],
+  "bale": [
+   {
+    "youtube": "Hh0ySxanInc",
+    "titulo": "SINAL NOVO TODO DIA 🩰📻🪗\"Balé, Hip Hop e Forró”",
+    "data": "2025-08-02",
+    "interprete": "Guito",
+    "dur": 6.8,
+    "dur_youtube": 41,
+    "arquivo": "bale"
+   }
+  ],
+  "bandeirinha": [
+   {
+    "youtube": "-Bv60Ci-uLg",
+    "titulo": "UM SINAL NOVO TODO DIA: “Balão”, “Bandeirinhas” e “Barraca”.",
+    "data": "2025-06-17",
+    "interprete": "Guito",
+    "dur": 5.13,
+    "dur_youtube": 29,
+    "arquivo": "bandeirinha"
+   }
+  ],
+  "barco": [
+   {
+    "youtube": "eNkP3B7aV_0",
+    "titulo": "SINAL NOVO TODO DIA 🚤\"Barco”",
+    "data": "2025-07-05",
+    "interprete": "Luiz",
+    "dur": 1.9,
+    "dur_youtube": 15,
+    "arquivo": "barco"
+   }
+  ],
+  "barraca": [
+   {
+    "youtube": "-Bv60Ci-uLg",
+    "titulo": "UM SINAL NOVO TODO DIA: “Balão”, “Bandeirinhas” e “Barraca”.",
+    "data": "2025-06-17",
+    "interprete": "Guito",
+    "dur": 4.33,
+    "dur_youtube": 29,
+    "arquivo": "barraca"
+   }
+  ],
+  "bem-vindo": [
+   {
+    "youtube": "poetbJhQY4A",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “bem-vindo”.",
+    "data": "2025-04-30",
+    "interprete": "Guito",
+    "dur": 4.27,
+    "dur_youtube": 23,
+    "arquivo": "bem-vindo"
+   }
+  ],
+  "biblioteca": [
+   {
+    "youtube": "1WFTUXRFdkI",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Biblioteca\".",
+    "data": "2025-06-02",
+    "interprete": "Guito",
+    "dur": 5.17,
+    "dur_youtube": 18,
+    "arquivo": "biblioteca"
+   }
+  ],
+  "bloco": [
+   {
+    "youtube": "mFEI5ez3_9U",
+    "titulo": "Aprenda Libras - Um sinal por dia: Bloco",
+    "data": "2021-03-14",
+    "interprete": null,
+    "dur": 4.37,
+    "dur_youtube": 14,
+    "arquivo": "bloco"
+   }
+  ],
+  "boi-bumba": [
+   {
+    "youtube": "GxhN701mIss",
+    "titulo": "SINAL NOVO TODO DIA 🎊\"boi bumbá”",
+    "data": "2025-07-02",
+    "interprete": "Luiz",
+    "dur": 2.5,
+    "dur_youtube": 34,
+    "arquivo": "boi-bumba"
+   }
+  ],
+  "bolo": [
+   {
+    "youtube": "kF6q97BhjMM",
+    "titulo": "SINAL NOVO TODO DIA 🍰\"Bolo, Milho e Paçoca”",
+    "data": "2025-07-17",
+    "interprete": "Guito",
+    "dur": 2.8,
+    "dur_youtube": 28,
+    "arquivo": "bolo"
+   }
+  ],
+  "bom-dia": [
+   {
+    "youtube": "G7e0QWZqOck",
+    "titulo": "Aprenda Libras - Um sinal por dia: Bom dia",
+    "data": "2021-03-23",
+    "interprete": null,
+    "dur": 8.77,
+    "dur_youtube": 25,
+    "arquivo": "bom-dia"
+   }
+  ],
+  "bravo": [
+   {
+    "youtube": "gjmD0KbAnsQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Bravo”.",
+    "data": "2025-05-14",
+    "interprete": "Guito",
+    "dur": 1.87,
+    "dur_youtube": 26,
+    "arquivo": "bravo"
+   }
+  ],
+  "cadeira": [
+   {
+    "youtube": "pq1_iWa1NYg",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Cadeira”",
+    "data": "2025-05-22",
+    "interprete": "Guito",
+    "dur": 2.0,
+    "dur_youtube": 22,
+    "arquivo": "cadeira"
+   }
+  ],
+  "cafe": [
+   {
+    "youtube": "DjnVA7SS38c",
+    "titulo": "SINAL NOVO TODO DIA ☕️\"Café”",
+    "data": "2025-07-16",
+    "interprete": "Guito",
+    "dur": 1.77,
+    "dur_youtube": 41,
+    "arquivo": "cafe"
+   }
+  ],
+  "capacete": [
+   {
+    "youtube": "2Sy9DJWUqV8",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Capacete”",
+    "data": "2025-05-24",
+    "interprete": "Guito",
+    "dur": 4.03,
+    "dur_youtube": 17,
+    "arquivo": "capacete"
+   }
+  ],
+  "carnaval": [
+   {
+    "youtube": "tMt5fePB40w",
+    "titulo": "Aprenda Libras - Um sinal por dia: Carnaval",
+    "data": "2021-03-11",
+    "interprete": null,
+    "dur": 2.9,
+    "dur_youtube": 13,
+    "arquivo": "carnaval"
+   }
+  ],
+  "celular": [
+   {
+    "youtube": "UoaLewGF9Ng",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Celular”",
+    "data": "2025-05-21",
+    "interprete": "Guito",
+    "dur": 3.27,
+    "dur_youtube": 22,
+    "arquivo": "celular"
+   }
+  ],
+  "cerveja": [
+   {
+    "youtube": "l-dQR9_Ia7A",
+    "titulo": "SINAL NOVO TODO DIA 🍻\"Cerveja”",
+    "data": "2025-07-19",
+    "interprete": "Guito",
+    "dur": 4.27,
+    "dur_youtube": 32,
+    "arquivo": "cerveja"
+   }
+  ],
+  "chefe": [
+   {
+    "youtube": "hI9W-IWwa8o",
+    "titulo": "SINAL NOVO TODO DIA 👔\"Chefe”",
+    "data": "2025-07-25",
+    "interprete": "Guito",
+    "dur": 3.33,
+    "dur_youtube": 34,
+    "arquivo": "chefe"
+   }
+  ],
+  "cliente": [
+   {
+    "youtube": "oXaTVfRn0HE",
+    "titulo": "SINAL NOVO TODO DIA 💳\"Cliente”",
+    "data": "2025-07-23",
+    "interprete": "Guito",
+    "dur": 5.1,
+    "dur_youtube": 35,
+    "arquivo": "cliente"
+   }
+  ],
+  "coda": [
+   {
+    "youtube": "JVNqXA_KAa4",
+    "titulo": "Aprenda Libras - Um sinal por dia: Coda",
+    "data": "2021-03-21",
+    "interprete": null,
+    "dur": 12.63,
+    "dur_youtube": 25,
+    "arquivo": "coda"
+   }
+  ],
+  "com-licenca": [
+   {
+    "youtube": "BBumixphKq0",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Com licença”",
+    "data": "2025-05-07",
+    "interprete": "Guito",
+    "dur": 4.33,
+    "dur_youtube": 16,
+    "arquivo": "com-licenca"
+   }
+  ],
+  "conclave": [
+   {
+    "youtube": "KyNd-AbfdQo",
+    "titulo": "SINAL NOVO TODO DIA 🤟: “Papa” e “Conclave”.",
+    "data": "2025-05-09",
+    "interprete": "Guito",
+    "dur": 4.03,
+    "dur_youtube": 23,
+    "arquivo": "conclave"
+   }
+  ],
+  "covid": [
+   {
+    "youtube": "76l-vMq99Uo",
+    "titulo": "Aprenda Libras - Um sinal por dia: Covid",
+    "data": "2021-04-14",
+    "interprete": null,
+    "dur": 3.77,
+    "dur_youtube": 13,
+    "arquivo": "covid"
+   }
+  ],
+  "cultura": [
+   {
+    "youtube": "rkQyOgbkzW4",
+    "titulo": "SINAL NOVO TODO DIA 🎨\"Cultura”",
+    "data": "2025-07-30",
+    "interprete": "Guito",
+    "dur": 3.0,
+    "dur_youtube": 24,
+    "arquivo": "cultura"
+   }
+  ],
+  "danca": [
+   {
+    "youtube": "0IOvkeHBNvk",
+    "titulo": "SINAL NOVO TODO DIA 💃\"Dança”",
+    "data": "2025-07-31",
+    "interprete": "Guito",
+    "dur": 3.53,
+    "dur_youtube": 22,
+    "arquivo": "danca"
+   }
+  ],
+  "de-nada": [
+   {
+    "youtube": "6Ex3fl_F2qQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “obrigado” e \"de nada\".",
+    "data": "2025-04-30",
+    "interprete": "Guito",
+    "dur": 8.0,
+    "dur_youtube": 31,
+    "arquivo": "de-nada"
+   }
+  ],
+  "democracia": [
+   {
+    "youtube": "e7KN2iZl4mw",
+    "titulo": "SINAL NOVO TODO DIA 🗳️\"Democracia”",
+    "data": "2025-07-30",
+    "interprete": "Guito",
+    "dur": 7.23,
+    "dur_youtube": 29,
+    "arquivo": "democracia"
+   }
+  ],
+  "descanso": [
+   {
+    "youtube": "Zocc-MEvop0",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Descanso”",
+    "data": "2025-05-02",
+    "interprete": "Guito",
+    "dur": 4.9,
+    "dur_youtube": 23,
+    "arquivo": "descanso"
+   }
+  ],
+  "desculpa": [
+   {
+    "youtube": "7-6aOHhBlpY",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “desculpa\".",
+    "data": "2025-04-30",
+    "interprete": "Guito",
+    "dur": 4.2,
+    "dur_youtube": 19,
+    "arquivo": "desculpa"
+   }
+  ],
+  "elevador": [
+   {
+    "youtube": "Lkhcaih14O0",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Elevador”",
+    "data": "2025-05-27",
+    "interprete": "Guito",
+    "dur": 5.8,
+    "dur_youtube": 25,
+    "arquivo": "elevador"
+   }
+  ],
+  "empresa": [
+   {
+    "youtube": "1U529xbdKiE",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Empresa”",
+    "data": "2025-06-04",
+    "interprete": "Guito",
+    "dur": 3.87,
+    "dur_youtube": 16,
+    "arquivo": "empresa"
+   }
+  ],
+  "escada-rolante": [
+   {
+    "youtube": "ze-qFGATO90",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Escada rolante”",
+    "data": "2025-05-30",
+    "interprete": "Guito",
+    "dur": 5.4,
+    "dur_youtube": 23,
+    "arquivo": "escada-rolante"
+   }
+  ],
+  "escritorio": [
+   {
+    "youtube": "n3vlysPIxa8",
+    "titulo": "SINAL NOVO TODO DIA 📎\"Escritório”",
+    "data": "2025-07-23",
+    "interprete": "Guito",
+    "dur": 2.73,
+    "dur_youtube": 25,
+    "arquivo": "escritorio"
+   }
+  ],
+  "esporte": [
+   {
+    "youtube": "04El0lauiwE",
+    "titulo": "Aprenda Libras - Um sinal por dia: Esporte",
+    "data": "2021-03-26",
+    "interprete": null,
+    "dur": 4.67,
+    "dur_youtube": 16,
+    "arquivo": "esporte"
+   }
+  ],
+  "evento": [
+   {
+    "youtube": "T0_WXsto-g8",
+    "titulo": "SINAL NOVO TODO DIA: Evento\"",
+    "data": "2025-06-24",
+    "interprete": "Guito",
+    "dur": 7.7,
+    "dur_youtube": 22,
+    "arquivo": "evento"
+   }
+  ],
+  "farra": [
+   {
+    "youtube": "oG_GKnzgvPc",
+    "titulo": "Aprenda Libras - Um sinal por dia: Farra",
+    "data": "2021-03-16",
+    "interprete": null,
+    "dur": 4.67,
+    "dur_youtube": 15,
+    "arquivo": "farra"
+   }
+  ],
+  "feliz": [
+   {
+    "youtube": "n9Rxr4O5UWc",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Feliz”.",
+    "data": "2025-05-12",
+    "interprete": "Guito",
+    "dur": 3.8,
+    "dur_youtube": 20,
+    "arquivo": "feliz"
+   }
+  ],
+  "festa-junina": [
+   {
+    "youtube": "5KJJOyVRL0A",
+    "titulo": "UM SINAL NOVO TODO DIA: “Festa Junina 🌽”",
+    "data": "2025-06-16",
+    "interprete": "Guito",
+    "dur": 2.6,
+    "dur_youtube": 23,
+    "arquivo": "festa-junina"
+   }
+  ],
+  "fica-em-casa": [
+   {
+    "youtube": "hbggG4VwGQE",
+    "titulo": "Aprenda Libras - Um sinal por dia: Fica em casa",
+    "data": "2021-04-14",
+    "interprete": null,
+    "dur": 6.1,
+    "dur_youtube": 16,
+    "arquivo": "fica-em-casa"
+   }
+  ],
+  "florianopolis": [
+   {
+    "youtube": "fH7Takfc5v8",
+    "titulo": "SINAL NOVO TODO DIA: “Floripa”",
+    "data": "2025-06-25",
+    "interprete": "Guito",
+    "dur": 11.6,
+    "dur_youtube": 45,
+    "arquivo": "florianopolis"
+   }
+  ],
+  "fofoca": [
+   {
+    "youtube": "q-g46VyKn6c",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Fofoca”",
+    "data": "2025-05-09",
+    "interprete": "Guito",
+    "dur": 2.43,
+    "dur_youtube": 19,
+    "arquivo": "fofoca"
+   }
+  ],
+  "fogueira": [
+   {
+    "youtube": "-Acr_2xnoKM",
+    "titulo": "UM SINAL NOVO TODO DIA: “Fogueira” 🔥",
+    "data": "2025-06-20",
+    "interprete": "Guito",
+    "dur": 2.07,
+    "dur_youtube": 33,
+    "arquivo": "fogueira"
+   }
+  ],
+  "forro": [
+   {
+    "youtube": "Hh0ySxanInc",
+    "titulo": "SINAL NOVO TODO DIA 🩰📻🪗\"Balé, Hip Hop e Forró”",
+    "data": "2025-08-02",
+    "interprete": "Guito",
+    "dur": 5.1,
+    "dur_youtube": 41,
+    "arquivo": "forro"
+   }
+  ],
+  "frevo": [
+   {
+    "youtube": "c3k5QxPUjZ0",
+    "titulo": "Aprenda Libras - Um sinal por dia: Frevo",
+    "data": "2021-03-17",
+    "interprete": null,
+    "dur": 4.37,
+    "dur_youtube": 14,
+    "arquivo": "frevo"
+   }
+  ],
+  "futebol": [
+   {
+    "youtube": "qngd58VomGk",
+    "titulo": "Aprenda Libras - Um sinal por dia: Futebol",
+    "data": "2021-03-27",
+    "interprete": null,
+    "dur": 4.87,
+    "dur_youtube": 14,
+    "arquivo": "futebol"
+   }
+  ],
+  "grupo-de-risco": [
+   {
+    "youtube": "jgpynWjTaWA",
+    "titulo": "Aprenda Libras - Um sinal por dia: Grupo de risco",
+    "data": "2021-04-15",
+    "interprete": null,
+    "dur": 8.53,
+    "dur_youtube": 19,
+    "arquivo": "grupo-de-risco"
+   }
+  ],
+  "helicoptero": [
+   {
+    "youtube": "pnnoMAZoAks",
+    "titulo": "Aprenda Libras - Um sinal por dia: Helicóptero",
+    "data": "2021-04-01",
+    "interprete": null,
+    "dur": 13.83,
+    "dur_youtube": 34,
+    "arquivo": "helicoptero"
+   }
+  ],
+  "hip-hop": [
+   {
+    "youtube": "Hh0ySxanInc",
+    "titulo": "SINAL NOVO TODO DIA 🩰📻🪗\"Balé, Hip Hop e Forró”",
+    "data": "2025-08-02",
+    "interprete": "Guito",
+    "dur": 5.7,
+    "dur_youtube": 41,
+    "arquivo": "hip-hop"
+   }
+  ],
+  "internet": [
+   {
+    "youtube": "KZpgLNL2QyY",
+    "titulo": "SINAL NOVO TODO DIA 💾\"Internet”",
+    "data": "2025-07-10",
+    "interprete": "Guito",
+    "dur": 2.8,
+    "dur_youtube": 27,
+    "arquivo": "internet"
+   }
+  ],
+  "interprete": [
+   {
+    "youtube": "wz0Ue7JLftE",
+    "titulo": "SINAL NOVO TODO DIA 🤟\"Intérprete”",
+    "data": "2025-07-08",
+    "interprete": "Guito",
+    "dur": 2.87,
+    "dur_youtube": 30,
+    "arquivo": "interprete"
+   }
+  ],
+  "lady-gaga": [
+   {
+    "youtube": "WnOyQqYiweg",
+    "titulo": "ELA VEM SIM💕🔥 Sinal do dia: “Lady Gaga”",
+    "data": "2025-05-03",
+    "interprete": "Guito",
+    "dur": 3.6,
+    "dur_youtube": 19,
+    "arquivo": "lady-gaga"
+   }
+  ],
+  "libras": [
+   {
+    "youtube": "SbLZf3AWkd8",
+    "titulo": "Aprenda Libras - Um sinal por dia: Libras",
+    "data": "2021-03-22",
+    "interprete": null,
+    "dur": 9.13,
+    "dur_youtube": 22,
+    "arquivo": "libras"
+   }
+  ],
+  "libras-se": [
+   {
+    "youtube": "FMFoPXiloDM",
+    "titulo": "SINAL NOVO TODO DIA 📀\"Libras.se”",
+    "data": "2025-07-09",
+    "interprete": null,
+    "dur": 2.5,
+    "dur_youtube": 33,
+    "arquivo": "libras-se"
+   }
+  ],
+  "maca-do-amor": [
+   {
+    "youtube": "p7bwcT2gH_0",
+    "titulo": "UM SINAL NOVO TODO DIA: “Maçã do amor” 🍎",
+    "data": "2025-06-18",
+    "interprete": "Guito",
+    "dur": 2.4,
+    "dur_youtube": 39,
+    "arquivo": "maca-do-amor"
+   }
+  ],
+  "mala": [
+   {
+    "youtube": "wuYY0bt64LQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Mochila\" e \"Mala”",
+    "data": "2025-06-05",
+    "interprete": "Guito",
+    "dur": 3.13,
+    "dur_youtube": 31,
+    "arquivo": "mala"
+   }
+  ],
+  "malvada": [
+   {
+    "youtube": "OMucOpsEFK8",
+    "titulo": "UM SINAL MOVO TODO DIA: “Malvada” 🫦",
+    "data": "2025-06-13",
+    "interprete": "Guito",
+    "dur": 3.77,
+    "dur_youtube": 32,
+    "arquivo": "malvada"
+   }
+  ],
+  "medo": [
+   {
+    "youtube": "5rBubWmAx-I",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Medo”",
+    "data": "2025-05-15",
+    "interprete": "Guito",
+    "dur": 4.73,
+    "dur_youtube": 19,
+    "arquivo": "medo"
+   }
+  ],
+  "metro": [
+   {
+    "youtube": "JgdpcHV6Cco",
+    "titulo": "UM SINAL NOVO TODO DIA 🚇: “Metrô”",
+    "data": "2025-06-11",
+    "interprete": "Guito",
+    "dur": 4.63,
+    "dur_youtube": 23,
+    "arquivo": "metro"
+   }
+  ],
+  "milho": [
+   {
+    "youtube": "kF6q97BhjMM",
+    "titulo": "SINAL NOVO TODO DIA 🍰\"Bolo, Milho e Paçoca”",
+    "data": "2025-07-17",
+    "interprete": "Guito",
+    "dur": 2.3,
+    "dur_youtube": 28,
+    "arquivo": "milho"
+   }
+  ],
+  "mochila": [
+   {
+    "youtube": "wuYY0bt64LQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Mochila\" e \"Mala”",
+    "data": "2025-06-05",
+    "interprete": "Guito",
+    "dur": 3.9,
+    "dur_youtube": 31,
+    "arquivo": "mochila"
+   }
+  ],
+  "morango-do-amor": [
+   {
+    "youtube": "NCn_CDhUIRA",
+    "titulo": "SINAL NOVO TODO DIA 🍓\"Morango do amor”",
+    "data": "2025-07-29",
+    "interprete": "Guito",
+    "dur": 10.9,
+    "dur_youtube": 47,
+    "arquivo": "morango-do-amor"
+   }
+  ],
+  "museu": [
+   {
+    "youtube": "zeqLcp70bLY",
+    "titulo": "UM SINAL NOVO TODO DIA 🎨: \"Museu”",
+    "data": "2025-06-10",
+    "interprete": "Guito",
+    "dur": 3.87,
+    "dur_youtube": 16,
+    "arquivo": "museu"
+   }
+  ],
+  "natacao": [
+   {
+    "youtube": "A4BaR5jgURg",
+    "titulo": "Aprenda Libras - Um sinal por dia: Natação",
+    "data": "2021-03-29",
+    "interprete": null,
+    "dur": 4.87,
+    "dur_youtube": 15,
+    "arquivo": "natacao"
+   }
+  ],
+  "nojo": [
+   {
+    "youtube": "Slwh9hx6PfI",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Nojo”",
+    "data": "2025-05-17",
+    "interprete": "Guito",
+    "dur": 3.9,
+    "dur_youtube": 18,
+    "arquivo": "nojo"
+   }
+  ],
+  "obrigado": [
+   {
+    "youtube": "6Ex3fl_F2qQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “obrigado” e \"de nada\".",
+    "data": "2025-04-30",
+    "interprete": "Guito",
+    "dur": 8.27,
+    "dur_youtube": 31,
+    "arquivo": "obrigado"
+   }
+  ],
+  "olimpiada": [
+   {
+    "youtube": "Wn1qSbQcD2I",
+    "titulo": "Aprenda Libras - Um sinal por dia: Olimpíada",
+    "data": "2021-03-25",
+    "interprete": null,
+    "dur": 5.23,
+    "dur_youtube": 15,
+    "arquivo": "olimpiada"
+   }
+  ],
+  "pacoca": [
+   {
+    "youtube": "kF6q97BhjMM",
+    "titulo": "SINAL NOVO TODO DIA 🍰\"Bolo, Milho e Paçoca”",
+    "data": "2025-07-17",
+    "interprete": "Guito",
+    "dur": 5.8,
+    "dur_youtube": 28,
+    "arquivo": "pacoca"
+   }
+  ],
+  "papa": [
+   {
+    "youtube": "KyNd-AbfdQo",
+    "titulo": "SINAL NOVO TODO DIA 🤟: “Papa” e “Conclave”.",
+    "data": "2025-05-09",
+    "interprete": "Guito",
+    "dur": 3.37,
+    "dur_youtube": 23,
+    "arquivo": "papa"
+   }
+  ],
+  "pipoca": [
+   {
+    "youtube": "Z5DtixZGKW4",
+    "titulo": "UM SINAL NOVO TODO DIA: “pipoca” 🍿",
+    "data": "2025-06-19",
+    "interprete": "Guito",
+    "dur": 2.23,
+    "dur_youtube": 22,
+    "arquivo": "pipoca"
+   }
+  ],
+  "pizza": [
+   {
+    "youtube": "E5z4ASSKA-s",
+    "titulo": "SINAL NOVO TODO DIA 🍕\"Pizza”",
+    "data": "2025-07-15",
+    "interprete": "Guito",
+    "dur": 3.43,
+    "dur_youtube": 21,
+    "arquivo": "pizza"
+   }
+  ],
+  "por-favor": [
+   {
+    "youtube": "eb7-Ki4gy3M",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Por favor”",
+    "data": "2025-05-06",
+    "interprete": "Guito",
+    "dur": 4.0,
+    "dur_youtube": 19,
+    "arquivo": "por-favor"
+   }
+  ],
+  "predio": [
+   {
+    "youtube": "NTJ9y6G-NpQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🏢: “Prédio”",
+    "data": "2025-06-09",
+    "interprete": "Guito",
+    "dur": 6.53,
+    "dur_youtube": 19,
+    "arquivo": "predio"
+   }
+  ],
+  "reuniao": [
+   {
+    "youtube": "qmHFrD2xQJI",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Reunião”",
+    "data": "2025-06-03",
+    "interprete": "Guito",
+    "dur": 5.63,
+    "dur_youtube": 21,
+    "arquivo": "reuniao"
+   }
+  ],
+  "rio": [
+   {
+    "youtube": "agoyeI4nqdg",
+    "titulo": "SINAL NOVO TODO DIA 🐠\"Rio”",
+    "data": "2025-07-03",
+    "interprete": "Luiz",
+    "dur": 2.93,
+    "dur_youtube": 15,
+    "arquivo": "rio"
+   }
+  ],
+  "rotina": [
+   {
+    "youtube": "mKgi8SF85DE",
+    "titulo": "SINAL NOVO TODO DIA 🗓️\"Rotina” ou “Todo dia”",
+    "data": "2025-07-24",
+    "interprete": "Guito",
+    "dur": 12.67,
+    "dur_youtube": 41,
+    "arquivo": "rotina"
+   }
+  ],
+  "samba": [
+   {
+    "youtube": "TaYHbYrXGI8",
+    "titulo": "Aprenda Libras - Um sinal por dia: Samba",
+    "data": "2021-03-18",
+    "interprete": null,
+    "dur": 3.97,
+    "dur_youtube": 14,
+    "arquivo": "samba"
+   }
+  ],
+  "skate": [
+   {
+    "youtube": "YRCe6nzd5dg",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Skate”",
+    "data": "2025-05-22",
+    "interprete": "Guito",
+    "dur": 1.47,
+    "dur_youtube": 22,
+    "arquivo": "skate"
+   }
+  ],
+  "supermercado": [
+   {
+    "youtube": "N-PJzWBSkTo",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Supermercado”",
+    "data": "2025-05-29",
+    "interprete": "Guito",
+    "dur": 5.07,
+    "dur_youtube": 22,
+    "arquivo": "supermercado"
+   }
+  ],
+  "surdo": [
+   {
+    "youtube": "qWZ7qFEdyb8",
+    "titulo": "Aprenda Libras - Um sinal por dia: Surdo",
+    "data": "2021-03-20",
+    "interprete": null,
+    "dur": 5.63,
+    "dur_youtube": 16,
+    "arquivo": "surdo"
+   }
+  ],
+  "teatro": [
+   {
+    "youtube": "5remBb4oYdY",
+    "titulo": "UM SINAL NOVO TODO DIA 🩷💚 \"Teatro”",
+    "data": "2025-06-12",
+    "interprete": "Guito",
+    "dur": 1.63,
+    "dur_youtube": 31,
+    "arquivo": "teatro"
+   }
+  ],
+  "tecnologia": [
+   {
+    "youtube": "rfNkEZBZOyo",
+    "titulo": "SINAL NOVO TODO DIA 📟\"Tecnologia”",
+    "data": "2025-07-11",
+    "interprete": "Guito",
+    "dur": 1.83,
+    "dur_youtube": 28,
+    "arquivo": "tecnologia"
+   }
+  ],
+  "televisao": [
+   {
+    "youtube": "ojesnoZJdBI",
+    "titulo": "SINAL NOVO TODO DIA 📺\"Televisão”",
+    "data": "2025-07-09",
+    "interprete": "Guito",
+    "dur": 4.87,
+    "dur_youtube": 30,
+    "arquivo": "televisao"
+   }
+  ],
+  "trabalho": [
+   {
+    "youtube": "9P-1OGteANI",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “trabalhar”",
+    "data": "2025-05-01",
+    "interprete": "Guito",
+    "dur": 5.9,
+    "dur_youtube": 19,
+    "arquivo": "trabalho"
+   }
+  ],
+  "transmissao": [
+   {
+    "youtube": "3oQ_UU3ppWY",
+    "titulo": "SINAL NOVO TODO DIA: Transmissão",
+    "data": "2025-06-25",
+    "interprete": "Guito",
+    "dur": 3.0,
+    "dur_youtube": 27,
+    "arquivo": "transmissao"
+   }
+  ],
+  "triste": [
+   {
+    "youtube": "isnPinPYyeQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Triste”.",
+    "data": "2025-05-13",
+    "interprete": "Guito",
+    "dur": 2.8,
+    "dur_youtube": 16,
+    "arquivo": "triste"
+   }
+  ],
+  "tudo-bem": [
+   {
+    "youtube": "7lZ-nc5U8aU",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Tudo bem?”",
+    "data": "2025-05-06",
+    "interprete": "Guito",
+    "dur": 3.07,
+    "dur_youtube": 15,
+    "arquivo": "tudo-bem"
+   },
+   {
+    "youtube": "Ae-zIWDQFsc",
+    "titulo": "Aprenda Libras - Um sinal por dia: Tudo bem",
+    "data": "2021-03-24",
+    "interprete": null,
+    "dur": 6.77,
+    "dur_youtube": 22,
+    "arquivo": "tudo-bem-2"
+   }
+  ],
+  "vegetariano": [
+   {
+    "youtube": "XLXAsV2Ny74",
+    "titulo": "Aprenda Libras - Um sinal por dia: Vegetariano",
+    "data": "2021-04-02",
+    "interprete": null,
+    "dur": 12.5,
+    "dur_youtube": 27,
+    "arquivo": "vegetariano"
+   }
+  ],
+  "viajar": [
+   {
+    "youtube": "_lniz3OkvtU",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Viagem/Viajar”",
+    "data": "2025-06-06",
+    "interprete": "Guito",
+    "dur": 5.1,
+    "dur_youtube": 29,
+    "arquivo": "viajar"
+   }
+  ],
+  "video": [
+   {
+    "youtube": "UJctOYm3PMQ",
+    "titulo": "UM SINAL NOVO TODO DIA 🤟: “Vídeo”",
+    "data": "2025-05-28",
+    "interprete": "Guito",
+    "dur": 5.17,
+    "dur_youtube": 18,
+    "arquivo": "video"
+   }
+  ],
+  "volei": [
+   {
+    "youtube": "8C3DUu0_ZLs",
+    "titulo": "Aprenda Libras - Um sinal por dia: Vôlei",
+    "data": "2021-03-28",
+    "interprete": null,
+    "dur": 5.07,
+    "dur_youtube": 15,
+    "arquivo": "volei"
+   }
+  ]
+ }
+}

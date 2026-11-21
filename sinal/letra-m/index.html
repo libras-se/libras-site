@@ -251,6 +251,23 @@ section+section{margin-top:52px}
 .player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
 .player-vazio strong{color:#fff;font-size:1.05rem}
 .player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Vídeo do canal (vertical): inteiro no quadro, sobre o próprio poster desfocado */
+.player-media.vert video{object-fit:contain}
+.player-media .vert-bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.player-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+/* Outra versão do sinal (vídeos do canal) */
+.versoes{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px 20px}
+.versoes-txt{flex-basis:100%;font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.6}
+.versao{margin:0;width:min(230px,100%);display:flex;flex-direction:column;gap:8px}
+.versao video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--rlg);background:#0e3538;display:block}
+.versao figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.versao figcaption a{color:inherit;text-decoration:underline}
+.versoes-txt a{color:var(--teal-dd);text-decoration:underline}
+.yt-short{margin:0;width:min(315px,100%);display:flex;flex-direction:column;gap:8px}
+.yt-short iframe{width:100%;height:auto;aspect-ratio:9/16;border:0;border-radius:var(--rlg);background:#0e3538;display:block}
+.yt-short figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.yt-short figcaption a{color:inherit;text-decoration:underline}
+.prov{display:inline-block;margin-right:6px;padding:2px 9px;border-radius:var(--rpill);background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.45);color:#fde68a;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
 .player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
 .player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
@@ -578,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M0 -125V-1000H250V-875H375V-750H500V-875H625V-1000H875V-125H625V-625H500V-375H375V-625H250V-125Z"/></svg><span>Em pixels</span></li>
       <li class="jeito j7"><svg viewBox="-40 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M85 -159Q55 -159 40 -178Q26 -197 26 -222Q26 -248 40 -267Q55 -286 85 -286Q67 -286 56 -301Q45 -316 41 -338Q37 -360 41 -382Q45 -404 56 -419Q67 -434 85 -434Q56 -434 42 -454Q27 -473 27 -500Q27 -526 42 -546Q56 -565 85 -565Q47 -565 34 -580Q22 -595 34 -610Q47 -625 85 -625Q54 -625 44 -637Q33 -649 44 -661Q54 -673 85 -673Q86 -697 102 -708Q118 -720 138 -720Q159 -719 174 -706Q189 -694 189 -670Q196 -687 212 -690Q227 -694 243 -688Q259 -681 268 -668Q276 -654 269 -637Q292 -650 310 -644Q329 -639 339 -623Q349 -607 345 -588Q341 -569 319 -555Q348 -573 364 -570Q379 -566 375 -551Q371 -536 341 -518Q368 -534 388 -525Q407 -516 412 -496Q417 -476 399 -457Q414 -466 430 -460Q439 -475 456 -482Q472 -488 490 -477Q467 -491 462 -508Q457 -525 466 -538Q474 -552 492 -555Q509 -558 531 -545Q508 -559 502 -575Q497 -591 504 -603Q511 -615 528 -618Q545 -620 568 -606Q545 -621 539 -638Q533 -655 541 -667Q549 -679 566 -681Q584 -683 608 -668Q607 -692 622 -704Q637 -717 656 -718Q676 -718 691 -706Q706 -694 707 -670Q716 -687 730 -690Q744 -694 756 -688Q769 -681 774 -668Q780 -654 771 -637Q808 -637 820 -622Q832 -607 820 -592Q808 -577 771 -577Q806 -577 818 -563Q829 -549 818 -535Q806 -521 771 -521Q801 -521 811 -506Q821 -490 811 -474Q801 -458 771 -458Q793 -458 806 -443Q820 -428 824 -406Q829 -384 824 -362Q820 -340 806 -325Q793 -310 771 -310Q795 -310 807 -299Q819 -288 819 -274Q819 -260 807 -249Q795 -238 771 -238Q793 -238 806 -222Q819 -207 824 -184Q828 -161 824 -138Q819 -114 806 -98Q793 -83 771 -83Q810 -83 823 -73Q836 -63 823 -53Q810 -43 771 -43Q774 -17 760 -2Q746 13 726 16Q705 18 688 7Q671 -4 668 -30Q660 -9 645 -3Q630 3 616 -3Q601 -9 594 -24Q588 -38 596 -59Q558 -59 546 -71Q533 -83 546 -94Q558 -106 596 -106Q568 -106 554 -126Q539 -145 538 -171Q536 -197 548 -218Q560 -240 586 -244Q564 -244 556 -261Q546 -257 540 -267Q528 -269 515 -277Q532 -265 532 -247Q531 -229 520 -214Q509 -198 492 -192Q476 -186 459 -198Q449 -181 428 -182Q407 -182 386 -194Q364 -207 352 -224Q341 -242 351 -260Q343 -255 335 -252Q329 -238 317 -228Q305 -218 291 -217Q306 -207 308 -190Q309 -173 297 -160Q285 -146 260 -146Q293 -146 304 -132Q315 -118 304 -104Q293 -91 260 -91Q292 -82 298 -64Q305 -45 290 -33Q276 -21 243 -30Q243 -4 227 9Q211 22 190 22Q169 22 153 9Q137 -4 137 -30Q137 -1 129 12Q121 24 110 12Q99 1 92 -40Q84 -81 85 -159Z"/></svg><span>De bolhas</span></li>
     </ul>
-    <p class="letra-com"><strong>M</strong> de <a href="/sinal/macaco/">macaco</a>, maçã, morango e mala.</p>
+    <p class="letra-com"><strong>M</strong> de <a href="/sinal/macaco/">macaco</a>, maçã, morango e <a href="/sinal/mala/">mala</a>.</p>
     <h3 class="ficha-sub">Sinais que começam com M</h3>
     <nav class="rel-grid" aria-label="Sinais que começam com a letra M">
       <a href="/sinal/macaco/" class="rel-card"><img src="/assets/img/sinais/macaco.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Macaco</span></a>

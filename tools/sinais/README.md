@@ -111,6 +111,23 @@ Para o commit, entram:
 - `tools/sinais/aprovacoes.json`
 - as páginas geradas por `tools/aprender/build.py` (jogos, atividades, alfabeto)
 
+## Vídeos provisórios do canal do YouTube (`sinal/canal.json`)
+
+**Todos os vídeos de `assets/videos/sinais-canal/` são provisórios.** São cortes dos shorts do quadro "Sinal novo
+todo dia" (youtube.com/@libras-se-yt), verticais e gravados fora do estúdio. Entraram em 2026-11 para as páginas
+ganharem busca enquanto a Bruna não regrava esses sinais no padrão do sinalário (chroma, 16:9). A lista do que falta
+regravar fica em `producao-conteudo/youtube-sinais/regravar.md`; o pipeline dos cortes, no README da mesma pasta.
+
+- Sinal sem vídeo da intérprete: o corte do canal vai para o topo da página com o selo "Vídeo provisório" e
+  "Registro: Canal LIBRAS.SE no YouTube (provisório)".
+- Sinal com vídeo da intérprete: o corte do canal aparece em "Outra versão do sinal".
+- Em todos os casos, o short completo entra embutido em "Vídeo completo no YouTube", com um `VideoObject` próprio
+  (`embedUrl`) no JSON-LD. O `VideoObject` principal continua sendo o vídeo que está no topo.
+- Quando a regravação é aprovada e publicada (`publicar.py`), o vídeo da intérprete vira o principal sozinho, o selo
+  some e o corte do canal desce para "Outra versão". O embed do short continua.
+- Os jogos e as atividades usam só os vídeos da intérprete.
+- `canal.json` e a pasta `sinais-canal` são gerados por `producao-conteudo/youtube-sinais/exportar_site.py`: não edite à mão.
+
 ## Elementos divertidos: figurinha e ficha de cada sinal
 
 Cada página de sinal pode ter um elemento que ajuda a lembrar da palavra: a **figurinha** (mascote do time, símbolos do
@@ -144,6 +161,8 @@ python3 tools/sinais/build_pages.py
   `"fundo": "verde"`, quando o desenho precisa de roxo ou rosa).
 - **Aprovação**: confira a folha de contato antes de commitar. Procure texto, número ou escudo que o Codex tenha inventado.
 - **Limite do Codex**: vale o mesmo das ilustrações. Quando parar, rode `gerar --pendentes` de novo mais tarde.
+- **Modelo do Codex**: se o modelo do `~/.codex/config.toml` não for aceito pela conta ("model is not supported"),
+  escolha outro só para o script: `CODEX_MODEL=gpt-6.1-sol CODEX_ESFORCO=medium $F gerar --pendentes`.
   O `--pendentes` olha a figurinha publicada no repositório, então funciona sem o SSD (aponte `SINAIS_WORK` para uma pasta local).
 - Quando a ilustração de um sinal muda, o `publicar.py` apaga o cartão antigo e avisa para rodar o `compor`.
 

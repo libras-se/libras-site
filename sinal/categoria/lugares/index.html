@@ -105,47 +105,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "@context": "https://schema.org",
  "@type": "ItemList",
  "name": "Lugares em Libras",
- "numberOfItems": 7,
+ "numberOfItems": 17,
  "itemListElement": [
   {
    "@type": "ListItem",
    "position": 1,
+   "name": "Academia em Libras",
+   "url": "https://libras.se/sinal/academia/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Aeroporto em Libras",
+   "url": "https://libras.se/sinal/aeroporto/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Biblioteca em Libras",
+   "url": "https://libras.se/sinal/biblioteca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
    "name": "Cidade em Libras",
    "url": "https://libras.se/sinal/cidade/"
   },
   {
    "@type": "ListItem",
-   "position": 2,
+   "position": 5,
+   "name": "Empresa em Libras",
+   "url": "https://libras.se/sinal/empresa/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Escritório em Libras",
+   "url": "https://libras.se/sinal/escritorio/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
    "name": "Floresta em Libras",
    "url": "https://libras.se/sinal/floresta/"
   },
   {
    "@type": "ListItem",
-   "position": 3,
+   "position": 8,
+   "name": "Florianópolis em Libras",
+   "url": "https://libras.se/sinal/florianopolis/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 9,
    "name": "Hospital em Libras",
    "url": "https://libras.se/sinal/hospital/"
   },
   {
    "@type": "ListItem",
-   "position": 4,
+   "position": 10,
+   "name": "Metrô em Libras",
+   "url": "https://libras.se/sinal/metro/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
    "name": "Montanha em Libras",
    "url": "https://libras.se/sinal/montanha/"
   },
   {
    "@type": "ListItem",
-   "position": 5,
+   "position": 12,
    "name": "Museu em Libras",
    "url": "https://libras.se/sinal/museu/"
   },
   {
    "@type": "ListItem",
-   "position": 6,
+   "position": 13,
    "name": "Praia em Libras",
    "url": "https://libras.se/sinal/praia/"
   },
   {
    "@type": "ListItem",
-   "position": 7,
+   "position": 14,
+   "name": "Prédio em Libras",
+   "url": "https://libras.se/sinal/predio/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "name": "Rio em Libras",
+   "url": "https://libras.se/sinal/rio/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 16,
+   "name": "Supermercado em Libras",
+   "url": "https://libras.se/sinal/supermercado/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 17,
    "name": "Teatro em Libras",
    "url": "https://libras.se/sinal/teatro/"
   }
@@ -281,6 +341,7 @@ a{text-decoration:none;color:inherit}
 .card-visual img,.card-visual video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .card-visual video{opacity:0;transition:opacity .2s}
 .card-visual.playing video{opacity:1}
+.card-visual.vert img,.card-visual.vert video{object-position:50% 28%}
 .card-badge{position:absolute;bottom:12px;left:12px;z-index:2;display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(14,53,56,.72);border-radius:var(--rpill);padding:5px 10px}
 .card-badge svg{width:9px;height:9px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -474,7 +535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="search-box rv">
       <div class="search-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="search" id="busca" placeholder="Busque nesta lista: cidade, floresta…" autocomplete="off" aria-label="Buscar sinal em Libras">
+        <input type="search" id="busca" placeholder="Busque nesta lista: academia, aeroporto…" autocomplete="off" aria-label="Buscar sinal em Libras">
       </div>
       <div class="chips" role="group" aria-label="Outras categorias"><!-- SINAIS:FILTROS -->
       <a href="/sinal/" class="chip">Todos os sinais</a>
@@ -500,8 +561,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cards-section" aria-labelledby="sinais-h">
   <div class="w">
     <p class="section-label rv" id="sinais-h">Lugares em Libras</p>
-    <p class="section-sub rv d1"><!-- SINAIS:CONTAGEM -->7 sinais em vídeo, com página própria.<!-- /SINAIS:CONTAGEM --></p>
+    <p class="section-sub rv d1"><!-- SINAIS:CONTAGEM -->17 sinais em vídeo, com página própria.<!-- /SINAIS:CONTAGEM --></p>
     <div class="cards-grid" id="cardsGrid"><!-- SINAIS:CARDS -->
+      <article class="sinal-card" data-nome="academia academia academias academia de ginastica ginastica musculacao treino malhar exercicio" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/academia.mp4">
+          <img src="/assets/videos/sinais-canal/academia.webp" alt="Intérprete fazendo o sinal de Academia em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/academia/" class="card-a">Academia</a></h2>
+          <p class="card-desc">Sinal usado para falar de academia de ginástica, o lugar onde as pessoas treinam e fazem atividade física.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="aeroporto aeroporto aeroportos aviao aviao voo viagem embarque" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/aeroporto.mp4">
+          <img src="/assets/videos/sinais-canal/aeroporto.webp" alt="Intérprete fazendo o sinal de Aeroporto em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/aeroporto/" class="card-a">Aeroporto</a></h2>
+          <p class="card-desc">Sinal usado para falar de aeroporto, o lugar de onde partem e onde chegam os aviões em viagens.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="biblioteca biblioteca bibliotecas livros livro leitura estudar emprestimo emprestimo" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/biblioteca.mp4">
+          <img src="/assets/videos/sinais-canal/biblioteca.webp" alt="Intérprete fazendo o sinal de Biblioteca em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/biblioteca/" class="card-a">Biblioteca</a></h2>
+          <p class="card-desc">Sinal usado para falar de biblioteca, o lugar onde ficam os livros para leitura, estudo e empréstimo.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
       <article class="sinal-card" data-nome="cidade cidade cidades municipio centro urbano" data-cat="Lugares">
         <div class="card-visual" data-video="/assets/videos/sinais/cidade.mp4">
           <img src="/assets/img/sinais/cartoes/cidade.webp" alt="Ilustração do sinal de Cidade em Libras" width="960" height="720" loading="lazy" decoding="async">
@@ -511,6 +608,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-cat">Lugares</span>
           <h2 class="card-nome"><a href="/sinal/cidade/" class="card-a">Cidade</a></h2>
           <p class="card-desc">Sinal usado para falar de cidade, a área urbana onde vivem muitas pessoas.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="empresa empresa empresas firma companhia negocio negocio trabalho emprego" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/empresa.mp4">
+          <img src="/assets/videos/sinais-canal/empresa.webp" alt="Intérprete fazendo o sinal de Empresa em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/empresa/" class="card-a">Empresa</a></h2>
+          <p class="card-desc">Sinal usado para falar de empresa, a organização que produz bens ou presta serviços, e também do lugar onde se trabalha.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="escritorio escritorio escritorio escritorios escritorios trabalho sala firma home office" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/escritorio.mp4">
+          <img src="/assets/videos/sinais-canal/escritorio.webp" alt="Intérprete fazendo o sinal de Escritório em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/escritorio/" class="card-a">Escritório</a></h2>
+          <p class="card-desc">Sinal usado para falar de escritório, o lugar onde se faz trabalho administrativo, seja numa empresa ou em casa.</p>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
@@ -526,6 +647,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
+      <article class="sinal-card" data-nome="florianopolis florianopolis florianopolis floripa santa catarina sc capital ilha ponte hercilio luz hercilio luz cidade sul" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/florianopolis.mp4">
+          <img src="/assets/videos/sinais-canal/florianopolis.webp" alt="Intérprete fazendo o sinal de Florianópolis em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/florianopolis/" class="card-a">Florianópolis</a></h2>
+          <p class="card-desc">Sinal usado para falar de Florianópolis, a Floripa, capital de Santa Catarina, em sinal que faz referência à ponte Hercílio Luz.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
       <article class="sinal-card" data-nome="hospital hospital pronto-socorro pronto socorro saude emergencia clinica" data-cat="Lugares">
         <div class="card-visual" data-video="/assets/videos/sinais/hospital.mp4">
           <img src="/assets/img/sinais/cartoes/hospital.webp" alt="Ilustração do sinal de Hospital em Libras" width="960" height="720" loading="lazy" decoding="async">
@@ -535,6 +668,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-cat">Lugares</span>
           <h2 class="card-nome"><a href="/sinal/hospital/" class="card-a">Hospital</a></h2>
           <p class="card-desc">Sinal usado para falar de hospital, onde as pessoas recebem atendimento de saúde.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="metro metro metro metros metros estacao estacao trem metropolitano transporte linha" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/metro.mp4">
+          <img src="/assets/videos/sinais-canal/metro.webp" alt="Intérprete fazendo o sinal de Metrô em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/metro/" class="card-a">Metrô</a></h2>
+          <p class="card-desc">Sinal usado para falar de metrô, o trem urbano que circula por linhas e estações, muitas vezes subterrâneas.</p>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>
@@ -571,6 +716,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="card-cat">Lugares</span>
           <h2 class="card-nome"><a href="/sinal/praia/" class="card-a">Praia</a></h2>
           <p class="card-desc">Sinal usado para falar de praia, a faixa de areia à beira do mar.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="predio predio predio predios predios edificio edificio construcao apartamento" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/predio.mp4">
+          <img src="/assets/videos/sinais-canal/predio.webp" alt="Intérprete fazendo o sinal de Prédio em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/predio/" class="card-a">Prédio</a></h2>
+          <p class="card-desc">Sinal usado para falar de prédio ou edifício, seja de moradia, de escritórios ou de qualquer construção com vários andares.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="rio rio rios curso de agua corrego corrego riacho margem amazonia amazonia natureza" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/rio.mp4">
+          <img src="/assets/videos/sinais-canal/rio.webp" alt="Intérprete fazendo o sinal de Rio em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/rio/" class="card-a">Rio</a></h2>
+          <p class="card-desc">Sinal usado para falar de rio, o curso de água que corre pela natureza, e não da cidade do Rio de Janeiro, que tem sinal próprio.</p>
+          <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </article>
+      <article class="sinal-card" data-nome="supermercado supermercado supermercados mercado mercados mercadinho compras feira" data-cat="Lugares">
+        <div class="card-visual vert" data-video="/assets/videos/sinais-canal/supermercado.mp4">
+          <img src="/assets/videos/sinais-canal/supermercado.webp" alt="Intérprete fazendo o sinal de Supermercado em Libras" width="540" height="960" loading="lazy" decoding="async">
+          <span class="card-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4"/></svg>Vídeo</span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Lugares</span>
+          <h2 class="card-nome"><a href="/sinal/supermercado/" class="card-a">Supermercado</a></h2>
+          <p class="card-desc">Sinal usado para falar de supermercado ou de mercado, o lugar onde se compram alimentos e produtos para a casa.</p>
           <span class="card-link" aria-hidden="true">Ver sinal em Libras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>
         </div>
       </article>

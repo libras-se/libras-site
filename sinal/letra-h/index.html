@@ -251,6 +251,23 @@ section+section{margin-top:52px}
 .player-vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--gc);color:rgba(255,255,255,.75);text-align:center;padding:24px;font-size:.9rem}
 .player-vazio strong{color:#fff;font-size:1.05rem}
 .player-media video,.player-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Vídeo do canal (vertical): inteiro no quadro, sobre o próprio poster desfocado */
+.player-media.vert video{object-fit:contain}
+.player-media .vert-bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.player-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+/* Outra versão do sinal (vídeos do canal) */
+.versoes{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--rxl);box-shadow:var(--shm);padding:18px 20px}
+.versoes-txt{flex-basis:100%;font-size:.9rem;font-weight:300;color:var(--txs);line-height:1.6}
+.versao{margin:0;width:min(230px,100%);display:flex;flex-direction:column;gap:8px}
+.versao video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--rlg);background:#0e3538;display:block}
+.versao figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.versao figcaption a{color:inherit;text-decoration:underline}
+.versoes-txt a{color:var(--teal-dd);text-decoration:underline}
+.yt-short{margin:0;width:min(315px,100%);display:flex;flex-direction:column;gap:8px}
+.yt-short iframe{width:100%;height:auto;aspect-ratio:9/16;border:0;border-radius:var(--rlg);background:#0e3538;display:block}
+.yt-short figcaption{font-size:.74rem;color:var(--txm);text-align:center}
+.yt-short figcaption a{color:inherit;text-decoration:underline}
+.prov{display:inline-block;margin-right:6px;padding:2px 9px;border-radius:var(--rpill);background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.45);color:#fde68a;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .player-info{display:flex;flex-direction:column;gap:12px;padding:0 10px 8px}
 .player-kicker{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
 .player-title{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--p1);line-height:1.2}
@@ -578,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li class="jeito j6"><svg viewBox="-53 -1052 980 980" class="" aria-hidden="true" focusable="false"><path d="M0 -125V-1000H250V-625H625V-1000H875V-125H625V-500H250V-125Z"/></svg><span>Em pixels</span></li>
       <li class="jeito j7"><svg viewBox="-81 -787 935 935" class="" aria-hidden="true" focusable="false"><path d="M85 -139Q60 -139 48 -150Q35 -162 35 -177Q35 -192 48 -203Q60 -214 85 -214Q51 -214 40 -225Q28 -236 40 -247Q51 -258 85 -258Q60 -258 48 -270Q36 -281 36 -296Q36 -311 48 -322Q60 -334 85 -334Q56 -334 42 -352Q27 -369 27 -392Q27 -415 42 -432Q56 -450 85 -450Q59 -450 46 -468Q33 -487 33 -512Q33 -536 46 -554Q59 -573 85 -573Q61 -574 50 -588Q38 -603 38 -622Q38 -641 50 -656Q62 -670 86 -670Q86 -700 100 -714Q114 -729 132 -729Q150 -729 164 -714Q178 -700 178 -670Q178 -698 192 -712Q205 -726 222 -726Q239 -726 252 -712Q266 -698 266 -670Q297 -675 309 -664Q321 -652 314 -637Q306 -622 275 -617Q309 -617 324 -598Q338 -580 333 -558Q328 -537 304 -527Q322 -524 334 -510Q345 -495 347 -478Q367 -490 394 -488Q420 -486 436 -469Q437 -486 450 -491Q440 -509 452 -529Q463 -549 497 -549Q467 -549 452 -567Q438 -585 438 -609Q438 -633 452 -651Q467 -669 497 -669Q497 -694 511 -707Q525 -720 543 -720Q561 -721 576 -708Q590 -695 590 -670Q590 -699 601 -714Q612 -729 626 -729Q640 -729 651 -714Q662 -699 662 -670Q680 -674 693 -662Q706 -649 711 -629Q716 -609 710 -592Q705 -574 687 -569Q716 -569 730 -550Q744 -530 744 -504Q744 -477 730 -458Q716 -438 687 -438Q717 -438 732 -420Q746 -402 746 -378Q746 -354 732 -336Q717 -318 687 -318Q717 -318 732 -299Q746 -280 746 -254Q746 -229 732 -210Q717 -190 687 -190Q719 -190 730 -180Q740 -171 730 -161Q719 -151 687 -151Q710 -151 722 -138Q733 -125 733 -108Q733 -92 722 -80Q710 -67 687 -67Q696 -47 688 -32Q680 -16 664 -9Q648 -2 632 -6Q615 -10 606 -30Q607 -4 590 10Q574 23 552 24Q531 24 514 12Q498 -1 497 -27Q477 -27 466 -45Q455 -63 452 -88Q450 -112 457 -134Q464 -157 481 -166Q450 -161 432 -182Q415 -204 419 -229Q382 -217 347 -230Q349 -218 342 -209Q334 -200 320 -198Q338 -185 327 -168Q316 -150 275 -150Q314 -150 326 -139Q339 -128 326 -117Q314 -106 275 -106Q299 -106 312 -95Q324 -84 324 -69Q324 -54 312 -42Q299 -31 275 -31Q276 7 267 20Q258 32 248 20Q239 7 238 -30Q238 -6 227 6Q216 17 202 17Q188 17 177 6Q166 -6 166 -30Q166 9 155 22Q144 35 133 22Q122 9 122 -30Q122 -4 116 8Q110 19 102 9Q95 -1 90 -36Q84 -72 85 -139Z"/></svg><span>De bolhas</span></li>
     </ul>
-    <p class="letra-com"><strong>H</strong> de helicóptero, hipopótamo, hambúrguer e harpa.</p>
+    <p class="letra-com"><strong>H</strong> de <a href="/sinal/helicoptero/">helicóptero</a>, hipopótamo, hambúrguer e harpa.</p>
     <h3 class="ficha-sub">Sinais que começam com H</h3>
     <nav class="rel-grid" aria-label="Sinais que começam com a letra H">
       <a href="/sinal/hospital/" class="rel-card"><img src="/assets/img/sinais/hospital.webp" alt="" width="960" height="720" loading="lazy" decoding="async"><span>Hospital</span></a>

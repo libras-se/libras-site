@@ -325,6 +325,23 @@ def youtube_completo(s):
 '''
 
 
+def video_youtube_sitemap(s, c):
+    """<video:video> do short completo (player do YouTube) para o sitemap."""
+    titulo = esc(f"{s['palavra']} em Libras: short do quadro Sinal novo todo dia")
+    desc = esc(f"Short do canal da LIBRAS.SE no YouTube ({titulo_curto(c['titulo'])}) com o sinal de {s['palavra']} "
+               "em Libras e a explicação de quem interpreta.")
+    dur = f"\n      <video:duration>{c['yt_dur']}</video:duration>" if c.get("yt_dur") else ""
+    return f"""
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/{c['yt_id']}/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>{titulo}</video:title>
+      <video:description>{desc}</video:description>
+      <video:player_loc>https://www.youtube.com/embed/{c['yt_id']}</video:player_loc>{dur}
+      <video:publication_date>{c['data']}T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>"""
+
+
 def outras_versoes(s):
     """Versões do canal do YouTube que não estão no cabeçalho: sinal já gravado em estúdio ou com dois shorts."""
     if not s["outras"]:
@@ -516,10 +533,14 @@ def sitemap():
         d = esc(f"Vídeo curto com o sinal de {s['palavra']} em Libras, interpretado por intérprete profissional da LIBRAS.SE.")
         v = s["vid"]
         pub = v["data"] if v["canal"] else s.get("publicado_em", data["publicado_em"])
+        lastmod = s.get("publicado_em", data["publicado_em"])
+        if s["canal"]:  # a página mudou quando os vídeos do canal entraram ou mudaram
+            lastmod = max(lastmod, CANAL.get("atualizado_em", lastmod))
+        shorts = "".join(video_youtube_sitemap(s, c) for c in shorts_unicos(s))
         block += f"""
   <url>
     <loc>{SITE}/sinal/{s['slug']}/</loc>
-    <lastmod>{s.get('publicado_em', data['publicado_em'])}</lastmod>
+    <lastmod>{lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -530,7 +551,7 @@ def sitemap():
       <video:duration>{max(1, round(v['dur']))}</video:duration>
       <video:publication_date>{pub}T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
-    </video:video>
+    </video:video>{shorts}
   </url>"""
     for c in CAT_PAGINAS:
         datas = [s.get("publicado_em", data["publicado_em"]) for s in sinais if s["categoria"] == c["categoria"]]

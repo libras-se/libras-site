@@ -782,7 +782,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/academia/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -794,10 +794,28 @@
       <video:publication_date>2025-05-29T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/845JoyfnBGk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Academia em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Academia&quot;) com o sinal de Academia em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/845JoyfnBGk</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2025-05-29T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0gZqHFfrfZs/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Academia em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Academia) com o sinal de Academia em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/0gZqHFfrfZs</video:player_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2021-03-31T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/acessibilidade/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -809,10 +827,19 @@
       <video:publication_date>2021-03-19T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VefrI2-OGwA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Acessibilidade em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Acessibilidade) com o sinal de Acessibilidade em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/VefrI2-OGwA</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2021-03-19T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/aeroporto/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -821,6 +848,15 @@
       <video:description>Vídeo curto com o sinal de Aeroporto em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/aeroporto.mp4</video:content_loc>
       <video:duration>6</video:duration>
+      <video:publication_date>2025-07-01T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/buTuWm2edwY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Aeroporto em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Aeroporto&quot;) com o sinal de Aeroporto em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/buTuWm2edwY</video:player_loc>
+      <video:duration>37</video:duration>
       <video:publication_date>2025-07-01T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1067,7 +1103,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/balao/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1079,10 +1115,19 @@
       <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-Bv60Ci-uLg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Balão em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Balão&quot;, &quot;Bandeirinhas&quot; e &quot;Barraca&quot;.) com o sinal de Balão em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/-Bv60Ci-uLg</video:player_loc>
+      <video:duration>29</video:duration>
+      <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/bale/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1091,6 +1136,15 @@
       <video:description>Vídeo curto com o sinal de Balé em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/bale.mp4</video:content_loc>
       <video:duration>7</video:duration>
+      <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Hh0ySxanInc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Balé em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Balé, Hip Hop e Forró&quot;) com o sinal de Balé em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Hh0ySxanInc</video:player_loc>
+      <video:duration>41</video:duration>
       <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1112,7 +1166,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/bandeirinha/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1121,6 +1175,15 @@
       <video:description>Vídeo curto com o sinal de Bandeirinha em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/bandeirinha.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-Bv60Ci-uLg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bandeirinha em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Balão&quot;, &quot;Bandeirinhas&quot; e &quot;Barraca&quot;.) com o sinal de Bandeirinha em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/-Bv60Ci-uLg</video:player_loc>
+      <video:duration>29</video:duration>
       <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1142,7 +1205,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/barco/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1154,10 +1217,19 @@
       <video:publication_date>2025-07-05T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/eNkP3B7aV_0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Barco em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Barco&quot;) com o sinal de Barco em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/eNkP3B7aV_0</video:player_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2025-07-05T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/barraca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1166,6 +1238,15 @@
       <video:description>Vídeo curto com o sinal de Barraca em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/barraca.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-Bv60Ci-uLg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Barraca em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Balão&quot;, &quot;Bandeirinhas&quot; e &quot;Barraca&quot;.) com o sinal de Barraca em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/-Bv60Ci-uLg</video:player_loc>
+      <video:duration>29</video:duration>
       <video:publication_date>2025-06-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1187,7 +1268,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/bem-vindo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1199,10 +1280,19 @@
       <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/poetbJhQY4A/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bem-vindo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;bem-vindo&quot;.) com o sinal de Bem-vindo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/poetbJhQY4A</video:player_loc>
+      <video:duration>23</video:duration>
+      <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/biblioteca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1214,10 +1304,19 @@
       <video:publication_date>2025-06-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/1WFTUXRFdkI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Biblioteca em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Biblioteca&quot;.) com o sinal de Biblioteca em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/1WFTUXRFdkI</video:player_loc>
+      <video:duration>18</video:duration>
+      <video:publication_date>2025-06-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/bloco/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1226,6 +1325,15 @@
       <video:description>Vídeo curto com o sinal de Bloco em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/bloco.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2021-03-14T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/mFEI5ez3_9U/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bloco em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Bloco) com o sinal de Bloco em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/mFEI5ez3_9U</video:player_loc>
+      <video:duration>14</video:duration>
       <video:publication_date>2021-03-14T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1247,7 +1355,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/boi-bumba/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1259,10 +1367,19 @@
       <video:publication_date>2025-07-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/GxhN701mIss/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Boi-bumbá em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;boi bumbá&quot;) com o sinal de Boi-bumbá em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/GxhN701mIss</video:player_loc>
+      <video:duration>34</video:duration>
+      <video:publication_date>2025-07-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/bolo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1274,10 +1391,19 @@
       <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/kF6q97BhjMM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bolo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Bolo, Milho e Paçoca&quot;) com o sinal de Bolo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/kF6q97BhjMM</video:player_loc>
+      <video:duration>28</video:duration>
+      <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/bom-dia/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1286,6 +1412,15 @@
       <video:description>Vídeo curto com o sinal de Bom dia em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/bom-dia.mp4</video:content_loc>
       <video:duration>9</video:duration>
+      <video:publication_date>2021-03-23T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/G7e0QWZqOck/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bom dia em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Bom dia) com o sinal de Bom dia em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/G7e0QWZqOck</video:player_loc>
+      <video:duration>25</video:duration>
       <video:publication_date>2021-03-23T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1307,7 +1442,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/bravo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1316,6 +1451,15 @@
       <video:description>Vídeo curto com o sinal de Bravo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/bravo.mp4</video:content_loc>
       <video:duration>2</video:duration>
+      <video:publication_date>2025-05-14T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/gjmD0KbAnsQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Bravo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Bravo&quot;.) com o sinal de Bravo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/gjmD0KbAnsQ</video:player_loc>
+      <video:duration>26</video:duration>
       <video:publication_date>2025-05-14T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1337,7 +1481,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/cadeira/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1349,10 +1493,19 @@
       <video:publication_date>2025-05-22T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/pq1_iWa1NYg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Cadeira em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Cadeira&quot;) com o sinal de Cadeira em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/pq1_iWa1NYg</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-05-22T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/cafe/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1362,6 +1515,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/cafe.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/DjnVA7SS38c/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Café em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Café&quot;) com o sinal de Café em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/DjnVA7SS38c</video:player_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2025-07-16T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1412,7 +1574,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/capacete/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1424,10 +1586,19 @@
       <video:publication_date>2025-05-24T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/2Sy9DJWUqV8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Capacete em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Capacete&quot;) com o sinal de Capacete em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/2Sy9DJWUqV8</video:player_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2025-05-24T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/carnaval/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1436,6 +1607,15 @@
       <video:description>Vídeo curto com o sinal de Carnaval em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/carnaval.mp4</video:content_loc>
       <video:duration>3</video:duration>
+      <video:publication_date>2021-03-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/tMt5fePB40w/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Carnaval em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Carnaval) com o sinal de Carnaval em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/tMt5fePB40w</video:player_loc>
+      <video:duration>13</video:duration>
       <video:publication_date>2021-03-11T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1502,7 +1682,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/celular/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1514,10 +1694,19 @@
       <video:publication_date>2025-05-21T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/UoaLewGF9Ng/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Celular em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Celular&quot;) com o sinal de Celular em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/UoaLewGF9Ng</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-05-21T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/cerveja/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1527,6 +1716,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/cerveja.mp4</video:content_loc>
       <video:duration>3</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/l-dQR9_Ia7A/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Cerveja em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Cerveja&quot;) com o sinal de Cerveja em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/l-dQR9_Ia7A</video:player_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2025-07-19T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1547,7 +1745,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/chefe/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1556,6 +1754,15 @@
       <video:description>Vídeo curto com o sinal de Chefe em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/chefe.mp4</video:content_loc>
       <video:duration>3</video:duration>
+      <video:publication_date>2025-07-25T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/hI9W-IWwa8o/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Chefe em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Chefe&quot;) com o sinal de Chefe em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hI9W-IWwa8o</video:player_loc>
+      <video:duration>34</video:duration>
       <video:publication_date>2025-07-25T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1577,7 +1784,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/cliente/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1586,6 +1793,15 @@
       <video:description>Vídeo curto com o sinal de Cliente em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/cliente.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2025-07-23T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/oXaTVfRn0HE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Cliente em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Cliente&quot;) com o sinal de Cliente em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/oXaTVfRn0HE</video:player_loc>
+      <video:duration>35</video:duration>
       <video:publication_date>2025-07-23T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1607,7 +1823,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/coda/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1619,10 +1835,19 @@
       <video:publication_date>2021-03-21T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/JVNqXA_KAa4/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Coda em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Coda) com o sinal de Coda em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/JVNqXA_KAa4</video:player_loc>
+      <video:duration>25</video:duration>
+      <video:publication_date>2021-03-21T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/com-licenca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1631,6 +1856,15 @@
       <video:description>Vídeo curto com o sinal de Com licença em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/com-licenca.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-05-07T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/BBumixphKq0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Com licença em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Com licença&quot;) com o sinal de Com licença em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/BBumixphKq0</video:player_loc>
+      <video:duration>16</video:duration>
       <video:publication_date>2025-05-07T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1652,7 +1886,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/conclave/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1661,6 +1895,15 @@
       <video:description>Vídeo curto com o sinal de Conclave em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/conclave.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/KyNd-AbfdQo/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Conclave em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Papa&quot; e &quot;Conclave&quot;.) com o sinal de Conclave em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/KyNd-AbfdQo</video:player_loc>
+      <video:duration>23</video:duration>
       <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1697,7 +1940,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/covid/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1706,6 +1949,15 @@
       <video:description>Vídeo curto com o sinal de Covid em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/covid.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2021-04-14T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/76l-vMq99Uo/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Covid em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Covid) com o sinal de Covid em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/76l-vMq99Uo</video:player_loc>
+      <video:duration>13</video:duration>
       <video:publication_date>2021-04-14T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1742,7 +1994,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/cultura/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1754,10 +2006,19 @@
       <video:publication_date>2025-07-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/rkQyOgbkzW4/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Cultura em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Cultura&quot;) com o sinal de Cultura em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/rkQyOgbkzW4</video:player_loc>
+      <video:duration>24</video:duration>
+      <video:publication_date>2025-07-30T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/danca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1769,10 +2030,19 @@
       <video:publication_date>2025-07-31T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0IOvkeHBNvk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Dança em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Dança&quot;) com o sinal de Dança em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/0IOvkeHBNvk</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-07-31T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/de-nada/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1784,10 +2054,19 @@
       <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/6Ex3fl_F2qQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>De nada em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;obrigado&quot; e &quot;de nada&quot;.) com o sinal de De nada em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/6Ex3fl_F2qQ</video:player_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/democracia/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1799,10 +2078,19 @@
       <video:publication_date>2025-07-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/e7KN2iZl4mw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Democracia em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Democracia&quot;) com o sinal de Democracia em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/e7KN2iZl4mw</video:player_loc>
+      <video:duration>29</video:duration>
+      <video:publication_date>2025-07-30T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/descanso/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1814,10 +2102,19 @@
       <video:publication_date>2025-05-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Zocc-MEvop0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Descanso em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Descanso&quot;) com o sinal de Descanso em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Zocc-MEvop0</video:player_loc>
+      <video:duration>23</video:duration>
+      <video:publication_date>2025-05-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/desculpa/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1827,6 +2124,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/desculpa.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7-6aOHhBlpY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Desculpa em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;desculpa&quot;.) com o sinal de Desculpa em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/7-6aOHhBlpY</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -1892,7 +2198,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/elevador/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1904,10 +2210,19 @@
       <video:publication_date>2025-05-27T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Lkhcaih14O0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Elevador em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Elevador&quot;) com o sinal de Elevador em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Lkhcaih14O0</video:player_loc>
+      <video:duration>25</video:duration>
+      <video:publication_date>2025-05-27T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/empresa/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1916,6 +2231,15 @@
       <video:description>Vídeo curto com o sinal de Empresa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/empresa.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-06-04T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/1U529xbdKiE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Empresa em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Empresa&quot;) com o sinal de Empresa em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/1U529xbdKiE</video:player_loc>
+      <video:duration>16</video:duration>
       <video:publication_date>2025-06-04T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1937,7 +2261,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/escada-rolante/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1946,6 +2270,15 @@
       <video:description>Vídeo curto com o sinal de Escada rolante em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/escada-rolante.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2025-05-30T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ze-qFGATO90/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Escada rolante em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Escada rolante&quot;) com o sinal de Escada rolante em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ze-qFGATO90</video:player_loc>
+      <video:duration>23</video:duration>
       <video:publication_date>2025-05-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -1967,7 +2300,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/escritorio/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1979,10 +2312,19 @@
       <video:publication_date>2025-07-23T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/n3vlysPIxa8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Escritório em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Escritório&quot;) com o sinal de Escritório em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/n3vlysPIxa8</video:player_loc>
+      <video:duration>25</video:duration>
+      <video:publication_date>2025-07-23T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/esporte/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -1991,6 +2333,15 @@
       <video:description>Vídeo curto com o sinal de Esporte em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/esporte.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2021-03-26T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/04El0lauiwE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Esporte em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Esporte) com o sinal de Esporte em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/04El0lauiwE</video:player_loc>
+      <video:duration>16</video:duration>
       <video:publication_date>2021-03-26T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2057,7 +2408,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/evento/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2066,6 +2417,15 @@
       <video:description>Vídeo curto com o sinal de Evento em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/evento.mp4</video:content_loc>
       <video:duration>8</video:duration>
+      <video:publication_date>2025-06-24T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/T0_WXsto-g8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Evento em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: Evento&quot;) com o sinal de Evento em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/T0_WXsto-g8</video:player_loc>
+      <video:duration>22</video:duration>
       <video:publication_date>2025-06-24T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2102,7 +2462,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/farra/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2111,6 +2471,15 @@
       <video:description>Vídeo curto com o sinal de Farra em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/farra.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2021-03-16T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/oG_GKnzgvPc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Farra em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Farra) com o sinal de Farra em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/oG_GKnzgvPc</video:player_loc>
+      <video:duration>15</video:duration>
       <video:publication_date>2021-03-16T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2132,7 +2501,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/feliz/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2142,6 +2511,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/feliz.mp4</video:content_loc>
       <video:duration>3</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/n9Rxr4O5UWc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Feliz em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Feliz&quot;.) com o sinal de Feliz em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/n9Rxr4O5UWc</video:player_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2025-05-12T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -2177,7 +2555,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/festa-junina/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2189,10 +2567,19 @@
       <video:publication_date>2025-06-16T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/5KJJOyVRL0A/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Festa junina em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Festa Junina &quot;) com o sinal de Festa junina em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/5KJJOyVRL0A</video:player_loc>
+      <video:duration>23</video:duration>
+      <video:publication_date>2025-06-16T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/fica-em-casa/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2201,6 +2588,15 @@
       <video:description>Vídeo curto com o sinal de Fica em casa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/fica-em-casa.mp4</video:content_loc>
       <video:duration>6</video:duration>
+      <video:publication_date>2021-04-14T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/hbggG4VwGQE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Fica em casa em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Fica em casa) com o sinal de Fica em casa em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hbggG4VwGQE</video:player_loc>
+      <video:duration>16</video:duration>
       <video:publication_date>2021-04-14T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2282,7 +2678,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/florianopolis/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2291,6 +2687,15 @@
       <video:description>Vídeo curto com o sinal de Florianópolis em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/florianopolis.mp4</video:content_loc>
       <video:duration>12</video:duration>
+      <video:publication_date>2025-06-25T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fH7Takfc5v8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Florianópolis em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Floripa&quot;) com o sinal de Florianópolis em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fH7Takfc5v8</video:player_loc>
+      <video:duration>45</video:duration>
       <video:publication_date>2025-06-25T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2312,7 +2717,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/fofoca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2324,10 +2729,19 @@
       <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/q-g46VyKn6c/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Fofoca em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Fofoca&quot;) com o sinal de Fofoca em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/q-g46VyKn6c</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/fogueira/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2339,10 +2753,19 @@
       <video:publication_date>2025-06-20T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-Acr_2xnoKM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Fogueira em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Fogueira&quot;) com o sinal de Fogueira em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/-Acr_2xnoKM</video:player_loc>
+      <video:duration>33</video:duration>
+      <video:publication_date>2025-06-20T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/forro/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2351,6 +2774,15 @@
       <video:description>Vídeo curto com o sinal de Forró em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/forro.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Hh0ySxanInc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Forró em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Balé, Hip Hop e Forró&quot;) com o sinal de Forró em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Hh0ySxanInc</video:player_loc>
+      <video:duration>41</video:duration>
       <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2387,7 +2819,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/frevo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2396,6 +2828,15 @@
       <video:description>Vídeo curto com o sinal de Frevo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/frevo.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2021-03-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/c3k5QxPUjZ0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Frevo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Frevo) com o sinal de Frevo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/c3k5QxPUjZ0</video:player_loc>
+      <video:duration>14</video:duration>
       <video:publication_date>2021-03-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2417,7 +2858,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/futebol/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2426,6 +2867,15 @@
       <video:description>Vídeo curto com o sinal de Futebol em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/futebol.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2021-03-27T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qngd58VomGk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Futebol em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Futebol) com o sinal de Futebol em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qngd58VomGk</video:player_loc>
+      <video:duration>14</video:duration>
       <video:publication_date>2021-03-27T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2477,7 +2927,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/grupo-de-risco/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2489,10 +2939,19 @@
       <video:publication_date>2021-04-15T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/jgpynWjTaWA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Grupo de risco em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Grupo de risco) com o sinal de Grupo de risco em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/jgpynWjTaWA</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2021-04-15T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/helicoptero/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2504,10 +2963,19 @@
       <video:publication_date>2021-04-01T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/pnnoMAZoAks/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Helicóptero em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Helicóptero) com o sinal de Helicóptero em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/pnnoMAZoAks</video:player_loc>
+      <video:duration>34</video:duration>
+      <video:publication_date>2021-04-01T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/hip-hop/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2516,6 +2984,15 @@
       <video:description>Vídeo curto com o sinal de Hip hop em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/hip-hop.mp4</video:content_loc>
       <video:duration>6</video:duration>
+      <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Hh0ySxanInc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Hip hop em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Balé, Hip Hop e Forró&quot;) com o sinal de Hip hop em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Hh0ySxanInc</video:player_loc>
+      <video:duration>41</video:duration>
       <video:publication_date>2025-08-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2552,7 +3029,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/internet/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2564,10 +3041,19 @@
       <video:publication_date>2025-07-10T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/KZpgLNL2QyY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Internet em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Internet&quot;) com o sinal de Internet em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/KZpgLNL2QyY</video:player_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2025-07-10T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/interprete/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2576,6 +3062,15 @@
       <video:description>Vídeo curto com o sinal de Intérprete em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/interprete.mp4</video:content_loc>
       <video:duration>3</video:duration>
+      <video:publication_date>2025-07-08T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/wz0Ue7JLftE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Intérprete em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Intérprete&quot;) com o sinal de Intérprete em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wz0Ue7JLftE</video:player_loc>
+      <video:duration>30</video:duration>
       <video:publication_date>2025-07-08T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2627,7 +3122,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/lady-gaga/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2636,6 +3131,15 @@
       <video:description>Vídeo curto com o sinal de Lady Gaga em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/lady-gaga.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-05-03T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/WnOyQqYiweg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Lady Gaga em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (ELA VEM SIM Sinal do dia: &quot;Lady Gaga&quot;) com o sinal de Lady Gaga em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/WnOyQqYiweg</video:player_loc>
+      <video:duration>19</video:duration>
       <video:publication_date>2025-05-03T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -2957,7 +3461,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/libras/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2969,10 +3473,19 @@
       <video:publication_date>2021-03-22T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/SbLZf3AWkd8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Libras em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Libras) com o sinal de Libras em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/SbLZf3AWkd8</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2021-03-22T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/libras-se/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -2981,6 +3494,15 @@
       <video:description>Vídeo curto com o sinal de LIBRAS.SE em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/libras-se.mp4</video:content_loc>
       <video:duration>2</video:duration>
+      <video:publication_date>2025-07-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/FMFoPXiloDM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>LIBRAS.SE em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Libras.se&quot;) com o sinal de LIBRAS.SE em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/FMFoPXiloDM</video:player_loc>
+      <video:duration>33</video:duration>
       <video:publication_date>2025-07-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3002,7 +3524,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/maca-do-amor/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3011,6 +3533,15 @@
       <video:description>Vídeo curto com o sinal de Maçã do amor em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/maca-do-amor.mp4</video:content_loc>
       <video:duration>2</video:duration>
+      <video:publication_date>2025-06-18T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/p7bwcT2gH_0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Maçã do amor em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;Maçã do amor&quot;) com o sinal de Maçã do amor em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/p7bwcT2gH_0</video:player_loc>
+      <video:duration>39</video:duration>
       <video:publication_date>2025-06-18T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3032,7 +3563,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/mala/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3044,10 +3575,19 @@
       <video:publication_date>2025-06-05T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/wuYY0bt64LQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Mala em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Mochila&quot; e &quot;Mala&quot;) com o sinal de Mala em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wuYY0bt64LQ</video:player_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2025-06-05T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/malvada/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3056,6 +3596,15 @@
       <video:description>Vídeo curto com o sinal de Malvada em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/malvada.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-06-13T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/OMucOpsEFK8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Malvada em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL MOVO TODO DIA: &quot;Malvada&quot;) com o sinal de Malvada em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/OMucOpsEFK8</video:player_loc>
+      <video:duration>32</video:duration>
       <video:publication_date>2025-06-13T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3122,7 +3671,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/medo/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3132,6 +3681,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/medo.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/5rBubWmAx-I/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Medo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Medo&quot;) com o sinal de Medo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/5rBubWmAx-I</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2025-05-15T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -3152,7 +3710,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/metro/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3164,10 +3722,19 @@
       <video:publication_date>2025-06-11T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/JgdpcHV6Cco/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Metrô em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Metrô&quot;) com o sinal de Metrô em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/JgdpcHV6Cco</video:player_loc>
+      <video:duration>23</video:duration>
+      <video:publication_date>2025-06-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/milho/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3179,10 +3746,19 @@
       <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/kF6q97BhjMM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Milho em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Bolo, Milho e Paçoca&quot;) com o sinal de Milho em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/kF6q97BhjMM</video:player_loc>
+      <video:duration>28</video:duration>
+      <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/mochila/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3191,6 +3767,15 @@
       <video:description>Vídeo curto com o sinal de Mochila em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/mochila.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-06-05T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/wuYY0bt64LQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Mochila em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Mochila&quot; e &quot;Mala&quot;) com o sinal de Mochila em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wuYY0bt64LQ</video:player_loc>
+      <video:duration>31</video:duration>
       <video:publication_date>2025-06-05T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3212,7 +3797,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/morango-do-amor/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3221,6 +3806,15 @@
       <video:description>Vídeo curto com o sinal de Morango do amor em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/morango-do-amor.mp4</video:content_loc>
       <video:duration>11</video:duration>
+      <video:publication_date>2025-07-29T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/NCn_CDhUIRA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Morango do amor em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Morango do amor&quot;) com o sinal de Morango do amor em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/NCn_CDhUIRA</video:player_loc>
+      <video:duration>47</video:duration>
       <video:publication_date>2025-07-29T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3242,7 +3836,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/museu/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3252,6 +3846,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/museu.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-18T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zeqLcp70bLY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Museu em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Museu&quot;) com o sinal de Museu em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/zeqLcp70bLY</video:player_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2025-06-10T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -3287,7 +3890,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/natacao/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3299,10 +3902,19 @@
       <video:publication_date>2021-03-29T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/A4BaR5jgURg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Natação em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Natação) com o sinal de Natação em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/A4BaR5jgURg</video:player_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2021-03-29T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/nojo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3311,6 +3923,15 @@
       <video:description>Vídeo curto com o sinal de Nojo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/nojo.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-05-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Slwh9hx6PfI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Nojo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Nojo&quot;) com o sinal de Nojo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Slwh9hx6PfI</video:player_loc>
+      <video:duration>18</video:duration>
       <video:publication_date>2025-05-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3632,7 +4253,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/obrigado/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3642,6 +4263,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/obrigado.mp4</video:content_loc>
       <video:duration>3</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/6Ex3fl_F2qQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Obrigado em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;obrigado&quot; e &quot;de nada&quot;.) com o sinal de Obrigado em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/6Ex3fl_F2qQ</video:player_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2025-04-30T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -3677,7 +4307,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/olimpiada/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3686,6 +4316,15 @@
       <video:description>Vídeo curto com o sinal de Olimpíada em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/olimpiada.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2021-03-25T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Wn1qSbQcD2I/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Olimpíada em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Olimpíada) com o sinal de Olimpíada em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Wn1qSbQcD2I</video:player_loc>
+      <video:duration>15</video:duration>
       <video:publication_date>2021-03-25T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3722,7 +4361,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/pacoca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3731,6 +4370,15 @@
       <video:description>Vídeo curto com o sinal de Paçoca em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/pacoca.mp4</video:content_loc>
       <video:duration>6</video:duration>
+      <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/kF6q97BhjMM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Paçoca em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Bolo, Milho e Paçoca&quot;) com o sinal de Paçoca em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/kF6q97BhjMM</video:player_loc>
+      <video:duration>28</video:duration>
       <video:publication_date>2025-07-17T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3767,7 +4415,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/papa/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3776,6 +4424,15 @@
       <video:description>Vídeo curto com o sinal de Papa em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/papa.mp4</video:content_loc>
       <video:duration>3</video:duration>
+      <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/KyNd-AbfdQo/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Papa em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Papa&quot; e &quot;Conclave&quot;.) com o sinal de Papa em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/KyNd-AbfdQo</video:player_loc>
+      <video:duration>23</video:duration>
       <video:publication_date>2025-05-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3872,7 +4529,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/pipoca/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3884,10 +4541,19 @@
       <video:publication_date>2025-06-19T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Z5DtixZGKW4/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Pipoca em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA: &quot;pipoca&quot;) com o sinal de Pipoca em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Z5DtixZGKW4</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-06-19T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/pizza/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3899,10 +4565,19 @@
       <video:publication_date>2025-07-15T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/E5z4ASSKA-s/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Pizza em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Pizza&quot;) com o sinal de Pizza em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/E5z4ASSKA-s</video:player_loc>
+      <video:duration>21</video:duration>
+      <video:publication_date>2025-07-15T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/por-favor/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3911,6 +4586,15 @@
       <video:description>Vídeo curto com o sinal de Por favor em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/por-favor.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2025-05-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/eb7-Ki4gy3M/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Por favor em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Por favor&quot;) com o sinal de Por favor em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/eb7-Ki4gy3M</video:player_loc>
+      <video:duration>19</video:duration>
       <video:publication_date>2025-05-06T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -3947,7 +4631,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/predio/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -3956,6 +4640,15 @@
       <video:description>Vídeo curto com o sinal de Prédio em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/predio.mp4</video:content_loc>
       <video:duration>7</video:duration>
+      <video:publication_date>2025-06-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/NTJ9y6G-NpQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Prédio em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Prédio&quot;) com o sinal de Prédio em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/NTJ9y6G-NpQ</video:player_loc>
+      <video:duration>19</video:duration>
       <video:publication_date>2025-06-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4022,7 +4715,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/reuniao/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4034,10 +4727,19 @@
       <video:publication_date>2025-06-03T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qmHFrD2xQJI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Reunião em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Reunião&quot;) com o sinal de Reunião em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qmHFrD2xQJI</video:player_loc>
+      <video:duration>21</video:duration>
+      <video:publication_date>2025-06-03T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/rio/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4046,6 +4748,15 @@
       <video:description>Vídeo curto com o sinal de Rio em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/rio.mp4</video:content_loc>
       <video:duration>3</video:duration>
+      <video:publication_date>2025-07-03T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/agoyeI4nqdg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Rio em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Rio&quot;) com o sinal de Rio em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/agoyeI4nqdg</video:player_loc>
+      <video:duration>15</video:duration>
       <video:publication_date>2025-07-03T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4067,7 +4778,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/rotina/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4076,6 +4787,15 @@
       <video:description>Vídeo curto com o sinal de Rotina em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/rotina.mp4</video:content_loc>
       <video:duration>13</video:duration>
+      <video:publication_date>2025-07-24T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/mKgi8SF85DE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Rotina em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Rotina&quot; ou &quot;Todo dia&quot;) com o sinal de Rotina em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/mKgi8SF85DE</video:player_loc>
+      <video:duration>41</video:duration>
       <video:publication_date>2025-07-24T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4112,7 +4832,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/samba/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4121,6 +4841,15 @@
       <video:description>Vídeo curto com o sinal de Samba em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/samba.mp4</video:content_loc>
       <video:duration>4</video:duration>
+      <video:publication_date>2021-03-18T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/TaYHbYrXGI8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Samba em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Samba) com o sinal de Samba em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/TaYHbYrXGI8</video:player_loc>
+      <video:duration>14</video:duration>
       <video:publication_date>2021-03-18T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4202,7 +4931,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/skate/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4211,6 +4940,15 @@
       <video:description>Vídeo curto com o sinal de Skate em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/skate.mp4</video:content_loc>
       <video:duration>1</video:duration>
+      <video:publication_date>2025-05-22T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/YRCe6nzd5dg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Skate em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Skate&quot;) com o sinal de Skate em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/YRCe6nzd5dg</video:player_loc>
+      <video:duration>22</video:duration>
       <video:publication_date>2025-05-22T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4262,7 +5000,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/supermercado/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4274,10 +5012,19 @@
       <video:publication_date>2025-05-29T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/N-PJzWBSkTo/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Supermercado em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Supermercado&quot;) com o sinal de Supermercado em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/N-PJzWBSkTo</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2025-05-29T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/surdo/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4287,6 +5034,15 @@
       <video:content_loc>https://libras.se/assets/videos/sinais/surdo.mp4</video:content_loc>
       <video:duration>4</video:duration>
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qWZ7qFEdyb8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Surdo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Surdo) com o sinal de Surdo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qWZ7qFEdyb8</video:player_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2021-03-20T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -4337,7 +5093,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/teatro/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4349,10 +5105,19 @@
       <video:publication_date>2026-10-18T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/5remBb4oYdY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Teatro em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA &quot;Teatro&quot;) com o sinal de Teatro em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/5remBb4oYdY</video:player_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2025-06-12T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/tecnologia/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4361,6 +5126,15 @@
       <video:description>Vídeo curto com o sinal de Tecnologia em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/tecnologia.mp4</video:content_loc>
       <video:duration>2</video:duration>
+      <video:publication_date>2025-07-11T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/rfNkEZBZOyo/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Tecnologia em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Tecnologia&quot;) com o sinal de Tecnologia em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/rfNkEZBZOyo</video:player_loc>
+      <video:duration>28</video:duration>
       <video:publication_date>2025-07-11T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4382,7 +5156,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/televisao/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4394,10 +5168,19 @@
       <video:publication_date>2025-07-09T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ojesnoZJdBI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Televisão em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: &quot;Televisão&quot;) com o sinal de Televisão em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ojesnoZJdBI</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-07-09T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/trabalho/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4409,10 +5192,19 @@
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/9P-1OGteANI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Trabalho em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;trabalhar&quot;) com o sinal de Trabalho em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/9P-1OGteANI</video:player_loc>
+      <video:duration>19</video:duration>
+      <video:publication_date>2025-05-01T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/transmissao/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4424,10 +5216,19 @@
       <video:publication_date>2025-06-25T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/3oQ_UU3ppWY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Transmissão em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Sinal novo todo dia: Transmissão) com o sinal de Transmissão em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3oQ_UU3ppWY</video:player_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2025-06-25T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/triste/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4439,10 +5240,19 @@
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/isnPinPYyeQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Triste em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Triste&quot;.) com o sinal de Triste em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/isnPinPYyeQ</video:player_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2025-05-13T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/tudo-bem/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4452,6 +5262,24 @@
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/tudo-bem.mp4</video:content_loc>
       <video:duration>3</video:duration>
       <video:publication_date>2025-05-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7lZ-nc5U8aU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Tudo bem? em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Tudo bem?&quot;) com o sinal de Tudo bem? em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/7lZ-nc5U8aU</video:player_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2025-05-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ae-zIWDQFsc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Tudo bem? em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Tudo bem) com o sinal de Tudo bem? em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Ae-zIWDQFsc</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2021-03-24T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
@@ -4472,7 +5300,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/vegetariano/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4481,6 +5309,15 @@
       <video:description>Vídeo curto com o sinal de Vegetariano em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/vegetariano.mp4</video:content_loc>
       <video:duration>12</video:duration>
+      <video:publication_date>2021-04-02T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/XLXAsV2Ny74/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Vegetariano em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Vegetariano) com o sinal de Vegetariano em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/XLXAsV2Ny74</video:player_loc>
+      <video:duration>27</video:duration>
       <video:publication_date>2021-04-02T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4532,7 +5369,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/viajar/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4544,10 +5381,19 @@
       <video:publication_date>2026-10-06T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/_lniz3OkvtU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Viajar em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;ViagemViajar&quot;) com o sinal de Viajar em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/_lniz3OkvtU</video:player_loc>
+      <video:duration>29</video:duration>
+      <video:publication_date>2025-06-06T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://libras.se/sinal/video/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4556,6 +5402,15 @@
       <video:description>Vídeo curto com o sinal de Vídeo em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/video.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2025-05-28T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/UJctOYm3PMQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Vídeo em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (UM SINAL NOVO TODO DIA : &quot;Vídeo&quot;) com o sinal de Vídeo em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/UJctOYm3PMQ</video:player_loc>
+      <video:duration>18</video:duration>
       <video:publication_date>2025-05-28T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -4577,7 +5432,7 @@
   </url>
   <url>
     <loc>https://libras.se/sinal/volei/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <video:video>
@@ -4586,6 +5441,15 @@
       <video:description>Vídeo curto com o sinal de Vôlei em Libras, interpretado por intérprete profissional da LIBRAS.SE.</video:description>
       <video:content_loc>https://libras.se/assets/videos/sinais-canal/volei.mp4</video:content_loc>
       <video:duration>5</video:duration>
+      <video:publication_date>2021-03-28T00:00:00-03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8C3DUu0_ZLs/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Vôlei em Libras: short do quadro Sinal novo todo dia</video:title>
+      <video:description>Short do canal da LIBRAS.SE no YouTube (Aprenda Libras - Um sinal por dia: Vôlei) com o sinal de Vôlei em Libras e a explicação de quem interpreta.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/8C3DUu0_ZLs</video:player_loc>
+      <video:duration>15</video:duration>
       <video:publication_date>2021-03-28T00:00:00-03:00</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>

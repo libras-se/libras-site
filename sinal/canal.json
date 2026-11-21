@@ -1,6 +1,7 @@
 {
  "_leia": "Vídeos do canal youtube.com/@libras-se-yt cortados para o sinalário (producao-conteudo/youtube-sinais). Arquivo gerado por exportar_site.py: não edite à mão. VÍDEOS PROVISÓRIOS: todos estes sinais precisam ser regravados no estúdio para padronizar (lista em producao-conteudo/youtube-sinais/regravar.md); o vídeo da intérprete, quando aprovado, vira o principal sozinho.",
  "canal": "https://www.youtube.com/@libras-se-yt",
+ "atualizado_em": "2026-11-21",
  "sinais": {
   "academia": [
    {

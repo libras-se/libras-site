@@ -14,10 +14,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WZ7MN3KX');</script>
 <!-- End Google Tag Manager -->
 <title>Libras.se Estúdio | Software para equipes de intérpretes</title>
-<meta name="description" content="Licencie o Libras.se Estúdio: calibra a câmera, grava a janela de Libras em Full HD, envia a entrega sozinho e mostra à coordenação quem produziu e quanto."/>
+<meta name="description" content="Licencie o LIBRAS.SE Estúdio, feito por intérpretes: legenda antecipada, resumo e glossário de cada vídeo, gravação em Full HD, envio automático e painel de produção."/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="LIBRAS.SE"/>
-<meta name="keywords" content="software para intérprete de Libras, estúdio de Libras, gravação de Libras, chroma key Libras, janela de Libras videoaula, gestão de intérpretes, licença de software Libras, EAD acessibilidade"/>
+<meta name="keywords" content="software para intérprete de Libras, estúdio de Libras, gravação de Libras, chroma key Libras, janela de Libras videoaula, gestão de intérpretes, licença de software Libras, EAD acessibilidade, legenda antecipada para intérprete, glossário para intérprete de Libras, preparação do intérprete"/>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#4fd1c5"/>
 <link rel="canonical" href="https://libras.se/estudio/"/>
@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://libras.se/estudio/"/>
 <meta property="og:title" content="Libras.se Estúdio | O estúdio de Libras da sua equipe, em qualquer lugar"/>
-<meta property="og:description" content="Calibração com nota, gravação em Full HD, envio automático, painel de produção e escala com a rede de +50 intérpretes pelo Brasil."/>
+<meta property="og:description" content="Feito por intérpretes: legenda antecipada, resumo e glossário de cada vídeo, gravação em Full HD, envio automático, painel de produção e a rede de +50 intérpretes pelo Brasil."/>
 <meta property="og:image" content="https://libras.se/assets/img/og/estudio.webp"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -49,7 +49,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://libras.se/estudio/",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "Windows, macOS",
-  "description": "Software e serviço para equipes de intérpretes de Libras: calibração do chroma key com nota, gravação em Full HD, controle pelo celular, envio automático, painel de produção, suporte 24/7 para problemas com os intérpretes, reunião mensal com a equipe e ambiente seguro aprovado pelo compliance, com conta individual, criptografia e logs detalhados.",
+  "description": "Software e serviço para equipes de intérpretes de Libras, feito por intérpretes: legenda antecipada, resumo e glossário de cada vídeo antes da gravação, calibração do chroma key com nota, gravação em Full HD, controle pelo celular, envio automático, painel de produção, suporte 24/7 para problemas com os intérpretes, reunião mensal com a equipe e ambiente seguro aprovado pelo compliance, com conta individual, criptografia e logs detalhados.",
+  "featureList": ["Legenda antecipada na tela do intérprete, fora da gravação", "Resumo, tom e tópicos de cada vídeo", "Glossário com termos, nomes próprios, dificuldade e os minutos em que aparecem", "Momentos em que o professor aponta para a tela", "Calibração do chroma key com nota", "Gravação em Full HD", "Controle pelo celular", "Envio automático com aviso no WhatsApp", "Nota técnica, revisão e aprovação", "Painel de produção"],
   "image": "https://libras.se/assets/img/og/estudio.webp",
   "publisher": {"@type": "Organization", "name": "LIBRAS.SE", "url": "https://libras.se"}
 }
@@ -65,6 +66,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Não. É software e serviço: suporte 24/7 da nossa equipe para problemas com os intérpretes, reunião mensal com a sua equipe, envios padronizados e um ambiente seguro, aprovado pelo compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que o intérprete recebe antes de gravar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A legenda antecipada, o resumo e o glossário do vídeo. O Estúdio transcreve a fala, aponta os termos difíceis, os nomes próprios e os minutos em que cada um aparece, e avisa quando o professor se refere à tela. A legenda fica só na tela do intérprete e não entra na gravação."
       }
     },
     {
@@ -354,6 +363,109 @@ section{position:relative}
 .res{position:relative;max-width:980px;margin:0 auto;border-radius:26px;overflow:hidden;box-shadow:0 30px 90px rgba(10,34,37,.18),0 0 0 6px #fff;aspect-ratio:16/9;background:#f3f1ec}
 .res video{width:100%;height:100%;object-fit:cover;display:block}
 .res figcaption{position:absolute;left:16px;bottom:16px;font-size:.8rem;font-weight:700;color:#fff;background:rgba(14,53,56,.8);padding:7px 13px;border-radius:99px;backdrop-filter:blur(6px)}
+
+/* preparação do intérprete: tela do Estúdio recriada (legenda antecipada + Sobre o vídeo) */
+.pp{--pb:#2bb3a3;--pl:#262626;--pm:#a3a3a3;max-width:1120px;margin:0 auto;border-radius:26px;background:#0a0a0a;color:#e5e5e5;box-shadow:0 40px 110px rgba(10,34,37,.24),0 0 0 1px rgba(10,34,37,.08);overflow:hidden}
+.pp-bar{height:42px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#141414;border-bottom:1px solid var(--pl);position:relative}
+.pp-bar i{width:11px;height:11px;border-radius:50%;display:block}
+.pp-bar span{position:absolute;left:0;right:0;text-align:center;font-size:.8rem;color:#8a8a8a;font-weight:700;pointer-events:none}
+.pp-in{display:grid;grid-template-columns:minmax(0,1fr) 340px}
+.pp-main{padding:18px 18px 14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.pp-scene{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#f3f1ec;box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.pp-scene video{width:100%;height:100%;object-fit:cover;display:block}
+.pp-scene .rec{position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:#fff;background:rgba(10,10,10,.8);padding:5px 11px;border-radius:99px}
+.pp-scene .rec i{width:7px;height:7px;border-radius:50%;background:#e5484d;display:block;animation:blink 1.2s infinite}
+.pp-strip{position:relative;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:rgba(10,10,10,.92);padding:12px 20px;font-weight:700;color:#fff;overflow:hidden;--fs:19px;font-size:var(--fs);height:calc(var(--fs)*1.4*3 + 26px);transition:height .3s,opacity .3s}
+.pp-strip.off{height:0;padding-top:0;padding-bottom:0;border-width:0;opacity:0}
+.pp-mask{height:100%;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent)}
+.pp-txt{position:relative;line-height:1.4;transition:transform .5s ease-out}
+.pp-txt p{margin:0 0 .5em;text-align:justify;text-align-last:center;-webkit-hyphens:auto;hyphens:auto}
+.pp-txt .sg{transition:color .3s;color:rgba(255,255,255,.6)}
+.pp-txt .sg.spoken{color:rgba(255,255,255,.35)}
+.pp-txt .sg.current{color:#fff}
+.pp-txt .sg.upcoming{color:rgba(255,255,255,.9)}
+.pp-txt mark{border-radius:4px;padding:0 .12em;background:rgba(252,211,77,.1);color:rgba(253,230,138,.7);transition:background .3s,color .3s}
+.pp-txt .spoken mark{background:transparent;color:rgba(255,255,255,.35)}
+.pp-txt .current mark{background:rgba(252,211,77,.25);color:#fde68a}
+.pp-txt .upcoming mark{background:rgba(252,211,77,.2);color:rgba(253,230,138,.9)}
+.pp-txt .cd{display:none;align-items:center;justify-content:center;gap:.45em;margin:0 0 .5em;color:rgba(255,255,255,.75)}
+.pp-txt .cd.on{display:flex}
+.pp-txt .cd b{min-width:1.2em;text-align:center;color:#fde68a;font-variant-numeric:tabular-nums}
+.pp-txt .cd s{width:.32em;height:.32em;border-radius:50%;background:rgba(255,255,255,.15);display:block;transition:background .3s}
+.pp-txt .cd s.lit{background:#fde68a}
+.pp-txt .flash{animation:ppflash 1.2s ease-out}
+@keyframes ppflash{0%{background:rgba(43,179,163,.55)}100%{background:rgba(252,211,77,.25)}}
+.pp-ctl{display:flex;align-items:center;gap:10px}
+.pp-ctl button{font-family:inherit;width:36px;height:36px;border-radius:99px;border:none;background:transparent;color:var(--pm);cursor:pointer;display:grid;place-items:center;flex:none;transition:background .2s,color .2s}
+.pp-ctl button:hover{background:#1f1f1f;color:#fff}
+.pp-ctl button:focus-visible{outline:3px solid var(--pb);outline-offset:1px}
+.pp-ctl button[aria-pressed="true"]{background:rgba(43,179,163,.16);color:var(--pb)}
+.pp-ctl button:disabled{opacity:.35;cursor:default;background:transparent}
+.pp-ctl svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pp-ctl .tm{font-size:.74rem;font-weight:700;color:var(--pm);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pp-trk{position:relative;flex:1;height:6px;border-radius:99px;background:#262626;min-width:60px}
+.pp-trk span{position:absolute;top:0;bottom:0;border-radius:99px;background:rgba(43,179,163,.35)}
+.pp-trk i{position:absolute;top:-5px;width:3px;height:16px;border-radius:2px;background:#fff;box-shadow:0 0 0 2px rgba(10,10,10,.6);transform:translateX(-50%)}
+.pp-side{position:relative;background:#171717;border-left:1px solid var(--pl);min-height:0}
+.pp-si{position:absolute;inset:0;overflow-y:auto;padding:18px 18px 10px;scrollbar-width:thin;scrollbar-color:#333 transparent}
+.pp-h{display:flex;align-items:center;gap:7px;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pb)}
+.pp-h svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pp-vt{margin:12px 0 6px;padding:12px;border-radius:14px;background:linear-gradient(135deg,rgba(43,179,163,.16),rgba(43,179,163,.02));border:1px solid rgba(43,179,163,.18)}
+.pp-vt b{display:block;font-size:.95rem;color:#fff}
+.pp-vt small{display:block;font-size:.72rem;color:var(--pm);margin-top:2px}
+.pp-side details{border-bottom:1px solid rgba(38,38,38,.9)}
+.pp-side details:last-of-type{border-bottom:none}
+.pp-side summary{display:flex;align-items:center;gap:8px;padding:11px 0;font-size:.86rem;font-weight:700;color:#e5e5e5;cursor:pointer;list-style:none}
+.pp-side summary::-webkit-details-marker{display:none}
+.pp-side summary:hover{color:var(--pb)}
+.pp-side summary:focus-visible{outline:3px solid var(--pb);outline-offset:2px;border-radius:6px}
+.pp-side summary span{flex:1}
+.pp-side summary em{font-style:normal;font-size:.68rem;font-weight:700;color:var(--pm);background:#262626;padding:1px 8px;border-radius:99px;font-variant-numeric:tabular-nums}
+.pp-side summary svg{width:15px;height:15px;stroke:var(--pm);fill:none;stroke-width:2;transition:transform .2s}
+.pp-side details[open] summary svg{transform:rotate(180deg)}
+.pp-bd{padding-bottom:12px}
+.pp-bd p.sm{font-size:.84rem;line-height:1.55;color:#e5e5e5;font-weight:300}
+.pp-bd p.tn{font-size:.74rem;line-height:1.45;color:var(--pm);margin-top:8px}
+.pp-bd p.tn b{color:#d4d4d4}
+.pp-tp{list-style:none;display:flex;flex-wrap:wrap;gap:4px;margin-top:9px}
+.pp-tp li{font-size:.72rem;background:#262626;color:#e5e5e5;padding:3px 10px;border-radius:99px}
+.pp-fl{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px}
+.pp-fl button{font-family:inherit;display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 9px;border-radius:99px;border:1px solid #2f2f2f;background:#0f0f0f;color:var(--pm);font-size:.64rem;font-weight:700;cursor:pointer;transition:background .2s,color .2s}
+.pp-fl button span{opacity:.7;font-variant-numeric:tabular-nums}
+.pp-fl button:hover{color:#fff;background:#1f1f1f}
+.pp-fl button[aria-pressed="true"]{border-color:rgba(43,179,163,.5);background:rgba(43,179,163,.15);color:var(--pb)}
+.pp-fl button:disabled{opacity:.4;cursor:default}
+.pp-fl button:focus-visible,.pp-chip:focus-visible{outline:3px solid var(--pb);outline-offset:1px}
+.pp-gl{list-style:none}
+.pp-gl li{padding:8px 0;border-top:1px solid rgba(38,38,38,.7)}
+.pp-gl li:first-child{border-top:none}
+.pp-gl .t{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.pp-gl .t b{font-size:.86rem;color:#fff}
+.pp-gl .t small{font-size:.56rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pm)}
+.pp-gl .t i{font-style:normal;margin-left:auto;font-size:.56rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:99px;border:1px solid}
+.pp-gl .t i.facil{border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.1);color:#6ee7b7}
+.pp-gl .t i.medio{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.1);color:#fcd34d}
+.pp-gl .t i.dificil{border-color:rgba(244,63,94,.3);background:rgba(244,63,94,.1);color:#fda4af}
+.pp-gl .x{font-size:.74rem;line-height:1.4;color:var(--pm);margin-top:2px}
+.pp-oc{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.pp-chip{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:24px;padding:0 7px;border-radius:6px;border:1px solid #2f2f2f;background:#0f0f0f;color:#e5e5e5;font-size:.66rem;font-weight:700;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.pp-chip:hover{border-color:rgba(43,179,163,.5);background:rgba(43,179,163,.1);color:var(--pb)}
+.pp-mo{list-style:none;display:grid;gap:7px}
+.pp-mo li{display:flex;align-items:flex-start;gap:8px}
+.pp-mo q{font-size:.76rem;line-height:1.4;color:#d4d4d4}
+.pp-sp{position:relative;height:10px;border-radius:99px;background:#262626;overflow:hidden}
+.pp-sp span{position:absolute;top:0;bottom:0;background:var(--pb)}
+.pp-lg{display:flex;gap:12px;margin-top:6px;font-size:.64rem;color:var(--pm)}
+.pp-lg span{display:inline-flex;align-items:center;gap:5px}
+.pp-lg span::before{content:'';width:8px;height:8px;border-radius:2px;background:var(--pb)}
+.pp-lg span+span::before{background:#262626;box-shadow:0 0 0 1px #3a3a3a}
+.pcs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.pc{border-radius:22px;background:var(--card);border:1px solid rgba(255,255,255,.85);box-shadow:var(--sh);padding:22px 20px}
+.pc h3{font-size:1rem;font-weight:700;color:var(--p1);margin-top:14px;line-height:1.25}
+.pc p{font-size:.85rem;color:var(--txs);font-weight:300;margin-top:6px;line-height:1.45}
+@media(max-width:1000px){.pp-in{grid-template-columns:1fr}.pp-side{border-left:none;border-top:1px solid var(--pl)}.pp-si{position:static}.pcs{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pp-main{padding:12px 10px 10px}.pp-strip{padding:10px 14px;--fs:16px}.pp-ctl{gap:4px}.pp-ctl .tm{display:none}.pcs{grid-template-columns:1fr}.pp{border-radius:20px}}
+@media(prefers-reduced-motion:reduce){.pp-txt,.pp-txt .sg,.pp-strip{transition:none}.pp-scene .rec i{animation:none}}
 
 /* escala com a rede */
 .esc{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -898,6 +1010,106 @@ form.card .btn{width:100%;margin-top:20px;padding:15px}
   </div>
 </section>
 
+<!-- ===== PREPARAÇÃO DO INTÉRPRETE (legenda, resumo e glossário) ===== -->
+<section class="sec" id="preparacao" style="padding-top:40px" aria-labelledby="prep-t">
+  <div class="w">
+    <div class="sh rv">
+      <span class="lbl"><i></i>Legenda, resumo e glossário</span>
+      <h2 id="prep-t">Feito por intérpretes, <span class="gt">para intérpretes</span></h2>
+      <p>Pensado e organizado por TILs que gravam todos os dias, do jeito de quem faz. Antes de apertar Gravar, o Estúdio já ouviu o vídeo e põe na sua tela a legenda antecipada, o resumo e o glossário.</p>
+    </div>
+
+    <div class="pp rv" id="prep">
+      <div class="pp-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>LIBRAS.SE estúdio · Tema 02 · Bloco 03</span></div>
+      <div class="pp-in">
+        <div class="pp-main">
+          <div class="pp-scene">
+            <video id="prepVid" muted playsinline loop preload="none" poster="/assets/videos/estudio/aula-bruna.webp" data-src="/assets/videos/estudio/aula-bruna.mp4" aria-hidden="true"></video>
+            <span class="rec" aria-hidden="true"><i></i>Gravando</span>
+          </div>
+          <section class="pp-strip" id="ppStrip" aria-label="Legenda antecipada, demonstração">
+            <div class="pp-mask"><div class="pp-txt" id="ppTxt"><p>Neste bloco, a gente vai ver como o quadro organiza o trabalho da <mark>sprint</mark>. Repare nas três colunas: a fazer, fazendo e feito.</p></div></div>
+          </section>
+          <div class="pp-ctl" role="group" aria-label="Controles da demonstração">
+            <button type="button" id="ppPlay" aria-label="Pausar a demonstração"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="ppPlayIco" d="M7 5h3v14H7zM14 5h3v14h-3z" style="fill:currentColor;stroke:none"/></svg></button>
+            <span class="tm" id="ppTime">0:00 / 9:48</span>
+            <div class="pp-trk" id="ppTrk" aria-hidden="true"><i id="ppNeedle" style="left:0"></i></div>
+            <button type="button" id="ppCc" aria-pressed="true" aria-label="Legenda antecipada" title="Esconder a legenda antecipada"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></svg></button>
+            <button type="button" id="ppMinus" aria-label="Diminuir a letra da legenda" title="Diminuir a letra da legenda"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 13h6"/><path d="m2 16 4.5-9 4.5 9"/><path d="M18 7v9"/><path d="m14 12 4 4 4-4"/></svg></button>
+            <button type="button" id="ppPlus" aria-label="Aumentar a letra da legenda" title="Aumentar a letra da legenda"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 13h6"/><path d="m2 16 4.5-9 4.5 9"/><path d="M18 16V7"/><path d="m14 11 4-4 4 4"/></svg></button>
+          </div>
+        </div>
+        <aside class="pp-side" aria-labelledby="pp-h">
+          <div class="pp-si">
+            <p class="pp-h" id="pp-h"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Sobre o vídeo</p>
+            <div class="pp-vt"><b>Tema 02 · Bloco 03</b><small>Gestão de Projetos Ágeis · 9:48</small></div>
+            <details open>
+              <summary><span>Resumo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="pp-bd">
+                <p class="sm">Aula sobre o quadro do Scrum: as colunas a fazer, fazendo e feito, o planejamento da sprint, o papel do Product Owner e do Scrum Master, a daily e a revisão. Fecha anunciando a comparação com o Kanban.</p>
+                <p class="tn"><b>Tom: </b>didático e próximo, com exemplos apontados no quadro.</p>
+                <ul class="pp-tp" aria-label="Tópicos"><li>Quadro do Scrum</li><li>Planejamento da sprint</li><li>Papéis do time</li><li>Daily</li><li>Revisão</li></ul>
+              </div>
+            </details>
+            <details open>
+              <summary><span>Glossário</span><em>11</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="pp-bd">
+                <div class="pp-fl" role="group" aria-label="Tipo de termo">
+                  <button type="button" data-k="todos" aria-pressed="true">Todos <span>11</span></button>
+                  <button type="button" data-k="nomes" aria-pressed="false">Nomes próprios <span>2</span></button>
+                  <button type="button" data-k="termos" aria-pressed="false">Termos <span>9</span></button>
+                </div>
+                <div class="pp-fl" role="group" aria-label="Dificuldade">
+                  <button type="button" data-l="facil" aria-pressed="false">Fácil <span>2</span></button>
+                  <button type="button" data-l="medio" aria-pressed="false">Médio <span>5</span></button>
+                  <button type="button" data-l="dificil" aria-pressed="false">Difícil <span>4</span></button>
+                </div>
+                <ul class="pp-gl" id="ppGl" aria-label="Glossário">
+                  <li data-kind="termo" data-level="medio"><p class="t"><b>Sprint</b><small>Termo</small><i class="medio">Médio</i></p><p class="x">Ciclo curto de trabalho, em geral de duas semanas, com uma meta definida.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="3" aria-label="Ir para 0:03: Sprint">0:03</button><button type="button" class="pp-chip" data-t="11" aria-label="Ir para 0:11: Sprint">0:11</button><button type="button" class="pp-chip" data-t="49" aria-label="Ir para 0:49: Sprint">0:49</button></div></li>
+                  <li data-kind="estrangeirismo" data-level="medio"><p class="t"><b>Backlog</b><small>Estrangeirismo</small><i class="medio">Médio</i></p><p class="x">Lista ordenada de tudo o que o time ainda vai fazer.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="23" aria-label="Ir para 0:23: Backlog">0:23</button></div></li>
+                  <li data-kind="estrangeirismo" data-level="dificil"><p class="t"><b>Product Owner</b><small>Estrangeirismo</small><i class="dificil">Difícil</i></p><p class="x">Quem define a prioridade do backlog e fala pelo cliente.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="24" aria-label="Ir para 0:24: Product Owner">0:24</button></div></li>
+                  <li data-kind="termo" data-level="medio"><p class="t"><b>Pontos</b><small>Termo</small><i class="medio">Médio</i></p><p class="x">Estimativa do esforço de cada item. Não são horas.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="28" aria-label="Ir para 0:28: Pontos">0:28</button><button type="button" class="pp-chip" data-t="30" aria-label="Ir para 0:30: Pontos">0:30</button></div></li>
+                  <li data-kind="estrangeirismo" data-level="facil"><p class="t"><b>Daily</b><small>Estrangeirismo</small><i class="facil">Fácil</i></p><p class="x">Reunião diária de até 15 minutos para alinhar o dia.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="33" aria-label="Ir para 0:33: Daily">0:33</button></div></li>
+                  <li data-kind="estrangeirismo" data-level="dificil"><p class="t"><b>Scrum Master</b><small>Estrangeirismo</small><i class="dificil">Difícil</i></p><p class="x">Quem orienta o time no método e tira do caminho o que trava o trabalho.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="38" aria-label="Ir para 0:38: Scrum Master">0:38</button></div></li>
+                  <li data-kind="termo" data-level="facil"><p class="t"><b>Impedimento</b><small>Termo</small><i class="facil">Fácil</i></p><p class="x">Qualquer coisa que impede o time de avançar.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="40" aria-label="Ir para 0:40: Impedimento">0:40</button></div></li>
+                  <li data-kind="termo" data-level="medio"><p class="t"><b>Incremento</b><small>Termo</small><i class="medio">Médio</i></p><p class="x">A parte do produto que fica pronta e utilizável no fim da sprint.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="51" aria-label="Ir para 0:51: Incremento">0:51</button></div></li>
+                  <li data-kind="nome" data-level="dificil"><p class="t"><b>Ken Schwaber</b><small>Nome próprio</small><i class="dificil">Difícil</i></p><p class="x">Um dos criadores do Scrum.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="53" aria-label="Ir para 0:53: Ken Schwaber">0:53</button></div></li>
+                  <li data-kind="nome" data-level="dificil"><p class="t"><b>Jeff Sutherland</b><small>Nome próprio</small><i class="dificil">Difícil</i></p><p class="x">Criou o Scrum com Ken Schwaber.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="55" aria-label="Ir para 0:55: Jeff Sutherland">0:55</button></div></li>
+                  <li data-kind="estrangeirismo" data-level="medio"><p class="t"><b>Kanban</b><small>Estrangeirismo</small><i class="medio">Médio</i></p><p class="x">Método que organiza o trabalho em colunas, tema do próximo bloco.</p><div class="pp-oc"><button type="button" class="pp-chip" data-t="62" aria-label="Ir para 1:02: Kanban">1:02</button></div></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary><span>Momentos na tela</span><em>2</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="pp-bd">
+                <ul class="pp-mo" aria-label="Momentos em que o professor aponta para a tela">
+                  <li><button type="button" class="pp-chip" data-t="5" aria-label="Ir para 0:05: Repare nas três colunas">0:05</button><q>Repare nas três colunas: a fazer, fazendo e feito.</q></li>
+                  <li><button type="button" class="pp-chip" data-t="28" aria-label="Ir para 0:28: como este cartão de cinco pontos aqui">0:28</button><q>Como este cartão de cinco pontos aqui.</q></li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary><span>Fala no vídeo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="pp-bd">
+                <div class="pp-sp" id="ppSp" role="img" aria-label="Há fala em boa parte do vídeo, com pausas curtas entre os trechos"></div>
+                <p class="pp-lg"><span>Fala</span><span>Silêncio</span></p>
+              </div>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <p class="note">Ilustração com dados fictícios, no desenho das telas do Estúdio. Clique nos minutos do glossário: o vídeo vai até lá.</p>
+
+    <div class="pcs">
+      <div class="pc rv"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></svg></span><h3>Legenda antecipada</h3><p>O que vai ser dito aparece antes, em texto corrido, com os termos difíceis em destaque e “Fala em 3” nas pausas. Fica só na sua tela e nunca entra na gravação.</p></div>
+      <div class="pc rv d1"><span class="ico"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></span><h3>Resumo do vídeo</h3><p>Assunto, tom e tópicos, para entrar na gravação sabendo do que a aula trata.</p></div>
+      <div class="pc rv d2"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><h3>Glossário com os momentos</h3><p>Termos, nomes próprios e siglas com explicação simples, dificuldade e cada minuto em que aparecem. Um clique leva o vídeo até lá.</p></div>
+      <div class="pc rv d3"><span class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><h3>Momentos na tela</h3><p>Quando o professor aponta “como vocês veem aqui”, você sabe o minuto antes de chegar nele.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PAINEL DE PRODUÇÃO ===== -->
 <section class="sec pn-wrap" id="painel" aria-labelledby="pn-t">
   <div class="w">
@@ -1029,6 +1241,10 @@ form.card .btn{width:100%;margin-top:20px;padding:15px}
       <h2 id="feat-t">Para quem grava <span class="gt">e para quem coordena</span></h2>
     </div>
     <div class="feat">
+      <div class="ft rv"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></svg></span><h3>Legenda antecipada</h3><p>A fala antes, só na sua tela.</p></div>
+      <div class="ft rv d1"><span class="ico"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></span><h3>Resumo do vídeo</h3><p>Assunto, tom e tópicos.</p></div>
+      <div class="ft rv d2"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><h3>Glossário do vídeo</h3><p>Termos e nomes, com o minuto.</p></div>
+      <div class="ft rv d3"><span class="ico"><svg viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M5.8 5.8A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.3-.2"/><path d="M21.5 16.5A4.5 4.5 0 0 0 17.5 10h-1.8A7 7 0 0 0 10 5.1"/></svg></span><h3>Sem internet</h3><p>A preparação fica no computador.</p></div>
       <div class="ft rv"><span class="ico"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span><h3>Calibração com nota</h3><p>Câmera pronta antes de gravar.</p></div>
       <div class="ft rv d1"><span class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span><h3>Full HD automático</h3><p>MP4 1080p, 30 quadros.</p></div>
       <div class="ft rv d2"><span class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3>Controle pelo celular</h3><p>Grava sem sair da posição.</p></div>
@@ -1068,6 +1284,7 @@ form.card .btn{width:100%;margin-top:20px;padding:15px}
         <h2 id="lic-t">O software e o serviço, em uma licença</h2>
         <ul>
           <li><i><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></i>O Estúdio para cada intérprete e administrador</li>
+          <li><i><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></i>Legenda antecipada, resumo e glossário de cada vídeo para o intérprete</li>
           <li><i><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></i>Painel de produção e revisão</li>
           <li><i><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></i>Reunião mensal de produtividade com a sua equipe</li>
           <li><i><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></i>Suporte 24/7 da nossa equipe para problemas com os intérpretes</li>
@@ -1098,6 +1315,7 @@ form.card .btn{width:100%;margin-top:20px;padding:15px}
     </div>
     <div class="faq rv">
       <details><summary>O Estúdio é só um software?</summary><p>Não. É software e serviço: suporte 24/7 da nossa equipe para problemas com os intérpretes, reunião mensal com a sua equipe, envios padronizados e um ambiente seguro, aprovado pelo compliance.</p></details>
+      <details><summary>O que o intérprete recebe antes de gravar?</summary><p>A legenda antecipada, o resumo e o glossário do vídeo. O Estúdio transcreve a fala, aponta os termos difíceis, os nomes próprios e os minutos em que cada um aparece, e avisa quando o professor se refere à tela. A legenda fica só na tela do intérprete e não entra na gravação.</p></details>
       <details><summary>Preciso montar um estúdio físico?</summary><p>Não. Com câmera Full HD, fundo verde e boa luz, o Estúdio calibra o recorte e avisa se algo está fora do padrão.</p></details>
       <details><summary>Serve para intérpretes da própria instituição?</summary><p>Sim. Cada intérprete e cada administrador tem a sua conta. A coordenação distribui as aulas e aprova as entregas no painel.</p></details>
       <details><summary>Em que formatos o vídeo é entregue?</summary><p>Full HD (1920×1080, 30 quadros) em MP4: já inserido na aula, com fundo transparente para edição ou no fundo verde original.</p></details>
@@ -1518,6 +1736,160 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }, { threshold: 0.3 });
     seen.observe(demo); seen.observe(aulaBruna); seen.observe($('flow')); seen.observe(document.querySelector('.pn'));
   }
+
+  /* ---------- preparação: legenda antecipada e Sobre o vídeo (dados fictícios, mesmas regras do Estúdio) ---------- */
+  (function prep() {
+    var root = $('prep');
+    if (!root) return;
+    var DUR = 588, LOOP = 66; // vídeo de 9:48; a demonstração repete o primeiro minuto
+    // trechos de fala (s, e em segundos) e parágrafos: parágrafo novo só depois de pausa longa
+    var SEG = [
+      [0.4, 4.6, 'Neste bloco, a gente vai ver como o quadro organiza o trabalho da sprint.'],
+      [4.9, 9.4, 'Repare nas três colunas: a fazer, fazendo e feito.'],
+      [9.7, 15.0, 'Tudo começa no planejamento da sprint, quando o time escolhe o que cabe nas próximas duas semanas.'],
+      [21.0, 25.8, 'Quem cuida da ordem do backlog é o Product Owner.'],
+      [26.1, 31.4, 'Cada item recebe uma estimativa em pontos, como este cartão de cinco pontos aqui.'],
+      [31.7, 36.2, 'Todo dia, o time faz a daily, uma conversa de quinze minutos.'],
+      [36.5, 42.0, 'Se alguma coisa trava o trabalho, o Scrum Master ajuda a remover o impedimento.'],
+      [48.0, 53.0, 'No fim da sprint, o time mostra o incremento na revisão.'],
+      [53.3, 58.6, 'Ken Schwaber e Jeff Sutherland descrevem esses eventos no Guia do Scrum.'],
+      [58.9, 64.2, 'No próximo bloco, a gente compara o Scrum com o Kanban.'],
+    ];
+    var PARA = [[0, 1, 2], [3, 4, 5, 6], [7, 8, 9]];
+    var SPEECH = [[0.4, 15], [21, 42], [48, 64.2], [70, 131], [137, 190], [198, 262], [266, 330], [341, 402], [409, 470], [476, 531], [540, 582]];
+    var TERMS = ['Product Owner', 'Scrum Master', 'Ken Schwaber', 'Jeff Sutherland', 'sprint', 'backlog', 'pontos', 'daily', 'impedimento', 'incremento', 'Kanban'];
+    var esc = function (t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+    var termRe = new RegExp('(' + TERMS.map(function (t) { return t.replace(/ /g, '\\s+'); }).join('|') + ')', 'gi');
+    var mm = function (s) { s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); };
+
+    var txt = $('ppTxt'), strip = $('ppStrip'), vid = $('prepVid');
+    txt.innerHTML = PARA.map(function (p) {
+      return '<div class="cd" data-cd="' + p[0] + '"><span>Fala em</span><b>0</b><s></s><s></s><s></s><s></s></div><p lang="pt-BR">' +
+        p.map(function (i) { return '<span class="sg" data-i="' + i + '">' + esc(SEG[i][2]).replace(termRe, '<mark>$1</mark>') + '</span>'; }).join(' ') + '</p>';
+    }).join('');
+    var spans = Array.prototype.slice.call(txt.querySelectorAll('.sg'));
+    var cds = Array.prototype.slice.call(txt.querySelectorAll('.cd'));
+    var paraStart = {}; PARA.forEach(function (p) { paraStart[p[0]] = true; });
+
+    // barras de fala e silêncio (painel e trilha do player)
+    var bars = SPEECH.map(function (w) { return '<span style="left:' + (w[0] / DUR * 100).toFixed(2) + '%;width:' + ((w[1] - w[0]) / DUR * 100).toFixed(2) + '%"></span>'; }).join('');
+    $('ppSp').innerHTML = bars;
+    $('ppTrk').insertAdjacentHTML('afterbegin', bars);
+
+    var t = reduce ? 24.5 : 0, last = null, running = false, visible = false, userPaused = reduce, raf = 0, prevKey = '';
+    function moment(time) {
+      var cur = -1, next = -1;
+      for (var i = 0; i < SEG.length; i++) {
+        if (time >= SEG[i][0] && time < SEG[i][1]) { cur = i; break; }
+        if (SEG[i][0] > time) { next = i; break; }
+      }
+      return { cur: cur, next: next, until: next >= 0 ? SEG[next][0] - time : null };
+    }
+    function render() {
+      var m = moment(t);
+      var countdown = m.cur < 0 && m.next >= 0 && paraStart[m.next] && m.until > 0 ? Math.ceil(m.until) : null;
+      var anchor = m.cur >= 0 ? m.cur : m.next >= 0 ? m.next : SEG.length;
+      var anchorState = m.cur >= 0 ? 'current' : countdown !== null ? 'next' : 'upcoming';
+      var key = anchor + ':' + anchorState + ':' + countdown;
+      $('ppTime').textContent = mm(t) + ' / ' + mm(DUR);
+      $('ppNeedle').style.left = (t / DUR * 100).toFixed(2) + '%';
+      if (key === prevKey) return;
+      prevKey = key;
+      spans.forEach(function (el, i) { el.className = 'sg ' + (i < anchor ? 'spoken' : i === anchor ? anchorState : 'next'); });
+      var target = null;
+      cds.forEach(function (cd) {
+        var on = countdown !== null && +cd.dataset.cd === m.next;
+        cd.classList.toggle('on', on);
+        if (on) {
+          target = cd;
+          cd.querySelector('b').textContent = countdown;
+          cd.querySelectorAll('s').forEach(function (d, k) { d.classList.toggle('lit', countdown >= 4 - k); });
+        }
+      });
+      if (!target) target = spans[Math.min(anchor, spans.length - 1)];
+      txt.style.transform = 'translate3d(0,' + (-target.offsetTop) + 'px,0)';
+    }
+    function frame(now) {
+      if (last !== null) { t += (now - last) / 1000; if (t >= LOOP) t = 0; }
+      last = now;
+      render();
+      raf = requestAnimationFrame(frame);
+    }
+    function sync() {
+      var should = visible && !userPaused;
+      if (should && !running) { running = true; last = null; raf = requestAnimationFrame(frame); play(vid); }
+      else if (!should && running) { running = false; cancelAnimationFrame(raf); if (vid) vid.pause(); }
+      $('ppPlayIco').setAttribute('d', running || (!userPaused && !visible) ? 'M7 5h3v14H7zM14 5h3v14h-3z' : 'M7 4l13 8-13 8z');
+      $('ppPlay').setAttribute('aria-label', userPaused ? 'Tocar a demonstração' : 'Pausar a demonstração');
+    }
+    $('ppPlay').addEventListener('click', function () { userPaused = !userPaused; sync(); track('estudio_preparacao', { acao: userPaused ? 'pausa' : 'play' }); });
+
+    // legenda: liga/desliga e tamanho da letra (como no Estúdio, só mexe na tela)
+    var SIZES = [16, 19, 23, 28], size = 1, cc = $('ppCc');
+    function applySize() {
+      var k = window.innerWidth < 560 ? 0.84 : 1;
+      strip.style.setProperty('--fs', Math.round(SIZES[size] * k) + 'px');
+      $('ppMinus').disabled = size === 0 || cc.getAttribute('aria-pressed') !== 'true';
+      $('ppPlus').disabled = size === SIZES.length - 1 || cc.getAttribute('aria-pressed') !== 'true';
+      prevKey = ''; requestAnimationFrame(render);
+    }
+    cc.addEventListener('click', function () {
+      var on = cc.getAttribute('aria-pressed') !== 'true';
+      cc.setAttribute('aria-pressed', String(on));
+      cc.title = on ? 'Esconder a legenda antecipada' : 'Mostrar a legenda antecipada';
+      strip.classList.toggle('off', !on);
+      applySize();
+      track('estudio_preparacao', { acao: on ? 'legenda_on' : 'legenda_off' });
+    });
+    $('ppMinus').addEventListener('click', function () { if (size > 0) { size--; applySize(); track('estudio_preparacao', { acao: 'letra', tamanho: size }); } });
+    $('ppPlus').addEventListener('click', function () { if (size < SIZES.length - 1) { size++; applySize(); track('estudio_preparacao', { acao: 'letra', tamanho: size }); } });
+    window.addEventListener('resize', function () { applySize(); }, { passive: true });
+
+    // minutos do glossário e dos momentos na tela: levam a legenda até lá
+    root.querySelectorAll('.pp-chip').forEach(function (b) {
+      b.addEventListener('click', function () {
+        t = Math.max(0, +b.dataset.t - 0.4);
+        prevKey = ''; render();
+        var m = moment(t + 0.5), i = m.cur >= 0 ? m.cur : m.next;
+        var term = (b.getAttribute('aria-label').split(': ')[1] || '').toLowerCase();
+        if (i >= 0) spans[i].querySelectorAll('mark').forEach(function (mk) {
+          if (mk.textContent.toLowerCase() === term) { mk.classList.remove('flash'); void mk.offsetWidth; mk.classList.add('flash'); }
+        });
+        if (cc.getAttribute('aria-pressed') !== 'true') cc.click();
+        var r = strip.getBoundingClientRect();
+        if (r.top < 70 || r.bottom > window.innerHeight) strip.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        track('estudio_preparacao', { acao: 'tempo', momento: b.dataset.t });
+      });
+    });
+
+    // filtro do glossário: tipo (todos, nomes, termos) e dificuldade, com as contagens do Estúdio
+    var fk = 'todos', fl = null, items = Array.prototype.slice.call(root.querySelectorAll('#ppGl li'));
+    var kindOk = function (li, k) { var n = li.dataset.kind === 'nome'; return k === 'todos' || (k === 'nomes' ? n : !n); };
+    function filter() {
+      items.forEach(function (li) { li.hidden = !(kindOk(li, fk) && (fl === null || li.dataset.level === fl)); });
+      root.querySelectorAll('[data-k]').forEach(function (b) {
+        var k = b.dataset.k, n = items.filter(function (li) { return kindOk(li, k) && (fl === null || li.dataset.level === fl); }).length;
+        b.setAttribute('aria-pressed', String(k === fk)); b.querySelector('span').textContent = n; b.disabled = n === 0 && k !== fk;
+      });
+      root.querySelectorAll('[data-l]').forEach(function (b) {
+        var l = b.dataset.l, n = items.filter(function (li) { return kindOk(li, fk) && li.dataset.level === l; }).length;
+        b.setAttribute('aria-pressed', String(l === fl)); b.querySelector('span').textContent = n; b.disabled = n === 0 && l !== fl;
+      });
+    }
+    root.querySelectorAll('[data-k]').forEach(function (b) { b.addEventListener('click', function () { fk = b.dataset.k; filter(); track('estudio_preparacao', { acao: 'filtro', tipo: fk }); }); });
+    root.querySelectorAll('[data-l]').forEach(function (b) { b.addEventListener('click', function () { fl = fl === b.dataset.l ? null : b.dataset.l; filter(); track('estudio_preparacao', { acao: 'filtro', nivel: fl || 'todos' }); }); });
+
+    var glDet = root.querySelector('#ppGl').closest('details');
+    if (window.matchMedia && window.matchMedia('(max-width:1000px)').matches) glDet.open = false;
+    applySize();
+    render();
+    sync();
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) loadVideo(vid); visible = e.isIntersecting; sync(); });
+      }, { threshold: 0.25 }).observe(root);
+    }
+  })();
 
   /* ---------- formulário → CRM (LibrasLead.send, formType contact) ---------- */
   var form = $('estForm'), fields = $('estFields'), ok = $('estOk'), err = $('f-err'), send = $('f-send');

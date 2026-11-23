@@ -84,7 +84,7 @@ primary_keyword:
 secondary_keywords:
 search_intent:          # informacional | navegacional | transacional
 reading_time:           # "N min de leitura"
-author:                 # "Libras.se" ou nome da pessoa
+author:                 # "Luis Debiasi, Equipe LIBRAS.SE" (padrão) ou o nome de outro autor de tools/blog/autores.json
 published_at:           # AAAA-MM-DD
 updated_at:
 cover_image:            # /assets/img/blog/<slug>/<slug>.webp
@@ -149,7 +149,7 @@ perguntas frequentes, adicione um terceiro bloco `FAQPage`.
 { "@context":"https://schema.org","@type":"BlogPosting",
   "headline":"[Título]","description":"[Descrição]",
   "image":{"@type":"ImageObject","url":"https://libras.se/assets/img/blog/[slug]/[slug].webp","width":1200,"height":675},
-  "author":{"@type":"Organization","name":"Libras.se"},
+  "author":{"@type":"Person","@id":"https://libras.se/autor/luis-debiasi/#person","name":"Luis Debiasi","url":"https://libras.se/autor/luis-debiasi/","jobTitle":"Fundador e CEO da LIBRAS.SE","worksFor":{"@id":"https://libras.se/#organization"}},
   "publisher":{"@type":"Organization","name":"Libras.se","url":"https://libras.se","logo":{"@type":"ImageObject","url":"https://libras.se/assets/img/favicon/FAVICONpng.png"}},
   "datePublished":"[ISO]","dateModified":"[ISO]","inLanguage":"pt-BR",
   "mainEntityOfPage":{"@type":"WebPage","@id":"https://libras.se/blog/[slug]/"} }
@@ -293,36 +293,21 @@ hyperlink para o Glossário.** A fonte única dos termos é
 - As **tags** do post que coincidam com termos do glossário também viram link
   (ex.: `<a class="pa-tag" href="/glossario/til-tils/">#tils</a>`).
 
-### Termos disponíveis (consulte sempre o CSV, pode crescer)
+### Termos disponíveis
 
-| Termo | slug | Categoria |
-|---|---|---|
-| Datilologia | `datilologia` | linguística |
-| TIL / TILS | `til-tils` | interpretação |
-| Configuração de Mão (CM) | `configuracao-de-mao` | linguística |
-| LBI | `lbi` | legislação |
-| Libras | `libras` | linguística |
-| Janela de Libras | `janela-de-libras` | tecnologia |
-| Espaço de Sinalização | `espaco-de-sinalizacao` | linguística |
-| Expressão Não-Manual (ENM) | `expressao-nao-manual` | linguística |
-| Interpretação Simultânea | `interpretacao-simultanea` | interpretação |
-| Surdo | `surdo` | cultura |
-| Comunidade Surda | `comunidade-surda` | cultura |
-| População Surda | `populacao-surda` | cultura |
-| Acessibilidade Audiovisual | `acessibilidade-audiovisual` | tecnologia |
-| Interpretação Remota (VRI) | `interpretacao-remota` | tecnologia |
-| Sinal Soletrado | `sinal-soletrado` | linguística |
-| Ponto de Articulação (PA) | `ponto-de-articulacao` | linguística |
-| Lei 10.436/2002 | `lei-10436` | legislação |
-| INES | `ines` | cultura |
-| Decreto 5.626/2005 | `decreto-5626` | legislação |
-| Movimento (MOV) | `movimento` | linguística |
-| Orientação de Mão | `orientacao-de-mao` | linguística |
-| Bilinguismo | `bilinguismo` | cultura |
-| LSE: Legenda para Surdos | `lse` | tecnologia |
-| Audiodescrição (AD) | `audiodescricao` | tecnologia |
-| FENEIS | `feneis` | cultura |
-| Glosa | `glosa` | linguística |
+A lista viva é o [`/glossario/termos.csv`](../glossario/termos.csv), gerado por `tools/glossario/build.py`
+a partir das fontes em `tools/glossario/verbetes/` (40 termos em nov/2026, com os 14 novos: deficiência auditiva,
+ouvinte, PcD, closed caption, oralismo, educação bilíngue, guia-intérprete, Lei 12.319, classificador, CODA,
+implante coclear, SignWriting, tecnologia assistiva e WCAG). Não precisa linkar à mão nos posts existentes:
+
+```bash
+python3 tools/seo/glossario_links.py --simular   # mostra o que mudaria
+python3 tools/seo/glossario_links.py             # liga a 1ª ocorrência de cada termo ainda sem link (até 8 termos por post)
+```
+
+As variações que viram link ("pessoas com deficiência" → `pcd`, "intérprete de Libras" → `til-tils`) ficam em
+`APELIDOS`, no `tools/blog/novo_post.py`, e valem para o script acima e para os posts do Agent Control.
+Verbete novo: veja `tools/glossario/README.md` e acrescente as variações em `APELIDOS`.
 
 > Antes de linkar, confirme que o `slug` ainda existe no CSV e que `status` é
 > `publicado`. Se um termo importante aparece e **não** existe no glossário,
@@ -384,9 +369,14 @@ O fim de todo post tem duas partes. A primeira você escreve; a segunda é **ger
   Todo banner com vídeo de sinal mostra embaixo a palavra sinalizada, em maiúsculas (OBRIGADO, SURPRESA...).
   Os banners são medidos no GA4 (`view_promotion` e `select_promotion`, com o banner, a posição e o post) e
   os links para huet.libras.se levam UTM; nada disso se escreve à mão.
+- `LSE:LEIA`: **"Leia também"** no meio do texto (perto de 62%, a 2 blocos ou mais de qualquer banner; em post curto,
+  no fim do texto), com 2 matérias: a mais parecida e uma **ponte entre épocas**: post antigo aponta para um post
+  dos últimos 75 dias do mesmo assunto, e post recente aponta para um antigo. Assim todo lote novo de matérias
+  passa a receber links dos posts antigos sem editar texto à mão. Medido no GA4 (`select_content`, `leia_tambem`).
 - `LSE:MAIS`, logo antes do `<footer id="foot">`:
-  - "Continue lendo", com 4 matérias correlatas. A escolha pesa a mesma editoria, as palavras em
-    comum e os posts pilares, e equilibra os links para que todo post receba ao menos 2 de outros posts.
+  - "Continue lendo", com 4 matérias correlatas. A escolha compara o texto inteiro dos posts (TF-IDF de palavras,
+    pares de palavras e termos do glossário citados), soma título, editoria e posts pilares, e equilibra os links
+    para que todo post receba ao menos 3 de outros posts.
   - A linha "Solução relacionada", que leva às páginas comerciais (só nos posts listados em `solucoes`).
   - "Aprenda e jogue", com 6 ícones: Aprenda Libras, Sinais em vídeo, Alfabeto, Jogos, Materiais e Glossário.
   - O link para `/proposito/`.
@@ -400,12 +390,26 @@ Os blocos antigos `.pa-actions` (Jogo/Vocabulário/Glossário), `.pa-related` ("
 python3 tools/seo/redirects.py     # se mudou tools/seo/redirects.json (post fundido, slug trocado)
 python3 tools/seo/og.py            # OG em JPG 1200x675 e metas alinhadas
 python3 tools/blog/home.py         # home, /todos/, /temas/, /tema/<editoria>/, feed.xml e sitemap
-python3 tools/blog/autores.py      # páginas de autor a partir do author do JSON-LD
+python3 tools/glossario/build.py   # se mudou um verbete (tools/glossario/verbetes/): índice, verbetes e termos.csv
+python3 tools/blog/autores.py      # páginas de autor a partir do author do JSON-LD (+ verbetes do glossário do Luis)
+python3 tools/seo/glossario_links.py   # termos do glossário citados sem link viram link (1ª ocorrência)
 python3 tools/seo/videos.py        # VideoObject dos vídeos do post
 python3 tools/seo/links.py
 python3 tools/seo/llms.py          # inventário do blog no llms-full.txt
 python3 tools/seo/auditoria.py     # confere órfãs, links de entrada, título e description
 ```
+
+### Grifo animado (marca-texto)
+
+Trechos-chave do texto corrido vão em `<mark class="grifo">…</mark>`: começam sem cor e o marca-texto passa pela
+frase, da esquerda para a direita, quando ela entra na tela (estilo g1). O CSS vem no `LSE:CSS` e o
+`/assets/js/grifo.js` entra no `LSE:MAIS` só nos posts que têm grifo; nada disso se escreve à mão.
+
+- 2 ou 3 por post (1 em post muito curto, até 4 em post longo; no máximo 5), nunca mais de 1 por parágrafo.
+- Grife a ideia que o leitor deve levar: a conclusão, o dado mais forte, a definição, a regra prática.
+  Frase inteira ou oração principal, de 8 a ~30 palavras. Nunca em título, legenda, citação longa de terceiros,
+  crédito ou chamada comercial.
+- Respeita `prefers-reduced-motion` (pinta direto) e sai grifado na impressão. Os verbetes do glossário usam o mesmo.
 
 Post novo sem configuração extra já recebe os banners e as correlatas pela editoria. Para trocar o segundo
 banner de um post, use `banner_por_post`; para um post virar referência da editoria nas correlatas, coloque-o em `pilares`.
@@ -440,7 +444,7 @@ Formato (versão 1; exemplo completo em `tools/blog/exemplo-entrada.json`):
 | `descricao` | 70 a 165 caracteres (aviso fora de 120 a 160) |
 | `palavras_chave`, `tags` | listas de textos (tags: 3 a 6 recomendadas); tag que é termo do glossário vira link |
 | `editoria` | `lingua`, `educacao`, `direitos`, `inclusao`, `cultura` ou `esporte` |
-| `autor` | `"Libras.se"` (vira `Organization` no JSON-LD e "Equipe LIBRAS.SE" no post) ou um nome de `tools/blog/autores.json`; outro nome é erro |
+| `autor` | `"Libras.se"` (vira "Luis Debiasi, Equipe LIBRAS.SE": `Person` no JSON-LD com link para `/autor/luis-debiasi/`) ou um nome de `tools/blog/autores.json`; outro nome é erro |
 | `publicado_em` | `AAAA-MM-DD`, até amanhã; hoje usa a hora da publicação, outro dia usa 12h de São Paulo |
 | `markdown` | corpo sem H1: `##`, `###`, parágrafos, listas, negrito, itálico, links e citações; mínimo de 150 palavras em 3 blocos |
 | `fontes` | `[{ "url": "https://...", "titulo": "..." }]`, vão para "Créditos e referências" |
@@ -565,7 +569,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <span class="lbl">📰 Blog Libras.se</span>
       <h1 class="pa-title">[Título]</h1>
       <p class="pa-sub">[Subtítulo / linha-fina]</p>
-      <div class="pa-meta">Por <strong>[Autor]</strong><span class="dot"></span><time datetime="AAAA-MM-DD">DD de mês de AAAA</time><span class="dot"></span>N min de leitura</div>
+      <div class="pa-meta">Por <a href="/autor/luis-debiasi/"><strong>Luis Debiasi</strong></a>, Equipe LIBRAS.SE<span class="dot"></span><time datetime="AAAA-MM-DD">DD de mês de AAAA</time><span class="dot"></span>N min de leitura</div>
     </header>
 
     <figure class="pa-fig">
@@ -579,7 +583,7 @@ a.pa-tag:hover{background:rgba(79,209,197,.2);color:var(--p1)}
       <p>Texto corrido. Linke termos para o glossário: <a href="/glossario/libras/">Língua Brasileira de Sinais</a>.</p>
       <h4>Subtítulo</h4>
       <p>...</p>
-      <p>Fonte: Equipe LIBRAS.SE, com <a href="[url]" target="_blank" rel="noopener noreferrer">[Veículo]</a></p>
+      <p>Fonte: Luis Debiasi, Equipe LIBRAS.SE, com <a href="[url]" target="_blank" rel="noopener noreferrer">[Veículo]</a></p>
     </div>
 
     <div class="pa-tags" role="group" aria-label="Tags">

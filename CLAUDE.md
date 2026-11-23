@@ -326,7 +326,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 | Seja TILs        | `/sejatils/index.html`        |
 | Jogo             | `/jogo/index.html`            |
 | Vocabulário      | `/sinal/index.html`           |
-| Glossário        | `/glossario/index.html`       |
+| Glossário        | `/glossario/index.html` + verbetes (gerados por `tools/glossario/build.py`, ver `tools/glossario/README.md`) |
 | Aprender Libras  | `/aprender-libras/index.html` (gerada por `tools/aprender/build.py`, ver `tools/aprender/README.md`) |
 | Sinais básicos   | `/aprender-libras/sinais-basicos/index.html` (gerada) |
 | Cultura surda    | `/cultura-surda/index.html` (gerada) |

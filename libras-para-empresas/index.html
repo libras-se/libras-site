@@ -581,7 +581,24 @@ button{font-family:'M',sans-serif;cursor:pointer;border:none;outline:none}
 .lse-chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:#3d6063}
 .lse-chips a{background:#fff;border:1px solid rgba(46,184,192,.3);border-radius:999px;padding:7px 13px;color:#0e3538;font-weight:700;text-decoration:none}
 .lse-chips a:hover{border-color:#2eb8c0}
-.lse-ad a:focus-visible,.lse-mais a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.lse-ad a:focus-visible,.lse-mais a:focus-visible,.lse-leia a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.lse-leia{font-family:'LseM',system-ui,sans-serif;-webkit-font-smoothing:antialiased;margin:30px 0;padding:14px 16px 16px;background:#fff;border:1px solid rgba(10,34,37,.08);border-left:4px solid #2eb8c0;border-radius:16px;color:#0e3538;text-align:left}
+.lse-leia-l{display:block;margin:0 0 10px;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#12737a}
+.lse-leia-g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lse-leia-i{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:center;text-decoration:none!important;color:#0e3538!important;border-radius:12px;padding:4px;transition:background .2s}
+.lse-leia-i:hover{background:#f0fafa}
+.lse-leia-i:hover b{text-decoration:underline;text-decoration-color:rgba(46,184,192,.5);text-underline-offset:3px}
+.lse-leia-img{display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#dff2f0}
+.lse-leia-img img{width:100%;height:100%;object-fit:cover;display:block;margin:0!important;border-radius:0!important;box-shadow:none!important}
+.lse-leia-i small{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#3d6063;margin-bottom:3px}
+.lse-leia-i small::before{content:'';flex:none;width:7px;height:7px;border-radius:50%;background:var(--c,#2eb8c0)}
+.lse-leia-i b{display:block;font-size:15px;font-weight:900;line-height:1.3;letter-spacing:-.01em}
+@media(max-width:640px){.lse-leia-g{grid-template-columns:1fr}.lse-leia-i{grid-template-columns:84px minmax(0,1fr)}}
+/* grifo animado (marca-texto): /assets/js/grifo.js adiciona .on quando o trecho entra na tela */
+mark.grifo{color:inherit;background:linear-gradient(90deg,rgba(72,191,178,.3) 50%,transparent 50%) 100% 0/200% 100% no-repeat;padding:1px 0;border-radius:0;transition:background-position var(--grifo-d,.9s) cubic-bezier(.5,.1,.35,1)}
+mark.grifo.on{background-position:0 0}
+@media(prefers-reduced-motion:reduce){mark.grifo{transition:none}}
+@media print{mark.grifo{background-position:0 0}}
 @media(max-width:960px){.lse-rel{grid-template-columns:repeat(2,1fr)}.lse-ic{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){
   .lse-w{padding:0 18px}

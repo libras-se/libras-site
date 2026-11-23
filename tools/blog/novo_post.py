@@ -66,9 +66,6 @@ CARIMBO = "<!-- agentes:origem aprovacao={} artefato={} versao={} -->"
 CARIMBO_RE = re.compile(r"<!-- agentes:origem aprovacao=(\S+) artefato=(\S+) versao=(\d+) -->")
 NA_ACTION = os.environ.get("GITHUB_ACTIONS") == "true"
 
-ORGANIZACAO = {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
-               "sameAs": ["https://instagram.com/libras.se", "https://youtube.com/@librasse", "https://linkedin.com/company/librasse",
-                          "https://facebook.com/librasse", "https://tiktok.com/@libras.se"]}
 PUBLISHER = {
     "@type": "Organization", "@id": f"{SITE}/#organization", "name": "LIBRAS.SE", "url": f"{SITE}/",
     "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/favicon/cropped-FAVICONpng-1-512x512.png", "width": 512, "height": 512},
@@ -108,7 +105,8 @@ APELIDOS = {
     "acessibilidade-audiovisual": ["acessibilidade audiovisual"],
     "audiodescricao": ["audiodescrições", "audiodescrição"],
     "lse": ["Legenda para Surdos e Ensurdecidos", "legendas para surdos", "legenda para surdos", "LSE"],
-    "bilinguismo": ["bilinguismo", "educação bilíngue", "escolas bilíngues", "escola bilíngue"],
+    "bilinguismo": ["bilinguismo"],
+    "educacao-bilingue": ["educação bilíngue de surdos", "educação bilíngue", "escolas bilíngues", "escola bilíngue"],
     "interpretacao-simultanea": ["interpretação simultânea"],
     "interpretacao-remota": ["interpretação remota"],
     "datilologia": ["datilologia"],
@@ -120,6 +118,19 @@ APELIDOS = {
     "movimento": ["parâmetro movimento", "parâmetro de movimento"],
     "orientacao-de-mao": ["orientação de mão", "orientação da mão", "orientação da palma"],
     "glosa": ["glosas", "glosa"],
+    "deficiencia-auditiva": ["deficiência auditiva", "deficientes auditivos", "deficiente auditivo"],
+    "ouvinte": ["ouvintes", "ouvinte"],
+    "pcd": ["pessoas com deficiência", "pessoa com deficiência", "PcD"],
+    "closed-caption": ["closed captions", "closed caption", "legendas ocultas", "legenda oculta"],
+    "oralismo": ["oralismo"],
+    "guia-interprete": ["guias-intérpretes", "guia-intérprete", "guias intérpretes", "guia intérprete"],
+    "lei-12319": ["Lei nº 12.319/2010", "Lei n° 12.319/2010", "Lei 12.319/2010", "Lei nº 12.319", "Lei 12.319"],
+    "classificador": ["classificadores", "classificador"],
+    "coda": ["CODAs", "CODA"],
+    "implante-coclear": ["implantes cocleares", "implante coclear"],
+    "signwriting": ["SignWriting", "escrita de sinais"],
+    "tecnologia-assistiva": ["tecnologias assistivas", "tecnologia assistiva"],
+    "wcag": ["WCAG"],
 }
 NAO_DERIVAR = {"movimento", "legenda", "comunidade", "interprete"}
 
@@ -633,15 +644,22 @@ def autores_cadastrados():
     return json.loads((AQUI / "autores.json").read_text(encoding="utf-8"))["autores"]
 
 
+AUTOR_PADRAO = "luis-debiasi"  # "Libras.se" / "Equipe LIBRAS.SE" assinam como Luis Debiasi, Equipe LIBRAS.SE
+EQUIPE = ", Equipe LIBRAS.SE"
+
+
 def autor_do_post(nome):
-    """(author do JSON-LD, nome exibido, link da página do autor ou None), ou None se desconhecido."""
+    """(author do JSON-LD, nome exibido, link da página do autor, complemento da assinatura), ou None se desconhecido.
+
+    Posts da equipe ("Libras.se") e do próprio Luis saem como "Luis Debiasi, Equipe LIBRAS.SE" (Person no JSON-LD)."""
     n = norm(nome)
-    if n in NOMES_DA_ORGANIZACAO:
-        return dict(ORGANIZACAO), "Equipe LIBRAS.SE", None
     for a in autores_cadastrados():
-        if norm(a["nome"]) == n:
+        if norm(a["nome"]) == n or (n in NOMES_DA_ORGANIZACAO and a["slug"] == AUTOR_PADRAO):
             url = f"{SITE}/{a['pasta']}/{a['slug']}/"
-            return {"@type": "Person", "@id": url + "#person", "name": a["nome"], "url": url}, a["nome"], f"/{a['pasta']}/{a['slug']}/"
+            ld = {"@type": "Person", "@id": url + "#person", "name": a["nome"], "url": url}
+            if a["slug"] == AUTOR_PADRAO:
+                ld.update({"jobTitle": a["cargo"], "worksFor": {"@id": f"{SITE}/#organization"}})
+            return ld, a["nome"], f"/{a['pasta']}/{a['slug']}/", EQUIPE if a["slug"] == AUTOR_PADRAO else ""
     return None
 
 
@@ -881,10 +899,8 @@ def monta(e, glossario, molde, r):
     if dia_sp(publicado) != pub:
         publicado = f"{pub.isoformat()}T15:00:00.000Z"
 
-    autor_ld, autor_nome, autor_link = e["autor"]
-    autor_html = f"<strong>{esc(autor_nome, False)}</strong>"
-    if autor_link:
-        autor_html = f'<a href="{autor_link}">{autor_html}</a>'
+    autor_ld, autor_nome, autor_link, autor_eq = e["autor"]
+    autor_html = f'<a href="{autor_link}"><strong>{esc(autor_nome, False)}</strong></a>{esc(autor_eq, False)}'
     leitura = max(1, math.ceil(e["palavras"] / 220))
 
     img_url = f"{SITE}{base_img}.jpg"
@@ -915,7 +931,7 @@ def monta(e, glossario, molde, r):
         refs.append(f'        <li>{esc("LIBRAS.SE" if f["interno"] else dominio(f["url"]), False)}. '
                     f'“<a href="{esc(f["url"])}"{alvo}>{esc(f["titulo"], False)}</a>”.</li>')
     refs.append(f"        <li>Imagem de capa: {esc(credito.rstrip('.'), False)}.</li>")
-    quem = autor_nome if autor_link else "Equipe LIBRAS.SE"
+    quem = autor_nome + autor_eq
     credito_texto = f"Texto: {quem}, com informações das fontes listadas abaixo." if e["fontes"] else f"Texto: {quem}."
 
     tags = []

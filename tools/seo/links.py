@@ -5,8 +5,10 @@ Em cada post do blog:
   - o banner do serviço da LIBRAS.SE (banner_fixo) no meio do texto, em todos os posts, e,
     quando o post é longo, um segundo banner mais abaixo escolhido pelo assunto
     (Aprenda Libras, alfabeto, jogos, materiais, cultura surda, Seja TILS);
-  - no fim, "Continue lendo" com 4 matérias correlatas (mesma editoria, palavras em comum,
-    posts pilares e equilíbrio de links para nenhum post ficar sem link de entrada),
+  - no meio do texto, "Leia também" com 2 matérias: a mais parecida e uma ponte entre épocas
+    (post antigo aponta para um post recente do mesmo assunto; post recente aponta para um antigo);
+  - no fim, "Continue lendo" com 4 matérias correlatas (texto inteiro em TF-IDF, termos do glossário
+    em comum, mesma editoria, posts pilares e equilíbrio de links para nenhum post ficar sem link de entrada),
     a solução comercial relacionada (quando houver) e os ícones de Aprenda e jogue.
     Substitui os blocos antigos "Leia mais no blog" e os cartões Jogo/Vocabulário/Glossário.
 Nas páginas comerciais e institucionais: "Conteúdo relacionado no blog".
@@ -55,6 +57,64 @@ def h(s):
 
 # ------------------------------------------------------------------ dados
 
+RECENTE_DIAS = 75  # "posts novos" para a ponte entre épocas do "Leia também"
+TERMO_RE = re.compile(r'href="(?:https://libras\.se)?/glossario/([a-z0-9-]+)/"')
+
+
+def corpo_texto(t):
+    """Texto do artigo (sem blocos gerados, scripts, estilos, header, rodapé e créditos), para o TF-IDF."""
+    for nome in ("MAIS", "BANNER", "CSS", "LEIA"):
+        t = tira(t, nome)
+    t = re.sub(r"<(script|style|nav|footer|noscript)\b[\s\S]*?</\1>", " ", t)
+    i = t.find("<main")
+    t = t[i:] if i >= 0 else t
+    j = t.find('class="pa-refs')
+    t = t[:j] if j >= 0 else t
+    return html.unescape(re.sub(r"<[^>]+>", " ", t))
+
+
+PARADAS3 = set("que dos das nos nas aos por uma uns com ele ela seu sua sao nao mas foi tem ser ate sem tao bem era sob ter vai via sim "
+               "nem num lhe meu teu pra pro tal quem the and for you".split())
+
+
+def tokens(txt):
+    t = unicodedata.normalize("NFD", txt.lower())
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    return [w for w in re.findall(r"[a-z0-9]{3,}", t) if w not in PARADAS and w not in PARADAS3 and not w.isdigit()]
+
+
+def tfidf(posts):
+    """Vetor TF-IDF normalizado do texto de cada post (palavras e pares de palavras)."""
+    import math
+    df = defaultdict(int)
+    tf = {}
+    for s, p in posts.items():
+        ws = p.pop("_tokens")
+        c = defaultdict(float)
+        for w in ws:
+            c[w] += 1
+        for a, b in zip(ws, ws[1:]):
+            c[a + "_" + b] += 1
+        for w in p["palavras"]:  # título e busca do card pesam mais
+            c[w] += 3
+        for g in p["termos"]:  # termos do glossário citados: o IDF dá pouco peso aos comuns (surdo, TILS) e muito aos raros
+            c["g:" + g] += 3
+        tf[s] = c
+        for w in c:
+            df[w] += 1
+    n = len(posts)
+    for s, c in tf.items():
+        v = {w: (1 + math.log(x)) * math.log(n / df[w]) for w, x in c.items() if df[w] >= 2 and df[w] <= n * 0.5}
+        norma = math.sqrt(sum(x * x for x in v.values())) or 1
+        posts[s]["vet"] = {w: x / norma for w, x in v.items()}
+
+
+def cos(a, b):
+    if len(a) > len(b):
+        a, b = b, a
+    return sum(x * b.get(w, 0.0) for w, x in a.items())
+
+
 def carregar():
     arts = home.artigos()
     src = (ROOT / "blog/index.html").read_text()
@@ -66,29 +126,68 @@ def carregar():
         p = home.dados(s, cards[s], arts[s], home.CFG["classificacao"].get(s, "inclusao"))
         busca = re.search(r'data-search="([^"]*)"', cards[s])
         p["palavras"] = palavras(p["titulo"] + " " + (busca.group(1) if busca else ""))
+        t = (ROOT / "blog" / s / "index.html").read_text()
+        txt = corpo_texto(t)
+        p["_tokens"] = tokens(txt)
+        p["termos"] = set(TERMO_RE.findall(tira(tira(tira(t, "MAIS"), "BANNER"), "LEIA")))
         posts[s] = p
+    tfidf(posts)
+    hoje = max(p["data"] for p in posts.values())
+    for p in posts.values():
+        p["recente"] = (hoje - p["data"]).days <= RECENTE_DIAS
     return posts
 
 
+_CACHE = {}
+
+
 def pontuar(a, b, posts):
+    k = (a, b)
+    if k in _CACHE:
+        return _CACHE[k]
     pa, pb = posts[a], posts[b]
-    sc = 3.0 if pa["tema"] == pb["tema"] else 0.0
-    inter = len(pa["palavras"] & pb["palavras"])
-    sc += 8.0 * inter / max(1, len(pa["palavras"] | pb["palavras"]))
+    sc = 14.0 * cos(pa["vet"], pb["vet"])                       # assunto: texto inteiro + termos do glossário (TF-IDF)
+    sc += 4.0 * len(pa["palavras"] & pb["palavras"]) / max(1, len(pa["palavras"] | pb["palavras"]))
+    if pa["tema"] == pb["tema"]:
+        sc += 1.0
     if b in L["pilares"].get(pa["tema"], []):
-        sc += 2.0
-    if pb["data"].year >= 2025:
-        sc += 0.4
+        sc += 1.5
+    if pb["recente"]:
+        sc += 0.5
+    elif pb["data"].year >= 2025:
+        sc += 0.3
+    _CACHE[k] = sc
     return sc
 
 
-def relacionados(posts, n=4):
-    """Escolha gulosa com equilíbrio de entrada: cada post recebe ao menos 2 links de outros posts."""
+def leia_tambem(posts):
+    """2 matérias para o meio do texto: a mais parecida + a ponte entre épocas (antigo -> recente e vice-versa)."""
+    out = {}
+    uso = defaultdict(int)
+    for a in sorted(posts, key=h):
+        cand = sorted((b for b in posts if b != a), key=lambda b: pontuar(a, b, posts) - 0.25 * uso[b], reverse=True)
+        melhor = cand[0]
+        outra_epoca = [b for b in cand[1:] if posts[b]["recente"] != posts[a]["recente"]]
+        ponte = outra_epoca[0] if outra_epoca and pontuar(a, outra_epoca[0], posts) >= 0.55 * pontuar(a, melhor, posts) else cand[1]
+        out[a] = [melhor, ponte]
+        uso[melhor] += 1
+        uso[ponte] += 1
+    return out
+
+
+def relacionados(posts, n=4, evitar=None, minimo=3):
+    """Escolha gulosa com equilíbrio de entrada: cada post recebe ao menos `minimo` links de outros posts
+    (somando "Leia também" e "Continue lendo"). `evitar[a]` são os posts já usados no "Leia também" de a."""
+    evitar = evitar or {}
     entrada = defaultdict(int)
+    for a, bs in evitar.items():
+        for b in bs:
+            entrada[b] += 1
     rel = {}
     pilares = {s for v in L["pilares"].values() for s in v}
     for a in sorted(posts, key=h):
-        cand = sorted((b for b in posts if b != a), key=lambda b: pontuar(a, b, posts) - 0.7 * entrada[b], reverse=True)
+        cand = sorted((b for b in posts if b != a and b not in evitar.get(a, ())),
+                      key=lambda b: pontuar(a, b, posts) - 0.5 * entrada[b], reverse=True)
         esc_ = []
         for b in cand:
             if len(esc_) == n:
@@ -102,12 +201,12 @@ def relacionados(posts, n=4):
             entrada[b] += 1
     for _ in range(3):
         for q in sorted(posts, key=lambda s: entrada[s]):
-            while entrada[q] < 2:
+            while entrada[q] < minimo:
                 melhor = None
                 for a in posts:
-                    if a == q or q in rel[a]:
+                    if a == q or q in rel[a] or q in evitar.get(a, ()):
                         continue
-                    trocaveis = [r for r in rel[a] if entrada[r] > 2 and r not in pilares]
+                    trocaveis = [r for r in rel[a] if entrada[r] > minimo and r not in pilares]
                     if not trocaveis:
                         continue
                     r = min(trocaveis, key=lambda x: pontuar(a, x, posts))
@@ -123,14 +222,16 @@ def relacionados(posts, n=4):
     return rel, entrada
 
 
-def do_glossario(posts, n=3):
-    """Para cada verbete, os posts que o citam no próprio texto (link de volta), com rodízio para não repetir sempre os mesmos."""
+def do_glossario(posts):
+    """Para cada verbete, os posts que ele recomenda (data-blog e links no texto), os que citam o termo
+    (link de volta) e os mais parecidos, com rodízio para não repetir sempre os mesmos. 6 cards quando há
+    posts suficientes ligados ao termo; senão 3."""
     cita = defaultdict(set)
     for s in posts:
         t = (ROOT / "blog" / s / "index.html").read_text()
-        for nome in ("MAIS", "BANNER", "CSS"):
+        for nome in ("MAIS", "BANNER", "CSS", "LEIA"):
             t = tira(t, nome)
-        for termo in re.findall(r'href="(?:https://libras\.se)?/glossario/([a-z0-9-]+)/"', t):
+        for termo in TERMO_RE.findall(t):
             cita[termo].add(s)
     pilares = {s for v in L["pilares"].values() for s in v}
     uso = defaultdict(int)
@@ -138,12 +239,17 @@ def do_glossario(posts, n=3):
     termos = sorted(f.parent.name for f in (ROOT / "glossario").glob("*/index.html"))
     for termo in sorted(termos, key=lambda x: (len(cita[x]), x)):
         src = (ROOT / "glossario" / termo / "index.html").read_text()
+        src_sem = tira(src, "DOBLOG")
         tit = re.search(r"<title>([^<]*)</title>", src)
         pal = palavras(html.unescape(tit.group(1)) if tit else termo.replace("-", " "))
+        fixos = re.search(r'data-blog="([^"]*)"', src_sem)
+        recomenda = {x for x in (fixos.group(1).split(",") if fixos else []) if x in posts}
+        recomenda |= {x for x in re.findall(r'href="/blog/([a-z0-9-]+)/"', src_sem) if x in posts}
 
         def nota(s):
-            return (10.0 * (s in cita[termo]) + 2.0 * len(pal & posts[s]["palavras"]) + 1.5 * (s in pilares)
-                    + 0.4 * (posts[s]["data"].year >= 2025) - 1.0 * uso[s])
+            return (12.0 * (s in recomenda) + 10.0 * (s in cita[termo]) + 2.0 * len(pal & posts[s]["palavras"])
+                    + 1.5 * (s in pilares) + 0.4 * (posts[s]["data"].year >= 2025) - 1.0 * uso[s])
+        n = 6 if len(recomenda | cita[termo]) >= 4 else 3
         esc_ = sorted(posts, key=lambda s: (nota(s), s), reverse=True)[:n]
         for s in esc_:
             uso[s] += 1
@@ -215,7 +321,24 @@ CSS = """<!-- LSE:CSS (gerado por tools/seo/links.py) -->
 .lse-chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:#3d6063}
 .lse-chips a{background:#fff;border:1px solid rgba(46,184,192,.3);border-radius:999px;padding:7px 13px;color:#0e3538;font-weight:700;text-decoration:none}
 .lse-chips a:hover{border-color:#2eb8c0}
-.lse-ad a:focus-visible,.lse-mais a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.lse-ad a:focus-visible,.lse-mais a:focus-visible,.lse-leia a:focus-visible{outline:3px solid #4fd1c5;outline-offset:2px}
+.lse-leia{font-family:'LseM',system-ui,sans-serif;-webkit-font-smoothing:antialiased;margin:30px 0;padding:14px 16px 16px;background:#fff;border:1px solid rgba(10,34,37,.08);border-left:4px solid #2eb8c0;border-radius:16px;color:#0e3538;text-align:left}
+.lse-leia-l{display:block;margin:0 0 10px;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#12737a}
+.lse-leia-g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lse-leia-i{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:center;text-decoration:none!important;color:#0e3538!important;border-radius:12px;padding:4px;transition:background .2s}
+.lse-leia-i:hover{background:#f0fafa}
+.lse-leia-i:hover b{text-decoration:underline;text-decoration-color:rgba(46,184,192,.5);text-underline-offset:3px}
+.lse-leia-img{display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#dff2f0}
+.lse-leia-img img{width:100%;height:100%;object-fit:cover;display:block;margin:0!important;border-radius:0!important;box-shadow:none!important}
+.lse-leia-i small{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#3d6063;margin-bottom:3px}
+.lse-leia-i small::before{content:'';flex:none;width:7px;height:7px;border-radius:50%;background:var(--c,#2eb8c0)}
+.lse-leia-i b{display:block;font-size:15px;font-weight:900;line-height:1.3;letter-spacing:-.01em}
+@media(max-width:640px){.lse-leia-g{grid-template-columns:1fr}.lse-leia-i{grid-template-columns:84px minmax(0,1fr)}}
+/* grifo animado (marca-texto): /assets/js/grifo.js adiciona .on quando o trecho entra na tela */
+mark.grifo{color:inherit;background:linear-gradient(90deg,rgba(72,191,178,.3) 50%,transparent 50%) 100% 0/200% 100% no-repeat;padding:1px 0;border-radius:0;transition:background-position var(--grifo-d,.9s) cubic-bezier(.5,.1,.35,1)}
+mark.grifo.on{background-position:0 0}
+@media(prefers-reduced-motion:reduce){mark.grifo{transition:none}}
+@media print{mark.grifo{background-position:0 0}}
 @media(max-width:960px){.lse-rel{grid-template-columns:repeat(2,1fr)}.lse-ic{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){
   .lse-w{padding:0 18px}
@@ -258,7 +381,7 @@ CSS = """<!-- LSE:CSS (gerado por tools/seo/links.py) -->
 <!-- /LSE:CSS -->"""
 
 JS = """<script>(function(){var vs=document.querySelectorAll('.lse-ad video[data-src],video.lse-loop[data-src]');if(!vs.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var o=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.3});vs.forEach(function(v){o.observe(v)})})();
-(function(){function ga(n,p){if(typeof gtag==='function')gtag('event',n,p)}function promo(a){var d=a.dataset,i={promotion_id:d.promo,promotion_name:d.nome,creative_name:d.criativo,creative_slot:d.slot};return{promotion_id:i.promotion_id,promotion_name:i.promotion_name,creative_name:i.creative_name,creative_slot:i.creative_slot,post_slug:d.post,items:[i]}}var as=document.querySelectorAll('.lse-ad[data-promo]');if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){o.unobserve(e.target);ga('view_promotion',promo(e.target))}})},{threshold:.5});as.forEach(function(a){o.observe(a)})}as.forEach(function(a){a.addEventListener('click',function(ev){var l=ev.target.closest('a');if(!l)return;var p=promo(a);p.link_url=l.href;ga('select_promotion',p)})});var post=(location.pathname.match(/^\\/blog\\/([^\\/]+)\\//)||[])[1]||'';document.querySelectorAll('.lse-rel a.lse-c').forEach(function(c,i){c.addEventListener('click',function(){ga('select_content',{content_type:'continue_lendo',content_id:c.getAttribute('href'),post_slug:post,index:i+1})})})})();</script>"""
+(function(){function ga(n,p){if(typeof gtag==='function')gtag('event',n,p)}function promo(a){var d=a.dataset,i={promotion_id:d.promo,promotion_name:d.nome,creative_name:d.criativo,creative_slot:d.slot};return{promotion_id:i.promotion_id,promotion_name:i.promotion_name,creative_name:i.creative_name,creative_slot:i.creative_slot,post_slug:d.post,items:[i]}}var as=document.querySelectorAll('.lse-ad[data-promo]');if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){o.unobserve(e.target);ga('view_promotion',promo(e.target))}})},{threshold:.5});as.forEach(function(a){o.observe(a)})}as.forEach(function(a){a.addEventListener('click',function(ev){var l=ev.target.closest('a');if(!l)return;var p=promo(a);p.link_url=l.href;ga('select_promotion',p)})});var post=(location.pathname.match(/^\\/blog\\/([^\\/]+)\\//)||[])[1]||'';document.querySelectorAll('.lse-rel a.lse-c').forEach(function(c,i){c.addEventListener('click',function(){ga('select_content',{content_type:'continue_lendo',content_id:c.getAttribute('href'),post_slug:post,index:i+1})})});document.querySelectorAll('.lse-leia a.lse-leia-i').forEach(function(c,i){c.addEventListener('click',function(){ga('select_content',{content_type:'leia_tambem',content_id:c.getAttribute('href'),post_slug:post,index:i+1})})})})();</script>"""
 
 ICONES = [
     ("/aprender-libras/", "Aprenda Libras", "Comece por aqui", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'),
@@ -334,6 +457,16 @@ def card(p):
             f'<span class="lse-ck" style="--c:{t["cor"]}">{esc(t["curto"])}</span><b>{esc(p["titulo"])}</b></a>')
 
 
+def leia(slugs, posts):
+    itens = []
+    for x in slugs:
+        p, t = posts[x], TEMAS[posts[x]["tema"]]
+        itens.append(f'<a class="lse-leia-i" href="/blog/{p["slug"]}/"><span class="lse-leia-img">{home.img(p, (480,), "96px", alt="")}</span>'
+                     f'<span><small style="--c:{t["cor"]}">{esc(t["curto"])}</small><b>{esc(p["titulo"])}</b></span></a>')
+    return (f'<!-- LSE:LEIA (gerado por tools/seo/links.py) -->\n<aside class="lse-leia" aria-label="Leia também">'
+            f'<span class="lse-leia-l">Leia também</span><div class="lse-leia-g">{"".join(itens)}</div></aside>\n<!-- /LSE:LEIA -->')
+
+
 def icones():
     return "".join(f'<a class="lse-i" href="{u}"><span class="lse-ii">{svg}</span><b>{esc(n)}</b><small>{esc(s)}</small></a>' for u, n, s, svg in ICONES)
 
@@ -346,7 +479,8 @@ def solucao(slug):
     return ""
 
 
-def modulo_post(slug, rel, posts):
+def modulo_post(slug, rel, posts, grifo=False):
+    js_grifo = '<script src="/assets/js/grifo.js" defer></script>\n' if grifo else ""
     return f"""<!-- LSE:MAIS (gerado por tools/seo/links.py) -->
 <section class="lse-mais" aria-labelledby="lse-mais-t">
   <div class="lse-w">
@@ -358,7 +492,7 @@ def modulo_post(slug, rel, posts):
     <p class="lse-sobre">A LIBRAS.SE traduz vídeos para Libras com intérpretes de verdade. <a href="/proposito/">Conheça o nosso propósito</a></p>
   </div>
 </section>
-{JS}
+{js_grifo}{JS}
 <!-- /LSE:MAIS -->"""
 
 
@@ -493,30 +627,50 @@ def injeta_css(t):
     return t.replace("</head>", "\n" + CSS + "\n</head>", 1)
 
 
-def processa_post(slug, rel, posts):
+def fim_do_texto(t):
+    """Posição logo depois do último bloco de texto do corpo (antes de tags, créditos, FAQ e CTA)."""
+    m = re.search(r'<div class="pa-body">', t) or re.search(r'<main\b[^>]*class="article-wrapper[^"]*"[^>]*>', t)
+    if not m:
+        return None
+    ks = [k for k in filhos(t, m.start()) if k[2] in ("p", "ul", "ol", "div", "figure", "blockquote")
+          and not re.search(r"tags|cta|acts|actions|faq|references|refs|update|post-|lse-", k[3])]
+    return ks[-1][1] if ks else None
+
+
+def processa_post(slug, rel, leia_slugs, posts):
     f = ROOT / "blog" / slug / "index.html"
     t = f.read_text()
     original = t
-    t = tira(tira(t, "BANNER"), "MAIS")
+    t = tira(tira(tira(t, "BANNER"), "MAIS"), "LEIA")
     for c in ANTIGOS:
         t = remove_por_classe(t, c)
     cand, n = pontos_banner(t)
     usados = []
+    idx = []
     if cand:
         i1, p1 = min(cand, key=lambda c: abs(c[0] - max(2, round(n * 0.4))))
         usados.append((p1, banner_fixo(slug, posts)))
+        idx.append(i1)
         seg = segundo_banner(slug, posts)
         longe = [c for c in cand if c[0] - i1 >= L["distancia_minima"]]
         if seg and longe:
-            usados.append((min(longe, key=lambda c: abs(c[0] - round(n * 0.78)))[1], seg))
+            i2, p2 = min(longe, key=lambda c: abs(c[0] - round(n * 0.78)))
+            usados.append((p2, seg))
+            idx.append(i2)
     slots = dict(zip((p for p, _ in sorted(usados)), ("meio", "fim")))
-    for p, bid in sorted(usados, reverse=True):
-        t = t[:p] + "\n" + banner(bid, slug, slots[p]) + "\n" + t[p:]
-    t = antes_do_rodape(t, modulo_post(slug, rel, posts), f)
+    # "Leia também": perto de 62% do texto, a pelo menos 2 blocos de qualquer banner; senão, no fim do texto
+    livres = [c for c in cand if all(abs(c[0] - i) >= 2 for i in idx) and c[0] >= 2]
+    pos_leia = min(livres, key=lambda c: abs(c[0] - round(n * 0.62)))[1] if livres else fim_do_texto(t)
+    insercoes = [(p, banner(bid, slug, slots[p])) for p, bid in usados]
+    if pos_leia is not None and leia_slugs:
+        insercoes.append((pos_leia, leia(leia_slugs, posts)))
+    for p, bloco in sorted(insercoes, key=lambda x: x[0], reverse=True):
+        t = t[:p] + "\n" + bloco + "\n" + t[p:]
+    t = antes_do_rodape(t, modulo_post(slug, rel, posts, grifo='<mark class="grifo"' in t), f)
     t = injeta_css(t)
     if t != original:
         f.write_text(t)
-    return [b for _, b in sorted(usados)]
+    return [b for _, b in sorted(usados)], pos_leia is not None
 
 
 def processa_pagina(url, slugs, posts, **kw):
@@ -543,15 +697,18 @@ def processa_icones(url):
 
 def main():
     posts = carregar()
-    rel, entrada = relacionados(posts)
+    leias = leia_tambem(posts)
+    rel, entrada = relacionados(posts, evitar=leias)
     banners = defaultdict(int)
-    sem_banner, so_fixo = [], 0
+    sem_banner, so_fixo, sem_leia = [], 0, []
     for s in sorted(posts):
-        bs = processa_post(s, rel[s], posts)
+        bs, tem_leia = processa_post(s, rel[s], leias[s], posts)
         for b in bs:
             banners[b] += 1
         if not bs:
             sem_banner.append(s)
+        if not tem_leia:
+            sem_leia.append(s)
         so_fixo += len(bs) == 1
     for url, slugs in L["do_blog"].items():
         processa_pagina(url, slugs, posts)
@@ -560,11 +717,13 @@ def main():
     glos = do_glossario(posts)
     for url, (slugs, _) in glos.items():
         processa_pagina(url, slugs, posts, titulo="Este termo no blog", chips=CHIPS_GLOSSARIO, rotulo="Aprenda mais:")
-    print(f"ok  {len(posts)} posts com 'Continue lendo' e ícones; {len(L['do_blog'])} páginas com 'Conteúdo relacionado no blog'")
+    pontes = sum(1 for a, (_, b) in leias.items() if posts[a]["recente"] != posts[b]["recente"])
+    print(f"ok  {len(posts)} posts com 'Leia também', 'Continue lendo' e ícones; {len(L['do_blog'])} páginas com 'Conteúdo relacionado no blog'")
+    print(f"    'Leia também' com ponte entre post antigo e recente: {pontes}; sem lugar para o bloco: {sem_leia}")
     sem_cit = sorted(u for u, (_, c) in glos.items() if c == 0)
     print(f"    {len(glos)} verbetes do glossário com 'Este termo no blog'; sem post que cite o termo: {sem_cit}")
     print(f"    banners no texto: {dict(banners)}; só o banner fixo (post curto): {so_fixo}; sem lugar para banner: {sem_banner}")
-    print(f"    links de entrada por post (só 'Continue lendo'): mínimo {min(entrada.values())}, máximo {max(entrada.values())}")
+    print(f"    links de entrada por post (posts relacionados): mínimo {min(entrada.values())}, máximo {max(entrada.values())}")
 
 
 if __name__ == "__main__":

@@ -50,6 +50,32 @@ def capa(src):
     return m.group(1).replace(SITE, "") if m else "/assets/img/og/blog.webp"
 
 
+def verbetes_glossario(autor):
+    """Seção "Verbetes do Glossário" para quem assina o glossário (tools/glossario/build.py: Luis Debiasi)."""
+    import csv
+    if autor["slug"] != "luis-debiasi" or not (ROOT / "glossario/termos.csv").exists():
+        return "", []
+    with open(ROOT / "glossario/termos.csv", encoding="utf-8", newline="") as fh:
+        termos = [r for r in csv.DictReader(fh) if (ROOT / "glossario" / r["slug"] / "index.html").exists()]
+    if not termos:
+        return "", []
+    itens = "\n".join(f'        <li><a href="/glossario/{r["slug"]}/">{esc(r["termo"])} <small>{esc(r["categoria"])}</small></a></li>' for r in termos)
+    html_ = f"""
+  <section class="au-gl" aria-label="Verbetes do Glossário de Libras escritos por {esc(autor['nome'])}">
+    <div class="w">
+      <div class="au-sec-head rv">
+        <h2>Verbetes do Glossário de Libras ({len(termos)})</h2>
+        <a href="/glossario/" class="btn bp" style="font-size:.78rem;padding:9px 18px">Ver o glossário →</a>
+      </div>
+      <ul class="au-gl-list">
+{itens}
+      </ul>
+    </div>
+  </section>
+"""
+    return html_, termos
+
+
 def pagina(autor, posts):
     url = f"{SITE}/{autor['pasta']}/{autor['slug']}/"
     n = len(posts)
@@ -69,6 +95,10 @@ def pagina(autor, posts):
         {"@context": "https://schema.org", "@type": "ItemList", "name": f"Artigos de {autor['nome']} no Blog LIBRAS.SE",
          "itemListElement": [{"@type": "ListItem", "position": i, "url": f"{SITE}/blog/{s}/"} for i, (s, _) in enumerate(posts, 1)]},
     ]
+    gl_html, termos = verbetes_glossario(autor)
+    if termos:
+        ld.append({"@context": "https://schema.org", "@type": "ItemList", "name": f"Verbetes do Glossário de Libras escritos por {autor['nome']}",
+                   "itemListElement": [{"@type": "ListItem", "position": i, "url": f"{SITE}/glossario/{r['slug']}/"} for i, r in enumerate(termos, 1)]})
     ld_html = "\n".join(f'<script type="application/ld+json">\n{json.dumps(x, ensure_ascii=False, indent=1)}\n</script>' for x in ld)
     cards = []
     for i, (s, p) in enumerate(posts):
@@ -87,7 +117,7 @@ def pagina(autor, posts):
         "{{NOME}}": esc(autor["nome"]), "{{ROTULO}}": esc(autor["rotulo"]), "{{ROTULO_CURTO}}": esc(autor["rotulo_curto"]),
         "{{PERFIL}}": esc(autor["perfil"]), "{{DESCRICAO}}": esc(longa[:300]), "{{DESCRICAO_CURTA}}": esc(curta), "{{URL}}": url,
         "{{LD}}": ld_html, "{{INICIAIS}}": esc(autor["iniciais"]), "{{BIO}}": esc(autor["bio"]), "{{STATS}}": stats,
-        "{{CARDS}}": "\n".join(cards),
+        "{{CARDS}}": "\n".join(cards), "{{GLOSSARIO}}": gl_html,
     }
     t = MOLDE
     for k, v in trocas.items():

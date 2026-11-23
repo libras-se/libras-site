@@ -1,4 +1,4 @@
-/* Grifo animado nos posts do blog (no estilo do g1).
+/* Grifo animado nos posts do blog e nos verbetes do glossário (no estilo do g1).
    Cada <mark class="grifo"> começa sem cor e ganha a classe .on quando entra na tela;
    o CSS do post faz o marca-texto passar pela frase, da esquerda para a direita, linha a linha.
    Vários grifos na tela ao mesmo tempo são pintados em sequência, na ordem de leitura. */
@@ -26,7 +26,7 @@
       var agora = performance.now();
       var inicio = Math.max(agora + 250, livre);
       livre = inicio + ms * 0.8;
-      setTimeout(function () { requestAnimationFrame(function () { pintar(el); }); }, inicio - agora);
+      setTimeout(function () { void el.offsetWidth; pintar(el); }, inicio - agora); // reflow garante a transição sem depender de rAF
     });
   }, { rootMargin: '0px 0px -20% 0px' });
 

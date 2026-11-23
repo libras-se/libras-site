@@ -251,3 +251,26 @@ nome de marca, "intérprete de libras é obrigatório", "pcd auditivo unilateral
 - **Candidatos a verbete no glossário:** surdocegueira, guia-intérprete, central de intermediação em Libras,
   linguagem simples e leitura labial.
 
+
+## 12. Correlação entre posts, glossário e autoria (23/11/2026)
+
+- **Correlatas v2 (`links.py`):** a nota entre dois posts passou a comparar o texto inteiro (TF-IDF de palavras,
+  pares de palavras e termos do glossário citados, que pesam pelo quanto são raros), mais título, editoria e pilares.
+  Antes valiam só o título e a busca do card. Todo post recebe pelo menos 4 links de outros posts (antes, 2).
+- **"Leia também" (`LSE:LEIA`)** no meio do texto, com 2 matérias: a mais parecida e uma ponte entre épocas.
+  78 dos 102 posts antigos ou recentes ganham um link para um post da outra época sobre o mesmo assunto
+  (ex.: Rock in Rio 2022 → bastidores do Rock in Rio 2026; Papai Noel 2022 → Natal de 2026; PL dos hospitais →
+  como atender um paciente surdo). Cada lote novo de matérias passa a receber links dos antigos sem edição manual.
+- **Glossário gerado (`tools/glossario/`):** 40 termos (26 revisados e 14 novos: deficiência auditiva, ouvinte, PcD,
+  closed caption, oralismo, educação bilíngue, guia-intérprete, Lei 12.319, classificador, CODA, implante coclear,
+  SignWriting, tecnologia assistiva e WCAG). Header e rodapé canônicos com o selo "Glossário", trilha, editoria,
+  tempo de leitura, barra de progresso, índice com a seção ativa, FAQ, fontes, bloco de autor com datas e
+  termo anterior/próximo. O índice deixou de montar os cards por JavaScript: agora vêm no HTML (indexáveis).
+  A revisão corrigiu fatos (Lei 10.436 não é "língua oficial", capítulo da LBI, prazos do Decreto 5.626,
+  INES não é autarquia, NBR 15290) e trouxe o Censo 2022.
+- **Termos linkados nos posts (`glossario_links.py`):** 201 links novos, primeira ocorrência por post.
+- **Autoria:** os 44 posts assinados pela organização passaram a "Luis Debiasi, Equipe LIBRAS.SE" (Person no
+  JSON-LD). Os verbetes também. A página `/autor/luis-debiasi/` lista os posts e os verbetes.
+- **Grifo animado** em todos os 102 posts (302 trechos) e nos verbetes.
+- **Medir:** `select_content` com `content_type = leia_tambem` no GA4 e as páginas por sessão de quem entra por post
+  antigo; no Search Console, impressões de `/glossario/` nos 14 termos novos a partir de dezembro.

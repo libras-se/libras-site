@@ -229,14 +229,11 @@ def sinais_video():
 
 
 def glossario():
-    t = (ROOT / "glossario/index.html").read_text()
-    bloco = re.search(r"const gd = \[([\s\S]*?)\n\];", t)[1]
-    out = []
-    for obj in re.split(r"\n  \},?\s*\n  \{", bloco):
-        term, slug, d = (re.search(r'term:"([^"]+)"', obj), re.search(r'slug:"([^"]+)"', obj), re.search(r'def:"([^"]+)"', obj))
-        if term and slug and d and (ROOT / "glossario" / slug[1] / "index.html").exists():
-            out.append({"t": term[1], "s": slug[1], "d": d[1]})
-    return out
+    """Termos do glossário (gerado por tools/glossario/build.py) para o widget da home: termo, slug e definição curta."""
+    import csv
+    with open(ROOT / "glossario/termos.csv", encoding="utf-8", newline="") as fh:
+        return [{"t": r["termo"], "s": r["slug"], "d": r["definicao"]} for r in csv.DictReader(fh)
+                if r.get("definicao") and (ROOT / "glossario" / r["slug"] / "index.html").exists()]
 
 
 def contagens():

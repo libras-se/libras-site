@@ -5,10 +5,175 @@
   <link rel="self" type="application/atom+xml" href="https://libras.se/blog/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://libras.se/blog/"/>
   <id>https://libras.se/blog/</id>
-  <updated>2026-10-23T14:46:00Z</updated>
+  <updated>2026-11-22T17:00:00Z</updated>
   <icon>https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-32x32.png</icon>
   <logo>https://libras.se/assets/img/favicon/cropped-FAVICONpng-1-512x512.png</logo>
   <rights>© LIBRAS.SE</rights>
+  <entry>
+    <title>Surdocegueira: o que é, como a pessoa se comunica e o papel do guia-intérprete</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/surdocegueira-o-que-e-e-guia-interprete/"/>
+    <id>https://libras.se/blog/surdocegueira-o-que-e-e-guia-interprete/</id>
+    <published>2026-11-22T17:00:00Z</published>
+    <updated>2026-11-22T17:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="lingua" label="Língua &amp; Cultura Surda" scheme="https://libras.se/blog/tema/"/>
+    <summary>Surdocegueira é uma deficiência única. Veja os tipos, as formas de comunicação pelo toque, o papel do guia-intérprete e como receber uma pessoa surdocega.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/surdocegueira-o-que-e-e-guia-interprete/surdocegueira-o-que-e-e-guia-interprete.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Feliz Natal em Libras: como sinalizar e mandar mensagens de fim de ano</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/feliz-natal-em-libras/"/>
+    <id>https://libras.se/blog/feliz-natal-em-libras/</id>
+    <published>2026-11-22T16:30:00Z</published>
+    <updated>2026-11-22T16:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="lingua" label="Língua &amp; Cultura Surda" scheme="https://libras.se/blog/tema/"/>
+    <summary>Feliz Natal em Libras: veja como sinalizar FELIZ, NATAL e FELIZ ANO NOVO, gravar sua mensagem para o WhatsApp e levar a Libras à campanha da empresa.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/feliz-natal-em-libras/feliz-natal-em-libras.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Black Friday acessível: 6 ajustes para não perder clientes surdos</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/black-friday-acessivel-para-clientes-surdos/"/>
+    <id>https://libras.se/blog/black-friday-acessivel-para-clientes-surdos/</id>
+    <published>2026-11-22T16:00:00Z</published>
+    <updated>2026-11-22T16:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Black Friday acessível em 2026: 6 ajustes em vídeos, site, SAC e loja para atender clientes surdos com Libras e legenda e não perder vendas no dia 27.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/black-friday-acessivel-para-clientes-surdos/black-friday-acessivel-para-clientes-surdos.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Avatar, IA ou intérprete de Libras: o que a sua empresa deve usar em cada caso</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/avatar-ia-ou-interprete-de-libras/"/>
+    <id>https://libras.se/blog/avatar-ia-ou-interprete-de-libras/</id>
+    <published>2026-11-22T15:30:00Z</published>
+    <updated>2026-11-22T15:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Avatar de Libras, tradutor com IA ou intérprete humano? Veja o que VLibras, Hand Talk e a IA fazem, os limites e qual usar em site, vídeo, SAC e eventos.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/avatar-ia-ou-interprete-de-libras/avatar-ia-ou-interprete-de-libras.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Atendimento em Libras: empresas e serviços que já oferecem e como funciona</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/atendimento-em-libras-empresas-e-servicos/"/>
+    <id>https://libras.se/blog/atendimento-em-libras-empresas-e-servicos/</id>
+    <published>2026-11-22T15:00:00Z</published>
+    <updated>2026-11-22T15:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Atendimento em Libras: veja bancos, operadoras e órgãos públicos que já atendem pessoas surdas, como acessar cada canal e como montar o da sua empresa.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/atendimento-em-libras-empresas-e-servicos/atendimento-em-libras-empresas-e-servicos.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Como atender um paciente surdo: Libras em hospitais, clínicas e consultórios</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/como-atender-um-paciente-surdo/"/>
+    <id>https://libras.se/blog/como-atender-um-paciente-surdo/</id>
+    <published>2026-11-22T14:30:00Z</published>
+    <updated>2026-11-22T14:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Como atender um paciente surdo: o que diz a lei, por que o familiar não deve interpretar e o passo a passo com Libras da recepção à alta.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/como-atender-um-paciente-surdo/como-atender-um-paciente-surdo.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Como atender um cliente surdo: guia prático para lojas, SAC e recepção</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/como-atender-um-cliente-surdo/"/>
+    <id>https://libras.se/blog/como-atender-um-cliente-surdo/</id>
+    <published>2026-11-22T14:00:00Z</published>
+    <updated>2026-11-22T14:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Como atender um cliente surdo: o que fazer no balcão, no SAC e no WhatsApp, sinais de Libras para a equipe e o que diz o novo decreto do SAC.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/como-atender-um-cliente-surdo/como-atender-um-cliente-surdo.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Assédio e saúde mental: como levar os treinamentos da CIPA e da NR-1 a trabalhadores surdos</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/treinamento-sobre-assedio-e-saude-mental-em-libras/"/>
+    <id>https://libras.se/blog/treinamento-sobre-assedio-e-saude-mental-em-libras/</id>
+    <published>2026-11-22T13:30:00Z</published>
+    <updated>2026-11-22T13:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Assédio moral e sexual em Libras: como levar o treinamento da CIPA, o canal de denúncia e a avaliação de riscos psicossociais da NR-1 a trabalhadores surdos.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/treinamento-sobre-assedio-e-saude-mental-em-libras/treinamento-sobre-assedio-e-saude-mental-em-libras.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Treinamento de segurança em Libras: como fazer NR, integração e plano de emergência com trabalhadores surdos</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/treinamento-de-seguranca-em-libras/"/>
+    <id>https://libras.se/blog/treinamento-de-seguranca-em-libras/</id>
+    <published>2026-11-22T13:00:00Z</published>
+    <updated>2026-11-22T13:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Treinamento de segurança em Libras: o que a NR-1 e a LBI pedem e como fazer integração, NR, SIPAT e plano de emergência com trabalhadores surdos.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/treinamento-de-seguranca-em-libras/treinamento-de-seguranca-em-libras.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Acessibilidade comunicacional: o que é, exemplos e como aplicar na empresa</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/acessibilidade-comunicacional-o-que-e-exemplos/"/>
+    <id>https://libras.se/blog/acessibilidade-comunicacional-o-que-e-exemplos/</id>
+    <published>2026-11-22T12:30:00Z</published>
+    <updated>2026-11-22T12:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Acessibilidade comunicacional: o que diz a lei, as dimensões da acessibilidade, exemplos por canal e um checklist para a comunicação interna da empresa.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/acessibilidade-comunicacional-o-que-e-exemplos/acessibilidade-comunicacional-o-que-e-exemplos.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Funcionário surdo: como incluir do recrutamento ao dia a dia na empresa</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/funcionario-surdo-como-incluir-na-empresa/"/>
+    <id>https://libras.se/blog/funcionario-surdo-como-incluir-na-empresa/</id>
+    <published>2026-11-22T12:00:00Z</published>
+    <updated>2026-11-22T12:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
+    <summary>Funcionário surdo: guia para RH e gestores incluírem do anúncio da vaga ao dia a dia, com intérprete, linguagem simples, Libras na equipe e checklist.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/funcionario-surdo-como-incluir-na-empresa/funcionario-surdo-como-incluir-na-empresa.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Surdez unilateral conta na cota PcD? O que mudou com a Lei 14.768/2023</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/surdez-unilateral-conta-na-cota-pcd/"/>
+    <id>https://libras.se/blog/surdez-unilateral-conta-na-cota-pcd/</id>
+    <published>2026-11-22T11:30:00Z</published>
+    <updated>2026-11-22T11:30:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
+    <summary>Surdez unilateral conta na cota PcD? Só a total. Veja o que diz a Lei 14.768/2023, como comprovar com audiometria e laudo e como incluir na empresa.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/surdez-unilateral-conta-na-cota-pcd/surdez-unilateral-conta-na-cota-pcd.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Empresa é obrigada a ter intérprete de Libras? O que a lei diz e quando ele é indispensável</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/empresa-e-obrigada-a-ter-interprete-de-libras/"/>
+    <id>https://libras.se/blog/empresa-e-obrigada-a-ter-interprete-de-libras/</id>
+    <published>2026-11-22T11:00:00Z</published>
+    <updated>2026-11-22T11:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
+    <summary>Empresa é obrigada a ter intérprete de Libras? Veja o que a LBI exige, quando o intérprete é indispensável no trabalho e o que dizem as decisões recentes.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/empresa-e-obrigada-a-ter-interprete-de-libras/empresa-e-obrigada-a-ter-interprete-de-libras.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>Papai Noel em Libras: shoppings preparam o Natal de 2026 para crianças surdas</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/papai-noel-em-libras-no-natal-de-2026/"/>
+    <id>https://libras.se/blog/papai-noel-em-libras-no-natal-de-2026/</id>
+    <published>2026-11-16T13:00:00Z</published>
+    <updated>2026-11-16T13:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="cultura" label="Cultura &amp; Entretenimento" scheme="https://libras.se/blog/tema/"/>
+    <summary>Papai Noel em Libras: no Natal de 2026, shoppings de Mauá e do DF recebem crianças surdas com sinais e tradução. Veja o que lojas podem aprender.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/papai-noel-em-libras-no-natal-de-2026/papai-noel-em-libras-no-natal-de-2026.jpg" width="1200" height="675"/>
+  </entry>
+  <entry>
+    <title>TSE lança Central de Intermediação em Libras para atendimento por videochamada</title>
+    <link rel="alternate" type="text/html" href="https://libras.se/blog/tse-lanca-central-de-intermediacao-em-libras/"/>
+    <id>https://libras.se/blog/tse-lanca-central-de-intermediacao-em-libras/</id>
+    <published>2026-11-13T21:00:00Z</published>
+    <updated>2026-11-13T21:00:00Z</updated>
+    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
+    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
+    <summary>Central de Intermediação em Libras do TSE liga pessoas surdas a intérpretes por videochamada nos 27 TREs e no exterior. Veja como acessar e o que muda.</summary>
+    <media:thumbnail url="https://libras.se/assets/img/blog/tse-lanca-central-de-intermediacao-em-libras/tse-lanca-central-de-intermediacao-em-libras.jpg" width="1200" height="675"/>
+  </entry>
   <entry>
     <title>LSE: o que é a legenda para surdos e ensurdecidos | LIBRAS.SE</title>
     <link rel="alternate" type="text/html" href="https://libras.se/blog/lse-legenda-para-surdos-e-ensurdecidos/"/>
@@ -63,170 +228,5 @@
     <category term="lingua" label="Língua &amp; Cultura Surda" scheme="https://libras.se/blog/tema/"/>
     <summary>Línguas indígenas de sinais: conheça as LIS de povos como Terena, Pataxó e Ka'apor, por que não são dialetos da Libras e a especialização grátis do IFBA.</summary>
     <media:thumbnail url="https://libras.se/assets/img/blog/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras/o-brasil-tem-outras-linguas-de-sinais-alem-da-libras.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Técnicos de futebol americano aprendem língua de sinais para treinar quarterback surdo</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/"/>
-    <id>https://libras.se/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/</id>
-    <published>2026-10-08T19:00:00Z</published>
-    <updated>2026-10-08T19:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="esporte" label="Esporte" scheme="https://libras.se/blog/tema/"/>
-    <summary>Técnicos de futebol americano de uma escola do Tennessee aprendem língua de sinais para falar direto com o quarterback surdo Tanner Collins, sem intermediários.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo/tecnicos-aprendem-lingua-de-sinais-para-treinar-quarterback-surdo.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Óculos inteligentes colocam legenda e intérprete de língua de sinais na frente dos olhos</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/"/>
-    <id>https://libras.se/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/</id>
-    <published>2026-10-08T15:00:00Z</published>
-    <updated>2026-10-08T15:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
-    <summary>Óculos inteligentes com legenda ao vivo e intérprete de língua de sinais estão em teste nos EUA, em teatros e museus. Veja como funcionam e o que muda.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais/oculos-inteligentes-com-legenda-e-interprete-de-lingua-de-sinais.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Margem da janela de Libras: o que se usa de verdade e que área deixar livre</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/margem-da-janela-de-libras-no-video/"/>
-    <id>https://libras.se/blog/margem-da-janela-de-libras-no-video/</id>
-    <published>2026-10-08T12:00:00Z</published>
-    <updated>2026-10-08T18:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
-    <summary>A medida da ABNT de 2005 caiu em desuso. Veja o que campanhas, Senado e publicidade usam hoje e baixe grátis os PNGs de margem para a sua edição.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/margem-da-janela-de-libras-no-video/margem-da-janela-de-libras-no-video-og.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Benedita Casé protagoniza “90 Decibéis”, filme sobre surdez que chegou à TV aberta</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/"/>
-    <id>https://libras.se/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/</id>
-    <published>2026-10-07T14:00:00Z</published>
-    <updated>2026-10-07T14:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="cultura" label="Cultura &amp; Entretenimento" scheme="https://libras.se/blog/tema/"/>
-    <summary>Benedita Casé Zerbini, surda desde a infância, protagoniza “90 Decibéis”, drama dos Estúdios Globo sobre perda auditiva progressiva levado à Tela Quente.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez/benedita-case-protagoniza-90-decibeis-filme-sobre-surdez.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Eleições 2026: como o eleitor surdo vota com Libras na urna e por videochamada</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/"/>
-    <id>https://libras.se/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/</id>
-    <published>2026-10-06T12:00:00Z</published>
-    <updated>2026-10-06T12:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
-    <summary>Eleitor surdo nas Eleições 2026: veja como a janela de Libras da urna explica branco, nulo e legenda e como usar as centrais de Libras por videochamada.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras/eleicoes-2026-como-o-eleitor-surdo-vota-com-libras.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Grupo de K-pop surdo lança música com refrão em várias línguas de sinais</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/"/>
-    <id>https://libras.se/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/</id>
-    <published>2026-10-05T17:30:00Z</published>
-    <updated>2026-10-05T17:30:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="cultura" label="Cultura &amp; Entretenimento" scheme="https://libras.se/blog/tema/"/>
-    <summary>Grupo de K-pop surdo, o Big Ocean lançou “Love Sign”, com refrão em várias línguas de sinais. Entenda por que a língua de sinais não é universal.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais/grupo-de-k-pop-surdo-lanca-musica-em-varias-linguas-de-sinais.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Chatbots ainda não entendem como pessoas surdas escrevem, mostra estudo da UFLA</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/"/>
-    <id>https://libras.se/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/</id>
-    <published>2026-10-02T13:00:00Z</published>
-    <updated>2026-10-02T13:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
-    <summary>Chatbots não entendem bem a escrita de pessoas surdas, mostra estudo da UFLA. Entenda a Glosa, o português como segunda língua e o que muda para empresas.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/chatbots-nao-entendem-como-pessoas-surdas-escrevem/chatbots-nao-entendem-como-pessoas-surdas-escrevem.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Justiça anula demissão de trabalhador surdo feita sem intérprete de Libras</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/"/>
-    <id>https://libras.se/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/</id>
-    <published>2026-09-28T12:30:00Z</published>
-    <updated>2026-09-28T12:30:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
-    <summary>Demissão de surdo sem intérprete de Libras é anulada pelo TRT-MG, que fixou R$ 30 mil por danos morais. Entenda o caso e o recado para o RH das empresas.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/justica-anula-demissao-de-surdo-sem-interprete-de-libras/justica-anula-demissao-de-surdo-sem-interprete-de-libras.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Filme com protagonista surda chega aos cinemas com a Libras dentro da cena</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/"/>
-    <id>https://libras.se/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/</id>
-    <published>2026-09-25T14:00:00Z</published>
-    <updated>2026-09-25T14:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="cultura" label="Cultura &amp; Entretenimento" scheme="https://libras.se/blog/tema/"/>
-    <summary>Filme com protagonista surda, “Nem Toda História de Amor Acaba em Morte” estreou com Libras e legendas dentro da imagem. Veja a diferença para a janela.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/filme-com-protagonista-surda-tem-libras-dentro-da-cena/filme-com-protagonista-surda-tem-libras-dentro-da-cena.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Vaticano passa a ter interpretação em Libras das audiências do Papa</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/"/>
-    <id>https://libras.se/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/</id>
-    <published>2026-09-24T18:00:00Z</published>
-    <updated>2026-09-24T18:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
-    <summary>Libras nas audiências do Papa: o Vatican News publica a Audiência Geral e o Angelus com intérprete numa playlist no YouTube, com o Orionita Sinalizando.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa/vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Casal surdo se casa em cerimônia toda em Libras no Paraná</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/"/>
-    <id>https://libras.se/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/</id>
-    <published>2026-09-23T13:30:00Z</published>
-    <updated>2026-09-23T13:30:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="lingua" label="Língua &amp; Cultura Surda" scheme="https://libras.se/blog/tema/"/>
-    <summary>Casal surdo se casa em cerimônia toda em Libras em Pitanga (PR). Desta vez, o português virou a tradução, com intérpretes para os convidados ouvintes.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/casal-surdo-se-casa-em-cerimonia-toda-em-libras/casal-surdo-se-casa-em-cerimonia-toda-em-libras.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Namorada sinaliza o show inteiro para o namorado surdo e vídeo passa de 29 milhões de visualizações</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/"/>
-    <id>https://libras.se/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/</id>
-    <published>2026-09-17T17:00:00Z</published>
-    <updated>2026-09-17T17:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="cultura" label="Cultura &amp; Entretenimento" scheme="https://libras.se/blog/tema/"/>
-    <summary>Namorada sinaliza show inteiro para o namorado surdo na Austrália, num evento sem intérprete. O vídeo feito por uma fã passou de 29 milhões de visualizações.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/namorada-sinaliza-show-inteiro-para-namorado-surdo/namorada-sinaliza-show-inteiro-para-namorado-surdo.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Bastidores da Libras no Rock in Rio 2026: chroma key, revezamento a cada 10 minutos e tradução do inglês em tempo real</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/bastidores-da-libras-no-rock-in-rio-2026/"/>
-    <id>https://libras.se/blog/bastidores-da-libras-no-rock-in-rio-2026/</id>
-    <published>2026-09-15T14:00:00Z</published>
-    <updated>2026-09-15T14:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="inclusao" label="Inclusão &amp; Acessibilidade" scheme="https://libras.se/blog/tema/"/>
-    <summary>Libras no Rock in Rio 2026: intérpretes num contêiner com chroma key, troca a cada 10 minutos e tradução do inglês em tempo real. Veja os bastidores.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/bastidores-da-libras-no-rock-in-rio-2026/bastidores-da-libras-no-rock-in-rio-2026.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Intérprete de Libras pode ter que passar por prova prática para ser contratado</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/"/>
-    <id>https://libras.se/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/</id>
-    <published>2026-09-11T13:00:00Z</published>
-    <updated>2026-09-11T13:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="direitos" label="Direitos &amp; Cidadania" scheme="https://libras.se/blog/tema/"/>
-    <summary>Intérprete de Libras pode ter prova prática para ser contratado: o PL 3.878/2024 passou no Senado em agosto e agora tramita na Câmara. Entenda o que muda.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado/interprete-de-libras-pode-ter-prova-pratica-para-ser-contratado.jpg" width="1200" height="675"/>
-  </entry>
-  <entry>
-    <title>Libras é reconhecida como língua de instrução em Belo Horizonte</title>
-    <link rel="alternate" type="text/html" href="https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/"/>
-    <id>https://libras.se/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/</id>
-    <published>2026-06-04T12:00:00Z</published>
-    <updated>2026-10-10T12:00:00Z</updated>
-    <author><name>LIBRAS.SE</name><uri>https://libras.se/</uri></author>
-    <category term="educacao" label="Educação" scheme="https://libras.se/blog/tema/"/>
-    <summary>Belo Horizonte reconheceu oficialmente a Libras como língua de instrução e meio de comunicação da comunidade surda por meio da Lei nº 11.463/2023.</summary>
-    <media:thumbnail url="https://libras.se/assets/img/blog/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte/libras-e-reconhecida-como-lingua-de-instrucao-em-belo-horizonte.jpg" width="1200" height="675"/>
   </entry>
 </feed>

@@ -184,7 +184,20 @@
   "influenciadores-surdos-relatam-dificuldade-com-publis": "servico",
   "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa": "servico",
   "justica-anula-demissao-de-surdo-sem-interprete-de-libras": "servico",
-  "chatbots-nao-entendem-como-pessoas-surdas-escrevem": "servico"
+  "chatbots-nao-entendem-como-pessoas-surdas-escrevem": "servico",
+  "empresa-e-obrigada-a-ter-interprete-de-libras": "empresas",
+  "surdez-unilateral-conta-na-cota-pcd": "empresas",
+  "funcionario-surdo-como-incluir-na-empresa": "empresas",
+  "acessibilidade-comunicacional-o-que-e-exemplos": "empresas",
+  "treinamento-de-seguranca-em-libras": "empresas",
+  "treinamento-sobre-assedio-e-saude-mental-em-libras": "empresas",
+  "como-atender-um-cliente-surdo": "empresas",
+  "como-atender-um-paciente-surdo": "empresas",
+  "atendimento-em-libras-empresas-e-servicos": "empresas",
+  "avatar-ia-ou-interprete-de-libras": "empresas",
+  "black-friday-acessivel-para-clientes-surdos": "servico",
+  "feliz-natal-em-libras": "servico",
+  "papai-noel-em-libras-no-natal-de-2026": "eventos"
  },
  "banner_por_post": {
   "o-papel-do-interprete-de-libras-na-sociedade": "sejatils",
@@ -199,7 +212,8 @@
   "dia-internacional-das-linguas-de-sinais": "cultura",
   "libras-tem-sotaque-e-giria": "quiz",
   "lingua-de-sinais-e-autismo": "materiais",
-  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades"
+  "librando-jogo-propoe-inclusao-e-aprendizado-ao-brincar": "atividades",
+  "surdocegueira-o-que-e-e-guia-interprete": "sejatils"
  },
  "pilares": {
   "lingua": [
@@ -213,12 +227,14 @@
   ],
   "direitos": [
    "libras-nao-e-segunda-lingua-oficial-do-brasil",
-   "dia-nacional-da-libras-inclusao-da-comunidade-surda"
+   "dia-nacional-da-libras-inclusao-da-comunidade-surda",
+   "empresa-e-obrigada-a-ter-interprete-de-libras"
   ],
   "inclusao": [
    "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado",
    "por-que-incluir-janela-de-libras-em-videos",
-   "garantir-libras-sem-improviso"
+   "garantir-libras-sem-improviso",
+   "funcionario-surdo-como-incluir-na-empresa"
   ],
   "cultura": [
    "oscar-coda-melhor-filme-do-mundo-sobre-surdez",
@@ -261,7 +277,43 @@
     "4-dicas-para-ser-mais-inclusivo-na-internet",
     "influenciadores-surdos-relatam-dificuldade-com-publis",
     "vaticano-tem-interpretacao-em-libras-das-audiencias-do-papa",
-    "chatbots-nao-entendem-como-pessoas-surdas-escrevem"
+    "chatbots-nao-entendem-como-pessoas-surdas-escrevem",
+    "black-friday-acessivel-para-clientes-surdos",
+    "feliz-natal-em-libras"
+   ]
+  },
+  "empresas": {
+   "titulo": "Libras na sua empresa",
+   "links": [
+    [
+     "Libras para empresas",
+     "/libras-para-empresas/"
+    ],
+    [
+     "Intérprete ao vivo em reuniões e eventos",
+     "/eventos-ao-vivo/"
+    ],
+    [
+     "Tradutor de Libras para vídeos",
+     "/tradutor-de-libras/"
+    ],
+    [
+     "Todas as soluções",
+     "/solucoes/"
+    ]
+   ],
+   "posts": [
+    "empresa-e-obrigada-a-ter-interprete-de-libras",
+    "surdez-unilateral-conta-na-cota-pcd",
+    "funcionario-surdo-como-incluir-na-empresa",
+    "acessibilidade-comunicacional-o-que-e-exemplos",
+    "treinamento-de-seguranca-em-libras",
+    "treinamento-sobre-assedio-e-saude-mental-em-libras",
+    "como-atender-um-cliente-surdo",
+    "como-atender-um-paciente-surdo",
+    "atendimento-em-libras-empresas-e-servicos",
+    "avatar-ia-ou-interprete-de-libras",
+    "justica-anula-demissao-de-surdo-sem-interprete-de-libras"
    ]
   },
   "eventos": {
@@ -285,7 +337,8 @@
     "com-libras-inclusao-marca-sao-joao-de-caruaru",
     "bastidores-da-libras-no-rock-in-rio-2026",
     "namorada-sinaliza-show-inteiro-para-namorado-surdo",
-    "oktoberfest-de-blumenau-tem-aplicativo-com-libras"
+    "oktoberfest-de-blumenau-tem-aplicativo-com-libras",
+    "papai-noel-em-libras-no-natal-de-2026"
    ]
   },
   "educacao": {
@@ -322,7 +375,8 @@
    "posts": [
     "uso-de-libras-em-propaganda-eleitoral-e-obrigatorio",
     "urnas-eletronicas-terao-video-com-libras",
-    "eleicoes-2026-como-o-eleitor-surdo-vota-com-libras"
+    "eleicoes-2026-como-o-eleitor-surdo-vota-com-libras",
+    "tse-lanca-central-de-intermediacao-em-libras"
    ]
   },
   "audiovisual": {
@@ -379,16 +433,16 @@
    "por-que-incluir-janela-de-libras-em-videos"
   ],
   "/libras-para-empresas/": [
-   "4-marcas-que-investem-em-libras-nos-videos",
-   "manifesto-por-libras-em-videos",
-   "responsavel-pelo-que-entendem"
+   "empresa-e-obrigada-a-ter-interprete-de-libras",
+   "funcionario-surdo-como-incluir-na-empresa",
+   "treinamento-de-seguranca-em-libras"
   ],
   "/tradutor-de-libras/": [
    "por-que-incluir-janela-de-libras-em-videos",
    "margem-da-janela-de-libras-no-video",
    "libras-ou-legendas-entenda-quando-ecomo-cada-recurso-deve-ser-usado"
   ],
- "/libras-para-publicidade/": [
+  "/libras-para-publicidade/": [
    "4-marcas-que-investem-em-libras-nos-videos",
    "influenciadores-surdos-relatam-dificuldade-com-publis",
    "por-que-incluir-janela-de-libras-em-videos"

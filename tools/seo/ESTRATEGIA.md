@@ -65,6 +65,7 @@ nas áreas de engajamento.
 | Acessibilidade | `libras-ou-legendas-...`, `por-que-incluir-janela-de-libras-em-videos`, `garantir-libras-sem-improviso` | checklist e guia em PDF | soluções, empresas, publicidade, eventos ao vivo |
 | Cultura | `oscar-coda-melhor-filme-do-mundo-sobre-surdez`, `o-que-o-filme-ganhador-do-oscar-ensina-sobre-libras` | cultura surda, sinal do dia | `acessibilidade-para-*` (audiovisual) |
 | Esporte | `surdolimpiadas-as-olimpiadas-exclusivas-para-surdos` | quiz, sinal do dia | — |
+| Empresas e atendimento (nov/2026) | `empresa-e-obrigada-a-ter-interprete-de-libras` (editoria direitos), `funcionario-surdo-como-incluir-na-empresa` (editoria inclusão) | sinais de trabalho, empresa, reunião, cliente; Aprender Libras | `/libras-para-empresas/`, `/libras-ao-vivo/`, `/tradutor-de-libras/` |
 
 Fora do blog, os hubs de cada intenção são:
 
@@ -172,7 +173,8 @@ se for pilar, entra também em `links.json → pilares`.
 
 | Data | Gatilho | Pauta |
 |---|---|---|
-| 20/10/2026 | 10/11 Prevenção e Combate à Surdez; 12/11 Surdocegueira | post sobre surdocegueira e guia-intérprete (Lei 14.704) |
+| 20/10/2026 | 10/11 Prevenção e Combate à Surdez; 12/11 Surdocegueira | **feito em 22/11/2026:** `surdocegueira-o-que-e-e-guia-interprete` (Lei 14.605/2023). Revisar todo outubro |
+| 01/11 de cada ano | Black Friday (sexta depois do Dia de Ação de Graças dos EUA) e Natal | atualizar na mesma URL `black-friday-acessivel-para-clientes-surdos` (data e dados), `feliz-natal-em-libras` e `papai-noel-em-libras-no-natal-de-2026` (casos do ano) |
 | 10/01/2027 | volta às aulas | cores, saudações, plano de aula, kit de atividades |
 | 15/02/2027 | 3/3 Dia Mundial da Audição | dados do IBGE (Censo 2022), prevenção |
 | 20/03/2027 | 24/4 Dia Nacional da Libras | atualizar a página anual (seção 4.1) e um kit escolar |
@@ -228,3 +230,24 @@ Rotina:
 - As páginas de sinal não linkam o blog. Se for desejado, isso entra no gerador `tools/sinais/build_pages.py`,
   e não no `links.py`, porque o gerador de sinais recria a página inteira.
 - Os `og:title` antigos ainda usam o sufixo `| Blog LIBRAS.SE`. Não pesa na busca; alinhe quando mexer no post.
+
+## 11. Lote de novembro de 2026 (empresas)
+
+Quinze posts publicados em 22/11/2026 (PR #59), escolhidos pelas sugestões do Google: "atendimento em libras" com
+nome de marca, "intérprete de libras é obrigatório", "pcd auditivo unilateral", "como atender um cliente surdo",
+"intérprete de libras ia", "feliz natal em libras" e "surdocegueira".
+
+- **Cluster de empresas:** dez posts B2B levam o banner `empresas` e a linha "Libras na sua empresa"
+  (`solucoes.empresas` no `links.json`). Pilares do cluster: `empresa-e-obrigada-a-ter-interprete-de-libras` e
+  `funcionario-surdo-como-incluir-na-empresa`.
+- **Links de entrada:** treze posts antigos ganharam um link de contexto para os novos (por exemplo, o post do TRT-MG
+  aponta para a obrigação do intérprete e o de partos aponta para o atendimento ao paciente surdo). As páginas
+  comerciais mostram os novos em "Conteúdo relacionado no blog" (`do_blog`): empresas, ao vivo, tradutor,
+  publicidade, videoaulas, soluções e tecnologia. A página `/cultura-surda/` linka surdocegueira e surdez unilateral.
+- **Regra nova de fonte:** o SAC passou a ser regido pelo Decreto 13.135/2026 (vigor em 2/11/2026), que revogou o
+  Decreto 11.034/2022. Texto novo não cita mais o 11.034.
+- **Medir em fevereiro de 2027:** impressões e cliques das 15 URLs no Search Console, e os eventos dos banners
+  `empresas` no GA4 (`view_promotion` e `select_promotion`).
+- **Candidatos a verbete no glossário:** surdocegueira, guia-intérprete, central de intermediação em Libras,
+  linguagem simples e leitura labial.
+
